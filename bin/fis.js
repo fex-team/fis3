@@ -35,6 +35,14 @@ cli.launch({
     fis = require(env.modulePath);
   }
 
+  if (argv.verbose) {
+    fis.log.level = fis.log.L_ALL;
+  }
+
+  if (argv.c || argv.clean) {
+    fis.cache.enable = false;
+  }
+
   // chdir before requiring gulpfile to make sure
   // we let them chdir as needed
   // if (process.cwd() !== env.cwd) {
