@@ -41,6 +41,9 @@ cli.launch({
   //   process.chdir(env.cwd);
   //   logger.notice('Working directory changed to `%s`.', env.cwd);
   // }
+  //
+
+  process.env.NODE_ENV = process.env.NODE_ENV || argv.env || 'dev';
 
   //merge standard conf
   fis.config.merge({

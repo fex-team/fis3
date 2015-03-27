@@ -1,1 +1,3 @@
-// fis.match('**.html', {});
+fis.match('(*.js)', {
+    release: '/static/$1'
+});
