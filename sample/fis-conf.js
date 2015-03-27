@@ -8,5 +8,7 @@ fis.media('dev').match('(*.js)', {
 
 fis.media('production').match('(*.js)', {
     release: '/production/$1',
-    optimize: 'uglify-js'
+    optimizer: fis.plugin('uglify-js', {
+        sourceMap: true
+    })
 });

@@ -20,7 +20,7 @@
     "fis-kernel": "2.0.12",
     "fis-optimizer-clean-css": "0.0.9",
     "fis-optimizer-png-compressor": "0.0.6",
-    "fis-optimizer-uglify-js": "0.1.6",
+    "fis-optimizer-uglify-js": "0.1.7",
     "fis-packager-map": "0.0.9",
     "fis-postprocessor-jswrapper": "0.0.9",
     "fis-preprocessor-components": "^1.0.15",
