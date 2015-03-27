@@ -39,7 +39,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "sample": "rm -rf ./output && node ./bin/fis.js release -r sample -d ./output --verbose"
+    "sample": "rm -rf ./output && node ./bin/fis.js release -r sample -cd ./output --verbose"
   },
   "repository": {
     "type": "git",
