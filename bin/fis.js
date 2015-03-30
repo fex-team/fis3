@@ -53,27 +53,39 @@ cli.launch({
 
   process.env.NODE_ENV = process.env.NODE_ENV || argv.env || 'dev';
 
-  //merge standard conf
-  fis.config.merge({
+  fis.set({
     modules: {
-      preprocessor: {
-        js: 'components',
-        css: 'components',
-        html: 'components'
-      },
-      postprocessor: {
-        js: 'jswrapper'
-      },
-      optimizer: {
-        js: 'uglify-js',
-        css: 'clean-css',
-        png: 'png-compressor'
-      },
-      spriter: 'csssprites',
       packager: 'map',
-      deploy: 'default'
+      deploy : 'default'
     }
   });
+
+  fis.match('**', {
+    deploy: fis.plugin('default')
+  });
+
+  fis.match('*.{js|css|html}', {
+    preprocessor: fis.plugin('components')
+  });
+
+  fis.match('*.js', {
+    postprocessor: fis.plugin('jswrapper'),
+  });
+
+  fis.env('production')
+    .match('**', {
+      spriter: fis.plugin('csssprites'),
+      packager: fis.plugin('map'),
+    })
+    .match('*.js', {
+      optimizer: fis.plugin('uglify-js')
+    })
+    .match('*.css', {
+      optimizer: fis.plugin('clean-css')
+    })
+    .match('*.png', {
+      optimizer: fis.plugin('png-compressor')
+    });
 
   //exports cli object
   fis.cli = {};

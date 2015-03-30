@@ -2,7 +2,7 @@ fis.match('(*.html)', {
     release: '/html/$1'
 });
 
-fis.media('dev').match('(*.js)', {
+fis.match('(**.js)', {
     release: '/static/$1'
 });
 
@@ -11,4 +11,9 @@ fis.media('production').match('(*.js)', {
     optimizer: fis.plugin('uglify-js', {
         sourceMap: true
     })
+});
+
+fis.match('/scripts/**.js', {
+
+    packTo: '/pkg/all.js'
 });
