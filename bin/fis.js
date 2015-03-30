@@ -60,10 +60,6 @@ cli.launch({
     }
   });
 
-  fis.match('**', {
-    deploy: fis.plugin('default')
-  });
-
   fis.match('*.{js|css|html}', {
     preprocessor: fis.plugin('components')
   });
@@ -73,10 +69,6 @@ cli.launch({
   });
 
   fis.env('production')
-    .match('**', {
-      spriter: fis.plugin('csssprites'),
-      packager: fis.plugin('map'),
-    })
     .match('*.js', {
       optimizer: fis.plugin('uglify-js')
     })
