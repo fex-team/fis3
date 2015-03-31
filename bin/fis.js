@@ -35,14 +35,6 @@ cli.launch({
     fis = require(env.modulePath);
   }
 
-  if (argv.verbose) {
-    fis.log.level = fis.log.L_ALL;
-  }
-
-  if (argv.c || argv.clean) {
-    fis.cache.enable = false;
-  }
-
   // chdir before requiring gulpfile to make sure
   // we let them chdir as needed
   // if (process.cwd() !== env.cwd) {
@@ -60,7 +52,10 @@ cli.launch({
       deploy : 'default'
     },
     project: {
-      files: ['*.html', '!output/**', '!node_modules/**']
+      files: ['*.html', '!output/**', '!node_modules/**'],
+      watch: {
+        exclude: /^\/(?:output|node_modules).*$/i,
+      }
     }
   });
 
@@ -127,7 +122,7 @@ cli.launch({
     console.log(content.join('\n'));
   };
 
-  fis.cli.help.commands = ['release', 'install', 'server'];
+  fis.cli.help.commands = ['init', 'release', 'install', 'server'];
 
   //output version info
   fis.cli.version = function() {
@@ -162,7 +157,6 @@ cli.launch({
 
   //run cli tools
   fis.cli.run = function(argv) {
-
     if (hasArgv(argv, '--no-color')) {
       fis.cli.colors.mode = 'none';
     }
