@@ -53,10 +53,14 @@ cli.launch({
 
   process.env.NODE_ENV = process.env.NODE_ENV || argv.env || 'dev';
 
-  fis.set({
+  // default settings
+  fis.config.merge({
     modules: {
       packager: 'map',
       deploy : 'default'
+    },
+    project: {
+      files: ['*.html', '!output/**', '!node_modules/**']
     }
   });
 
@@ -117,6 +121,7 @@ cli.launch({
       '    -h, --help     output usage information',
       '    -v, --version  output the version number',
       '    --no-color     disable colored output',
+      '    --env          set env, default value is `dev`.',
       ''
     ]);
     console.log(content.join('\n'));

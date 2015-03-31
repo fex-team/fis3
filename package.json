@@ -29,7 +29,7 @@
     "iconv-lite": "^0.4.7",
     "istanbul": "^0.3.7",
     "liftoff": "^2.0.2",
-    "lodash": "^3.5.0",
+    "lodash": "^3.6.0",
     "minimatch": "^2.0.4",
     "minimist": "^1.1.1",
     "v8flags": "^2.0.2"
