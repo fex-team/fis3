@@ -1,10 +1,10 @@
 {
   "name": "fis3",
-  "version": "1.0.0-beta2",
+  "version": "1.0.0-beta3",
   "description": "fis 3.0",
   "main": "index.js",
   "bin": {
-    "fis3": "fis.js"
+    "fis3": "bin/fis.js"
   },
   "dependencies": {
     "colors": "0.6.2",
