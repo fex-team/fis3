@@ -14,7 +14,6 @@
     "fis-command-release": "0.11.3",
     "fis-command-server": "0.7.1",
     "fis-deploy-default": "0.0.2",
-    "fis-kernel": "2.0.12",
     "fis-optimizer-clean-css": "0.0.9",
     "fis-optimizer-png-compressor": "0.0.6",
     "fis-optimizer-uglify-js": "0.1.7",
@@ -28,8 +27,7 @@
     "liftoff": "2.0.2",
     "lodash": "3.6.0",
     "minimatch": "2.0.4",
-    "minimist": "1.1.1",
-    "v8flags": "2.0.2"
+    "minimist": "1.1.1"
   },
   "devDependencies": {
     "mocha": "^2.2.1"

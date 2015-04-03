@@ -3,7 +3,6 @@
 var Liftoff = require('liftoff');
 var argv = require('minimist')(process.argv.slice(2));
 var logger = require('../lib/log.js');
-var v8flags = require('v8flags');
 var path = require('path');
 var nodeVersion = process.versions.node;
 var parts = nodeVersion.split(".");
@@ -17,9 +16,7 @@ var cli = new Liftoff({
   // only js supported!
   extensions: {
     '.js': null
-  },
-
-  v8flags: v8flags
+  }
 });
 
 cli.launch({
@@ -35,21 +32,13 @@ cli.launch({
     fis = require(env.modulePath);
   }
 
-  // chdir before requiring gulpfile to make sure
-  // we let them chdir as needed
-  // if (process.cwd() !== env.cwd) {
-  //   process.chdir(env.cwd);
-  //   logger.notice('Working directory changed to `%s`.', env.cwd);
-  // }
-  //
-
   process.env.NODE_ENV = process.env.NODE_ENV || argv.env || 'dev';
 
   // default settings
   fis.config.merge({
     modules: {
       packager: 'map',
-      deploy : 'default'
+      deploy: 'default'
     },
     project: {
       files: ['*.html', '!output/**', '!node_modules/**'],
@@ -119,6 +108,7 @@ cli.launch({
       '    --env          set env, default value is `dev`.',
       ''
     ]);
+
     console.log(content.join('\n'));
   };
 
@@ -126,38 +116,34 @@ cli.launch({
 
   //output version info
   fis.cli.version = function() {
-    var content = [
-      '',
+    var content = ['',
       '  v' + fis.cli.info.version,
-      '',
-      ' __' + '/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'.bold.red + '__' + '/\\\\\\\\\\\\\\\\\\\\\\'.bold.yellow + '_____' + '/\\\\\\\\\\\\\\\\\\\\\\'.bold.green + '___',
-      '  _' + '\\/\\\\\\///////////'.bold.red + '__' + '\\/////\\\\\\///'.bold.yellow + '____' + '/\\\\\\/////////\\\\\\'.bold.green + '_' + '       ',
-      '   _' + '\\/\\\\\\'.bold.red + '_________________' + '\\/\\\\\\'.bold.yellow + '______' + '\\//\\\\\\'.bold.green + '______' + '\\///'.bold.green + '__',
-      '    _' + '\\/\\\\\\\\\\\\\\\\\\\\\\'.bold.red + '_________' + '\\/\\\\\\'.bold.yellow + '_______' + '\\////\\\\\\'.bold.green + '_________' + '     ',
-      '     _' + '\\/\\\\\\///////'.bold.red + '__________' + '\\/\\\\\\'.bold.yellow + '__________' + '\\////\\\\\\'.bold.green + '______' + '    ',
-      '      _' + '\\/\\\\\\'.bold.red + '_________________' + '\\/\\\\\\'.bold.yellow + '_____________' + '\\////\\\\\\'.bold.green + '___' + '   ',
-      '       _' + '\\/\\\\\\'.bold.red + '_________________' + '\\/\\\\\\'.bold.yellow + '______' + '/\\\\\\'.bold.green + '______' + '\\//\\\\\\'.bold.green + '__',
-      '        _' + '\\/\\\\\\'.bold.red + '______________' + '/\\\\\\\\\\\\\\\\\\\\\\'.bold.yellow + '_' + '\\///\\\\\\\\\\\\\\\\\\\\\\/'.bold.green + '___',
-      '         _' + '\\///'.bold.red + '______________' + '\\///////////'.bold.yellow + '____' + '\\///////////'.bold.green + '_____',
       ''
     ].join('\n');
-    console.log(content);
-  };
 
-  function hasArgv(argv, search) {
-    var pos = argv.indexOf(search);
-    var ret = false;
-    while (pos > -1) {
-      argv.splice(pos, 1);
-      pos = argv.indexOf(search);
-      ret = true;
+    var logo = [
+      ' __/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\__/\\\\\\\\\\\\\\\\\\\\\\_____/\\\\\\\\\\\\\\\\\\\\\\___',
+      '  _\\/\\\\\\///////////__\\/////\\\\\\///____/\\\\\\/////////\\\\\\_       ',
+      '   _\\/\\\\\\_________________\\/\\\\\\______\\//\\\\\\______\\///__',
+      '    _\\/\\\\\\\\\\\\\\\\\\\\\\_________\\/\\\\\\_______\\////\\\\\\_________     ',
+      '     _\\/\\\\\\///////__________\\/\\\\\\__________\\////\\\\\\______    ',
+      '      _\\/\\\\\\_________________\\/\\\\\\_____________\\////\\\\\\___   ',
+      '       _\\/\\\\\\_________________\\/\\\\\\______/\\\\\\______\\//\\\\\\__',
+      '        _\\/\\\\\\______________/\\\\\\\\\\\\\\\\\\\\\\_\\///\\\\\\\\\\\\\\\\\\\\\\/___',
+      '         _\\///______________\\///////////____\\///////////_____',
+      ''
+    ].join('\n');
+
+    if (fis.get('cli.options.color') !== false) {
+      logo = fis.lolcat(logo);
     }
-    return ret;
-  }
+    console.log(content + '\n' + logo);
+  };
 
   //run cli tools
   fis.cli.run = function(argv) {
-    if (hasArgv(argv, '--no-color')) {
+
+    if (fis.get('cli.options.color') === false) {
       fis.cli.colors.mode = 'none';
     }
 
@@ -182,5 +168,6 @@ cli.launch({
     }
   };
 
+  fis.set('cli.options', argv);
   fis.cli.run(process.argv);
 });
