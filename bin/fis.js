@@ -155,6 +155,11 @@ cli.launch({
     } else if (first[0] === '-') {
       fis.cli.help();
     } else {
+
+      //fix args
+      var p = argv.indexOf('--no-color');
+      if (~p) argv.splice(p, 1);
+
       //register command
       var commander = fis.cli.commander = require('commander');
       var cmd = fis.require('command', argv[2]);
