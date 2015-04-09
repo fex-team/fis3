@@ -30,6 +30,7 @@ cli.launch({
     fis = require('../');
   } else {
     fis = require(env.modulePath);
+    fis.set('globalNPMFolder', path.dirname(__dirname));
   }
 
   process.env.NODE_ENV = process.env.NODE_ENV || argv.env || 'dev';
@@ -37,6 +38,7 @@ cli.launch({
   // default settings
   fis.config.merge({
     modules: {
+      plugin: 'components, module',
       packager: 'map',
       deploy: 'default'
     },
@@ -46,10 +48,6 @@ cli.launch({
         exclude: /^\/(?:output|node_modules).*$/i,
       }
     }
-  });
-
-  fis.match('*.{js|css|html}', {
-    preprocessor: fis.plugin('components')
   });
 
   fis.match('*.js', {
