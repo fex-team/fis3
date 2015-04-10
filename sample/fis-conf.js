@@ -1,7 +1,8 @@
 fis.get('project.files').push('scripts/**.js');
 
 fis.match('*.html', {
-    release: '/html/$0'
+    release: '/html/$0',
+    useMap: true
 });
 
 fis.match('*.js', {

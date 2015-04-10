@@ -6,5 +6,11 @@
 </head>
 <body>
     <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript">
+    require('./scripts/a');
+    require('./scripts/b.js');
+    require(['./scripts/b.js', '/scripts/c']);
+    require.async('./scripts/a');
+    </script>
 </body>
 </html>
