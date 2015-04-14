@@ -18,7 +18,6 @@
     "fis-optimizer-png-compressor": "0.0.6",
     "fis-optimizer-uglify-js": "0.1.7",
     "fis-packager-map": "0.0.9",
-    "fis-postprocessor-jswrapper": "0.0.9",
     "fis-spriter-csssprites": "0.2.5",
     "glob": "5.0.3",
     "tar": "0.1.17",
@@ -33,7 +32,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "sample": "rm -rf ./output && node ./bin/fis.js release -r sample -cd ./output --verbose"
+    "sample": "rm -rf ./output && node ./bin/fis.js release -r sample -cd ./output"
   },
   "repository": {
     "type": "git",

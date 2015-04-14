@@ -38,7 +38,7 @@ cli.launch({
   // default settings
   fis.config.merge({
     modules: {
-      plugin: 'components, module',
+      plugin: 'module, components',
       packager: 'map',
       deploy: 'default'
     },
@@ -48,10 +48,6 @@ cli.launch({
         exclude: /^\/(?:output|node_modules).*$/i,
       }
     }
-  });
-
-  fis.match('*.js', {
-    postprocessor: fis.plugin('jswrapper'),
   });
 
   fis.env('production')
