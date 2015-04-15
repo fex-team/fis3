@@ -2,11 +2,7 @@
 
 var Liftoff = require('liftoff');
 var argv = require('minimist')(process.argv.slice(2));
-var logger = require('../lib/log.js');
 var path = require('path');
-var nodeVersion = process.versions.node;
-var parts = nodeVersion.split(".");
-
 var cli = new Liftoff({
   name: 'fis',
   processTitle: 'fis',
