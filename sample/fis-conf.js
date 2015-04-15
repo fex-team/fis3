@@ -24,3 +24,17 @@ fis.media('production').match('*.js', {
 fis.match('scripts/**.js', {
   packTo: '/pkg/all.js'
 });
+
+fis.config.set('settings.plugin.module', {
+  packages: [
+    {
+      name: 'alias',
+      location: 'scripts',
+      main: 'a'
+    }
+  ],
+
+  shim: {
+    alias: ['jquery']
+  }
+});

@@ -8,9 +8,13 @@
     <script type="text/javascript" src="./script.js"></script>
     <script type="text/javascript">
     require('./scripts/a');
-    require('./scripts/b.js');
-    require(['./scripts/b.js', '/scripts/c']);
+    require('scripts/b.js');
+    require(['scripts/b', '/scripts/c']);
     require.async('./scripts/a');
+
+    require(['./amd/test!./scripts/a.js']);
+
+    require(['alias']);
     </script>
 </body>
 </html>
