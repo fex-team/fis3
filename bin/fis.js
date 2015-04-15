@@ -26,7 +26,6 @@ cli.launch({
   var fis;
 
   if (!env.modulePath) {
-    logger.warning('Local `fis3` not found, use global version instead.');
     fis = require('../');
   } else {
     fis = require(env.modulePath);
@@ -49,6 +48,12 @@ cli.launch({
       }
     }
   });
+
+  fis.env('dev')
+    .match('**', {
+      useHash: false,
+      useDomain: false
+    });
 
   fis.env('production')
     .match('*.js', {
@@ -149,6 +154,11 @@ cli.launch({
     } else if (first[0] === '-') {
       fis.cli.help();
     } else {
+
+      // tip
+      if (!env.modulePath) {
+        logger.warning('Local `fis3` not found, use global version instead.');
+      }
 
       //fix args
       var p = argv.indexOf('--no-color');
