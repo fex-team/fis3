@@ -31,7 +31,3 @@ cli.launch({
   process.env.NODE_ENV = argv.env || process.env.NODE_ENV || 'dev';
   fis.cli.run(argv, env);
 });
-
-cli.on('error', function (err) {
-  throw err;
-});
