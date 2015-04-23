@@ -28,6 +28,5 @@ cli.launch({
     fis.set('globalNPMFolder', path.dirname(__dirname));
   }
 
-  process.env.NODE_ENV = argv.env || process.env.NODE_ENV || 'dev';
   fis.cli.run(argv, env);
 });
