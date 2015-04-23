@@ -26,3 +26,16 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+/output
+/sample/output
+/debug
+/.idea
+node_modules/
+.DS_Store
+*.db
+*.bak
+*.tmp
+*.cmd
+~*
+upload.py

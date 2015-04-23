@@ -1,2 +1,2 @@
-# fis3
-http://fis.baidu.com
+# component
+Component template
