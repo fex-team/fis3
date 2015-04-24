@@ -1,0 +1,118 @@
+== FIS3
+
+=== FIS3 进度
+
+. 2015-04-23 进度
++
+总体进度 *65%* 正式发布时间预计延期 *2* 周
+
+.. 完成功能开发
+.. 调整参数细节，Review *40%*
+.. 实现单测 *20%*
+.. 文档进度 *0*
+.. 测试 *0*
+
+IMPORTANT: *Review* 环节非常重要，可能会邀请非组织内人员进行 *Review*
+
+=== FIS3 功能点
+
+. 人性化的配置 API
+.. fis.match
+.. fis.plugin
+.. fis.media
+. 可自定义三种语言能力接口(语法)
+. 支持内嵌异构语言脚本
+. 支持按需编译
+. 兼容现有社区插件
+. 产出相对路径支持
+. 打包策略调整
+.. 支持分包功能
+. 默认产出 ID 调整
+.. JS 不再带有扩展名，方便 AMD 这种规范能轻松接入 (*非常艰难的决定*)
+. https://github.com/fis-components[组件 repos] 支持
+. https://github.com/fis-scaffold[脚手架体系]
+. 工程化社区 (延后)
+
+=== FIS3 FIS2 功能对照表
+
+[cols="1,1a,1a" options="header"]
+.配置
+|===
+|
+| FIS2
+| FIS3
+
+| 配置插件
+| `fis.config.set('modules', ...)`
+`fis.config.set('settings', ...)`
+| `fis.plugin('plugin-name', {/*settings*/})`
+
+| roadmap.path
+| `fis.config.set('roadmap.path', [{reg: '**.js', ...}])`
+| `fis.match('**js', {})`
+
+| roadmap.domain
+| `fis.config.set('roadmap.domain', ...)`
+| `fis.match('**.js', {domain: 'http://cdn.baidu.com/', ...})`
+
+| roadmap.ext
+| `fis.config.set('roadmap.ext', {less: 'css'})`
+| `fis.match('**.less', {rExt: 'css', ...})`
+
+| pack
+| `fis.config.set('pack', { 'all.js': '**.js'})`
+| `fis.match('**.js', {packTo: 'all.js'})`
+
+| deploy
+| `fis.config.set('deplay.rd', {...})`
+| `fis.media('rd').set('deploy', {})`
+`fis.media.match('**', {deploy: fis.media('dev').get('deploy')})`
+
+|===
+
+
+[cols="1,1a" options="header"]
+.命令行 (release)
+|===
+| FIS2
+| FIS3
+
+| -c, --clean
+| -c, --clean
+
+| -w, --watch
+| -w, --watch
+
+| -L, --live
+| -L, --live
+
+| -u, --unique
+| -u, --unique
+
+| -r, --root
+| -r, --root
+
+| -d, --dest <names> //@TODO
+| -d, --dest <names> //@TODO
+
+| -h, --help
+| -h, --help
+
+| -f, --file <filename>
+| -f, --file
+
+| -l, --lint
+| file.useLint
+
+| -D, --domains
+| file.domain; fis.useDomain
+
+| -t, --test
+| file.useTest
+
+| -o, --optimize
+| file.useOptimize
+
+| -m, --md5
+| file.useHash; file.keepOrigin
+|===
