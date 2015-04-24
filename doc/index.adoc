@@ -116,3 +116,31 @@ IMPORTANT: *Review* 环节非常重要，可能会邀请非组织内人员进行
 | -m, --md5
 | file.useHash; file.keepOrigin
 |===
+
+
+## FIS3
+
+### 内嵌异构语言脚本
+
+[source,html]
+.index.html
+----
+...
+<script type="text/x-coffescript">
+    //...
+</script>
+...
+----
+
+[source,html]
+.index.html
+----
+<style type="text/x-less">
+body {
+    background-color: #F0F0F0;
+    h1 {
+        color: red;
+    }
+}
+</style>
+----
