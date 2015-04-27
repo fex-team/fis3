@@ -234,7 +234,7 @@ useMap = false;
 _isImage = true;
 _isText = false;
 ----
-| .[\w]
+| `.[\w]`
 
 | isHtmlLike
 | ----
