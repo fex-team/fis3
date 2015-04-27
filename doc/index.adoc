@@ -193,7 +193,7 @@ fis.media.match('**', {
 | file.useHash; file.keepOrigin
 |===
 
-[cols='1,1a,1a' options="header"]
+[cols='1,1a,1a,1a' options="header"]
 .File
 |===
 |
