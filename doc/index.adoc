@@ -193,6 +193,145 @@ fis.media.match('**', {
 | file.useHash; file.keepOrigin
 |===
 
+[cols='1,1a,1a' options="header"]
+.File
+|===
+|
+| FIS2
+| FIS3
+| 说明
+
+| 表现形式
+| fis.config.set('roadmap.path', []);
+| 文件属性
+|
+
+| roadmap
+| reg
+| *
+|
+
+|
+| release
+| release
+|
+
+|
+| url
+| url
+|
+
+|
+| query
+| query
+|
+
+|
+| id
+| id
+|
+
+|
+| charset
+| charset
+|
+
+|
+| isHtmlLike
+| isHtmlLike
+|
+
+|
+| isCssLike
+| isCssLike
+|
+
+|
+| isJsLike
+| isJsLike
+|
+
+|
+| useCompile
+| useCompile
+| 默认*关*还是*开*，需要讨论
+
+|
+| useHash
+| useHash
+| 保留原文件路径这个需要再确认下？
+
+|
+| useDomain
+| domain: ''
+| 如果设置了就加，不设置就不加了。
+
+|
+| useCache
+| useCache
+| *默认都有*
+
+|
+| useMap
+| useMap
+| js,css 默认入表，FIS2, FIS3无差别
+
+|
+| useParser
+| parser: fis.plugin(...)
+| 如果设置了插件就执行，没有设置就不过这类插件？
+
+|
+| usePreprocessor
+| preprocessor: fis.plugin(...)
+| 同上
+
+|
+| useStandard
+| standard: fis.plugin(...)
+| 同上
+
+|
+| usePostprocessor
+| postprocessor: fis.plugin(...)
+| 同上
+
+|
+| useLint
+| lint: fis.plugin(...)
+| 同上
+
+|
+| useOptimizer
+| optimizer: fis.plugin(...)
+| 同上
+
+|
+| useTest
+| test: fis.plugin(...)
+| 这个还要吗？
+
+|
+| useSprite
+| sprite: fis.plugin(...)
+| 同上的上
+
+|
+| isMod
+| isMod
+|
+
+|
+| extras
+| extras
+|
+
+|
+| requires
+| requires
+|
+
+|===
 
 ## FIS3
 
