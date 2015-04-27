@@ -175,7 +175,7 @@ fis.media.match('**', {deploy: fis.media('dev').get('deploy')})
 .File
 |===
 | class
-| 属性
+| 默认属性
 | 后缀
 
 | All
