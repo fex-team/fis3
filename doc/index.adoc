@@ -178,6 +178,25 @@ fis.media.match('**', {deploy: fis.media('dev').get('deploy')})
 | 默认属性
 | 后缀
 
+| Base
+| ----
+ext
+rExt
+realpath
+realpathNoExt
+
+subpath
+subdirname
+subpathNoExt
+
+release
+url
+
+charset
+id
+----
+|
+
 | All
 | ----
 useCompile = true;
