@@ -52,19 +52,27 @@ fis.config.set('settings', ...)
 |
 [source,javascript]
 ----
-fis.plugin('plugin-name', {/*settings*/})
+fis.plugin('plugin-name', {
+  /*settings*/
+})
 ----
 
 | roadmap.path
 |
 [source,javascript]
 ----
-fis.config.set('roadmap.path', [{reg: '**.js', ...}])
+fis.config.set('roadmap.path', [
+    {
+        reg: '**.js'
+        , ...
+    }
+])
 ----
 |
 [source,javascript]
 ----
-fis.match('**js', {})
+fis.match('**js', {
+})
 ----
 
 
@@ -77,44 +85,63 @@ fis.config.set('roadmap.domain', ...)
 |
 [source,javascript]
 ----
-fis.match('**.js', {domain: 'http://cdn.baidu.com/', ...})
+fis.match('**.js', {
+    domain: 'http://cdn.baidu.com/',
+    ...
+})
 ----
 
 | roadmap.ext
 |
 [source,javascript]
 ----
-fis.config.set('roadmap.ext', {less: 'css'})
+fis.config.set('roadmap.ext',
+    {less:
+        'css'
+    })
 ----
 |
 [source,javascript]
 ----
-fis.match('**.less', {rExt: 'css', ...})
+fis.match('**.less', {
+    rExt: 'css',
+    ...
+})
 ----
 
 | pack
 |
 [source,javascript]
 ----
-fis.config.set('pack', { 'all.js': '**.js'})
+fis.config.set('pack', {
+    'all.js': '**.js'
+})
 ----
 |
 [source,javascript]
 ----
-fis.match('**.js', {packTo: 'all.js'})
+fis.match('**.js', {
+    packTo: 'all.js'
+})
 ----
 
 | deploy
 |
 [source,javascript]
 ----
-fis.config.set('deplay.rd', {...})
+fis.config.set('deplay.rd', {
+    ...
+})
 ----
 |
 [source,javascript]
 ----
-fis.media('rd').set('deploy', {})
-fis.media.match('**', {deploy: fis.media('dev').get('deploy')})
+fis.media('rd').set('deploy', {
+    ...
+})
+fis.media.match('**', {
+    deploy: fis.media('dev').get('deploy')
+})
 ----
 
 |===
