@@ -43,30 +43,79 @@ IMPORTANT: *Review* 环节非常重要，可能会邀请非组织内人员进行
 | FIS3
 
 | 配置插件
-| `fis.config.set('modules', ...)`
-`fis.config.set('settings', ...)`
-| `fis.plugin('plugin-name', {/*settings*/})`
+|
+[source,javascript]
+----
+fis.config.set('modules', ...)
+fis.config.set('settings', ...)
+----
+|
+[source,javascript]
+----
+fis.plugin('plugin-name', {/*settings*/})
+----
 
 | roadmap.path
-| `fis.config.set('roadmap.path', [{reg: '**.js', ...}])`
-| `fis.match('**js', {})`
+|
+[source,javascript]
+----
+fis.config.set('roadmap.path', [{reg: '**.js', ...}])
+----
+|
+[source,javascript]
+----
+fis.match('**js', {})
+----
+
 
 | roadmap.domain
-| `fis.config.set('roadmap.domain', ...)`
-| `fis.match('**.js', {domain: 'http://cdn.baidu.com/', ...})`
+|
+[source,javascript]
+----
+fis.config.set('roadmap.domain', ...)
+----
+|
+[source,javascript]
+----
+fis.match('**.js', {domain: 'http://cdn.baidu.com/', ...})
+----
 
 | roadmap.ext
-| `fis.config.set('roadmap.ext', {less: 'css'})`
-| `fis.match('**.less', {rExt: 'css', ...})`
+|
+[source,javascript]
+----
+fis.config.set('roadmap.ext', {less: 'css'})
+----
+|
+[source,javascript]
+----
+fis.match('**.less', {rExt: 'css', ...})
+----
 
 | pack
-| `fis.config.set('pack', { 'all.js': '**.js'})`
-| `fis.match('**.js', {packTo: 'all.js'})`
+|
+[source,javascript]
+----
+fis.config.set('pack', { 'all.js': '**.js'})
+----
+|
+[source,javascript]
+----
+fis.match('**.js', {packTo: 'all.js'})
+----
 
 | deploy
-| `fis.config.set('deplay.rd', {...})`
-| `fis.media('rd').set('deploy', {})`
-`fis.media.match('**', {deploy: fis.media('dev').get('deploy')})`
+|
+[source,javascript]
+----
+fis.config.set('deplay.rd', {...})
+----
+|
+[source,javascript]
+----
+fis.media('rd').set('deploy', {})
+fis.media.match('**', {deploy: fis.media('dev').get('deploy')})
+----
 
 |===
 
@@ -119,6 +168,95 @@ IMPORTANT: *Review* 环节非常重要，可能会邀请非组织内人员进行
 
 
 ## FIS3
+
+### File 对象
+
+[cols="1,1a,1a" options="header"]
+.File
+|===
+| class
+| 属性
+| 后缀
+
+| All
+| ----
+useCompile = true;
+useDomain = false;
+useCache = true;
+useHash = false;
+useMap = false;
+_isImage = true;
+_isText = false;
+----
+| .[\w]
+
+| isHtmlLike
+| ----
+useHash = false
+useDomain = false
+_isText = true
+----
+| ....
+.html
+.xhtml
+.shtml
+.htm
+.tpl
+.ftl
+.vm
+.php
+.jsp
+.asp
+.aspx
+.ascx
+.cshtml
+.master
+....
+
+| isCssLike
+| ----
+useHash = true
+useDomain = false
+_isText = true
+useMap = true
+----
+| ....
+.css
+.scss
+.sass
+.less
+.styl
+....
+
+| isJsLike
+| ----
+useHash = true
+useDomain = true
+_isText = true
+useMap = true
+----
+| ....
+.js
+.jsx
+.coffee
+....
+
+| isJsonLike
+|
+| ....
+.json
+....
+
+| isImage
+| ----
+useDomain = true
+useHash = true // exclude '.ico'
+|
+
+----
+
+|===
+
 
 ### 内嵌异构语言脚本
 
