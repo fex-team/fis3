@@ -1,0 +1,27 @@
+﻿{
+    "你好" : "中文",
+    "string" : "hello world",
+    "boolean" : true,
+    "number" : 123,
+    "null" : null,
+    "©" : "€",
+    "array" : ["中文", "hello world", true, 123, null, "©", "€"],
+    "object" : {
+        "你好" : "中文",
+        "string" : "hello world",
+        "boolean" : true,
+        "number" : 123,
+        "null" : null,
+        "©" : "€",
+        "array" : ["中文", "hello world", true, 123, null, "©", "€"],
+        "object" : {
+            "你好" : "中文",
+            "string" : "hello world",
+            "boolean" : true,
+            "number" : 123,
+            "null" : null,
+            "©" : "€",
+            "array" : ["中文", "hello world", true, 123, null, "©", "€"]
+        }
+    }
+}

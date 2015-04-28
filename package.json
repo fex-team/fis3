@@ -7,7 +7,6 @@
     "fis3": "bin/fis.js"
   },
   "dependencies": {
-    "chai": "^2.2.0",
     "colors": "0.6.2",
     "commander": "1.3.2",
     "fis-command-install": "~0.1.11",
@@ -31,11 +30,12 @@
     "tar": "0.1.17"
   },
   "devDependencies": {
-    "mocha": "^2.2.1"
+    "mocha": "^2.2.1",
+    "chai": "^2.2.0"
   },
   "scripts": {
-    "test": "mocha",
-    "sample": "rm -rf ./output && node ./bin/fis.js release -r sample -cd ./output"
+    "test": "mocha ./test",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test"
   },
   "repository": {
     "type": "git",
