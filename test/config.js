@@ -10,7 +10,7 @@ var u = fis.util;
 var config = null;
 
 
-describe('config',function(){
+describe('config: config',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
     fis.config.init(defaultSettings);
