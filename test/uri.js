@@ -16,7 +16,7 @@ var uri     = fis.uri,
     project = fis.project;
 var expect = require('chai').expect;
 
-describe('uri()', function () {
+describe('uri: uri()', function () {
   beforeEach(function () {
     config.init();
     project.setProjectRoot(_path);
@@ -41,7 +41,7 @@ describe('uri()', function () {
 /*
  *  将变量${var}替换成 config中的值
  * */
-describe('replaceDefine()', function () {
+describe('uri: replaceDefine()', function () {
   it('${var} replace config value', function () {
     fis.config.set('123', '<{11');
     fis.config.set('var', 'var_var');
@@ -56,7 +56,7 @@ describe('replaceDefine()', function () {
 /*
  * $& 或者 $\d替换成matches的键值
  * */
-describe('replaceMatches()', function () {
+describe('uri: replaceMatches()', function () {
   it('relative path "/"', function () {
     var source = "$&hh$11hh",
         matches = {
@@ -80,7 +80,7 @@ describe('replaceMatches()', function () {
  * 数组和对象的属性值递归替换
  *
  * */
-describe('replaceProperties()', function () {
+describe('uri: replaceProperties()', function () {
   it('replaceProperties', function () {
     fis.config.set('123', '<{11');
     var source, matches, expectResult;
@@ -170,7 +170,7 @@ describe('replaceProperties()', function () {
 });
 
 
-describe('roadmap()', function () {
+describe('uri: roadmap()', function () {
   it('relative path "/"', function () {
     var subpath, pth, obj = {};
     subpath = "";
@@ -188,7 +188,7 @@ describe('roadmap()', function () {
   });
 });
 
-describe('bug #93', function () {
+describe('uri: bug #93', function () {
   it('replaceMatches bug', function () {
 
 
