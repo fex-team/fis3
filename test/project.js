@@ -65,3 +65,36 @@ describe('project: projectPath', function () {
     assert.equal(project.getProjectPath(), root);
   });
 });
+
+describe('project: getSource', function () {
+  var project;
+  beforeEach(function () {
+    fis.config.init(); // @TODO
+    fis.media().init(); // @TODO
+    require.del('../lib/project');
+    project = require('../lib/project');
+  });
+
+  //@TODO
+  it('getSourceByPatterns', function () {
+  });
+});
+
+describe('project: lookup', function () {
+  var project;
+  beforeEach(function () {
+    fis.config.init(); // @TODO
+    fis.media().init(); // @TODO
+    require.del('../lib/project');
+    project = require('../lib/project');
+    project.setProjectRoot(root);
+  });
+
+  it("not event", function () {
+    var filepath = path.join(root, 'test.js');
+    fis.util.write(filepath, 'console.log("hello, world.");');
+    var info = project.lookup('/test.js');
+    assert.deepEqual({id: info.id, moduleId: info.moduleId}, {id: '/test.js', moduleId: '/test.js'});
+    fis.util.del(filepath);
+  });
+});
