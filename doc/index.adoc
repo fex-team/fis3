@@ -295,7 +295,7 @@ fis.media.match('**', {
 | 同上；这块需要*注意*，当未配置 standard 插件的时候，会调用 builtin 进行类 FIS2
 的 三种语言语法 分析，但 js 中的 *require* 移交给插件去分析处理，因为各种规范下写法
  有点异样；
-
+IMPORTANT: js require 不再 builtin 处理
 |
 | usePostprocessor
 | postprocessor: fis.plugin(...)
