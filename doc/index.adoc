@@ -28,8 +28,8 @@ IMPORTANT: *Review* 环节非常重要，可能会邀请非组织内人员进行
 . 去除 test 插件扩展点
 . 产出相对路径支持
 . 打包策略调整
-. 支持 FIS 安装到*本地*
 .. 支持分包功能
+. 支持 FIS 安装到*本地*
 . 默认产出 ID 调整
 .. JS 不再带有扩展名，方便 AMD 这种规范能轻松接入 (*非常艰难的决定*)
 . https://github.com/fis-components[组件 repos] 支持
