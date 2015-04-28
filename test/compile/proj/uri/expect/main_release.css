@@ -1,0 +1,9 @@
+@import url('/static/comp_a.css');
+
+body {
+    background-image: url(/static/img/a.png);
+}
+
+body {
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/img/a.png');
+}

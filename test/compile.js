@@ -77,3 +77,60 @@ describe('compile: builtin require', function () {
     expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.html')));
   });
 });
+
+
+describe('compile: builtin uri', function () {
+  var root = path.join(__dirname, 'compile', 'proj', 'uri');
+  beforeEach(function () {
+    fis.project.setProjectRoot(root);
+    fis.media().init();
+    fis.config.init();
+    fis.compile.setup();
+  });
+
+  it('compile .js file', function () {
+    var file = fis.file.wrap(path.join(root, 'main.js'));
+
+    fis.match('comp_**.css', {
+      useHash: false
+    });
+
+    fis.match('comp_*.js', {
+      useHash: false
+    });
+
+    fis.compile(file);
+    expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.js')));
+  });
+
+  it('compile .css file', function () {
+    var file = fis.file.wrap(path.join(root, 'main.css'));
+
+    fis.match('comp_**.css', {
+      useHash: false
+    });
+
+    //@TODO glob
+    fis.match('*.png', {
+      useHash: false
+    });
+
+    fis.compile(file);
+    expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.css')));
+
+    fis.cache.clean();
+
+    fis.match('comp_**.css', {
+      useHash: false,
+      release: '/static/$0'
+    });
+
+    fis.match('*.png', {
+      useHash: false,
+      release: '/static/img/$0'
+    });
+
+    fis.compile(file);
+    expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main_release.css')));
+  });
+});
