@@ -49,16 +49,14 @@ describe('project: projectPath', function () {
     project = require('../lib/project');
   });
 
-  //@TODO
-  /*
   it('getProjectPath', function () {
+    fis.log.throw = true;
     try {
       project.getProjectPath();
     }  catch (e) {
-      //
+      assert(/undefined project root/.test(e.message));
     }
   });
-  */
 
   it('setProjectRoot', function () {
     project.setProjectRoot(root);
