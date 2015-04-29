@@ -16,7 +16,7 @@ function buf2arr(buf) {
   return Array.prototype.slice.call(buf);
 }
 
-describe('isTextFile', function () {
+describe('util: isTextFile', function () {
   beforeEach(function () {
     fis.project.setProjectRoot(__dirname);
   });
@@ -31,7 +31,7 @@ describe('isTextFile', function () {
   });
 });
 
-describe('isImageFile', function () {
+describe('util: isImageFile', function () {
   beforeEach(function () {
     fis.project.setProjectRoot(__dirname);
   });
@@ -46,7 +46,8 @@ describe('isImageFile', function () {
     expect(_.isImageFile('d:/sdf/sdf/test.svg')).to.be.true;
   });
 });
-describe('_.normalize(path1, [path2], [...])', function () {
+
+describe('util: _.normalize(path1, [path2], [...])', function () {
   before(function () {
     config.init();
   });
@@ -128,7 +129,7 @@ describe('_.normalize(path1, [path2], [...])', function () {
   });
 });
 
-describe('_.map(obj, callback, [merge])', function () {
+describe('util: _.map(obj, callback, [merge])', function () {
   it('general', function () {
     var obj = {
       a: 1,
@@ -172,8 +173,9 @@ describe('_.map(obj, callback, [merge])', function () {
     });
   });
 });
+
 //用fill填充字符串到长度len，pre表示将fill填充在前面，此时从后面向前取len的字符串作为结果
-describe("_.pad(str, len, fill, [pre])", function () {
+describe("util: _.pad(str, len, fill, [pre])", function () {
   it('normal-with fill', function () {
     var str = 'helloworld';
     var result = _.pad(str, 15, '--');
@@ -198,7 +200,7 @@ describe("_.pad(str, len, fill, [pre])", function () {
   });
 });
 
-describe('_.merge(source, target)', function () {
+describe('util: _.merge(source, target)', function () {
   it('general', function () {
     var source = {
           a: {
@@ -237,7 +239,7 @@ describe('_.merge(source, target)', function () {
   });
 });
 
-describe('_clone(source)', function () {
+describe('util: _clone(source)', function () {
   it('source is obj', function () {
     //empty
     var source = {};
@@ -267,7 +269,7 @@ describe('_clone(source)', function () {
   });
 });
 
-describe('_.escapeShellCmd(str)', function () {
+describe('util: _.escapeShellCmd(str)', function () {
   it('general', function () {
     expect(_.escapeShellCmd("")).to.be.equal("");
     expect(_.escapeShellCmd(" ")).to.be.equal("\" \"");
@@ -278,7 +280,7 @@ describe('_.escapeShellCmd(str)', function () {
   });
 });
 
-describe('_.escapeShellArg(cmd)', function () {
+describe('util: _.escapeShellArg(cmd)', function () {
   it('general', function () {
     expect(_.escapeShellArg("")).to.be.equal("\"\"");
     expect(_.escapeShellArg(" ")).to.be.equal("\" \"");
@@ -287,7 +289,7 @@ describe('_.escapeShellArg(cmd)', function () {
   });
 });
 
-describe('_.stringQuote(str, [quotes], [trim])', function () {
+describe('util: _.stringQuote(str, [quotes], [trim])', function () {
   it('1 param', function () {
     var str1 = ' "helloworld" ';
     var str2 = '"hello2"';
@@ -361,7 +363,7 @@ describe('_.stringQuote(str, [quotes], [trim])', function () {
   });
 });
 
-describe('_.getMimeType(ext)', function () {
+describe('util: _.getMimeType(ext)', function () {
   it('defined', function () {
     expect(_.getMimeType('.css')).to.equal('text/css');
     expect(_.getMimeType('js')).to.equal('text/javascript');
@@ -375,7 +377,7 @@ describe('_.getMimeType(ext)', function () {
   });
 });
 
-describe('_.realpath(path)', function () {
+describe('util: _.realpath(path)', function () {
   it('file or dir exists', function () {
     expect(_.realpath(__filename)).to
       .equal(__filename.replace(/\\/g, '/'));
@@ -397,7 +399,7 @@ describe('_.realpath(path)', function () {
   });
 });
 
-describe('_.realpathSafe(path)', function () {
+describe('util: _.realpathSafe(path)', function () {
   it('file or dir exists', function () {
     expect(_.realpathSafe(__filename)).to
       .equal(__filename.replace(/\\/g, '/'));
@@ -412,7 +414,7 @@ describe('_.realpathSafe(path)', function () {
   });
 });
 
-describe('_.isAbsolute(path)', function () {
+describe('util: _.isAbsolute(path)', function () {
   it('general', function () {
     if (_.isWin()) {
       expect(_.isAbsolute('d:/work/hello')).to.be.true;
@@ -429,7 +431,7 @@ describe('_.isAbsolute(path)', function () {
 
 });
 
-describe('_.isFile(path)', function () {
+describe('util: _.isFile(path)', function () {
   it('file', function () {
     expect(_.isFile(__filename)).to.be.true;
     expect(_.isFile(__filename + '/a.js')).to.be.false;
@@ -440,7 +442,7 @@ describe('_.isFile(path)', function () {
   });
 });
 
-describe('_.isDir(path)', function () {
+describe('util: _.isDir(path)', function () {
   it('file', function () {
     expect(_.isDir(__filename)).to.be.false;
     expect(_.isDir(__filename + '/a.js')).to.be.false;
@@ -451,7 +453,8 @@ describe('_.isDir(path)', function () {
     expect(_.isDir(__dirname + '/~abc')).to.be.false;
   });
 });
-describe('_.mtime(path)', function () {
+
+describe('util: _.mtime(path)', function () {
   it('file or dir exists', function () {
     expect(_.mtime(__filename)).to.be.an.instanceOf(Date);
     expect(_.mtime(__dirname)).to.be.an.instanceOf(Date);
@@ -461,7 +464,7 @@ describe('_.mtime(path)', function () {
   });
 });
 
-describe('_.touch(path, mtime)', function () {
+describe('util: _.touch(path, mtime)', function () {
   it('file or dir exists', function () {
     var stat = fs.statSync(__filename),
         mtime = stat.mtime,
@@ -491,13 +494,13 @@ describe('_.touch(path, mtime)', function () {
   });
 });
 
-describe('_.isWin()', function () {
+describe('util: _.isWin()', function () {
   it('general', function () {
     expect(_.isWin()).to.equal(path.sep === '\\');
   });
 });
 
-describe('_.isTextFile(path)', function () {
+describe('util: _.isTextFile(path)', function () {
   it('without config', function () {
     expect(_.isTextFile('a.js')).to.be.true;
     expect(_.isTextFile('a.js.css')).to.be.true;
@@ -518,7 +521,7 @@ describe('_.isTextFile(path)', function () {
   });
 });
 
-describe('_.isImageFile(path)', function () {
+describe('util: _.isImageFile(path)', function () {
   it('without config', function () {
     expect(_.isImageFile('a.png')).to.be.true;
     expect(_.isImageFile('a.js.gif')).to.be.true;
@@ -539,7 +542,7 @@ describe('_.isImageFile(path)', function () {
   });
 });
 
-describe('_.md5(str)', function () {
+describe('util: _.md5(str)', function () {
   //md5('fis') = 37ab815c056b5c5f600f6ac93e486a78
   //md5('') = d41d8cd98f00b204e9800998ecf8427e
   it('general', function () {
@@ -563,7 +566,7 @@ describe('_.md5(str)', function () {
   });
 });
 
-describe('_.base64(data)', function () {
+describe('util: _.base64(data)', function () {
   it('string', function () {
     expect(_.base64('fis')).to.equal('Zmlz');
     expect(_.base64('')).to.equal('');
@@ -587,7 +590,7 @@ describe('_.base64(data)', function () {
   });
 });
 
-describe('_.mkdir(path1, [mode])', function () {
+describe('util: _.mkdir(path1, [mode])', function () {
   it('general', function () {
     var dir = _(__dirname) + '/mkdir';
     expect(_.isDir(dir)).to.be.false;
@@ -611,7 +614,7 @@ describe('_.mkdir(path1, [mode])', function () {
   });
 });
 
-describe('_.toEncoding(str, encoding)', function () {
+describe('util: _.toEncoding(str, encoding)', function () {
   it('general', function () {
     //default utf-8
     expect(_.toEncoding('你好').toString()).to.be.equal('你好');
@@ -621,7 +624,7 @@ describe('_.toEncoding(str, encoding)', function () {
   });
 });
 
-describe('_.readBuffer(buffer)', function () {
+describe('util: _.readBuffer(buffer)', function () {
   it('utf-8 with bom', function () {
     var buf = new Buffer([
       0xef, 0xbb, 0xbf, 0x68,
@@ -645,7 +648,7 @@ describe('_.readBuffer(buffer)', function () {
   });
 });
 
-describe('_.read(path)', function () {
+describe('util: _.read(path)', function () {
   var root = _(__dirname, 'util/encoding');
   it('encoding utf-8 without bom', function () {
     expect(_.read(root + '/utf8.txt')).to
@@ -670,7 +673,7 @@ describe('_.read(path)', function () {
   });
 });
 
-describe('_.write()', function () {
+describe('util: _.write()', function () {
   it('general', function () {
     var testfile = _(__dirname, 'write.tmp');
     _.write(testfile, '你好, fis。');
@@ -730,7 +733,7 @@ describe('_.write()', function () {
 });
 
 
-describe('_.filter(str, [include], [exclude])', function () {
+describe('util: _.filter(str, [include], [exclude])', function () {
   it('1 param', function () {
     expect(_.filter('hello')).to.be.true;
   });
@@ -749,7 +752,7 @@ describe('_.filter(str, [include], [exclude])', function () {
 //    });
 });
 
-describe('_find(rPath, [include], [exclude])', function () {
+describe('util: _find(rPath, [include], [exclude])', function () {
 //    it('invalid path',function(){
 //        try{
 //            _.find('./invalidPath')
@@ -836,7 +839,7 @@ describe('_find(rPath, [include], [exclude])', function () {
 
 });
 
-describe('_.del(rPath, include, exclude)', function () {
+describe('util: _.del(rPath, include, exclude)', function () {
   it('remove file', function () {
     var tmpdir = __dirname + "/tmp/tmp2";
     _.mkdir(tmpdir);
@@ -906,7 +909,7 @@ describe('_.del(rPath, include, exclude)', function () {
 
 });
 
-describe('_.copy(rSource, target, include, exclude, uncover, move)', function () {
+describe('util: _.copy(rSource, target, include, exclude, uncover, move)', function () {
   it('general', function () {
     var source = __dirname + '/copy/dir1';
     var target = __dirname + '/copy/dir2';
@@ -987,7 +990,7 @@ describe('_.copy(rSource, target, include, exclude, uncover, move)', function ()
 });
 
 //后缀相关的信息
-describe('_ext(str)', function () {
+describe('util: _ext(str)', function () {
   it('general', function () {
     expect(_.ext(__filename).ext).to.equal('.js');
     expect(_.ext(__filename).filename).to.equal('util');
@@ -1022,7 +1025,7 @@ describe('_ext(str)', function () {
 
 });
 //get请求中的query
-describe('_query(str)', function () {
+describe('util: _query(str)', function () {
   it('general', function () {
     var q = _.query('http://www.baidu.com?type=q&q=2');
     expect(q.origin, 'http://www.baidu.com?type=q&q=2');
@@ -1051,7 +1054,7 @@ describe('_query(str)', function () {
 
 });
 
-describe('_pathinfo(path)', function () {
+describe('util: _pathinfo(path)', function () {
   it('array', function () {
     var p = _.pathinfo('a', 'a.js');
     expect(p.ext).to.equal('.js');
@@ -1080,7 +1083,7 @@ describe('_pathinfo(path)', function () {
 
 });
 
-describe('_camelcase(str)', function () {
+describe('util: _camelcase(str)', function () {
   it('general', function () {
     var str = 'str_replace.js';
     expect(_.camelcase(str)).to.equal('StrReplace.js');
@@ -1100,7 +1103,7 @@ describe('_camelcase(str)', function () {
   });
 });
 
-describe('_parseUrl(url, opt)', function () {
+describe('util: _parseUrl(url, opt)', function () {
   it('general', function () {
     var url = 'http://localhost:8080/fis/test';
     var res = _.parseUrl(url);
@@ -1147,7 +1150,7 @@ describe('_parseUrl(url, opt)', function () {
 
 });
 
-describe('_download(url, [callback], [extract], [opt])', function () {
+describe('util: _download(url, [callback], [extract], [opt])', function () {
   var downdir = __dirname + '/download/';
 
   before(function () {
@@ -1238,7 +1241,7 @@ describe('_download(url, [callback], [extract], [opt])', function () {
 
 });
 
-describe('_upload(url, [opt], [data], content, subpath, callback)', function () {
+describe('util: _upload(url, [opt], [data], content, subpath, callback)', function () {
   it('general', function (done) {
     var receiver = 'http://web.baidu.com:8088/test/upload/receiver.php';
     var to = '/home/work/repos/test/upload';
@@ -1305,7 +1308,7 @@ describe('_upload(url, [opt], [data], content, subpath, callback)', function () 
   });
 });
 
-describe('_install(name, [version], opt)', function () {
+describe('util: _install(name, [version], opt)', function () {
   var installdir = __dirname + '/install/';
   after(function () {
     //清空install文件夹
@@ -1422,7 +1425,7 @@ describe('_install(name, [version], opt)', function () {
   });
 });
 
-describe('_.readJSON(path)', function () {
+describe('util: _.readJSON(path)', function () {
   it('general-readJson', function () {
     var path = _(__dirname) + "/util/json/json.json";
     var res = _.readJSON(path);
@@ -1539,7 +1542,7 @@ describe('_.readJSON(path)', function () {
 });
 
 
-describe('_.isUtf8', function () {
+describe('util: _.isUtf8', function () {
   it('gbk', function () {
     var bytes = buf2arr(fs.readFileSync(__dirname + '/util/encoding/gbk.txt'));
     expect(_.isUtf8(bytes)).to.be.false;
@@ -1559,7 +1562,7 @@ describe('_.isUtf8', function () {
   });
 });
 
-describe('_.glob(pattern, [str])', function () {
+describe('util: _.glob(pattern, [str])', function () {
   it('general', function () {
     expect(_.glob('/*.js', '/abc.js')).to.be.true;
     expect(_.glob('/*.js', '/abc.js.css')).to.be.false;

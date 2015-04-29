@@ -18,7 +18,7 @@ function buf2arr(buf) {
 }
 
 
-describe('exists',function(){
+describe('file: exists',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -33,7 +33,7 @@ describe('exists',function(){
   });
 });
 
-describe('toString',function(){
+describe('file: toString',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -49,10 +49,11 @@ describe('toString',function(){
 
 });
 
-describe('getMtime',function(){
+describe('file: getMtime',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
+
   it('general',function(){
     var path = __dirname+'/file/a.js';
     var f = _.wrap(path);
@@ -67,7 +68,8 @@ describe('getMtime',function(){
     fs.unlinkSync(path);
   });
 });
-describe('isFile',function(){
+
+describe('file: isFile',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -90,7 +92,7 @@ describe('isFile',function(){
   });
 });
 
-describe('isDir',function(){
+describe('file: isDir',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -119,7 +121,7 @@ describe('isDir',function(){
   });
 });
 
-describe('getHash',function(){
+describe('file: getHash',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -136,7 +138,8 @@ describe('getHash',function(){
     expect(f.getHash()).to.equal(f._md5);
   });
 });
-describe('getBase64(prefix)',function(){
+
+describe('file: getBase64(prefix)',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -227,7 +230,7 @@ describe('getBase64(prefix)',function(){
 //
 //});
 
-describe('getId',function(){
+describe('file: getId',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -239,7 +242,7 @@ describe('getId',function(){
   });
 });
 
-describe('getUrl(withHash, withDomain)',function(){
+describe('file: getUrl(withHash, withDomain)',function(){
 
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
@@ -441,7 +444,8 @@ describe('getUrl(withHash, withDomain)',function(){
   });
 
 });
-describe('getHashRelease',function(){
+
+describe('file: getHashRelease',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -485,7 +489,7 @@ describe('getHashRelease',function(){
 
 });
 
-describe('addRequire(id)',function(){
+describe('file: addRequire(id)',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -534,7 +538,8 @@ describe('addRequire(id)',function(){
   });
 
 });
-describe('removeRequire(id)',function(){
+
+describe('file: removeRequire(id)',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
   });
@@ -551,7 +556,7 @@ describe('removeRequire(id)',function(){
 });
 
 //在当前目录下寻找同名不同后缀的文件，并作为依赖添加进来
-describe('addSameNameRequire(ext)',function(){
+describe('file: addSameNameRequire(ext)',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
     fis.config.init();
@@ -587,7 +592,7 @@ describe('addSameNameRequire(ext)',function(){
   });
 });
 
-describe("get/set is*Like", function () {
+describe("file: get/set is*Like", function () {
   it ('0', function () {
     var f = _.wrap('test/test.js');
     expect(f.isHtmlLike).to.equal(false);

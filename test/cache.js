@@ -15,13 +15,14 @@ var _      = fis.cache,
 var expect = require('chai').expect;
 var root = fis.util(__dirname) + '/fis-tmp';
 
-describe('save(content, info)', function () {
+describe('cache: save(content, info)', function () {
   var targetdir = root + '/target/cache/';
   project.setProjectRoot(__dirname);
   project.setTempRoot(root + '/target/');
   afterEach(function () {
     fis.util.del(targetdir);
   });
+
   it('general', function () {
     var fp = root + '/src/c1.js';
     var cache = _(fp);
@@ -79,7 +80,7 @@ describe('save(content, info)', function () {
 
 });
 
-describe('revert(file)', function () {
+describe('cache: revert(file)', function () {
   var targetdir = root + '/target/cache/';
   var fp = root + '/src/c1.js';
   afterEach(function () {
@@ -134,7 +135,7 @@ describe('revert(file)', function () {
 });
 
 
-describe('addDeps(file)', function () {
+describe('cache: addDeps(file)', function () {
   it('general', function () {
     var fp = root + '/src/c1.js';
     var dep2 = root + '/src/c2.css';
@@ -157,7 +158,7 @@ describe('addDeps(file)', function () {
   });
 });
 
-describe('removeDeps(file)', function () {
+describe('cache: removeDeps(file)', function () {
   it('general', function () {
     var fp = root + '/src/c1.js';
     var dep2 = root + '/src/c2.css';
@@ -182,7 +183,7 @@ describe('removeDeps(file)', function () {
 
 });
 
-describe('mergeDeps(cache)', function () {
+describe('cache: mergeDeps(cache)', function () {
   it('cache is instance of Cache', function () {
     var fp1 = root + '/src/c1.js';
     var fp2 = root + '/src/c2.css';
@@ -239,7 +240,7 @@ describe('mergeDeps(cache)', function () {
   });
 });
 
-describe('clean(name)', function () {
+describe('cache: clean(name)', function () {
   fis.util.mkdir(root + '/target/cache');
   expect(fis.util.exists(root + '/target/cache')).to.be.true;
   _.clean();
