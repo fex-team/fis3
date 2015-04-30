@@ -27,6 +27,7 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
+/.settings
 /output
 /sample/output
 /debug
