@@ -1,3 +1,6 @@
+### fis3/lib/fis.js
+> `require`，若`fis-`与`fis3-`后插件名称重名则无法调用`fis-`组件
+
 ### fis3/lib/log.js
 > `str += '.' + ('00' + d.getMilliseconds()).substr(-4)`应该改为`str += '.' + ('00' + d.getMilliseconds()).substr(-3);`
 ```JavaScript
@@ -31,6 +34,17 @@ _get: function(path) {
 ```
 
 ### fis3/lib/util.js
-> `util.nohup`函数中的回调未能表达执行的成功与否
+> `nohup`函数中的回调未能表达执行的成功与否
 
-> `util.isEmpty`对于`Date`对象、正则对象、`""`,`Number`,`undefined`这几种类型未做处理，均返回true
+> `isEmpty`对于`Date`对象、正则对象、`""`,`Number`,`undefined`这几种类型未做处理，均返回true
+
+> `pipe`
+```JavaScript
+processors.forEach(function(obj, index) {
+      var processor = obj.name || obj;// 这里用户传入函数有函数名会产生bug
+      var key;
+      ...
+});
+```
+
+> `download`如果`callback`中使用`return`结束执行导致`callback`返回不为`undefined`会导致tmp文件删除失败
