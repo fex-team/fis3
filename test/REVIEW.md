@@ -48,3 +48,16 @@ processors.forEach(function(obj, index) {
 ```
 
 > `download`如果`callback`中使用`return`结束执行导致`callback`返回不为`undefined`会导致tmp文件删除失败
+
+### fis3/lib/project.js
+> `getSource`
+```JavaScript
+// 这里传入的rPath和root一样，会导致include和exclude无法正常工作
+fis.util.find(root, include, project_exclude, root).forEach(function(file) {
+    // 产生对应的 File对象
+    file = fis.file(file);
+    if (file.release) {
+      source[file.subpath] = file;
+    }
+  });
+```
