@@ -61,3 +61,38 @@ fis.util.find(root, include, project_exclude, root).forEach(function(file) {
     }
   });
 ```
+
+### fis3/lib/file.js
+> `applyMatches`
+```JavaScript
+...
+	if (typeof value === 'string') {
+	  value = value.replace(/\$(\d+|&)/g, function(_, k) {
+	    k = k === '&' ? 0 : k; // 推测为_ === '$&'不解
+	    return m[k] || '';
+	  });
+	}
+...
+```
+
+> `defineLikes`
+```JavaScript	
+set: (function(prop) {
+  return function(val) {
+
+    if (val === false) {
+      this._likes[v] = false; // v应该为prop
+      return;
+    }
+
+    var that = this;
+    likes.forEach(function(v) {
+      if (prop === v) {
+        that._likes[v] = true
+      } else {
+        that._likes[v] = false;
+      }
+    });
+  }
+})(v),
+```
