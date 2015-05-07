@@ -738,11 +738,17 @@ describe('util: _.filter(str, [include], [exclude])', function () {
     expect(_.filter('hello')).to.be.true;
   });
   it('include', function () {
-    expect(_.filter('abc.js', '*c.js')).to.be.true;
-    expect(_.filter('/abc/c.js', '*.js')).to.be.false;
+    var phonenumber=new RegExp("c.js$", "g");
+    expect(_.filter("abc.js", phonenumber)).to.be.true;
+    expect(_.filter("abc.djs", phonenumber)).to.be.false;
+    expect(_.filter('abc.js', '*c.js')).to.be.false;
+    expect(_.filter('/abc/c.js', 'c.js')).to.be.true;
   });
   it('exclude', function () {
-    expect(_.filter('b.js', null, '*.js')).to.be.false;
+    var phonenumber2=new RegExp("c.js$", "g");
+    expect(_.filter("abcd.js", null , phonenumber2)).to.be.true;
+    expect(_.filter("abc.js", null , phonenumber2)).to.be.false;
+    expect(_.filter('b.js', null, '*.js')).to.be.true;
     expect(_.filter('abc/d.js', null, 'b.jsd')).to.be.true;
   });
 //    it('exclude&include',function(){
