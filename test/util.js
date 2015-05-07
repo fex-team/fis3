@@ -1643,3 +1643,48 @@ describe('util: _.glob(pattern, [str])', function () {
     });
 
 });
+
+describe('util: _.is(source, type)', function (){
+  it('general', function () {
+    var num = 123;
+    var ob = {
+      x:123
+    }
+    var ar = [1,2,3];
+    var fl = false;
+    var und;
+    expect(_.is("123","String")).to.be.true;
+    expect(_.is(num,"Number")).to.be.true;
+    expect(_.is(ob,"Object")).to.be.true;
+    expect(_.is(ar,"Array")).to.be.true;
+    expect(_.is(fl,"Boolean")).to.be.true;
+    expect(_.is(und,"Undefined")).to.be.true;
+  });
+});
+
+describe('util: _.escapeReg(str)', function (){
+  it('general', function () {
+    var num = "\b\w*q(?!u)\w*\b";
+    var st = _.escapeReg(num);
+    var tar_st = "w\\*q\\(\\?\\!u\\)w\\*";
+    st = st.substring(1,st.length-1);
+    expect(st == tar_st).to.be.true;
+  });
+});
+
+describe('util: _.isEmpty(obj)', function (){
+  it('general', function () {
+    var obj = null;
+    var obj_arr = [];
+    expect(_.isEmpty(obj)).to.be.true;
+    expect(_.isEmpty(obj_arr)).to.be.true;
+    obj_arr = [1];
+    expect(_.isEmpty(obj_arr)).to.be.false;
+    var obj_o = {};
+    expect(_.isEmpty(obj_o)).to.be.true;
+    obj_o = {
+      s : 123
+    }
+    expect(_.isEmpty(obj_o)).to.be.false;
+  });
+});
