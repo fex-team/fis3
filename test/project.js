@@ -5,6 +5,7 @@ var fis = require('..');
 var fs = require('fs');
 var path = require('path');
 var root = path.join(__dirname, 'project');
+var expect = require('chai').expect;
 
 require.del = function (id) {
   try {
@@ -74,7 +75,6 @@ describe('project: getSource', function () {
     require.del('../lib/project');
     project = require('../lib/project');
     fis.project.setProjectRoot(root);
-
   });
 
   //@TODO
@@ -84,7 +84,7 @@ describe('project: getSource', function () {
     for(var key in xc){
       keyd.push(key);
     }
-    assert.equal(keyd.join(','), '/qfis-test.js,/test.js');
+    assert.equal(keyd.join(','), '/qfis-test.js,/test.css,/test.html');
   });
 
   it('getSource', function () {
@@ -104,11 +104,11 @@ describe('project: getSource', function () {
     for(var key in xc){
       keyd.push(key);
     }
-    assert.equal(keyd.join(','), '/test.js');
+    assert.equal(keyd.join(','), '/test.css,/test.html');
   });
 
   it('getSource', function () {
-    fis.config.set('project.exclude',['test.js','qfis-test.js']);
+    fis.config.set('project.exclude',['test.html','test.css','qfis-test.js']);
     var xc = fis.project.getSource();
     var keyd = [];
     for(var key in xc){
@@ -124,7 +124,7 @@ describe('project: getSource', function () {
     for(var key in xc){
       keyd.push(key);
     }
-    assert.equal(keyd.join(','), '/qfis-test.js,/test.js');
+    assert.equal(keyd.join(','), '/qfis-test.js');
   });
 
   it('getSource', function () {
@@ -135,17 +135,17 @@ describe('project: getSource', function () {
     for(var key in xc){
       keyd.push(key);
     }
-    assert.equal(keyd.join(','), '/test.js');
+    assert.equal(keyd.join(','), '');
   });
 
-  it('getSourceByPatterns', function () {
-    fis.env().set('project.files','qfis-test.js');
+  it('project.files: [!**.js]', function() {
+    fis.config.set('project.files', '!**.js');
     var xc = fis.project.getSource();
     var keyd = [];
     for(var key in xc){
       keyd.push(key);
     }
-    assert.equal(keyd.join(','), '/qfis-test.js');
+    assert.equal(keyd.join(','), '/test.css,/test.html');
   });
 });
 
