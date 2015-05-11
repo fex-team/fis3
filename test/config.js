@@ -1,4 +1,7 @@
-// fis.baidu.com
+/**
+ * Update: 15-5-11
+ * Editor: qihongye
+ */
 
 var fs = require('fs');
 var path = require('path');
@@ -76,15 +79,22 @@ describe('config: config',function(){
     expect(url).to.equal('/file/ext/modular/js.js?__inline');
 
     fis.match('!**/js.js', {
-      release: null,
-      useHash: false
+      release: '/static/$&',
+      useHash: true,
+      useDomain: true
     });
 
     //with !
     path = __dirname+'/file/ext/modular/js.js?__inline';
     var f = _.wrap(path);
     var url = f.getUrl();
-    expect(url).to.equal('/file/ext/modular/js.js?__inline');    
+    expect(url).to.equal('/file/ext/modular/js.js?__inline');
+
+    // with ! but not match
+    path = __dirname+'/file/ext/modular/js.less?__inline';
+    var f = _.wrap(path);
+    var url = f.getUrl();
+    expect(url).to.equal('www.baidu.com/static/file/ext/modular/js_'+ f.getHash() +'.less?__inline');        
   });
   
   it('del', function(){

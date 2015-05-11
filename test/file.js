@@ -3,6 +3,8 @@
  * User: shenlixia01
  * Date: 13-5-10
  * Time: 上午10:33
+ * Update: 15-5-11
+ * Editor: qihongye
  * To change this template use File | Settings | File Templates.
  */
 var fs = require('fs'),
@@ -17,6 +19,15 @@ function buf2arr(buf) {
   return Array.prototype.slice.call(buf);
 }
 
+describe('file: wrap', function() {
+  it('wrap(String)', function() {
+    expect(_.wrap('test.txt')).to.deep.equal(_('test.txt'));
+  })
+
+  it('wrap(File)', function() {
+    expect(_.wrap(_('test.txt'))).to.deep.equal(_('test.txt'));
+  })
+});
 
 describe('file: exists',function(){
   beforeEach(function(){
@@ -43,8 +54,8 @@ describe('file: toString',function(){
     expect(f.toString()).to.equal('hello.js/hello.css');
     f = _.wrap('d:\\hello.js\\hello.css');
     expect(f.toString()).to.equal('d:/hello.js/hello.css');
-    f = _.wrap('./file/ext/modular/js.js');
-    //expect(f.toString()).to.equal(u(__dirname)+'/file/ext/modular/js.js');
+    f = _.wrap('./test/file/ext/modular/js.js');
+    expect(f.toString()).to.equal(u(__dirname)+'/file/ext/modular/js.js');
   });
 
 });
@@ -235,15 +246,14 @@ describe('file: getId',function(){
     fis.project.setProjectRoot(__dirname);
   });
   it('general',function(){
+    fis.set('namespace', 'common')
     var path = __dirname+'/util/encoding/gbk.txt';
     var f = _.wrap(path);
-    f.id = 'gbk.txt';
-    expect(f.getId()).to.equal('gbk.txt');
+    expect(f.getId()).to.equal('common:util/encoding/gbk.txt');
   });
 });
 
-describe('file: getUrl(withHash, withDomain)',function(){
-
+describe('file: getUrl',function(){
   beforeEach(function(){
     fis.project.setProjectRoot(__dirname);
     fis.config.init();
@@ -251,16 +261,15 @@ describe('file: getUrl(withHash, withDomain)',function(){
   });
 
   it('general',function(){
+    fis.match('**', {
+      useHash: false
+    });
     //非js、css、图片文件
     var path = __dirname+'/util/encoding/gbk.txt?__inline';
     var f = _.wrap(path);
     var url = f.getUrl();
-    expect(url).to.equal('/util/encoding/gbk.txt?__inl' +
-                         'ine');
+    expect(url).to.equal('/util/encoding/gbk.txt?__inline');
     //js、css、图片文件
-    fis.match('**', {
-      useHash: false
-    });
 
     path = __dirname+'/file/ext/modular/js.js?__inline';
     f = _.wrap(path);
@@ -269,16 +278,16 @@ describe('file: getUrl(withHash, withDomain)',function(){
   });
 
   it('with hash',function(){
-    //非js、css、图片文件
-    var path = __dirname+'/util/encoding/gbk.txt?__inline';
-    var f = _.wrap(path);
-    var url = f.getUrl(true);
-    expect(url).to.equal('/util/encoding/gbk.txt?__inline');
-
-    //js、css、图片文件
     fis.match('**', {
       useHash: true
     });
+    //非js、css、图片文件
+    var path = __dirname+'/util/encoding/gbk.txt?__inline';
+    var f = _.wrap(path);
+    var url = f.getUrl();
+    expect(url).to.equal('/util/encoding/gbk_'+ f.getHash() +'.txt?__inline');
+
+    //js、css、图片文件
 
     path = __dirname+'/file/ext/modular/js.js?__inline';
     f = _.wrap(path);
@@ -287,33 +296,45 @@ describe('file: getUrl(withHash, withDomain)',function(){
   });
 
   it('with domain',function(){
+    fis.match('**', {
+      domain: 'www.baidu.com',
+      useDomain: true
+    });
     //非js、css、图片文件
     var path = __dirname+'/util/encoding/gbk.txt';
     var f = _.wrap(path);
     var url = f.getUrl();
-    expect(url).to.equal('/util/encoding/gbk.txt');
+    expect(url).to.equal('www.baidu.com/util/encoding/gbk.txt');  
+    // json
+    path = __dirname+'/file/ext/modular/js.json?__inline';
+    f = _.wrap(path);
+    url = f.getUrl();
+    expect(url).to.equal('www.baidu.com/file/ext/modular/js.json?__inline');
+
     //js、css、图片文件
-    fis.config.set('project.domain','www.baidu.com');
+    // fis.config.set('project.domain','www.baidu.com');
     path = __dirname+'/file/ext/modular/js.js?__inline';
     f = _.wrap(path);
-    f.useHash = false;
-    url = f.getUrl(false,true);
+    url = f.getUrl();
     expect(url).to.equal('www.baidu.com/file/ext/modular/js.js?__inline');
   });
 
   it('with domain——domain是对象，且键是图片，对图片的通用处理',function(){
-    //非js、css、图片文件
-    var path = __dirname+'/util/img/data.png';
-    var f = _.wrap(path);
-    f.useHash = false;
-    var url = f.getUrl(false,true);
-    expect(url).to.equal('/util/img/data.png');
-    //js、css、图片文件
     fis.config.set('project.domain',{
       'image':'img.baidu.com',
       '*.js':'js.baidu.com',
       '/*.css':'css.baidu.com'
     });
+
+    //非js、css、图片文件
+    var path = __dirname+'/util/json/json.json';
+    var f = _.wrap(path);
+    f.useHash = false;
+    var url = f.getUrl();
+    expect(url).to.equal('/util/json/json.json');
+
+    //js、css、图片文件
+    path = __dirname+ '/util/img/data.png';
     f = _.wrap(path);
     f.useHash = false;
     url = f.getUrl(false,true);
@@ -339,27 +360,26 @@ describe('file: getUrl(withHash, withDomain)',function(){
       '**.js': ['js1.baidu.com', 'js2.baidu.com', 'js3.baidu.com'],
       '*.css': ['css1.baidu.com', 'css2.baidu.com']
     });
-
     //js、css、图片文件
     var path = __dirname+'/util/img/data.png';
     var f = _.wrap(path);
-    var url1 = f.getUrl(false,true);
+    var url1 = f.getUrl();
     f = _.wrap(path);
-    var url2 = f.getUrl(false,true);
+    var url2 = f.getUrl();
     expect(url1).to.equal(url2);
 
     path = __dirname+'/file/ext/lint/lint.js';
     f = _.wrap(path);
-    url1 = f.getUrl(false,true);
+    url1 = f.getUrl();
     f = _.wrap(path);
-    url2 = f.getUrl(false,true);
+    url2 = f.getUrl();
     expect(url1).to.equal(url2);
 
     path = __dirname+'/file/css/test.css?__inline';
     f = _.wrap(path);
-    url1 = f.getUrl(false,true);
+    url1 = f.getUrl();
     f = _.wrap(path);
-    url2 = f.getUrl(false,true);
+    url2 = f.getUrl();
     expect(url1).to.equal(url2);
   });
 
@@ -401,14 +421,14 @@ describe('file: getUrl(withHash, withDomain)',function(){
     var path = __dirname+'/util/img/data.png';
     var f = _.wrap(path);
     f.useHash = false;
-    var url = f.getUrl(false,true);
+    var url = f.getUrl();
     expect(url).to.equal('/util/img/data.png');
     fis.config.set('project.domain',[
       'img.baidu.com'
     ]);
     f = _.wrap(path);
     f.useHash = false;
-    url = f.getUrl(false,true);
+    url = f.getUrl();
     expect(url).to.equal('img.baidu.com/util/img/data.png');
 
     fis.config.set('project.domain',[
@@ -514,31 +534,21 @@ describe('file: addRequire(id)',function(){
       __dirname+'/file/ext/parser/js.js'
     ]);
   });
-  it('general',function(){
-    //第一次加
-    var f = _.wrap(path);
-    f.addRequire(__dirname+'/file/css/test.css');
-    expect(f.requires).to.deep.equal([
-      __dirname+'/file/css/test.css'
-    ]);
-    //重复添加依赖
-    f.addRequire(' '+__dirname+'/file/css/test.css   ');
-    expect(f.requires).to.deep.equal([
-      __dirname+'/file/css/test.css'
-    ]);
-    var id = f.addRequire(__dirname+'/file/ext/parser/js.js  ');
-    expect(f.requires).to.deep.equal([
-      __dirname+'/file/css/test.css',
-      __dirname+'/file/ext/parser/js.js'
-    ]);
-  });
   it('id is empty',function(){
     //第一次加
     var f = _.wrap(path);
     expect(f.addRequire('  ')).to.be.false;
     expect(f.requires).to.deep.equal([]);
   });
-
+  it('same path in asyncs', function() {
+    var f = _.wrap(path);
+    f.addAsyncRequire(__dirname+'/file/ext/parser/js.js');
+    f.addRequire(__dirname+'/file/ext/parser/js.js');
+    expect(f.asyncs).to.deep.equal([]);
+    expect(f.requires).to.deep.equal([
+      __dirname+'/file/ext/parser/js.js'
+    ]);
+  });
 });
 
 describe('file: removeRequire(id)',function(){
@@ -546,15 +556,75 @@ describe('file: removeRequire(id)',function(){
     fis.project.setProjectRoot(__dirname);
   });
   //第一次加
-  var path = __dirname+'file/ext/modular/js.js';
-  var f = _.wrap(path);
-  f.addRequire(__dirname+'/file/css/test.css');
-  f.addRequire(__dirname+'/file/ext/parser/js.js  ');
+  it('general', function() {
+    var path = __dirname+'file/ext/modular/js.js';
+    var f = _.wrap(path);
+    f.addRequire(__dirname+'/file/css/test.css');
+    f.addRequire(__dirname+'/file/ext/parser/js.js  ');
 
-  f.removeRequire(__dirname+'/file/ext/parser/js.js');
-  expect(f.requires).to.deep.equal([
-    __dirname+'/file/css/test.css'
-  ]);
+    f.removeRequire(__dirname+'/file/ext/parser/js.js');
+    expect(f.requires).to.deep.equal([
+      __dirname+'/file/css/test.css'
+    ]);
+  })
+});
+
+describe('file: addAsyncRequire(id)',function(){
+  beforeEach(function(){
+    fis.project.setProjectRoot(__dirname);
+  });
+  var path = __dirname+'/file/ext/modular/js.js';
+  it('general',function(){
+    //第一次加
+    var f = _.wrap(path);
+    f.addAsyncRequire(__dirname+'/file/css/test.css');
+    expect(f.asyncs).to.deep.equal([
+      __dirname+'/file/css/test.css'
+    ]);
+    //重复添加依赖
+    f.addAsyncRequire(__dirname+'/file/css/test.css');
+    expect(f.asyncs).to.deep.equal([
+      __dirname+'/file/css/test.css'
+    ]);
+    f.addAsyncRequire(__dirname+'/file/ext/parser/js.js');
+    expect(f.asyncs).to.deep.equal([
+      __dirname+'/file/css/test.css',
+      __dirname+'/file/ext/parser/js.js'
+    ]);
+  });
+  it('id is empty',function(){
+    //第一次加
+    var f = _.wrap(path);
+    expect(f.addAsyncRequire('  ')).to.be.false;
+    expect(f.asyncs).to.deep.equal([]);
+  });
+  it('same path in requires', function() {
+    var f = _.wrap(path);
+    f.addRequire(__dirname+'/file/css/test.css');
+    expect(f.addAsyncRequire(__dirname+'/file/css/test.css')).to.equal(__dirname+'/file/css/test.css');
+    expect(f.requires).to.deep.equal([
+      __dirname+'/file/css/test.css'
+    ]);
+    expect(f.asyncs).to.deep.equal([]);
+  });
+});
+
+describe('file: removeAsyncRequire(id)',function(){
+  beforeEach(function(){
+    fis.project.setProjectRoot(__dirname);
+  });
+  it('general', function() {
+    //第一次加
+    var path = __dirname+'file/ext/modular/js.js';
+    var f = _.wrap(path);
+    f.addAsyncRequire(__dirname+'/file/css/test.css');
+    f.addAsyncRequire(__dirname+'/file/ext/parser/js.js  ');
+
+    f.removeAsyncRequire(__dirname+'/file/ext/parser/js.js');
+    expect(f.asyncs).to.deep.equal([
+      __dirname+'/file/css/test.css'
+    ]);
+  });
 });
 
 //在当前目录下寻找同名不同后缀的文件，并作为依赖添加进来
@@ -587,7 +657,7 @@ describe('file: addSameNameRequire(ext)',function(){
     });
     var f = _.wrap(path);
     //存在同名的less文件
-    f.addSameNameRequire('.less');
+    f.addSameNameRequire('.css');
     expect(f.requires).to.deep.equal([
       'file/ext/modular/js.less'
     ]);
@@ -639,5 +709,44 @@ describe("file: isImage", function() {
     var f = _.wrap('test/file/embed/embed.txt');
 
     expect(f.isImage()).to.equal(false);
+  });
+});
+
+describe("file: getCacheData/revertFromCacheData", function() {
+  beforeEach(function() {
+    fis.project.setProjectRoot(__dirname);
+  });
+  it('general', function() {
+    var f = _.wrap('test/file/embed/embed.gif');
+    f.addAsyncRequire(__dirname+'/file/css/test.css');
+    f.addRequire(__dirname+'/file/ext/parser/js.js');
+
+    var f1 = _.wrap('test/file/embed/embed.gif');
+    f1.revertFromCacheData(f.getCacheData());
+
+    expect(f).to.deep.equal(f1);
+  });
+});
+
+describe("file: release=false", function() {
+  var check = function(type, msg) {
+    expect(type).to.equal(this.type);
+    expect(type).to.equal(this.msg);  
+  }
+  beforeEach(function() {
+    fis.on.any = function(type, msg) {
+      check.call({
+        type: 'ERROR',
+        msg: 'unreleasable file [/Users/apple/GithubWorkspace/fis3/test/file/embed/embed.gif]'
+      }, type, msg);
+    }
+  });
+
+  it('general', function() {
+    fis.match('**/*.gif', {
+      release: false
+    });
+    var f = _.wrap('test/file/embed/embed.gif');
+    expect(f.url).to.equal(undefined);
   });
 });
