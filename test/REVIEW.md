@@ -82,5 +82,12 @@ set: (function(prop) {
       }
     });
   }
-})(v),
+})(v)
+
+// 这类写法是否也可以使fis判断js.less在编译后为js.js的同名文件
+// 实际实现不是
+fis.match('**.less', {
+  rExt: 'css'
+});
 ```
+

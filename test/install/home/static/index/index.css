@@ -1,0 +1,31 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px; font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 22px;
+    background-color: #151515;
+    /* margin-top: 60px; */
+}
+
+p {
+    margin: 20px 0;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+#container {
+    backface-visibility: hidden;
+    margin-left: 50px;
+    position: relative;
+    background: #fff;
+}
+
+.expanded #container {
+    margin-left: 150px;
+}
