@@ -1694,3 +1694,12 @@ describe('util: _.isEmpty(obj)', function (){
     expect(_.isEmpty(obj_o)).to.be.false;
   });
 });
+
+describe('util: _.nohup(type, callback, def)', function (){
+  it('general', function () {
+    var re1 = _.nohup('fis server start',function (){var x = 3});
+    var re2 = _.nohup('fis server stop',function (){var c = 9});
+    expect(re1.stdout._hadError).to.be.false;
+    expect(re2.stdout._hadError).to.be.false;
+  });
+});

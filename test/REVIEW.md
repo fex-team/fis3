@@ -63,18 +63,6 @@ fis.util.find(root, include, project_exclude, root).forEach(function(file) {
 ```
 
 ### fis3/lib/file.js
-> `applyMatches`
-```JavaScript
-...
-	if (typeof value === 'string') {
-	  value = value.replace(/\$(\d+|&)/g, function(_, k) {
-	    k = k === '&' ? 0 : k; // 推测为_ === '$&'不解
-	    return m[k] || '';
-	  });
-	}
-...
-```
-
 > `defineLikes`
 ```JavaScript	
 set: (function(prop) {
@@ -94,5 +82,12 @@ set: (function(prop) {
       }
     });
   }
-})(v),
+})(v)
+
+// 这类写法是否也可以使fis判断js.less在编译后为js.js的同名文件
+// 实际实现不是
+fis.match('**.less', {
+  rExt: 'css'
+});
 ```
+

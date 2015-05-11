@@ -1,0 +1,56 @@
+/**
+ * slogan也使用了.section的样式
+ * @require ../section/section.css
+ */
+
+#slogan {
+    background: #555 url(landscape.jpg) repeat-x;
+    background-size: 100% 100%;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+#slogan .box {
+    color: #fff;
+    font-weight: normal;
+    line-height: 56px;
+    text-shadow: 1px 1px 1px rgb(49, 57, 61);
+    position: relative;
+    z-index: 10;
+}
+#slogan h2 {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 0px;
+    margin-bottom: 0;
+}
+#slogan h3 {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-left: 10px;
+}
+#slogan img {
+    position: absolute;
+    right: 5%;
+    top: 70px;
+    z-index: 1;
+}
+
+#forkme_banner {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    z-index: 10;
+    padding: 10px 50px 10px 10px;
+    color: #fff;
+    background: url('blacktocat.png') #0090ff no-repeat 95% 50%;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+@media (max-width: 1024px) {
+    #slogan img {
+        display: none;
+    }
+}

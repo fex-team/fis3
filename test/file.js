@@ -377,15 +377,11 @@ describe('file: getUrl(withHash, withDomain)',function(){
   });
 
   it('with release false',function(){
-    config.set('roadmap', {
-      path : [{
-        "reg" : '**.js',
-        "release" : '/static$&'
-      },
-      {
-        "reg" : /^\/(.*)/,
-        "release" : false
-      }]
+    config.match('**.js', {
+      release: '/static$&'
+    })
+    config.match('/^\/(.*)/', {
+      release: false  
     });
     //js
     //        fis.config.set('roadmap.domain','www.baidu.com');
@@ -435,12 +431,18 @@ describe('file: getUrl(withHash, withDomain)',function(){
     var url = f.getUrl(true,true);
     expect(url).to.equal('/util/encoding/gbk.txt');
     //js、css、图片文件
-    fis.config.set('project.domain','www.baidu.com');
+    fis.match('**',{
+      domain: 'www.baidu.com'
+    });
     path = __dirname+'/file/css/test.css?__inline';
     f = _.wrap(path);
     url = f.getUrl(true,true);
     expect(url).to.equal('www.baidu.com/file/css/test_'+ f.getHash()+'.css?__inline');
 
+    path = __dirname+'/file/embed/embed.gif?__inline';
+    f = _.wrap(path);
+    url = f.getUrl(true,true);
+    expect(url).to.equal('www.baidu.com/file/embed/embed_'+ f.getHash()+'.gif?__inline');
   });
 
 });
@@ -566,7 +568,7 @@ describe('file: addSameNameRequire(ext)',function(){
     var path = __dirname+'/file/ext/modular/js.js';
     var f = _.wrap(path);
     //不存在同名的css文件
-    f.addSameNameRequire('.css');
+    f.addSameNameRequire('.html');
     expect(f.requires).to.deep.equal([]);
 
     path = __dirname+'/file/css/test.js';
@@ -578,13 +580,27 @@ describe('file: addSameNameRequire(ext)',function(){
     ]);
   });
 
-  it('rExt',function(){
-    var path = __dirname+'/file/ext/modular/js.js';
+  it('match rExt',function(){
+    var path = __dirname+'/file/ext/modular/js.js'; 
     fis.match('**.less', {
       rExt: 'css'
     });
     var f = _.wrap(path);
-    //存在同名的css文件
+    //存在同名的less文件
+    f.addSameNameRequire('.less');
+    expect(f.requires).to.deep.equal([
+      'file/ext/modular/js.less'
+    ]);
+  });
+
+  it('with project.ext', function() {
+    var path = __dirname+'/file/ext/modular/js.js'; 
+    fis.config.env().set('project.ext', {
+      less: 'css'
+    });
+
+    var f = _.wrap(path);
+    // 可能存在同名的css文件
     f.addSameNameRequire('.css');
     expect(f.requires).to.deep.equal([
       'file/ext/modular/js.less'
@@ -609,5 +625,19 @@ describe("file: get/set is*Like", function () {
     f.isHtmlLike = false;
     expect(f.isCssLike).to.equal(true);
     expect(f.isHtmlLike).to.equal(false);
+  });
+});
+
+describe("file: isImage", function() {
+  it('is image', function() {
+    var f = _.wrap('test/file/embed/embed.gif');
+
+    expect(f.isImage()).to.equal(true);
+  });
+
+  it('is not image', function() {
+    var f = _.wrap('test/file/embed/embed.txt');
+
+    expect(f.isImage()).to.equal(false);
   });
 });
