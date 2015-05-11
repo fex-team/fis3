@@ -31,10 +31,12 @@ describe('uri: uri()', function () {
 
     expect(uri("/uri/file/a.js?a=a")["query"]).to.equal("?a=a");
     expect(uri("/uri/file/a.js?a=a")["rest"]).to.equal("/uri/file/a.js");
-    config.env().set("namespace",'@');
-    console.log( uri("@uri/file/a.js?a=a", "/common"));
-    expect(uri("/uri/file/a.js?a=a")["file"]["realpath"]).to.equal(_path + "/uri/file/a.js");
 
+    expect(uri("/uri/file/a.js?a=a")["file"]["realpath"]).to.equal(_path + "/uri/file/a.js");
+    config.set("namespace",'uri');
+    config.env().set("namespaceConnector",'/');
+    var c = uri("uri/file/a.js?a=a");
+    expect(c.file.origin).to.equal(_path+'/'+c.rest);
   });
 });
 
