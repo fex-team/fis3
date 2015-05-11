@@ -31,7 +31,8 @@ describe('uri: uri()', function () {
 
     expect(uri("/uri/file/a.js?a=a")["query"]).to.equal("?a=a");
     expect(uri("/uri/file/a.js?a=a")["rest"]).to.equal("/uri/file/a.js");
-    console.log(uri("/uri/file/a.js?a=a"));
+    config.env().set("namespace",'@');
+    console.log( uri("@uri/file/a.js?a=a", "/common"));
     expect(uri("/uri/file/a.js?a=a")["file"]["realpath"]).to.equal(_path + "/uri/file/a.js");
 
   });
