@@ -78,6 +78,27 @@ describe('config: config',function(){
     var url = f.getUrl();
     expect(url).to.equal('/file/ext/modular/js.js?__inline');
 
+    // with ()
+    fis.match('**/v1.0-(*)/(*).html', {
+      release: '/$1/$2'
+    });
+
+    path = __dirname+'/file/ext/v1.0-layout/test.html?__inline';
+    var f = _.wrap(path);
+    var url = f.getUrl();
+    expect(url).to.equal('/layout/test.html?__inline');
+
+    // with ${}
+    fis.match('*/${coffee}.js', {
+      release: null,
+      coffee: 'js'
+    });
+
+    path = __dirname+'/file/ext/modular/js.js?__inline';
+    var f = _.wrap(path);
+    var url = f.getUrl();
+    expect(url).to.equal('/file/ext/modular/js.js?__inline');
+
     fis.match('!**/js.js', {
       release: '/static/$&',
       useHash: true,
