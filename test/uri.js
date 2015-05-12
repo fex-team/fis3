@@ -48,6 +48,9 @@ describe('uri: replaceDefine()', function () {
   it('${var} replace config value', function () {
     fis.config.set('123', '<{11');
     fis.config.set('var', 'var_var');
+    expect(uri.replaceDefine("hh${123}hh${123}", false)).to.equal("hh<{11hh<{11");
+    expect(uri.replaceDefine("hh${123}hh${123}", true)).to.equal("hh\\<\\{11hh\\<\\{11");
+    expect(uri.replaceDefine("hh${123}hh", false)).to.equal("hh<{11hh");
     expect(uri.replaceDefine("hh${123}hh", true)).to.equal("hh\\<\\{11hh");
     expect(uri.replaceDefine("hh${123}hh", false)).to.equal("hh<{11hh");
     expect(uri.replaceDefine("hh{123}hh", false)).to.equal("hh{123}hh");
