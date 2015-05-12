@@ -734,20 +734,8 @@ describe("file: release=false", function() {
     expect(type).to.equal(this.msg);  
   }
   beforeEach(function() {
-    fis.error = function(err) {
-      if (!(err instanceof Error)) {
-        err = new Error(err.message || util.format.apply(util, arguments));
-      }
-      if (exports.alert) {
-        err.message += '\u0007';
-      }
-      if (exports.throw) {
-        throw err
-      } else {
-        fis.log.on.error(err.message);
-      }
-    };
-    fis.on.any = function(type, msg) {
+    fis.log.throw = true;
+    fis.log.on.any = function(type, msg) {
       check.call({
         type: 'ERROR',
         msg: 'unreleasable file [/Users/apple/GithubWorkspace/fis3/test/file/embed/embed.gif]'
@@ -759,7 +747,11 @@ describe("file: release=false", function() {
     fis.match('**/*.gif', {
       release: false
     });
-    // var f = _.wrap('test/file/embed/embed.gif');
-    // expect(f.url).to.equal(undefined);
+    var f = _.wrap('test/file/embed/embed.gif');
+    try {
+      var a = f.url;    
+    }catch(e) {
+      expect(e.toString()).to.equal('Error: unreleasable file [/Users/apple/GithubWorkspace/fis3/test/file/embed/embed.gif]');
+    } 
   });
 });
