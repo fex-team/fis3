@@ -304,7 +304,7 @@ describe('file: getUrl',function(){
     var path = __dirname+'/util/encoding/gbk.txt';
     var f = _.wrap(path);
     var url = f.getUrl();
-    expect(url).to.equal('www.baidu.com/util/encoding/gbk.txt');  
+    expect(url).to.equal('www.baidu.com/util/encoding/gbk.txt');
     // json
     path = __dirname+'/file/ext/modular/js.json?__inline';
     f = _.wrap(path);
@@ -401,7 +401,7 @@ describe('file: getUrl',function(){
       release: '/static$&'
     })
     config.match('/^\/(.*)/', {
-      release: false  
+      release: false
     });
     //js
     //        fis.config.set('roadmap.domain','www.baidu.com');
@@ -651,20 +651,21 @@ describe('file: addSameNameRequire(ext)',function(){
   });
 
   it('match rExt',function(){
-    var path = __dirname+'/file/ext/modular/js.js'; 
-    fis.match('**.less', {
+    var path = __dirname+'/file/ext/modular/js.js';
+    fis.match('*.less', {
       rExt: 'css'
     });
     var f = _.wrap(path);
     //存在同名的less文件
     f.addSameNameRequire('.css');
+
     expect(f.requires).to.deep.equal([
       'file/ext/modular/js.less'
     ]);
   });
 
   it('with project.ext', function() {
-    var path = __dirname+'/file/ext/modular/js.js'; 
+    var path = __dirname+'/file/ext/modular/js.js';
     fis.config.env().set('project.ext', {
       less: 'css'
     });
@@ -731,7 +732,7 @@ describe("file: getCacheData/revertFromCacheData", function() {
 describe("file: release=false", function() {
   var check = function(type, msg) {
     expect(type).to.equal(this.type);
-    expect(type).to.equal(this.msg);  
+    expect(type).to.equal(this.msg);
   }
   beforeEach(function() {
     fis.log.throw = true;
@@ -749,9 +750,9 @@ describe("file: release=false", function() {
     });
     var f = _.wrap('test/file/embed/embed.gif');
     try {
-      var a = f.url;    
+      var a = f.url;
     }catch(e) {
       expect(e.toString()).to.equal('Error: unreleasable file [/Users/apple/GithubWorkspace/fis3/test/file/embed/embed.gif]');
-    } 
+    }
   });
 });
