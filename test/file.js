@@ -298,7 +298,8 @@ describe('file: getUrl',function(){
   it('with domain',function(){
     fis.match('**', {
       domain: 'www.baidu.com',
-      useDomain: true
+      useDomain: true,
+      useHash: false
     });
     //非js、css、图片文件
     var path = __dirname+'/util/encoding/gbk.txt';
