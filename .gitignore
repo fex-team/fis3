@@ -40,3 +40,5 @@ node_modules/
 *.cmd
 ~*
 upload.py
+
+/test/fis-tmp/target/cache
