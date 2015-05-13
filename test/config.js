@@ -102,7 +102,6 @@ describe('config: config',function(){
     fis.match('!**/js.js', {
       release: '/static/$&',
       useHash: true,
-      useDomain: true,
       domain: 'www.baidu.com'
     });
 
