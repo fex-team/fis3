@@ -121,6 +121,7 @@ describe('config: config',function(){
 
   it('del', function(){
     fis.config.del();
+    var origin = fis.config.get();
     path = __dirname+'/file/ext/modular/js.js?__inline';
     var f = _.wrap(path);
     var url = f.getUrl(false,true);
@@ -135,7 +136,7 @@ describe('config: config',function(){
     expect(fis.media('pro').get('a.b')).to.equal('b');
 
     fis.config.del('a');
-    expect(fis.get()).to.deep.equal({});
+    expect(fis.get()).to.deep.equal(origin);
 
     fis.media('pro').del('a');
     expect(fis.media('pro').get()).to.deep.equal({});
