@@ -7,7 +7,7 @@ var fs = require('fs');
 var path = require('path');
 var fis = require('../lib/fis.js');
 var _ = fis.file;
-var defaultSettings = (require('../lib/config.js')).DEFAULT_SETTINGS;
+var defaultSettings = (require('../lib/config.js')).DEFALUT_SETTINGS;
 var expect = require('chai').expect;
 var u = fis.util;
 var config = null;
@@ -102,7 +102,8 @@ describe('config: config',function(){
     fis.match('!**/js.js', {
       release: '/static/$&',
       useHash: true,
-      useDomain: true
+      useDomain: true,
+      domain: 'www.baidu.com'
     });
 
     //with !
@@ -115,9 +116,9 @@ describe('config: config',function(){
     path = __dirname+'/file/ext/modular/js.less?__inline';
     var f = _.wrap(path);
     var url = f.getUrl();
-    expect(url).to.equal('www.baidu.com/static/file/ext/modular/js_'+ f.getHash() +'.less?__inline');        
+    expect(url).to.equal('www.baidu.com/static/file/ext/modular/js_'+ f.getHash() +'.less?__inline');
   });
-  
+
   it('del', function(){
     fis.config.del();
     path = __dirname+'/file/ext/modular/js.js?__inline';
