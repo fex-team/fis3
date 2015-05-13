@@ -1569,49 +1569,52 @@ describe('util: _.isUtf8', function () {
 });
 
 describe('util: _.glob(pattern, [str])', function () {
-    it('general_1', function () {
+    it('/*.js  /abc.js', function () {
       expect(_.glob('/*.js', '/abc.js')).to.be.true;
     });
-    it('general_2', function () {
+    it('/*.js  /abc.js.css', function () {
       expect(_.glob('/*.js', '/abc.js.css')).to.be.false;
     });
-    it('general_3', function () {
-      expect(_.glob('/*.js', '/abc.JS')).to.be.true;
+    it('/*.js  /abc.JS', function () {
+      expect(_.glob('/*.js', '/abc.JS')).to.be.false;
     });
-    it('general_4', function () {
+    it('/?.js  /abc.js', function () {
       expect(_.glob('/?.js', '/abc.js')).to.be.false;
     });
-    it('general_5', function () {
+    it('/??.js  /abc.js', function () {
       expect(_.glob('/??.js', '/abc.js')).to.be.false;
     });
-    it('general_6', function () {
+    it('/?.js  /a.js', function () {
       expect(_.glob('/?.js', '/a.js')).to.be.true;
     });
-    it('general_7', function () {
+    it('/??.js  /ab.js', function () {
       expect(_.glob('/??.js', '/ab.js')).to.be.true;
     });
 
 
-    it('**_1', function () {
-      expect(_.glob('**.js', 'as/d.a/abc.js')).to.be.true;
+    it('**/*.js  /a.b/c.js', function () {
+      expect(_.glob('**/*.js', '/a.b/c.js')).to.be.true;
     });
-    it('**_2', function () {
-      expect(_.glob('**.js', 'as/d.a/abc.js.css')).to.be.false;
+    it('**/*.js  as/d.a/abc.js.css', function () {
+      expect(_.glob('**/*.js', 'as/d.a/abc.js.css')).to.be.false;
     });
-    it('**_3', function () {
-      expect(_.glob('**.js', 'as/d.a/abc.js/')).to.be.false;
+    it('**/*.js  as/d.a/abc.js/', function () {
+      expect(_.glob('**/*.js', 'as/d.a/abc.js/')).to.be.false;
     });
-    it('**_4', function () {
+    it('a/**/*.js  as/d.a/abc.js', function () {
       expect(_.glob('a/**/*.js', 'as/d.a/abc.js')).to.be.false;
     });
-    it('**_5', function () {
+    it('a/**/*.js  a/s/d.a/abc.js', function () {
       expect(_.glob('a/**/*.js', 'a/s/d.a/abc.js')).to.be.true;
     });
-    it('**_6', function () {
+    it('a/**/?.js  a/s/d.a/abc.js', function () {
       expect(_.glob('a/**/?.js', 'a/s/d.a/abc.js')).to.be.false;
     });
-    it('**_7', function () {
+    it('a/**/?.js  a/s/d.a/c.js', function () {
       expect(_.glob('a/**/?.js', 'a/s/d.a/c.js')).to.be.true;
+    });
+    it('**.js  d/a.b/c.js', function() {
+      expect(_.glob('**.js', '/a.b/c.js')).to.be.true;
     });
 
 
@@ -1635,8 +1638,7 @@ describe('util: _.glob(pattern, [str])', function () {
       expect(_.glob('/*/*.js', '/bdsf/.js.css')).to.be.false;
     });
     it('*_7', function () {
-      expect(_.glob('/*/*.js', '/bdsf/.js.JS')).to.be.true;
-
+      expect(_.glob('/*/*.js', '/bdsf/.js.JS')).to.be.false;
     });
     it('*_8', function () {
       expect(_.glob('/*/*.js', '/ba/asd.js')).to.be.true;
