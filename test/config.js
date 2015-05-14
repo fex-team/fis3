@@ -88,17 +88,6 @@ describe('config: config',function(){
     var url = f.getUrl();
     expect(url).to.equal('/layout/test.html?__inline');
 
-    // with ${}
-    fis.match('*/${coffee}.js', {
-      release: null,
-      coffee: 'js'
-    });
-
-    path = __dirname+'/file/ext/modular/js.js?__inline';
-    var f = _.wrap(path);
-    var url = f.getUrl();
-    expect(url).to.equal('/file/ext/modular/js.js?__inline');
-
     fis.match('!**/js.js', {
       release: '/static/$&',
       useHash: true,
@@ -116,6 +105,50 @@ describe('config: config',function(){
     var f = _.wrap(path);
     var url = f.getUrl();
     expect(url).to.equal('www.baidu.com/static/file/ext/modular/js_'+ f.getHash() +'.less?__inline');
+  });
+  it('match ${}', function() {
+    fis.match('**/*.js', {
+      release: null,
+    })
+    fis.match('**/${coffee}.js', {
+      release: '/static/$&',
+      coffee: 'js'
+    });
+
+    path = __dirname+'/file/ext/modular/js.js?__inline';
+    var f = _.wrap(path);
+    var url = f.getUrl();
+    expect(url).to.equal('/static/file/ext/modular/js.js?__inline');
+
+    path = __dirname+'/file/ext/modular/j.js?__inline';
+    var f = _.wrap(path);
+    var url = f.getUrl();
+    expect(url).to.equal('/file/ext/modular/j_'+ f.getHash() +'.js?__inline');
+  });
+  it('match 混合用法', function() {
+    fis.match('**', {
+      useHash: false
+    });
+
+    fis.match('**/(${ROOT}/*.js)', {
+      ROOT: 'js',
+      release: '/static/$1'
+    });
+
+    fis.match('**/(${ROOT}/*.less)', {
+      ROOT: 'js',
+      release: '/static/$1'
+    });
+
+    path = __dirname+'/file/ext/modular/js.js?__inline';
+    var f = _.wrap(path);
+    var url = f.getUrl();
+    expect(url).to.equal('/static/js/file/ext/modular/js.js?__inline');
+
+    path = __dirname+'/file/ext/modular/js.less?__inline';
+    var f = _.wrap(path);
+    var url = f.getUrl();
+    expect(url).to.equal('/static/js/file/ext/modular/js.less?__inline');
   });
 
   it('del', function(){

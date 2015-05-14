@@ -1569,82 +1569,84 @@ describe('util: _.isUtf8', function () {
 });
 
 describe('util: _.glob(pattern, [str])', function () {
-    it('general_1', function () {
+    it('/*.js  /abc.js', function () {
       expect(_.glob('/*.js', '/abc.js')).to.be.true;
     });
-    it('general_2', function () {
+    it('/*.js  /abc.js.css', function () {
       expect(_.glob('/*.js', '/abc.js.css')).to.be.false;
     });
-    it('general_3', function () {
-      expect(_.glob('/*.js', '/abc.JS')).to.be.true;
+    it('/*.js  /abc.JS', function () {
+      expect(_.glob('/*.js', '/abc.JS')).to.be.false;
     });
-    it('general_4', function () {
+    it('/?.js  /abc.js', function () {
       expect(_.glob('/?.js', '/abc.js')).to.be.false;
     });
-    it('general_5', function () {
+    it('/??.js  /abc.js', function () {
       expect(_.glob('/??.js', '/abc.js')).to.be.false;
     });
-    it('general_6', function () {
+    it('/?.js  /a.js', function () {
       expect(_.glob('/?.js', '/a.js')).to.be.true;
     });
-    it('general_7', function () {
+    it('/??.js  /ab.js', function () {
       expect(_.glob('/??.js', '/ab.js')).to.be.true;
     });
 
 
-    it('**_1', function () {
-      expect(_.glob('**.js', 'as/d.a/abc.js')).to.be.true;
+    it('**/*.js  /a.b/c.js', function () {
+      expect(_.glob('**/*.js', '/a.b/c.js')).to.be.true;
     });
-    it('**_2', function () {
-      expect(_.glob('**.js', 'as/d.a/abc.js.css')).to.be.false;
+    it('**/*.js  as/d.a/abc.js.css', function () {
+      expect(_.glob('**/*.js', 'as/d.a/abc.js.css')).to.be.false;
     });
-    it('**_3', function () {
-      expect(_.glob('**.js', 'as/d.a/abc.js/')).to.be.false;
+    it('**/*.js  as/d.a/abc.js/', function () {
+      expect(_.glob('**/*.js', 'as/d.a/abc.js/')).to.be.false;
     });
-    it('**_4', function () {
+    it('a/**/*.js  as/d.a/abc.js', function () {
       expect(_.glob('a/**/*.js', 'as/d.a/abc.js')).to.be.false;
     });
-    it('**_5', function () {
+    it('a/**/*.js  a/s/d.a/abc.js', function () {
       expect(_.glob('a/**/*.js', 'a/s/d.a/abc.js')).to.be.true;
     });
-    it('**_6', function () {
+    it('a/**/?.js  a/s/d.a/abc.js', function () {
       expect(_.glob('a/**/?.js', 'a/s/d.a/abc.js')).to.be.false;
     });
-    it('**_7', function () {
+    it('a/**/?.js  a/s/d.a/c.js', function () {
       expect(_.glob('a/**/?.js', 'a/s/d.a/c.js')).to.be.true;
     });
+    it('**.js  d/a.b/c.js', function() {
+      expect(_.glob('**.js', '/a.b/c.js')).to.be.true;
+    });
 
 
-    it('*_1', function () {
+    it('*/*.js  da.js', function () {
       expect(_.glob('*/*.js', 'da.js')).to.be.false;
     });
-    it('*_2', function () {
+    it('/*.js  /adfda.js', function () {
       expect(_.glob('*/*.js', '/adfda.js')).to.be.true;
     });
-    it('*_3', function () {
+    it('*/*.js  db/dsaa.js', function () {
       expect(_.glob('*/*.js', 'db/dsaa.js')).to.be.true;
     });
     //允许用户开头的斜杠省略，写了也忽略，即路径/bdsf/aa.js和bdsf/aa.js可以认为是一样的
-    it('*_4', function () {
+    it('/*/*.js  bdsf/aa.js', function () {
       expect(_.glob('/*/*.js', 'bdsf/aa.js')).to.be.true;
     });
-    it('*_5', function () {
+    it('/*/*.js  /bdsf/.js', function () {
       expect(_.glob('/*/*.js', '/bdsf/.js')).to.be.true;
     });
-    it('*_6', function () {
+    it('/*/*.js  /bdsf/.js.css', function () {
       expect(_.glob('/*/*.js', '/bdsf/.js.css')).to.be.false;
     });
-    it('*_7', function () {
-      expect(_.glob('/*/*.js', '/bdsf/.js.JS')).to.be.true;
-
+    it('/*/*.js  /bdsf/.js.JS', function () {
+      expect(_.glob('/*/*.js', '/bdsf/.js.JS')).to.be.false;
     });
-    it('*_8', function () {
+    it('/*/*.js  /ba/asd.js', function () {
       expect(_.glob('/*/*.js', '/ba/asd.js')).to.be.true;
     });
-    it('*_9', function () {
+    it('/*/*.js  //asd.js', function () {
       expect(_.glob('/*/*.js', '//asd.js')).to.be.true;
     });
-    it('*_10', function () {
+    it('/*/*.js  aaa/bbbs/ad.js', function () {
       expect(_.glob('/*/*.js', 'aaa/bbbs/ad.js')).to.be.false;
     });
 
@@ -1712,7 +1714,7 @@ describe('util: _.pipe(type, callback, def)', function (){
     }, '');
 
     var str = '';
-    config.env().set('modules.plugin',['module','components']);
+    config.env().set('modules.plugin',['mo dule','components']);
     _.pipe('plugin', function (processor, settings, key, type){
       str += key + ',';
     }, '');
