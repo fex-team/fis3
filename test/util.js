@@ -1714,7 +1714,7 @@ describe('util: _.pipe(type, callback, def)', function (){
     }, '');
 
     var str = '';
-    config.env().set('modules.plugin',['module','components']);
+    config.env().set('modules.plugin',['mo dule','components']);
     _.pipe('plugin', function (processor, settings, key, type){
       str += key + ',';
     }, '');
