@@ -2,35 +2,23 @@
  * Created by ryan on 15/5/13.
  */
 var fs = require('fs'),
-  path   = require('path');
+    path   = require('path');
 var fis = require('../../..');
 var _      = fis.util,
-  config = fis.config;
+    config = fis.config;
 var expect = require('chai').expect;
 var fis3_plugin_module = require('fis3-plugin-module');
-require.del = function (id) {
-  try {
-    var path = require.resolve(id);
-    delete require.cache[path];
-  } catch(e) {}
-};
 
 describe('index: init', function () {
   var project;
-
-  it('general', function () {
-    _.pipe('plugin',function (processor, settings, key, type){
-      processor(fis, settings);
-      expect(type == 'plugin').to.be.true;
-    });
+  beforeEach(function () {
+    fis.config.init(); // @TODO
+    fis.media().init(); // @TODO
   });
 
   it("lookup:file", function () {
-    fis.config.init(); // @TODO
-    fis.media().init(); // @TODO
-    project = require('../../../lib/project');
     var root = path.join(__dirname, 'project');
-    project.setProjectRoot(root);
+    fis.project.setProjectRoot(root);
     var filepath = path.join(root, 'test.js');
     fis.util.write(filepath, 'console.log("hello, world.");');
     var info = project.lookup('/test.js');
@@ -48,22 +36,19 @@ describe('index: init', function () {
     expect(info.moduleId == "test.js").to.be.true;
   });
 
-  it("standard:js", function () {
-    fis.config.init(); // @TODO
-    fis.media().init(); // @TODO
-    project = require('../../../lib/project');
+  it("lookup:file", function () {
     var root = path.join(__dirname, 'project');
-    project.setProjectRoot(root);
-    var filepath = path.join(root, 'test2.js');
+    fis.project.setProjectRoot(root);
+    var path = '/test.js';
+    var file='';
+    var info = fis.uri(path);
+    var vfile = info.file;
+    var file2 = fis.file.wrap("/test.js");
+    fis.emit('lookup:file', file2);
 
-    var file = fis.file.wrap(filepath);
-    var info = {
-      file: file,
-      content: file.getContent()
-    };
-    fis.emit('standard:js',info);
+    expect(info.id == "test.js").to.be.true;
+    expect(info.moduleId == "test.js").to.be.true;
   });
-
 });
 
 describe('fis3-plugin-module compile:postprocessor', function() {
@@ -78,7 +63,7 @@ describe('fis3-plugin-module compile:postprocessor', function() {
     var content = file.getContent();
     fis.emit('compile:postprocessor', file);
     expect(file.getContent()).to.equal('define(\'' + (file.moduleId || file.id) + '\', function(require, exports, module) {\n\n' + content + '\n\n});\n');
-  });
+  });    
 
   it('compile AMD JS file', function() {
     var file = fis.file(__dirname + '/project/dmath.js');
