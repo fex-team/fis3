@@ -1618,35 +1618,35 @@ describe('util: _.glob(pattern, [str])', function () {
     });
 
 
-    it('*_1', function () {
+    it('*/*.js  da.js', function () {
       expect(_.glob('*/*.js', 'da.js')).to.be.false;
     });
-    it('*_2', function () {
+    it('/*.js  /adfda.js', function () {
       expect(_.glob('*/*.js', '/adfda.js')).to.be.true;
     });
-    it('*_3', function () {
+    it('*/*.js  db/dsaa.js', function () {
       expect(_.glob('*/*.js', 'db/dsaa.js')).to.be.true;
     });
     //允许用户开头的斜杠省略，写了也忽略，即路径/bdsf/aa.js和bdsf/aa.js可以认为是一样的
-    it('*_4', function () {
+    it('/*/*.js  bdsf/aa.js', function () {
       expect(_.glob('/*/*.js', 'bdsf/aa.js')).to.be.true;
     });
-    it('*_5', function () {
+    it('/*/*.js  /bdsf/.js', function () {
       expect(_.glob('/*/*.js', '/bdsf/.js')).to.be.true;
     });
-    it('*_6', function () {
+    it('/*/*.js  /bdsf/.js.css', function () {
       expect(_.glob('/*/*.js', '/bdsf/.js.css')).to.be.false;
     });
-    it('*_7', function () {
+    it('/*/*.js  /bdsf/.js.JS', function () {
       expect(_.glob('/*/*.js', '/bdsf/.js.JS')).to.be.false;
     });
-    it('*_8', function () {
+    it('/*/*.js  /ba/asd.js', function () {
       expect(_.glob('/*/*.js', '/ba/asd.js')).to.be.true;
     });
-    it('*_9', function () {
+    it('/*/*.js  //asd.js', function () {
       expect(_.glob('/*/*.js', '//asd.js')).to.be.true;
     });
-    it('*_10', function () {
+    it('/*/*.js  aaa/bbbs/ad.js', function () {
       expect(_.glob('/*/*.js', 'aaa/bbbs/ad.js')).to.be.false;
     });
 
