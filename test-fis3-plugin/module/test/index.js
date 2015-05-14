@@ -7,7 +7,6 @@ var fis = require('../../..');
 var _      = fis.util,
   config = fis.config;
 var expect = require('chai').expect;
-var fis3_plugin_module = require("..");
 
 require.del = function (id) {
   try {
