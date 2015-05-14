@@ -7,7 +7,9 @@ var fis = require('../../..');
 var _      = fis.util,
   config = fis.config;
 var expect = require('chai').expect;
-
+var fis3_plugin_module = require("..");
+var amd = require('../lib/amd.js');
+var commonJs = require('../lib/commonJs.js');
 require.del = function (id) {
   try {
     var path = require.resolve(id);
@@ -17,27 +19,13 @@ require.del = function (id) {
 
 describe('index: init', function () {
   var project;
-  beforeEach(function () {
 
-  });
   it('general', function () {
     _.pipe('plugin',function (processor, settings, key, type){
-      console.log(processor);
-      console.log('--');
-      console.log(settings);
-      console.log('--');
-      console.log(key);
-      console.log('--');
-      console.log(type);
-      console.log('--');
-      console.log(__dirname);
       processor(fis, settings);
+      expect(type == 'plugin').to.be.true;
     });
-    expect(_.isTextFile('')).to.be.false;
   });
-
-
-
 
   it("lookup:file", function () {
     fis.config.init(); // @TODO
@@ -62,25 +50,21 @@ describe('index: init', function () {
     expect(info.moduleId == "test.js").to.be.true;
   });
 
-  it("lookup:file", function () {
+  it("standard:js", function () {
     fis.config.init(); // @TODO
     fis.media().init(); // @TODO
     project = require('../../../lib/project');
-    //var root = path.join(__dirname, 'project');
-    //project.setProjectRoot(root);
-    var path = '/test.js';
-    var file='';
-    var info = fis.uri(path);
-    var vfile = info.file;
-    console.log(vfile);
-    var file2 = fis.file.wrap("/test.js");
-    fis.emit('lookup:file', file2);
+    var root = path.join(__dirname, 'project');
+    project.setProjectRoot(root);
+    var filepath = path.join(root, 'test2.js');
 
-
-
-
-    expect(info.id == "test.js").to.be.true;
-    expect(info.moduleId == "test.js").to.be.true;
+    var file = fis.file.wrap(filepath);
+    var info = {
+      file: file,
+      content: file.getContent()
+    };
+    fis.emit('standard:js',info);
   });
 
 });
+
