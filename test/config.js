@@ -112,7 +112,7 @@ describe('config: config',function(){
       useHash: false
     })
     fis.set('coffee', 'js');
-    fis.match('**/${coffee}.js', {
+    fis.match('**/js.js', {
       release: '/static/$&'
     });
 
@@ -124,7 +124,7 @@ describe('config: config',function(){
     path = __dirname+'/file/ext/modular/j.js?__inline';
     var f = _.wrap(path);
     var url = f.getUrl();
-    expect(url).to.equal('/file/ext/modular/j_'+ f.getHash() +'.js?__inline');
+    expect(url).to.equal('/file/ext/modular/j.js?__inline');
   });
   it('match 混合用法', function() {
     fis.set('ROOT', 'js');
@@ -132,12 +132,12 @@ describe('config: config',function(){
       useHash: false
     });
 
-    fis.match('**/(${ROOT}/*.js)', {
-      release: '/static/$1'
+    fis.match('(**/${ROOT}.js)', {
+      release: '/static/js/$1'
     });
 
-    fis.match('**/(${ROOT}/*.less)', {
-      release: '/static/$1'
+    fis.match('(**/${ROOT}.less)', {
+      release: '/static/js/$1'
     });
 
     path = __dirname+'/file/ext/modular/js.js?__inline';
