@@ -154,10 +154,6 @@ describe('config: config',function(){
   it('del', function(){
     fis.config.del();
     var origin = fis.config.get();
-    path = __dirname+'/file/ext/modular/js.js?__inline';
-    var f = _.wrap(path);
-    var url = f.getUrl(false,true);
-    expect(url).to.equal('/file/ext/modular/js.js?__inline');
 
     fis.set('a.b', 'b');
     fis.media('pro').set('a.b', 'b');

@@ -1625,14 +1625,14 @@ describe('util: _.glob(pattern, [str])', function () {
       expect(_.glob('*/*.js', '/adfda.js')).to.be.true;
     });
     it('*/*.js  db/dsaa.js', function () {
-      expect(_.glob('*/*.js', 'db/dsaa.js')).to.be.true;
+      expect(_.glob('*/*.js', 'db/dsaa.js')).to.be.false;
     });
     //允许用户开头的斜杠省略，写了也忽略，即路径/bdsf/aa.js和bdsf/aa.js可以认为是一样的
     it('/*/*.js  bdsf/aa.js', function () {
-      expect(_.glob('/*/*.js', 'bdsf/aa.js')).to.be.true;
+      expect(_.glob('/*/*.js', 'bdsf/aa.js')).to.be.false;
     });
     it('/*/*.js  /bdsf/.js', function () {
-      expect(_.glob('/*/*.js', '/bdsf/.js')).to.be.true;
+      expect(_.glob('/*/*.js', '/bdsf/.js')).to.be.false;
     });
     it('/*/*.js  /bdsf/.js.css', function () {
       expect(_.glob('/*/*.js', '/bdsf/.js.css')).to.be.false;
@@ -1714,7 +1714,7 @@ describe('util: _.pipe(type, callback, def)', function (){
     }, '');
 
     var str = '';
-    config.env().set('modules.plugin',['mo dule','components']);
+    config.env().set('modules.plugin',['module','components']);
     _.pipe('plugin', function (processor, settings, key, type){
       str += key + ',';
     }, '');
