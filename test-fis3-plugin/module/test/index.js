@@ -2,24 +2,23 @@
  * Created by ryan on 15/5/13.
  */
 var fs = require('fs'),
-    path   = require('path');
+  path   = require('path');
 var fis = require('../../..');
 var _      = fis.util,
-    config = fis.config;
+  config = fis.config;
 var expect = require('chai').expect;
+var amd = require('../lib/amd.js');
+var commonJs = require('../lib/commonJs.js');
 var fis3_plugin_module = require('fis3-plugin-module');
+
 
 describe('index:', function () {
 
   it('standard:js', function () {
-    var project;
     _.pipe('plugin',function (processor, settings, key, type){
-      //processor(fis, settings);
-      //expect(type == 'plugin').to.be.true;
 
-      project = require('../../../lib/project');
       var root = path.join(__dirname, 'project');
-      project.setProjectRoot(root);
+      fis.project.setProjectRoot(root);
       settings.type = "";
       settings.type = "amd";
       processor(fis, settings);
@@ -48,15 +47,18 @@ describe('index:', function () {
         content: file.getContent()
       };
       fis.emit('standard:js',info);
-      expect(info.content.toString().indexOf("require.async([")>0).to.be.true;
+      var xstr = info.content.toString();
+      expect(xstr.indexOf("jsRequire") == 19).to.be.true;
+      expect((xstr.indexOf("jsRequire")-9) == xstr.indexOf("require")).to.be.true;
+      expect(xstr.indexOf("jsAsync") == 132).to.be.true;
+      expect((xstr.indexOf("jsAsync")-16) == xstr.indexOf("require.async")).to.be.true;
 
     });
   });
 
   it("lookup:file", function () {
-    var project;
+    var project = fis.project;
 
-    project = require('../../../lib/project');
     var root = path.join(__dirname, 'project');
     project.setProjectRoot(root);
     var filepath = path.join(root, 'test.js');
@@ -75,24 +77,9 @@ describe('index:', function () {
     expect(info.id == "test.js").to.be.true;
     expect(info.moduleId == "test.js").to.be.true;
   });
-  //
-  //it("standard:js", function () {
-  //  var project;
-  //
-  //  project = require('../../../lib/project');
-  //  var root = path.join(__dirname, 'project');
-  //  project.setProjectRoot(root);
-  //  var filepath = path.join(root, 'test3.js');
-  //
-  //  var file = fis.file.wrap(filepath);
-  //  var info = {
-  //    file: file,
-  //    content: file.getContent()
-  //  };
-  //  fis.emit('standard:js',info);
-  //});
 
 });
+
 
 describe('fis3-plugin-module compile:postprocessor', function() {
   beforeEach(function() {
