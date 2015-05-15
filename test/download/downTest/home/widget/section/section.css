@@ -1,0 +1,82 @@
+.section {
+    background-attachment: scroll;
+    background-position: center top;
+    padding: 100px 7%;
+}
+
+.section .title {
+    position: relative;
+    height: 45px;
+}
+
+.section .title h2 {
+    font-size: 58px; font-size: 5.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 72px;
+    position: absolute;
+    background: #fff;
+    padding-right: 50px;
+    font-size: 67px; font-size: 6.7rem;
+}
+
+.section .title {
+    border-bottom: 1px solid #151515;
+}
+
+.section h3 {
+    padding: 40px 0 20px;
+}
+
+.section h4 {
+    font-size: 23px; font-size: 2.3rem;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0 0 20px;
+    padding-bottom: 5px;
+}
+
+.section h5 {
+    font-size: 19px; font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0 0 20px;
+    padding-bottom: 5px;
+}
+
+.section .desc {
+    margin-top: 20px;
+}
+
+.section .content {
+    margin-top: 75px;
+}
+
+.section li {
+    line-height: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+    .section h2 {
+        font-size: 67px; font-size: 6.7rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .section {
+        padding: 70px 5%;
+    }
+    .section h2 {
+        font-size: 55px; font-size: 5.5rem;
+    }
+}
+
+@media screen and (max-width: 979px) {
+    .section {
+        padding: 40px 5%;
+    }
+    .section h2 {
+        font-size: 47px;font-size: 4.7rem;
+        line-height: 58px;
+    }
+}

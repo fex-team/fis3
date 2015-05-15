@@ -423,9 +423,9 @@ describe('util: _.isAbsolute(path)', function () {
     } else {
       expect(_.isAbsolute('/')).to.be.true;
       expect(_.isAbsolute('~')).to.be.true;
-      expect(_.isAbsolute('/home/work/')).to.be.true;
-      expect(_.isAbsolute('./home/work/')).to.be.false;
-      expect(_.isAbsolute('home/work')).to.be.false;
+      expect(_.isAbsolute('/usr/local/')).to.be.true;
+      expect(_.isAbsolute('./usr/local/')).to.be.false;
+      expect(_.isAbsolute('usr/local')).to.be.false;
     }
   });
 
@@ -738,11 +738,17 @@ describe('util: _.filter(str, [include], [exclude])', function () {
     expect(_.filter('hello')).to.be.true;
   });
   it('include', function () {
-    expect(_.filter('abc.js', '*c.js')).to.be.true;
-    expect(_.filter('/abc/c.js', '*.js')).to.be.false;
+    var phonenumber=new RegExp("c.js$", "g");
+    expect(_.filter("abc.js", phonenumber)).to.be.true;
+    expect(_.filter("abc.djs", phonenumber)).to.be.false;
+    expect(_.filter('abc.js', '*c.js')).to.be.false;
+    expect(_.filter('/abc/c.js', 'c.js')).to.be.true;
   });
   it('exclude', function () {
-    expect(_.filter('b.js', null, '*.js')).to.be.false;
+    var phonenumber2=new RegExp("c.js$", "g");
+    expect(_.filter("abcd.js", null , phonenumber2)).to.be.true;
+    expect(_.filter("abc.js", null , phonenumber2)).to.be.false;
+    expect(_.filter('b.js', null, '*.js')).to.be.true;
     expect(_.filter('abc/d.js', null, 'b.jsd')).to.be.true;
   });
 //    it('exclude&include',function(){
@@ -787,7 +793,7 @@ describe('util: _find(rPath, [include], [exclude])', function () {
     expect(img).to.equal(path.normalize(__dirname + '/util/img/data.png'));
   });
   it('include', function () {
-    var file = _.find(__dirname + '/util/base64/', '**.gif');
+    var file = _.find(__dirname + '/util/base64/', '*.gif');
     expect(file.length).to.equal(1);
     file = file[0];
     file = path.normalize(file);
@@ -796,13 +802,13 @@ describe('util: _find(rPath, [include], [exclude])', function () {
     file = _.find(__dirname + '/util/base64/', 'xsl');
     expect(file).to.deep.equal([]);
 
-    file = _.find(__dirname + '/util/base64/', ['**.txt', '**.gif']);
+    file = _.find(__dirname + '/util/base64/', ['*.txt', '*.gif']);
     expect(file.length).to.equal(2);
   });
 
   //include和exclude都是通配符，如**.js，所以转化为正则以后应该是/js$/这种样子的，所以就不考虑exclude和include同时存在的情况了，太无聊了
   it('exclude', function () {
-    var file = _.find(__dirname + '/util/base64/', null, '**.gif');
+    var file = _.find(__dirname + '/util/base64/', null, '*.gif');
     expect(file.length).to.equal(1);
     file = file[0];
     file = path.normalize(file);
@@ -821,16 +827,16 @@ describe('util: _find(rPath, [include], [exclude])', function () {
   });
 
   it('include and exclude', function () {
-    var file = _.find(__dirname + '/util/base64/', ['**.txt', '**.gif'], ['**.txt', '**.gif']);
+    var file = _.find(__dirname + '/util/base64/', ['*.txt', '*.gif'], ['*.txt', '*.gif']);
     expect(file.length).to.equal(0);
 
-    file = _.find(__dirname + '/util/base64/', ['**.txt', '**.gif'], ['**.gif']);
+    file = _.find(__dirname + '/util/base64/', ['*.txt', '*.gif'], ['*.gif']);
     expect(file.length).to.equal(1);
 
-    file = _.find(__dirname + '/util/base64/', ['**.txt', '**.gif'], ['**.gif2']);
+    file = _.find(__dirname + '/util/base64/', ['*.txt', '*.gif'], ['*.gif2']);
     expect(file.length).to.equal(2);
 
-    file = _.find(__dirname + '/util/base64/', ['**.txt'], ['**.gif']);
+    file = _.find(__dirname + '/util/base64/', ['*.txt'], ['*.gif']);
     expect(file.length).to.equal(1);
     file = file[0];
     file = path.normalize(file);
@@ -884,7 +890,7 @@ describe('util: _.del(rPath, include, exclude)', function () {
     fs.writeFileSync(__dirname + "/tmp/a.txt", 'hello world');
     fs.writeFileSync(__dirname + "/tmp/b.js", 'hello world');
     expect(_.isDir(tmpdir)).to.be.true;
-    _.del(__dirname + "/tmp/", '**.js');
+    _.del(__dirname + "/tmp/", '*.js');
     expect(fs.existsSync(__dirname + "/tmp/a.txt")).to.be.true;
     expect(fs.existsSync(__dirname + "/tmp/tmp2/a.js")).to.be.false;
     expect(fs.existsSync(__dirname + "/tmp/b.js")).to.be.false;
@@ -899,7 +905,7 @@ describe('util: _.del(rPath, include, exclude)', function () {
     fs.writeFileSync(__dirname + "/tmp/a.txt", 'hello world');
     fs.writeFileSync(__dirname + "/tmp/b.js", 'hello world');
     expect(_.isDir(tmpdir)).to.be.true;
-    _.del(__dirname + "/tmp/", null, '**.js');
+    _.del(__dirname + "/tmp/", null, '*.js');
     expect(fs.existsSync(__dirname + "/tmp/a.txt")).to.be.false;
     expect(fs.existsSync(__dirname + "/tmp/tmp2/a.js")).to.be.true;
     expect(fs.existsSync(__dirname + "/tmp/b.js")).to.be.true;
@@ -948,7 +954,7 @@ describe('util: _.copy(rSource, target, include, exclude, uncover, move)', funct
     fs.writeFileSync(source + '/index.js', 'hello world');
     fs.writeFileSync(source + "/file.txt", 'hello world');
     fs.writeFileSync(target + "/index1.js", 'hello world2');
-    _.copy(source, target, '**.txt', null, null, true);
+    _.copy(source, target, '*.txt', null, null, true);
     expect(fs.existsSync(target + "/file.txt")).to.be.true;
     expect(fs.existsSync(target + "/index1.js")).to.be.true;
     expect(fs.existsSync(target + "/index.js")).to.be.false;
@@ -963,7 +969,7 @@ describe('util: _.copy(rSource, target, include, exclude, uncover, move)', funct
     fs.writeFileSync(source + '/index.js', 'hello world');
     fs.writeFileSync(source + "/file.txt", 'hello world');
     fs.writeFileSync(target + "/index1.js", 'hello world2');
-    _.copy(source, target, null, '**.txt', null, true);
+    _.copy(source, target, null, '*.txt', null, true);
     expect(fs.existsSync(target + "/file.txt")).to.be.false;
     expect(fs.existsSync(target + "/index1.js")).to.be.true;
     expect(fs.existsSync(target + "/index.js")).to.be.true;
@@ -1563,35 +1569,156 @@ describe('util: _.isUtf8', function () {
 });
 
 describe('util: _.glob(pattern, [str])', function () {
-  it('general', function () {
-    expect(_.glob('/*.js', '/abc.js')).to.be.true;
-    expect(_.glob('/*.js', '/abc.js.css')).to.be.false;
-    expect(_.glob('/*.js', '/abc.JS')).to.be.true;
-    expect(_.glob('/?.js', '/abc.js')).to.be.false;
-    expect(_.glob('/??.js', '/abc.js')).to.be.false;
-    expect(_.glob('/?.js', '/a.js')).to.be.true;
-    expect(_.glob('/??.js', '/ab.js')).to.be.true;
-  });
-  it('**', function () {
-    expect(_.glob('**.js', 'as/d.a/abc.js')).to.be.true;
-    expect(_.glob('**.js', 'as/d.a/abc.js.css')).to.be.false;
-    expect(_.glob('**.js', 'as/d.a/abc.js/')).to.be.false;
-    expect(_.glob('a/**/*.js', 'as/d.a/abc.js')).to.be.false;
-    expect(_.glob('a/**/*.js', 'a/s/d.a/abc.js')).to.be.true;
-    expect(_.glob('a/**/?.js', 'a/s/d.a/abc.js')).to.be.false;
-    expect(_.glob('a/**/?.js', 'a/s/d.a/c.js')).to.be.true;
-  });
-  it('*', function () {
-    expect(_.glob('*/*.js', 'da.js')).to.be.false;
-    expect(_.glob('*/*.js', '/adfda.js')).to.be.true;
-    expect(_.glob('*/*.js', 'db/dsaa.js')).to.be.true;
+    it('/*.js  /abc.js', function () {
+      expect(_.glob('/*.js', '/abc.js')).to.be.true;
+    });
+    it('/*.js  /abc.js.css', function () {
+      expect(_.glob('/*.js', '/abc.js.css')).to.be.false;
+    });
+    it('/*.js  /abc.JS', function () {
+      expect(_.glob('/*.js', '/abc.JS')).to.be.false;
+    });
+    it('/?.js  /abc.js', function () {
+      expect(_.glob('/?.js', '/abc.js')).to.be.false;
+    });
+    it('/??.js  /abc.js', function () {
+      expect(_.glob('/??.js', '/abc.js')).to.be.false;
+    });
+    it('/?.js  /a.js', function () {
+      expect(_.glob('/?.js', '/a.js')).to.be.true;
+    });
+    it('/??.js  /ab.js', function () {
+      expect(_.glob('/??.js', '/ab.js')).to.be.true;
+    });
+
+
+    it('**/*.js  /a.b/c.js', function () {
+      expect(_.glob('**/*.js', '/a.b/c.js')).to.be.true;
+    });
+    it('**/*.js  as/d.a/abc.js.css', function () {
+      expect(_.glob('**/*.js', 'as/d.a/abc.js.css')).to.be.false;
+    });
+    it('**/*.js  as/d.a/abc.js/', function () {
+      expect(_.glob('**/*.js', 'as/d.a/abc.js/')).to.be.false;
+    });
+    it('a/**/*.js  as/d.a/abc.js', function () {
+      expect(_.glob('a/**/*.js', 'as/d.a/abc.js')).to.be.false;
+    });
+    it('a/**/*.js  a/s/d.a/abc.js', function () {
+      expect(_.glob('a/**/*.js', 'a/s/d.a/abc.js')).to.be.true;
+    });
+    it('a/**/?.js  a/s/d.a/abc.js', function () {
+      expect(_.glob('a/**/?.js', 'a/s/d.a/abc.js')).to.be.false;
+    });
+    it('a/**/?.js  a/s/d.a/c.js', function () {
+      expect(_.glob('a/**/?.js', 'a/s/d.a/c.js')).to.be.true;
+    });
+    it('**.js  d/a.b/c.js', function() {
+      expect(_.glob('**.js', '/a.b/c.js')).to.be.true;
+    });
+
+
+    it('*/*.js  da.js', function () {
+      expect(_.glob('*/*.js', 'da.js')).to.be.false;
+    });
+    it('/*.js  /adfda.js', function () {
+      expect(_.glob('*/*.js', '/adfda.js')).to.be.true;
+    });
+    it('*/*.js  db/dsaa.js', function () {
+      expect(_.glob('*/*.js', 'db/dsaa.js')).to.be.true;
+    });
     //允许用户开头的斜杠省略，写了也忽略，即路径/bdsf/aa.js和bdsf/aa.js可以认为是一样的
-    expect(_.glob('/*/*.js', 'bdsf/aa.js')).to.be.true;
-    expect(_.glob('/*/*.js', '/bdsf/.js')).to.be.true;
-    expect(_.glob('/*/*.js', '/bdsf/.js.css')).to.be.false;
-    expect(_.glob('/*/*.js', '/bdsf/.js.JS')).to.be.true;
-    expect(_.glob('/*/*.js', '/ba/asd.js')).to.be.true;
-    expect(_.glob('/*/*.js', '//asd.js')).to.be.true;
-    expect(_.glob('/*/*.js', 'aaa/bbbs/ad.js')).to.be.false;
+    it('/*/*.js  bdsf/aa.js', function () {
+      expect(_.glob('/*/*.js', 'bdsf/aa.js')).to.be.true;
+    });
+    it('/*/*.js  /bdsf/.js', function () {
+      expect(_.glob('/*/*.js', '/bdsf/.js')).to.be.true;
+    });
+    it('/*/*.js  /bdsf/.js.css', function () {
+      expect(_.glob('/*/*.js', '/bdsf/.js.css')).to.be.false;
+    });
+    it('/*/*.js  /bdsf/.js.JS', function () {
+      expect(_.glob('/*/*.js', '/bdsf/.js.JS')).to.be.false;
+    });
+    it('/*/*.js  /ba/asd.js', function () {
+      expect(_.glob('/*/*.js', '/ba/asd.js')).to.be.true;
+    });
+    it('/*/*.js  //asd.js', function () {
+      expect(_.glob('/*/*.js', '//asd.js')).to.be.true;
+    });
+    it('/*/*.js  aaa/bbbs/ad.js', function () {
+      expect(_.glob('/*/*.js', 'aaa/bbbs/ad.js')).to.be.false;
+    });
+
+});
+
+describe('util: _.is(source, type)', function (){
+  it('general', function () {
+    var num = 123;
+    var ob = {
+      x:123
+    }
+    var ar = [1,2,3];
+    var fl = false;
+    var und;
+    expect(_.is("123","String")).to.be.true;
+    expect(_.is(num,"Number")).to.be.true;
+    expect(_.is(ob,"Object")).to.be.true;
+    expect(_.is(ar,"Array")).to.be.true;
+    expect(_.is(fl,"Boolean")).to.be.true;
+    expect(_.is(und,"Undefined")).to.be.true;
+  });
+});
+
+describe('util: _.escapeReg(str)', function (){
+  it('general', function () {
+    var num = "\b\w*q(?!u)\w*\b";
+    var st = _.escapeReg(num);
+    var tar_st = "w\\*q\\(\\?\\!u\\)w\\*";
+    st = st.substring(1,st.length-1);
+    expect(st == tar_st).to.be.true;
+  });
+});
+
+describe('util: _.isEmpty(obj)', function (){
+  it('general', function () {
+    var obj = null;
+    var obj_arr = [];
+    expect(_.isEmpty(obj)).to.be.true;
+    expect(_.isEmpty(obj_arr)).to.be.true;
+    obj_arr = [1];
+    expect(_.isEmpty(obj_arr)).to.be.false;
+    var obj_o = {};
+    expect(_.isEmpty(obj_o)).to.be.true;
+    obj_o = {
+      s : 123
+    }
+    expect(_.isEmpty(obj_o)).to.be.false;
+  });
+});
+
+describe('util: _.nohup(type, callback, def)', function (){
+  it('general', function () {
+    var re1 = _.nohup('fis server start',function (){var x = 3});
+    var re2 = _.nohup('fis server stop',function (){var c = 9});
+    expect(re1.stdout._hadError).to.be.false;
+    expect(re2.stdout._hadError).to.be.false;
+  });
+});
+
+describe('util: _.pipe(type, callback, def)', function (){
+  it('general', function () {
+    config.env().set('modules.plugin','module');
+    _.pipe('plugin', function (processor, settings, key, type){
+      expect("plugin.module" == key).to.be.true;
+    }, '');
+
+    var str = '';
+    config.env().set('modules.plugin',['mo dule','components']);
+    _.pipe('plugin', function (processor, settings, key, type){
+      str += key + ',';
+    }, '');
+    expect("plugin.module,plugin.components," == str).to.be.true;
+
   });
 });

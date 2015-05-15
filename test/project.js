@@ -2,8 +2,10 @@
 
 var assert = require('assert');
 var fis = require('..');
+var fs = require('fs');
 var path = require('path');
 var root = path.join(__dirname, 'project');
+var expect = require('chai').expect;
 
 require.del = function (id) {
   try {
@@ -30,6 +32,7 @@ describe('project: tempPath', function () {
     var pth = path.join(root, '.fis-tmp');
     project.setTempRoot(pth);
     assert.equal(project.getTempPath(), pth);
+    fs.rmdirSync(pth);
   });
 
   it ('getTempPath', function () {
@@ -71,10 +74,78 @@ describe('project: getSource', function () {
     fis.media().init(); // @TODO
     require.del('../lib/project');
     project = require('../lib/project');
+    fis.project.setProjectRoot(root);
   });
 
   //@TODO
-  it('getSourceByPatterns', function () {
+  it('getSource', function () {
+    var xc = fis.project.getSource();
+    var keyd = [];
+    for(var key in xc){
+      keyd.push(key);
+    }
+    assert.equal(keyd.join(','), '/qfis-test.js,/test.css,/test.html');
+  });
+
+  it('getSource', function () {
+    fis.config.set('project.include','qfis-test.js');
+    var xc = fis.project.getSource();
+    var keyd = [];
+    for(var key in xc){
+      keyd.push(key);
+    }
+    assert.equal(keyd.join(','), '/qfis-test.js');
+  });
+
+  it('getSource', function () {
+    fis.config.set('project.exclude','qfis-test.js');
+    var xc = fis.project.getSource();
+    var keyd = [];
+    for(var key in xc){
+      keyd.push(key);
+    }
+    assert.equal(keyd.join(','), '/test.css,/test.html');
+  });
+
+  it('getSource', function () {
+    fis.config.set('project.exclude',['test.html','test.css','qfis-test.js']);
+    var xc = fis.project.getSource();
+    var keyd = [];
+    for(var key in xc){
+      keyd.push(key);
+    }
+    assert.equal(keyd.join(','), '');
+  });
+
+  it('getSource', function () {
+    fis.config.set('project.include',['test.js','qfis-test.js']);
+    var xc = fis.project.getSource();
+    var keyd = [];
+    for(var key in xc){
+      keyd.push(key);
+    }
+    assert.equal(keyd.join(','), '/qfis-test.js');
+  });
+
+  it('getSource', function () {
+    fis.config.set('project.exclude','qfis-test.js');
+    fis.config.set('project.include',['test.js','qfis-test.js']);
+    var xc = fis.project.getSource();
+    var keyd = [];
+    for(var key in xc){
+      keyd.push(key);
+    }
+    assert.equal(keyd.join(','), '');
+  });
+
+  it('project.files: [!**.js]', function() {
+    fis.config.set('project.files', '!**.js');
+    var xc = fis.project.getSource();
+    var keyd = [];
+    for(var key in xc){
+      keyd.push(key);
+    }
+    assert.equal(keyd.join(','), '/test.css,/test.html');
   });
 });
 
@@ -92,7 +163,7 @@ describe('project: lookup', function () {
     var filepath = path.join(root, 'test.js');
     fis.util.write(filepath, 'console.log("hello, world.");');
     var info = project.lookup('/test.js');
-    assert.deepEqual({id: info.id, moduleId: info.moduleId}, {id: '/test.js', moduleId: '/test.js'});
+    assert.deepEqual({id: info.id, moduleId: info.moduleId}, {id: 'test.js', moduleId: 'test.js'});
     fis.util.del(filepath);
   });
 });

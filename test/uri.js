@@ -31,9 +31,12 @@ describe('uri: uri()', function () {
 
     expect(uri("/uri/file/a.js?a=a")["query"]).to.equal("?a=a");
     expect(uri("/uri/file/a.js?a=a")["rest"]).to.equal("/uri/file/a.js");
-    console.log(uri("/uri/file/a.js?a=a"));
-    expect(uri("/uri/file/a.js?a=a")["file"]["realpath"]).to.equal(_path + "/uri/file/a.js");
 
+    expect(uri("/uri/file/a.js?a=a")["file"]["realpath"]).to.equal(_path + "/uri/file/a.js");
+    config.set("namespace",'uri');
+    config.env().set("namespaceConnector",'/');
+    var c = uri("uri/file/a.js?a=a");
+    expect(c.file.origin).to.equal(_path+'/'+c.rest);
   });
 });
 
@@ -45,6 +48,9 @@ describe('uri: replaceDefine()', function () {
   it('${var} replace config value', function () {
     fis.config.set('123', '<{11');
     fis.config.set('var', 'var_var');
+    expect(uri.replaceDefine("hh${123}hh${123}", false)).to.equal("hh<{11hh<{11");
+    expect(uri.replaceDefine("hh${123}hh${123}", true)).to.equal("hh\\<\\{11hh\\<\\{11");
+    expect(uri.replaceDefine("hh${123}hh", false)).to.equal("hh<{11hh");
     expect(uri.replaceDefine("hh${123}hh", true)).to.equal("hh\\<\\{11hh");
     expect(uri.replaceDefine("hh${123}hh", false)).to.equal("hh<{11hh");
     expect(uri.replaceDefine("hh{123}hh", false)).to.equal("hh{123}hh");

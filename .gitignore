@@ -27,6 +27,7 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
+/.settings
 /output
 /sample/output
 /debug
@@ -39,3 +40,5 @@ node_modules/
 *.cmd
 ~*
 upload.py
+
+/test/fis-tmp/target/cache

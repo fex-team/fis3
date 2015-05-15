@@ -5,6 +5,7 @@
 /node_modules
 /test
 /.tmp
+/coverage
 
 .DS_Store
 
