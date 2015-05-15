@@ -1,6 +1,6 @@
 {
   "name": "fis3",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "fis 3.0",
   "main": "index.js",
   "bin": {
@@ -28,6 +28,7 @@
     "lodash": "3.6.0",
     "minimatch": "2.0.4",
     "minimist": "1.1.1",
+    "resolve": "1.1.6",
     "tar": "0.1.17"
   },
   "devDependencies": {
