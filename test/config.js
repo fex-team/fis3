@@ -109,10 +109,11 @@ describe('config: config',function(){
   it('match ${}', function() {
     fis.match('**/*.js', {
       release: null,
+      useHash: false
     })
+    fis.set('coffee', 'js');
     fis.match('**/${coffee}.js', {
-      release: '/static/$&',
-      coffee: 'js'
+      release: '/static/$&'
     });
 
     path = __dirname+'/file/ext/modular/js.js?__inline';
@@ -126,17 +127,16 @@ describe('config: config',function(){
     expect(url).to.equal('/file/ext/modular/j_'+ f.getHash() +'.js?__inline');
   });
   it('match 混合用法', function() {
+    fis.set('ROOT', 'js');
     fis.match('**', {
       useHash: false
     });
 
     fis.match('**/(${ROOT}/*.js)', {
-      ROOT: 'js',
       release: '/static/$1'
     });
 
     fis.match('**/(${ROOT}/*.less)', {
-      ROOT: 'js',
       release: '/static/$1'
     });
 
