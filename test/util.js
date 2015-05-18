@@ -3,7 +3,8 @@
  * User: shenlixia01
  * Date: 13-5-8
  * Time: 下午4:36
- * To change this template use File | Settings | File Templates.
+ * To change this template use File | Settings | File Templates. 
+ * Update: 15-5-10 by Naixor
  */
 var fs = require('fs'),
 path   = require('path');
@@ -1567,7 +1568,7 @@ describe('util: _.isUtf8', function () {
 
   });
 });
-
+// glob的第二个参数一定要是/开头
 describe('util: _.glob(pattern, [str])', function () {
     it('/*.js  /abc.js', function () {
       expect(_.glob('/*.js', '/abc.js')).to.be.true;
@@ -1604,14 +1605,14 @@ describe('util: _.glob(pattern, [str])', function () {
     it('a/**/*.js  as/d.a/abc.js', function () {
       expect(_.glob('a/**/*.js', 'as/d.a/abc.js')).to.be.false;
     });
-    it('a/**/*.js  a/s/d.a/abc.js', function () {
-      expect(_.glob('a/**/*.js', 'a/s/d.a/abc.js')).to.be.true;
+    it('a/**/*.js  /a/s/d.a/abc.js', function () {
+      expect(_.glob('a/**/*.js', '/a/s/d.a/abc.js')).to.be.true;
     });
-    it('a/**/?.js  a/s/d.a/abc.js', function () {
-      expect(_.glob('a/**/?.js', 'a/s/d.a/abc.js')).to.be.false;
+    it('a/**/?.js  /a/s/d.a/abc.js', function () {
+      expect(_.glob('a/**/?.js', '/a/s/d.a/abc.js')).to.be.false;
     });
-    it('a/**/?.js  a/s/d.a/c.js', function () {
-      expect(_.glob('a/**/?.js', 'a/s/d.a/c.js')).to.be.true;
+    it('a/**/?.js  /a/s/d.a/c.js', function () {
+      expect(_.glob('a/**/?.js', '/a/s/d.a/c.js')).to.be.true;
     });
     it('**.js  d/a.b/c.js', function() {
       expect(_.glob('**.js', '/a.b/c.js')).to.be.true;
@@ -1622,7 +1623,7 @@ describe('util: _.glob(pattern, [str])', function () {
       expect(_.glob('*/*.js', 'da.js')).to.be.false;
     });
     it('/*.js  /adfda.js', function () {
-      expect(_.glob('*/*.js', '/adfda.js')).to.be.true;
+      expect(_.glob('/*.js', '/adfda.js')).to.be.true;
     });
     it('*/*.js  db/dsaa.js', function () {
       expect(_.glob('*/*.js', 'db/dsaa.js')).to.be.false;
