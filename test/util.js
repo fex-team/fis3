@@ -3,7 +3,7 @@
  * User: shenlixia01
  * Date: 13-5-8
  * Time: 下午4:36
- * To change this template use File | Settings | File Templates. 
+ * To change this template use File | Settings | File Templates.
  * Update: 15-5-10 by Naixor
  */
 var fs = require('fs'),
@@ -1249,28 +1249,28 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
 });
 
 describe('util: _upload(url, [opt], [data], content, subpath, callback)', function () {
-  it('general', function (done) {
-    var receiver = 'http://web.baidu.com:8088/test/upload/receiver.php';
-    var to = '/home/work/repos/test/upload';
-    var release = '/a.js';
-    var content = 'content';
-    var subpath = '/';
-    _.upload(receiver, null, {to: to + release}, content, subpath,
-      function (err, res) {
-        if (err || res != '0') {
-          expect(true).to.be.false;
-        } else {
-          var file = to + release;
-          var cont = fs.readFileSync(file, "utf-8");
-          expect(fs.existsSync(file)).to.be.true;
-          expect(cont).to.be.equal(content);
+  // it('general', function (done) {
+  //   var receiver = 'http://web.baidu.com:8088/test/upload/receiver.php';
+  //   var to = '/home/work/repos/test/upload';
+  //   var release = '/a.js';
+  //   var content = 'content';
+  //   var subpath = '/';
+  //   _.upload(receiver, null, {to: to + release}, content, subpath,
+  //     function (err, res) {
+  //       if (err || res != '0') {
+  //         expect(true).to.be.false;
+  //       } else {
+  //         var file = to + release;
+  //         var cont = fs.readFileSync(file, "utf-8");
+  //         expect(fs.existsSync(file)).to.be.true;
+  //         expect(cont).to.be.equal(content);
 
-          //delete file
-          _.del(file);
-        }
-        done();
-      });
-  });
+  //         //delete file
+  //         _.del(file);
+  //       }
+  //       done();
+  //     });
+  // });
 
   it('err--not exist', function (done) {
     var receiver = 'http://web.baidu.com:8088/test/receiver.php'; //non exist receiver
@@ -1290,29 +1290,29 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
       });
   });
 
-  it('content--array', function (done) {
-    var receiver = 'http://web.baidu.com:8088/test/upload/receiver.php';
-    var to = '/home/work/repos/test/upload';
-    var release = '/a.js';
-    var content = fs.readFileSync(__dirname + "/upload/a.js", "utf-8");
-    var subpath = '/tmp/b.js';
-    _.upload(receiver, null, {to: to + release}, content, subpath,
-      function (err, res) {
-        if (err || res != '0') {
-          expect(true).to.be.false;
-        }
-        else {
-          var file = to + release;
-          var cont = fs.readFileSync(file, "utf-8");
-          expect(fs.existsSync(file)).to.be.true;
-          expect(cont).to.be.equal(content);
+  // it('content--array', function (done) {
+  //   var receiver = 'http://web.baidu.com:8088/test/upload/receiver.php';
+  //   var to = '/home/work/repos/test/upload';
+  //   var release = '/a.js';
+  //   var content = fs.readFileSync(__dirname + "/util/upload/a.js", "utf-8");
+  //   var subpath = '/tmp/b.js';
+  //   _.upload(receiver, null, {to: to + release}, content, subpath,
+  //     function (err, res) {
+  //       if (err || res != '0') {
+  //         expect(true).to.be.false;
+  //       }
+  //       else {
+  //         var file = to + release;
+  //         var cont = fs.readFileSync(file, "utf-8");
+  //         expect(fs.existsSync(file)).to.be.true;
+  //         expect(cont).to.be.equal(content);
 
-          //delete file
-          _.del(file);
-        }
-        done();
-      });
-  });
+  //         //delete file
+  //         _.del(file);
+  //       }
+  //       done();
+  //     });
+  // });
 });
 
 describe('util: _install(name, [version], opt)', function () {
