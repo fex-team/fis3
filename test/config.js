@@ -191,6 +191,7 @@ describe('config: config',function(){
     ['a', 'b', 'c'].forEach(function(v, i) {
       if (i) {
         result_gl.push({
+          raw: v,
           reg: u.glob(v),
           negate: false,
           properties: {name: ''},
@@ -198,6 +199,7 @@ describe('config: config',function(){
           weight: i
         })
         result_gl.push({
+          raw: v,
           reg: u.glob(v),
           negate: false,
           properties: {name: 'prod'},
@@ -205,6 +207,7 @@ describe('config: config',function(){
           weight: i
         })
         result_prod.push({
+          raw: v,
           reg: u.glob(v),
           negate: false,
           properties: {name: ''},
@@ -212,6 +215,7 @@ describe('config: config',function(){
           weight: i
         })
         result_prod.push({
+          raw: v,
           reg: u.glob(v),
           negate: false,
           properties: {name: 'prod'},
@@ -220,6 +224,7 @@ describe('config: config',function(){
         })
       }else {
         result_gl.push({
+          raw: v,
           reg: u.glob(v),
           negate: false,
           properties: {name: ''},

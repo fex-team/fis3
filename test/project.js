@@ -160,10 +160,7 @@ describe('project: lookup', function () {
   });
 
   it("not event", function () {
-    var filepath = path.join(root, 'test.js');
-    fis.util.write(filepath, 'console.log("hello, world.");');
-    var info = project.lookup('/test.js');
-    assert.deepEqual({id: info.id, moduleId: info.moduleId}, {id: 'test.js', moduleId: 'test.js'});
-    fis.util.del(filepath);
+    var info = project.lookup('/qfis-test.js');
+    assert.deepEqual({id: info.id, moduleId: info.moduleId}, {id: 'qfis-test.js', moduleId: 'qfis-test'});
   });
 });
