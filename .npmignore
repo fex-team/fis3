@@ -8,6 +8,7 @@
 /coverage
 /debug
 /doc
+/Makefile
 
 .DS_Store
 
