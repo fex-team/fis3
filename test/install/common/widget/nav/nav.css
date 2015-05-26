@@ -1,0 +1,60 @@
+#nav {
+    margin-top: 80px;
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav ul li {
+    color: #F1F1F1;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 22px;
+    filter: alpha(opacity=40);
+    font-size: 16px; font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 100;
+    opacity: .4;
+    padding: 8px 0 8px 15px;
+    text-transform: uppercase;
+    width: 70%;
+}
+
+#nav ul li.active {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#nav ul li.last {
+    padding-right: 0px;
+}
+
+#nav li span {
+    display: inline-block;
+    font-size: 14px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-left: 10px;
+    width: 0;
+}
+
+#nav li i {
+    position: relative;
+    top: 2px;
+}
+
+.expanded #nav li {
+    width: 90%;
+}
+.expanded #nav li span {
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    opacity: 1;
+    overflow: visible;
+    width: auto;
+}

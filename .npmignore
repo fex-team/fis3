@@ -5,6 +5,10 @@
 /node_modules
 /test
 /.tmp
+/coverage
+/debug
+/doc
+/Makefile
 
 .DS_Store
 

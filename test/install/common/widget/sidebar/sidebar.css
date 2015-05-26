@@ -1,0 +1,45 @@
+#sidebar {
+    background-color: #151515;
+    height: 120%;
+    padding: 0;
+    position: fixed;
+    _position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    z-index: 2;
+    color: #F1F1F1;
+    -moz-user-select: none;  
+    -webkit-user-select: none;  
+    -ms-user-select: none;  
+}
+
+.btn-navbar {
+    cursor: pointer;
+    filter: alpha(opacity=40);
+    float: left;
+    margin: 20px 5px 10px;
+    opacity: .4;
+    padding: 7px 10px;
+}
+
+.btn-navbar .icon-bar {
+    background-color: #F5F5F5;
+    border-radius: 1px 1px 1px 1px;
+    box-shadow: none;
+    display: block;
+    height: 2px;
+    width: 18px;
+}
+#sidebar a {
+    display: block;
+    color: #999;
+}
+
+#sidebar a:hover {
+    color: #fff;
+}
+
+.expanded #sidebar {
+    width: 150px;
+}

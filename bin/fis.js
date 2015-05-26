@@ -25,8 +25,8 @@ cli.launch({
     fis = require('../');
   } else {
     fis = require(env.modulePath);
-    fis.set('globalNPMFolder', path.dirname(__dirname));
   }
-
+  fis.set('localNPMFolder', path.join(env.cwd, 'node_modules/fis3'));
+  fis.set('globalNPMFolder', path.dirname(__dirname));
   fis.cli.run(argv, env);
 });
