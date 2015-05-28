@@ -1,6 +1,6 @@
 {
   "name": "fis3",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "fis 3.0",
   "main": "index.js",
   "bin": {
@@ -27,6 +27,8 @@
     "fis-spriter-csssprites": "0.3.0",
     "fis3-command-init": "^1.0.0",
     "fis3-command-release": "^1.0.0",
+    "fis3-deploy-local-deliver": "^1.0.0",
+    "fis3-deploy-http-push": "^1.0.0",
     "fis3-hook-components": "^1.0.0",
     "fis3-packager-map": "^1.0.0"
   },
