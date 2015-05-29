@@ -19,7 +19,6 @@
     "tar": "0.1.17",
     "fis-command-install": "0.1.27",
     "fis-command-server": "0.7.5",
-    "fis-deploy-default": "0.0.6",
     "fis-lolcat": "1.0.0",
     "fis-optimizer-clean-css": "0.0.9",
     "fis-optimizer-png-compressor": "0.1.0",
