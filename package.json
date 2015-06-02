@@ -1,6 +1,6 @@
 {
   "name": "fis3",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "description": "fis 3.0",
   "main": "index.js",
   "bin": {
@@ -29,7 +29,8 @@
     "fis3-deploy-local-deliver": "1.0.0",
     "fis3-deploy-http-push": "1.0.1",
     "fis3-hook-components": "1.0.0",
-    "fis3-packager-map": "1.0.0"
+    "fis3-packager-map": "1.0.0",
+    "fis3-errors": "*"
   },
   "devDependencies": {
     "chai": "^2.2.0",
