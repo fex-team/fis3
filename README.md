@@ -1,10 +1,10 @@
 ![](https://raw.githubusercontent.com/fex-team/fis3/dev2/doc/logo.png?token=AAmhm2K2RcHJIrIrvPWkf42FBo3nC5kYks5Vg2Z5wA%3D%3D)
 
 # FIS3
+![](https://img.shields.io/npm/v/fis3.svg) ![](https://img.shields.io/npm/dm/fis3.svg)
 
 FIS3 面向**前端**的**工程构建系统**。解决前端工程中性能优化、资源加载（异步、同步、按需、预加载、依赖管理、合并、内嵌）、模块化开发、自动化工具、开发规范、代码部署等问题。
 
-![](https://img.shields.io/npm/v/fis3.svg)
 
 ```
 npm install -g fis3
