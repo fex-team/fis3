@@ -55,8 +55,8 @@ fis
 
 ## 常用插件
 
-- [fis-optimizer-uglify-js]() UglifyJS2 压缩插件
-- [fis-optimizer-clean-css]() CleanCss  压缩插件
-- [fis-parser-less]() less 解析插件
-- [fis-parser-sass]() sass / scss 解析插件
-- [fis-parser-handlebars]() handlebars 解析插件
+- [fis-optimizer-uglify-js](https://www.npmjs.com/package/fis-optimizer-uglify-js) UglifyJS2 压缩插件
+- [fis-optimizer-clean-css](https://www.npmjs.com/package/fis-optimizer-clean-css) CleanCss  压缩插件
+- [fis-parser-less](https://www.npmjs.com/package/fis-parser-less) less 解析插件
+- [fis-parser-sass](https://www.npmjs.com/package/fis-parser-sass) sass / scss 解析插件
+- [fis-parser-handlebars](https://www.npmjs.com/package/fis-parser-handlebars) handlebars 解析插件
