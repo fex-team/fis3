@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/fex-team/fis3/dev2/doc/logo.png)
 # FIS3
 
 FIS3 面向**前端**的**工程构建系统**。
