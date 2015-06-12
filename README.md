@@ -10,11 +10,11 @@ FIS3 面向**前端**的**工程构建系统**。
 npm install -g fis3
 ```
 
-### 文档
+## 文档
 
 快速入门、配置、插件开发以及原理等文档，都在 https://github.com/fex-team/fis3/wiki
 
-### 例子
+## 例子
 
 ```
 mkdir my-proj
