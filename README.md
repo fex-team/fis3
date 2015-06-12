@@ -1,10 +1,10 @@
 ![](https://raw.githubusercontent.com/fex-team/fis3/dev2/doc/logo.png?token=AAmhm2K2RcHJIrIrvPWkf42FBo3nC5kYks5Vg2Z5wA%3D%3D)
 
 # FIS3
+![](https://img.shields.io/npm/v/fis3.svg) ![](https://img.shields.io/npm/dm/fis3.svg)
 
-FIS3 面向**前端**的**工程构建系统**。
+FIS3 面向**前端**的**工程构建系统**。解决前端工程中性能优化、资源加载（异步、同步、按需、预加载、依赖管理、合并、内嵌）、模块化开发、自动化工具、开发规范、代码部署等问题。
 
-![](https://img.shields.io/npm/v/fis3.svg)
 
 ```
 npm install -g fis3
@@ -52,3 +52,11 @@ fis
     optimizer: fis.plugin('png-compressor') // 用 fis-optimizer-png-compressor 压缩 png 图片
   });
 ```
+
+## 常用插件
+
+- [fis-optimizer-uglify-js](https://www.npmjs.com/package/fis-optimizer-uglify-js) UglifyJS2 压缩插件
+- [fis-optimizer-clean-css](https://www.npmjs.com/package/fis-optimizer-clean-css) CleanCss  压缩插件
+- [fis-parser-less](https://www.npmjs.com/package/fis-parser-less) less 解析插件
+- [fis-parser-sass](https://www.npmjs.com/package/fis-parser-sass) sass / scss 解析插件
+- [fis-parser-handlebars](https://www.npmjs.com/package/fis-parser-handlebars) handlebars 解析插件
