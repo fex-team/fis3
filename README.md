@@ -1,4 +1,5 @@
-![](https://raw.githubusercontent.com/fex-team/fis3/dev2/doc/logo.png)
+![](https://raw.githubusercontent.com/fex-team/fis3/dev2/doc/logo.png?token=AAmhm2K2RcHJIrIrvPWkf42FBo3nC5kYks5Vg2Z5wA%3D%3D)
+
 # FIS3
 
 FIS3 面向**前端**的**工程构建系统**。
