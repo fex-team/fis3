@@ -52,3 +52,11 @@ fis
     optimizer: fis.plugin('png-compressor') // 用 fis-optimizer-png-compressor 压缩 png 图片
   });
 ```
+
+## 常用插件
+
+- [fis-optimizer-uglify-js]() UglifyJS2 压缩插件
+- [fis-optimizer-clean-css]() CleanCss  压缩插件
+- [fis-parser-less]() less 解析插件
+- [fis-parser-sass]() sass / scss 解析插件
+- [fis-parser-handlebars]() handlebars 解析插件
