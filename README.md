@@ -2,7 +2,7 @@
 
 FIS3 面向**前端**的**工程构建系统**。
 
-![](https://img.shields.io/fis3/v/fis3.svg)
+![](https://img.shields.io/npm/v/fis3.svg)
 
 ```
 npm install -g fis3
