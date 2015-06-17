@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/fex-team/fis3/master/doc/logo.png)
+![](https://raw.githubusercontent.com/fex-team/fis3/master/doc/logo.png?token=ACksmYIdau2D7VWDzMo0KnxEsNbDjhnqks5VijMswA%3D%3D)
 
 # FIS3
 ![](https://img.shields.io/npm/v/fis3.svg) ![](https://img.shields.io/npm/dm/fis3.svg)
