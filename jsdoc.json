@@ -23,5 +23,9 @@
         "inverseNav": true,
         "highlightTutorialCode": true,
         "syntaxTheme": "default"
+    },
+    "markdown": {
+      "parser": "gfm",
+      "hardwrap": true
     }
 }
