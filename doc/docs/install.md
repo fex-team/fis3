@@ -18,4 +18,4 @@ $ fis3 -v
 
 如果安装成功，会得到相应命令执行的结果；
 
-![fis3 -v](img/fis3-version.png)
+![fis3 -v](./img/fis3-version.png)
