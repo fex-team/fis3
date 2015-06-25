@@ -6,10 +6,10 @@ FIS3 中可以方便的对文件进行合并。
 
 ```
 fis.match('*.js', {
-  toPack: '/static/aio.js'
+  packTo: '/static/aio.js'
 });
 
 fis.match('*.{css,less}', {
-  toPack: '/static/aio.css'
+  packTo: '/static/aio.css'
 });
 ```
