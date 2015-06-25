@@ -9,7 +9,7 @@
 
 ### 在html中定位资源
 
-> fis3 支持对html中的script、link、style、video、audio、embed等标签的src或href属性进行分析，一旦这些标签的资源定位属性可以命中已存在文件，则把命中文件的url路径替换到属性中，同时可保留原来url中的query查询信息。
+FIS3 支持对html中的script、link、style、video、audio、embed等标签的src或href属性进行分析，一旦这些标签的资源定位属性可以命中已存在文件，则把命中文件的url路径替换到属性中，同时可保留原来url中的query查询信息。
 
 例如：
 
@@ -123,7 +123,7 @@ fis.match('/images/(*.{png|gif})', {
 
 ### 在js中定位资源
 
-> js语言中，可以使用编译函数 **__uri(path)** 来定位资源，fis分析js文件或 **html中的script标签内内容** 时会替换该函数所指向文件的线上url路径。
+js语言中，可以使用编译函数 **__uri(path)** 来定位资源，fis分析js文件或 **html中的script标签内内容** 时会替换该函数所指向文件的线上url路径。
 
 * 源码:
 
@@ -223,7 +223,7 @@ fis.match('/images/(*.{png|gif})', {
 
 ### 在css中定位资源
 
-> fis编译工具会识别css文件或 **html的style标签内容** 中 **url(path)** 以及 **src=path** 字段，并将其替换成对应资源的编译后url路径
+fis编译工具会识别css文件或 **html的style标签内容** 中 **url(path)** 以及 **src=path** 字段，并将其替换成对应资源的编译后url路径
 
 * 源码：
 

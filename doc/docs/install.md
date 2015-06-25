@@ -3,7 +3,7 @@
 
 具体安装流程请参考 http://nodejs.org
 
-## 安装 fis3
+## 安装 FIS3
 
 ```bash
 $ npm install -g fis3
