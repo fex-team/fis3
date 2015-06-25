@@ -18,5 +18,5 @@ FIS3 的每一个编译流程都是为前端工程量身定做的，如上图，
 [定位资源]: ./uri.md
 [声明依赖]: ./require.md
 [压缩优化]: ./optimizer.md
-[合并优化]: ./combine.md
+[合并优化]: ./packager.md
 [资源列表]: ./map.md
