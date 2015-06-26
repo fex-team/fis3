@@ -46,7 +46,7 @@ fis.match('**.css', {
 });
 
 // 所有image目录下的.png，.gif文件
-fis.match('/images/(*.{png|gif})', {
+fis.match('/images/(*.{png,gif})', {
     //发布到/static/pic/xxx目录下
     release: '/static/pic/$1'
 });
@@ -92,7 +92,7 @@ fis.match('**.css', {
 });
 
 // 所有image目录下的.png，.gif文件
-fis.match('/images/(*.{png|gif})', {
+fis.match('/images/(*.{png,gif})', {
     //发布到/static/pic/xxx目录下
     release: '/static/pic/$1'
     //访问url是/oo/static/baidu/xxx
@@ -175,7 +175,7 @@ fis.match('**.css', {
 });
 
 // 所有image目录下的.png，.gif文件
-fis.match('/images/(*.{png|gif})', {
+fis.match('/images/(*.{png,gif})', {
     //发布到/static/pic/xxx目录下
     release: '/static/pic/$1'
 });
