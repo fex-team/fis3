@@ -36,13 +36,13 @@ FIS3 支持对html中的script、link、style、video、audio、embed等标签�
 // 所有的 js
 fis.match('**.js', {
     //发布到/static/js/xxx目录下
-    release : '/static/js$&'
+    release : '/static/js$0'
 });
 
 // 所有的 css
 fis.match('**.css', {
     //发布到/static/css/xxx目录下
-    release : '/static/css$&'
+    release : '/static/css$0'
 });
 
 // 所有image目录下的.png，.gif文件
@@ -78,17 +78,17 @@ fis.match('/images/(*.{png|gif})', {
 // 所有的 js
 fis.match('**.js', {
     //发布到/static/js/xxx目录下
-    release : '/static/js$&',
+    release : '/static/js$0',
     //访问url是/mm/static/js/xxx
-    url : '/mm/static/js$&'
+    url : '/mm/static/js$0'
 });
 
 // 所有的 css
 fis.match('**.css', {
     //发布到/static/css/xxx目录下
-    release : '/static/css$&'
+    release : '/static/css$0'
     //访问url是/pp/static/css/xxx
-    url : '/pp/static/css$&'
+    url : '/pp/static/css$0'
 });
 
 // 所有image目录下的.png，.gif文件
@@ -96,7 +96,7 @@ fis.match('/images/(*.{png|gif})', {
     //发布到/static/pic/xxx目录下
     release: '/static/pic/$1'
     //访问url是/oo/static/baidu/xxx
-    url : '/oo/static/baidu$&'
+    url : '/oo/static/baidu$0'
 });
 ```
 
@@ -165,13 +165,13 @@ js语言中，可以使用编译函数 **__uri(path)** 来定位资源，fis分�
 // 所有的 js
 fis.match('**.js', {
     //发布到/static/js/xxx目录下
-    release : '/static/js$&'
+    release : '/static/js$0'
 });
 
 // 所有的 css
 fis.match('**.css', {
     //发布到/static/css/xxx目录下
-    release : '/static/css$&'
+    release : '/static/css$0'
 });
 
 // 所有image目录下的.png，.gif文件
@@ -273,7 +273,7 @@ fis编译工具会识别css文件或 **html的style标签内容** 中 **url(path
 //所有的css文件
 fis.match('**.css', {
     //发布到/static/css/xxx目录下
-    release : '/static/css$&'   
+    release : '/static/css$0'
 });
 
 //所有image目录下的.png，.gif文件
