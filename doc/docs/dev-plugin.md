@@ -40,14 +40,14 @@ my-proj/node_modules/fis3-<type>-<name>/index.js
 ```
 
 - 插件开发
-    
+
     ```js
     // vi my-proj/node_modules/fis3-<type>-<name>/index.js
 
     module.exports = function (content, file, settings) {
         // 只对 js 类文件进行处理
         if (!file.isJsLike) return content;
-        return content += '\n// build ' + Date.now() 
+        return content += '\n// build ' + Date.now()
     }
     ```
 
@@ -65,10 +65,10 @@ my-proj/node_modules/fis3-<type>-<name>/index.js
     - [&lt;type&gt;](#插件类型)
 
 - 发布 NPM 包
-    
+
     https://docs.npmjs.com/getting-started/publishing-npm-packages
 
-> FIS团队建议，开发插件时为了方便可放到项目目录下，但发布到 NPM 后还是建议进行全局安装，一个团队使用的插件应该是被固话的。
+> FIS团队建议，开发插件时为了方便可放到项目目录下，但发布到 NPM 后还是建议进行全局安装，一个团队使用的插件应该是被固化的。
 
 ----
 
@@ -102,7 +102,7 @@ fis.match('*.js', {
  * @param  {Object} conf     一般不需要关心，自动打包配置文件
  * @param  {Object} settings 插件配置属性
  * @param  {Object} opt      命令行参数
- * @return {undefined}          
+ * @return {undefined}
  */
 module.exports = function (ret, conf, settings, opt) {
     // ret.src 所有的源码，结构是 {'<subpath>': <File 对象>}
@@ -112,7 +112,7 @@ module.exports = function (ret, conf, settings, opt) {
 }
 ```
 
-跟编译是打包一样，也可项目本地开发或者是直接写到 fis-conf.js 中。参考[配置API:打包阶段插件](Api#打包阶段插件)其配置方式与单文件编译阶段插件配置方式不同。由于 packager 时所有文件都在处理之列，所以需要通过一下方式进行配置；
+跟编译是打包一样，也可项目本地开发或者是直接写到 fis-conf.js 中。参考[配置API:打包阶段插件](./config-api.md#打包阶段插件)其配置方式与单文件编译阶段插件配置方式不同。由于 packager 时所有文件都在处理之列，所以需要通过一下方式进行配置；
 
 
 ```js
@@ -159,7 +159,7 @@ fis.match('*.js', {
  * @param  {Object}   modified 修改了的文件列表（对应watch功能）
  * @param  {Object}   total    所有文件列表
  * @param  {Function} next     调用下一个插件
- * @return {undefined}         
+ * @return {undefined}
  */
 module.exports = function(options, modified, total, next) {
     next(); //由于是异步的如果后续还需要执行必须调用 next
