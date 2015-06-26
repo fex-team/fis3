@@ -1,0 +1,21 @@
+{
+  "name": "fis3-site",
+  "version": "1.0.0",
+  "description": "fis3 site",
+  "main": "fis-conf.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis3"
+  ],
+  "author": "fansekey",
+  "license": "MIT",
+  "dependencies": {
+    "highlight.js": "^8.6.0",
+    "marked": "^0.3.3"
+  }
+}

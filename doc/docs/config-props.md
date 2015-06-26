@@ -59,7 +59,7 @@ var DEFAULT_SETTINGS = {
 
 * 解释：设置md5与文件的连字符。
 * 值类型：``string``
-* 默认值：'_'
+* 默认值：`_`
 * 用法：在项目的fis-conf.js里可以修改为
 
     ```js
@@ -86,7 +86,7 @@ var DEFAULT_SETTINGS = {
     ```
     fis.set('project.ignore', ['*.bak']); // set 为覆盖不是叠加
     ```
-    
+
 ### project.fileType.text
 
 * 解释：追加文本文件后缀列表。
@@ -137,7 +137,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 * 解释：设置文件的产出路径。默认是文件相对项目根目录的路径，以 / 开头。该值可以设置为 false ，表示为不产出（unreleasable）文件。
 * 值类型：`string`
 * 默认值：无
-    
+
     ```js
     fis.match('/widget/{*,**/*}.js', {
         isMod: true,
@@ -183,7 +183,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 
     如下方例子，假设 `/static/lib/jquery.js` 设定了特定的 id `jquery`,
     那么在使用这个组件的时候，可以直接用这个 id；
-    
+
     ```js
     fis.match('/static/lib/jquery.js', {
         id: 'jquery',
@@ -373,7 +373,7 @@ fis.match('*.{css,less}', {
 
 ```js
 fis.match('*.{js,tpl}', {
-   postprocessor: fis.plugin('require-async') 
+   postprocessor: fis.plugin('require-async')
 });
 ```
 [更多插件](http://npmsearch.com/?q=fis-postprocessor%20fis3-postprocessor)
@@ -384,7 +384,7 @@ fis.match('*.{js,tpl}', {
 
 ```js
 fis.match('*.css', {
-    optimizer: fis.plugin('clean-css') 
+    optimizer: fis.plugin('clean-css')
 });
 ```
 
@@ -399,7 +399,7 @@ fis.match('*.css', {
 ```js
 fis.match('::packager', {
     packager: fis.plugin('map'),
-    spriter: fis.plugin('csssprites') 
+    spriter: fis.plugin('csssprites')
 });
 ```
 
@@ -412,7 +412,7 @@ fis.match('::packager', {
 
     ```js
     fis.match('::packager', {
-        prepackager: fis.plugin('plugin-name') 
+        prepackager: fis.plugin('plugin-name')
     })
     ```
 
@@ -425,7 +425,7 @@ fis.match('::packager', {
 
     ```js
     fis.match('::packager', {
-        packager: fis.plugin('map') 
+        packager: fis.plugin('map')
     })
     ```
 
@@ -447,7 +447,7 @@ fis.match('::packager', {
 
     ```js
     fis.match('::packager', {
-        spriter: fis.plugin('csssprites') 
+        spriter: fis.plugin('csssprites')
     })
     ```
 
@@ -469,7 +469,7 @@ fis.match('::packager', {
 
     ```js
     fis.match('::packager', {
-        postpackager: fis.plugin('plugin-name') 
+        postpackager: fis.plugin('plugin-name')
     })
     ```
 

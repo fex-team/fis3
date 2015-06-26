@@ -12,7 +12,7 @@
 ### 开始一个小项目
 
 - 创建项目目录
-    
+
     ```bash
     $ mkdir my-proj
     ```
@@ -20,11 +20,12 @@
 - 在项目中新建配置文件
 
     *在 fis3 中，文件处理流程都以配置文件为主，所以配置文件是必须要有的*
+
     ```bash
     $ cd my-proj #进入项目目录
     $ echo '' > fis-conf.js #最初为空即可
     ```
-    
+
 通过以上两步，我们建了一个空的 `fis3` 项目
 
 ```
@@ -46,7 +47,7 @@ my-proj/fis-conf.js
 - 写代码
 
     *index.html*
-    
+
     ```html
     <!DOCTYPE html>
     <html>
@@ -59,15 +60,15 @@ my-proj/fis-conf.js
         </body>
     </html>
     ```
-    
+
     *style.css*
-    
+
     ```css
     body {
         background-color: #FFCCFF;
     }
     ```
-    
+
     *app.js*
     ```
     alert("Hello, World");
@@ -79,18 +80,18 @@ my-proj/fis-conf.js
     $ cd my-proj
     $ fis3 release
     ```
-    
+
     > `fis3 release -d <dest>` 通过 `-d` 参数指定产出目录，如果未制定并且 `fis-conf.js` 未配置 `deploy` 属性，则文件默认被发布到 `fis3 server open` 打开的目录
-    
+
 - 查看发布的结果
 
     ```
     fis3 server start
     ```
     > 默认启动 `node` 的调试服务器，默认开启端口 `8080`
-    
+
     执行以上命令，会自动启动本地调试服务，并且打开默认浏览器访问 `http://127.0.0.1:8080` 地址
-    
+
     ![](./img/qk-task-1.png)
 
 
@@ -122,11 +123,11 @@ $ fis3 release -d ./output
 - html
 
     ![](./img/qk-task-1-html-diff.png)
-    
+
     - 其中引入的 js、css 的 url 发生了变化
         - 相对路径转化为绝对路径
         - url 中携带 md5 戳，文件名也加上了对应的 md5 戳，正好能对应上
-        
+
     **解释**：fis3 中资源引入相对路径都会替换成**绝对路径引入**，主要是满足资源合并、文件产出路径按需变更。携带 md5 戳是为了方便开启强缓存时文件修改可刷新缓存。
 
 我们做完了第一个小任务，创建了一个简单的项目，并且在默认情况下进行了发布，得到了以上结果。那么我们增加一些难度，来用 `fis-conf.js` 控制文件的编译，实现一些更有意思的事情。
@@ -143,26 +144,26 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
 
     ```js
     // vi fis-conf.js
-    
+
     // 给所有 js 分配属性
     fis.match('{*,**/*}.js', {
         // 启用 fis-optimizer-uglify-js 进行压缩
         optimizer: fis.plugin('uglify-js')
     });
-    
+
     // 给所有 css 分配属性
     fis.match('{*,**/*}.css', {
         // 启用 fis-optimizer-clean-css 进行压缩
         optimizer: fis.plugin('clean-css')
     });
-    
+
     ```
-    - [fis.match()]    
+    - [fis.match()]
 
 - 发布预览
 
     和 [task 1](#task-1) 一样，得到了正确的运行结果；
-    
+
 
 我们通过查看编译发布前后的代码变化来看看 FIS3 做了什么。
 
@@ -184,13 +185,13 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
 - css 内容
 
     ![](./img/qk-task-2-css-diff.png)
-    
+
     编译时根据配置文件 css 文件分配到 `optimizer` 并且启用了 `clean-css` 进行压缩，压缩为一行。
 
 - html 内容
 
     ![](./img/qk-task-2-html-diff.png)
-    
+
     - 依然修改 url 为绝对路径
     - 资源 url 添加 md5 戳
 
@@ -220,7 +221,7 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
 
     ```js
     // vi fis-conf.js
-    
+
     // 给所有 js，css 分配属性
     fis.match('{*,**/*}.{js,css}', {
         // js, css 发布后都放到 `public/static` 目录下。
@@ -237,7 +238,7 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
     ```
     *查看结果*
     浏览器访问 http://127.0.0.1:8080 查看结果
-    
+
 
 我们通过查看编译发布前后的代码变化来看看 FIS3 做了什么。
 
@@ -258,16 +259,16 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
 - html js、css 产出目录发生了变化，那么引用的 url 是否也跟着变了
 
     ![](./img/qk-task-3-html-diff.png)
-    
+
     如我们所愿引用 url 也发生了变化，这种编译时处理能力，就是 FIS3 的[三种语言能力][]之[定位资源][]能力
-    
+
     可以方便的更改产出后的发布路径以及 url。
-    
+
     等等，我们在这块可能忘了一个事情，产出路径可能和 url 是不一样的。可以通过通过 `url` 属性进行调整。
-    
+
     ```js
     // vi fis-conf.js
-    
+
     // 给所有 js、css 分配属性
     fis.match('{*,**/*}.{js,css}', {
         // js, css 发布后都放到 `public/static` 目录下。
@@ -276,7 +277,7 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
     });
     ```
     - [fis.match()]
-    
+
 #### 添加 CDN
 
 - 修改配置文件
@@ -289,10 +290,10 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
     });
     ```
     - [fis.match()]
-    
-    
+
+
     其实可能有人会疑问 `url` 里面添加 `domain` 不就行了，但是毕竟概念上要区分出来。所以按部就班，该是啥就是啥！
-    
+
 - 发布查看结果
 
     *编译发布*
@@ -301,7 +302,7 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
     ```
     *查看结果*
     浏览器访问 http://127.0.0.1:8080 查看结果
-    
+
 
 我们通过查看编译发布前后的代码变化来看看 FIS3 做了什么。
 
@@ -312,7 +313,7 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
 |/app.js       | /static/app_3effe6a.js|
 |/style.css|/static/style_03f76e1.css|
 |/index.html|/index.html|
-|fis-conf.js|-|    
+|fis-conf.js|-|
 
 - js、css 按照 `release` 发布到了 static 目录下
 
@@ -322,7 +323,7 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
 - html 引入的 js、css 的 url 发生了什么变化
 
     ![](./img/qk-task-3-html-diff-1.png)
-    
+
     url 的前面添加了对应 cdn 的 `domain`
 
 
@@ -351,8 +352,8 @@ FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代
 
 
 [node]: http://nodejs.org
-[插件属性]: Api#插件属性
-[三种语言能力]: 关于三种语言能力
-[定位资源]: 定位资源
-[配置 API]: Api
-[fis.match()]: Api#fismatch
+[插件属性]: ./config-api.md#插件属性
+[三种语言能力]: ./ext-lang.md
+[定位资源]: ./uri.md
+[配置 API]: ./config-api.md
+[fis.match()]: ./config-api.md#fismatch
