@@ -1,4 +1,4 @@
-## 命令行
+## 命令
 
 ```
 fis3 -h
@@ -43,7 +43,7 @@ $ fis3 release -h
   fis3 release -d ./output
   ```
   发布到当前命令执行目录下的 `./output` 目录下。
-  
+
   ```
   fis3 release -d ../output
   ```
@@ -61,9 +61,9 @@ $ fis3 release -h
   ```
   fis3 release -wL
   ```
-  
+
   `livereload` 功能应该跟 `watch` 功能一起使用，当某文档做了修改时，会自动刷新页面。
-  
+
   @TODO
 
 ### `install`
