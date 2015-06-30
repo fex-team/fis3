@@ -26,5 +26,5 @@
   - [配置属性](./api/config-props.md)
   - [常用配置](./api)
 - [自定义插件](./custom/dev-plugin.md)
-- [运行原理]()
+- [运行原理
 - [FIS2 到 FIS3](./fis2-to-fis3.md)
