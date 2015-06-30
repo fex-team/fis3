@@ -12,9 +12,7 @@ npm install -g fis3
 
 ## 文档
 
-正在建设中
-
-快速入门、配置、插件开发以及原理等文档
+快速入门、配置、插件开发以及原理等文档 [doc/docs/INDEX.md](doc/docs/INDEX.md)
 
 ## 例子
 
