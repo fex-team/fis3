@@ -73,7 +73,6 @@ FIS3 内置了一个 Web Server 提供给构建后的代码进行调试。如果
 ```bash
 fis3 release -d /Users/my-name/work/htdocs
 ```
-当访问你的 Web Server 监听的端口，即可访问调试。
 
 如果想执行 `fis3 release` 直接发布到此目录下，可在配置文件配置；
 
