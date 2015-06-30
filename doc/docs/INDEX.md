@@ -24,18 +24,23 @@
     - [定位资源](./user-dev/uri.md)
     - [声明依赖](./user-dev/require.md)
 - 工作原理
-  - 构建流程
-  - 单文件编译
-  - File 对象
+  - [构建流程](./build.md#构建流程)
+  - [单文件编译](./build.md#单文件编译)
+  - [File对象](./build.md#File对象)
 - 初级使用
+  - [一个复杂点的例子](./lv1.md#例子)
+  - [预编译](./lv1.md#预编译)
+  - [简单合并](./lv1.md#简单合并)
+  - [构建调试](./lv1.md#构建调试)
 - 中级使用
+  - [编写一个预处理插件](./lv2.md#编写一个预处理插件)
+  - [编写一个打包插件](./lv2.md#编写一个打包插件)
 - 高级使用
-
-----
-
-- [配置](./api/config.md)
-  - [配置接口](./api/config-api.md)
-  - [配置属性](./api/config-props.md)
-  - [常用配置](./api)
-- [自定义插件](./custom/dev-plugin.md)
+- 接口文档
+  - [命令行](./api/command.md)
+  - [配置](./api/config.md)
+    - [配置接口](./api/config-api.md)
+    - [配置属性](./api/config-props.md)
+    - [常用配置](./api)
+  - [自定义插件](./api/dev-plugin.md)
 - [FIS2 到 FIS3](./fis2-to-fis3.md)
