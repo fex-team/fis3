@@ -10,7 +10,7 @@ fis.match('docs/**.md', {
   rExt: '.html'
 });
 
-fis.match('docs/README.md', {
+fis.match('docs/INDEX.md', {
   useCache: false,
   release: '/docs/index.html'
 });
