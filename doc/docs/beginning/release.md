@@ -85,7 +85,7 @@ fis3 release -d ../output
 
 ### 配置文件
 
-默认配置文件为 `fis-conf.js`，FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的配置方式。固话了构建流程，以期让工程构建变得简单。
+默认配置文件为 `fis-conf.js`，FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的配置方式。固化了构建流程，以期让工程构建变得简单。
 
 首先介绍设置规则的配置接口
 
@@ -165,7 +165,13 @@ fis3 release -d ../output
 
 *文件变化*
 
-![](./img/hash-dir-output.png)
+![](./img/demo-hash-dir-output.png)
+- 构建出的文件携带了  md5 戳
+
+*文件变化*
+
+![](./img/demo-hash-css-diff.png)
+- 对应 url 也带上了 md5 戳
 
 ### 压缩资源
 
