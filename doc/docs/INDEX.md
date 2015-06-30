@@ -21,7 +21,6 @@
   - [内容嵌入](./user-dev/inline.md)
   - [定位资源](./user-dev/uri.md)
   - [声明依赖](./user-dev/require.md)
-
 - [配置](./api/config.md)
   - [配置接口](./api/config-api.md)
   - [配置属性](./api/config-props.md)
