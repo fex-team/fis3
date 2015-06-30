@@ -1,8 +1,8 @@
 ## FIS3
 
-- 快速开始
-  - [介绍](./beginning/intro.md)
-  - [安装](./beginning/install.md)
+- [介绍](./beginning/intro.md)
+- [安装](./beginning/install.md)
+- 起步
   - 构建
     - [例子](./beginning/release.md#例子)
     - [命令](./beginning/release.md#命令)
