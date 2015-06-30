@@ -12,7 +12,9 @@ npm install -g fis3
 
 ## 文档
 
-快速入门、配置、插件开发以及原理等文档，都在 https://github.com/fex-team/fis3/wiki
+正在建设中
+
+快速入门、配置、插件开发以及原理等文档
 
 ## 例子
 
