@@ -203,7 +203,7 @@ fis3 release -d ../output
 
 FIS3 提供了比较简易、使用方便的图片合并工具。通过配置即可调用此工具并对资源进行合并。
 
-FIS3 构建会对 CSS 中，路径带 `?__sprite` 的图片进行合并。当然为了节省编译的时间，分配到 `useSprite: true` 的 CSS 文件才会被处理。
+FIS3 构建会对 CSS 中，路径带 `?__sprite` 的图片进行合并。为了节省编译的时间，分配到 `useSprite: true` 的 CSS 文件才会被处理。
 
 > 默认情况下，对打包 css 文件启动图片合并功能。
 
