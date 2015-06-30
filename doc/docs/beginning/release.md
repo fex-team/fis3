@@ -155,8 +155,62 @@ fis.match('*.{js,css,png}', {
 });
 ```
 
+构建到 `../output` 目录下看变化。
+
+```bash
+fis3 release -d ../output
+```
+
+*文件变化*
+
+![](./img/hash-dir-output.png)
+
 ### 压缩资源
 
+为了减少资源网络传输的大小，通过压缩器对 js、css、图片进行压缩是一直依赖前端工程优化的选择。在 FIS3 中这个过程非常简单，通过给文件配置压缩器即可。
+
+```bash
+// 清除其他配置，只保留如下配置
+fis.match('*.js', {
+  // fis-optimizer-uglify-js 插件进行压缩，已内置
+  optimizer: fis.plugin('uglify-js')
+});
+
+fis.match('*.css', {
+  // fis-optimizer-clean-css 插件进行压缩，已内置
+  optimizer: fis.plugin('clean-css')
+});
+
+fis.match('*.png', {
+  // fis-optimizer-png-compressor 插件进行压缩，已内置
+  optimizer: fis.plugin('png-compressor')
+});
+```
+
+构建到 `../output` 目录下看变化。
+
+```bash
+fis3 release -d ../output
+```
+
+查看 `../output` 目录下已经被压缩过的结果。
+
 ### CssSprites
+
+压缩了静态资源，对于前端工程，还可以对图片进行合并，来减少请求数量。
+
+FIS3 提供了比较建议使用方便的图片合并工具。通过配置即可调用此工具并对资源进行合并。
+
+```js
+// 启用 fis-spriter-csssprites 插件
+fis.match('::package', {
+  spriter: fis.plugin('csssprites')
+})
+
+// 对 CSS 进行图片合并
+fis.match('*.css', {
+  useSprite: true
+});
+```
 
 [资源定位]: ../user-dev/uri.md
