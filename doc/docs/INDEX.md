@@ -1,30 +1,38 @@
 ## FIS3
-- [介绍](./beginning/intro.md)
-- [安装](./beginning/install.md)
-- 构建
-  - [例子](./beginning/release.md#例子)
-  - [命令](./beginning/release.md#命令)
-  - [资源定位](./beginning/release.md#资源定位)
-  - [配置文件](./beginning/release.md#配置文件)
-  - [文件指纹](./beginning/release.md#文件指纹)
-  - [压缩资源](./beginning/release.md#压缩资源)
-  - [CssSprites](./beginning/release.md#CssSprites)
-- 调试
-  - [目录](./beginning/debug.md#目录)
-  - [发布](./beginning/debug.md#发布)
-  - [启动](./beginning/debug.md#启动)
-  - [预览](./beginning/debug.md#预览)
-  - [文件监听](./beginning/debug.md#文件监听)
-  - [浏览器自动刷新](./beginning/debug.md#浏览器自动刷新)
-  - [替代内置Server](./beginning/debug.md#替代内置Server)
-- 内置语法
-  - [内容嵌入](./user-dev/inline.md)
-  - [定位资源](./user-dev/uri.md)
-  - [声明依赖](./user-dev/require.md)
+- 快速开始
+  - [介绍](./beginning/intro.md)
+  - [安装](./beginning/install.md)
+  - 构建
+    - [例子](./beginning/release.md#例子)
+    - [命令](./beginning/release.md#命令)
+    - [资源定位](./beginning/release.md#资源定位)
+    - [配置文件](./beginning/release.md#配置文件)
+    - [文件指纹](./beginning/release.md#文件指纹)
+    - [压缩资源](./beginning/release.md#压缩资源)
+    - [CssSprites](./beginning/release.md#CssSprites)
+  - 调试
+    - [目录](./beginning/debug.md#目录)
+    - [发布](./beginning/debug.md#发布)
+    - [启动](./beginning/debug.md#启动)
+    - [预览](./beginning/debug.md#预览)
+    - [文件监听](./beginning/debug.md#文件监听)
+    - [浏览器自动刷新](./beginning/debug.md#浏览器自动刷新)
+    - [替代内置Server](./beginning/debug.md#替代内置Server)
+  - 内置语法
+    - [内容嵌入](./user-dev/inline.md)
+    - [定位资源](./user-dev/uri.md)
+    - [声明依赖](./user-dev/require.md)
+- 工作原理
+  - 构建流程
+  - 单文件编译
+  - File 对象
+- 初级使用
+- 中级使用
+- 高级使用
+  
 - [配置](./api/config.md)
   - [配置接口](./api/config-api.md)
   - [配置属性](./api/config-props.md)
   - [常用配置](./api)
 - [自定义插件](./custom/dev-plugin.md)
-- [运行原理
 - [FIS2 到 FIS3](./fis2-to-fis3.md)
