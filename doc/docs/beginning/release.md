@@ -199,13 +199,13 @@ fis3 release -d ../output
 
 ### CssSprites
 
-压缩了静态资源，对于前端工程，还可以对图片进行合并，来减少请求数量。
+压缩了静态资源，我们还可以对图片进行合并，来减少请求数量。
 
 FIS3 提供了比较简易、使用方便的图片合并工具。通过配置即可调用此工具并对资源进行合并。
 
 ```js
 // 启用 fis-spriter-csssprites 插件
-fis.match('::package', {
+fis.match('::packager', {
   spriter: fis.plugin('csssprites')
 })
 

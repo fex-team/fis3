@@ -50,7 +50,7 @@ FIS3 通过对 `release` 命令添加 `-w` 或者 `--watch` 参数启动文件�
 ```bash
 fis3 release -w
 ```
-> 添加 `-w` 参数时，程序不会马上执行；停止程序用快捷键 <kbd>CTRL</kbd>+<kbd>c</kbd>
+> 添加 `-w` 参数时，程序不会执行终止；停止程序用快捷键 <kbd>CTRL</kbd>+<kbd>c</kbd>
 
 ### 浏览器自动刷新
 

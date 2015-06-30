@@ -16,9 +16,9 @@ li::before {
 }
 
 li.list-1::before {
-  background-image: url('./img/list-1.png');
+  background-image: url('./img/list-1.png?__sprite');
 }
 
 li.list-2::before {
-  background-image: url('./img/list-2.png');
+  background-image: url('./img/list-2.png?__sprite');
 }
