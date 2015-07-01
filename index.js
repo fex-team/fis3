@@ -1,6 +1,5 @@
 /*
- * fis
- * http://fis.baidu.com
+ * fis 模块入口
  */
 
 'use strict';

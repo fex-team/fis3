@@ -1,0 +1,29 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": ["plugins/markdown"],
+    "templates": {
+        "cleverLinks" : false,
+        "monospaceLinks" : false,
+        "default" : {
+          "outputSourceFiles" : true
+        },
+        "systemName" : "FIS3",
+        "footer" : "",
+        "copyright" : "",
+        "navType" : "vertical",
+        "theme" : "cerulean",
+        "linenums" : true,
+        "collapseSymbols" : false,
+        "inverseNav" : true
+    },
+    "markdown": {
+      "parser": "gfm",
+      "hardwrap": true
+    }
+}
