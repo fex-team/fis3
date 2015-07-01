@@ -203,7 +203,7 @@ fis3 release -d ../output
 
 查看 `../output` 目录下已经被压缩过的结果。
 
-### CssSprites
+### CssSprite图片合并
 
 压缩了静态资源，我们还可以对图片进行合并，来减少请求数量。
 

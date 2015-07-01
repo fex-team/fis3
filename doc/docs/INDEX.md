@@ -10,7 +10,8 @@
     - [配置文件](./beginning/release.md#配置文件)
     - [文件指纹](./beginning/release.md#文件指纹)
     - [压缩资源](./beginning/release.md#压缩资源)
-    - [CssSprites](./beginning/release.md#CssSprites)
+    - [CssSprite图片合并](./beginning/release.md#CssSprite图片合并)
+    - [功能组合](./beginning/release.md#功能组合)
   - 调试
     - [目录](./beginning/debug.md#目录)
     - [发布](./beginning/debug.md#发布)
@@ -31,8 +32,8 @@
   - [一个复杂点的例子](./lv1.md#例子)
   - [安装一些插件](./lv1.md#安装一些插件)
   - [预处理](./lv1.md#预编译)
-  - [基于页面的简单合并](./lv1.md#基于页面的简单合并)
-  - [构建调试](./lv1.md#构建调试)
+  - [简单合并](./lv1.md#简单合并)
+  - [构建调试预览](./lv1.md#构建调试)
 - 中级使用
   - [编写一个预处理插件](./lv2.md#编写一个预处理插件)
   - [编写一个打包插件](./lv2.md#编写一个打包插件)
