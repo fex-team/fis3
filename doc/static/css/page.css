@@ -408,7 +408,7 @@ ul.demo li {
   -webkit-overflow-scrolling: touch;
 }
 .sidebar ul li a.active{
-  color:#2E7CD5;
+  color:rgb(242, 68, 27);
 }
 
 .sidebar h2 {
