@@ -4,6 +4,11 @@ fis.match('*', {
 
 fis.match('::packager', {
   postpackager: fis.plugin('loader', {
-    allInOne: true
+    //allInOne: true
   })
+});
+
+fis.match('*.{css,less}', {
+  release: false,
+  packTo: '/static/aio.css'
 });
