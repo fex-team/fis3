@@ -19,7 +19,7 @@ fis.release = function () {
 }
 ```
 
-### 单文件编译阶段
+### 单文件编译流程
 
 ```js
 fis.compile = function (file) {
