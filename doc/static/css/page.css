@@ -113,8 +113,11 @@ pre {
   font-family: 'Inconsolata', Monaco, courier, monospace;
   font-size: 0.9em;
   background-color: #f9f9f9;
+  border: 1px solid #E8E8E8;
+  border-radius: 5px;
   -webkit-font-smoothing: initial;
   -moz-osx-font-smoothing: initial;
+  padding: 10px 0;
 }
 code {
   font-size: 12px;
@@ -122,7 +125,11 @@ code {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 1px 3px;
-  word-wrap: normal;
+  word-wrap: break-word; 
+  word-break: normal; 
+}
+pre code{
+  border: none;
 }
 .highlight code {
   display: block;
@@ -400,6 +407,10 @@ ul.demo li {
   margin-right: 20px;
   -webkit-overflow-scrolling: touch;
 }
+.sidebar ul li a.active{
+  color:#2E7CD5;
+}
+
 .sidebar h2 {
   margin-top: 0.2em;
 }
@@ -444,7 +455,8 @@ ul.demo li {
   margin-right: 220px;
 }
 .content.with-sidebar {
-  margin: 0 220px 0 280px;
+  margin: 0px 100px 0 280px;
+  min-height: 600px;
 }
 .content.api ul {
   font-size: 0.9em;
@@ -879,4 +891,8 @@ nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after {
   margin-bottom: 20px;
 }
 
+
+.sidebar>ul>li,.sidebar>ul>li>a{
+  color:#2E7CD5;
+}
 

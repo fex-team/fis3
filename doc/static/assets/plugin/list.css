@@ -1,9 +1,11 @@
 #plugin-list {
+  margin-top: 80px;
 }
 
 #plugin-list #plugin-list-header {
   padding: 1em 0 2em 0;
-  background: #3360A3;
+  background: #fefefe;
+  border-bottom: 1px solid #ececec;
   margin-bottom: 1em;
 }
 
