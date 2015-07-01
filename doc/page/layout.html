@@ -125,8 +125,7 @@
                 }
             })
             if(top){
-                //$('.sidebar li a').removeClass("active");
-                setActive();
+                $('.sidebar li a').removeClass("active");
                 $(this).addClass("active");
                 top = top - 100 > 0 ? top - 100 : 0;
                 $('html, body').animate({
