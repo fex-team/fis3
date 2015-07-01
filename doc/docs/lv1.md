@@ -65,7 +65,8 @@ fis.match('*.less', {
   });
 
   fis.match('*.less', {
-    parser: fis.plugin('less')
+    parser: fis.plugin('less'),
+    rExt: '.css'
   });
 
   fis.match('*.{less,css}', {
@@ -88,8 +89,13 @@ fis.match('*.less', {
       allInOne: true
     })
   });
+
+  fis.match('*.less', {
+    parser: fis.plugin('less'),
+    rExt: '.css'
+  });
   ```
-  给 loader 插件配置 `allInOne` 属性，即可对散列的引用链接进行合并，而不需要进行配置。
+  给 `loader` 插件配置 `allInOne` 属性，即可对散列的引用链接进行合并，而不需要进行配置 `packTo` 指定合并包名。
 
 **注意**，这个插件只针对纯前端的页面进行比较粗暴的合并，如果使用了后端模板，一般都需要从整站出发配置合并。
 

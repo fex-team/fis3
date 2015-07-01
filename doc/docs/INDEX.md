@@ -1,5 +1,3 @@
-## FIS3
-
 - [介绍](./beginning/intro.md)
 - [安装](./beginning/install.md)
 - 起步
@@ -26,7 +24,7 @@
     - [声明依赖](./user-dev/require.md)
 - 工作原理
   - [构建流程](./build.md#构建流程)
-  - [单文件编译](./build.md#单文件编译)
+  - [单文件编译流程](./build.md#单文件编译)
   - [File对象](./build.md#File对象)
 - 初级使用
   - [一个复杂点的例子](./lv1.md#例子)
