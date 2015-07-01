@@ -1,7 +1,7 @@
 - [介绍](./beginning/intro.md)
 - [安装](./beginning/install.md)
 - 起步
-  - 构建
+  - [构建](./beginning/release.md)
     - [例子](./beginning/release.md#例子)
     - [命令](./beginning/release.md#命令)
     - [资源定位](./beginning/release.md#资源定位)
@@ -10,7 +10,7 @@
     - [压缩资源](./beginning/release.md#压缩资源)
     - [CssSprite图片合并](./beginning/release.md#CssSprite图片合并)
     - [功能组合](./beginning/release.md#功能组合)
-  - 调试
+  - [调试](./beginning/debug.md)
     - [目录](./beginning/debug.md#目录)
     - [发布](./beginning/debug.md#发布)
     - [启动](./beginning/debug.md#启动)
@@ -22,7 +22,7 @@
     - [内容嵌入](./user-dev/inline.md)
     - [定位资源](./user-dev/uri.md)
     - [声明依赖](./user-dev/require.md)
-- 工作原理
+- [工作原理](./build.md)
   - [构建流程](./build.md#构建流程)
   - [单文件编译流程](./build.md#单文件编译)
   - [File对象](./build.md#File对象)
