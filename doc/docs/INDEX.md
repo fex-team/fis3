@@ -1,5 +1,3 @@
-## FIS3
-
 - [介绍](./beginning/intro.md)
 - [安装](./beginning/install.md)
 - 起步
