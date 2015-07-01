@@ -58,10 +58,10 @@ function process(file) {
 
 ### File 对象
 
-```
+```js
 function File(filepath) {
   var props = path.info(filepath);
   merge(props, fis.matchRules(filepath)); // merge 分配到的属性
-  assign(this, props); // merge 属性到队形
+  assign(this, props); // merge 属性到对象
 }
 ```
