@@ -113,7 +113,7 @@ fis.match('*.png', {
 
 我们执行 `fis3 inspect` 来查看文件命中属性的情况。`fis3 inspect` 是一个非常重要的命令，可以查看文件分配到的属性，这些属性决定了文件将如何被编译处理。
 
-```
+```bash
  ~ /app.js
  -- useHash false `*.js`   (0th)
 

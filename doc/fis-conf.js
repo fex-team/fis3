@@ -1,7 +1,12 @@
 /* global fis */
 var build = require('./process');
 
-fis.get('project.ignore').push('/process/*');
+// project ignores
+var ignores = fis.get('project.ignore');
+ignores.concat([
+  '/process/*',
+  '/demo*'
+]);
 
 fis.media('prod').match('*', {
   domain: '/fis3-doc'
