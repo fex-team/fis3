@@ -1,0 +1,12 @@
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* @TODO font-family */
+  -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  margin: 0 auto;
+}

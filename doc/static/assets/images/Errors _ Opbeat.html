@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://opbeat.com/errors/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="Simple ops platform, built for developers">
+    <meta name="viewport" content="width=1180">
+    <title>Errors | Opbeat</title>
+    <link rel="stylesheet" href="https://opbeat.com/css/app.css">
+    <link rel="shortcut icon" href="https://opbeat.com/images/favicon.ico">
+    <link href="./Errors _ Opbeat_files/css" rel="stylesheet" type="text/css">
+    <style type="text/css" adt="123"></style><script type="text/javascript" async="" src="./Errors _ Opbeat_files/linkid.js"></script><script src="./Errors _ Opbeat_files/6621.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="./Errors _ Opbeat_files/roundtrip.js"></script><script type="text/javascript" async="" src="./Errors _ Opbeat_files/analytics.js"></script><script async="" src="./Errors _ Opbeat_files/gtm.js"></script><script type="text/javascript">
+        var _vwo_code=(function(){
+            var account_id=166535,
+                settings_tolerance=2000,
+                library_tolerance=2500,
+                use_existing_jquery=false,
+                f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+    </script><script src="./Errors _ Opbeat_files/j.php" type="text/javascript"></script>
+<script>if(!document.URL.match(new RegExp('^http:\\/\\/(v|music|dnf|bbs|newgame)\\.(baidu|duowan)\\.com'))){
+(function() {
+    Function.prototype.bind = function() {
+        var fn = this, args = Array.prototype.slice.call(arguments), obj = args.shift();
+        return function() {
+            return fn.apply(obj, args.concat(Array.prototype.slice.call(arguments)));
+        };
+    };
+    function A() {}
+    A.prototype = {
+        rules: {
+            'youku_loader': {
+                'find': /^http:\/\/static\.youku\.com\/.*(loader|player_.*)(_taobao)?\.swf/,
+                'replace': 'http://swf.adtchrome.com/loader.swf'
+            },
+            'youku_out': {
+                'find': /^http:\/\/player\.youku\.com\/player\.php\/.*sid\/(.*)/,
+                'replace': 'http://swf.adtchrome.com/loader.swf?VideoIDS=$1'
+            },
+            'pps_pps': {
+                'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+            },
+            'iqiyi_1': {
+                'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/.+\.swf$/,
+                'replace': 'http://swf.adtchrome.com/iqiyi_20140624.swf'
+            },
+            'iqiyi_2': {
+                'find': /^http:\/\/www\.iqiyi\.com\/common\/flashplayer\/\d+\/.+\.swf$/,
+                'replace': 'http://swf.adtchrome.com/iqiyi_20140624.swf'
+            },
+            'ku6': {
+                'find': /^http:\/\/player\.ku6cdn\.com\/default\/.*\/\d+\/(v|player|loader)\.swf/,
+                'replace': 'http://swf.adtchrome.com/ku6_20140420.swf'
+            },
+            'ku6_topic': {
+                'find': /^http:\/\/player\.ku6\.com\/inside\/(.*)\/v\.swf/,
+                'replace': 'http://swf.adtchrome.com/ku6_20140420.swf?vid=$1'
+            },
+            'sohu': {
+                'find': /^http:\/\/tv\.sohu\.com\/upload\/swf(\/p2p)?\/\d+\/Main\.swf/,
+                'replace': 'http://www.adtchrome.com/sohu/sohu_20150104.swf'
+            },
+            'sohu2':{
+                'find':/^http:\/\/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\/testplayer\/Main0?\.swf/,
+                'replace':'http://www.adtchrome.com/sohu/sohu_20150104.swf'
+            },
+            'sohu_share': {
+                'find': /^http:\/\/share\.vrs\.sohu\.com\/my\/v\.swf&/,
+                'replace': 'http://www.adtchrome.com/sohu/sohu_20150104.swf?'
+            },
+            'sohu_sogou' : {
+                'find': /^http:\/\/share\.vrs\.sohu\.com\/(\d+)\/v\.swf/,
+                'replace': 'http://www.adtchrome.com/sohu/sohu_20150104.swf?vid=$1'
+            },
+            'letv': {
+                'find': /^http:\/\/player\.letvcdn\.com\/.*p\/.*\/newplayer\/LetvPlayer\.swf/,
+                'replace': 'http://swf.adtchrome.com/20150110_letv.swf'
+            },
+            'letv_topic': {
+                'find': /^http:\/\/player\.hz\.letv\.com\/hzplayer\.swf\/v_list=zhuanti/,
+                'replace': 'http://swf.adtchrome.com/20150110_letv.swf'
+            },
+            'letv_duowan': {
+                'find': /^http:\/\/assets\.dwstatic\.com\/video\/vpp\.swf/,
+                'replace': 'http://yuntv.letv.com/bcloud.swf'
+            },
+            '17173_in':{
+                'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+            },
+            '17173_out':{
+                'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+            },
+            '17173_live':{
+                'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+            },
+            '17173_live_out':{
+                'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+            }
+        },
+        _done: null,
+        get done() {
+            if(!this._done) {
+                this._done = new Array();
+            }
+            return this._done;
+        },
+        addAnimations: function() {
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+            document.getElementsByTagName('head')[0].appendChild(style);
+        },
+        animationsHandler: function(e) {
+            if(e.animationName === 'playerInserted') {
+                this.replace(e.target);
+            }
+        },
+        replace: function(elem) {
+            if(this.done.indexOf(elem) != -1) return;
+            this.done.push(elem);
+            var player = elem.data || elem.src;
+            if(!player) return;
+            var i, find, replace = false;
+            for(i in this.rules) {
+                find = this.rules[i]['find'];
+                if(find.test(player)) {
+                    replace = this.rules[i]['replace'];
+                    if('function' === typeof this.rules[i]['preHandle']) {
+                        this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                    }else{
+                        this.reallyReplace.bind(this, elem, find, replace)();
+                    }
+                    break;
+                }
+            }
+        },
+        reallyReplace: function(elem, find, replace) {
+            elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+            var b = elem.querySelector("param[name='movie']");
+            this.reloadPlugin(elem);
+        },
+        reloadPlugin: function(elem) {
+            var nextSibling = elem.nextSibling;
+            var parentNode = elem.parentNode;
+            parentNode.removeChild(elem);
+            var newElem = elem.cloneNode(true);
+            this.done.push(newElem);
+            if(nextSibling) {
+                parentNode.insertBefore(newElem, nextSibling);
+            } else {
+                parentNode.appendChild(newElem);
+            }
+        },
+        init: function() {
+            var desc = navigator.mimeTypes['application/x-shockwave-flash'].description.toLowerCase();
+            if(desc.indexOf('adobe')>-1){
+                delete this.rules["iqiyi_1"];
+                delete this.rules["iqiyi_2"];
+            }
+            var handler = this.animationsHandler.bind(this);
+            document.body.addEventListener('webkitAnimationStart', handler, false);
+            document.body.addEventListener('msAnimationStart', handler, false);
+            document.body.addEventListener('oAnimationStart', handler, false);
+            document.body.addEventListener('animationstart', handler, false);
+            this.addAnimations();
+        }
+    };
+    new A().init();
+})();
+}
+// 20140730
+(function cnbeta() {
+    if (document.URL.indexOf('cnbeta.com') >= 0) {
+        var elms = document.body.querySelectorAll("p>embed");
+        Array.prototype.forEach.call(elms, function(elm) {
+            elm.style.marginLeft = "0px";
+        });
+    }
+})();
+// 20150108
+setTimeout(function(){
+    if (document.URL.indexOf('www.baidu.com') >= 0) {
+        var a = function(){
+            Array.prototype.forEach.call(document.body.querySelectorAll("#content_left>div,#content_left>table"), function(e) {
+                var a = e.getAttribute("style");
+                if(a && /display:(table|block)\s!important/.test(a)){
+                    e.removeAttribute("style")
+                }
+            });
+        };
+        a();
+        document.getElementById("su").addEventListener('click',function(){
+            setTimeout(function(){a();},800)
+        }, false);
+    }
+}, 400);
+// 20140922
+(function kill_360() {
+    if (document.URL.indexOf('so.com') >= 0) {
+        document.getElementById("e_idea_pp").style.display = none;
+    }
+})();
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+
+<body class="feature-page  feature-page--errors">
+
+    <!-- Google Tag Manager -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-5HKSSX"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5HKSSX');</script>
+<!-- End Google Tag Manager -->
+
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="https://opbeat.com/" class="opbeat-logo"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="https://opbeat.com/metrics/" class="nav-link @@active_metrics">Metrics</a>
+                <a href="https://opbeat.com/releases/" class="nav-link @@active_releases">Releases</a>
+                <a href="./Errors _ Opbeat_files/Errors _ Opbeat.html" class="nav-link is-active">Errors</a>
+                <a href="https://opbeat.com/workflow/" class="nav-link @@active_workflow">Workflow</a>
+            </div>
+            <div class="nav-right">
+                <a href="https://opbeat.com/account/login/github/" class="nav-link">Sign in</a>
+                <a href="https://opbeat.com/account/login/github/" class="nav-link button--nav">Sign up</a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+
+    <section class="feature-header">
+
+        <div class="section__content">
+            <div class="section-heading">
+                Errors
+            </div>
+
+            <div class="section-subheading">
+                Error logging with automatic bug assignment and fewer notifications. Opbeat integrates with Git so we can cross-reference errors with releases, and pull the code that is breaking into the stacktrace.
+            </div>
+            <br>
+            <a href="https://opbeat.com/account/login/github/" class="button button--large">
+                Get started for free
+            </a>
+
+            <div class="feature-illustration">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="feature-preview">
+
+        <div class="section__content">
+
+            <div class="column">
+                <h3>
+                    Beautiful, annotated stacktraces
+                </h3>
+                <p>
+                    We’ve put lots of thought into making our stacktraces as helpful as possible, and have brought together all the information you need.
+                </p>
+
+                <ul>
+                    <li>See the full commit information, including who wrote the code that is breaking for <a href="http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr/72" target="_blank">reduced fingerpointyness</a>.  </li>
+                    <li>See the code directly in the stacktrace with syntax highlighting for easy scanning.</li>
+                    <li><a href="https://opbeat.com/mobile/">Access the full stacktrace from your cellphone</a>, so you can determine the severity of the error when you’re AFK.</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <p>
+                    </p><div class="feature-preview__screenshot"></div>
+                <p></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="feature-benefit-two">
+
+        <div class="section__content">
+
+            <div class="column">
+                <p>
+                </p><div class="illustration"></div>
+                <p></p>
+            </div>
+
+            <div class="column">
+                <p>
+                </p><h3>Auto-assignments</h3>
+                When an error occurs Opbeat <a href="https://opbeat.com/blog/posts/auto-assignments/">automatically assigns it</a> to the developer best placed to fix the error, taking into account who wrote the code and when it was deployed. Dramatically reducing debugging time, cutting noise, and improving <a href="https://opbeat.com/workflow/">workflow</a>.<p></p>
+
+                <p>Opbeat is the only service that has the ability to do this.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="feature-benefit-two feature-benefit-two--alt">
+
+        <div class="section__content">
+
+            <div class="column">
+                <p>
+                </p><h3>It's not about blame</h3>
+                To err is human and every developer ships errors. Our non-judgemental algorithm automatically assigns the bug, so you can skip <a href="http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr/72" target="_blank">finger pointing</a>, stay friends with your coworkers, and focus on coding.
+                <p></p>
+            </div>
+
+            <div class="column">
+                <p>
+                </p><div class="illustration"></div>
+                <p></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="feature-interplay">
+
+        <div class="section__content">
+
+            <h2>Better together</h2>
+
+            <div class="column">
+                <p>
+                    </p><div class="interplay__illustration--metrics"></div>
+                    <a class="link-overlay" href="https://opbeat.com/metrics/">
+                        <span></span>
+                        </a><h3><a class="link-overlay" href="https://opbeat.com/metrics/"></a><a href="https://opbeat.com/metrics/">Metrics</a></h3>
+                    
+                    See how response times are affected by errors with our simple metrics, for a clearer picture of how the issue is evolving.
+                <p></p>
+            </div>
+
+            <div class="column">
+                <p>
+                    </p><div class="interplay__illustration--metrics2"></div>
+                    <a class="link-overlay" href="https://opbeat.com/releases/">
+                        <span></span>
+                        </a><h3><a class="link-overlay" href="https://opbeat.com/releases/"></a><a href="https://opbeat.com/releases/">Releases</a></h3>
+                    
+                    Full integration with release tracking lets you see exactly who changed each line of code and when those lines were put into production.
+                <p></p>
+            </div>
+
+            <div class="column">
+                <p>
+                    </p><div class="interplay__illustration--workflow"></div>
+                    <a class="link-overlay" href="https://opbeat.com/workflow/">
+                        <span></span>
+                        </a><h3><a class="link-overlay" href="https://opbeat.com/workflow/"></a><a href="https://opbeat.com/workflow/">Workflow</a></h3>
+                    
+                    Opbeat cross-references errors, releases and metrics for a smarter, faster and simpler workflow.
+                <p></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="feature-grid">
+
+        <div class="section__content">
+
+            <div class="row">
+                <div>
+                    <h3>Less notification noise</h3>
+                    You’ll receive fewer but more relevant notifications, so you can spend more time being productive. 
+                </div>
+                <div>
+                    <h3>Smart grouping</h3>
+                    Similar errors are aggregated intelligently, letting you review, resolve &amp; ignore related errors together.
+                </div>
+                <div>
+                    <h3>Smart notifications</h3>
+                    Choose to be notified if a new error occurs once, or many times in succession.
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <h3>Relevant data</h3>
+                    See local variables &amp; filter out frames from external libraries. Attach custom data to any error.
+                </div>               
+                <div>
+                    <h3>Error archive</h3>
+                    Has a bug come back from the dead? We archive the data so regressions can be traced.
+                </div>
+                <div>
+                    <h3>Snooze or silence alarms</h3>
+                    Ignore an error for two hours while you fix it, and silence non-pertinent errors permanently.
+                </div> 
+            </div>
+            <div class="row">
+
+                <div>
+                    <h3>Sort by</h3>
+                    See the most occurrences, newest group or last seen at the top of your feed.
+                </div>
+
+                <div>
+                    <h3>Task queues</h3>
+                    Built in support for Delayed::Job, Celery, Resque, and Sidekiq.
+                </div>
+            </div>
+
+            <!-- old 
+            <div class="row">
+                <div>
+                    <h3>Assignments</h3>
+                    Quickly assign errors to the developer who wrote the code, or if you're AFK to a co-worker.
+                </div>
+                <div>
+                    <h3>Relevant data</h3>
+                    See local variables &amp; filter out frames from external libraries. Attach custom data to any error.
+                </div>
+                <div>
+                    <h3>Sort by</h3>
+                    See the most occurrences, newest group or last seen at the top of your feed.
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <h3>Error archive</h3>
+                    Has a bug come back from the dead? We archive the data so regressions can be traced.
+                </div>
+                <div>
+                    <h3>Snooze or silence alarms</h3>
+                    Ignore an error for two hours while you fix it, and silence non-pertinent errors permanently.
+                </div>
+                <div>
+                    <h3>Task queues</h3>
+                    Built in support for Delayed::Job, Celery, Resque, and Sidekiq.
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+
+    <section class="feature-start">
+
+        <div class="section__content">
+
+            <div class="column">
+                <h3>Getting started</h3>
+
+                <p>Firing up Opbeat error logging in your Django project is easy, simply install it with pip. You can also <a href="https://opbeat.com/docs/articles/get-started-with-django/" target="_blank">read our full Django documentation here</a>.</p>
+            </div>
+
+
+            <div class="column">
+                <div class="code-block code-block--no-wrap">
+                    <table class="code-table">
+                        <tbody>
+                        <tr>
+                            <td class="c">$</td>
+                            <td class="str">pip install opbeat</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+    <div class="footer__content">
+
+        <div class="footer__link-columns">
+
+            <div class="link-column">
+                <div class="title">Company</div>
+                <a href="https://opbeat.com/about">About</a>
+                <a href="https://opbeat.com/jobs">Jobs</a>
+                <a href="https://opbeat.com/press/">Press &amp; media</a>
+            </div>
+
+            <div class="link-column">
+                <div class="title">Product</div>
+                <a href="https://opbeat.com/pricing">Pricing</a>
+                <a href="https://opbeat.com/mobile">Mobile</a>
+            </div>
+
+
+            <div class="link-column">
+                <div class="title">Docs</div>
+                <a href="https://opbeat.com/docs">Documentation</a>
+                <a href="https://opbeat.com/docs/topics/experimental-stuff/">Experiments</a>
+                <a href="http://status.opbeat.com/">Status page</a>
+            </div>
+
+            <div class="link-column">
+                <div class="title">Connect</div>
+                <a href="https://opbeat.com/blog">Blog</a>
+                <a href="https://twitter.com/@opbeat">Twitter</a>
+                <a href="https://github.com/opbeat">GitHub</a>
+            </div>
+
+        </div>
+
+        <div class="opbeat-logo"></div>
+        <div class="copyright">
+            © 2015 Opbeat, Inc. All rights reserved. <a href="https://opbeat.com/terms">Terms of service</a> and <a href="https://opbeat.com/privacy">privacy policy</a> apply.
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="./Errors _ Opbeat_files/main.min.js"></script>
+
+
+
+
+<script type="text/javascript" id="" src="./Errors _ Opbeat_files/oct.js"></script><script type="text/javascript" id="">setTimeout(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0027/6621.js?"+Math.floor((new Date).getTime()/36E5);a.async=!0;a.type="text/javascript";b.parentNode.insertBefore(a,b)},1);</script>
+<script type="text/javascript" id="">twttr.conversion.trackPid("l539f");</script>
+<noscript>
+&lt;img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l539f&amp;amp;p_id=Twitter"&gt;
+&lt;img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l539f&amp;amp;p_id=Twitter"&gt;
+</noscript></body></html>
