@@ -9,7 +9,7 @@ fis.release = function () {
   var src = fis.util.find(fis.project.root);
   var files = {};
   src.forEach(function (f) {
-    var file = fis.file.wrap(f);
+    var file = new File(f);
     files[file.subpath] = fis.compile(file);
   });
   pipe('prepackager', files);
