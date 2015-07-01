@@ -65,7 +65,8 @@ fis.match('*.less', {
   });
 
   fis.match('*.less', {
-    parser: fis.plugin('less')
+    parser: fis.plugin('less'),
+    rExt: '.css'
   });
 
   fis.match('*.{less,css}', {
@@ -87,6 +88,11 @@ fis.match('*.less', {
     postpackager: fis.plugin('loader', {
       allInOne: true
     })
+  });
+
+  fis.match('*.less', {
+    parser: fis.plugin('less'),
+    rExt: '.css'
   });
   ```
   给 loader 插件配置 `allInOne` 属性，即可对散列的引用链接进行合并，而不需要进行配置。
