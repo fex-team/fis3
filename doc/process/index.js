@@ -43,7 +43,6 @@ function markdownParse(settings) {
           href = href.substr(0, p);
         }
         if (/\.md$/.test(href)) {
-          //console.log(fis.compile.lang.uri.ld);
           href = fis.compile.lang.uri.ld + href + fis.compile.lang.uri.rd + encodeURI(hash);
         } else {
           href = encodeURI(href+hash);
@@ -89,5 +88,21 @@ function buildNav() {
     });
   };
 }
+
+function replaceDefine (defines) {
+  return function (ret) {
+    fis.util.map(ret.src, function (subpath, file) {
+      if (file.isHtmlLike) {
+        var content = file.getContent();
+        content = content.replace(/\{\{-([^}]+)\}\}/ig, function ($0, $1) {
+          return (typeof defines[$1.trim()] == 'undefined') ? $0 : defines[$1.trim()];
+        });
+        file.setContent(content);
+      }
+    });
+  };
+}
+
 module.exports.markdownParse = markdownParse;
 module.exports.buildNav = buildNav;
+module.exports.replaceDefine = replaceDefine;

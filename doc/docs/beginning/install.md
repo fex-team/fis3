@@ -21,6 +21,7 @@ npm install -g fis3
 npm update -g fis3
 ```
 或重装
-```
+
+```bash
 npm update -g fis3
 ```
