@@ -10,7 +10,7 @@ fis.release = function () {
   var files = {};
   src.forEach(function (f) {
     var file = fis.file.wrap(f);
-    files[f.subpath] = fis.compile(file);
+    files[file.subpath] = fis.compile(file);
   });
   pipe('prepackager', files);
   pipe('packager', files);
