@@ -225,7 +225,7 @@ a.button:hover {
 #main {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding-bottom:30px;
   overflow-x: hidden;
@@ -365,7 +365,7 @@ ul.demo li {
   bottom: 0;
   overflow-y: hidden;
   border-right: 1px solid #ececec;
-  padding: 2.2em 0;
+  padding: 0;
   width: 250px;
   margin-right: 20px;
   -webkit-overflow-scrolling: touch;
@@ -415,10 +415,9 @@ ul.demo li {
 }
 .content {
   padding: 80px 0 20px;
-  margin-right: 220px;
 }
 .content.with-sidebar {
-  margin: 0px 100px 0 280px;
+  margin-left: 280px;
   min-height: 600px;
 }
 .content.api ul {
@@ -458,12 +457,7 @@ ul.demo li {
   margin: 2em 0 0.8em;
   padding-left: 0.5em;
 }
-.content figure,
-.content p,
-.content ul,
-.content ol {
-  margin: 0.8em 0 0.8em 0.8em;
-}
+
 .content p,
 .content ul,
 .content ol {
@@ -575,14 +569,12 @@ ul.demo li {
     left: 145px;
   }
 }
-@media screen and (max-width: 560px) {
-  #downloads {
-    text-align: center;
-    margin-bottom: 25px;
+@media screen and (max-width: 720px) {
+  .header-wrap{
+    display: none;
   }
-  #downloads .info {
-    margin-top: 5px;
-    margin-left: 0;
+  .content{
+    padding-top: 0px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -603,7 +595,7 @@ ul.demo li {
     display: block;
   }
   #main {
-    padding: 2em 1.4em 0;
+    padding: 1em 1.4em 0;
   }
   .highlight pre {
     padding: 1.2em 1em;
