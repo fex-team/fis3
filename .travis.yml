@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '0.10'
+script:
+env:
+  global:
+  - secure: jKTCY7zQ/8YsHjfTYOkzeEAH4WASb1Nt92dXvMgAzDB2/GmGlmRbp2wO/3/SABbHA7oow3Ocniayl3wp29WNkzffylnOC6g9ThFekTqBjdh/gpCDK/MBjJ+J/ZhIjhGjKGSddicyVyVhsEaO1ZlxSMUnLjUtAEkYAgjtxWD0QJnoke7JjKgqKSwKcK0nisJ2hbHMKEGj5J3IdeMPq4db66ofZnkNqPkGdG1irVmRVksTtC911eqq8EaSZuwbp8TaVrmF3JsVshoVbDTrIHrGjCM98YNi54W1gPhPHuKupENNAJcKAA6IRiWXG3frCAZJDkLpsj+RweGDLVgNpQfdrqi/K1NCfnENG4xfkAzW8vBl22TQmIysbVo6iMgtlGkYq4dgw6T3MTnVS5utqbqd0VMDRpoPZfjhZv0r+akwdS/6lgno6/T3bLAqlNThqCuhIdK7VMzgQ0PCkXEWEbF5XXZjjs8QwESqPImtP9ZXQ8oYaOts+QIxX7kHDxoLZWJ14vsuw1cIYM5gCIEUmEeSzbGH6SrU/USn+QU4HYgdNWsfkjraEli58ThrS1xb9/soF3at1hpAZWPaIH32bqL6XfQrPFwiF6VLu5C1g3tdEFox+ylArVOMAB6FUl9xonKyGRAkVYbRi9sGI/JpTOMYTbqiocb/qviKPTHv4l2/m5o=
+install:
+- npm install
+after_success:
+- sh ./release-doc.sh
+
+cache:
+  directories:
+  - node_modules
+branches:
+  only:
+  - master

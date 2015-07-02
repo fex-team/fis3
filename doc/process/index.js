@@ -10,6 +10,7 @@ function markdownParse(settings) {
   }
 
   return function (content, file, settings) {
+    file.cache.addDeps(layout.realpath); // cache deps layout
     var marked = require('marked');
     var renderer = new marked.Renderer();
     content.match(/##([^#\n]+)/);

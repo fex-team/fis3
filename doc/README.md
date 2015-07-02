@@ -20,4 +20,4 @@ fis3 release
 fis3 server start --type node
 ```
 
-访问文档链接 http://127.0.0.1:8080/docs
+访问文档链接 http://127.0.0.1:8080/

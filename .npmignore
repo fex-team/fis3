@@ -16,6 +16,7 @@
 *.bak
 *.tmp
 *.cmd
+*.sh
 ~*
 
 upload.py
