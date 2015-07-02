@@ -6,8 +6,8 @@
     <meta name="description" content="_FIS_构建工具_前端工具框架" />
     <meta name="keywords" content=",百度前端团队,FIS,百度FIS,百度前端,fis,前端模块化,前端工程,性能优化,web performance" />
     <title>{{title}}</title>
-    <meta name="description" content="{{ page.description }}">
-    <meta name="author" content="{{ site.author.name }}">
+    <meta name="description" content="{{-SITE_DESC}}">
+    <meta name="author" content="{{-SITE_AUTHOR}}">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,7 +82,6 @@
             function enableScrollBar(){
                 if (scrollBarEnabled)
                     return;
-                console.log('enable');
                 scrollBarEnabled = true;
                 $(".sidebar").perfectScrollbar({
                     wheelSpeed: 10,
@@ -93,7 +92,6 @@
             function disableScrollBar(){
                 if (!scrollBarEnabled)
                     return;
-                console.log('disable');
                 scrollBarEnabled = false;
                 $(".sidebar").perfectScrollbar('destroy');
             }
@@ -104,6 +102,41 @@
                 disableScrollBar();
             }
         }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //hash平滑滚动
+        $('.sidebar li a').click(function(){      
+            var href= $(this).attr('href');
+            var top = 0;
+            $(".content a").each(function(){
+                if(String(href).indexOf($(this).attr("href")) > -1){
+                    top = $(this).offset().top;
+                    return;
+                }
+            })
+            if(top){
+                $('.sidebar li a').removeClass("active");
+                $(this).addClass("active");
+                top = top - 100 > 0 ? top - 100 : 0;
+                $('html, body').animate({
+                    scrollTop: top
+                });
+            }            
+        });
+
+
+        setActive();
+
 
         if (!isIE(8, 'lte')){
             $(".sidebar").addClass('scrollbar');

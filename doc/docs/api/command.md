@@ -1,25 +1,26 @@
 ## 命令
 
-```
+通过以下命令查看 FIS3 提供了哪些命令。
+
+```bash
 fis3 -h
 ```
-查看 FIS3 提供了哪些命令。
 
-FIS3 默认内置命令 `release`、`install`、`init`、`server`、`inspect`等命令，这些命令都是 FIS `command-*` 插件提供，通过
+FIS3 默认内置命令 `release`、`install`、`init`、`server`、`inspect`等命令，这些命令都是 FIS `fis-command-*` 插件提供，通过
 
-```
+```bash
 fis3 <command>
 ```
 
 来调用，详见 [command 插件]()，以下文档介绍内置的命令。
 
-### `release`
+### release
 
 > `fis3-command-release` 插件提供，默认内置
 
 编译发布一个 FIS3 项目
 
-```
+```bash
 $ fis3 release -h
 
  Usage: fis3 release [media name]
@@ -66,20 +67,20 @@ $ fis3 release -h
 
   @TODO
 
-### `install`
+### install
 
 > `fis-command-install` 插件提供，默认内置
 
 
-### `init`
+### init
 > `fis3-command-init` 插件提供，默认内置
 
 
-### `server`
+### server
 
 > `fis-command-server` 插件提供，默认内置
 
 
-### `inspect`
+### inspect
 
-> `fis-command-inspect` 插件提供，默认内置
+> `fis3-command-inspect` 插件提供，默认内置
