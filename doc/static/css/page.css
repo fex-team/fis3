@@ -544,18 +544,6 @@ ul.demo li {
   font-family: Georgia;
 }
 
-.content h1.name:before,
-.content h2.name:before,
-.content h3.name:before,
-.content h4.name:before {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 1px;
-  padding-top: 80px;
-  margin-top: -80px;
-}
-
 .content a.title-anchor{
   display:block;
   padding-top:90px;
