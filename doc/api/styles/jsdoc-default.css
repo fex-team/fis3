@@ -247,15 +247,28 @@ footer {
   border-left: 2px solid #DDD;
   line-height: 30px;
 }
+.details:before,
+.details:after {
+  content:"";
+  display:table;
+}
+.details:after {
+  clear:both;
+}
+.details {
+  zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
 
 .details dt {
    width: 120px;
+   clear: left;
    float: left;
    padding-left: 10px;
 }
 
 .details dd {
-   margin-left: 70px
+   float:left;
+   margin: 5px 0 0 0;
 }
 
 .details ul {
