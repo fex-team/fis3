@@ -864,3 +864,9 @@ nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after {
   border-left: 1px solid #ececec;
 }
 
+.github-filepath {
+  background-color: #000;
+  margin-top: 30px;
+  padding: 10px;
+  color: #FFFFFF;
+}
