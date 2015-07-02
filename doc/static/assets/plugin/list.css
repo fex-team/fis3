@@ -1,5 +1,10 @@
+*{
+  margin: 0px;
+  padding:0px;
+}
 #plugin-list {
   margin-top: 80px;
+  font-family: "Inconsolata, Monaco, courier, monospace,Aria";
 }
 
 #plugin-list #plugin-list-header {
@@ -20,7 +25,8 @@
   padding-left: .5em;
   font-size: 1.1em;
   padding-right: 2em;
-  margin-top: 1em;
+  margin-top: 10px;
+  border-bottom: 1px dashed #ececec;
 }
 
 #plugin-list #plugin-list-body .plugin-list-item:hover {
@@ -32,17 +38,16 @@
   text-decoration: none;
 }
 
-#plugin-list #plugin-list-body .plugin-list-item .keywords {
-  margin-top: 15px;
-}
 
 #plugin-list #plugin-list-body .plugin-list-item .keywords span {
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   padding: 1px 5px;
+  font-size: 16px;
+  border-radius: 4px;
 }
 
 #plugin-list #plugin-list-body .plugin-list-item .plugin-description {
-  margin: .5em 0;
+  margin-top: 6px;
 }
 
 #plugin-list #search-container {
@@ -55,8 +60,16 @@
   color: #3360A3;
   padding: 8px;
   font-size: 1.5em;
-  /* border: 1px solid #aaa; */
-  border-radius: 3px;
-  border: 0;
+  border: 1px solid #ccc; 
+  border-radius: 30px;
   background: #FFFFFF;
+  padding-left: 20px;
+}
+#plugin-list #search-container input:focus {
+  outline:none;
+  border: 1px solid #73A5F0;
+}
+
+#plugin-list-body h2{
+  margin-bottom: 0px;
 }

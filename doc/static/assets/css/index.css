@@ -356,7 +356,7 @@ nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after {
     position: absolute;
     height: 3px;
     width: 100%;
-    top: 53px;
+    top: 43px;
     left: 0;
     padding: 0;
     transition: all 0.2s ease-in-out;
