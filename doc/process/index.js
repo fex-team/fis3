@@ -1,15 +1,20 @@
+var util = require('util');
 var root = fis.project.getProjectPath();
 
 function markdownParse(settings) {
   var layout = fis.file(root + '/page/layout.html');
-  
-  function wrapper(title, content) {
+
+  function wrapper(title, content, path) {
+    content += util.format(
+      '<div class="github-filepath"> 文档内容有误，可提 PR，文档地址 ' +
+      '<a href="https://github.com/fex-team/fis3/blob/dev/doc%s">/doc%s</a>' +
+      '</div>', path, path);
     return layout.getContent()
-            .replace('{{content}}', content)
-            .replace('{{title}}', title);
+      .replace('{{content}}', content)
+      .replace('{{title}}', title);
   }
 
-  return function (content, file, settings) {
+  return function(content, file, settings) {
     file.cache.addDeps(layout.realpath); // cache deps layout
     var marked = require('marked');
     var renderer = new marked.Renderer();
@@ -20,7 +25,7 @@ function markdownParse(settings) {
       var link = {};
       link.text = text;
       link.level = level;
-      var escapedText = encodeURI(text);  
+      var escapedText = encodeURI(text);
       if (level != 1) level += 1;
       return '<h' + level + ' class="' + (level == 1 ? 'page-header' : '') +
         (level == 3 ? '" id="' + text : '') +
@@ -28,11 +33,11 @@ function markdownParse(settings) {
         escapedText +
         '" href="#' +
         escapedText +
-        '">'+ text + '</a>' +
+        '">' + text + '</a>' +
         '</h' + level + '>';
     };
-  
-  
+
+
     renderer.link = function(href, title, text) {
       var out = '<a href="' + href + '"';
 
@@ -46,19 +51,19 @@ function markdownParse(settings) {
         if (/\.md$/.test(href)) {
           href = fis.compile.lang.uri.ld + href + fis.compile.lang.uri.rd + encodeURI(hash);
         } else {
-          href = encodeURI(href+hash);
+          href = encodeURI(href + hash);
         }
         out = '<a href="' + href + '"';
       }
-  
+
       if (title) {
         out += ' title="' + title + '"';
       }
-  
+
       out += '>' + text + '</a>';
       return out;
     };
-  
+
     marked.setOptions({
       renderer: renderer,
       highlight: function(code) {
@@ -74,14 +79,14 @@ function markdownParse(settings) {
       smartypants: false
     });
     content = marked(content);
-    return file.isIndex ? content : wrapper(title, content);
+    return file.isIndex ? content : wrapper(title, content, file.subpath);
   };
 }
 
 
 function buildNav() {
-  return function (ret) {
-    fis.util.map(ret.src, function (subpath, file) {
+  return function(ret) {
+    fis.util.map(ret.src, function(subpath, file) {
       if (!file.isDoc) return;
       file.setContent(
         file.getContent().replace('{{nav}}', ret.src['/docs/INDEX.md'].getContent())
@@ -90,12 +95,12 @@ function buildNav() {
   };
 }
 
-function replaceDefine (defines) {
-  return function (ret) {
-    fis.util.map(ret.src, function (subpath, file) {
+function replaceDefine(defines) {
+  return function(ret) {
+    fis.util.map(ret.src, function(subpath, file) {
       if (file.isHtmlLike) {
         var content = file.getContent();
-        content = content.replace(/\{\{-([^}]+)\}\}/ig, function ($0, $1) {
+        content = content.replace(/\{\{-([^}]+)\}\}/ig, function($0, $1) {
           return (typeof defines[$1.trim()] == 'undefined') ? '' : defines[$1.trim()];
         });
         file.setContent(content);
