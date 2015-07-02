@@ -10,7 +10,7 @@
 - 两个 png 图片
 - 两个 js 文件
 
-例子下载地址 [demo-lv1](https://github.com/fex-team/fis3/blob/dev/doc/demo-lv1.tar.gz)
+例子下载地址 [demo-lv1](https://github.com/fex-team/fis3/blob/dev/doc/demo/demo-lv1.tar.gz)
 
 ### 安装一些插件
 

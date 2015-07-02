@@ -6,7 +6,7 @@ FIS3 的构建不会修改源码，而是会通过用户设置，将构建结果
 
 ### 例子
 
-在正式介绍 FIS3 功能之前，我们给定一个简单的例子，例子下载地址 [demo-simple](https://github.com/fex-team/fis3/blob/dev/doc/demo-simple.tar.gz)
+在正式介绍 FIS3 功能之前，我们给定一个简单的例子，例子下载地址 [demo-simple](https://github.com/fex-team/fis3/blob/dev/doc/demo/demo-simple.tar.gz)
 
 ### 命令
 
