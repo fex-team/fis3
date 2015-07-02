@@ -12,6 +12,8 @@ ignores = ignores.concat([
 ]);
 
 fis.set('project.ignore', ignores);
+// settings
+fis.media('prod').set('domain', '/fis3');
 
 fis.match('*', {
   useHash: false
@@ -42,11 +44,10 @@ fis.match('::packager', {
 });
 
 //--- prod ---
-fis.media('prod').set('domain', '/fis3');
 
 fis.media('prod')
   .match('*', {
-    domain: '/fis3'
+    domain: fis.media().get('domain')
   })
   .match('*.{js,css,png,gif,eot,svg,ttf,woff,woff2', {
     useHash: true
