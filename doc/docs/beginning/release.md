@@ -6,7 +6,7 @@ FIS3 的构建不会修改源码，而是会通过用户设置，将构建结果
 
 ### 例子
 
-在正式介绍 FIS3 功能之前，我们给定一个简单的例子，例子下载地址 https://github.com/fex-team/fis3/blob/dev/doc/demo.tar.gz?raw=true
+在正式介绍 FIS3 功能之前，我们给定一个简单的例子，例子下载地址 [demo-first](@TODO)
 
 ### 命令
 
@@ -87,13 +87,15 @@ fis3 release -d ../output
 
 默认配置文件为 `fis-conf.js`，FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的配置方式。固化了构建流程，以期让工程构建变得简单。
 
+#### fis.match()
+
 首先介绍设置规则的配置接口
 
 ```js
 fis.match(selector, props);
 ```
 - `selector` FIS3 把匹配文件路径的路径做为selector，匹配到的文件会分配给它设置的 `props`
-- `props` 编译规则属性，包括文件属性和插件属性
+- `props` 编译规则属性，包括文件属性和插件属性，[更多属性](../api/config-props.md)
 
 我们修改例子的配置文件 `fis-conf.js`，添加一下内容
 
@@ -110,6 +112,32 @@ fis.match('*.png', {
   useHash: false
 });
 ```
+
+#### fis.media()
+
+`fis.media()` 接口提供多种状态功能，比如有些属性配置是开发阶段的，有些是上线时需要起作用的。
+
+```js
+fis.match('*', {
+  useHash: false
+});
+
+fis.media('prod').match('*.js', {
+  optimizer: fis.plugin('uglify-js')
+});
+```
+
+```bash
+fis3 release <media>
+```
+- `<media>` 配置的 media 值
+
+```bash
+fis3 release prod
+```
+
+
+[更多配置接口](../api/config-api.md)
 
 我们执行 `fis3 inspect` 来查看文件命中属性的情况。`fis3 inspect` 是一个非常重要的命令，可以查看文件分配到的属性，这些属性决定了文件将如何被编译处理。
 
