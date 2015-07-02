@@ -634,6 +634,7 @@ ul.demo li {
   .sidebar.open {
     transform: translate(0, 0);
     -webkit-transform: translate(0, 0);
+    left: 0;
   }
   .content.with-sidebar {
     margin-left: 0;
