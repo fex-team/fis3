@@ -41,6 +41,6 @@
   - [配置](./api/config.md)
     - [配置接口](./api/config-api.md)
     - [配置属性](./api/config-props.md)
-    - [常用配置](./api)
+    - [常用配置](./api/config-commonly-used.md)
   - [自定义插件](./api/dev-plugin.md)
 - [FIS2 到 FIS3](./fis2-to-fis3.md)
