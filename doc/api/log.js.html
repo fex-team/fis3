@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>log.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+    <link rel="stylesheet" href="/static/assets/css/index.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="http://www.baidu.com/favicon.ico">
+    <link rel="stylesheet" href="/static/assets/plugin/list.css">
+</head>
+<body>
+<link rel="import" href="../widget/header.html?__inline">
+<div class="jsdoc-wrapper">
+  <div class="jsdoc-inner">
+    <nav class="jsdoc">
+      <h3>Namespaces</h3><ul><li><a href="fis.html">fis</a><ul class='methods'><li data-type='method'><a href="fis.html#.emit">emit</a></li><li data-type='method'><a href="fis.html#.on">on</a></li><li data-type='method'><a href="fis.html#.once">once</a></li><li data-type='method'><a href="fis.html#.plugin">plugin</a></li><li data-type='method'><a href="fis.html#.release">release</a></li><li data-type='method'><a href="fis.html#.removeAllListeners">removeAllListeners</a></li><li data-type='method'><a href="fis.html#.removeListener">removeListener</a></li><li data-type='method'><a href="fis.html#.require">require</a></li><li data-type='method'><a href="fis.html#.time">time</a></li></ul></li><li><a href="fis.cache.html">cache</a><ul class='methods'><li data-type='method'><a href="fis.cache.html#.clean">clean</a></li></ul></li><li><a href="fis.cli.html">cli</a><ul class='methods'><li data-type='method'><a href="fis.cli.html#.help">help</a></li><li data-type='method'><a href="fis.cli.html#.run">run</a></li><li data-type='method'><a href="fis.cli.html#.version">version</a></li></ul></li><li><a href="fis.compile.html">compile</a><ul class='methods'><li data-type='method'><a href="fis.compile.html#.analyseComment">analyseComment</a></li><li data-type='method'><a href="fis.compile.html#.clean">clean</a></li><li data-type='method'><a href="fis.compile.html#.extCss">extCss</a></li><li data-type='method'><a href="fis.compile.html#.extHtml">extHtml</a></li><li data-type='method'><a href="fis.compile.html#.extJs">extJs</a></li><li data-type='method'><a href="fis.compile.html#.isInline">isInline</a></li><li data-type='method'><a href="fis.compile.html#.partial">partial</a></li><li data-type='method'><a href="fis.compile.html#.process">process</a></li><li data-type='method'><a href="fis.compile.html#.setup">setup</a></li><li data-type='method'><a href="fis.compile.html#.xLang">xLang</a></li><li data-type='method'><a href="fis.compile.html#~builtinStandard">builtinStandard</a></li><li data-type='method'><a href="fis.compile.html#~pipe">pipe</a></li><li data-type='method'><a href="fis.compile.html#~postStandard">postStandard</a></li></ul></li><li><a href="fis.compile.lang.html">lang</a><ul class='methods'><li data-type='method'><a href="fis.compile.lang.html#.add">add</a></li></ul></li><li><a href="fis.config.html">config</a></li><li><a href="fis.emitter.html">emitter</a></li><li><a href="fis.file.html">file</a></li><li><a href="fis.log.html">log</a><ul class='methods'><li data-type='method'><a href="fis.log.html#.debug">debug</a></li><li data-type='method'><a href="fis.log.html#.error">error</a></li><li data-type='method'><a href="fis.log.html#.format">format</a></li><li data-type='method'><a href="fis.log.html#.info">info</a></li><li data-type='method'><a href="fis.log.html#.notice">notice</a></li><li data-type='method'><a href="fis.log.html#.now">now</a></li><li data-type='method'><a href="fis.log.html#.warn">warn</a></li><li data-type='method'><a href="fis.log.html#.warning">warning</a></li><li data-type='method'><a href="fis.log.html#~log">log</a></li></ul></li><li><a href="fis.project.html">project</a><ul class='methods'><li data-type='method'><a href="fis.project.html#.currentMedia">currentMedia</a></li><li data-type='method'><a href="fis.project.html#.getCachePath">getCachePath</a></li><li data-type='method'><a href="fis.project.html#.getProjectPath">getProjectPath</a></li><li data-type='method'><a href="fis.project.html#.getSource">getSource</a></li><li data-type='method'><a href="fis.project.html#.getTempPath">getTempPath</a></li><li data-type='method'><a href="fis.project.html#.lookup">lookup</a></li><li data-type='method'><a href="fis.project.html#.setProjectRoot">setProjectRoot</a></li><li data-type='method'><a href="fis.project.html#.setTempRoot">setTempRoot</a></li></ul></li><li><a href="fis.uri.html">uri</a></li><li><a href="fis.util.html">util</a><ul class='methods'><li data-type='method'><a href="fis.util.html#.applyMatches">applyMatches</a></li><li data-type='method'><a href="fis.util.html#.base64">base64</a></li><li data-type='method'><a href="fis.util.html#.camelcase">camelcase</a></li><li data-type='method'><a href="fis.util.html#.clone">clone</a></li><li data-type='method'><a href="fis.util.html#.copy">copy</a></li><li data-type='method'><a href="fis.util.html#.del">del</a></li><li data-type='method'><a href="fis.util.html#.download">download</a></li><li data-type='method'><a href="fis.util.html#.escapeReg">escapeReg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellArg">escapeShellArg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellCmd">escapeShellCmd</a></li><li data-type='method'><a href="fis.util.html#.exist">exist</a></li><li data-type='method'><a href="fis.util.html#.ext">ext</a></li><li data-type='method'><a href="fis.util.html#.filter">filter</a></li><li data-type='method'><a href="fis.util.html#.find">find</a></li><li data-type='method'><a href="fis.util.html#.getMimeType">getMimeType</a></li><li data-type='method'><a href="fis.util.html#.glob">glob</a></li><li data-type='method'><a href="fis.util.html#.install">install</a></li><li data-type='method'><a href="fis.util.html#.isAbsolute">isAbsolute</a></li><li data-type='method'><a href="fis.util.html#.isDir">isDir</a></li><li data-type='method'><a href="fis.util.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="fis.util.html#.isFile">isFile</a></li><li data-type='method'><a href="fis.util.html#.isImageFile">isImageFile</a></li><li data-type='method'><a href="fis.util.html#.isTextFile">isTextFile</a></li><li data-type='method'><a href="fis.util.html#.isUtf8">isUtf8</a></li><li data-type='method'><a href="fis.util.html#.isWin">isWin</a></li><li data-type='method'><a href="fis.util.html#.map">map</a></li><li data-type='method'><a href="fis.util.html#.md5">md5</a></li><li data-type='method'><a href="fis.util.html#.merge">merge</a></li><li data-type='method'><a href="fis.util.html#.mkdir">mkdir</a></li><li data-type='method'><a href="fis.util.html#.mtime">mtime</a></li><li data-type='method'><a href="fis.util.html#.nohup">nohup</a></li><li data-type='method'><a href="fis.util.html#.pad">pad</a></li><li data-type='method'><a href="fis.util.html#.parseUrl">parseUrl</a></li><li data-type='method'><a href="fis.util.html#.pathinfo">pathinfo</a></li><li data-type='method'><a href="fis.util.html#.pipe">pipe</a></li><li data-type='method'><a href="fis.util.html#.query">query</a></li><li data-type='method'><a href="fis.util.html#.read">read</a></li><li data-type='method'><a href="fis.util.html#.readBuffer">readBuffer</a></li><li data-type='method'><a href="fis.util.html#.readJson">readJson</a></li><li data-type='method'><a href="fis.util.html#.realpath">realpath</a></li><li data-type='method'><a href="fis.util.html#.realpathSafe">realpathSafe</a></li><li data-type='method'><a href="fis.util.html#.stringQuote">stringQuote</a></li><li data-type='method'><a href="fis.util.html#.toEncoding">toEncoding</a></li><li data-type='method'><a href="fis.util.html#.touch">touch</a></li><li data-type='method'><a href="fis.util.html#.upload">upload</a></li><li data-type='method'><a href="fis.util.html#.write">write</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="fis.cache-Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="fis.cache-Cache.html#addDeps">addDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#mergeDeps">mergeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#removeDeps">removeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#revert">revert</a></li><li data-type='method'><a href="fis.cache-Cache.html#save">save</a></li></ul></li><li><a href="fis.config.Config.html">Config</a><ul class='methods'><li data-type='method'><a href="fis.config.Config.html#del">del</a></li><li data-type='method'><a href="fis.config.Config.html#get">get</a></li><li data-type='method'><a href="fis.config.Config.html#getMatches">getMatches</a></li><li data-type='method'><a href="fis.config.Config.html#getSortedMatches">getSortedMatches</a></li><li data-type='method'><a href="fis.config.Config.html#hook">hook</a></li><li data-type='method'><a href="fis.config.Config.html#match">match</a></li><li data-type='method'><a href="fis.config.Config.html#media">media</a></li><li data-type='method'><a href="fis.config.Config.html#merge">merge</a></li><li data-type='method'><a href="fis.config.Config.html#set">set</a></li><li data-type='method'><a href="fis.config.Config.html#unhook">unhook</a></li></ul></li><li><a href="fis.file-File.html">File</a><ul class='methods'><li data-type='method'><a href="fis.file-File.html#addAsyncRequire">addAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#addLink">addLink</a></li><li data-type='method'><a href="fis.file-File.html#addRequire">addRequire</a></li><li data-type='method'><a href="fis.file-File.html#addSameNameRequire">addSameNameRequire</a></li><li data-type='method'><a href="fis.file-File.html#defineLikes">defineLikes</a></li><li data-type='method'><a href="fis.file-File.html#exists">exists</a></li><li data-type='method'><a href="fis.file-File.html#getBase64">getBase64</a></li><li data-type='method'><a href="fis.file-File.html#getCacheData">getCacheData</a></li><li data-type='method'><a href="fis.file-File.html#getContent">getContent</a></li><li data-type='method'><a href="fis.file-File.html#getHash">getHash</a></li><li data-type='method'><a href="fis.file-File.html#getHashRelease">getHashRelease</a></li><li data-type='method'><a href="fis.file-File.html#getId">getId</a></li><li data-type='method'><a href="fis.file-File.html#getUrl">getUrl</a></li><li data-type='method'><a href="fis.file-File.html#isDir">isDir</a></li><li data-type='method'><a href="fis.file-File.html#isFile">isFile</a></li><li data-type='method'><a href="fis.file-File.html#isImage">isImage</a></li><li data-type='method'><a href="fis.file-File.html#isText">isText</a></li><li data-type='method'><a href="fis.file-File.html#removeAsyncRequire">removeAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#removeRequire">removeRequire</a></li><li data-type='method'><a href="fis.file-File.html#revertFromCacheData">revertFromCacheData</a></li><li data-type='method'><a href="fis.file-File.html#setContent">setContent</a></li><li data-type='method'><a href="fis.file-File.html#toString">toString</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="fis.html#.event:lookup:file">lookup:file</a></li></ul>
+    </nav>
+
+    <div id="main">
+        
+        <h1 class="page-title">log.js</h1>
+        
+
+        
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+/**
+ * fis 日志输出模块。
+ * @namespace fis.log
+ */
+
+var util = require('util');
+var translateError = require('fis3-errors');
+
+/**
+ * [级别] 全部输出
+ * @name L_ALL
+ * @memberOf fis.log
+ */
+exports.L_ALL = 0x01111;
+
+/**
+ * [级别] 输出 notice 信息
+ * @name L_NOTIC
+ * @memberOf fis.log
+ */
+exports.L_NOTIC = 0x00001;
+
+/**
+ * [级别] 输出 debug 信息
+ * @name L_DEBUG
+ * @memberOf fis.log
+ */
+exports.L_DEBUG = 0x00010;
+
+/**
+ * [级别] 输出 warning 信息
+ * @name L_WARNI
+ * @memberOf fis.log
+ */
+exports.L_WARNI = 0x00100;
+
+/**
+ * [级别] 输出 error 信息
+ * @name L_ERROR
+ * @memberOf fis.log
+ */
+exports.L_ERROR = 0x01000;
+
+/**
+ * [级别] 输出标准信息，包含: error, warning 和 notice 信息。
+ * 等价于：`fis.log.L_ERROR &amp; fis.log.L_WARNI &amp; fis.log.L_NOTIC`
+ * @name L_NORMAL
+ * @memberOf fis.log
+ */
+exports.L_NORMAL = 0x01101;
+
+/**
+ * [级别] 配置项，默认是 `fis.log.L_NORMAL`。 可以外部配置成其他级别。
+ * @example
+ * // 让 fis 输出 debug 和 warning 信息。
+ * fis.log.level = fis.log.L_DEBUG &amp; fis.log.L_WARNI;
+ * @name level
+ * @memberOf fis.log
+ */
+exports.level = exports.L_NORMAL;
+
+/**
+ * 配置是否需要抛出异常。默认如果遇到错误，fis log 会直接终止进程，可以通过配置此属性为 true 修改成抛出异常。
+ * @name throw
+ * @memberOf fis.log
+ */
+exports.throw = false;
+
+/**
+ * 配置是否需要输出命令行警告音。
+ * @name alert
+ * @memberOf fis.log
+ */
+exports.alert = false;
+
+/**
+ * 获取当前时间
+ * @param  {Boolean} withoutMilliseconds 是否不显示豪秒
+ * @return {String}                     HH:MM:SS.ms
+ * @name now
+ * @memberOf fis.log
+ * @function
+ */
+exports.now = function(withoutMilliseconds) {
+  var d = new Date(),
+    str;
+  str = [
+    d.getHours(),
+    d.getMinutes(),
+    d.getSeconds()
+  ].join(':').replace(/\b\d\b/g, '0$&amp;');
+  if (!withoutMilliseconds) {
+    str += '.' + ('00' + d.getMilliseconds()).substr(-3);
+  }
+  return str;
+};
+
+/**
+ * 打印输出
+ * @param  {strict} type [打印输出类型]
+ * @param  {string} msg  [打印输出内容]
+ * @param  {string} code [打印输出标识码]
+ * @inner
+ * @name log
+ * @memberOf fis.log
+ * @function
+ */
+function log(type, msg, code) {
+  code = code || 0;
+  if ((exports.level &amp; code) > 0) {
+    var listener = exports.on[type];
+    if (listener) {
+      listener(msg);
+    }
+    exports.on.any(type, msg);
+  }
+}
+
+/**
+ * 输出 debug 信息。
+ * @example
+ * fis.log.debug('I say %s, you say %s', 'YoYO', '切克闹');
+ * @param  {String} msg 消息内容
+ * @param {Mixed} [args...] 可变变量列表
+ * @memberOf fis.log
+ * @name debug
+ * @function
+ */
+exports.debug = function(msg) {
+  msg = util.format.apply(util, arguments);
+  log('debug', exports.now().grey + ' ' + msg, exports.L_DEBUG);
+};
+
+/**
+ * 输出 notice 信息。
+ * @param  {String} msg 消息内容
+ * @param {Mixed} [args...] 可变变量列表
+ * @memberOf fis.log
+ * @name notice
+ * @function
+ */
+
+/**
+ * 输出 info 信息。等价于 fis.log.notice
+ * @param  {String} msg 消息内容
+ * @param {Mixed} [args...] 可变变量列表
+ * @memberOf fis.log
+ * @name info
+ * @function
+ */
+exports.notice = exports.info = function(msg) {
+  msg = util.format.apply(util, arguments);
+  log('notice', msg, exports.L_NOTIC);
+};
+
+/**
+ * 输出 warning 信息。
+ * @param  {String} msg 消息内容
+ * @param {Mixed} [args...] 可变变量列表
+ * @memberOf fis.log
+ * @name warn
+ * @function
+ */
+
+/**
+ * 输出 warning 信息。等价于 fis.log.warn.
+ * @param  {String} msg 消息内容
+ * @param {Mixed} [args...] 可变变量列表
+ * @memberOf fis.log
+ * @name warning
+ * @function
+ */
+exports.warning = exports.warn = function(msg) {
+  msg = util.format.apply(util, arguments);
+  log('warning', msg, exports.L_WARNI);
+};
+
+/**
+ * 输出 error 信息。
+ * @param  {String | Event} msg 消息内容
+ * @param {Mixed} [args...] 可变变量列表
+ * @memberOf fis.log
+ * @name error
+ * @function
+ */
+exports.error = function(err) {
+  var rawMessage = err;
+
+  if (!(err instanceof Error)) {
+    err.message &amp;&amp; (rawMessage = err.message);
+    err = new Error(err.message || util.format.apply(util, arguments));
+  }
+
+  translateError(err, rawMessage);
+
+  if (exports.alert) {
+    err.message += '\u0007';
+  }
+  if (exports.throw) {
+    throw err
+  } else {
+    log('error', err.message, exports.L_ERROR);
+    exports.debug(err.stack);
+    process.exit(1);
+  }
+};
+
+/**
+ * 格式化输出。完全等价于 {@link https://nodejs.org/api/util.html#util_util_format_format util.format}。
+ * @memberOf fis.log
+ * @name format
+ * @function
+ */
+exports.format = function() {
+  return util.format.apply(util, arguments);
+};
+
+/*
+ * 打印实际执行方法集合
+ * @type {Object}
+ * @memberOf fis.log
+ * @name on
+ */
+exports.on = {
+  any: function(type, msg) {},
+  debug: function(msg) {
+    process.stdout.write('\n ' + '[DEBUG]'.grey + ' ' + msg + '\n');
+  },
+  notice: function(msg) {
+    process.stdout.write('\n ' + '[INFO]'.cyan + ' ' + msg + '\n');
+  },
+  warning: function(msg) {
+    process.stdout.write('\n ' + '[WARNI]'.yellow + ' ' + msg + '\n');
+  },
+  error: function(msg) {
+    process.stdout.write('\n '+ '[ERROR]'.red +' ' + msg + '\n');
+  }
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Thu Jul 02 2015 13:53:46 GMT+0800 (CST) using the Minami theme.
+    </div>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

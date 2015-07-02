@@ -1,4 +1,45 @@
-'use strict';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>util.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+    <link rel="stylesheet" href="/static/assets/css/index.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="http://www.baidu.com/favicon.ico">
+    <link rel="stylesheet" href="/static/assets/plugin/list.css">
+</head>
+<body>
+<link rel="import" href="../widget/header.html?__inline">
+<div class="jsdoc-wrapper">
+  <div class="jsdoc-inner">
+    <nav class="jsdoc">
+      <h3>Namespaces</h3><ul><li><a href="fis.html">fis</a><ul class='methods'><li data-type='method'><a href="fis.html#.emit">emit</a></li><li data-type='method'><a href="fis.html#.on">on</a></li><li data-type='method'><a href="fis.html#.once">once</a></li><li data-type='method'><a href="fis.html#.plugin">plugin</a></li><li data-type='method'><a href="fis.html#.release">release</a></li><li data-type='method'><a href="fis.html#.removeAllListeners">removeAllListeners</a></li><li data-type='method'><a href="fis.html#.removeListener">removeListener</a></li><li data-type='method'><a href="fis.html#.require">require</a></li><li data-type='method'><a href="fis.html#.time">time</a></li></ul></li><li><a href="fis.cache.html">cache</a><ul class='methods'><li data-type='method'><a href="fis.cache.html#.clean">clean</a></li></ul></li><li><a href="fis.cli.html">cli</a><ul class='methods'><li data-type='method'><a href="fis.cli.html#.help">help</a></li><li data-type='method'><a href="fis.cli.html#.run">run</a></li><li data-type='method'><a href="fis.cli.html#.version">version</a></li></ul></li><li><a href="fis.compile.html">compile</a><ul class='methods'><li data-type='method'><a href="fis.compile.html#.analyseComment">analyseComment</a></li><li data-type='method'><a href="fis.compile.html#.clean">clean</a></li><li data-type='method'><a href="fis.compile.html#.extCss">extCss</a></li><li data-type='method'><a href="fis.compile.html#.extHtml">extHtml</a></li><li data-type='method'><a href="fis.compile.html#.extJs">extJs</a></li><li data-type='method'><a href="fis.compile.html#.isInline">isInline</a></li><li data-type='method'><a href="fis.compile.html#.partial">partial</a></li><li data-type='method'><a href="fis.compile.html#.process">process</a></li><li data-type='method'><a href="fis.compile.html#.setup">setup</a></li><li data-type='method'><a href="fis.compile.html#.xLang">xLang</a></li><li data-type='method'><a href="fis.compile.html#~builtinStandard">builtinStandard</a></li><li data-type='method'><a href="fis.compile.html#~pipe">pipe</a></li><li data-type='method'><a href="fis.compile.html#~postStandard">postStandard</a></li></ul></li><li><a href="fis.compile.lang.html">lang</a><ul class='methods'><li data-type='method'><a href="fis.compile.lang.html#.add">add</a></li></ul></li><li><a href="fis.config.html">config</a></li><li><a href="fis.emitter.html">emitter</a></li><li><a href="fis.file.html">file</a></li><li><a href="fis.log.html">log</a><ul class='methods'><li data-type='method'><a href="fis.log.html#.debug">debug</a></li><li data-type='method'><a href="fis.log.html#.error">error</a></li><li data-type='method'><a href="fis.log.html#.format">format</a></li><li data-type='method'><a href="fis.log.html#.info">info</a></li><li data-type='method'><a href="fis.log.html#.notice">notice</a></li><li data-type='method'><a href="fis.log.html#.now">now</a></li><li data-type='method'><a href="fis.log.html#.warn">warn</a></li><li data-type='method'><a href="fis.log.html#.warning">warning</a></li><li data-type='method'><a href="fis.log.html#~log">log</a></li></ul></li><li><a href="fis.project.html">project</a><ul class='methods'><li data-type='method'><a href="fis.project.html#.currentMedia">currentMedia</a></li><li data-type='method'><a href="fis.project.html#.getCachePath">getCachePath</a></li><li data-type='method'><a href="fis.project.html#.getProjectPath">getProjectPath</a></li><li data-type='method'><a href="fis.project.html#.getSource">getSource</a></li><li data-type='method'><a href="fis.project.html#.getTempPath">getTempPath</a></li><li data-type='method'><a href="fis.project.html#.lookup">lookup</a></li><li data-type='method'><a href="fis.project.html#.setProjectRoot">setProjectRoot</a></li><li data-type='method'><a href="fis.project.html#.setTempRoot">setTempRoot</a></li></ul></li><li><a href="fis.uri.html">uri</a></li><li><a href="fis.util.html">util</a><ul class='methods'><li data-type='method'><a href="fis.util.html#.applyMatches">applyMatches</a></li><li data-type='method'><a href="fis.util.html#.base64">base64</a></li><li data-type='method'><a href="fis.util.html#.camelcase">camelcase</a></li><li data-type='method'><a href="fis.util.html#.clone">clone</a></li><li data-type='method'><a href="fis.util.html#.copy">copy</a></li><li data-type='method'><a href="fis.util.html#.del">del</a></li><li data-type='method'><a href="fis.util.html#.download">download</a></li><li data-type='method'><a href="fis.util.html#.escapeReg">escapeReg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellArg">escapeShellArg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellCmd">escapeShellCmd</a></li><li data-type='method'><a href="fis.util.html#.exist">exist</a></li><li data-type='method'><a href="fis.util.html#.ext">ext</a></li><li data-type='method'><a href="fis.util.html#.filter">filter</a></li><li data-type='method'><a href="fis.util.html#.find">find</a></li><li data-type='method'><a href="fis.util.html#.getMimeType">getMimeType</a></li><li data-type='method'><a href="fis.util.html#.glob">glob</a></li><li data-type='method'><a href="fis.util.html#.install">install</a></li><li data-type='method'><a href="fis.util.html#.isAbsolute">isAbsolute</a></li><li data-type='method'><a href="fis.util.html#.isDir">isDir</a></li><li data-type='method'><a href="fis.util.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="fis.util.html#.isFile">isFile</a></li><li data-type='method'><a href="fis.util.html#.isImageFile">isImageFile</a></li><li data-type='method'><a href="fis.util.html#.isTextFile">isTextFile</a></li><li data-type='method'><a href="fis.util.html#.isUtf8">isUtf8</a></li><li data-type='method'><a href="fis.util.html#.isWin">isWin</a></li><li data-type='method'><a href="fis.util.html#.map">map</a></li><li data-type='method'><a href="fis.util.html#.md5">md5</a></li><li data-type='method'><a href="fis.util.html#.merge">merge</a></li><li data-type='method'><a href="fis.util.html#.mkdir">mkdir</a></li><li data-type='method'><a href="fis.util.html#.mtime">mtime</a></li><li data-type='method'><a href="fis.util.html#.nohup">nohup</a></li><li data-type='method'><a href="fis.util.html#.pad">pad</a></li><li data-type='method'><a href="fis.util.html#.parseUrl">parseUrl</a></li><li data-type='method'><a href="fis.util.html#.pathinfo">pathinfo</a></li><li data-type='method'><a href="fis.util.html#.pipe">pipe</a></li><li data-type='method'><a href="fis.util.html#.query">query</a></li><li data-type='method'><a href="fis.util.html#.read">read</a></li><li data-type='method'><a href="fis.util.html#.readBuffer">readBuffer</a></li><li data-type='method'><a href="fis.util.html#.readJson">readJson</a></li><li data-type='method'><a href="fis.util.html#.realpath">realpath</a></li><li data-type='method'><a href="fis.util.html#.realpathSafe">realpathSafe</a></li><li data-type='method'><a href="fis.util.html#.stringQuote">stringQuote</a></li><li data-type='method'><a href="fis.util.html#.toEncoding">toEncoding</a></li><li data-type='method'><a href="fis.util.html#.touch">touch</a></li><li data-type='method'><a href="fis.util.html#.upload">upload</a></li><li data-type='method'><a href="fis.util.html#.write">write</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="fis.cache-Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="fis.cache-Cache.html#addDeps">addDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#mergeDeps">mergeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#removeDeps">removeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#revert">revert</a></li><li data-type='method'><a href="fis.cache-Cache.html#save">save</a></li></ul></li><li><a href="fis.config.Config.html">Config</a><ul class='methods'><li data-type='method'><a href="fis.config.Config.html#del">del</a></li><li data-type='method'><a href="fis.config.Config.html#get">get</a></li><li data-type='method'><a href="fis.config.Config.html#getMatches">getMatches</a></li><li data-type='method'><a href="fis.config.Config.html#getSortedMatches">getSortedMatches</a></li><li data-type='method'><a href="fis.config.Config.html#hook">hook</a></li><li data-type='method'><a href="fis.config.Config.html#match">match</a></li><li data-type='method'><a href="fis.config.Config.html#media">media</a></li><li data-type='method'><a href="fis.config.Config.html#merge">merge</a></li><li data-type='method'><a href="fis.config.Config.html#set">set</a></li><li data-type='method'><a href="fis.config.Config.html#unhook">unhook</a></li></ul></li><li><a href="fis.file-File.html">File</a><ul class='methods'><li data-type='method'><a href="fis.file-File.html#addAsyncRequire">addAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#addLink">addLink</a></li><li data-type='method'><a href="fis.file-File.html#addRequire">addRequire</a></li><li data-type='method'><a href="fis.file-File.html#addSameNameRequire">addSameNameRequire</a></li><li data-type='method'><a href="fis.file-File.html#defineLikes">defineLikes</a></li><li data-type='method'><a href="fis.file-File.html#exists">exists</a></li><li data-type='method'><a href="fis.file-File.html#getBase64">getBase64</a></li><li data-type='method'><a href="fis.file-File.html#getCacheData">getCacheData</a></li><li data-type='method'><a href="fis.file-File.html#getContent">getContent</a></li><li data-type='method'><a href="fis.file-File.html#getHash">getHash</a></li><li data-type='method'><a href="fis.file-File.html#getHashRelease">getHashRelease</a></li><li data-type='method'><a href="fis.file-File.html#getId">getId</a></li><li data-type='method'><a href="fis.file-File.html#getUrl">getUrl</a></li><li data-type='method'><a href="fis.file-File.html#isDir">isDir</a></li><li data-type='method'><a href="fis.file-File.html#isFile">isFile</a></li><li data-type='method'><a href="fis.file-File.html#isImage">isImage</a></li><li data-type='method'><a href="fis.file-File.html#isText">isText</a></li><li data-type='method'><a href="fis.file-File.html#removeAsyncRequire">removeAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#removeRequire">removeRequire</a></li><li data-type='method'><a href="fis.file-File.html#revertFromCacheData">revertFromCacheData</a></li><li data-type='method'><a href="fis.file-File.html#setContent">setContent</a></li><li data-type='method'><a href="fis.file-File.html#toString">toString</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="fis.html#.event:lookup:file">lookup:file</a></li></ul>
+    </nav>
+
+    <div id="main">
+        
+        <h1 class="page-title">util.js</h1>
+        
+
+        
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
 
 var minimatch = require('minimatch');
 var lodash = require('lodash');
@@ -166,7 +207,7 @@ _.map = function(obj, callback, merge) {
  * @function
  */
 _.pad = function(str, len, fill, pre) {
-  if (str.length < len) {
+  if (str.length &lt; len) {
     fill = (new Array(len)).join(fill || ' ');
     if (pre) {
       str = (fill + str).substr(-len);
@@ -187,7 +228,7 @@ _.pad = function(str, len, fill, pre) {
  * @function
  */
 _.merge = function(source, target) {
-  if (_.is(source, 'Object') && _.is(target, 'Object')) {
+  if (_.is(source, 'Object') &amp;&amp; _.is(target, 'Object')) {
     _.map(target, function(key, value) {
       source[key] = _.merge(source[key], value);
     });
@@ -235,7 +276,7 @@ _.clone = function(source) {
  * @function
  */
 _.escapeReg = function(str) {
-  return str.replace(/[\.\\\+\*\?\[\^\]\$\(\){}=!<>\|:\/]/g, '\\$&');
+  return str.replace(/[\.\\\+\*\?\[\^\]\$\(\){}=!&lt;>\|:\/]/g, '\\$&amp;');
 };
 
 /**
@@ -246,7 +287,7 @@ _.escapeReg = function(str) {
  * @function
  */
 _.escapeShellCmd = function(str) {
-  return str.replace(/ /g, '"$&"');
+  return str.replace(/ /g, '"$&amp;"');
 };
 
 /**
@@ -282,9 +323,9 @@ _.stringQuote = function(str, quotes) {
   if (str) {
     quotes = quotes || '\'"';
     var strLen = str.length - 1;
-    for (var i = 0, len = quotes.length; i < len; i++) {
+    for (var i = 0, len = quotes.length; i &lt; len; i++) {
       var c = quotes[i];
-      if (str[0] === c && str[strLen] === c) {
+      if (str[0] === c &amp;&amp; str[strLen] === c) {
         info.quote = c;
         info.rest = str.substring(1, strLen);
         break;
@@ -328,7 +369,7 @@ _.fs = fs;
  * @function
  */
 _.realpath = function(path) {
-  if (path && _exists(path)) {
+  if (path &amp;&amp; _exists(path)) {
     path = fs.realpathSync(path);
     if (IS_WIN) {
       path = path.replace(/\\/g, '/');
@@ -372,7 +413,7 @@ _.isAbsolute = function(path) {
       var split = path.split('/');
       if (split[0] === '~') {
         return true;
-      } else if (split[0] === '' && split[1]) {
+      } else if (split[0] === '' &amp;&amp; split[1]) {
         return _.isDir('/' + split[1] + '/' + split[2]);
       } else {
         return false;
@@ -390,7 +431,7 @@ _.isAbsolute = function(path) {
  * @function
  */
 _.isFile = function(path) {
-  return _exists(path) && fs.statSync(path).isFile();
+  return _exists(path) &amp;&amp; fs.statSync(path).isFile();
 };
 
 /**
@@ -402,7 +443,7 @@ _.isFile = function(path) {
  * @function
  */
 _.isDir = function(path) {
-  return _exists(path) && fs.statSync(path).isDirectory();
+  return _exists(path) &amp;&amp; fs.statSync(path).isDirectory();
 };
 
 /**
@@ -471,7 +512,7 @@ function getFileTypeReg(type) {
   } else {
     fis.log.error('invalid file type [%s]', type);
   }
-  if (ext && ext.length) {
+  if (ext &amp;&amp; ext.length) {
     if (typeof ext === 'string') {
       ext = ext.split(/\s*,\s*/);
     }
@@ -553,11 +594,11 @@ _.base64 = function(data) {
 _.mkdir = function(path, mode) {
   if (typeof mode === 'undefined') {
     //511 === 0777
-    mode = 511 & (~process.umask());
+    mode = 511 &amp; (~process.umask());
   }
   if (_exists(path)) return;
   path.split('/').reduce(function(prev, next) {
-    if (prev && !_exists(prev)) {
+    if (prev &amp;&amp; !_exists(prev)) {
       fs.mkdirSync(prev, mode);
     }
     return prev + '/' + next;
@@ -590,17 +631,17 @@ _.toEncoding = function(str, encoding) {
  */
 _.isUtf8 = function(bytes) {
   var i = 0;
-  while (i < bytes.length) {
+  while (i &lt; bytes.length) {
     if (( // ASCII
-        0x00 <= bytes[i] && bytes[i] <= 0x7F
+        0x00 &lt;= bytes[i] &amp;&amp; bytes[i] &lt;= 0x7F
       )) {
       i += 1;
       continue;
     }
 
     if (( // non-overlong 2-byte
-        (0xC2 <= bytes[i] && bytes[i] <= 0xDF) &&
-        (0x80 <= bytes[i + 1] && bytes[i + 1] <= 0xBF)
+        (0xC2 &lt;= bytes[i] &amp;&amp; bytes[i] &lt;= 0xDF) &amp;&amp;
+        (0x80 &lt;= bytes[i + 1] &amp;&amp; bytes[i + 1] &lt;= 0xBF)
       )) {
       i += 2;
       continue;
@@ -608,19 +649,19 @@ _.isUtf8 = function(bytes) {
 
     if (
       ( // excluding overlongs
-        bytes[i] == 0xE0 &&
-        (0xA0 <= bytes[i + 1] && bytes[i + 1] <= 0xBF) &&
-        (0x80 <= bytes[i + 2] && bytes[i + 2] <= 0xBF)
+        bytes[i] == 0xE0 &amp;&amp;
+        (0xA0 &lt;= bytes[i + 1] &amp;&amp; bytes[i + 1] &lt;= 0xBF) &amp;&amp;
+        (0x80 &lt;= bytes[i + 2] &amp;&amp; bytes[i + 2] &lt;= 0xBF)
       ) || ( // straight 3-byte
-        ((0xE1 <= bytes[i] && bytes[i] <= 0xEC) ||
+        ((0xE1 &lt;= bytes[i] &amp;&amp; bytes[i] &lt;= 0xEC) ||
           bytes[i] == 0xEE ||
-          bytes[i] == 0xEF) &&
-        (0x80 <= bytes[i + 1] && bytes[i + 1] <= 0xBF) &&
-        (0x80 <= bytes[i + 2] && bytes[i + 2] <= 0xBF)
+          bytes[i] == 0xEF) &amp;&amp;
+        (0x80 &lt;= bytes[i + 1] &amp;&amp; bytes[i + 1] &lt;= 0xBF) &amp;&amp;
+        (0x80 &lt;= bytes[i + 2] &amp;&amp; bytes[i + 2] &lt;= 0xBF)
       ) || ( // excluding surrogates
-        bytes[i] == 0xED &&
-        (0x80 <= bytes[i + 1] && bytes[i + 1] <= 0x9F) &&
-        (0x80 <= bytes[i + 2] && bytes[i + 2] <= 0xBF)
+        bytes[i] == 0xED &amp;&amp;
+        (0x80 &lt;= bytes[i + 1] &amp;&amp; bytes[i + 1] &lt;= 0x9F) &amp;&amp;
+        (0x80 &lt;= bytes[i + 2] &amp;&amp; bytes[i + 2] &lt;= 0xBF)
       )
     ) {
       i += 3;
@@ -629,20 +670,20 @@ _.isUtf8 = function(bytes) {
 
     if (
       ( // planes 1-3
-        bytes[i] == 0xF0 &&
-        (0x90 <= bytes[i + 1] && bytes[i + 1] <= 0xBF) &&
-        (0x80 <= bytes[i + 2] && bytes[i + 2] <= 0xBF) &&
-        (0x80 <= bytes[i + 3] && bytes[i + 3] <= 0xBF)
+        bytes[i] == 0xF0 &amp;&amp;
+        (0x90 &lt;= bytes[i + 1] &amp;&amp; bytes[i + 1] &lt;= 0xBF) &amp;&amp;
+        (0x80 &lt;= bytes[i + 2] &amp;&amp; bytes[i + 2] &lt;= 0xBF) &amp;&amp;
+        (0x80 &lt;= bytes[i + 3] &amp;&amp; bytes[i + 3] &lt;= 0xBF)
       ) || ( // planes 4-15
-        (0xF1 <= bytes[i] && bytes[i] <= 0xF3) &&
-        (0x80 <= bytes[i + 1] && bytes[i + 1] <= 0xBF) &&
-        (0x80 <= bytes[i + 2] && bytes[i + 2] <= 0xBF) &&
-        (0x80 <= bytes[i + 3] && bytes[i + 3] <= 0xBF)
+        (0xF1 &lt;= bytes[i] &amp;&amp; bytes[i] &lt;= 0xF3) &amp;&amp;
+        (0x80 &lt;= bytes[i + 1] &amp;&amp; bytes[i + 1] &lt;= 0xBF) &amp;&amp;
+        (0x80 &lt;= bytes[i + 2] &amp;&amp; bytes[i + 2] &lt;= 0xBF) &amp;&amp;
+        (0x80 &lt;= bytes[i + 3] &amp;&amp; bytes[i + 3] &lt;= 0xBF)
       ) || ( // plane 16
-        bytes[i] == 0xF4 &&
-        (0x80 <= bytes[i + 1] && bytes[i + 1] <= 0x8F) &&
-        (0x80 <= bytes[i + 2] && bytes[i + 2] <= 0xBF) &&
-        (0x80 <= bytes[i + 3] && bytes[i + 3] <= 0xBF)
+        bytes[i] == 0xF4 &amp;&amp;
+        (0x80 &lt;= bytes[i + 1] &amp;&amp; bytes[i + 1] &lt;= 0x8F) &amp;&amp;
+        (0x80 &lt;= bytes[i + 2] &amp;&amp; bytes[i + 2] &lt;= 0xBF) &amp;&amp;
+        (0x80 &lt;= bytes[i + 3] &amp;&amp; bytes[i + 3] &lt;= 0xBF)
       )
     ) {
       i += 4;
@@ -770,7 +811,7 @@ _.filter = function(str, include, exclude) {
     isExclude = match(str, exclude);
   }
 
-  return isInclude && !isExclude;
+  return isInclude &amp;&amp; !isExclude;
 };
 
 /**
@@ -790,13 +831,13 @@ _.find = function(rPath, include, exclude, root) {
     filterPath = root ? path.substring(root.length) : path;
   if (path) {
     var stat = fs.statSync(path);
-    if (stat.isDirectory() && (include || _.filter(filterPath, include, exclude))) {
+    if (stat.isDirectory() &amp;&amp; (include || _.filter(filterPath, include, exclude))) {
       fs.readdirSync(path).forEach(function(p) {
         if (p[0] != '.') {
           list = list.concat(_.find(path + '/' + p, include, exclude, root));
         }
       });
-    } else if (stat.isFile() && _.filter(filterPath, include, exclude)) {
+    } else if (stat.isFile() &amp;&amp; _.filter(filterPath, include, exclude)) {
       list.push(path);
     }
   } else {
@@ -814,7 +855,7 @@ _.find = function(rPath, include, exclude, root) {
 _.del = function(rPath, include, exclude) {
   var removedAll = true;
   var path;
-  if (rPath && _.exists(rPath)) {
+  if (rPath &amp;&amp; _.exists(rPath)) {
     var stat = fs.lstatSync(rPath);
     var isFile = stat.isFile() || stat.isSymbolicLink();
 
@@ -830,14 +871,14 @@ _.del = function(rPath, include, exclude) {
 
     if (stat.isDirectory()) {
       fs.readdirSync(path).forEach(function(name) {
-        if (name != '.' && name != '..') {
-          removedAll = _.del(path + '/' + name, include, exclude) && removedAll;
+        if (name != '.' &amp;&amp; name != '..') {
+          removedAll = _.del(path + '/' + name, include, exclude) &amp;&amp; removedAll;
         }
       });
       if (removedAll) {
         fs.rmdirSync(path);
       }
-    } else if (isFile && _.filter(path, include, exclude)) {
+    } else if (isFile &amp;&amp; _.filter(path, include, exclude)) {
       fs.unlinkSync(path);
     } else {
       removedAll = false;
@@ -868,20 +909,20 @@ _.copy = function(rSource, target, include, exclude, uncover, move) {
     var stat = fs.statSync(source);
     if (stat.isDirectory()) {
       fs.readdirSync(source).forEach(function(name) {
-        if (name != '.' && name != '..') {
+        if (name != '.' &amp;&amp; name != '..') {
           removedAll = _.copy(
             source + '/' + name,
             target + '/' + name,
             include, exclude,
             uncover, move
-          ) && removedAll;
+          ) &amp;&amp; removedAll;
         }
       });
-      if (move && removedAll) {
+      if (move &amp;&amp; removedAll) {
         fs.rmdirSync(source);
       }
-    } else if (stat.isFile() && _.filter(source, include, exclude)) {
-      if (uncover && _exists(target)) {
+    } else if (stat.isFile() &amp;&amp; _.filter(source, include, exclude)) {
+      if (uncover &amp;&amp; _exists(target)) {
         //uncover
         removedAll = false;
       } else {
@@ -1075,7 +1116,7 @@ _.pipe = function(type, callback, def) {
 
         _.assign(settings, processor.defaultOptions || processor.options || {});
         _.assign(settings, fis.config.get('settings.' + key, {}));
-        typeof obj === 'object' && _.assign(settings, obj);
+        typeof obj === 'object' &amp;&amp; _.assign(settings, obj);
         callback(processor, settings, key, type);
       } else {
         fis.log.warning('invalid processor [modules.' + key + ']');
@@ -1141,7 +1182,7 @@ _.download = function(url, callback, extract, opt) {
           writer.write(chunk);
         })
         .on('end', function() {
-          if (status >= 200 && status < 300 || status === 304) {
+          if (status >= 200 &amp;&amp; status &lt; 300 || status === 304) {
             if (extract) {
               fs
                 .createReadStream(tmp)
@@ -1156,11 +1197,11 @@ _.download = function(url, callback, extract, opt) {
                   }
                 })
                 .on('end', function() {
-                  if (callback && (typeof callback(null, tmp, res) === 'undefined')) {
+                  if (callback &amp;&amp; (typeof callback(null, tmp, res) === 'undefined')) {
                     fs.unlinkSync(tmp);
                   }
                 });
-            } else if (callback && (typeof callback(null, tmp, res) === 'undefined')) {
+            } else if (callback &amp;&amp; (typeof callback(null, tmp, res) === 'undefined')) {
               fs.unlinkSync(tmp);
             }
           } else {
@@ -1231,7 +1272,7 @@ _.upload = function(url, opt, data, content, subpath, callback) {
         body += chunk;
       })
       .on('end', function() {
-        if (status >= 200 && status < 300 || status === 304) {
+        if (status >= 200 &amp;&amp; status &lt; 300 || status === 304) {
           callback(null, body);
         } else {
           callback(status);
@@ -1399,7 +1440,7 @@ _.nohup = function(cmd, options, callback) {
       }
     });
   } else {
-    return exec('nohup ' + cmd + ' > /dev/null 2>&1 &', options, function(error, stdout) {
+    return exec('nohup ' + cmd + ' > /dev/null 2>&amp;1 &amp;', options, function(error, stdout) {
       if (error !== null) {
         fis.log.error('exec command [%s] fail, stdout [%s].', cmd, stdout);
       }
@@ -1461,7 +1502,7 @@ _.applyMatches = function(path, matches, allowed) {
       keys.forEach(function(key) {
 
         // 如果指定了允许的属性名，走白名单规则规则。
-        if (allowed && !~allowed.indexOf(key)) {
+        if (allowed &amp;&amp; !~allowed.indexOf(key)) {
           return;
         }
 
@@ -1469,11 +1510,11 @@ _.applyMatches = function(path, matches, allowed) {
 
         // 将 property 中 $1 $2... 替换为本来的值
         if (typeof value === 'string') {
-          value = value.replace(/\$(\d+|&)/g, function(_, k) {
-            k = k === '&' ? 0 : k;
+          value = value.replace(/\$(\d+|&amp;)/g, function(_, k) {
+            k = k === '&amp;' ? 0 : k;
             return m[k] || '';
           });
-        } else if (typeof(value) === 'function' && ~['release', 'url', 'relative'].indexOf(key)) {
+        } else if (typeof(value) === 'function' &amp;&amp; ~['release', 'url', 'relative'].indexOf(key)) {
           value = value.call(null, m, path);
         }
 
@@ -1482,7 +1523,7 @@ _.applyMatches = function(path, matches, allowed) {
         obj['__' + key + 'Index'] = index;
 
         // 调整 plugin 顺序
-        if (value && value.__plugin && value.__pos) {
+        if (value &amp;&amp; value.__plugin &amp;&amp; value.__pos) {
           if (!obj[key]) {
             obj[key] = value;
           } else {
@@ -1494,7 +1535,7 @@ _.applyMatches = function(path, matches, allowed) {
             pos = pos === 'prepend' ? 0 : (pos === 'append' ? obj[key].length : (parseInt(pos) || 0));
             obj[key].splice(pos, 0, value);
           }
-        } else if (_.isPlainObject(value) && _.isPlainObject(obj[key])) {
+        } else if (_.isPlainObject(value) &amp;&amp; _.isPlainObject(obj[key])) {
           fis.util.assign(obj[key], value, true);
         } else {
           obj[key] = value;
@@ -1505,3 +1546,24 @@ _.applyMatches = function(path, matches, allowed) {
 
   return obj;
 };
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Thu Jul 02 2015 13:53:46 GMT+0800 (CST) using the Minami theme.
+    </div>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

@@ -35,9 +35,8 @@
   },
   "devDependencies": {
     "chai": "^2.2.0",
-    "ink-docstrap": "^0.5.2",
     "jsdoc": "^3.3.2",
-    "minami": "^1.1.0",
+    "minami": "git://github.com/2betop/minami.git",
     "mocha": "^2.2.1",
     "mocha-junit-reporter": "^1.4.0",
     "npm-watch": "0.0.0"
@@ -48,7 +47,7 @@
   "scripts": {
     "test": "mocha ./test",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test",
-    "jsdoc": "jsdoc --readme README.md ./lib -r -t ./node_modules/ink-docstrap/template -c .jsdoc.json",
+    "jsdoc": "jsdoc --readme README.md ./lib -r -t ./node_modules/minami -c .jsdoc.json -d ./doc/api",
     "watch": "npm-watch"
   },
   "repository": {
