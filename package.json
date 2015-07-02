@@ -46,7 +46,6 @@
     "jsdoc": "lib/*.js"
   },
   "scripts": {
-    "test": "mocha ./test",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test",
     "jsdoc": "jsdoc --readme README.md ./lib -r -t ./node_modules/ink-docstrap/template -c .jsdoc.json",
     "watch": "npm-watch"
