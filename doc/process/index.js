@@ -94,9 +94,10 @@ function replaceDefine (defines) {
   return function (ret) {
     fis.util.map(ret.src, function (subpath, file) {
       if (file.isHtmlLike) {
+        console.log(subpath);
         var content = file.getContent();
         content = content.replace(/\{\{-([^}]+)\}\}/ig, function ($0, $1) {
-          return (typeof defines[$1.trim()] == 'undefined') ? $0 : defines[$1.trim()];
+          return (typeof defines[$1.trim()] == 'undefined') ? '' : defines[$1.trim()];
         });
         file.setContent(content);
       }
