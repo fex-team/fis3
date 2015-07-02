@@ -125,8 +125,8 @@ code {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 1px 3px;
-  word-wrap: break-word; 
-  word-break: normal; 
+  word-wrap: break-word;
+  word-break: normal;
 }
 pre code{
   border: none;
@@ -368,7 +368,7 @@ ul.demo li {
 .sidebar {
   position: absolute;
   z-index: 10;
-  top: 50px;
+  top: 80px;
   bottom: 0;
   overflow-y: hidden;
   border-right: 1px solid #ececec;
@@ -543,6 +543,20 @@ ul.demo li {
   font-weight: bold;
   font-family: Georgia;
 }
+
+.content h1.name:before,
+.content h2.name:before,
+.content h3.name:before,
+.content h4.name:before,
+.content a[name]:before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 1px;
+  padding-top: 90px;
+  margin-top: -90px;
+}
+
 .footer {
   color: #7f8c8d;
   margin-top: 4em;

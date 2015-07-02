@@ -136,6 +136,26 @@ fis3 release <media>
 fis3 release prod
 ```
 
+发布读取 prod 对应的配置，js 进行压缩。
+
+如上，fis.media() 可以使配置文件变为多份（多个状态，一个状态一份配置）。
+
+```js
+fis.media('rd').match('**', {
+  deploy: fis.plugin('http-push', {
+    receiver: 'http://remote-rd-host/receiver.php'
+  })
+});
+
+fis.media('qa').match('**', {
+  deploy: fis.plugin('http-push', {
+    receiver: 'http://remote-qa-host/receiver.php'
+  })
+});
+```
+
+- `fis3 release rd` push 到 RD 的远端机器上
+- `fis3 release qa` push 到 QA 的远端机器上
 
 [更多配置接口](../api/config-api.md)
 
@@ -165,6 +185,8 @@ fis3 release prod
  ~ ::package
  -- empty
 ```
+
+> `fis3 inspect <media>` 查看特定 media 的分配情况
 
 ### 文件指纹
 
@@ -205,7 +227,7 @@ fis3 release -d ../output
 
 为了减少资源网络传输的大小，通过压缩器对 js、css、图片进行压缩是一直以来前端工程优化的选择。在 FIS3 中这个过程非常简单，通过给文件配置压缩器即可。
 
-```bash
+```js
 // 清除其他配置，只保留如下配置
 fis.match('*.js', {
   // fis-optimizer-uglify-js 插件进行压缩，已内置
