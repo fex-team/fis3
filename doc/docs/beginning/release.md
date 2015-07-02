@@ -157,8 +157,6 @@ fis.media('qa').match('**', {
 - `fis3 release rd` push 到 RD 的远端机器上
 - `fis3 release qa` push 到 QA 的远端机器上
 
-fis.media() 可以有无限个状态，相当于每份配置有一个配置文件，一份配置文件如何构建。
-
 [更多配置接口](../api/config-api.md)
 
 我们执行 `fis3 inspect` 来查看文件命中属性的情况。`fis3 inspect` 是一个非常重要的命令，可以查看文件分配到的属性，这些属性决定了文件将如何被编译处理。

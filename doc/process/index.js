@@ -6,9 +6,9 @@ function markdownParse(settings) {
 
   function wrapper(title, content, path) {
     content += util.format(
-      '<div class="github-filepath"> 文档内容有误，可提 PR，文档地址 ' +
-      '<a href="https://github.com/fex-team/fis3/blob/dev/doc%s">/doc%s</a>' +
-      '</div>', path, path);
+      '<blockquote class="warning">' + 
+      '<p>文档内容有误，可提 PR，文档地址: <i class="fa fa-github"></i><a href="https://github.com/fex-team/fis3/blob/dev/doc%s">/doc%s</a></p>' + 
+      '</blockquote>', path, path);
     return layout.getContent()
       .replace('{{content}}', content)
       .replace('{{title}}', title);

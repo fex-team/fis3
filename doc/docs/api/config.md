@@ -103,8 +103,8 @@ fis.match('::packager', {
 ```
 表示当 [packager][] 阶段**所有的文件**都分配某些属性
 
-[fis.match()]: api#fismatch
-[fis.media()]: api#fismedia
-[文件属性]: api#文件属性
-[glob]: glob
-[packager]: api#打包阶段插件
+[fis.match()]: ./config-api.md#fis.match()
+[fis.media()]: ./config-api.md#fis.media()
+[文件属性]: ./config-props.md#文件属性
+[glob]: ./config-glob.md
+[packager]: ./config-props.md#打包时插件
