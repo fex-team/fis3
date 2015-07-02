@@ -13,6 +13,36 @@ ignores = ignores.concat([
 
 fis.set('project.ignore', ignores);
 
+fis.match('*', {
+  useHash: false,
+  domain: fis.media().get('domain')
+});
+
+fis.match('docs/**.md', {
+  parser: build.markdownParse(),
+  useDomain: true,
+  isDoc: true,
+  rExt: '.html',
+  _isResourceMap: false // 强制不让替换 `__RESOURCE__MAP__`
+});
+
+fis.match('docs/INDEX.md', {
+  useCache: false,
+  isIndex: true
+});
+
+fis.match('::packager', {
+  prepackager: [build.buildNav(), build.hackActiveTab()],
+  postpackager: [
+    build.replaceDefine({
+      'BASE_PATH': fis.media().get('domain'),
+      'SITE_DESC': 'FIS3 面向前端的工程构建系统',
+      'SITE_AUTHOR': 'fis-team'
+    })
+  ]
+});
+
+//--- prod ---
 fis.media('prod').set('domain', '/fis3');
 
 fis.media('prod')
@@ -33,34 +63,6 @@ fis.media('prod')
   });
 
 // set pack
-// fis.media('prod').set('packager', fis.plugin('loader'));
-
-
-fis.match('*', {
-  useHash: false,
-  domain: fis.media().get('domain')
-});
-
-fis.match('docs/**.md', {
-  parser: build.markdownParse(),
-  useDomain: true,
-  isDoc: true,
-  rExt: '.html'
-});
-
-fis.match('docs/INDEX.md', {
-  useCache: false,
-  isIndex: true
-});
-
-fis.match('::packager', {
-  prepackager: [build.buildNav(), build.hackActiveTab()],
-  postpackager: [
-    build.replaceDefine({
-      'BASE_PATH': fis.media().get('domain'),
-      'SITE_DESC': 'FIS3 面向前端的工程构建系统',
-      'SITE_AUTHOR': 'fis-team'
-    }),
-    fis.media().get('packager') || function() {}
-  ]
+fis.media('prod').match('::packager', {
+  postpackager: fis.plugin('loader', 'append')
 });

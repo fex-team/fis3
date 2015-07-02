@@ -6,7 +6,7 @@ FIS3 在执行编译的过程中，会扫描这些编译标记，从而建立一
 
 ### 在html中声明依赖
 
-> 用户可以在html的注释中声明依赖关系，这些依赖关系最终会被记录到fis编译产出的 **map.json** 文件中。
+> 用户可以在html的注释中声明依赖关系，这些依赖关系最终会被记录下来，当某个文件中包含字符 `__RESOURCE_MAP__` 那么这个记录会被字符串化后替换 `__RESOURCE_MAP__`。为了方便描述呈现，我们假定项目根目录下有个文件 **manifest.json**包含此字符，编译后会把表结构替换到这个文件中。
 
 在项目的index.html里使用注释声明依赖关系：
 
@@ -17,16 +17,30 @@ FIS3 在执行编译的过程中，会扫描这些编译标记，从而建立一
 -->
 ```
 
-默认情况下，只有js和css文件会输出到map.json表中，如果想将html文件加入表中，需要通过配置 ```useMap``` 让HTML文件加入map.json，例如：
+默认情况下，只有js和css文件会输出到manifest.json表中，如果想将html文件加入表中，需要通过配置 ```useMap``` 让HTML文件加入 **manifest.json**，例如：
 
 ```javascript
 //fis-conf.js
-fis.match('**.html', {
+fis.match('*.html', {
     useMap: true
 })
 ```
 
-执行 fis release --dest ./output --md5 命令对项目进行编译，查看output目录下的map.json文件，则可看到：
+配置以下内容到配置文件进行编译
+
+```js
+// fis-conf.js
+fis.match('*.html', {
+    useMap: true
+});
+
+fis.match('*.{js,css}', {
+    // 开启 hash
+    useHash: true
+});
+```
+
+查看 output 目录下的 **manifest.json** 文件，则可看到：
 
 ```json
 {
@@ -62,7 +76,7 @@ fis.match('**.html', {
  */
 ```
 
-经过编译之后，查看产出的 **map.json** 文件，可以看到：
+经过编译之后，查看产出的 **manifest.json** 文件，可以看到：
 
 ```json
 {
@@ -90,7 +104,7 @@ fis.match('**.html', {
  */
 ```
 
-经过编译之后，查看产出的 **map.json** 文件，可以看到：
+经过编译之后，查看产出的 **manifest.json** 文件，可以看到：
 
 ```json
 {
