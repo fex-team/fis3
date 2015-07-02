@@ -17,7 +17,7 @@ after_success:
 - echo "https://${GH_TOKEN}:@github.com" > .git/credential
 - git add *
 - git commit -am "build fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
-- git push -f origin gh-pages
+- git push -uf origin gh-pages
 
 cache:
   directories:
