@@ -10,7 +10,7 @@
 - 两个 png 图片
 - 两个 js 文件
 
-例子下载地址 @TODO
+例子下载地址 [demo-lv1](./demo/demo-lv1.tar.gz)
 
 ### 安装一些插件
 

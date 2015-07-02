@@ -1,7 +1,3 @@
-fis.match('*.{js,css,png}', {
-  useHash: true
-});
-
 // fis.match('::packager', {
 //   spriter: fis.plugin('csssprites')
 // });
