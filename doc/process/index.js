@@ -27,13 +27,10 @@ function markdownParse(settings) {
       link.level = level;
       var escapedText = encodeURI(text);
       if (level != 1) level += 1;
-      return '<h' + level + ' class="' + (level == 1 ? 'page-header' : '') +
-        (level == 3 ? '" id="' + text : '') +
-        '"><a name="' +
-        escapedText +
-        '" href="#' +
-        escapedText +
-        '">' + text + '</a>' +
+      return '<a name="'+ escapedText + '" class="title-anchor"></a><h' 
+        + level + ' class="' + (level == 1 ? 'page-header' : '') +
+        (level == 3 ? '" id="' + text : '">') +
+        text +
         '</h' + level + '>';
     };
 

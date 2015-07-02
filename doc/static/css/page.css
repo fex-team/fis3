@@ -547,26 +547,25 @@ ul.demo li {
 .content h1.name:before,
 .content h2.name:before,
 .content h3.name:before,
-.content h4.name:before,
-.content a[name]:before {
+.content h4.name:before {
   content: '';
   display: block;
   width: 1px;
   height: 1px;
-  padding-top: 90px;
-  margin-top: -90px;
+  padding-top: 80px;
+  margin-top: -80px;
 }
 
-.content .linenums li {
-  position: relative;
-}
-
-.content .linenums li:before {
-  content: "";
-  display: inline-block;
-  padding-top: 90px;
+.content a.title-anchor{
+  display:block;
+  padding-top:90px;
   margin-top: -90px;
-  position: absolute;
+}
+.content h4{
+  color: #4F84D3;
+  font-size: 20px;
+  padding-left: 10px;
+  border-left: 4px solid #4F84D3;
 }
 
 .footer {
