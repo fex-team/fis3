@@ -123,13 +123,13 @@ section {
   font-weight: lighter;
 }
 
-nav.jsdoc {
+.jsdoc-nav {
   background: #fff;
   overflow: auto;
   height: 100%;
 }
 
-nav.jsdoc h3 {
+.jsdoc-nav h3 {
   margin-top: 12px;
   font-size: 13px;
   text-transform: uppercase;
@@ -141,7 +141,7 @@ nav.jsdoc h3 {
   color: #000;
 }
 
-nav.jsdoc ul {
+.jsdoc-nav ul {
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', arial, sans-serif;
   font-size: 100%;
   line-height: 17px;
@@ -150,8 +150,8 @@ nav.jsdoc ul {
   list-style-type: none;
 }
 
-nav.jsdoc ul a,
-nav.jsdoc ul a:active {
+.jsdoc-nav ul a,
+.jsdoc-nav ul a:active {
   font-family: 'Montserrat', sans-serif;
   line-height: 18px;
   padding: 0;
@@ -159,41 +159,41 @@ nav.jsdoc ul a:active {
   font-size: 12px;
 }
 
-nav.jsdoc ul a:hover,
-nav.jsdoc ul a:active {
+.jsdoc-nav ul a:hover,
+.jsdoc-nav ul a:active {
   color: hsl(200, 100%, 43%);
   text-decoration: none;
 }
 
-nav.jsdoc > ul {
+.jsdoc-nav > ul {
   padding: 0 10px;
 }
 
-nav.jsdoc > ul > li > a {
+.jsdoc-nav > ul > li > a {
   color: #000;
 }
 
-nav.jsdoc ul ul {
+.jsdoc-nav ul ul {
   margin-bottom: 10px
 }
 
-nav.jsdoc ul ul a {
+.jsdoc-nav ul ul a {
   color: hsl(207, 1%, 60%);
   border-left: 1px solid hsl(207, 10%, 86%);
 }
 
-nav.jsdoc ul ul a,
-nav.jsdoc ul ul a:active {
+.jsdoc-nav ul ul a,
+.jsdoc-nav ul ul a:active {
   padding-left: 20px
 }
 
-nav.jsdoc h2 {
+.jsdoc-nav h2 {
    font-size: 12px;
    margin: 0;
    padding: 0;
 }
 
-nav.jsdoc > h2 > a {
+.jsdoc-nav > h2 > a {
    display: block;
    margin: 10px 0 -10px;
    color: hsl(202, 71%, 50%) !important;
@@ -513,7 +513,7 @@ dl.param-type {
   transform: scale(0.75) rotate(45deg);
 }
 
-.nav-trigger:checked ~ nav.jsdoc {
+.nav-trigger:checked ~ .jsdoc-nav {
   left: 0 !important;
 }
 
@@ -545,7 +545,7 @@ dl.param-type {
     overflow-x: hidden;
   }
 
-  nav.jsdoc {
+  .jsdoc-nav {
     background: #FFF;
     width: 250px;
     height: 100%;
@@ -567,42 +567,20 @@ dl.param-type {
     z-index: 2;
   }
 
-  #main {
+  .content {
     width: 100%;
     min-width: 360px;
   }
 
-  #main h1.page-title {
+  .content h1.page-title {
     margin: 1em 0;
   }
 
-  #main section {
+  .content section {
     padding: 0;
   }
 
   footer {
     margin-left: 0;
   }
-}
-
-.jsdoc-wrapper {
-  margin: 80px auto auto;
-  width: 1000px;
-  overflow-x: visible;
-}
-.jsdoc-inner {
-  display: table;
-  position: relative;
-  width: 100%;
-}
-
-.jsdoc-inner nav.jsdoc {
-  display: table-cell;
-  width: 250px;
-  vertical-align: top;
-}
-
-.jsdoc-inner #main {
-  display: table-cell;
-  vertical-align: top;
 }
