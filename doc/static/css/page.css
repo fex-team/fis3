@@ -431,7 +431,7 @@ ul.demo li {
 .content.api ul {
   font-size: 0.9em;
   padding-left: 1.25em;
-  color: #7f8c8d;
+  color: #6C6F73;
 }
 .content a.button {
   font-size: 1.1em;
@@ -855,7 +855,7 @@ nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after {
     position: absolute;
     height: 3px;
     width: 100%;
-    top: 43px;
+    top: 36px;
     left: 0;
     padding: 0;
     transition: all 0.2s ease-in-out;
