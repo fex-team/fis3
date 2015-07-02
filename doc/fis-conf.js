@@ -13,11 +13,28 @@ ignores = ignores.concat([
 
 fis.set('project.ignore', ignores);
 
-fis.media('prod').match('*', {
-  domain: '/fis3'
-});
-
 fis.media('prod').set('domain', '/fis3');
+
+fis.media('prod')
+  .match('*', {
+    useHash: true,
+    domain: fis.media().get('domain')
+  })
+  .match('*.js', {
+    optimizer: fis.plugin('uglify-js'),
+    packTo: '/static/aio.js'
+  })
+  .match('*.min.js', {
+    optimizer: null
+  })
+  .match('*.css', {
+    optimizer: fis.plugin('clean-css'),
+    packTo: '/static/aio.css'
+  });
+
+// set pack
+// fis.media('prod').set('packager', fis.plugin('loader'));
+
 
 fis.match('*', {
   useHash: false,
@@ -38,11 +55,12 @@ fis.match('docs/INDEX.md', {
 
 fis.match('::packager', {
   prepackager: [build.buildNav(), build.hackActiveTab()],
-  postpackager: build.replaceDefine(
-    {
+  postpackager: [
+    build.replaceDefine({
       'BASE_PATH': fis.media().get('domain'),
       'SITE_DESC': 'FIS3 面向前端的工程构建系统',
       'SITE_AUTHOR': 'fis-team'
-    }
-  )
+    }),
+    fis.media().get('packager') || function() {}
+  ]
 });

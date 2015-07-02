@@ -15,6 +15,7 @@
   "author": "fansekey",
   "license": "MIT",
   "dependencies": {
+    "fis3-postpackager-loader": "^1.0.17",
     "highlight.js": "^8.6.0",
     "marked": "^0.3.3"
   }
