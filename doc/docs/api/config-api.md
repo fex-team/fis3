@@ -162,3 +162,4 @@ fis.match('*.less', {
 });
 ```
 
+[文件属性]: ./config-props.md#文件属性

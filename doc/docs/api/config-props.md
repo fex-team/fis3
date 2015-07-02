@@ -155,7 +155,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
     })
     ```
     widget 目录下的所有 js 文件将会被合并到 /static/pkg_widget.js 中。
-    **packTo 设置的是源码路径，也会受到已经设置的 fis.match 规则的影响**，比如可以配置[fis.match](#fismatch) 来更改 `packTo` 的产出路径或者 url；
+    **packTo 设置的是源码路径，也会受到已经设置的 fis.match 规则的影响**，比如可以配置[fis.match](#fis.match()) 来更改 `packTo` 的产出路径或者 url；
 
     ```js
     fis.match('/static/pkg_widget.js', {
