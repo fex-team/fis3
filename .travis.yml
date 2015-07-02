@@ -13,7 +13,6 @@ after_success:
 - cd ./output && git init && git remote add origin https://github.com/fex-team/fis3.git
 - git config --global user.email "fansekey@gmail.com"
 - git config --global user.name "xiangshouding"
-- git remote set-url origin https://github.com/fex-team/fis3.git
 - git config credential.helper "store --file=.git/credential"
 - echo "https://${GH_TOKEN}:@github.com" > .git/credential
 - git add *
