@@ -5,7 +5,8 @@ var build = require('./process');
 var ignores = fis.get('project.ignore');
 ignores.concat([
   '/process/*',
-  '/demo*'
+  '/demo*',
+  '/README.md'
 ]);
 
 fis.media('prod').match('*', {
