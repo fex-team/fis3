@@ -290,6 +290,13 @@ ul#demo li,
 ul.demo li {
   margin-left: 1.5em;
 }
+.header-wrap .toggle{
+  display: none;
+  margin-top: 10px;
+  color:  white;
+  font-size: 18px;
+  cursor: pointer;
+}
 @media screen and (max-width: 720px) {
   #demo,
   .demo {
@@ -416,6 +423,7 @@ ul.demo li {
 .content {
   padding: 80px 0 20px;
 }
+
 .content.with-sidebar {
   margin-left: 280px;
   min-height: 600px;
@@ -480,6 +488,13 @@ ul.demo li {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
+.content blockquote.warning {
+  border: 1px solid #ececec;
+  border-left: 4px solid rgb(250, 130, 166);
+}
+.content blockquote.warning:before {
+  background-color: rgb(250, 130, 166);
+}
 .content blockquote:before {
   position: absolute;
   top: 50%;
@@ -541,36 +556,15 @@ ul.demo li {
     position: fixed;
   }
 }
-@media screen and (max-width: 1200px) {
-  #ad {
-    z-index: 8;
-    position: relative;
-    width: auto;
-    height: 100px;
-    padding: 0;
-    bottom: 0;
-    right: 0;
-    margin: 30px 0 35px;
-  }
-  #ad .carbon-wrap,
-  #ad .carbon-img,
-  #ad .carbon-text,
-  #ad .carbon-poweredby {
-    display: inline-block;
-    vertical-align: top;
-  }
-  #ad .carbon-text {
-    width: 130px;
-    margin-left: 15px;
-  }
-  #ad .carbon-poweredby {
-    position: absolute;
-    bottom: 0;
-    left: 145px;
-  }
-}
 @media screen and (max-width: 720px) {
-  .header-wrap{
+  .header-wrap .toggle{
+    display: inline-block;
+    width: 30px;
+  }
+  .header-wrap header{
+    padding: 0px 20px;
+  }
+  .header-wrap .nav-left,header .logo {
     display: none;
   }
   .content{
@@ -581,12 +575,6 @@ ul.demo li {
   body {
     -webkit-text-size-adjust: none;
     font-size: 14px;
-  }
-  #header {
-    display: none;
-  }
-  #logo {
-    display: none;
   }
   .nav-link {
     padding-bottom: 1px;
@@ -606,6 +594,7 @@ ul.demo li {
     height: 100%;
     top: 0;
     left: 0;
+    overflow: scroll;
     padding: 60px 30px 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     box-sizing: border-box;
@@ -629,6 +618,7 @@ ul.demo li {
   .content p.tip {
     margin-left: 0;
   }
+
   .footer {
     margin-left: 0;
     text-align: center;
@@ -856,6 +846,9 @@ nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after {
 .sidebar>ul>li,.sidebar>ul>li>a{
   color:#2E7CD5;
 }
+.sidebar li a:active{
+  color:#2E7CD5;
+}
 
 .sidebar ul li ul{
   font-size: 14px;
@@ -869,4 +862,20 @@ nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after {
   margin-top: 30px;
   padding: 10px;
   color: #FFFFFF;
+}
+
+.sidebar .main-nav{
+  margin: 10px 0 20px;
+  display: none;
+}
+.sidebar.open .main-nav{
+  display: block;
+}
+.sidebar .main-nav a{
+  display: block;
+  padding: 0px 8px;
+  line-height: 20px;
+  margin-bottom: 8px;
+  color: #888;
+  float: none;
 }
