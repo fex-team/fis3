@@ -144,6 +144,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
         release: '/static/$0'
     });
     ```
+
 #### packTo
 * 解释：分配到这个属性的文件将会合并到这个属性配置的文件中
 * 值类型：`string`
@@ -326,6 +327,7 @@ fis.match('*.js', {
     })
 })
 ```
+
 [更多插件](http://npmsearch.com/?q=fis-lint%20fis3-lint)
 
 #### parser
