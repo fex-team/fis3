@@ -117,7 +117,8 @@
         //生成左边导航用于在移动端查看使用
         function buildSideNav(){
             $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
-            $(".header-wrap .toggle").on("click",function(){
+            
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
                 $(".sidebar").toggleClass("open");
                 return false;
             })
