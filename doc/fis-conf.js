@@ -3,11 +3,15 @@ var build = require('./process');
 
 // project ignores
 var ignores = fis.get('project.ignore');
-ignores.concat([
-  '/process/*',
-  '/demo*',
-  '/README.md'
+ignores = ignores.concat([
+  'process/**',
+  'demo/**',
+  'README.md',
+  '**.adoc',
+  'package.json'
 ]);
+
+fis.set('project.ignore', ignores);
 
 fis.media('prod').match('*', {
   domain: '/fis3'
