@@ -542,6 +542,18 @@ ul.demo li {
   margin-top: -90px;
 }
 
+.content .linenums li {
+  position: relative;
+}
+
+.content .linenums li:before {
+  content: "";
+  display: inline-block;
+  padding-top: 90px;
+  margin-top: -90px;
+  position: absolute;
+}
+
 .footer {
   color: #7f8c8d;
   margin-top: 4em;
