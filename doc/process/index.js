@@ -110,6 +110,27 @@ function replaceDefine(defines) {
   };
 }
 
+function hackActiveTab() {
+  return function(ret) {
+    fis.util.map(ret.src, function(subpath, file) {
+      if (file.basename !== 'header.html' && file.isHtmlLike) {
+        var content = file.getContent();
+        // 此处逻辑很 ugly
+        content = content.replace(/active-flag\s*=\s*("[^"]+"|'[^']+')/ig, function($0, $1) {
+          var info = fis.util.stringQuote($1);
+          var paths = subpath.split('/');
+          if (info.rest == paths[1]) {
+            return 'is-active';
+          }
+          return '';
+        });
+        file.setContent(content);
+      }
+    });
+  };
+}
+
+module.exports.hackActiveTab = hackActiveTab;
 module.exports.markdownParse = markdownParse;
 module.exports.buildNav = buildNav;
 module.exports.replaceDefine = replaceDefine;

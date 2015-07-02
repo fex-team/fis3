@@ -37,7 +37,7 @@ fis.match('docs/INDEX.md', {
 });
 
 fis.match('::packager', {
-  prepackager: build.buildNav(),
+  prepackager: [build.buildNav(), build.hackActiveTab()],
   postpackager: build.replaceDefine(
     {
       'BASE_PATH': fis.media().get('domain'),
