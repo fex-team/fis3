@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+- '0.10'
+script:
+env:
+  global:
+  - secure: a9kINH5eZ/xVQe8gQwy4dOGnVTkEBe9Tkzx28/mHrFTFGU5hyzfKrMRmXLPTiyuvSHcNy1t3IOfldhzT0luBb68fZdxUtQ4jR6wFLvpiG20cX8nUV6wX7Zmk8Ozt81ZRvlYESSvWdqM6PYWU+t6TOVtt2cQUUn+6F/JWMTPWAK0=
+install:
+- npm install
+after_success:
+- git config --global user.email "fansekey@gmail.com"
+- git config --global user.name "xiangshouding"
+- git remote set-url origin https://github.com/fis-components/components.git
+- git config credential.helper "store --file=.git/credential"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credential
+- git checkout dev
+- cd doc && npm install && node ../bin/fis.js release prod -d ./output
+- cd ./output && git init && git remote set-url origin https://github.com/fex-team/fis3.git
+- git add *
+- git commit -am "build fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
+- git push origin gh-pages
+
+cache:
+  directories:
+  - node_modules
+branches:
+  only:
+  - master
