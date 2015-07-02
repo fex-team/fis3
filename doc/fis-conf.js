@@ -14,8 +14,7 @@ ignores = ignores.concat([
 fis.set('project.ignore', ignores);
 
 fis.match('*', {
-  useHash: false,
-  domain: fis.media().get('domain')
+  useHash: false
 });
 
 fis.match('docs/**.md', {
@@ -47,8 +46,10 @@ fis.media('prod').set('domain', '/fis3');
 
 fis.media('prod')
   .match('*', {
-    useHash: true,
-    domain: fis.media().get('domain')
+    domain: '/fis3'
+  })
+  .match('*.{js,css,png,gif,eot,svg,ttf,woff,woff2', {
+    useHash: true
   })
   .match('*.js', {
     optimizer: fis.plugin('uglify-js'),
@@ -64,5 +65,5 @@ fis.media('prod')
 
 // set pack
 fis.media('prod').match('::packager', {
-  postpackager: fis.plugin('loader', 'append')
+  postpackager: fis.plugin('loader', {}, 'append')
 });
