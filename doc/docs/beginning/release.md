@@ -64,7 +64,7 @@ fis3 release -d D:\output
 在默认不配置的情况下只是对资源相对路径修改成了绝对路径。通过配置文件可以轻松分离开发路径（源码路径）与部署路径。比如我们想让所有的静态资源构建后到 `static` 目录下。
 
 ```js
-// 配置配置文件，注意，清空所有的配置，只留下一下代码即可。
+// 配置配置文件，注意，清空所有的配置，只留下以下代码即可。
 fis.match('*.{png,js,css}', {
   release: '/static/$0'
 });
@@ -97,7 +97,7 @@ fis.match(selector, props);
 - `selector` FIS3 把匹配文件路径的路径做为selector，匹配到的文件会分配给它设置的 `props`
 - `props` 编译规则属性，包括文件属性和插件属性，[更多属性](../api/config-props.md)
 
-我们修改例子的配置文件 `fis-conf.js`，添加一下内容
+我们修改例子的配置文件 `fis-conf.js`，添加以下内容
 
 ```js
 fis.match('*.js', {

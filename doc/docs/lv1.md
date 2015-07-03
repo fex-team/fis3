@@ -53,7 +53,7 @@ fis.match('*.less', {
 
 ### 简单合并
 
-在起步中我们阐述了[图片合并 CssSprite](./beginning/release.md#CssSprite图片合并)，为了减少请求。现在介绍一下一种比较简单的打包 js，css 的方式。
+在起步中我们阐述了[图片合并 CssSprite](./beginning/release.md#CssSprite图片合并)，为了减少请求。现在介绍一种比较简单的打包 js，css 的方式。
 
 启用打包后处理插件进行合并。
 

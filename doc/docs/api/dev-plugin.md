@@ -29,7 +29,7 @@ module.exports = function (content, file, settings) {
 
 为了搞清楚哪些功能用那种类型的插件去实现比较好，建议详细阅读[运行原理:单文件编译过程][]这篇文档。
 
-fis 的插件是以 NPM 包的形式提供的，这将意味着 fis 的插件都是一个 NPM 包，并且最终也需要发布到 NPM 平台上。在开始之前你需要了解一下 node 是如何加载一个 NPM 包的 https://nodejs.org/api/modules.html。
+fis 的插件是以 NPM 包的形式提供的，这将意味着 fis 的插件都是一个 NPM 包，并且最终也需要发布到 NPM 平台上。在开始之前你需要了解 node 是如何加载一个 NPM 包的 https://nodejs.org/api/modules.html。
 
 FIS3 不再强制用户必须把插件（一个 NPM 包）进行全局安装，可把包安装到 fis-conf.js 同目录下（项目目录）或者某一个父目录，这个遵循 node 加载一个包的规范即可。
 
@@ -112,8 +112,7 @@ module.exports = function (ret, conf, settings, opt) {
 }
 ```
 
-跟编译是打包一样，也可项目本地开发或者是直接写到 fis-conf.js 中。参考[配置API:打包阶段插件](./config-api.md#打包阶段插件)其配置方式与单文件编译阶段插件配置方式不同。由于 packager 时所有文件都在处理之列，所以需要通过一下方式进行配置；
-
+跟编译是打包一样，也可项目本地开发或者是直接写到 fis-conf.js 中。参考[配置API:打包阶段插件](./config-api.md#打包阶段插件)其配置方式与单文件编译阶段插件配置方式不同。由于 packager 时所有文件都在处理之列，所以需要通过以下方式进行配置；
 
 ```js
 fis.match('::packager', {
