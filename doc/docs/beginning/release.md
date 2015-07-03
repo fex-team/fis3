@@ -117,7 +117,7 @@ fis.match('*.png', {
 
 - 规则覆盖
 
-  假设有两条规则 A 和 B，它俩同时命中了文件 `test.js`，如果 A 在 B 前面，B 的属性会覆盖 A 的同名属性。不同名属性追加到 A.js 的 File 对象上。
+  假设有两条规则 A 和 B，它俩同时命中了文件 `test.js`，如果 A 在 B 前面，B 的属性会覆盖 A 的同名属性。不同名属性追加到 *test.js* 的 File 对象上。
 
   ```js
   // A
@@ -126,13 +126,13 @@ fis.match('*.png', {
   });
 
   // B
-  fis.match('A.js', {
+  fis.match('test.js', {
     useHash: true,
     release: '/dist/js/$0'
   })
   ```
   
-  那么 **A.js** 分配到的属性
+  那么 **test.js** 分配到的属性
   
   ```js
   {
