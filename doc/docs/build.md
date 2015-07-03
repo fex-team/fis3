@@ -44,7 +44,7 @@ function process(file) {
   if (file.preprocessor) {
     pipe('preprocessor', file);
   }
-  if (file.useStandard) {
+  if (file.standard) {
     standard(file); // 标准化处理
   }
   if (file.postprocessor) {
