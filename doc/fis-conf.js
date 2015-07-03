@@ -15,10 +15,6 @@ fis.set('project.ignore', ignores);
 // settings
 fis.media('prod').set('domain', '/fis3');
 
-fis.match('*', {
-  useHash: false
-});
-
 fis.match('docs/**.md', {
   parser: build.markdownParse(),
   useDomain: true,
@@ -49,7 +45,7 @@ fis.media('prod')
   .match('*', {
     domain: fis.media().get('domain')
   })
-  .match('*.{js,css,png,gif,eot,svg,ttf,woff,woff2', {
+  .match('*.{js,css,png,gif,eot,svg,ttf,woff,woff2}', {
     useHash: true
   })
   .match('*.js', {
