@@ -85,7 +85,7 @@ fis3 release -d ../output
 
 ### 配置文件
 
-默认配置文件为 `fis-conf.js`，FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的配置方式。固化了构建流程，以期让工程构建变得简单。
+默认配置文件为 `fis-conf.js`，FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的[配置方式](../api/config.md)。固化了构建流程，以期让工程构建变得简单。
 
 #### fis.match()
 
@@ -112,6 +112,34 @@ fis.match('*.png', {
   useHash: false
 });
 ```
+
+**重要特性**
+
+- 规则覆盖
+
+  假设有两条规则 A 和 B，它俩同时命中了文件 `test.js`，如果 A 在 B 前面，B 的属性会覆盖 A 的同名属性。不同名属性追加到 A.js 的 File 对象上。
+
+  ```js
+  // A
+  fis.match('*', {
+    release: '/dist/$0'
+  });
+
+  // B
+  fis.match('A.js', {
+    useHash: true,
+    release: '/dist/js/$0'
+  })
+  ```
+  
+  那么 **A.js** 分配到的属性
+  
+  ```js
+  {
+    useHash: true, // B
+    release: '/dist/js/$0' // B
+  }
+  ```
 
 #### fis.media()
 
@@ -141,13 +169,13 @@ fis3 release prod
 如上，fis.media() 可以使配置文件变为多份（多个状态，一个状态一份配置）。
 
 ```js
-fis.media('rd').match('**', {
+fis.media('rd').match('*', {
   deploy: fis.plugin('http-push', {
     receiver: 'http://remote-rd-host/receiver.php'
   })
 });
 
-fis.media('qa').match('**', {
+fis.media('qa').match('*', {
   deploy: fis.plugin('http-push', {
     receiver: 'http://remote-qa-host/receiver.php'
   })
@@ -156,6 +184,8 @@ fis.media('qa').match('**', {
 
 - `fis3 release rd` push 到 RD 的远端机器上
 - `fis3 release qa` push 到 QA 的远端机器上
+
+> media `dev` 已经被占用，默认情况下不加 `<media>` 参数时默认为 `dev`
 
 [更多配置接口](../api/config-api.md)
 
@@ -187,7 +217,6 @@ fis.media('qa').match('**', {
 ```
 
 > `fis3 inspect <media>` 查看特定 media 的分配情况
-
 ### 文件指纹
 
 文件指纹，唯一标识一个文件。在开启强缓存的情况下，如果文件的 URL 不发生变化，无法刷新浏览器缓存。一般都需要通过一些手段来强刷缓存，一种方式是添加时间戳，每次上线更新文件，给这个资源文件的 URL 添加上时间戳。
@@ -287,5 +316,56 @@ fis.match('*.css', {
 ```
 
 - CssSprites 详细配置参见 [fis-spriter-csssprites](https://github.com/fex-team/fis-spriter-csssprites)
+
+### 功能组合
+
+我们学习了如何用 FIS3 做压缩、文件指纹、图片合并、资源定位，现在把这些功能组合起来，配置文件如下；
+
+```js
+// 加 md5
+fis.match('*.{js,css,png}', {
+  useHash: true
+});
+
+// 启用 fis-spriter-csssprites 插件
+fis.match('::packager', {
+  spriter: fis.plugin('csssprites')
+})
+
+// 对 CSS 进行图片合并
+fis.match('*.css', {
+  // 给匹配到的文件分配属性 `useSprite`
+  useSprite: true
+});
+
+fis.match('*.js', {
+  // fis-optimizer-uglify-js 插件进行压缩，已内置
+  optimizer: fis.plugin('uglify-js')
+});
+
+fis.match('*.css', {
+  // fis-optimizer-clean-css 插件进行压缩，已内置
+  optimizer: fis.plugin('clean-css')
+});
+
+fis.match('*.png', {
+  // fis-optimizer-png-compressor 插件进行压缩，已内置
+  optimizer: fis.plugin('png-compressor')
+});
+```
+
+- `fis3 release` 时添加 md5、静态资源压缩、css 文件引用图片进行合并
+
+可能有时候开发的时候不需要压缩、合并图片、也不需要 hash。那么给上面配置追加如下配置；
+
+```js
+fis.media('debug').match('*.{js,css,png}', {
+  useHash: false,
+  useSprite: false,
+  optimizer: null
+})
+```
+
+- `fis3 release debug` 启用 media `debug` 的配置，覆盖上面的配置，把诸多功能关掉。
 
 [资源定位]: ../user-dev/uri.md
