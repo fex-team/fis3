@@ -71,7 +71,7 @@ fis3 release -wL
 > 示例脚本是 php 脚本，测试机 Web 需要支持 PHP 的解析 <br />
 > 如果需要其他语言实现，请参考这个 php 脚本实现，如果嫌麻烦，我们提供了一个 node 版本的[接收端](https://github.com/fex-team/receiver)
 
-假定这个 URL 是：`http://cq.01.p.p.baidu.com:8888/receiver.php'
+假定这个 URL 是：`http://cq.01.p.p.baidu.com:8888/receiver.php`
 
 那么我们只需要在配置文件配置
 
