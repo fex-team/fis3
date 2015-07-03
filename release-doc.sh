@@ -2,7 +2,7 @@ git checkout master
 rev="fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
 
 ## 生成 API 文档
-npm run js-doc
+npm run jsdoc
 
 ## 编译官网
 cd ./doc && npm install && node ../bin/fis.js release prod -d ./output

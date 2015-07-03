@@ -60,45 +60,137 @@
 
 
     <section class="readme">
-        <article><p><img src="https://raw.githubusercontent.com/fex-team/fis3/master/doc/logo.png?token=ACksmYIdau2D7VWDzMo0KnxEsNbDjhnqks5VijMswA%3D%3D" alt=""></p>
-<h1>FIS3</h1><p><img src="https://img.shields.io/npm/v/fis3.svg" alt=""> <img src="https://img.shields.io/npm/dm/fis3.svg" alt=""></p>
-<p>FIS3 面向<strong>前端</strong>的<strong>工程构建系统</strong>。解决前端工程中性能优化、资源加载（异步、同步、按需、预加载、依赖管理、合并、内嵌）、模块化开发、自动化工具、开发规范、代码部署等问题。</p>
-<pre class="prettyprint source"><code>npm install -g fis3</code></pre><h2>文档</h2><p>快速入门、配置、插件开发以及原理等文档 <a href="doc/docs/INDEX.md">doc/docs/INDEX.md</a></p>
-<h2>例子</h2><pre class="prettyprint source"><code>mkdir my-proj
-cd my-proj
-fis3 init
-fis3 release
-fis3 server start --type node</code></pre><p><em>fis-conf.js 的例子</em></p>
-<pre class="prettyprint source lang-js"><code>// default settings. fis3 release
-fis
-  .media('dev')
+        <article><h2>自定义插件</h2><p>FIS3 是以 File 对象为中心构建编译的，每一个 File 都要经历编译、打包、发布三个阶段。<a href="运行原理">运行原理</a>讲述了 FIS3 中的插件扩展点；那么本节就将说明一个插件如何开发；</p>
+<p><img src="https://github.com/fex-team/fis3/wiki/img/fis-compile-flow.png" alt=""></p>
+<p>如上图，编译起初，扫描项目目录下的所有文件（不包含指定排除文件），后实例化 File 对象，并对 File 内容进行编译分析；</p>
+<h3>编译阶段插件</h3><p>在编译阶段，文件是单文件进行编译的，这个阶段主要是对文件内容的编译分析；这个阶段分为 <code>lint</code>、<code>parser</code>、<code>preprocessor</code>、<code>postprocessor</code>、<code>optimizer</code> 等插件扩展点。</p>
+<p>对于这些插件扩展点，可详见文档<a href="运行原理#单文件编译过程">运行原理:单文件编译过程</a></p>
+<p>其扩展点插件接口比较简单；</p>
+<pre class="prettyprint source lang-js"><code>/**
+ * Compile 阶段插件接口
+ * @param  {string} content     文件内容
+ * @param  {File}   file        fis 的 File 对象 [fis3/lib/file.js]
+ * @param  {object} settings    插件配置属性
+ * @return {string}             处理后的文件内容
+ */
+module.exports = function (content, file, settings) {
+    return content;
+};</code></pre><p>为了搞清楚哪些功能用那种类型的插件去实现比较好，建议详细阅读<a href="运行原理#单文件编译过程">运行原理:单文件编译过程</a>这篇文档。</p>
+<p>fis 的插件是以 NPM 包的形式提供的，这将意味着 fis 的插件都是一个 NPM 包，并且最终也需要发布到 NPM 平台上。在开始之前你需要了解 node 是如何加载一个 NPM 包的 https://nodejs.org/api/modules.html。</p>
+<p>FIS3 不再强制用户必须把插件（一个 NPM 包）进行全局安装，可把包安装到 fis-conf.js 同目录下（项目目录）或者某一个父目录，这个遵循 node 加载一个包的规范即可。</p>
+<pre class="prettyprint source"><code>my-proj/
+my-proj/fis-conf.js
+my-proj/node_modules/fis3-&lt;type>-&lt;name>/index.js</code></pre><ul>
+<li><p>插件开发</p>
+<pre class="prettyprint source lang-js"><code>  // vi my-proj/node_modules/fis3-&lt;type>-&lt;name>/index.js
 
-  .match('**', {
-    useHash: false
-  });
-
-
-// fis3 release production
-fis
-  .media('production')
-
-  .match('*.js', {
-    optimizer: fis.plugin('uglify-js') // 用 fis-optimizer-uglify-js 压缩 js
-  })
-
-  .match('*.{css,scss}', {
-    optimizer: fis.plugin('clean-css') // 用 fis-optimizer-clean-css 压缩 css
-  })
-
-  .match('*.png', {
-    optimizer: fis.plugin('png-compressor') // 用 fis-optimizer-png-compressor 压缩 png 图片
-  });</code></pre><h2>常用插件</h2><ul>
-<li><a href="https://www.npmjs.com/package/fis-optimizer-uglify-js">fis-optimizer-uglify-js</a> UglifyJS2 压缩插件</li>
-<li><a href="https://www.npmjs.com/package/fis-optimizer-clean-css">fis-optimizer-clean-css</a> CleanCss  压缩插件</li>
-<li><a href="https://www.npmjs.com/package/fis-optimizer-png-compressor">fis-optimizer-png-compressor</a> PNG 压缩插件</li>
-<li><a href="https://www.npmjs.com/package/fis-parser-less">fis-parser-less</a> less 解析插件</li>
-<li><a href="https://www.npmjs.com/package/fis-parser-sass">fis-parser-sass</a> sass / scss 解析插件</li>
-<li><a href="https://www.npmjs.com/package/fis-parser-handlebars">fis-parser-handlebars</a> handlebars 解析插件</li>
+  module.exports = function (content, file, settings) {
+      // 只对 js 类文件进行处理
+      if (!file.isJsLike) return content;
+      return content += '\n// build ' + Date.now()
+  }</code></pre></li>
+<li><p>插件调用</p>
+<pre class="prettyprint source lang-js"><code>  // fis-conf.js
+  fis.match('*.js', {
+      &lt;type>: fis.plugin('&lt;name>', {
+          //conf
+      })
+  })</code></pre><ul>
+<li><a href="#插件类型">&lt;type&gt;</a></li>
+</ul>
+</li>
+<li><p>发布 NPM 包</p>
+<p>  https://docs.npmjs.com/getting-started/publishing-npm-packages</p>
+</li>
+</ul>
+<blockquote>
+<p>FIS团队建议，开发插件时为了方便可放到项目目录下，但发布到 NPM 后还是建议进行全局安装，一个团队使用的插件应该是被固化的。</p>
+</blockquote>
+<hr>
+<p>为了便捷解决一些简短功能，也可以插件功能直接写到 <code>fis-conf.js</code> 中。</p>
+<pre class="prettyprint source lang-js"><code>fis.match('*.js', {
+    // 直接设置插件属性的值为插件处理逻辑
+    postprocessor: function (content, file, settings) {
+        return content += '\n// build ' + Date.now();
+    }
+});</code></pre><p>参考插件</p>
+<ul>
+<li>lint https://www.npmjs.com/package/fis-lint-csslint</li>
+<li>parser https://www.npmjs.com/package/fis-parser-sass</li>
+<li>preprocessor https://www.npmjs.com/package/fis-preprocessor-image-set</li>
+<li>standard</li>
+<li>postprocessor https://www.npmjs.com/package/fis-postprocessor-jswrapper</li>
+<li>optimizer https://www.npmjs.com/package/fis-optimizer-clean-css</li>
+</ul>
+<h3>打包阶段插件</h3><p>原理请详细参考文档<a href="运行原理#打包阶段">运行原理:打包过程</a>，到打包阶段，所有的文件都经过了单文件处理，该压缩的已经被压缩，该预编译的也进行了预编译。这个阶段主要实现一些共性的功能，比如打包合并。所以插件接口也不太一样了。</p>
+<pre class="prettyprint source lang-js"><code>/**
+ * 打包阶段插件接口
+ * @param  {Object} ret      一个包含处理后源码的结构
+ * @param  {Object} conf     一般不需要关心，自动打包配置文件
+ * @param  {Object} settings 插件配置属性
+ * @param  {Object} opt      命令行参数
+ * @return {undefined}
+ */
+module.exports = function (ret, conf, settings, opt) {
+    // ret.src 所有的源码，结构是 {'&lt;subpath>': &lt;File 对象>}
+    // ret.ids 所有源码列表，结构是 {'&lt;id>': &lt;File 对象>}
+    // ret.map 如果是 spriter、postpackager 这时候已经能得到打包结果了，
+    //         可以修改静态资源列表或者其他
+}</code></pre><p>跟编译是打包一样，也可项目本地开发或者是直接写到 fis-conf.js 中。参考<a href="./config-api.md#打包阶段插件">配置API:打包阶段插件</a>其配置方式与单文件编译阶段插件配置方式不同。由于 packager 时所有文件都在处理之列，所以需要通过以下方式进行配置；</p>
+<pre class="prettyprint source lang-js"><code>fis.match('::packager', {
+    &lt;type>: fis.plugin('&lt;name>')
+})</code></pre><ul>
+<li><a href="#插件类型">&lt;type&gt;</a></li>
+</ul>
+<p>参考插件</p>
+<ul>
+<li>prepackager https://www.npmjs.com/package/fis-prepackager-widget-inline</li>
+<li>packager https://www.npmjs.com/package/fis3-packager-map</li>
+<li>spriter https://www.npmjs.com/package/fis-spriter-csssprites</li>
+<li>postpackager https://www.npmjs.com/package/fis-postpackager-simple</li>
+</ul>
+<h3>Deploy 插件</h3><p>deploy 插件是一类比较特殊的插件，它的功能只是发布数据，比如发布到某个文件夹下或者是发布到远端服务器上，以及用什么方式发布（http，ftp，git等等），deploy 插件是<strong>异步模型</strong>的。</p>
+<p>deploy 作用于某些文件或者全部文件；它依然以文件属性的方式分配给某些文件；比如</p>
+<pre class="prettyprint source lang-js"><code>fis.match('*.js', {
+    deploy: [
+        fis.plugin('replace', {
+            from: 'some-string',
+            to: 'another-string'
+        }),
+        fis.plugin('local-deliver') // 发布到本地，由 -d 参数制定目录
+    ]
+})</code></pre><p>也就是说可以在 deploy 阶段做一些转码、replace 这样的一些事情，最后一个插件必然是发布文件到磁盘或者远端的一个插件。</p>
+<p>插件接口如下</p>
+<pre class="prettyprint source lang-js"><code>/**
+ * deploy 插件接口
+ * @param  {Object}   options  插件配置
+ * @param  {Object}   modified 修改了的文件列表（对应watch功能）
+ * @param  {Object}   total    所有文件列表
+ * @param  {Function} next     调用下一个插件
+ * @return {undefined}
+ */
+module.exports = function(options, modified, total, next) {
+    next(); //由于是异步的如果后续还需要执行必须调用 next
+};</code></pre><p>参考插件</p>
+<ul>
+<li>https://www.npmjs.com/package/fis3-deploy-local-deliver</li>
+<li>https://www.npmjs.com/package/fis3-deploy-http-push</li>
+<li>https://www.npmjs.com/package/fis3-deploy-encoding</li>
+<li>https://www.npmjs.com/package/fis3-deploy-zip</li>
+<li>https://www.npmjs.com/package/fis3-deploy-replace</li>
+</ul>
+<h3>插件类型</h3><ul>
+<li>lint</li>
+<li>parser</li>
+<li>preprocessor</li>
+<li>standard</li>
+<li>postprocessor</li>
+<li>optimizer</li>
+<li>prepackager</li>
+<li>packager</li>
+<li>spriter</li>
+<li>postpackager</li>
+<li>deploy</li>
 </ul></article>
     </section>
 
@@ -112,7 +204,7 @@ fis
 
 <footer>
   <div class="footer-inner">
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Thu Jul 02 2015 18:28:15 GMT+0800 (CST) using the Minami theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Fri Jul 03 2015 16:01:20 GMT+0800 (CST) using the Minami theme.
     </div>
 </footer>
 
