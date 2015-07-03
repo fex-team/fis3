@@ -6,18 +6,14 @@
 
 ```js
 var DEFAULT_SETTINGS = {
-
   project: {
     charset: 'utf8',
     md5Length: 7,
     md5Connector: '_',
     files: ['**'],
-    ignore: ['node_modules/**', 'output/**', 'fis-conf.js'],
-    watch: {
-      exclude: /^\/(?:output|node_modules|fis\-conf\.js).*$/i
-    }
+    ignore: ['node_modules/**', 'output/**', '.git/**', 'fis-conf.js']
   },
-  /*
+
   component: {
     skipRoadmapCheck: true,
     protocol: 'github',
@@ -25,11 +21,11 @@ var DEFAULT_SETTINGS = {
   },
 
   modules: {
-    plugin: 'components',
-    packager: 'map',
-    deploy: 'default'
-  }
-  */
+    hook: 'components',
+    packager: 'map'
+  },
+
+  options: {}
 };
 ```
 
@@ -122,14 +118,14 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 - [id](#id)
 - [url](#url)
 - [charset](#charset)
-- [isHtmlLike](#ishtmllike)
-- [isCssLike](#iscsslike)
-- [isJsLike](#isjslike)
-- [useHash](#usehash)
+- [isHtmlLike](#isHtmlLike)
+- [isCssLike](#isCssLike)
+- [isJsLike](#isJsLike)
+- [useHash](#useHash)
 - [domain](#domain)
 - [rExt](#rExt)
-- [useMap](#usemap)
-- [isMod](#ismod)
+- [useMap](#useMap)
+- [isMod](#isMod)
 - [extras](#extras)
 - [requires](#requires)
 
