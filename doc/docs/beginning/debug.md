@@ -64,6 +64,46 @@ fis3 release -wL
 
 > 程序停止用快捷键 <kbd>CTRL</kbd>+<kbd>c</kbd>
 
+### 发布到远端机器
+
+当我们开发项目后，需要发布到测试机（联调机），一般可以通过如 smb、ftp 等上传代码。FIS3 默认支持使用 HTTP 上传代码，首先需要在测试机部署上传接收脚本（或者服务），这个脚本非常简单，现在给出了 [php 的实现版本](https://github.com/fex-team/fis-command-release/blob/master/tools/receiver.php)，可以把它放到测试机上某个 Web 服务根目录，并且配置一个 url 能访问到即可。
+
+> 示例脚本是 php 脚本，测试机 Web 需要支持 PHP 的解析 <br />
+> 如果需要其他语言实现，请参考这个 php 脚本实现，如果嫌麻烦，我们提供了一个 node 版本的[接收端](https://github.com/fex-team/receiver)
+
+假定这个 URL 是：`http://cq.01.p.p.baidu.com:8888/receiver.php'
+
+那么我们只需要在配置文件配置
+
+```js
+fis.match('*', {
+  deploy: fis.plugin('http-push', {
+    receiver: 'http://cq.01.p.p.baidu.com:8888/receiver.php',
+    to: '/home/work/htdocs' // 注意这个是指的是测试机器的路径，而非本地机器
+  })
+})
+```
+
+> 如果你想通过其他协议上传代码，请参考 [deploy 插件开发](../api/dev-plugin.md#Deploy 插件) 实现对应协议插件即可。
+
+- 当执行 `fis3 release` 是上传测试机器
+
+可能上传测试机是最后联调时才会由的，可以设置特定 `media` 来完成这个事情会更好。
+
+```js
+// 其他配置
+...
+fis.media('qa').match('*', {
+  deploy: fis.plugin('http-push', {
+    receiver: 'http://cq.01.p.p.baidu.com:8888/receiver.php',
+    to: '/home/work/htdocs' // 注意这个是指的是测试机器的路径，而非本地机器
+  })
+});
+```
+
+- `fis3 release qa` 上传测试机器
+- `fis3 release` 产出到本地测试服务器根目录
+
 ### 替代内置Server
 
 FIS3 内置了一个 Web Server 提供给构建后的代码进行调试。如果你自己启动了你自己的 Web Server 依然可以使用它们。
