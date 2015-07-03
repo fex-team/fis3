@@ -377,6 +377,7 @@ ul.demo li {
   width: 250px;
   margin-right: 20px;
   -webkit-overflow-scrolling: touch;
+  transition: all 0.5s ease-in-out;
 }
 .sidebar ul li a.active{
   color:rgb(242, 68, 27);
@@ -731,6 +732,7 @@ ul.demo li {
     left: 0px;
     z-index: 1000;
     background-color: #3360A3;
+    transition: all 0.5s ease-in-out;
 }
 
 header {
@@ -894,3 +896,15 @@ nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after {
   color: #888;
   float: none;
 }
+
+
+/*****************导航条向下滚动时隐藏************************/
+
+.hide-header .header-wrap{
+  top: -100px;
+
+}
+.hide-header #main.fix-sidebar .sidebar{
+  top:10px;
+}
+
