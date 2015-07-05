@@ -9,7 +9,7 @@ for m in $midified; do
   test "$?" = "0" && run="1" && break
 done
 
-test $run = "0" && echo "doc no change" && exit 0
+test $run = "0" && echo "#### Doc no change" && exit 0
 
 ## 生成 API 文档
 npm run jsdoc
