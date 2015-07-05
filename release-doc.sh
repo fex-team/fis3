@@ -1,5 +1,15 @@
-git checkout master
 rev="fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
+midified=$(git diff-tree --no-commit-id --name-only -r "$(git log --pretty=format:'%h' -n 1)")
+run="0"
+
+# have change?
+for m in $midified; do
+  echo $m
+  echo $m | grep -E '^doc/'
+  test "$?" = "0" && run="1" && break
+done
+
+test $run = "0" && echo "doc no change" && exit 0
 
 ## 生成 API 文档
 npm run jsdoc
@@ -28,5 +38,3 @@ cd ../../
 
 # 删掉产出的 output 目录，为了方便本地跑脚本
 rm -rf ./doc/output
-
-git checkout master
