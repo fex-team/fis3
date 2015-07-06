@@ -5,7 +5,7 @@ FIS3 是基于文件对象进行构建的，每个进入 FIS3 的文件都会实
 ### 构建流程
 
 ```js
-fis.release = function () {
+fis.release = function (opt) {
   var src = fis.util.find(fis.project.root);
   var files = {};
   src.forEach(function (f) {
@@ -35,7 +35,7 @@ fis.compile = function (file) {
 };
 
 function process(file) {
-  if (file.lint) {
+  if (exports.useLint && file.lint) {
     pipe('lint', file);
   }
   if (file.parser) {

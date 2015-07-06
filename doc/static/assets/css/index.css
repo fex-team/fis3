@@ -338,7 +338,7 @@ nav .nav-link:hover,nav .nav-link.active {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/*nav .nav-left .nav-link:after {
+nav .nav-left .nav-link:after {
     border-bottom: 0px solid #86A1C4;
     content: " ";
     display: inline-block;
@@ -349,7 +349,7 @@ nav .nav-link:hover,nav .nav-link.active {
     top: 53px;
     left: 0;
     padding: 0;
-}*/
+}
 
 nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after {
     border-bottom: 3px solid #86A1C4;
@@ -379,32 +379,11 @@ footer .footer__content {
     padding: 60px 0 30px;
 }
 
-footer .footer__content:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-footer .footer__content:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-footer .footer__link-columns:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 footer .link-column {
-    float: left;
     display: block;
-    margin-right: 2.12766%;
-    width: 23.40426%;
     font-size: 20px;
     color: #fff;
-    margin-bottom: 52px;
+    margin-bottom: 20px;
 }
 
 footer .link-column:last-child {
@@ -419,10 +398,9 @@ footer .link-column .title {
 }
 
 footer .link-column a {
-    float: left;
+    display: block;
     clear: both;
     color: #fff;
-    font-family: "BrixSansMedium","BrixSansRegular","Helvetica Neue","Helvetica",sans-serif;
     font-size: 18px;
     line-height: 26px;
 }
@@ -445,6 +423,8 @@ footer .opbeat-logo {
 footer .copyright {
     font-size: 18px;
     color: #9eb2e1;
+    text-align: center;
+    margin: 0 auto;
 }
 
 footer .copyright a {
@@ -1287,6 +1267,19 @@ nav .button--nav:active {
     }
     #search{
         font-size: 16px;
+    }
+    footer .link-column{
+        padding-left: 20px;
+        font-size: 14px;
+    }
+    footer .link-column .title{
+        clear:both;
+    }
+    footer .link-column a{
+        display: inline-block;
+        margin-right: 10px;
+        padding: 0px 10px;
+        border: 1px solid #AEAEAE;
     }
     nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after{
         display: none;
