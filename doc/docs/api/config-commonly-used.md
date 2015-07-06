@@ -128,8 +128,8 @@ fis.media('prod')
 
 // pack
 fis.media('prod')
-    // 启用打包插件，必须匹配 ::packager
-    .match('::packager', {
+    // 启用打包插件，必须匹配 ::package
+    .match('::package', {
         packager: fis.plugin('map'),
         spriter: fis.plugin('csssprites', {
             layout: 'matrix',

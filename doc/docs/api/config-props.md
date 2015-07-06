@@ -392,10 +392,10 @@ fis.match('*.css', {
 
 #### 打包阶段插件
 
-打包阶段插件设置时**必须分配给所有文件**，设置时必须 match `::packager`，不然不做处理。
+打包阶段插件设置时**必须分配给所有文件**，设置时必须 match `::package`，不然不做处理。
 
 ```js
-fis.match('::packager', {
+fis.match('::package', {
     packager: fis.plugin('map'),
     spriter: fis.plugin('csssprites')
 });
@@ -409,7 +409,7 @@ fis.match('::packager', {
 - 用法：
 
     ```js
-    fis.match('::packager', {
+    fis.match('::package', {
         prepackager: fis.plugin('plugin-name')
     })
     ```
@@ -422,14 +422,14 @@ fis.match('::packager', {
 - 用法：
 
     ```js
-    fis.match('::packager', {
+    fis.match('::package', {
         packager: fis.plugin('map')
     })
     ```
 
     *例子*
     ```js
-    fis.media('prod').match('::packager', {
+    fis.media('prod').match('::package', {
         packager: fis.plugin('map')
     });
     ```
@@ -444,14 +444,14 @@ fis.match('::packager', {
 - 用法：
 
     ```js
-    fis.match('::packager', {
+    fis.match('::package', {
         spriter: fis.plugin('csssprites')
     })
     ```
 
     *例子*
     ```js
-    fis.media('prod').match('::packager', {
+    fis.media('prod').match('::package', {
         spriter: fis.plugin('csssprites')
     });
     ```
@@ -466,14 +466,14 @@ fis.match('::packager', {
 - 用法：
 
     ```js
-    fis.match('::packager', {
+    fis.match('::package', {
         postpackager: fis.plugin('plugin-name')
     })
     ```
 
     *例子*
     ```js
-    fis.media('prod').match('::packager', {
+    fis.media('prod').match('::package', {
         postpackager: fis.plugin('plugin-name')
     });
     ```

@@ -94,10 +94,10 @@ fis.match('a.js', {
 ```
 这样的设置下，当 `a.js` 处理使还是会被调用压缩器进行压缩；
 
-### ::packager
+### ::package
 
 ```js
-fis.match('::packager', {
+fis.match('::package', {
    packager: fis.plugin('map')
 });
 ```
