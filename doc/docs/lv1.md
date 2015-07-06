@@ -60,7 +60,7 @@ fis.match('*.less', {
 - 基于整个项目打包
 
   ```js
-  fis.match('::packager', {
+  fis.match('::package', {
     postpackager: fis.plugin('loader')
   });
 
@@ -84,7 +84,7 @@ fis.match('*.less', {
 - 基于页面的打包方式
 
   ```js
-  fis.match('::packager', {
+  fis.match('::package', {
     postpackager: fis.plugin('loader', {
       allInOne: true
     })

@@ -116,7 +116,7 @@ module.exports = function (ret, conf, settings, opt) {
 跟编译是打包一样，也可项目本地开发或者是直接写到 fis-conf.js 中。参考 [打包阶段插件](./config-api.md#打包阶段插件)其配置方式与单文件编译阶段插件配置方式不同。由于 packager 时所有文件都在处理之列，所以需要通过以下方式进行配置；
 
 ```js
-fis.match('::packager', {
+fis.match('::package', {
     <type>: fis.plugin('<name>')
 })
 ```

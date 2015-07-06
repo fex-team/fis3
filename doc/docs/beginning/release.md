@@ -305,7 +305,7 @@ li.list-2::before {
 
 ```js
 // 启用 fis-spriter-csssprites 插件
-fis.match('::packager', {
+fis.match('::package', {
   spriter: fis.plugin('csssprites')
 })
 
@@ -329,7 +329,7 @@ fis.match('*.{js,css,png}', {
 });
 
 // 启用 fis-spriter-csssprites 插件
-fis.match('::packager', {
+fis.match('::package', {
   spriter: fis.plugin('csssprites')
 })
 

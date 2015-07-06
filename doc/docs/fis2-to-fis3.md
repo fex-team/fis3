@@ -41,7 +41,7 @@ fis.match('*.css', {
 #### `fis release -p` 在 FIS3 中等价配置
 
 ```js
-fis.match('::packager', {
+fis.match('::package', {
   packager: fis.plugin('some-pack-plugin'), // 挂载一个打包插件
   spriter: fis.plugin('csssprites') // FIS2 默认启用 csssprites
 });
