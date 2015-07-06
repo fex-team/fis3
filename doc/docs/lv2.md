@@ -38,7 +38,7 @@ FIS3 支持 `local mode` 加载一个插件。当你调用一个插件的时候�
 my-proj/node_modules/fis3-parser-translate-es6
 ```
 
-这样我们就知道插件逻辑放到什么地方就能用 `fis.plugin` 接口挂载了。
+这样我们就知道插件逻辑放到什么地方能用 `fis.plugin` 接口挂载。
 
 ```bash
 my-proj/node_modules/fis3-parser-translate-es6/index.js
@@ -64,6 +64,7 @@ my-proj/node_modules/fis3-parser-translate-es6/index.js # 插件逻辑
 my-proj/style.es6
 my-proj/index.html
 ```
+
 **配置使用**
 
 ```js
@@ -79,5 +80,104 @@ fis3 release -d ./output
 ```
 
 ### 打包插件编写
+
+在开始之前，我们需要阐述下**打包**这个名词，打包在前端工程中有两个方面。
+
+- 收集页面用到的 js、css 分别合并这些引用，资源合并成一个。
+- 打包，对某些资源进行打包，而记录他们打包的信息，某个文件打包到了哪个包文件。
+
+其实一般意义上来说，对于第一种情况**收集打包**只适合于纯前端页面，并且要求资源都是静态引入的。假设出现这种情况。
+
+```html
+<script type="text/javascript">
+// load common.js and index.js
+F.load([
+  'common',
+  'index'
+]);
+</script>
+```
+
+需要通过动态脚本去加载的资源，就无法通过工具静态分析来去做合并了。
+
+还有一种情况，如果模板是后端模板，也依然无法做到这一点，因为加载资源只有在运行时解析时才能确定。
+
+那么对于这类打包合并资源，需要特殊的处理思路。
+
+0. 直接将所有资源合并成一个文件，进行整站（整个项目）合并
+1. 通过**配置文件**配置打包，并且合并时记录合并信息，在运行时根据这些打包信息吐给浏览器合适的资源。
+
+第一种，粗暴问题多，并且项目足够大时效率明显不合适。我们主要探讨第二种。
+
+FIS3 默认内置了一个打包插件 `fis3-packager-map`，它根据用户的**配置信息**对资源进行打包。
+
+```js
+//fis-conf.js
+fis.match('/widget/*.js', {
+  packTo: '/static/widget_pkg.js'
+})
+```
+
+标明 `/widget` 目录下的 **js** 被合并成一个文件 `widget_pkg.js`
+
+假设
+
+``` 
+/widget/a.js
+/widget/b.js
+/widget/c.js
+/map.json
+```
+
+编译发布后
+
+```
+/widget/a.js
+/widget/b.js
+/widget/c.js
+/static/widget_pkg.js
+/map.json
+```
+
+我们前面说过
+
+    当某文件包含字符 __RESOURCE_MAP__ 时，最终静态资源表（资源之间的依赖、合并信息）会替换这个字符。
+
+构建后，出现一个合并资源以外，还会产出一张某资源合并到什么文件中的关系信息。
+
+```json
+{
+  "res": {
+    "widget/a.js": {
+      "uri": "/widget/a.js",
+      "type": "js",
+      "pkg": "p0"
+    },
+    "widget/b.js": {
+      "uri": "/widget/b.js",
+      "type": "js",
+      "pkg": "p0"
+    },
+    "widget/c.js": {
+      "uri": "/widget/c.js",
+      "type": "js",
+      "pkg": "p0"
+    }    
+  },
+  "pkg": {
+    "p0": {
+      "uri": "/static/widget_pkg.js",
+      "has": [
+        "widget/a.js",
+        "widget/b.js",
+        "widget/c.js"
+      ],
+      "type": "js"
+    }
+  }
+}
+```
+
+
 
 ### 发布插件
