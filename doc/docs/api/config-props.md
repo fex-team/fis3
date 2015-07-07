@@ -500,7 +500,7 @@ fis.match('::package', {
     ```
 
 - 常用插件
-    - [local-deliver](/fex-team/fis3-deploy-deliver)
-    - [http-push](/fex-team/fis3-deploy-http-push)
-    - [replace](/fex-team/fis3-deploy-replace)
-    - [encoding](/fex-team/fis3-deploy-encoding)
+    - [local-deliver](/fex-team/fis3-deploy-deliver)-[github](https://github.com/fex-team/fis3-deploy-local-deliver)
+    - [http-push](/fex-team/fis3-deploy-http-push)-[github](https://github.com/fex-team/fis3-deploy-http-push)
+    - [replace](/fex-team/fis3-deploy-replace)-[github](https://github.com/fex-team/fis3-deploy-replace)
+    - [encoding](/fex-team/fis3-deploy-encoding)-[github](https://github.com/fex-team/fis3-deploy-encoding)
