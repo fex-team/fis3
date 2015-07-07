@@ -27,13 +27,13 @@ FIS3 配置上很灵活，通过给文件分配属性，由这些属性控制编
     ```js
     sea.use('./a.js');
     ```
-- 如果要解析 `require()` 需要自己添加插件支持，而这个插件的逻辑相当简单。
+- 如果要解析 `require()` 需要自己添加 `preprocessor` 插件支持，而这个插件的逻辑相当简单。
 
     参考
 
     https://github.com/fex-team/fis3-hook-module/blob/master/lib/commonJs.js
 
-- 如果感觉填插件支持不太爽
+- 如果感觉自己写插件太麻烦
 
     可以安装 FIS组 提供的模块化方案的支持插件 fis3-hook-module
 
