@@ -47,5 +47,6 @@
     - [配置属性](./api/config-props.md)
     - [常用配置](./api/config-commonly-used.md)
     - [glob](./api/config-glob.md)
+  - [内置插件及配置](./api/config-system-plugin.md)
   - [自定义插件](./api/dev-plugin.md)
 - [FIS2 到 FIS3](./fis2-to-fis3.md)

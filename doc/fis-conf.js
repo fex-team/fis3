@@ -61,6 +61,6 @@ fis.media('prod')
   });
 
 // set pack
-fis.media('prod').match('::packager', {
+fis.media('prod').match('::package', {
   //postpackager: fis.plugin('loader', {}, 'append')
 });
