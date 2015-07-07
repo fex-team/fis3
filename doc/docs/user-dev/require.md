@@ -93,7 +93,7 @@ fis.match('*.{js,css}', {
 }
 ```
 
-> 可能大家发觉 `require()` 怎么不处理了，其实这块对 js 中 `require()` 就留给各种前端模块化方案吧，假设你选择的是 `AMD` 那么就得解析，`require([])` 和 `require()`，如果你用的是 `mod.js` 那么就得解析 `require.async()` 和 `require()`，其他模块化框架也是同样的道理。 
+> 注意， `require()` 不再不处理，js 中 `require()` 留给各种前端模块化方案，假设你选择的是 `AMD` 那么就得解析，`require([])` 和 `require()`；如果选用的是 `mod.js` 那么就得解析 `require.async()` 和 `require()`，其他亦然。 
 
 ### 在css中声明依赖
 
