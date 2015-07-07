@@ -60,6 +60,9 @@ fis.release = function (opt) {
 ```js
 fis.compile = function (file) {
   if (file.isFile()) {
+    if (exports.useLint && file.lint) {
+      pipe('lint', file);
+    }
     if (!file.hasCache) {
       process(file);
     } else {
@@ -71,9 +74,6 @@ fis.compile = function (file) {
 };
 
 function process(file) {
-  if (exports.useLint && file.lint) {
-    pipe('lint', file);
-  }
   if (file.parser) {
     pipe('parser', file);
   }
