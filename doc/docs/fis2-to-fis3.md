@@ -4,6 +4,35 @@
 
 FIS3 配置上很灵活，通过给文件分配属性，由这些属性控制编译流程。不像 FIS2 给 `release` 添加参数就能搞定很多事情了，比如所有静态资源压缩、加 md5、打包、加 domain等，这些功能在 FIS3 中必须通过配置文件配置进行操控。
 
+### 不再默认解析 js 中的 `require()` 函数添加依赖
+
+- 为什么这么做？
+    
+    虽然现在很多模块化框架都以 `require` 来作为依赖，但是其形式是不同的。比如
+
+    **require.js**
+    
+    ```js
+    require(['./a.js'])
+    ```
+    
+    **mod.js**
+
+    ```js
+    require.async('./a.js');
+    ```
+
+    sea.js
+
+    ```js
+    sea.use('./a.js');
+    ```
+- 如果要解析 `require()` 需要自己添加插件支持，而这个插件的逻辑相当简单。
+
+    参考
+    
+    https://github.com/fex-team/fis3-hook-module/blob/master/lib/commonJs.js
+
 ### FIS2 `release` `-o` `-p` `-D` `-m` 在 FIS3 如何施展
 
 #### `fis release -o` 在 FIS3 中等价配置
