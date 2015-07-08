@@ -16,6 +16,7 @@ require.del = function (id) {
 
 describe('project: const variable', function () {
   var project = require('../lib/project');
+  console.log(project);
   it ('DEFAULT_REMOTE_REPOS', function () {
     assert.equal(project.DEFAULT_REMOTE_REPOS, 'http://fis.baidu.com/repos');
   });
