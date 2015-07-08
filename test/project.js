@@ -16,7 +16,6 @@ require.del = function (id) {
 
 describe('project: const variable', function () {
   var project = require('../lib/project');
-  console.log(project);
   it ('DEFAULT_REMOTE_REPOS', function () {
     assert.equal(project.DEFAULT_REMOTE_REPOS, 'http://fis.baidu.com/repos');
   });
@@ -41,7 +40,7 @@ describe('project: tempPath', function () {
     if (fis.util.isWin()) {
       //@TODO
     } else {
-      assert.equal(tempPath, process.env['HOME'] + '/.fis-tmp');
+      assert.equal(tempPath, process.env['HOME'] + '/.fis3-tmp');
     }
   })
 });
@@ -140,7 +139,9 @@ describe('project: getSource', function () {
   });
 
   it('project.files: [!**.js]', function() {
-    fis.config.set('project.files', '!**.js');
+    //fis.config.set('project.ignore', ['node_modules/**', 'output/**', '.git/**', 'fis-conf.js']);
+    fis.config.set('project.files', ['!**']);
+
     var xc = fis.project.getSource();
     var keyd = [];
     for(var key in xc){
