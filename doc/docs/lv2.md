@@ -178,6 +178,13 @@ fis.match('/widget/*.js', {
 }
 ```
 
-
-
 ### 发布插件
+
+FIS3 的插件都放在 NPM 平台上，把插件发布到其上即可。
+
+参考链接 [npm publish](https://docs.npmjs.com/getting-started/publishing-npm-packages)
+
+发布的插件如何使用
+
+- `npm install -g <plugin>` 安装插件
+- FIS3 配置文件中按照配置规则进行配置，`fis.plugin(<plugin-name>)`
