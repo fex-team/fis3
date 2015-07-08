@@ -74,7 +74,12 @@ fis.match('*.js', {
 #### `fis release -m` 在 FIS3 中等价配置
 
 ```js
-fis.match('*.css', {
+fis.match('*.{js,css}', {
+  useHash: true
+});
+
+//命中所有的图片类文件，包括字体等
+fis.match('image', {
   useHash: true
 });
 ```
