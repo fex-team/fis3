@@ -1,3 +1,10 @@
+## Mon Jul 08 2015
+### 发布 3.0.5 版本
+
+- 更新 fis3-command-inspect
+- 去掉修改 node env 代码
+
+
 ## Mon Jul 07 2015
 
 ### 发布 3.0.4 版本
