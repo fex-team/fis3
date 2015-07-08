@@ -143,7 +143,9 @@ describe('cache: addDeps(file)', function () {
     var cache = _(fp);
     cache.addDeps(dep2);
     expect(cache.deps[dep2]).to.equal(fis.util.mtime(dep2).getTime());
-
+    fs.writeFile(dep2,"123","ascii",function(){
+      expect(cache.deps[dep2]).to.equal(fis.util.mtime(dep2).getTime());
+    });
     cache.addDeps(dep2);
     cache.addDeps(dep1);
     var count1 = 0, count2 = 0;

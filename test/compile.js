@@ -119,18 +119,20 @@ describe('compile: builtin uri', function () {
     expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.css')));
 
     fis.cache.clean();
+    setTimeout(function(){
+      fis.match('comp_**.css', {
+        useHash: false,
+        release: '/static/$0'
+      });
 
-    fis.match('comp_**.css', {
-      useHash: false,
-      release: '/static/$0'
-    });
+      fis.match('*.png', {
+        useHash: false,
+        release: '/static/img/$0'
+      });
 
-    fis.match('*.png', {
-      useHash: false,
-      release: '/static/img/$0'
-    });
+      fis.compile(file);
+      expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main_release.css')));
+    },1000);
 
-    fis.compile(file);
-    expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main_release.css')));
   });
 });
