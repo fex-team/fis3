@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-
+// vi foo/bin/foo.js
 var Liftoff = require('liftoff');
 var argv = require('minimist')(process.argv.slice(2));
 var path = require('path');
 var cli = new Liftoff({
-  name: 'fis3',
-  processTitle: 'fis',
-  moduleName: 'fis3',
+  name: 'foo', // 命令名字
+  processTitle: 'foo',
+  moduleName: 'foo',
   configName: 'fis-conf',
 
   // only js supported!
@@ -25,8 +25,7 @@ cli.launch({
   } else {
     fis = require(env.modulePath);
   }
-  fis.set('localNPMFolder', path.join(env.cwd, 'node_modules/fis3'));
+  fis.set('localNPMFolder', path.join(env.cwd, 'node_modules/foo'));
   fis.set('globalNPMFolder', path.dirname(__dirname));
-  fis.cli.name = this.name;
   fis.cli.run(argv, env);
 });
