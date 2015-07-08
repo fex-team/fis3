@@ -157,7 +157,8 @@ package.json
     fis.cli.run(argv, env);
   });
   ```
-  上面内容没啥大不了的，copy 过去，改改 name、processTitle、moduleName 搞定
+
+  以上代码 copy 过来即可，不需要做大的改动，感兴趣可研究其原理
 
 - 依赖的 NPM 包，需要在 package.json 中加上依赖
   + **fis-parser-less** 解析 less
