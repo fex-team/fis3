@@ -1,6 +1,6 @@
 {
   "name": "fis3",
-  "version": "3.0.5",
+  "version": "3.0.7",
   "description": "fis 3.0",
   "main": "index.js",
   "bin": {
