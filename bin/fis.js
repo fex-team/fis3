@@ -27,5 +27,6 @@ cli.launch({
   }
   fis.set('localNPMFolder', path.join(env.cwd, 'node_modules/fis3'));
   fis.set('globalNPMFolder', path.dirname(__dirname));
+  fis.cli.name = this.name;
   fis.cli.run(argv, env);
 });
