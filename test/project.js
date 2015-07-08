@@ -139,8 +139,8 @@ describe('project: getSource', function () {
   });
 
   it('project.files: [!**.js]', function() {
-    //fis.config.set('project.ignore', ['node_modules/**', 'output/**', '.git/**', 'fis-conf.js']);
-    fis.config.set('project.files', ['!**']);
+    fis.config.set('project.ignore', ['node_modules/**', 'output/**', '.git/**', 'fis-conf.js']);
+    fis.config.set('project.files', ['!**.js']);
 
     var xc = fis.project.getSource();
     var keyd = [];

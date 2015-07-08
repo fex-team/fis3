@@ -15,7 +15,7 @@ describe('fis: derive', function() {
 		}
 		cons.prototype.name = 'a';
 		var Class = Object.derive({
-			constructor: cons 
+			constructor: cons
 		}, {name: 'class'});
 
 		var classA = new Class();
@@ -38,6 +38,14 @@ describe('fis: require', function() {
 
 describe('fis: plugin', function() {
 	it('general', function() {
-		expect(fis.plugin('name', {})).to.deep.equal({ __name: 'name' });
+    var x = fis.plugin('sass', {
+      include_paths: [
+        './static/scss/libaray'
+      ]
+    },'123');
+    var y = fis.plugin('b', null, 'append');
+		expect(x).to.deep.equal({ __name: 'sass', __plugin: 'sass',include_paths: ["./static/scss/libaray"],__pos: "123"});
+		expect(y).to.deep.equal({ __name: 'b', __plugin: 'b',__pos: "append"});
+    fis.time("123");
 	});
 });

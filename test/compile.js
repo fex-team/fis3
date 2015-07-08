@@ -105,7 +105,7 @@ describe('compile: builtin uri', function () {
 
   it('compile .css file', function () {
     var file = fis.file.wrap(path.join(root, 'main.css'));
-
+    file.useCache = false;
     fis.match('comp_**.css', {
       useHash: false
     });
@@ -115,6 +115,9 @@ describe('compile: builtin uri', function () {
       useHash: false
     });
 
+    fis.match('*.scss', {
+      parser: fis.plugin('sass',null,'append')
+    });
     fis.compile(file);
     expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.css')));
 
