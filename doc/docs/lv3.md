@@ -65,8 +65,11 @@ package.json
 
   ```js
   //vi foo/index.js
-  var fis = require('fis3');
-
+  var fis = module.exports = require('fis3');
+  fis.require.prefixes.unshift('foo');
+  fis.cli.name = 'foo';
+  fis.cli.info = require('./require.json');
+  
   fis.match('*', {
     release: '/static/$0' // 所有资源发布时产出到 /static 目录下
   });
@@ -120,8 +123,10 @@ package.json
 - 实现 `/bin/foo.js`
 
   ```js
-  // vi foo/bin/foo.js
   #!/usr/bin/env node
+  
+  // vi foo/bin/foo.js
+  
   var Liftoff = require('liftoff');
   var argv = require('minimist')(process.argv.slice(2));
   var path = require('path');
@@ -159,6 +164,7 @@ package.json
   + **fis-optimizer-uglify-js** 压缩 js，fis3 已内置
   + **fis-optimizer-clean-css** 压缩 css，fis3 已内置
   + **fis-optimizer-png-compressor** 压缩 png 图片，fis3 已内置
+  + **fis3-hook-module** 模块化支持插件
   + **fis3** fis3 核心
   + **minimist**
   + **liftoff**
