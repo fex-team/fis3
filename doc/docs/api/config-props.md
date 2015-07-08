@@ -70,7 +70,7 @@ var DEFAULT_SETTINGS = {
 * 用法：
 
     ```js
-    fis.set('project.files', [*.html'])
+    fis.set('project.files', ['*.html']);
     ```
 
 ### project.ignore
@@ -128,6 +128,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 - [isMod](#isMod)
 - [extras](#extras)
 - [requires](#requires)
+- [useSameNameRequire](#useSameNameRequire)
 
 #### release
 * 解释：设置文件的产出路径。默认是文件相对项目根目录的路径，以 / 开头。该值可以设置为 false ，表示为不产出（unreleasable）文件。
@@ -281,7 +282,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 * 解释：文件信息是否添加到 map.json
 * 值类型：`bool`
 * 默认值：无
-* 说明： 分配到此属性的资源出现在静态资源表中，现在对 js、css、html 等文件默认加入了静态资源表中；
+* 说明： 分配到此属性的资源出现在静态资源表中，现在对 js、css 等文件默认加入了静态资源表中；
 
     ```js
     fis.match('logo.png', {
@@ -290,7 +291,8 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
     ```
 
 #### isMod
-* 解释：追加文本文件后缀列表。
+* 解释：标记文件为组件化文件。
+
 * 值类型：`bool`
 * 默认值：无
 * 说明：标记文件为组件化文件。被标记成组件化的文件会入map.json表。并且会对js文件进行组件化包装。
@@ -298,6 +300,46 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
     ```js
     fis.match('/widget/{*,**/*}.js', {
         isMod: true
+    });
+    ```
+
+#### extras
+* 注释：在[静态资源映射表][]中的附加数据，用于扩展[静态资源映射表][]表的功能。
+* 值类型：`Object`
+* 默认值：无
+* 说明：无
+
+    ```js
+    fis.match('/page/layout.tpl', {
+        extras: {
+            isPage: true
+        }
+    });
+    ```
+
+#### requires
+* 注释：默认依赖的资源id表
+* 值类型：`Array`
+* 默认值：无
+* 说明：
+
+    ```js
+    fis.match('/widget/*.js', {
+        requires: [
+            'static/lib/jquery.js'
+        ]
+    });
+    ```
+
+#### useSameNameRequire
+* 注释：开启同名依赖
+* 值类型：`bool`
+* 默认值：`false`
+* 说明：当设置开启同名依赖，模板会依赖同名css、js；js 会依赖同名 css，不需要显式引用。
+
+    ```js
+    fis.match('/widget/**', {
+        useSameNameRequire: true
     });
     ```
 
@@ -500,7 +542,7 @@ fis.match('::package', {
     ```
 
 - 常用插件
-    - [local-deliver](/fex-team/fis3-deploy-deliver)
-    - [http-push](/fex-team/fis3-deploy-http-push)
-    - [replace](/fex-team/fis3-deploy-replace)
-    - [encoding](/fex-team/fis3-deploy-encoding)
+    - [local-deliver](https://github.com/fex-team/fis3-deploy-deliver)
+    - [http-push](https://github.com/fex-team/fis3-deploy-http-push)
+    - [replace](https://github.com/fex-team/fis3-deploy-replace)
+    - [encoding](https://github.com/fex-team/fis3-deploy-encoding)

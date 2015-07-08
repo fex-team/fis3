@@ -93,6 +93,8 @@ fis.match('*.{js,css}', {
 }
 ```
 
+> 注意， `require()` 不再不处理，js 中 `require()` 留给各种前端模块化方案，假设你选择的是 `AMD` 那么就得解析，`require([])` 和 `require()`；如果选用的是 `mod.js` 那么就得解析 `require.async()` 和 `require()`，其他亦然。 
+
 ### 在css中声明依赖
 
 > fis支持识别css文件 **注释中的@require字段** 标记的依赖关系，这些分析处理对 **html的style标签内容** 同样有效。

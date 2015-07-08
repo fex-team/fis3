@@ -28,7 +28,7 @@ fis.match('docs/INDEX.md', {
   isIndex: true
 });
 
-fis.match('::packager', {
+fis.match('::package', {
   prepackager: [build.buildNav(), build.hackActiveTab()],
   postpackager: [
     build.replaceDefine({

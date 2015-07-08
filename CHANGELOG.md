@@ -1,3 +1,16 @@
+## Mon Jul 08 2015
+### 发布 3.0.5 版本
+
+- 更新 fis3-command-inspect
+- 去掉修改 node env 代码
+
+
+## Mon Jul 07 2015
+
+### 发布 3.0.4 版本
+
+- 更新 fis.uri，让其支持 fis id 查找。
+
 ## Mon Jul 06 2015
 
 ### 发布 3.0.2 版本

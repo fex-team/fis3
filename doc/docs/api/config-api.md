@@ -135,7 +135,7 @@ fis.media('rd').match('*.js', {
 
 **语法**
 
-fis.plugin(name, props)
+fis.plugin(name [, props [, place]])
 
 **属性**
 - name
