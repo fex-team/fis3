@@ -14,9 +14,11 @@ FIS 团队在 FIS3 的基础之上实现插件 [fis3-hook-module](https://github
 
 解决方案，解决一系列特定问题的工具、规范、开发、上线支持的方案我们叫做一个解决方案。前端工程的解决方案一般包括
 
-    开发规范 + 模块化框架 + 测试套件 + 辅助开发工具
+    研发规范 + 模块化框架 + 测试套件 + 辅助开发工具
 
-FIS3 中的包装解决方案，就是把这些集成到一个工具中，实现特定团队的工程开发需求。
+FIS3 中的包装解决方案，就是把这些集成到一个工具中。
+
+一个解决方案就是继承自 FIS3 并且支持特定模块化开发、特定模板语言、特定处理流程、研发规范的构建工具。
 
 #### 封装解决方案的必要性
 
@@ -26,11 +28,149 @@ FIS3 中的包装解决方案，就是把这些集成到一个工具中，实现
 
 #### 解决方案封装
 
-FIS3 封装解决方案非常简单，我们假设一种业务场景和团队，来进行一个解决方案的封装。
-
 **准备**
 
 - 方案名 `foo`
 - 构建工具名字 `foo`
 - 模板语言 PHP
 - 模块化框架选择 `require.js`
+- 特定目录规范
+
+**目录规范**
+
+```bash
+/static # 静态资源
+/page # 页面
+/widget # 组件
+/fis-conf.js # 配置文件
+```
+
+**部署规范**
+
+```bash
+/template # 所有的 PHP 模板
+/static  # 所有的静态资源 
+```
+
+**构建工具**
+
+```bash
+foo
+foo/bin/foo.js
+foo/index.js
+package.json
+```
+
+- 基于 FIS3 配置目录规范和部署规范
+
+  ```js
+  //vi foo/index.js
+  var fis = require('fis3');
+
+  fis.match('*', {
+    release: '/static/$0' // 所有资源发布时产出到 /static 目录下
+  });
+
+  fis.match('*.php', {
+    release: '/template/$0' // 所有 PHP 模板产出后放到 /template 目录下
+  });
+
+  // 所有js, css 加 hash
+  fis.match('*.{js,css,less}', {
+    useHash: true
+  });
+
+  // 所有图片加 hash
+  fis.match('image', {
+    useHash: true
+  });
+
+  // fis-parser-less
+  fis.match('*.less', {
+    parser: fis.plugin('less'),
+    rExt: '.css'
+  });
+
+  fis.match('*.js', {
+    optimizer: fis.plugin('uglify-js')
+  });
+
+  fis.match('*.{css,less}', {
+    optimizer: fis.plugin('clean-css')
+  });
+
+  fis.match('*.png', {
+    optimizer: fis.plugin('png-compressor')
+  });
+
+  fis.match('widget/*.{php,js,css}', {
+    isMod: true
+  });
+
+  fis.match('::package', {
+    spriter: fis.plugin('csssprites')
+  });
+
+  //fis3-hook-module
+  fis.hook('module', {
+    type: 'amd' // 模块化支持 amd 规范，适应 require.js
+  });
+  ```
+
+- 实现 `/bin/foo.js`
+
+  ```js
+  // vi foo/bin/foo.js
+  #!/usr/bin/env node
+  var Liftoff = require('liftoff');
+  var argv = require('minimist')(process.argv.slice(2));
+  var path = require('path');
+  var cli = new Liftoff({
+    name: 'foo', // 命令名字
+    processTitle: 'foo',
+    moduleName: 'foo',
+    configName: 'fis-conf',
+
+    // only js supported!
+    extensions: {
+      '.js': null
+    }
+  });
+
+  cli.launch({
+    cwd: argv.r || argv.root,
+    configPath: argv.f || argv.file
+  }, function(env) {
+    var fis;
+    if (!env.modulePath) {
+      fis = require('../');
+    } else {
+      fis = require(env.modulePath);
+    }
+    fis.set('localNPMFolder', path.join(env.cwd, 'node_modules/foo'));
+    fis.set('globalNPMFolder', path.dirname(__dirname));
+    fis.cli.run(argv, env);
+  });
+  ```
+  上面内容没啥大不了的，copy 过去，改改 name、processTitle、moduleName 搞定
+
+- 依赖的 NPM 包，需要在 package.json 中加上依赖
+  + **fis-parser-less** 解析 less
+  + **fis-optimizer-uglify-js** 压缩 js，fis3 已内置
+  + **fis-optimizer-clean-css** 压缩 css，fis3 已内置
+  + **fis-optimizer-png-compressor** 压缩 png 图片，fis3 已内置
+  + **fis3** fis3 核心
+  + **minimist**
+  + **liftoff**
+
+- package.json 需要添加
+
+  ```json
+  "bin": {
+    "foo": "bin/foo.js"
+  }
+  ```
+
+- 发布 foo 到 NPM
+
+通过以上步骤可以简单封装一个解决方案，FIS3 提供了大量的插件，已经几乎极其简单的配置方式来搞定研发规范的设置，很轻松即可打造完整的前端集成解决方案。
