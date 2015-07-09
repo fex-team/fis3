@@ -1734,10 +1734,6 @@ describe('util: _.pipe(type, callback, def)', function (){
         useHash: true,
         release: '/static/$0'
       });
-
       fis.compile(file);
-
-      //expect("plugin.module,plugin.components," == str).to.be.true;
-
   });
 });
