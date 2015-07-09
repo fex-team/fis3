@@ -8,7 +8,58 @@
 
 FIS 团队在 FIS3 的基础之上实现插件 [fis3-hook-module](https://github.com/fex-team/fis3-hook-module)， 基本上支持了 AMD，SeaJS，mod.js 等模块化框架，支持对此类规范的组件打包、提前分析依赖等等。
 
-本节主要介绍 FIS 基于静态资源映射表的组件化方案设计。
+#### fis3-hook-module 的使用
+
+> 注意，一个 FIS3 项目模块只能有一种前端模块化框架及规范，不能混用，混用带来的复杂度远远大于其带来的便利。
+
+**挂载插件**
+
+首先先安装插件 `npm install -g fis3-hook-module`
+
+```js
+fis.hook('module');
+```
+
+**使用 AMD**
+
+假设模块化框架支持 AMD 规范，如 **require.js**
+
+```js
+fis.hook('module', {
+  mode: 'amd'
+});
+```
+
+**使用 mod.js**
+
+假设要使用 FIS 的 mod.js
+
+```js
+fis.hook('module', {
+  mode: 'commonJS'
+});
+```
+
+挂载这个插件后会做几件事情
+- 分析 JS `require` 等添加依赖
+- 如果是 AMD 的规范，会修改 `define(` 为 `define('<id>'` 
+- 自定包裹 `define` 如果是 `commonJS` (**mod.js**)
+
+不过还需要标记哪些资源是组件
+
+```
+/module/a.js
+/module/b.js
+/static/mod.js
+/static/jquery.js
+/index.html
+```
+
+```js
+fis.match('/module/*.js', {
+  isMod: true // 标记匹配文件为组件
+});
+```
 
 ### 解决方案封装
 
