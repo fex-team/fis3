@@ -102,7 +102,7 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
     ```
     fis.set('project.fileType.image', 'raw,bpg');
     ```
-  4. `*.html:js` 用来匹配命中的 html 文件中的内嵌 js部分。
+  4. `*.html:js` 用来匹配命中的 html 文件中的内嵌的 js 部分。
 
     fis3 htmlLike 的文件内嵌的 js 内容也会走单文件编译流程，默认只做标准化处理，如果想压缩，可以进行如下配置。
 
