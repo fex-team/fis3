@@ -43,7 +43,7 @@ fis.hook('module', {
 挂载这个插件后会做几件事情
 - 分析 JS `require` 等添加依赖
 - 如果是 AMD 的规范，会修改 `define(` 为 `define('<id>'` 
-- 自定包裹 `define` 如果是 `commonJS` (**mod.js**)
+- 自动包裹 `define` 如果是 `commonJS` (**mod.js**)
 
 不过还需要标记哪些资源是组件
 
