@@ -167,7 +167,7 @@ package.json
 
   //fis3-hook-module
   fis.hook('module', {
-    type: 'amd' // 模块化支持 amd 规范，适应 require.js
+    mode: 'amd' // 模块化支持 amd 规范，适应 require.js
   });
   ```
 
