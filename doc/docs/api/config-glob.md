@@ -53,3 +53,70 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
     release: '/b/$1'
   });
   ```
+
+  ### 特殊用法（类 css 伪类）
+
+  1. `::packager` 用来匹配 fis 的打包过程。
+  2. `::text` 用来匹配文本文件。
+
+    默认识别这类后缀的文件。
+
+    ```js
+    [
+      'css', 'tpl', 'js', 'php',
+      'txt', 'json', 'xml', 'htm',
+      'text', 'xhtml', 'html', 'md',
+      'conf', 'po', 'config', 'tmpl',
+      'coffee', 'less', 'sass', 'jsp',
+      'scss', 'manifest', 'bak', 'asp',
+      'tmp', 'haml', 'jade', 'aspx',
+      'ashx', 'java', 'py', 'c', 'cpp',
+      'h', 'cshtml', 'asax', 'master',
+      'ascx', 'cs', 'ftl', 'vm', 'ejs',
+      'styl', 'jsx', 'handlebars'
+    ]
+    ```
+
+    如果你希望命中的文件类型不在列表中，请通过 `fis.set('project.fileType.text')` 扩展，多个后缀用 `,` 分割。
+
+    ```
+    fis.set('project.fileType.text', 'cpp,hhp');
+    ```
+
+  3. `::image` 用来匹配文件类型为图片的文件。
+
+    默认识别这类后缀的文件。
+
+    ```js
+    [
+      'svg', 'tif', 'tiff', 'wbmp',
+      'png', 'bmp', 'fax', 'gif',
+      'ico', 'jfif', 'jpe', 'jpeg',
+      'jpg', 'woff', 'cur', 'webp',
+      'swf', 'ttf', 'eot', 'woff2'
+    ]
+    ```
+
+    如果你希望命中的文件类型不在列表中，请通过 `fis.set('project.fileType.image')` 扩展，多个后缀用 `,` 分割。
+
+    ```
+    fis.set('project.fileType.image', 'raw,bpg');
+    ```
+  4. `*.html:js` 用来匹配命中的 html 文件中的内嵌 js部分。
+
+    fis3 htmlLike 的文件内嵌的 js 内容也会走单文件编译流程，默认只做标准化处理，如果想压缩，可以进行如下配置。
+
+    ```js
+    fis.match('*.html:js', {
+        optimizer: fis.plugin('uglify-js')
+    });
+    ```
+  5. `*.html:css` 用来匹配命中的 html 文件中内嵌的 css 部分。
+
+    fis3 htmlLike 的文件内嵌的 css 内容也会走单文件编译流程，默认只做标准化处理，如果想压缩，可以进行如下配置。
+
+    ```js
+    fis.match('*.html:css', {
+        optimizer: fis.plugin('clean-css')
+    });
+    ```
