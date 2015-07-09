@@ -74,14 +74,14 @@ To get the bash-style behavior, set the `nonull:true` in the options.
 
 ### 扩展的规则
 
-假设匹配 `widget` 目录下的所有资源，使用 `node-glob` 需要这么写
+假设匹配 `widget` 目录下以及其子目录下的所有 js 文件，使用 `node-glob` 需要这么写
 
 ```js
-widget/{*,**/*}
+widget/{*.js,**/*.js}
 ```
 
 这样写起来比较麻烦，所以扩展了这块的语法，以下方式等价于上面的用法
 
 ```js
-widget/**
+widget/**.js
 ```
