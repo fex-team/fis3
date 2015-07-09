@@ -46,6 +46,7 @@ describe('log: on', function () {
   it('error', function () {
     temp_flag = "error";
     temp_msg = "test error";
+    fis.log.format();
     fis.log.throw = true;
     try{
       fis.log.error(temp_msg);

@@ -196,7 +196,8 @@ describe('config: config',function(){
           negate: false,
           properties: {name: ''},
           media: 'GLOBAL',
-          weight: i
+          weight: i,
+          index: 1
         })
         result_gl.push({
           raw: v,
@@ -204,7 +205,8 @@ describe('config: config',function(){
           negate: false,
           properties: {name: 'prod'},
           media: 'prod',
-          weight: i
+          weight: i,
+          index: 1
         })
         result_prod.push({
           raw: v,
@@ -212,7 +214,8 @@ describe('config: config',function(){
           negate: false,
           properties: {name: ''},
           media: 'GLOBAL',
-          weight: i
+          weight: i,
+          index: 1
         })
         result_prod.push({
           raw: v,
@@ -220,7 +223,8 @@ describe('config: config',function(){
           negate: false,
           properties: {name: 'prod'},
           media: 'prod',
-          weight: i
+          weight: i,
+          index: 1
         })
       }else {
         result_gl.push({
@@ -229,12 +233,31 @@ describe('config: config',function(){
           negate: false,
           properties: {name: ''},
           media: 'pro',
-          weight: i
+          weight: i,
+          index: 1
         })
       }
     });
+    var xp = fis.config.getSortedMatches();
+    for(var i=0;i < xp.length;i++){
+      xp[i].index = 1;
+    }
+    expect(xp).to.deep.equal(result_gl);
 
-    expect(fis.config.getSortedMatches()).to.deep.equal(result_gl);
-    expect(fis.media('prod').getSortedMatches()).to.deep.equal(result_prod);
-  })
+    var xp2 = fis.media('prod').getSortedMatches();
+    for(var i=0;i < xp2.length;i++){
+      xp2[i].index = 1;
+    }
+    expect(xp2).to.deep.equal(result_prod);
+  });
+
+  it("hook",function(){
+    fis.config.hook("module");
+    expect(fis.env().parent.data.modules.hook[1]['__plugin']).to.equal('module');
+  });
+
+  it("unhook",function(){
+    fis.config.unhook("module");
+    expect(fis.env().parent.data.modules.hook.length).to.equal(1);
+  });
 });

@@ -53,10 +53,10 @@ describe('util: _.normalize(path1, [path2], [...])', function () {
     config.init();
   });
 
-  it('without argument', function () {
-    expect(_.normalize('')).to.equal('');
-    expect(_.normalize()).to.equal('');
-  });
+  //it('without argument', function () {
+  //  expect(_.normalize('')).to.equal('');
+  //  expect(_.normalize()).to.equal('');
+  //});
 
   it('1 argument of string', function () {
     expect(_('a')).to.equal('a');
@@ -121,13 +121,6 @@ describe('util: _.normalize(path1, [path2], [...])', function () {
     expect(_('~a.js')).to.equal('~a.js');
   });
 
-  it('alias', function () {
-    expect(_.normalize('a/')).to.equal('a');
-  });
-
-  it('D:/', function () {
-    expect(_.normalize('D:/')).to.equal('D:');
-  });
 });
 
 describe('util: _.map(obj, callback, [merge])', function () {
@@ -1330,7 +1323,7 @@ describe('util: _install(name, [version], opt)', function () {
       'extract': installdir,
       'done': function () {
         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
-        var path = fis.project.getTempPath('downloads');
+        var path = fis.project.getTempPath('download');
         expect(path + '/' + hash + '.tar').to.be.exist;
         expect(installdir + name).to.be.exist;
         done();
@@ -1721,5 +1714,26 @@ describe('util: _.pipe(type, callback, def)', function (){
     }, '');
     expect("plugin.module,plugin.components," == str).to.be.true;
 
+  });
+});
+
+describe('util: _.pipe(type, callback, def)', function (){
+  var root = path.join(__dirname);
+  beforeEach(function () {
+    fis.project.setProjectRoot(root);
+    fis.media().init();
+    fis.config.init();
+    fis.compile.setup();
+  });
+
+  it('general', function () {
+      var file = fis.file.wrap(root+ "/util/upload/main.css");
+      file.useCache = false;
+      fis.cache.clean();
+      fis.match('./util/upload/a.png', {
+        useHash: true,
+        release: '/static/$0'
+      });
+      fis.compile(file);
   });
 });
