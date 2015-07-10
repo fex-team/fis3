@@ -14,6 +14,8 @@ npm install
 fis3 release
 ```
 
+- 依赖 `fis3`
+
 ### 查看
 
 ```bash
