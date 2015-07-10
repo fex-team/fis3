@@ -105,4 +105,63 @@ fis.match('*.css', {
 详情请查看 [fis-spriter-csssprites](https://github.com/fex-team/fis-spriter-csssprites)
 
 ### [fis3-deploy-local-deliver](https://github.com/fex-team/fis3-deploy-local-deliver)
-待续
+
+用来支持 fis3 本地部署能力，将 fis3 编译产出到指定目录。
+
+```js
+fis.match('*.js', {
+  deploy: fis.plugin('local-deliver', {
+      to: '/var/www/myApp'
+  })
+})
+```
+
+### [fis3-deploy-http-push](https://github.com/fex-team/fis3-deploy-http-push)
+
+用来支持 fis3 远程部署能力，将 fis3 编译通过 http post 方式发送到远程服务端。
+
+```js
+fis.match('*.js', {
+    deploy: fis.plugin('http-push', {
+
+        // 如果配置了receiver，fis会把文件逐个post到接收端上
+        receiver: 'http://www.example.com:8080/receiver.php',
+
+        // 这个参数会作为文件路径前缀附加在 $_POST['to'] 里面。
+        to: '/home/fis/www'
+    })
+})
+```
+
+### [fis3-hook-components](https://github.com/fex-team/fis3-hook-components)
+
+用来支持 `短路径` 引用安装到本地的 [component](https://github.com/fis-components)。
+
+如： `fis3 install bootstrap` 后，在页面中可以这么写。
+
+
+```html
+<link xxx href="bootstrap/css/bootstrap-theme.css" />
+<script src="boostrap/button.js"></script>
+
+<!--或者直接用模块化的方式引用 js-->
+<script type="text/javascript">
+  require(['bootstrap', 'bootstrap/button']);
+</script>
+```
+
+此功能已自动开启。
+
+### [fis3-packager-map](https://github.com/fex-team/fis3-packager-map)
+
+用来支持 fis 简单的打包，无需额外设置，已自动开启。
+
+```js
+fis.match('*.css', {
+  packTo: '/pkg/all.css'
+});
+
+fis.match('*.js', {
+  packTo: '/pkg/all.js'
+});
+```
