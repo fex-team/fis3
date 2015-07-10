@@ -236,3 +236,8 @@ package.json
 通过以上步骤可以简单封装一个解决方案，FIS3 提供了大量的插件，已经几乎极其简单的配置方式来搞定研发规范的设置，很轻松即可打造完整的前端集成解决方案。
 
 > **foo** [源码下载地址](https://github.com/fex-team/fis3/blob/dev/doc/demo/foo.tar.gz)
+
+
+### 基于Smarty的解决方案
+
+详细参见 [fis-smarty](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
