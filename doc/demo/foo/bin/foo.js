@@ -25,7 +25,7 @@ cli.launch({
   } else {
     fis = require(env.modulePath);
   }
-  fis.set('localNPMFolder', path.join(env.cwd, 'node_modules/foo'));
-  fis.set('globalNPMFolder', path.dirname(__dirname));
+  fis.set('system.localNPMFolder', path.join(env.cwd, 'node_modules/foo'));
+  fis.set('system.globalNPMFolder', path.dirname(__dirname));
   fis.cli.run(argv, env);
 });
