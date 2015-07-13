@@ -2,6 +2,7 @@
 
 # FIS3
 ![](https://img.shields.io/npm/v/fis3.svg) ![](https://img.shields.io/npm/dm/fis3.svg)
+[![Build Status](https://travis-ci.org/fex-team/fis3.svg?branch=master)](https://travis-ci.org/fex-team/fis3)
 
 FIS3 面向**前端**的**工程构建系统**。解决前端工程中性能优化、资源加载（异步、同步、按需、预加载、依赖管理、合并、内嵌）、模块化开发、自动化工具、开发规范、代码部署等问题。
 
