@@ -39,7 +39,8 @@
     "minami": "git://github.com/2betop/minami.git",
     "mocha": "^2.2.1",
     "mocha-junit-reporter": "^1.4.0",
-    "npm-watch": "0.0.0"
+    "npm-watch": "0.0.0",
+    "coveralls": "2.10.0"
   },
   "watch": {
     "jsdoc": "lib/*.js"
@@ -47,7 +48,8 @@
   "scripts": {
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test",
     "jsdoc": "jsdoc --readme ./doc/docs/api/dev-plugin.md ./lib -r -t ./node_modules/minami -c .jsdoc.json -d ./doc/api",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha test/*.js"
   },
   "repository": {
     "type": "git",
