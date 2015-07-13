@@ -53,6 +53,10 @@ fis
   });
 ```
 
+## 其他例子
+
+https://github.com/fex-team/fis3-demo
+
 ## 常用插件
 
 - [fis-optimizer-uglify-js](https://www.npmjs.com/package/fis-optimizer-uglify-js) UglifyJS2 压缩插件
