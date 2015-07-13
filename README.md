@@ -9,7 +9,6 @@ FIS3 面向**前端**的**工程构建系统**。解决前端工程中性能优�
 
 [FIS3 会在配置文件中给文件添加相应属性，用于控制文件的编译、合并等各种操作；文件属性包括基本属性和插件属性](https://github.com/fex-team/fis3/blob/master/doc/docs/api/config-props.md#文件属性)）
 
-
 ```
 npm install -g fis3
 ```
@@ -57,13 +56,17 @@ fis
   });
 ```
 
+## 其他例子
+
+https://github.com/fex-team/fis3-demo
+
 ## 常用插件
 
 ###优化类（插件属性：optimizer）
 - [fis-optimizer-uglify-js](https://www.npmjs.com/package/fis-optimizer-uglify-js) UglifyJS2 压缩插件
 - [fis-optimizer-clean-css](https://www.npmjs.com/package/fis-optimizer-clean-css) CleanCss  压缩插件
 - [fis-optimizer-png-compressor](https://www.npmjs.com/package/fis-optimizer-png-compressor) PNG 压缩插件
- 
+
 ###预处理类（插件属性：parser）
 - [fis-parser-less](https://www.npmjs.com/package/fis-parser-less) less 解析插件
 - [fis-parser-sass](https://www.npmjs.com/package/fis-parser-sass) sass / scss 解析插件
