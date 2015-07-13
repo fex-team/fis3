@@ -1,3 +1,10 @@
+## Mon Jul 13 2015
+### 发布 3.0.8
+
+- 更新 fis3-command-release 参数验证漏掉 f, file, r, root.
+- 默认去掉 useHash: true
+
+
 ## Mon Jul 08 2015
 ### 发布 3.0.7
 
