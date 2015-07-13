@@ -5,6 +5,9 @@
 
 FIS3 面向**前端**的**工程构建系统**。解决前端工程中性能优化、资源加载（异步、同步、按需、预加载、依赖管理、合并、内嵌）、模块化开发、自动化工具、开发规范、代码部署等问题。
 
+（如果对FIS先有些了解，但理解不深的，可试着带着这句话去看文档：
+
+[FIS3 会在配置文件中给文件添加相应属性，用于控制文件的编译、合并等各种操作；文件属性包括基本属性和插件属性](https://github.com/fex-team/fis3/blob/master/doc/docs/api/config-props.md#文件属性)）
 
 ```
 npm install -g fis3
@@ -30,7 +33,7 @@ fis3 server start --type node
 // default settings. fis3 release
 fis
   .media('dev')
-
+  //添加基本属性 useHash
   .match('**', {
     useHash: false
   });
@@ -39,7 +42,7 @@ fis
 // fis3 release production
 fis
   .media('production')
-
+  //添加插件属性 optimizer
   .match('*.js', {
     optimizer: fis.plugin('uglify-js') // 用 fis-optimizer-uglify-js 压缩 js
   })
@@ -59,9 +62,12 @@ https://github.com/fex-team/fis3-demo
 
 ## 常用插件
 
+###优化类（插件属性：optimizer）
 - [fis-optimizer-uglify-js](https://www.npmjs.com/package/fis-optimizer-uglify-js) UglifyJS2 压缩插件
 - [fis-optimizer-clean-css](https://www.npmjs.com/package/fis-optimizer-clean-css) CleanCss  压缩插件
 - [fis-optimizer-png-compressor](https://www.npmjs.com/package/fis-optimizer-png-compressor) PNG 压缩插件
+
+###预处理类（插件属性：parser）
 - [fis-parser-less](https://www.npmjs.com/package/fis-parser-less) less 解析插件
 - [fis-parser-sass](https://www.npmjs.com/package/fis-parser-sass) sass / scss 解析插件
 - [fis-parser-handlebars](https://www.npmjs.com/package/fis-parser-handlebars) handlebars 解析插件
