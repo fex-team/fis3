@@ -121,18 +121,38 @@ fis.match('::text', {
 ```
 - [project.fileType.text](./config-props.md#project.fileType.text) 
 
-### `*.html:js` / `*.html:css`
+### ':js'
 
-fis3 对 html 里面内嵌的 js 和 css 同样也会走文件编译流程，如果你想控制这个过程，可以先通过 glob 命中 html 文件后，再加 `:js` 或者 `:css` 来命中。
+匹配模板中的内联 js，支持 [isHtmlLike](./config-props.md#isHtmlLike) 的所有模板
 
 ```js
-// 对内嵌在页面里面的 js 也进行压缩。
-fis.match('*.html:js', {
-  optimizer: fis.plugin('uglify_js')
+// 压缩 index.html 内联的 js
+fis.match('index.html:js', {
+  optimizer: fis.plugin('uglify-js')
 });
+
+// 压缩 index.tpl 内联的 js
+fis.match('index.tpl:js', {
+  optimizer: fis.plugin('uglify-js')
+})
 ```
 
-注意：左边部分不一定是 `html` 文件，还可以这么写：`*.tpl:js`、`*.blade.php:js` 或者 `**:js`。
+### ':css'
+
+匹配模板中内联 css，支持 [isHtmlLike](./config-props.md#isHtmlLike) 的所有模板
+
+```js
+// 压缩 index.html 内联的 css
+fis.match('index.html:css', {
+  optimizer: fis.plugin('clean-css')
+});
+
+// 压缩 index.tpl 内联的 css
+fis.match('index.tpl:js', {
+  optimizer: fis.plugin('clean-css')
+})
+```
+
 
 [fis.match()]: ./config-api.md#fis.match()
 [fis.media()]: ./config-api.md#fis.media()
