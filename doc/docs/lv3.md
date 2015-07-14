@@ -42,7 +42,7 @@ fis.hook('module', {
 
 挂载这个插件后会做几件事情
 - 分析 JS `require` 等添加依赖
-- 如果是 AMD 的规范，会修改 `define(` 为 `define('<id>'` 
+- 如果是 AMD 的规范，会修改 `define(` 为 `define('<id>'`
 - 自动包裹 `define` 如果是 `commonJS` (**mod.js**)
 
 不过还需要标记哪些资源是组件
@@ -102,7 +102,7 @@ FIS3 中的包装解决方案，就是把这些集成到一个工具中。
 
 ```bash
 /template # 所有的 PHP 模板
-/static  # 所有的静态资源 
+/static  # 所有的静态资源
 ```
 
 **构建工具**
@@ -177,9 +177,9 @@ package.json
 
   ```js
   #!/usr/bin/env node
-  
+
   // vi foo/bin/foo.js
-  
+
   var Liftoff = require('liftoff');
   var argv = require('minimist')(process.argv.slice(2));
   var path = require('path');
@@ -241,3 +241,8 @@ package.json
 ### 基于Smarty的解决方案
 
 详细参见 [fis-smarty](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
+
+### 基于Laveral的解决方案
+
+详细参见 [fis-laravel](https://github.com/fis-scaffold/laravel)
+
