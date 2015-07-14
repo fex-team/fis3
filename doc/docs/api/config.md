@@ -101,6 +101,26 @@ fis.match('::package', {
 ```
 表示当 [packager][] 阶段**所有的文件**都分配某些属性
 
+### ::image
+
+```js
+// 所有被标注为图片的文件添加 hash
+fis.match('::image', {
+  useHash: true
+});
+```
+- [project.fileType.image](./config-props.md#project.fileType.image)
+
+### ::text
+
+```js
+// 所有被标注为文本的文件去除 hash
+fis.match('::text', {
+  useHash: false
+});
+```
+- [project.fileType.text](./config-props.md#project.fileType.text) 
+
 [fis.match()]: ./config-api.md#fis.match()
 [fis.media()]: ./config-api.md#fis.media()
 [文件属性]: ./config-props.md#文件属性
