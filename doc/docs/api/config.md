@@ -123,7 +123,7 @@ fis.match('::text', {
 
 ### `*.html:js` / `*.html:css`
 
-fis3 对 html 里面内嵌的 js 和 css 同样也会走文件编译流程，如果你想控制这个过程，可以先通过 glob 命中 html 文件后，再加 `:js` 或者 `:css` 内命中。
+fis3 对 html 里面内嵌的 js 和 css 同样也会走文件编译流程，如果你想控制这个过程，可以先通过 glob 命中 html 文件后，再加 `:js` 或者 `:css` 来命中。
 
 ```js
 // 对内嵌在页面里面的 js 也进行压缩。
