@@ -121,7 +121,7 @@ fis.match('::text', {
 ```
 - [project.fileType.text](./config-props.md#project.fileType.text) 
 
-### ':js'
+### :js
 
 匹配模板中的内联 js，支持 [isHtmlLike](./config-props.md#isHtmlLike) 的所有模板
 
@@ -137,7 +137,7 @@ fis.match('index.tpl:js', {
 })
 ```
 
-### ':css'
+### :css
 
 匹配模板中内联 css，支持 [isHtmlLike](./config-props.md#isHtmlLike) 的所有模板
 
