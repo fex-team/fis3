@@ -127,7 +127,7 @@ fis3 对 html 里面内嵌的 js 和 css 同样也会走文件编译流程，如
 
 ```js
 // 对内嵌在页面里面的 js 也进行压缩。
-fis.match('**:js', {
+fis.match('*.html:js', {
   optimizer: fis.plugin('uglify_js')
 });
 ```
