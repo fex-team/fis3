@@ -121,6 +121,17 @@ fis.match('::text', {
 ```
 - [project.fileType.text](./config-props.md#project.fileType.text) 
 
+### *.html:js / *.html:css
+
+fis3 对 html 里面内嵌的 js 和 css 同样也会走文件编译流程，如果你想控制这个过程，可以先通过 glob 命中 html 文件后，再加 `:js` 或者 `:css` 内命中。
+
+```js
+// 对内嵌在页面里面的 js 也进行压缩。
+fis.match('**:js', {
+  optimizer: fis.plugin('uglify_js')
+});
+```
+
 [fis.match()]: ./config-api.md#fis.match()
 [fis.media()]: ./config-api.md#fis.media()
 [文件属性]: ./config-props.md#文件属性
