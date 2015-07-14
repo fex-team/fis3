@@ -132,6 +132,8 @@ fis.match('*.html:js', {
 });
 ```
 
+注意：左边部分不一定是 `html` 文件，还可以这么写：`*.tpl:js`、`*.blade.php:js` 或者 `**:js`。
+
 [fis.match()]: ./config-api.md#fis.match()
 [fis.media()]: ./config-api.md#fis.media()
 [文件属性]: ./config-props.md#文件属性
