@@ -13,14 +13,12 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="/static/css/normalize.css" rel="stylesheet">
-
-
+   
+    <link rel="stylesheet" href="/static/css/common.css">
     <!-- Custom styles -->
     <link href="/static/css/page.css" rel="stylesheet" type="text/css" media="all">
     <link href="/static/css/github.css" rel="stylesheet" type="text/css" media="all">
     <link href="/static/css/perfect-scrollbar.min.css" rel="stylesheet">
-    <link href="/static/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
     <script type="text/javascript">
         //检查页面域名
         (function(){
@@ -36,14 +34,6 @@
     <script src="/static/js/html5shiv.js"></script>
     <script src="/static/js/respond.min.js"></script>
     <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <!-- Update these with your own images
-      <link rel="shortcut icon" href="images/favicon.ico">
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    -->
 
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/scrollspy.js"></script>
@@ -158,9 +148,10 @@
         $(window).scroll(function(event){
             if($(window).width()>720){
                 var st = $(this).scrollTop();
-                if(st > lastScrollTop){
+                var range = st - lastScrollTop;
+                if(range > 5){
                     $("body").addClass("hide-header");
-                }else{
+                }else if(range < -5){
                     $("body").removeClass("hide-header");
                 }
             }else{
