@@ -121,7 +121,7 @@ package.json
   var fis = module.exports = require('fis3');
   fis.require.prefixes.unshift('foo');
   fis.cli.name = 'foo';
-  fis.cli.info = require('./require.json');
+  fis.cli.info = require('./package.json');
 
   fis.match('*', {
     release: '/static/$0' // 所有资源发布时产出到 /static 目录下
@@ -237,12 +237,17 @@ package.json
 
 > **foo** [源码下载地址](https://github.com/fex-team/fis3/blob/dev/doc/demo/foo.tar.gz)
 
+### 基于PHP模板的解决方案
+
+详情请见 [fis3纯php解决方案](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-php)
+
 
 ### 基于Smarty的解决方案
 
-详细参见 [fis-smarty](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
+详细参见 [Smarty 解决方案原理](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
+
+[fis3-smarty](https://github.com/fex-team/fis3-smarty) 集成了 [fis-plus](https://github.com/fex-team/fis-plus) 的目录规范以及处理插件。实现对 Smarty 模板解决方案的工程构建工具支持。
 
 ### 基于Laveral的解决方案
 
 详细参见 [fis-laravel](https://github.com/fis-scaffold/laravel)
-

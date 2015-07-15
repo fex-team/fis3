@@ -40,7 +40,7 @@ fis.match('{a,b}.js', {
 
 ```
 - `c.js` 分配到的属性是 `{optimizer: fis.plugin('uglify-js')}`，意思是最终会被压缩
-- `a.js` 和 `b.js` 分配到的属性是 `{isMod: true, optimizer: null}` 意思是最终会附带属性 [isMod](./config-props.md#ismod) 并进行组件化处理、不做压缩
+- `a.js` 和 `b.js` 分配到的属性是 `{isMod: true, optimizer: null}` 意思是最终会附带属性 [isMod](./config-props.md#isMod) 并进行组件化处理、不做压缩
 
 通过上面两个例子，大家不难看出；FIS3 设计的是一套类 css 的配置体系，那么其中 `fis.match()` 就是用来设置规则的；其中第一个参数可当成是 `selector` 其设置的类型是 [glob][] 或者是 [正则][]；
 
