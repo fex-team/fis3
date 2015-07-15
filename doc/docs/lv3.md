@@ -243,3 +243,19 @@ package.json
 详细参见 [Smarty 解决方案原理](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
 
 [fis3-smarty](https://github.com/fex-team/fis3-smarty) 集成了 [fis-plus](https://github.com/fex-team/fis-plus) 的目录规范以及处理插件。实现对 Smarty 模板解决方案的工程构建工具支持。 
+
+
+### 基于纯PHP的解决方案
+
+详细见 [纯php静态资源管理方案](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-php)
+
+**解决问题**
+
+ - 支持模块化的开发，使用commonJS或者AMD方案来控制前端JS资源的加载
+ - 支持组件化开发，使用组件时能自动加载对应依赖的静态资源
+ - 自动分析资源依赖关系，确保依赖资源正常下载
+ - 自动把css放顶部、JS放底部输出，提升页面渲染性能
+ - 支持收集组件中的内嵌样式或脚本，合并输出
+
+
+ 
