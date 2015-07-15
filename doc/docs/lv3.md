@@ -121,7 +121,7 @@ package.json
   var fis = module.exports = require('fis3');
   fis.require.prefixes.unshift('foo');
   fis.cli.name = 'foo';
-  fis.cli.info = require('./require.json');
+  fis.cli.info = require('./package.json');
 
   fis.match('*', {
     release: '/static/$0' // 所有资源发布时产出到 /static 目录下
