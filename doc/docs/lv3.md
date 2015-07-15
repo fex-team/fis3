@@ -240,4 +240,6 @@ package.json
 
 ### 基于Smarty的解决方案
 
-详细参见 [fis-smarty](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
+详细参见 [Smarty 解决方案原理](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
+
+[fis3-smarty](https://github.com/fex-team/fis3-smarty) 集成了 [fis-plus](https://github.com/fex-team/fis-plus) 的目录规范以及处理插件。实现对 Smarty 模板解决方案的工程构建工具支持。 
