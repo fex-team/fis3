@@ -42,7 +42,7 @@ fis.hook('module', {
 
 挂载这个插件后会做几件事情
 - 分析 JS `require` 等添加依赖
-- 如果是 AMD 的规范，会修改 `define(` 为 `define('<id>'` 
+- 如果是 AMD 的规范，会修改 `define(` 为 `define('<id>'`
 - 自动包裹 `define` 如果是 `commonJS` (**mod.js**)
 
 不过还需要标记哪些资源是组件
@@ -102,7 +102,7 @@ FIS3 中的包装解决方案，就是把这些集成到一个工具中。
 
 ```bash
 /template # 所有的 PHP 模板
-/static  # 所有的静态资源 
+/static  # 所有的静态资源
 ```
 
 **构建工具**
@@ -121,7 +121,7 @@ package.json
   var fis = module.exports = require('fis3');
   fis.require.prefixes.unshift('foo');
   fis.cli.name = 'foo';
-  fis.cli.info = require('./require.json');
+  fis.cli.info = require('./package.json');
 
   fis.match('*', {
     release: '/static/$0' // 所有资源发布时产出到 /static 目录下
@@ -177,9 +177,9 @@ package.json
 
   ```js
   #!/usr/bin/env node
-  
+
   // vi foo/bin/foo.js
-  
+
   var Liftoff = require('liftoff');
   var argv = require('minimist')(process.argv.slice(2));
   var path = require('path');
@@ -237,10 +237,15 @@ package.json
 
 > **foo** [源码下载地址](https://github.com/fex-team/fis3/blob/dev/doc/demo/foo.tar.gz)
 
+### 基于PHP模板的解决方案
+
+详情请见 [fis3纯php解决方案](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-php)
+
 
 ### 基于Smarty的解决方案
 
 详细参见 [Smarty 解决方案原理](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
+
 
 [fis3-smarty](https://github.com/fex-team/fis3-smarty) 集成了 [fis-plus](https://github.com/fex-team/fis-plus) 的目录规范以及处理插件。实现对 Smarty 模板解决方案的工程构建工具支持。 
 
@@ -258,4 +263,6 @@ package.json
  - 支持收集组件中的内嵌样式或脚本，合并输出
 
 
- 
+### 基于Laveral的解决方案
+
+详细参见 [fis-laravel](https://github.com/fis-scaffold/laravel)
