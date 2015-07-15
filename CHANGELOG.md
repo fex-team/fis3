@@ -1,3 +1,8 @@
+## Wed Jul 15 2015
+
+### 发布 3.0.9
+- 升级 fis3-command-release
+
 ## Mon Jul 13 2015
 ### 发布 3.0.8
 
