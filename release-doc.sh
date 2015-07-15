@@ -1,18 +1,23 @@
 rev="fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
 
-# midified=$(git diff-tree --no-commit-id --name-only -r "$(git log --pretty=format:'%h' -n 1)")
-# run="0"
+echo "Fetching https://raw.githubusercontent.com/fex-team/fis3/gh-pages/commitId.log"
+lastCommitId=$(curl https://raw.githubusercontent.com/fex-team/fis3/gh-pages/commitId.log)
 
-# # have change?
-# for m in $midified; do
-#   echo $m
-#   echo $m | grep -E '^doc/'
-#   test "$?" = "0" && run="1" && break
-# done
+echo "git diff -z --name-only HEAD $lastCommitId"
+midified=$(git diff -z --name-only HEAD $lastCommitId)
 
-# test $run = "0" && echo "#### Doc no change" && exit 0
+run="0"
 
-lastCommitId=$(git rev-parse HEAD)
+# have change?
+for m in $midified; do
+  echo $m | grep -E '^doc/'
+  test "$?" = "0" && run="1" && break
+done
+
+test $run = "0" && echo "#### Doc no change" && exit 0
+
+echo "#### Document Building..."
+currentCommitId=$(git rev-parse HEAD)
 ## 生成 API 文档
 npm run jsdoc
 
@@ -22,7 +27,7 @@ cd ./doc && npm install && node ../bin/fis.js release prod -d ./output
 ## 进入 output 提交编译产出到 gh-pages 分支下
 cd ./output && git init && git remote add origin https://github.com/fex-team/fis3.git
 
-echo "$lastCommitId" > ./commitId.log
+echo "$currentCommitId" > ./commitId.log
 
 git config --global user.email "fansekey@gmail.com"
 git config --global user.name "xiangshouding"
