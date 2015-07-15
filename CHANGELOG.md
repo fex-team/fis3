@@ -2,9 +2,8 @@
 
 ### 发布 3.0.10
 
+- 解决 watch 时，同时多个文件修改导致多次 release 的问题。
 - 解决 standard 流程不能关闭的 bug
-
-### 发布 3.0.9
 - 升级 fis3-command-release
 
 ## Mon Jul 13 2015
