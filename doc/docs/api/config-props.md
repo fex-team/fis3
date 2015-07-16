@@ -219,17 +219,17 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
     ```
 
 #### isHtmlLike
-* 解释：指定对文件进行 [html](关于三种语言能力) 相关的
+* 解释：指定对文件进行 [html](../user-dev/extlang.md#html) 相关语言能力处理
 * 值类型：`bool`
 * 默认值：无
 
 #### isCssLike
-* 解释：指定对文件进行 [css](关于三种语言能力) 相关的
+* 解释：指定对文件进行 [css](../user-dev/extlang.md#css) 相关的语言能力处理
 * 值类型：`bool`
 * 默认值：无
 
 #### isJsLike
-* 解释：指定对文件进行 [js](关于三种语言能力) 相关的
+* 解释：指定对文件进行 [js](../user-dev/extlang.md#js) 相关的语言能力处理
 * 值类型：`string`
 * 默认值：无
 
