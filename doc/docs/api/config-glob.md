@@ -125,17 +125,17 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
 
 给 [node-glob](https://github.com/isaacs/node-glob) 扩展分组功能确实还存在缺陷。分组 `()` 与 或`{}` 搭配使用时存在问题。
 
-比如： `/a/({b|c}/**.js)` 会拆分成并列的两个规则 `/a/(b/**.js)` 和 `/a/(c/**.js)`，当这两个合成一个正则的时候，这个时候问题来了，
+比如： `/a/({b,c}/**.js)` 会拆分成并列的两个规则 `/a/(b/**.js)` 和 `/a/(c/**.js)`，当这两个合成一个正则的时候，这个时候问题来了，
 一个分组变成了两个分组，分组 1 为 `(b/**.js)` 分组 2 为 `(c/**.js)`。那么当希望获取捕获信息时，不能按原来的分组序号去获取了。
 
 ```js
 // 错误
-fis.match('/a/({b|c}/**.js)', {
+fis.match('/a/({b,c}/**.js)', {
   release: '/static/$1'
 });
 
 // 正确
-fis.match('/a/({b|c}/**.js)', {
+fis.match('/a/({b,c}/**.js)', {
   release: '/static/$1$2'
 });
 ```
