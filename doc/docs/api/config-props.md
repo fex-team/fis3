@@ -455,7 +455,7 @@ fis.match('*.css', {
 
 [更多插件](http://npmsearch.com/?q=fis-optimizer%20fis3-optimizer)
 
-[文件属性]: #文件属性
+
 
 #### 打包阶段插件
 
