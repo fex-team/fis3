@@ -1695,27 +1695,28 @@ describe('util: _.nohup(type, callback, def)', function (){
   it('general', function () {
     var re1 = _.nohup('fis server start',function (){var x = 3});
     var re2 = _.nohup('fis server stop',function (){var c = 9});
+    console.log(re1.stdout);
     expect(re1.stdout._hadError).to.be.false;
     expect(re2.stdout._hadError).to.be.false;
   });
 });
 
-describe('util: _.pipe(type, callback, def)', function (){
-  it('general', function () {
-    config.env().set('modules.plugin','module');
-    _.pipe('plugin', function (processor, settings, key, type){
-      expect("plugin.module" == key).to.be.true;
-    }, '');
-
-    var str = '';
-    config.env().set('modules.plugin',['module','components']);
-    _.pipe('plugin', function (processor, settings, key, type){
-      str += key + ',';
-    }, '');
-    expect("plugin.module,plugin.components," == str).to.be.true;
-
-  });
-});
+//describe('util: _.pipe(type, callback, def)', function (){
+//  it('general', function () {
+//    config.env().set('modules.plugin','module');
+//    _.pipe('plugin', function (processor, settings, key, type){
+//      expect("plugin.module" == key).to.be.true;
+//    }, '');
+//
+//    var str = '';
+//    config.env().set('modules.plugin',['module','components']);
+//    _.pipe('plugin', function (processor, settings, key, type){
+//      str += key + ',';
+//    }, '');
+//    expect("plugin.module,plugin.components," == str).to.be.true;
+//
+//  });
+//});
 
 describe('util: _.pipe(type, callback, def)', function (){
   var root = path.join(__dirname);
