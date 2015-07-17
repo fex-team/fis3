@@ -177,7 +177,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 #### id
 * 解释：指定文件的资源id。默认是 **namespace + subpath** 的值
 * 值类型：`string`
-* 默认值：无
+* 默认值：**namespace + subpath**
 
     如下方例子，假设 `/static/lib/jquery.js` 设定了特定的 id `jquery`,
     那么在使用这个组件的时候，可以直接用这个 id；
@@ -194,6 +194,32 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
     ```js
     var $ = require('jquery');
     ```
+
+#### moduleId
+* 解释：指定文件资源的模块id。在插件``fis3-hook-module``里面自动包裹``define``的时候会用到，默认是 id 的值。
+* 类型：`string`
+* 默认值：`**namespace + subpath**`
+
+   ```js
+    fis.match('/static/lib/a.js', {
+        id: 'a',
+        moduleId: 'a'
+        isMod: true
+    });
+    ```
+    
+    编译前
+    ```js
+    exports.a = 10
+    ```
+    
+    编译后
+    ```js
+    define('a',function(require,exports,module){
+      exports.a = 10
+    })
+    ```
+    
 
 #### url
 * 解释：指定文件的资源定位路径，以 / 开头。默认是 [release](#release) 的值，url可以与发布路径 release 不一致。
@@ -429,7 +455,7 @@ fis.match('*.css', {
 
 [更多插件](http://npmsearch.com/?q=fis-optimizer%20fis3-optimizer)
 
-[文件属性]: #文件属性
+
 
 #### 打包阶段插件
 
