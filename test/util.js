@@ -1695,9 +1695,8 @@ describe('util: _.nohup(type, callback, def)', function (){
   it('general', function () {
     var re1 = _.nohup('fis server start',function (){var x = 3});
     var re2 = _.nohup('fis server stop',function (){var c = 9});
-    console.log(re1.stdout);
-    expect(re1.stdout._hadError).to.be.false;
-    expect(re2.stdout._hadError).to.be.false;
+    expect(!!re1.stdout._hadError).to.be.false;
+    expect(!!re2.stdout._hadError).to.be.false;
   });
 });
 
