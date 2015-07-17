@@ -457,11 +457,13 @@ describe('file: getUrl',function(){
     });
     path = __dirname+'/file/css/test.css?__inline';
     f = _.wrap(path);
+    f.useHash = true;
     url = f.getUrl(true,true);
     expect(url).to.equal('www.baidu.com/file/css/test_'+ f.getHash()+'.css?__inline');
 
     path = __dirname+'/file/embed/embed.gif?__inline';
     f = _.wrap(path);
+    f.useHash = true;
     url = f.getUrl(true,true);
     expect(url).to.equal('www.baidu.com/file/embed/embed_'+ f.getHash()+'.gif?__inline');
   });
@@ -485,18 +487,21 @@ describe('file: getHashRelease',function(){
     //js
     var path = __dirname+'/file/ext/modular/js.js';
     var f = _.wrap(path);
+    f.useHash = true;
     var url = f.getHashRelease();
     var hash = u.md5(f.getContent());
     expect(url).to.equal('/file/ext/modular/js_'+ hash+'.js');
     //css
     path = __dirname+'/file/css/test.css?__inline';
     f = _.wrap(path);
+    f.useHash = true;
     url = f.getHashRelease();
     hash = u.md5(f.getContent());
     expect(url).to.equal('/file/css/test_'+ hash+'.css');
     //image
     path = __dirname+'/img/w3c_home.gif?__inline';
     f = _.wrap(path);
+    f.useHash = true;
     url = f.getHashRelease();
     hash = u.md5(f.getContent());
     expect(url).to.equal('/img/w3c_home_'+ hash+'.gif');
