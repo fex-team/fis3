@@ -1175,7 +1175,8 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
     var hash = fis.util.md5(url, 8);
     _.download(url, function (err) {
       console.log(err);
-      expect(path + '/' + hash + '.png').to.be.exist;
+      //expect(path + '/' + hash + '.png').to.be.exist;
+      expect(fs.existsSync(path + '/' + hash + '.png')).to.be.true;
       done();
     });
 
@@ -1248,6 +1249,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
 });
 
 describe('util: _upload(url, [opt], [data], content, subpath, callback)', function () {
+  this.timeout(15000);
   // it('general', function (done) {
   //   var receiver = 'http://web.baidu.com:8088/test/upload/receiver.php';
   //   var to = '/home/work/repos/test/upload';
@@ -1316,6 +1318,7 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
 
 describe('util: _install(name, [version], opt)', function () {
   var installdir = __dirname + '/install/';
+  this.timeout(15000);
   after(function () {
     //清空install文件夹
     fis.cache.clean(installdir);
