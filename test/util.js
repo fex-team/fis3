@@ -1196,12 +1196,12 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
       expect(fs.existsSync(extract + '/downTest')).to.be.true;
 
       done();
-    });   //, extract
+    });   //, extract  解压有问题  这种情况 还未处理
 
   });
 
   it('not_exist', function (done) {
-    var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/downTest05.tar';         //不存在的包
+    var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';         //不存在的包
     var not_exist = 0;
     _.download(url, function (msg) {
       if (msg == 404)
