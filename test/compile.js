@@ -122,7 +122,7 @@ describe('compile: builtin uri', function () {
     expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.css')));
 
     fis.cache.clean();
-    setTimeout(function(){
+    //setTimeout(function(){
       fis.match('comp_**.css', {
         useHash: false,
         release: '/static/$0'
@@ -135,7 +135,7 @@ describe('compile: builtin uri', function () {
 
       fis.compile(file);
       expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main_release.css')));
-    },1000);
+    //},1000);
 
   });
 });

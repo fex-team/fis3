@@ -1717,7 +1717,7 @@ describe('util: _.nohup(type, callback, def)', function (){
 //  });
 //});
 
-describe('util: _.pipe(type, callback, def)', function (){
+describe('util: _.pipe(type, callback, def)2', function (){
   var root = path.join(__dirname);
   beforeEach(function () {
     fis.project.setProjectRoot(root);
@@ -1727,13 +1727,15 @@ describe('util: _.pipe(type, callback, def)', function (){
   });
 
   it('general', function () {
-      var file = fis.file.wrap(root+ "/util/upload/main.css");
+      var file = fis.file.wrap(path.join(root, 'util','upload','main.css'));
       file.useCache = false;
       fis.cache.clean();
-      fis.match('./util/upload/a.png', {
-        useHash: true,
+    console.log(root);
+      fis.match('**/a.png', {
+        useHash: false,
         release: '/static/$0'
       });
       fis.compile(file);
+      expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'util','upload', 'maintar.css')));
   });
 });
