@@ -244,8 +244,6 @@ package.json
 
 [fis3-smarty](https://github.com/fex-team/fis3-smarty) 集成了 [fis-plus](https://github.com/fex-team/fis-plus) 的目录规范以及处理插件。实现对 Smarty 模板解决方案的工程构建工具支持。
 
-
-
 ### 基于纯PHP的解决方案
 
 详细见 [纯php静态资源管理方案](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-php)
