@@ -1152,7 +1152,7 @@ describe('util: _parseUrl(url, opt)', function () {
 
 describe('util: _download(url, [callback], [extract], [opt])', function () {
   var downdir = __dirname + '/download/';
-
+  this.timeout(15000);
   before(function () {
     //清空fis tmp download dir
     var files = [];
@@ -1168,8 +1168,8 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   });
   it('general', function (done) {
     //var url = 'http://10.48.30.87:8088/test/download/downTest01.tar';
-    var url = 'http://fex.baidu.com/fis3/static/images/code_1750c9a.png';
-    //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/logo_8652a39.png';
+    //var url = 'http://fex.baidu.com/fis3/static/images/code_1750c9a.png';
+    var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/logo_8652a39.png';
 
     var path = fis.project.getTempPath('downloads');
     var hash = fis.util.md5(url, 8);
