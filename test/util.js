@@ -1174,7 +1174,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
     var path = fis.project.getTempPath('downloads');
     var hash = fis.util.md5(url, 8);
     _.download(url, function (err) {
-      //console.log(err);
+      console.log(err);
       expect(path + '/' + hash + '.png').to.be.exist;
       done();
     });
