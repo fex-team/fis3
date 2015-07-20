@@ -28,8 +28,8 @@ cd ./doc && npm install && node ../bin/fis.js release prod -d ./output
 cd ./output && git init && git remote add origin https://github.com/fex-team/fis3.git
 
 ## 复制测试文件
-mkdir -p ./output/test
-cp ./test/test.tar ./output/test/test.tar
+mkdir -p ./test
+cp ../test/test.tar ./test/test.tar
 
 echo "$currentCommitId" > ./commitId.log
 
