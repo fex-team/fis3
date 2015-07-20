@@ -3,8 +3,8 @@ rev="fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
 echo "Fetching https://raw.githubusercontent.com/fex-team/fis3/gh-pages/commitId.log"
 lastCommitId=$(curl https://raw.githubusercontent.com/fex-team/fis3/gh-pages/commitId.log)
 
-echo "git diff -z --name-only HEAD $lastCommitId"
-midified=$(git diff -z --name-only HEAD $lastCommitId)
+echo "git diff -z --name-only $lastCommitId^..HEAD"
+midified=$(git diff -z --name-only $lastCommitId^..HEAD)
 
 run="0"
 
