@@ -237,11 +237,6 @@ package.json
 
 > **foo** [源码下载地址](https://github.com/fex-team/fis3/blob/dev/doc/demo/foo.tar.gz)
 
-### 基于PHP模板的解决方案
-
-详情请见 [fis3纯php解决方案](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-php)
-
-
 ### 基于Smarty的解决方案
 
 详细参见 [Smarty 解决方案原理](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
