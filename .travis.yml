@@ -17,4 +17,5 @@ cache:
 branches:
   only:
   - master
-
+sudo:
+-true
