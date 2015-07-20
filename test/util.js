@@ -1168,8 +1168,8 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   });
   it('general', function (done) {
     //var url = 'http://10.48.30.87:8088/test/download/downTest01.tar';
-    //var url = 'http://fex.baidu.com/fis3/static/images/code_1750c9a.png';
-    var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/logo_8652a39.png';
+    var url = 'http://fex.baidu.com/fis3/static/images/code_1750c9a.png';
+    //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/logo_8652a39.png';
 
     var path = fis.project.getTempPath('downloads');
     var hash = fis.util.md5(url, 8);
@@ -1185,8 +1185,8 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   it('extract', function (done) {
     var name = 'downTest';
     //var url = 'http://10.48.30.87:8088/test/download/' + name + '.tar';
-    //var url = 'http://fex.baidu.com/fis3/test/test.tar';
-    var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/test/test.jar';
+    var url = 'http://fex.baidu.com/fis3/test/test.tar';
+    //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/test/test.jar';
     var extract = downdir;
     _.download(url, function (err) {
       console.log(err);
@@ -1196,7 +1196,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
       expect(fs.existsSync(extract + '/downTest')).to.be.true;
 
       done();
-    }, extract);
+    });   //, extract
 
   });
 
