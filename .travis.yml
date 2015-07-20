@@ -18,4 +18,4 @@ branches:
   only:
   - master
 sudo:
--true
+ - true
