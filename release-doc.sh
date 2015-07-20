@@ -27,6 +27,10 @@ cd ./doc && npm install && node ../bin/fis.js release prod -d ./output
 ## 进入 output 提交编译产出到 gh-pages 分支下
 cd ./output && git init && git remote add origin https://github.com/fex-team/fis3.git
 
+## 复制测试文件
+mkdir -p ./output/test
+cp ./test/test.tar ./output/test/test.tar
+
 echo "$currentCommitId" > ./commitId.log
 
 git config --global user.email "fansekey@gmail.com"
@@ -47,3 +51,5 @@ cd ../../
 
 # 删掉产出的 output 目录，为了方便本地跑脚本
 rm -rf ./doc/output
+
+curl http://fex.baidu.com/cleanCache
