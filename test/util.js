@@ -1702,17 +1702,17 @@ describe('util: _.nohup(type, callback, def)', function (){
 
 //describe('util: _.pipe(type, callback, def)', function (){
 //  it('general', function () {
-//    config.env().set('modules.plugin','module');
-//    _.pipe('plugin', function (processor, settings, key, type){
-//      expect("plugin.module" == key).to.be.true;
+//    config.env().set('modules.hook','module');
+//    _.pipe('hook', function (processor, settings, key, type){
+//      expect("hook.module" == key).to.be.true;
 //    }, '');
 //
 //    var str = '';
-//    config.env().set('modules.plugin',['module','components']);
-//    _.pipe('plugin', function (processor, settings, key, type){
+//    config.env().set('modules.hook',['module','components']);
+//    _.pipe('hook', function (processor, settings, key, type){
 //      str += key + ',';
 //    }, '');
-//    expect("plugin.module,plugin.components," == str).to.be.true;
+//    expect("hook.module,hook.components," == str).to.be.true;
 //
 //  });
 //});
