@@ -1168,12 +1168,12 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   });
   it('general', function (done) {
     //var url = 'http://10.48.30.87:8088/test/download/downTest01.tar';
-    var url = 'https://github.com/fex-team/fis3/tree/master/test/download/downTest01.tar';
+    var url = 'http://fex.baidu.com/fis3/static/images/code_1750c9a.png';
 
     var path = fis.project.getTempPath('downloads');
     var hash = fis.util.md5(url, 8);
     _.download(url, function () {
-      expect(path + '/' + hash + '.tar').to.be.exist;
+      expect(path + '/' + hash + '.png').to.be.exist;
       done();
     });
 
