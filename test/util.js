@@ -1185,7 +1185,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
     var name = 'downTest';
     //var url = 'http://10.48.30.87:8088/test/download/' + name + '.tar';
     //var url = 'http://fex.baidu.com/fis3/test/test.tar';
-    var url = 'https://github.com/fex-team/fis3/tree/master/test/test.tar';
+    var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/test/test.jar';
     var extract = downdir;
     _.download(url, function (err) {
       console.log(err);
