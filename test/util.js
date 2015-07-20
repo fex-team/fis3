@@ -1200,7 +1200,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   });
 
   it('not_exist', function (done) {
-    var url = 'http://10.48.30.87:8088/test/download/downTest05.tar';         //不存在的包
+    var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/downTest05.tar';         //不存在的包
     var not_exist = 0;
     _.download(url, function (msg) {
       if (msg == 404)
@@ -1218,7 +1218,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   });
 
   it('extract-error', function (done) {
-    var url = 'http://10.48.30.87:8088/test/download/downTest06.tar';
+    var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/downTest06.tar';
     var not_exist = 0;
     var extract = downdir;
     _.download(url, function (msg) {
