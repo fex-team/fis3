@@ -309,19 +309,19 @@ nav .nav-left .nav-link:hover:after {
   position: absolute;
   height: 3px;
   width: 100%;
-  top: 43px;
+  top: 36px;
   left: 0;
   padding: 0;
   transition: all .2s ease-in-out;
 }
 
-footer {
+.footer {
   text-shadow: 0 1px 2px rgba(2,9,25,.2);
   background-color: #3360A3;
   color: #fff;
 }
 
-footer .footer__content {
+.footer .footer__content {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -329,25 +329,25 @@ footer .footer__content {
   padding: 60px 0 30px;
 }
 
-footer .link-column {
+.footer .link-column {
   display: block;
   font-size: 20px;
   color: #fff;
   margin-bottom: 20px;
 }
 
-footer .link-column:last-child {
+.footer .link-column:last-child {
   margin-right: 0;
 }
 
-footer .link-column .title {
+.footer .link-column .title {
   font-family: BrixSansRegular,BrixSansMedium,"Helvetica Neue",Helvetica,sans-serif;
   font-size: 20px;
   margin-bottom: 24px;
   color: #a1b3d7;
 }
 
-footer .link-column a {
+.footer .link-column a {
   display: block;
   clear: both;
   color: #fff;
@@ -355,11 +355,11 @@ footer .link-column a {
   line-height: 26px;
 }
 
-footer .link-column a:hover {
+.footer .link-column a:hover {
   color: #bfd4ff;
 }
 
-footer .copyright {
+.footer .copyright {
   font-size: 18px;
   color: #9eb2e1;
   text-align: center;
@@ -419,16 +419,16 @@ footer .copyright {
     font-size: 30px;
   }
 
-  footer .link-column {
+  .footer .link-column {
     padding-left: 20px;
     font-size: 14px;
   }
 
-  footer .link-column .title {
+  .footer .link-column .title {
     clear: both;
   }
 
-  footer .link-column a {
+  .footer .link-column a {
     display: inline-block;
     margin-right: 10px;
     padding: 0 10px;
