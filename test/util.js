@@ -1167,7 +1167,8 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
     }
   });
   it('general', function (done) {
-    var url = 'http://10.48.30.87:8088/test/download/downTest01.tar';
+    //var url = 'http://10.48.30.87:8088/test/download/downTest01.tar';
+    var url = 'https://github.com/fex-team/fis3/tree/master/test/download/downTest01.tar';
 
     var path = fis.project.getTempPath('downloads');
     var hash = fis.util.md5(url, 8);
