@@ -29,7 +29,7 @@ cd ./output && git init && git remote add origin https://github.com/fex-team/fis
 
 ## 复制测试文件
 mkdir -p ./test
-cp ../../test/downTest.tar ./test/downTest.tar
+cp -r ../../test/attachment ./test/attachment
 
 echo "$currentCommitId" > ./commitId.log
 
