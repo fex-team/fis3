@@ -1320,7 +1320,7 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
 
 describe('util: _install(name, [version], opt)', function () {
   var installdir = __dirname + '/install/';
-  this.timeout(30000);
+  this.timeout(20000);
   after(function () {
     //清空install文件夹
     fis.cache.clean(installdir);
@@ -1328,7 +1328,7 @@ describe('util: _install(name, [version], opt)', function () {
 
   it('general', function (done) {
     var name = 'installTest';
-    var version = '*';
+    var version = '0.1';//*
     var opt = {
       //'remote': 'http://10.48.30.87:8088/test/install',
       'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
@@ -1336,6 +1336,7 @@ describe('util: _install(name, [version], opt)', function () {
       'done': function () {
         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
         var path = fis.project.getTempPath('download');
+        console.log(path);
         expect(path + '/' + hash + '.tar').to.be.exist;
         expect(installdir + name).to.be.exist;
         done();
