@@ -1320,7 +1320,7 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
 
 describe('util: _install(name, [version], opt)', function () {
   var installdir = __dirname + '/install/';
-  this.timeout(15000);
+  this.timeout(20000);
   after(function () {
     //清空install文件夹
     fis.cache.clean(installdir);
