@@ -1185,9 +1185,10 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   it('extract', function (done) {
     var name = 'downTest';
     //var url = 'http://10.48.30.87:8088/test/download/' + name + '.tar';
-    var url = 'http://fex.baidu.com/fis3/test/test.tar';
+    var url = 'http://fex.baidu.com/fis3/test/downTest.tar';
     //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/test/test.jar';
     var extract = downdir;
+    console.log(extract);
     _.download(url, function (err) {
       console.log(err);
       var hash = fis.util.md5(url, 8);
@@ -1196,7 +1197,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
       expect(fs.existsSync(extract + '/downTest')).to.be.true;
 
       done();
-    });   //, extract  解压有问题  这种情况 还未处理
+    }, extract);   //, extract  解压有问题  这种情况 还未处理
 
   });
 
@@ -1219,7 +1220,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   });
 
   it('extract-error', function (done) {
-    var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/downTest06.tar';
+    var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';
     var not_exist = 0;
     var extract = downdir;
     _.download(url, function (msg) {
