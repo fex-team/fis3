@@ -1152,7 +1152,7 @@ describe('util: _parseUrl(url, opt)', function () {
 
 describe('util: _download(url, [callback], [extract], [opt])', function () {
   var downdir = __dirname + '/download/';
-  this.timeout(15000);
+  this.timeout(20000);
   before(function () {
     //清空fis tmp download dir
     var files = [];
@@ -1250,7 +1250,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
 });
 
 describe('util: _upload(url, [opt], [data], content, subpath, callback)', function () {
-  this.timeout(15000);
+  this.timeout(20000);
   // it('general', function (done) {
   //   var receiver = 'http://web.baidu.com:8088/test/upload/receiver.php';
   //   var to = '/home/work/repos/test/upload';
@@ -1276,7 +1276,8 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
 
   it('err--not exist', function (done) {
     var receiver = 'http://web.baidu.com:8088/test/receiver.php'; //non exist receiver
-    var to = '/home/work/repos/test/upload';
+    //var to = '/home/work/repos/test/upload';
+    var to = '/home/travis/build/fex-team/fis3/test/copy';
     var release = '/a.js';
     var content = 'content';
     var subpath = '/';
