@@ -256,7 +256,6 @@ package.json
  - 自动把css放顶部、JS放底部输出，提升页面渲染性能
  - 支持收集组件中的内嵌样式或脚本，合并输出
 
-
 ### 基于Laveral的解决方案
 
 详细请参见 [fis-laravel](https://github.com/fis-scaffold/laravel)
