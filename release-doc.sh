@@ -10,7 +10,7 @@ run="0"
 
 # have change?
 for m in $midified; do
-  echo $m | grep -E '^doc/'
+  echo $m | grep -E '^(doc/|release-doc\.sh$)'
   test "$?" = "0" && run="1" && break
 done
 
@@ -29,7 +29,7 @@ cd ./output && git init && git remote add origin https://github.com/fex-team/fis
 
 ## 复制测试文件
 mkdir -p ./test
-cp ../../test/test.tar ./test/test.tar
+cp ../../test/downTest.tar ./test/downTest.tar
 
 echo "$currentCommitId" > ./commitId.log
 
