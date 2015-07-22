@@ -15,3 +15,24 @@ fis项目曾经历了很久的 **“努力做好编译工具”** 的时代，�
 - [资源定位](./uri.md)
 - [内容嵌入](./inline.md)
 - [依赖声明](./require.md)
+
+内置语法主要针对 html、css、js 等三种语言提供不同的编译语法。假设遇到后端模板，异构语言，前端模板等如何让内置语法起效呢？
+
+```js
+// FIS 中前端模板推荐预编译为 js，所以应该使用 js 的内置语法
+fis.match('*.tmpl', {
+  isJsLike: true
+});
+```
+
+```js
+fis.match('*.sass', {
+  isCssLike: true
+});
+```
+
+```js
+fis.match('*.xxhtml', {
+  isHtmlLike: true
+})
+```
