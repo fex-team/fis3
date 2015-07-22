@@ -205,3 +205,25 @@ fis.match('**.tmpl', {
     isJsLike: true    
 });
 ```
+
+### 某些资源不产出
+
+```js
+fis.match('*.inline.css', {
+  // 设置 release 为 FALSE，不再产出此文件
+  release: false
+})
+```
+
+### 某些资源从构建中去除
+
+FIS3 会读取全部项目目录下的资源，如果有些资源不想被构建，通过以下方式排除。
+
+```js
+fis.set('project.ignore', [
+  'output/**',
+  'node_nodules/**',
+  '.git/**',
+  '.svn/**'
+]);
+```
