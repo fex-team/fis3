@@ -3,8 +3,8 @@ rev="fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
 echo "Fetching https://raw.githubusercontent.com/fex-team/fis3/gh-pages/commitId.log"
 lastCommitId=$(curl https://raw.githubusercontent.com/fex-team/fis3/gh-pages/commitId.log)
 
-echo "git diff -z --name-only $lastCommitId^..HEAD"
-midified=$(git diff -z --name-only $lastCommitId^..HEAD)
+echo "git diff --name-only $lastCommitId^..HEAD"
+midified=$(git diff --name-only $lastCommitId^..HEAD)
 
 run="0"
 
@@ -29,7 +29,7 @@ cd ./output && git init && git remote add origin https://github.com/fex-team/fis
 
 ## 复制测试文件
 mkdir -p ./test
-cp ../../test/downTest.tar ./test/downTest.tar
+cp -r ../../test/attachment ./test/attachment
 
 echo "$currentCommitId" > ./commitId.log
 
