@@ -19,7 +19,7 @@
     - [浏览器自动刷新](./beginning/debug.md#浏览器自动刷新)
     - [发布到远端机器](./beginning/debug.md#发布到远端机器)
     - [替代内置Server](./beginning/debug.md#替代内置Server)
-  - 内置语法
+  - [内置语法](./user-dev/extlang.md)
     - [内容嵌入](./user-dev/inline.md)
     - [定位资源](./user-dev/uri.md)
     - [声明依赖](./user-dev/require.md)
