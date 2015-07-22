@@ -1275,7 +1275,8 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
   // });
 
   it('err--not exist', function (done) {
-    var receiver = 'http://web.baidu.com:8088/test/receiver.php'; //non exist receiver
+    //var receiver = 'http://web.baidu.com:8088/test/receiver.php'; //non exist receiver
+    var receiver = 'http://fex.baidu.com/fis3/receiver.php'; //non exist receiver
     var to = '/home/work/repos/test/upload';
     //var to = '/home/travis/build/fex-team/fis3/test/copy';
     var release = '/a.js';
