@@ -1152,7 +1152,7 @@ describe('util: _parseUrl(url, opt)', function () {
 
 describe('util: _download(url, [callback], [extract], [opt])', function () {
   var downdir = __dirname + '/download/';
-  this.timeout(20000);
+  this.timeout(25000);
   before(function () {
     //清空fis tmp download dir
     var files = [];
@@ -1321,7 +1321,7 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
 
 describe('util: _install(name, [version], opt)', function () {
   var installdir = __dirname + '/install/';
-  this.timeout(20000);
+  this.timeout(25000);
   after(function () {
     //清空install文件夹
     fis.cache.clean(installdir);
