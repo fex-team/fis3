@@ -1327,26 +1327,26 @@ describe('util: _install(name, [version], opt)', function () {
     fis.cache.clean(installdir);
   });
 
-  it('general', function (done) {
-    var name = 'installTest';
-    var version = '0.1';//*
-    var opt = {
-      //'remote': 'http://10.48.30.87:8088/test/install',
-      'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
-      'extract': installdir,
-      'done': function () {
-        var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
-        var path = fis.project.getTempPath('download');
-        console.log(path);
-        expect(path + '/' + hash + '.tar').to.be.exist;
-        expect(installdir + name).to.be.exist;
-        done();
-      }
-    };
-
-    _.install(name, version, opt);
-
-  });
+  //it('general', function (done) {
+  //  var name = 'installTest';
+  //  var version = '0.1';//*
+  //  var opt = {
+  //    //'remote': 'http://10.48.30.87:8088/test/install',
+  //    'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+  //    'extract': installdir,
+  //    'done': function () {
+  //      var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
+  //      var path = fis.project.getTempPath('download');
+  //      console.log(path);
+  //      expect(path + '/' + hash + '.tar').to.be.exist;
+  //      expect(installdir + name).to.be.exist;
+  //      done();
+  //    }
+  //  };
+  //
+  //  _.install(name, version, opt);
+  //
+  //});
 
   it('version-done', function (done) {
     var name = 'installTest';
@@ -1357,7 +1357,7 @@ describe('util: _install(name, [version], opt)', function () {
       'extract': installdir,
       'done': function () {
         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
-        var path = fis.project.getTempPath('downloads');
+        var path = fis.project.getTempPath('download');
         expect(path + '/' + hash + '.tar').to.be.exist;
         expect(installdir + name + version).to.be.exist;
 
