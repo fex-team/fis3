@@ -33,6 +33,10 @@ FIS3 支持对html中的script、link、style、video、audio、embed等标签�
 ![资源定位工作原理](https://raw.githubusercontent.com/fouber/fis-wiki-img/master/uri.png)
 
 ```javascript
+fis.match('*.{js,css,png,gif}', {
+    useHash: true // 开启 md5 戳
+});
+
 // 所有的 js
 fis.match('**.js', {
     //发布到/static/js/xxx目录下
@@ -74,6 +78,10 @@ fis.match('/images/(*.{png,gif})', {
 我们甚至可以让 **url和发布目录不一致**。比如：
 
 ```javascript
+
+fis.match('*.{js,css,png,gif}', {
+    useHash: true // 开启 md5 戳
+});
 
 // 所有的 js
 fis.match('**.js', {
@@ -162,6 +170,10 @@ js语言中，可以使用编译函数 **__uri(path)** 来定位资源，fis分�
 **资源定位结果可以被fis的配置文件控制**，比如添加配置，调整文件发布路径：
 
 ```javascript
+fis.match('*.{js,css,png,gif}', {
+    useHash: true // 开启 md5 戳
+});
+
 // 所有的 js
 fis.match('**.js', {
     //发布到/static/js/xxx目录下
@@ -270,6 +282,11 @@ fis编译工具会识别css文件或 **html的style标签内容** 中 **url(path
 **资源定位结果可以被fis的配置文件控制**，比如添加配置，调整文件发布路径：
 
 ```javascript
+
+fis.match('*.{js,css,png,gif}', {
+    useHash: true // 开启 md5 戳
+});
+
 //所有的css文件
 fis.match('**.css', {
     //发布到/static/css/xxx目录下
