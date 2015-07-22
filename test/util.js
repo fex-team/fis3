@@ -1336,7 +1336,7 @@ describe('util: _install(name, [version], opt)', function () {
       'extract': installdir,
       'done': function () {
         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
-        var path = fis.project.getTempPath('download');
+        var path = fis.project.getTempPath('downloads');
         console.log(path);
         expect(path + '/' + hash + '.tar').to.be.exist;
         expect(installdir + name).to.be.exist;
@@ -1357,7 +1357,7 @@ describe('util: _install(name, [version], opt)', function () {
       'extract': installdir,
       'done': function () {
         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
-        var path = fis.project.getTempPath('download');
+        var path = fis.project.getTempPath('downloads');
         expect(path + '/' + hash + '.tar').to.be.exist;
         expect(installdir + name + version).to.be.exist;
 
