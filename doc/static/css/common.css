@@ -46,7 +46,27 @@
 .fa-cubes:before {
   content: "\f1b3";
 }
-
+.fa-flash:before, .fa-bolt:before {
+  content: "\f0e7";
+}
+.fa-code:before {
+  content: "\f121";
+}
+.fa-th-list:before {
+  content: "\f00b";
+}
+.fa-gears:before, .fa-cogs:before {
+  content: "\f085";
+}
+.fa-database:before {
+  content: "\f1c0";
+}
+.fa-folder:before {
+  content: "\f07b";
+}
+.fa-css3:before {
+  content: "\f13c";
+}
 
 * {
   -webkit-box-sizing: border-box;
@@ -105,6 +125,7 @@ h3 {
   margin-left: -15px;
 }
 
+
 .col-sm-3,
 .col-md-3,
 .col-md-4,
@@ -119,16 +140,17 @@ h3 {
   .col-sm-3 {
     float: left;
   }
-
   .col-sm-3 {
     width: 25%;
   }
+  
 }
 
 @media (min-width:992px) {
   .col-md-3,
   .col-md-4,
-  .col-md-6 {
+  .col-md-6,
+  .col-md-8 {
     float: left;
   }
 
@@ -138,6 +160,10 @@ h3 {
 
   .col-md-4 {
     width: 33.33333333%;
+  }
+
+  .col-md-8 {
+    width: 66.66666667%;
   }
 
   .col-md-3 {
@@ -217,14 +243,9 @@ header {
   margin-right: auto;
   position: relative;
   z-index: 10;
-  padding: 21px 0 20px;
+  line-height: 70px;
 }
 
-header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 .logo-wrap .logo {
   font-size: 30px;
@@ -233,55 +254,46 @@ header:after {
 }
 
 .logo-wrap {
+  display: inline-block;
   float: left;
-  display: block;
   margin-right: 20px;
   width: 160px;
+  line-height: 70px;
 }
 
 header nav {
   float: left;
-  display: block;
-  margin-right: 2.12766%;
-  padding-top: 5px;
-  font-family: BrixSansMedium,BrixSansRegular,"Helvetica Neue",Helvetica,sans-serif;
-}
-
-header nav:last-child {
-  margin-right: 0;
-}
-
-header nav>div {
   display: inline-block;
-}
-
-nav .nav-left {
-  float: left;
+  line-height: 20px;
+  padding: 0px;
+  font-family: BrixSansMedium,BrixSansRegular,"Helvetica Neue",Helvetica,sans-serif;
 }
 
 nav .nav-right {
   position: absolute;
+  display: inline-block;
+  color: white;
   right: 0;
-  top: 30px;
+  top: 0px;
+  line-height: 70px;
   font-size: 18px;
 }
-
+nav .nav-right a{
+  color: white;
+}
 nav .nav-link {
   position: relative;
   display: inline-block;
   color: #fff;
   font-size: 18px;
   margin-left: 4px;
-  padding: 5px 10px;
+  padding: 0px 10px;
   text-shadow: 0 1px 2px rgba(2,9,25,.2);
+  line-height: 70px;
 }
 
 nav .nav-link:hover {
   text-decoration: none;
-}
-
-nav .nav-link:first-child {
-  margin-left: 3px;
 }
 
 nav .nav-link:hover {
@@ -296,11 +308,10 @@ nav .nav-left .nav-link:after {
   opacity: 0;
   height: 3px;
   width: 100%;
-  top: 53px;
+  top: 70px;
   left: 0;
   padding: 0;
 }
-
 nav .nav-left .nav-link:hover:after {
   border-bottom: 3px solid #86A1C4;
   opacity: 1;
@@ -309,7 +320,7 @@ nav .nav-left .nav-link:hover:after {
   position: absolute;
   height: 3px;
   width: 100%;
-  top: 36px;
+  top: 50px;
   left: 0;
   padding: 0;
   transition: all .2s ease-in-out;
@@ -376,7 +387,16 @@ nav .nav-left .nav-link:hover:after {
 @media screen and (max-width:720px) {
   .header-wrap nav .nav-link {
     font-size: 14px;
-    padding: 5px 3px;
+    float: left;
+    line-height: 35px;
+    padding: 0px 3px;
+  }
+
+
+  header{
+    line-height: 35px;
+    height: 35px;
+    padding: 0 5px;
   }
 
   .header-wrap .toggle {
@@ -387,18 +407,17 @@ nav .nav-left .nav-link:hover:after {
 
   .header-wrap .logo-wrap {
     width: 50px;
-    margin-right: 5px;
-    line-height: 35px;
-    display: inline-block;
     height: 35px;
+    margin-right: 5px;
+    display: inline-block;
+    line-height: 35px;
+    overflow: hidden;
   }
 
-  .header-wrap .logo-wrap .logo {
-    font-size: 14px;
-  }
-
-  header {
-    padding: 8px;
+  .header-wrap .logo-wrap .logo img{
+    width: 48px; 
+    position: relative;
+    top: -5px;
   }
 
   #animation {
@@ -412,7 +431,9 @@ nav .nav-left .nav-link:hover:after {
 
   nav .nav-right {
     right: 5px;
-    top: 2px;
+    font-size: 14px;
+    top: 0px;
+    line-height: 35px;
   }
 
   .section--hero .hero__heading {

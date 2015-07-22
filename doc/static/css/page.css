@@ -669,7 +669,7 @@ header {
     margin-right: auto;
     position: relative;
     z-index: 10;
-    padding: 21px 0 18px 0;
+    padding: 0px;
 }
 
 header:after {
@@ -685,100 +685,6 @@ header:after {
 }
 
 
-
-header .copyright {
-    color: rgba(255, 255, 255, 0.3);
-    float: left;
-    margin: 5px 0 0 30px;
-}
-
-.logo-wrap {
-    float: left;
-    display: block;
-    margin-right: 2.12766%;
-    width: 14.89362%;
-}
-
-.logo-wrap:last-child {
-    margin-right: 0;
-}
-
-header nav {
-    float: left;
-    display: block;
-    margin-right: 2.12766%;
-    width: 82.97872%;
-    padding-top: 5px;
-    font-family: "BrixSansMedium","BrixSansRegular","Helvetica Neue","Helvetica",sans-serif;
-}
-
-header nav:last-child {
-    margin-right: 0;
-}
-
-header nav>div {
-    display: inline-block;
-}
-
-nav .nav-left {
-    float: left;
-}
-
-nav .nav-right {
-    float: right;
-}
-
-nav .nav-link {
-    position: relative;
-    display: inline-block;
-    color: #fff;
-    font-size: 18px;
-    margin-left: 4px;
-    padding: 5px 10px;
-    text-shadow: 0 1px 2px rgba(2, 9, 25, 0.2);
-}
-
-nav .nav-link:hover {
-    text-decoration: none;
-}
-
-nav .nav-link:first-child {
-    margin-left: 3px;
-}
-
-nav .nav-link:hover,nav .nav-link.active {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-nav .nav-left .nav-link:after {
-    border-bottom: 0px solid #86A1C4;
-    content: " ";
-    display: inline-block;
-    position: absolute;
-    opacity: 0;
-    height: 3px;
-    width: 100%;
-    top: 53px;
-    left: 0;
-    padding: 0;
-}
-nav .nav-link .nav-right a{
-  font-size: 18px;
-}
-
-nav .nav-left .nav-link.is-active:after,nav .nav-left .nav-link:hover:after {
-    border-bottom: 3px solid #86A1C4;
-    opacity: 1;
-    content: " ";
-    display: inline-block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    top: 36px;
-    left: 0;
-    padding: 0;
-    transition: all 0.2s ease-in-out;
-}
 
 
 .doc-content{

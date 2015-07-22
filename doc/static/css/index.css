@@ -1,4 +1,17 @@
-
+.hide{
+  display: none;
+}
+.row{
+  margin: 0px;
+}
+section.back-blue{
+  background-color: #3360A3;
+  color: white;
+  padding: 50px 0 20px;
+}
+section.back-blue .section-heading{
+  color: white;
+}
 
 .button--large {
   font-size: 24px;
@@ -39,11 +52,71 @@
   color: #5c80b3;
 }
 
+/******************fis3 特色*********************/
+.icon-tabs{
+  list-style: none;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.icon-tabs a{
+  margin-right: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.icon-tabs a i{
+  display: block;
+  margin-bottom: 10px;
+  width: 90px;
+  height: 90px;
+  font-size: 40px;
+  line-height: 90px;
+  border-radius: 12px;
+  background-color: rgb(105, 140, 192);
+  color: white;
+}
+.icon-tabs a.rc-active{
+  font-weight: bold;
+}
+.icon-tabs a.rc-active i{
+  background-color: rgb(51, 96, 163);
+}
+.tab-container ul{
+  list-style: none;
+  min-height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.tab-container ul li{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 1em;
+}
+.tab-container .desc{
+  text-align: left;
+}
+.tab-container .desc h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+.tab-container .desc a{
+  font-weight: bolder;
+}
+
 .section--hero {
+  width: 100%;
+  overflow: hidden;
   position: relative;
   background-color: #3360A3;
   color: #fff;
-  padding-top: 120px;
+  padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -62,6 +135,28 @@
   margin: 0 0 21px;
   line-height: 1;
   max-width: 420px;
+
+}
+
+@media screen and (max-width:720px) {
+  .section--hero .hero__heading{
+    font-size:26px;
+  }  
+  .section-heading{
+    font-size: 22px;
+  } 
+  .feature-detail h3{
+    font-size: 16px;
+  }
+  .section--hero{
+    padding-top: 70px;
+  }
+  .tab-container ul li{
+    position:relative;
+  }
+  .ml-30{
+    margin: 0px;
+  }
 }
 
 .section--hero .hero__subheading {
@@ -78,10 +173,52 @@
 .section--position {
   background-color: #fff;
   padding: 75px 0 94px;
+  overflow: hidden;
 }
 
 .hero__heading b {
   color: #ff0;
+}
+
+.fis-data{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  min-height: 30px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(103, 129, 150, 0.4);
+}
+.fis-data .number{
+  display: inline-block;
+  min-width: 25%;
+  max-width: 33%;
+  height: 100%;
+  color: #fff;
+}
+.fis-data .number span{
+  font-size: 4em;
+  font-weight: 100;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+}
+.fis-data .number:nth-child(2) {
+  border-left: 1px solid rgba(255,255,255,.3);
+  border-right: 1px solid rgba(255,255,255,.3);
+}
+
+
+@media screen and (max-width:720px) {
+  .fis-data{
+    padding: 5px;
+  }
+  .fis-data .number span{
+      font-size: 14px;
+  }
+  .fis-data .number{
+    width:40%;
+    height: 40px;
+    float: left;
+  }
 }
 
 .section-features {
@@ -95,7 +232,7 @@
   width: 50%;
   float: right;
   height: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 
 .spaceship {
@@ -534,12 +671,12 @@
 .section-features .feature {
   display: block;
   padding-bottom: 20px;
-  margin-bottom: 30px;
   position: relative;
+  color: #ececec;
 }
 
 .section-features .feature:hover {
-  color: #2E71B6;
+  color: white;
 }
 
 .section-features .feature:hover:before {
@@ -553,7 +690,7 @@
   content: "";
   border-style: solid;
   border-width: 0 1px 1px 0;
-  border-color: #2E71B6;
+  border-color: white;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -604,10 +741,8 @@
 }
 
 .feature-preview__screenshot {
-  width: 568px;
-  height: 610px;
-  background-image: url(../images/simple_page.png);
-  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
   position: relative;
   top: -15px;
   left: 40px;
@@ -624,14 +759,10 @@
   display: inline-block;
 }
 
-.code_pic {
-  background-image: url(../images/code.png);
-  width: 95%;
+.code img {
   border-radius: 10px;
   box-shadow: 0 2px 2px #ececec;
   background-position: -20px -20px;
-  height: 280px;
-  background-repeat: no-repeat;
 }
 
 .feature-detail>.row {
@@ -641,8 +772,12 @@
 .text-c {
   text-align: center;
 }
+.feature-detail img{
+  width: 100%;
+}
 
 .feature-detail .over_pic {
+  width: 100%;
   margin: 40px auto 20px;
   display: block;
 }

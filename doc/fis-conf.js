@@ -6,6 +6,7 @@ var ignores = fis.get('project.ignore');
 ignores = ignores.concat([
   'process/**',
   'demo/**',
+  '*.psd',
   'README.md',
   '**.adoc',
   'package.json'
@@ -64,3 +65,6 @@ fis.media('prod')
 fis.media('prod').match('::package', {
   //postpackager: fis.plugin('loader', {}, 'append')
 });
+
+
+

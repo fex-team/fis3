@@ -7,7 +7,9 @@
     <title>FIS3 - 前端工程构建工具</title>
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/index.css">
-    <link rel="shortcut icon" href="/static/images/favicon.ico"/>
+   <!--  <link rel="shortcut icon" href="/static/images/favicon.ico"/> -->
+    <link rel="shortcut icon" href="/static/images/favicon-fis.ico"/>
+    <link rel="bookmark" href="/static/images/favicon-fis.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
     <link rel="import" href="./widget/header.html?__inline">
@@ -42,17 +44,126 @@
                 </a>
             </div>
         </div>
+
+        <div class="fis-data">
+            <div class="number"><span>60+</span>个百度产品线/项目</div>
+            <div class="number"><span>30+</span>外部公司</div>
+            <div class="number"><span>440+</span>NPM包</div>
+        </div>
     </section>
 
-    <!-- 前端架构概述 -->
+    <!-- FIS3特色 -->
     <section class="section--position">
+        <div class="section__content">
+            <div class="section-heading">
+                岂止于工具
+                <p class="section-desc">FIS3与一般构建工具有何不同</p>
+            </div>
+            <div class="section-features" id="slider">
+                <nav class="icon-tabs">
+                    <a href="#slider-1">
+                        <i class="fa fa-css3"></i>
+                        类CSS配置
+                    </a>
+                    <a href="#slider-2">
+                        <i class="fa fa-code"></i>
+                        Glob扩展
+                    </a>
+                    <a href="#slider-3">
+                        <i class="fa fa-folder"></i>
+                        目录定制
+                    </a>
+                    <a href="#slider-4">
+                        <i class="fa fa-cogs"></i>
+                        依赖分析
+                    </a>              
+                    <a href="#slider-5">
+                        <i class="fa fa-th-list"></i>
+                        静态资源表
+                    </a>
+                    <a href="#slider-6">
+                        <i class="fa fa-database"></i>
+                        后端结合
+                    </a>
+                </nav>
+
+                <div class="tab-container">
+                    <ul>
+                        <li id="slider-1" class="row">
+                            <div class="col-md-8">
+                                <img src="./static/images/match.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>类css风格的配置语法</h3>
+                                <p>FIS3采取了类似CSS语法一样的配置风格，易于理解与上手。编译配置不再枯燥而令人生畏，构建项目变得如此简单。</p>
+                                <a href="#">查看配置文档</a>
+                            </div>
+                        </li>
+                        <li id="slider-2" class="hide">
+                            <div class="col-md-8">
+                                <img src="./static/images/glob.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>Glob语法扩展</h3>
+                                <p>不会写正则？不用怕，FIS3不仅提供了友好易用的Glob匹配语法，更扩展了分组功能，再没有更简单易用的文件匹配了。</p>
+                                <a href="#">查看Glob说明</a>
+                            </div>
+                        </li>
+                        <li id="slider-3" class="hide">
+                            <div class="col-md-8">
+                                <img src="./static/images/custom.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>面向开发的目录规范</h3>
+                                <p>FIS3强大的资源定位和内嵌等能力让你能真正面向开发定义利于维护的目录规范，同时能适配任意服务器的发布需求。一份代码，多种发布。迁移变得如此简单！</p>
+                                <a href="#">查看目录规范配置</a>
+                            </div>
+                        </li>
+                        <li id="slider-4" class="hide">
+                            <div class="col-md-8">
+                                <img src="./static/images/dependent.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>自动依赖分析</h3>
+                                <p>FIS3通过依赖声明自动分析资源依赖，支持适配CommonJS/AMD/CMD等多种模块化规范;类似WebPack依赖打包变得更加简单</p>
+                                <a href="#">查看模块化文档</a>
+                            </div>
+                        </li>
+                        <li id="slider-5" class="hide">
+                            <div class="col-md-8">
+                                <img src="./static/images/mapjson.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>强大的静态资源管理</h3>
+                                <p>FIS3绝不仅是Task管理工具，其核心思想在于整站强大的静态资源管理能力。无论是按需加载、组件内嵌、BigRender、Quickling等方案都能快速实施</p>
+                                <a href="#">静态资源管理说明</a>
+                            </div>
+                        </li>
+                        <li id="slider-6" class="hide">
+                            <div class="col-md-8">
+                                <img src="./static/images/backend.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>与后端框架的无缝结合</h3>
+                                <p>FIS3将静态资源管理能力延伸到后端框架，无论是PHP的Laravel、smarty，Nodejs，还是JAVA的velocity，都有相应的解决方案支持</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>        
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 各个阶段 -->
+    <section class="section--position back-blue">
         <div class="section__content">
             <div class="section-heading">
                 如何利用工具提升项目开发效率
                 <p class="section-desc">FIS3助您在各个阶段得心应手</p>
             </div>
             <div class="section-features">
-                <div class="row pt-30">
+                <div class="row">
                     <a class="col-md-3 feature" href="#simple">
                         <span class="fa fa-desktop">
                         </span>
@@ -107,9 +218,8 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <p>
-                        </p><div class="feature-preview__screenshot"></div>
-                    <p></p>
+                    <div class="feature-preview__screenshot"><img src="./static/images/simple_page.png" /></div>
+                    
                 </div>
             </div>
         </div>
@@ -136,14 +246,16 @@
                     </div>
                     <div class="col-md-6">
                         <div class="ml-30">
-                            <img src="/static/images/csssprite.jpg" width="380" />
+                            <img src="/static/images/csssprite.jpg"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="code_pic"></div>
+                        <div class="ml-30">
+                            <img src="/static/images/code.png" />
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <h3>资源内嵌，文件校验、压缩、合并</h3>
@@ -304,5 +416,13 @@
     </section>
     <link rel="import" href="./widget/footer.html?__inline">
     <link rel="import" href="/widget/tongji.html?__inline">
+
+    <script type="text/javascript" src="./static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/js/slider.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#slider').cbpContentSlider();
+        });
+    </script>
 </body>
 </html>
