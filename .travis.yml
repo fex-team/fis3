@@ -10,7 +10,7 @@ before_script:
     - sudo apt-get update
     - sudo apt-get install apache2
     - sudo apt-get install php5
-    - ln -s $(pwd) /var/www/fis3
+    - sudo ln -s $(pwd) /var/www/fis3
     - sudo service apache2 restart
 script:
 - sh ./release-doc.sh
