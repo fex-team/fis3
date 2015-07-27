@@ -1336,7 +1336,8 @@ describe('util: _install(name, [version], opt)', function () {
     var version = '*';//*
     var opt = {
       //'remote': 'http://10.48.30.87:8088/test/install',
-      'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
       'extract': installdir,
       'done': function () {
         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
@@ -1357,7 +1358,8 @@ describe('util: _install(name, [version], opt)', function () {
     var version = '0.2';
     var opt = {
       //'remote': 'http://10.48.30.87:8088/test/install',
-      'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
       'extract': installdir,
       'done': function () {
         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
@@ -1377,7 +1379,8 @@ describe('util: _install(name, [version], opt)', function () {
     var version = '0.2';
     var opt = {
       //'remote': 'http://10.48.30.87:8088/test/install',
-      'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
       'extract': installdir,
       'done': function (name, version) {
         expect(path + '/' + hash + '.tar').to.be.exist;
@@ -1401,7 +1404,8 @@ describe('util: _install(name, [version], opt)', function () {
     var version = '0.5';                //不存在的版本
     var opt = {
       //'remote': 'http://10.48.30.87:8088/test/install',
-      'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
       'extract': installdir,
       'done': function (name, version) {
         expect(true).to.be.false;
@@ -1429,7 +1433,8 @@ describe('util: _install(name, [version], opt)', function () {
     var version = '*';
     var opt = {
       //'remote': 'http://10.48.30.87:8088/test/install',
-      'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
       'extract': installdir,
       'done': function () {
         var hash = fis.util.md5(opt.remote + '/' + name + '/latest.tar', 8);
