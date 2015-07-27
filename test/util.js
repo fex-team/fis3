@@ -1175,7 +1175,6 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
     var path = fis.project.getTempPath('downloads');
     var hash = fis.util.md5(url, 8);
     _.download(url, function (err) {
-      console.log(err);
       //expect(path + '/' + hash + '.png').to.be.exist;
       expect(fs.existsSync(path + '/' + hash + '.png')).to.be.true;
       done();
@@ -1190,9 +1189,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
     var url = 'http://127.0.0.1/fis3/test/attachment/downTest.tar';
     //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/test/test.jar';
     var extract = downdir;
-    console.log(extract);
     _.download(url, function (err) {
-      console.log(err);
       var hash = fis.util.md5(url, 8);
       var path = fis.project.getTempPath('downloads');
       expect(fs.existsSync(path + '/' + hash + '.tar')).to.be.true;
@@ -1280,7 +1277,8 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
 
   it('err--not exist', function (done) {
     //var receiver = 'http://web.baidu.com:8088/test/receiver.php'; //non exist receiver
-    var receiver = 'http://fex.baidu.com/fis3/test/receiver.php'; //non exist receiver
+    //var receiver = 'http://fex.baidu.com/fis3/test/receiver.php'; //non exist receiver
+    var receiver = 'http://127.0.0.1/fis3/test/receiver.php'; //non exist receiver
     var to = '/home/work/repos/test/upload';
     //var to = '/home/travis/build/fex-team/fis3/test/copy';
     var release = '/a.js';
@@ -1342,7 +1340,6 @@ describe('util: _install(name, [version], opt)', function () {
       'done': function () {
         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
         var path = fis.project.getTempPath('downloads');
-        console.log(path);
         expect(path + '/' + hash + '.tar').to.be.exist;
         expect(installdir + name).to.be.exist;
         done();
