@@ -1168,6 +1168,7 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   });
   it('general', function (done) {
     //var url = 'http://10.48.30.87:8088/test/download/downTest01.tar';
+    //var url = 'http://fex.baidu.com/fis3/static/images/code_1750c9a.png';
     var url = 'http://127.0.0.1/fis3/test/attachment/code_1750c9a.png';
     //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/logo_8652a39.png';
 
@@ -1185,7 +1186,8 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   it('extract', function (done) {
     var name = 'downTest';
     //var url = 'http://10.48.30.87:8088/test/download/' + name + '.tar';
-    var url = 'http://fex.baidu.com/fis3/test/attachment/downTest.tar';
+    //var url = 'http://fex.baidu.com/fis3/test/attachment/downTest.tar';
+    var url = 'http://127.0.0.1/fis3/test/attachment/downTest.tar';
     //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/test/test.jar';
     var extract = downdir;
     console.log(extract);
@@ -1202,7 +1204,8 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   });
 
   it('not_exist', function (done) {
-    var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';         //不存在的包
+    //var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';         //不存在的包
+    var url = 'http://127.0.0.1/fis3/test/downTest05.tar';         //不存在的包
     var not_exist = 0;
     _.download(url, function (msg) {
       if (msg == 404)
@@ -1220,7 +1223,8 @@ describe('util: _download(url, [callback], [extract], [opt])', function () {
   });
 
   it('extract-error', function (done) {
-    var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';
+    //var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';
+    var url = 'http://127.0.0.1/fis3/test/downTest05.tar';
     var not_exist = 0;
     var extract = downdir;
     _.download(url, function (msg) {
