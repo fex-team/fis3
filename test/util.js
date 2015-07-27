@@ -1287,7 +1287,7 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
     _.upload(receiver, null, {to: to + release}, content, subpath,
       function (err, res) {
         if (err || res != '0') {
-          expect(err).to.be.equal(302);
+          expect(err).to.be.equal(404);
         }
         else {
           expect(true).to.be.false;
