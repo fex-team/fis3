@@ -201,7 +201,7 @@ fis.match('**.sass', {
 
 ```js
 fis.match('**.tmpl', {
-    parser: fis.plugin('utc') // invoke `fis-parser-utc`,
+    parser: fis.plugin('utc'), // invoke `fis-parser-utc`
     isJsLike: true    
 });
 ```
