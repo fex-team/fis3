@@ -1,5 +1,6 @@
-## 3.0.15 / Thu Jul 30 2015
+## 3.0.16 / Thu Jul 30 2015
 
+- deploy 阶段，默认加上编码转换
 - 添加 moduleId 中间码，表示获取目标文件的 moduleId
 - bugfix [#88](https://github.com/fex-team/fis3/issues/88)
 
