@@ -2,6 +2,8 @@
 /.settings
 /.project
 /.gitignore
+/.jsdoc
+/.travis.yml
 /node_modules
 /test
 /.tmp
@@ -9,6 +11,7 @@
 /debug
 /doc
 /Makefile
+/release-doc.sh
 
 .DS_Store
 
