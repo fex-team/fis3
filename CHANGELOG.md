@@ -1,5 +1,6 @@
-## 3.0.14 / Thu Jul 30 2015
+## 3.0.15 / Thu Jul 30 2015
 
+- 添加 moduleId 中间码，表示获取目标文件的 moduleId
 - bugfix [#88](https://github.com/fex-team/fis3/issues/88)
 
 ## 3.0.13 / Wed Jul 22 2015
