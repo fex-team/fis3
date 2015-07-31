@@ -9,6 +9,5 @@ fis.match('::packager', {
 });
 
 fis.match('*.{css,less}', {
-  release: false,
   packTo: '/static/aio.css'
 });
