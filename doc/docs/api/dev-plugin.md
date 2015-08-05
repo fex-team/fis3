@@ -1,7 +1,7 @@
 ## 插件开发
 
 <!-- @WARNING 此页面也会被 jsdoc 所用，所以一些图片链接无法经过相对路径定位，请加图时注意 -->
-FIS3 是以 File 对象为中心构建编译的，每一个 File 都要经历编译、打包、发布三个阶段。[运行原理][]讲述了 FIS3 中的插件扩展点；那么本节就将说明一个插件如何开发；
+FIS3 是以 File 对象为中心构建编译的，每一个 File 都要经历编译、打包、发布三个阶段。[运行原理](http://fis.baidu.com/fis3/docs/build.html)讲述了 FIS3 中的插件扩展点；那么本节就将说明一个插件如何开发；
 
 ![](https://raw.githubusercontent.com/fex-team/fis3/master/doc/docs/api/img/fis-compile-flow.png)
 
