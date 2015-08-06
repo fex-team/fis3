@@ -1,3 +1,8 @@
+## 3.0.19 / Thu Aug 06 2015
+
+- 解决内嵌导致异步依赖丢失的 bug
+- 升级 release 插件，解决 livereload 多个项目同时开启的问题。
+
 ## 3.0.18 / Tue Aug 04 2015
 
 - 更新 map 插件，支持 packOrder
