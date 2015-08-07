@@ -1,6 +1,6 @@
 {
   "name": "fis3",
-  "version": "3.0.20",
+  "version": "3.1.0",
   "description": "fis 3.0",
   "main": "index.js",
   "bin": {
@@ -18,7 +18,7 @@
     "resolve": "1.1.6",
     "tar": "0.1.17",
     "fis-command-install": "0.2.1",
-    "fis-command-server": "0.7.5",
+    "fis-command-server": "0.7.6",
     "fis-lolcat": "1.0.1",
     "fis-optimizer-clean-css": "0.0.9",
     "fis-optimizer-png-compressor": "0.1.0",
