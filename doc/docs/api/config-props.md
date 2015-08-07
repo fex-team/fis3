@@ -114,6 +114,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 ### 基本属性
 - [release](#release)
 - [packTo](#packTo)
+- [packOrder](#packOrder)
 - [query](#query)
 - [id](#id)
 - [url](#url)

@@ -1,3 +1,16 @@
+## 3.1 / Fri Aug 07 2015
+
+- 升级 server 插件
+  - 默认改成开启 node 插件
+  - 输出远程访问 ip 地址
+  - 内置 node server 而不是通过 npm install 获取，因为经常用人安装不下来。
+- 解决内嵌导致的异步丢失 bug
+
+## 3.0.20 / Thu Aug 06 2015
+
+- 解决内嵌导致异步依赖丢失的 bug
+- 升级 release 插件，解决 livereload 多个项目同时开启的问题。
+
 ## 3.0.18 / Tue Aug 04 2015
 
 - 更新 map 插件，支持 packOrder
