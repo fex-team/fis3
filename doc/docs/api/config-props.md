@@ -114,6 +114,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 ### 基本属性
 - [release](#release)
 - [packTo](#packTo)
+- [packOrder](#packOrder)
 - [query](#query)
 - [id](#id)
 - [url](#url)
@@ -161,6 +162,21 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
         url: '/static/new/${namespace}/pkg/widget.js'
     })
     ```
+
+#### packOrder
+* 解释：用来控制合并时的顺序，值越小越在前面。配合 `packTo` 一起使用。
+* 值类型：`Integer`
+* 默认值：`0`
+ 
+```javascript
+fis.match('/*.js', {
+  packTo: 'pkg/script.js'
+})
+
+fis.match('/mod.js', {
+  packOrder: -100
+})
+```
 
 #### query
 * 解释：指定文件的资源定位路径之后的query，比如'?t=123124132'。
