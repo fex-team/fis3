@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-#TEST_PATH=/home/work/repos/fis_plus/test/util/diff
-TEST_PATH=/Users/ryan/workspace/fis-plus/test/util/diff
+TEST_PATH=/home/work/repos/fis3.0/test/diff
+#TEST_PATH=/Users/ryan/workspace/fis-plus/test/util/diff
 cd ${TEST_PATH}
 
 #PLACE_SVN=https://svn.baidu.com/app/search/lbs-webapp/trunk/pcmap/place

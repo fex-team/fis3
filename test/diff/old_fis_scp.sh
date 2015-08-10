@@ -1,8 +1,8 @@
 cd#!/home/work/.jumbo/bin/expect
-
-TEST_PATH=/Users/ryan/workspace/fis-plus/test/old_node_modules
+TEST_PATH=/home/work/repos/fis3.0/test/diff/old_node_modules
+#TEST_PATH=/Users/ryan/workspace/fis-plus/test/old_node_modules
 cd ${TEST_PATH}
-npm install fis-plus@0.7.2
+npm install fis3@3.1
 
 #set timeout 60
 #set p [lindex $argv 0]

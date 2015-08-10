@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-#TEST_PATH=/home/work/repos/fis_plus/test/util/diff
-TEST_PATH=/Users/ryan/workspace/fis-plus/test/util/diff
+TEST_PATH=/home/work/repos/fis3.0/test/diff
+#TEST_PATH=/Users/ryan/workspace/fis-plus/test/util/diff
 
 
-#FISP_PATH=/home/work/repos/fis_plus/
-FISP_PATH=/Users/ryan/workspace/fis-plus/
+FISP_PATH=/home/work/repos/fis3.0/
+#FISP_PATH=/Users/ryan/workspace/fis-plus/
 
 cd ${TEST_PATH}
 #WENKU_CODE_PATH=${TEST_PATH}/product_code/wenku
@@ -33,9 +33,9 @@ HAO123_MODULES=(common home lv2)
 #获取fis version
 if [ $1 = 'new' ]
 then
-	version=$(node ${FISP_PATH}/bin/fis-plus -v --no-color)
+	version=$(node ${FISP_PATH}/bin/fis -v --no-color)
 else
-	version=$(node ${FISP_PATH}/test/old_node_modules/fis-plus/bin/fis-plus -v --no-color)
+	version=$(fis3 -v --no-color)
 fi
 
 OLD_IFS="$IFS" 
@@ -86,7 +86,7 @@ then
     for module in ${HAO123_MODULES[@]}
     do
         cd ${HAO123_CODE_PATH}/$module
-        node ${FISP_PATH}/bin/fis-plus release -copd ${HAO123_OUTPUT_PATH}/output_o_new --no-color
+        node ${FISP_PATH}/bin/fis release -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color
     done
     echo $v > ${HAO123_OUTPUT_PATH}/output_o_new/fis_version.txt
     chmod 777 ${HAO123_OUTPUT_PATH}
@@ -140,7 +140,7 @@ else
     for module in ${HAO123_MODULES[@]}
     do
         cd ${HAO123_CODE_PATH}/$module
-        ${FISP_PATH}/test/old_node_modules/fis-plus/bin/fis-plus release -copd ${HAO123_OUTPUT_PATH}/output_o_old --no-color
+        fis3 release -d ${HAO123_OUTPUT_PATH}/output_o_old --no-color
     done
     echo $v > ${HAO123_OUTPUT_PATH}/output_o_old/fis_version.txt
     chmod 777 -R ${HAO123_OUTPUT_PATH}/output_o_old
