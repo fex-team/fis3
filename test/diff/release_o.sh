@@ -24,7 +24,8 @@ cd ${TEST_PATH}
 
 HAO123_CODE_PATH=${TEST_PATH}/product_code/hao123
 HAO123_OUTPUT_PATH=${TEST_PATH}/product_output/hao123
-HAO123_MODULES=(common home lv2)
+#HAO123_MODULES=(common home lv2)
+HAO123_MODULES=(common)
 
 #SUPERMAN_CODE_PATH=${TEST_PATH}/product_code/superman
 #SUPERMAN_OUTPUT_PATH=${TEST_PATH}/product_output/superman
