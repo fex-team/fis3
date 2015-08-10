@@ -26,7 +26,7 @@ HAO123_DIR=./product_code/hao123
 #svn co --username=$1 --password=$2 --no-auth-cache ${BATMAN_SVN} ${BATMAN_DIR}
 #svn co --username=$1 --password=$2 --no-auth-cache ${WENKU_SVN} ${WENKU_DIR}
 #svn co --username=$1 --password=$2 --no-auth-cache ${TIEBA_SVN} ${TIEBA_DIR}
-svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/common ${HAO123_DIR}/common
-svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/home ${HAO123_DIR}/home
-svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/lv2 ${HAO123_DIR}/lv2
+#svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/common ${HAO123_DIR}/common
+#svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/home ${HAO123_DIR}/home
+#svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/lv2 ${HAO123_DIR}/lv2
 #svn co --username=$1 --password=$2 --no-auth-cache ${SUPERMAN_SVN} ${SUPERMAN_DIR}
