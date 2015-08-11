@@ -1,4 +1,5 @@
 <?php
+header("constent-type:text/html;charset=utf-8");
 $_SESSION["o"] = $argv[1];
 require_once dirname(__FILE__) . "/diff.class.php";
 

@@ -1,5 +1,5 @@
 <?php
-
+header("constent-type:text/html;charset=utf-8");
 /**
  * 文件类，用于分析、存储文件相关信息及数据
  *

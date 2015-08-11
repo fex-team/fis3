@@ -1,4 +1,5 @@
 <?php
+header("constent-type:text/html;charset=utf-8");
 /** 根目录地址 */
 if(!defined('DIFF_ROOT_PATH')) define('DIFF_ROOT_PATH', str_replace('\\', '/', dirname(__FILE__)) . '/');
 /** 定义和产品线相关的产出目录 */

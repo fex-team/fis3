@@ -1,4 +1,5 @@
 <?php
+header("constent-type:text/html;charset=utf-8");
 require_once dirname(__FILE__) . "/File.class.php";
 require_once dirname(__FILE__) . "/inline_diff/inline_function.php";
 /**
