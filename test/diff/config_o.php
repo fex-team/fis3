@@ -51,7 +51,7 @@ $config = array(
 //        )
     ),
     'smarty' => array(
-        'dir' => DIFF_ROOT_PATH.'../../libs/smarty-3.1.5',
+        'dir' => DIFF_ROOT_PATH.'./libs/smarty-3.1.5',
         'templatedir' =>DIFF_ROOT_PATH. 'result_o/'
     ),
     'output' => array(
