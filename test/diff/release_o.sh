@@ -141,7 +141,7 @@ else
     for module in ${HAO123_MODULES[@]}
     do
         cd ${HAO123_CODE_PATH}/$module
-        /home/work/bin/fis3 release production -d ${HAO123_OUTPUT_PATH}/output_o_old --no-color
+        /home/work/bin/fis3 release -d ${HAO123_OUTPUT_PATH}/output_o_old --no-color
     done
     echo $v > ${HAO123_OUTPUT_PATH}/output_o_old/fis_version.txt
     chmod 777 -R ${HAO123_OUTPUT_PATH}/output_o_old

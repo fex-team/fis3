@@ -322,8 +322,7 @@ class Diff{
                 $diffdata = inline_diff($oldtext, $newtext, $nl);
                 array_push($diffdatas,$diffdata);
                 //文件内容diff的结果展示
-//                $this->smarty->assign('diffdata',mb_convert_encoding($diffdata,'utf-8', 'gbk'));
-                $this->smarty->assign('diffdata',mb_convert_encoding($diffdata,'utf-8'));
+                $this->smarty->assign('diffdata',mb_convert_encoding($diffdata,'utf-8', 'gbk'));
                 $html = $this->smarty->fetch($smartyConfig['templatedir']."diffdetails.tpl");
                 $htmlpath = $smartyConfig['templatedir'].$this->proInfo['name']."_".str_replace("/", "_",substr($old,strrpos($old,$outputConfig['oldoutputdir']) + 13)).".html";
                 $fileurl = self::getConfig('url').str_replace("/home/work/repos/","",$htmlpath);
