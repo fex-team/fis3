@@ -59,6 +59,7 @@ describe('config: config',function(){
     expect(url).to.equal('www.baidu.com/static/file/ext/modular/js.js?__inline');
 
     //without domain
+    // useDomain 已经去除，所以应该不收其影响了
     fis.match('**/js.js', {
       useDomain: false
     }, 2);
@@ -66,7 +67,7 @@ describe('config: config',function(){
     path = __dirname+'/file/ext/modular/js.js?__inline';
     var f = _.wrap(path);
     var url = f.getUrl();
-    expect(url).to.equal('/static/file/ext/modular/js.js?__inline');
+    expect(url).to.equal('www.baidu.com/static/file/ext/modular/js.js?__inline');
 
     fis.match('**/js.js', {
       release: null
@@ -76,7 +77,7 @@ describe('config: config',function(){
     path = __dirname+'/file/ext/modular/js.js?__inline';
     var f = _.wrap(path);
     var url = f.getUrl();
-    expect(url).to.equal('/file/ext/modular/js.js?__inline');
+    expect(url).to.equal('www.baidu.com/file/ext/modular/js.js?__inline');
 
     // with ()
     fis.match('**/v1.0-(*)/(*).html', {
@@ -98,7 +99,7 @@ describe('config: config',function(){
     path = __dirname+'/file/ext/modular/js.js?__inline';
     var f = _.wrap(path);
     var url = f.getUrl();
-    expect(url).to.equal('/file/ext/modular/js.js?__inline');
+    expect(url).to.equal('www.baidu.com/file/ext/modular/js.js?__inline');
 
     // with ! but not match
     path = __dirname+'/file/ext/modular/js.less?__inline';

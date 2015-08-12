@@ -43,3 +43,5 @@ upload.py
 
 /test/fis-tmp/target/cache
 /doc/output
+/test/www
+/test/downloads/
