@@ -1,3 +1,8 @@
+
+## 3.1.2 /
+
+- 升级 fis3，去掉 useDomain 属性，给设置 domain 的资源自动启用domain
+
 ## 3.1.1 / Wed Aug 12 2015
 
 - 升级 server 插件
