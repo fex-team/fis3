@@ -1,3 +1,9 @@
+## 3.1.1 / Wed Aug 12 2015
+
+- 升级 server 插件
+  - 解决 root 不能修改的问题。
+- 优化插件配置，去掉内部属性。详情：https://github.com/fex-team/fis3/issues/142
+
 ## 3.1 / Fri Aug 07 2015
 
 - 升级 server 插件
