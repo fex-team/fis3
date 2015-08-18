@@ -1898,6 +1898,7 @@ describe('util: more deploy', function (){
     var con = file.getContent();
 
     var xpath = JSON.stringify(JSON.parse(con).res["demo.js"].deps);
+    console.log(pathx);
     expect(xpath).to.equal('["demo3.js"]');
 
     var xpath = JSON.stringify(JSON.parse(con).res["init.js"].deps);
