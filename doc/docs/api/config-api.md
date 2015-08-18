@@ -82,7 +82,7 @@ b.js 最终分配到的规则属性是
 **参数**
 - selector
 
-    [glob](glob) 或者是任意正则
+    [glob][] 或者是任意正则
 
 - props
     
@@ -163,3 +163,4 @@ fis.match('*.less', {
 ```
 
 [文件属性]: ./config-props.md#文件属性
+[glob]: ./config-glob.md
