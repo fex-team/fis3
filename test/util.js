@@ -12,6 +12,8 @@ var fis = require('..');
 var _      = fis.util,
     config = fis.config;
 var expect = require('chai').expect;
+var _release = fis.require('command-release/lib/release.js');
+var _deploy = fis.require('command-release/lib/deploy.js');
 
 function buf2arr(buf) {
   return Array.prototype.slice.call(buf);
@@ -1763,4 +1765,164 @@ describe('util: _.pipe(type, callback, def)2', function (){
       //fis.compile(file);
       //expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'util','upload', 'maintar.css')));
   });
+});
+
+
+function release(opts, cb) {
+  opts = opts || {};
+
+  _release(opts, function(error, info) {
+    _deploy(info, cb);
+  });
+}
+
+describe('util: more deploy', function (){
+  var root = path.join(__dirname, 'fis3_test_cmd');
+  fis.project.setProjectRoot(root);
+  beforeEach(function() {
+    // default settings. fis3 release
+    var root2 = path.join(__dirname, 'xpy');
+    _.del(root2);
+    var root3 = path.join(__dirname, 'xpy2');
+    _.del(root3);
+    fis.match('*', {
+      deploy: fis.plugin('local-deliver', {
+        to: root2
+      })
+    });
+    fis.match('*', {
+      deploy: fis.plugin('local-deliver', {
+        to: root3
+      })
+    });
+    fis.hook('cmd', {
+      baseUrl: ".",
+      forwardDeclaration: true,//依赖前置,
+      skipBuiltinModules: false,
+      paths: {
+        abc: '/module/jquery.js'
+      },
+      packages: [
+        {
+          name: 'module',
+          location: './module',
+          main: 'data.js'
+        },
+        {
+          name: 'abc',
+          location: './module',
+          main: 'jquery.js'
+        }
+      ],
+      shim: {
+        'module/b.js': {
+          deps: ['module/a.js'],
+          exports: 'xc'
+        }
+      }
+    });
+    fis.match('::packager', {
+      postpackager: fis.plugin('loader', {
+        //allInOne: {
+        //  ignore: '**/a.js',
+        //  includeAsyncs: true,
+        //  css:"pkg/aa.css"
+        //
+        //},
+        scriptPlaceHolder: "<!--SCRIPT_PLACEHOLDER-->",
+        stylePlaceHolder: '<!--STYLE_PLACEHOLDER-->',
+        resourcePlaceHolder: '<!--RESOURCEMAP_PLACEHOLDER-->',
+        resourceType: 'cmd',
+        processor: {
+          '.html': 'html'
+        },
+        obtainScript: true,
+        obtainStyle: true,
+        useInlineMap: false
+      })
+
+    });
+// fis3 release production
+    fis
+      .match('**', {
+        useHash: false,
+        release: '/static/$0'
+        // domain: 'http://aaaaa.baidu.com/xpy'
+
+      })
+
+      .match('demo.js', {
+        optimizer: fis.plugin('uglify-js'),
+        packTo: "x.js",
+        isMod: true
+      })
+      .match('demo2.js', {
+        optimizer: fis.plugin('uglify-js'),
+        packTo: "x.js",
+        isMod: false
+      })
+      .match('init.js', {
+        optimizer: fis.plugin('uglify-js'),
+        packTo: "x.js",
+        isMod: true
+      })
+      .match('module/b.js', {
+        optimizer: fis.plugin('uglify-js'),
+        packTo: "x.js",
+        isMod: true
+      })
+      .match('*.{css,scss}', {
+        optimizer: fis.plugin('clean-css')
+      })
+
+      .match('*.png', {
+        optimizer: fis.plugin('png-compressor')
+      });
+
+  });
+
+  it('compile cmd JS file', function() {
+    release({
+      unique: true
+    }, function() {
+      console.log('Done');
+    });
+    var pathx = path.join(__dirname, 'xpy' , 'static' , 'map.json');
+    var file = fis.file.wrap(pathx);
+    var con = file.getContent();
+
+    //console.log(JSON.parse(con).res["demo.js"].deps);
+    var xpath = JSON.stringify(JSON.parse(con).res["demo.js"].deps);
+    expect(xpath).to.equal('["demo3.js"]');
+
+    //console.log(JSON.parse(con).res["init.js"].deps);
+    var xpath = JSON.stringify(JSON.parse(con).res["init.js"].deps);
+    expect(xpath).to.equal('["module/jquery.js","module/data.js","module/b.js"]');
+
+    var xpath = JSON.stringify(JSON.parse(con).res["init.js"].extras);
+    expect(xpath).to.equal('{"moduleId":"init","async":["demo.js"]}');
+
+    var xpath = JSON.stringify(JSON.parse(con).pkg);
+    expect(xpath).to.equal('{"p0":{"uri":"/static/x.js","type":"js","has":["demo.js","demo2.js","module/b.js","init.js"],"deps":["demo3.js","module/a.js","module/jquery.js","module/data.js"]}}');
+
+    var pathx2 = path.join(__dirname, 'xpy2' , 'static' , 'map.json');
+    var file2 = fis.file.wrap(pathx2);
+    var con2 = file2.getContent();
+
+    //console.log(JSON.parse(con).res["demo.js"].deps);
+    var xpath2 = JSON.stringify(JSON.parse(con2).res["demo.js"].deps);
+    expect(xpath2).to.equal('["demo3.js"]');
+
+    //console.log(JSON.parse(con).res["init.js"].deps);
+    var xpath3 = JSON.stringify(JSON.parse(con2).res["init.js"].deps);
+    expect(xpath3).to.equal('["module/jquery.js","module/data.js","module/b.js"]');
+
+    var xpath4 = JSON.stringify(JSON.parse(con2).res["init.js"].extras);
+    expect(xpath4).to.equal('{"moduleId":"init","async":["demo.js"]}');
+
+    var xpath5 = JSON.stringify(JSON.parse(con2).pkg);
+    expect(xpath5).to.equal('{"p0":{"uri":"/static/x.js","type":"js","has":["demo.js","demo2.js","module/b.js","init.js"],"deps":["demo3.js","module/a.js","module/jquery.js","module/data.js"]}}');
+
+  });
+
 });
