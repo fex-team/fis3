@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>FIS3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h2>F.I.S扩展的三种领域语言能力</h2>
+        <p>
+            F.I.S自动化工具核心任务是扩展前端领域语言（html，js，css）所欠缺的能力。经过反复总结和实践，我们发现，<strong>只要对前端领域语言扩展三种能力，即可满足各种复杂的前端开发需求</strong>，这三种能力分别是：
+        </p>
+        <div class="callout">
+            <ul>
+                <li><strong>资源定位</strong>：获取任何开发中所使用资源的线上路径；</li>
+                <li><strong>内容嵌入</strong>：把一个文件的内容(文本)或者base64编码(图片)嵌入到另一个文件中；</li>
+                <li><strong>依赖声明</strong>：在一个文本文件内标记对其他资源的依赖关系；</li>
+            </ul>
+        </div>
+
+        <blockquote>以下为示例代码，请查看源文件并执行【fis release --dest output <strong>--md5</strong>】命令对产出代码和源文件进行对照</blockquote>
+
+
+
+
+
+
+        <!--前端领域语言能力扩展示例-->
+
+        <h4>在html中定位资源</h4>
+        <blockquote>详情请查看源码以及编译后的代码</blockquote>
+
+        <!--源码：
+        <img title="百度logo" src="images/logo.gif"/>
+
+        编译后-->
+        <img title="百度logo" src="images/logo.gif"/>
+
+        <!--源码：
+        <link rel="stylesheet" type="text/css" href="demo.css">
+
+        编译后-->
+        <link rel="stylesheet" type="text/css" href="demo.css">
+
+        <!--源码：
+        <script type="text/javascript" src="demo.js"></script>
+
+        编译后-->
+        <script type="text/javascript" src="demo.js"></script>
+
+
+
+
+
+
+        <h4>在html中嵌入资源</h4>
+        <blockquote>详情请查看源码以及编译后的代码</blockquote>
+
+        <!--源码：
+        <img title="百度logo" src="images/logo.gif?__inline"/>
+
+        编译后-->
+        <img title="百度logo" src="images/logo.gif?__inline"/>
+
+        <!--源码：
+        <link rel="stylesheet" type="text/css" href="demo.css?__inline">
+
+        编译后-->
+        <link rel="stylesheet" type="text/css" href="demo.css?__inline">
+
+        <!--源码：
+        <script type="text/javascript" src="demo.js?__inline"></script>
+
+        编译后-->
+        <script type="text/javascript" src="demo.js?__inline"></script>
+
+
+
+
+
+
+        <h4>在javascript中定位资源</h4>
+        <blockquote>详情请查看源码以及编译后的代码</blockquote>
+
+        <!--源码：
+        <script type="text/javascript">
+            var img = __uri('images/logo.gif');
+            var css = __uri('demo.css');
+            var js = __uri('demo.js');
+        </script>
+
+        编译后-->
+        <script type="text/javascript">
+            var img = __uri('images/logo.gif');
+            var css = __uri('demo.css');
+            var js = __uri('demo.js');
+        </script>
+
+
+
+
+
+
+        <h4>在javascript中嵌入资源</h4>
+        <blockquote>详情请查看源码以及编译后的代码</blockquote>
+
+        <!--源码：
+        <script type="text/javascript">
+            __inline('demo.js');
+            var img = __inline('images/logo.gif');
+        </script>
+
+        编译后-->
+        <script type="text/javascript">
+            __inline('demo.js');
+            var img = __inline('images/logo.gif');
+        </script>
+
+
+
+
+
+
+        <h4>在css中定位资源</h4>
+        <blockquote>详情请查看源码以及编译后的代码</blockquote>
+
+        <!--源码：
+        <style>
+            @import url('demo.css');
+            .style {
+                background: url('images/body-bg.png');
+                _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/body-bg.png');
+            }
+        </style>
+
+        编译后-->
+        <style>
+            @import url('demo.css');
+            .style {
+                background: url('images/body-bg.png');
+                _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/body-bg.png');
+            }
+        </style>
+
+
+
+
+
+
+        <h4>在css中嵌入资源</h4>
+        <blockquote>详情请查看源码以及编译后的代码</blockquote>
+
+        <!--源码：
+        <style>
+            @import url('demo.css?__inline');
+            .style {
+                background: url('images/logo.gif?__inline');
+                /*filter不支持base64，所以没做处理*/
+                _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/body-bg.png?__inline');
+            }
+        </style>
+
+        编译后-->
+        <style>
+            @import url('demo.css?__inline');
+            .style {
+                background: url('images/logo.gif?__inline');
+                /*filter不支持base64，所以没做处理*/
+                _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/body-bg.png?__inline');
+            }
+        </style>
+
+
+    </div>
+</body>
+</html>

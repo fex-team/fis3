@@ -94,7 +94,7 @@ fis.match('**.js', {
 // 所有的 css
 fis.match('**.css', {
     //发布到/static/css/xxx目录下
-    release : '/static/css$0'
+    release : '/static/css$0',
     //访问url是/pp/static/css/xxx
     url : '/pp/static/css$0'
 });
@@ -102,7 +102,7 @@ fis.match('**.css', {
 // 所有image目录下的.png，.gif文件
 fis.match('/images/(*.{png,gif})', {
     //发布到/static/pic/xxx目录下
-    release: '/static/pic/$1'
+    release: '/static/pic/$1',
     //访问url是/oo/static/baidu/xxx
     url : '/oo/static/baidu$0'
 });
