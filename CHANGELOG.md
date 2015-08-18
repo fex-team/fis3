@@ -1,6 +1,6 @@
 
-## 3.1.2 /
-
+## 3.2.0 / 待定
+- 修复原始 match rules 被修改的 bug.
 - 升级 fis3，去掉 useDomain 属性，给设置 domain 的资源自动启用domain
 
 ## 3.1.1 / Wed Aug 12 2015
