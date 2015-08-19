@@ -43,7 +43,9 @@
     "npm-watch": "0.0.0",
     "istanbul": "~0.2.14",
     "coveralls": "2.10.0",
-    "fis3-deploy-local-deliver": "1.0.0"
+    "fis3-deploy-local-deliver": "1.0.0",
+    "fis3-postpackager-loader": "1.2.7",
+    "fis3-hook-cmd": "0.0.1"
   },
   "watch": {
     "jsdoc": "lib/*.js"

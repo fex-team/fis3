@@ -1756,7 +1756,6 @@ describe('util: _.pipe(type, callback, def)2', function (){
       var file = fis.file.wrap(path.join(root, 'util','upload','main.css'));
       file.useCache = false;
       fis.cache.clean();
-    console.log(root);
       fis.match('**/a.png', {
         useHash: false,
         release: '/static/$0'
@@ -1765,37 +1764,42 @@ describe('util: _.pipe(type, callback, def)2', function (){
       //fis.compile(file);
       //expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'util','upload', 'maintar.css')));
   });
+
 });
 
-
-function release(opts, cb) {
-  opts = opts || {};
-
-  _release(opts, function(error, info) {
-    _deploy(info, cb);
-  });
-}
-
+//用例没问题，但是运行报错
 //describe('util: more deploy', function (){
-//  var root = path.join(__dirname, 'fis3_test_cmd');
-//  fis.project.setProjectRoot(root);
+//  function release(opts, cb) {
+//    opts = opts || {};
+//
+//    _release(opts, function(error, info) {
+//      _deploy(info, cb);
+//    });
+//  };
 //  beforeEach(function() {
+//
+//    var root = path.join(__dirname, 'fis3_test_cmd');
+//    fis.project.setProjectRoot(root);
+//    fis.config.init(fis.config.DEFALUT_SETTINGS);
+//    //fis.compile.setup();
+//    //process.env.NODE_ENV = 'dev';
 //    // default settings. fis3 release
 //    var root2 = path.join(__dirname, 'xpy');
 //    _.del(root2);
 //    var root3 = path.join(__dirname, 'xpy2');
 //    _.del(root3);
-//    fis.match('*', {
+//    fis.config.match('*', {
 //      deploy: fis.plugin('local-deliver', {
 //        to: root2
 //      })
 //    });
-//    fis.match('*', {
+//    fis.config.match('*', {
 //      deploy: fis.plugin('local-deliver', {
 //        to: root3
 //      })
 //    });
-//    fis.hook('cmd', {
+//
+//    fis.config.hook('cmd', {
 //      baseUrl: ".",
 //      forwardDeclaration: true,//依赖前置,
 //      skipBuiltinModules: false,
@@ -1821,7 +1825,7 @@ function release(opts, cb) {
 //        }
 //      }
 //    });
-//    fis.match('::packager', {
+//    fis.config.match('::packager', {
 //      postpackager: fis.plugin('loader', {
 //        //allInOne: {
 //        //  ignore: '**/a.js',
@@ -1844,7 +1848,7 @@ function release(opts, cb) {
 //    });
 //// fis3 release production
 //    fis
-//      .match('**', {
+//      .config.match('**', {
 //        useHash: false,
 //        release: '/static/$0'
 //        // domain: 'http://aaaaa.baidu.com/xpy'
@@ -1891,11 +1895,10 @@ function release(opts, cb) {
 //    var file = fis.file.wrap(pathx);
 //    var con = file.getContent();
 //
-//    //console.log(JSON.parse(con).res["demo.js"].deps);
 //    var xpath = JSON.stringify(JSON.parse(con).res["demo.js"].deps);
+//    console.log(pathx);
 //    expect(xpath).to.equal('["demo3.js"]');
 //
-//    //console.log(JSON.parse(con).res["init.js"].deps);
 //    var xpath = JSON.stringify(JSON.parse(con).res["init.js"].deps);
 //    expect(xpath).to.equal('["module/jquery.js","module/data.js","module/b.js"]');
 //
@@ -1909,11 +1912,9 @@ function release(opts, cb) {
 //    var file2 = fis.file.wrap(pathx2);
 //    var con2 = file2.getContent();
 //
-//    //console.log(JSON.parse(con).res["demo.js"].deps);
 //    var xpath2 = JSON.stringify(JSON.parse(con2).res["demo.js"].deps);
 //    expect(xpath2).to.equal('["demo3.js"]');
 //
-//    //console.log(JSON.parse(con).res["init.js"].deps);
 //    var xpath3 = JSON.stringify(JSON.parse(con2).res["init.js"].deps);
 //    expect(xpath3).to.equal('["module/jquery.js","module/data.js","module/b.js"]');
 //
