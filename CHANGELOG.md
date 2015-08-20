@@ -1,5 +1,6 @@
 
 ## 3.2.0 / 待定
+- 修复从内存中缓存的文件文件缓存数据丢失的 bug.
 - 修复 sass 插件启用 sourcemap， map.json 包含无用字段的 bug.
 - 修复match rules 里面有 function 类型的导致程序出错的 bug.
 - 修复原始 match rules 被修改的 bug.
