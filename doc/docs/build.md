@@ -110,7 +110,7 @@ function process(file) {
 ```js
 fis.match('*.es6', {
   parser: fis.plugin('babel'),
-  rExt: '.css' // 代码编译产出时，后缀改成 .css
+  rExt: '.js' // 代码编译产出时，后缀改成 .js
 });
 ```
 
