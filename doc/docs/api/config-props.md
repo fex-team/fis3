@@ -583,7 +583,7 @@ fis.match('::package', {
     ```
 
 - 常用插件
-    - [local-deliver](https://github.com/fex-team/fis3-deploy-deliver)
+    - [local-deliver](https://github.com/fex-team/fis3-deploy-local-deliver)
     - [http-push](https://github.com/fex-team/fis3-deploy-http-push)
     - [replace](https://github.com/fex-team/fis3-deploy-replace)
     - [encoding](https://github.com/fex-team/fis3-deploy-encoding)
