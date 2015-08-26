@@ -172,9 +172,14 @@ describe('config: config',function(){
   });
 
   it('getSortedMatches', function() {
-    fis.media('pro').match('a', {
+
+    fis.media('prod').match('a', {
       name: ''
     });
+
+    var matches = fis.media('prod')._matches.concat();
+    var initIndex = matches[matches.length - 1].index;
+
     fis.match('b', {
       name: ''
     }, 1)
@@ -187,68 +192,85 @@ describe('config: config',function(){
     }, 1)
     fis.media('prod').match('c', {
       name: 'prod'
-    }, 2)
-    var result_gl = [], result_prod = [];
-    ['a', 'b', 'c'].forEach(function(v, i) {
-      if (i) {
-        result_gl.push({
-          raw: v,
-          reg: u.glob(v),
-          negate: false,
-          properties: {name: ''},
-          media: 'GLOBAL',
-          weight: i,
-          index: 1
-        })
-        result_gl.push({
-          raw: v,
-          reg: u.glob(v),
-          negate: false,
-          properties: {name: 'prod'},
-          media: 'prod',
-          weight: i,
-          index: 1
-        })
-        result_prod.push({
-          raw: v,
-          reg: u.glob(v),
-          negate: false,
-          properties: {name: ''},
-          media: 'GLOBAL',
-          weight: i,
-          index: 1
-        })
-        result_prod.push({
-          raw: v,
-          reg: u.glob(v),
-          negate: false,
-          properties: {name: 'prod'},
-          media: 'prod',
-          weight: i,
-          index: 1
-        })
-      }else {
-        result_gl.push({
-          raw: v,
-          reg: u.glob(v),
-          negate: false,
-          properties: {name: ''},
-          media: 'pro',
-          weight: i,
-          index: 1
-        })
+    }, 2);
+
+    var result_gl = [
+      {
+        raw: 'b',
+        reg: u.glob('b'),
+        negate: false,
+        properties: {name: ''},
+        media: 'GLOBAL',
+        weight: 1,
+        index: initIndex + 1
+      },
+
+      {
+        raw: 'c',
+        reg: u.glob('c'),
+        negate: false,
+        properties: {name: ''},
+        media: 'GLOBAL',
+        weight: 2,
+        index: initIndex + 2
       }
-    });
+    ], result_prod = [
+      {
+        raw: 'a',
+        reg: u.glob('a'),
+        negate: false,
+        properties: {name: ''},
+        media: 'prod',
+        weight: 0,
+        index: initIndex + 0
+      },
+
+      {
+        raw: 'b',
+        reg: u.glob('b'),
+        negate: false,
+        properties: {name: ''},
+        media: 'GLOBAL',
+        weight: 1,
+        index: initIndex + 1
+      },
+
+      {
+        raw: 'b',
+        reg: u.glob('b'),
+        negate: false,
+        properties: {name: 'prod'},
+        media: 'prod',
+        weight: 1,
+        index: initIndex + 3
+      },
+
+      {
+        raw: 'c',
+        reg: u.glob('c'),
+        negate: false,
+        properties: {name: ''},
+        media: 'GLOBAL',
+        weight: 2,
+        index: initIndex + 2
+      },
+
+      {
+        raw: 'c',
+        reg: u.glob('c'),
+        negate: false,
+        properties: {name: 'prod'},
+        media: 'prod',
+        weight: 2,
+        index: initIndex + 4
+      },
+    ];
+
     var xp = fis.config.getSortedMatches();
-    for(var i=0;i < xp.length;i++){
-      xp[i].index = 1;
-    }
     expect(xp).to.deep.equal(result_gl);
 
+
     var xp2 = fis.media('prod').getSortedMatches();
-    for(var i=0;i < xp2.length;i++){
-      xp2[i].index = 1;
-    }
     expect(xp2).to.deep.equal(result_prod);
   });
 
