@@ -1,5 +1,11 @@
 
 ## 3.2.0 / 待定
+- 升级 fis3-packager-map 支持从配置项中配置复杂的打包规则。
+- domain 文件属性支持数组
+- media 上下继承逻辑优化
+- 解决 lint 重复报错的 bug
+- 更新 fis3-command-release 修改 deploy 配置行为，让 deploy 遵循后面的覆盖前面的原则。关联 issues: #186
+- 添加 hash 中间码，便于插件单纯获取 hash 值。
 - 修复从内存中缓存的文件文件缓存数据丢失的 bug.
 - 修复 sass 插件启用 sourcemap， map.json 包含无用字段的 bug.
 - 修复match rules 里面有 function 类型的导致程序出错的 bug.
