@@ -32,29 +32,39 @@ fis3 server start --type node
 
 ```js
 // default settings. fis3 release
-fis
-  .media('dev')
-  //添加基本属性 useHash
-  .match('**', {
-    useHash: false
+
+// Global start
+fis.match('*.{js,css}', {
+  useHash: true
+});
+
+fis.match('::image', {
+  useHash: true
+});
+
+fis.match('*.js', {
+  optimizer: fis.plugin('uglify-js') // js 压缩
+});
+
+fis.match('*.css', {
+  optimizer: fis.plugin('clean-css') // css 压缩
+});
+
+fis.match('*.png', {
+  optimizer: fis.plugin('png-compressor') // png 图片压缩
+});
+
+// Global end
+
+// default media is `dev`
+fis.media('dev')
+  .match('*', {
+    useHash: false,
+    optimizer: null
   });
 
-
-// fis3 release production
-fis
-  .media('production')
-  //添加插件属性 optimizer
-  .match('*.js', {
-    optimizer: fis.plugin('uglify-js') // 用 fis-optimizer-uglify-js 压缩 js
-  })
-
-  .match('*.{css,scss}', {
-    optimizer: fis.plugin('clean-css') // 用 fis-optimizer-clean-css 压缩 css
-  })
-
-  .match('*.png', {
-    optimizer: fis.plugin('png-compressor') // 用 fis-optimizer-png-compressor 压缩 png 图片
-  });
+// extends GLOBAL config
+fis.media('production');
 ```
 
 ## 其他例子
