@@ -26,64 +26,82 @@ var _map = __RESOURCE_MAP__;
 
 ### 模块化开发
 
-模块化开发是工程实践的最佳手段，分而治之维护上带来了很大的益处。加载时组件懒加载优化了页面呈现。甚至很多构建工具都是为某种前端模块化框架设计的，包括配套的模块化组件生态。
+模块化开发是工程实践的最佳手段，分而治之维护上带来了很大的益处。
 
-在 FIS3 中没有特定规定的模块化框架。在 FIS 多年对前端工程开发的研究，发现了一种更行之有效的模块化方案，即把 CSS、JS、模板 一起纳入组件的范围，相互可依赖。而不是单单模拟 JS 来实现组件化开发。
+说到模块化开发，首先很多人都会想到 AMD、CMD，同时会想到 `require.js`、`sea.js` 这样的前端模块化框架。主要给 js 提供模块化开发的支持。后也增加了 css、前端模板的支持。这些框架就包含了组件依赖分析、保持加载并保持依赖顺序等功能。
 
-FIS 团队在 FIS3 的基础之上实现插件 [fis3-hook-module](https://github.com/fex-team/fis3-hook-module)， 基本上支持了 AMD，SeaJS，mod.js 等模块化框架，支持对此类规范的组件打包、提前分析依赖等等。
+但在 FIS 中依赖本身在构建过程中就已经分析并记录在静态资源映射表中，那么对于线上运行时模块化框架就可以省掉**依赖分析**这个步骤了。
 
-#### fis3-hook-module 的使用
+在**声明依赖**内置语法中提到了几种资源之间标记依赖的语法，这样不管是模板可以依赖 js、css，js 可以依赖某些 css，以及 js 可以使用一些前端模板。
 
-> 注意，一个 FIS3 项目模块只能有一种前端模块化框架及规范，不能混用，混用带来的复杂度远远大于其带来的便利。
+另外，考虑到 js 还需要有运行时支持，所以对于不同前端模板化框架，在 js 代码中 FIS 编译分析依赖增加了几种依赖函数的解析。这些包括
 
-**挂载插件**
-
-首先先安装插件 `npm install -g fis3-hook-module`
-
+*AMD*
 ```js
-fis.hook('module');
+define()
+require([]);
+require('');
 ```
 
-**使用 AMD**
+*seajs*
+```
+define()
+require('')
+sea.use([])
+```
 
-假设模块化框架支持 AMD 规范，如 **require.js**
+*mod.js (extends commonjs)*
+```
+define()
+require('')
+require.async('')
+require.async([])
+```
+
+考虑到不可能一个框架运用多个模块化框架（因为全都占用同样的全局函数，互斥），所以编译支持这块分成三个插件进行支持。
+
+- [fis3-hook-commonjs](https://github.com/fex-team/fis3-hook-commonjs)
+- [fis3-hook-amd](https://github.com/fex-team/fis3-hook-amd)
+- [fis3-hook-cmd](https://github.com/fex-team/fis3-hook-cmd)
 
 ```js
-fis.hook('module', {
-  mode: 'amd'
+// vi fis-conf.js
+fis.hook('commonjs');
+```
+
+> 插件 README 有详细的使用文档。
+
+如上面说到的，这个编译插件只是对编译工具做一下扩展，支持前端模块化框架中的组件与组件之间依赖的函数，以及入口函数来标记生成到静态资源映射表中；另外一个功能是针对某些前端模块化框架的特性自动添加 `define`。
+
+有了依赖表，但如何把资源加载到页面上，需要额外的**FIS 构建插件**或者**方案**支持。
+
+假设以纯前端（没有后端模板）的项目为例，对于依赖组件的加载就靠插件 [fis3-postpackager-loader](https://github.com/fex-team/fis3-postpackager-loader) 。其是一种基于构建工具的加载组件的方法，构建出的 `html` 已经包含了其使用到的组件以及依赖资源的引用。
+
+```js
+// npm install -g fis3-postpackager-loader
+fis.match('::package', {
+  postpackager: fis.plugin('loader', {})
 });
 ```
 
-**使用 mod.js**
-
-假设要使用 FIS 的 mod.js
+为了方便、统一管理组件以及合并时便利，需要把组件统一放到某些文件夹下，并设置此目录下的资源都是组件资源。
 
 ```js
-fis.hook('module', {
-  mode: 'commonJS'
+// widget 目录下为组件
+fis.match('/widget/**.js', {
+  isMod: true
 });
 ```
 
-挂载这个插件后会做几件事情
-- 分析 JS `require` 等添加依赖
-- 如果是 AMD 的规范，会修改 `define(` 为 `define('<id>'`
-- 自动包裹 `define` 如果是 `commonJS` (**mod.js**)
+通过以上三步，**纯前端**的模块化开发就可实现。
 
-不过还需要标记哪些资源是组件
+总结一下；
 
-```
-/module/a.js
-/module/b.js
-/static/mod.js
-/static/jquery.js
-/index.html
-```
+- 编译工具扩展：根据不同前端模块化框架，扩展**声明依赖**能力
+- 静态资源管理：解析**静态资源映射表**加载页面用到的组件及其组件的依赖
+- 目录规范：设置某个文件夹下资源标记为依赖
 
-```js
-fis.match('/module/*.js', {
-  isMod: true // 标记匹配文件为组件
-});
-```
+工具扩展、目录规范前后端的前端工程项目都需要，其不同的就在于**静态资源管理**这部分。
 
 ### 资源映射表的模块化方案设计
 
@@ -263,12 +281,11 @@ package.json
 
 ### 基于Smarty的解决方案
 
-详细参见 [Smarty 解决方案原理](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
-
-
 [fis3-smarty](https://github.com/fex-team/fis3-smarty) 集成了 [fis-plus](https://github.com/fex-team/fis-plus) 的目录规范以及处理插件。实现对 Smarty 模板解决方案的工程构建工具支持。
 
 > 此方案在 FIS3 替代 [fis-plus](https://github.com/fex-team/fis-plus) 解决方案。
+
+> [Smarty 解决方案原理](https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty)
 
 ### 基于纯PHP的解决方案
 
