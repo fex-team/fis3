@@ -1,5 +1,29 @@
 ## 高级使用
 
+### 静态资源映射表
+
+记录文件依赖、打包、URL等信息的表结构，在 [FIS2](https://github.com/fex-team/fis) 中统称 `map.json`。在 [FIS3](https://github.com/fex-team/fis3) 中默认不产出 `map.json`，FIS3 中为了方便各种语言下读取 `map.json`，对产出 `map.json` 做了优化。
+
+当某个文件包含字符 `__RESOURCE_MAP__`，就会用表结构数据替换此字符。这样的好处是不再固定把表结构写入某一个特定文件，方便定制。
+
+比如在
+
+*php*
+```php
+<?php
+$_map = json_decode('__RESOURCE_MAP__', true);
+?>
+```
+
+*js*
+```js
+var _map = __RESOURCE_MAP__;
+```
+
+假设上面的 php 和 js 为分析静态资源映射表的程序，那么就省去了读 `map.json` 的过程。
+
+当然，如果你想继续像 FIS2 一样的产出 `map.json` 只需要在模块下新建文件 `map.json`，内容设置为 `__RESOURCE_MAP__` 即可。
+
 ### 模块化开发
 
 模块化开发是工程实践的最佳手段，分而治之维护上带来了很大的益处。加载时组件懒加载优化了页面呈现。甚至很多构建工具都是为某种前端模块化框架设计的，包括配套的模块化组件生态。
