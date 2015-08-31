@@ -105,7 +105,8 @@ else
 	#wenku
 	rm -rf ${WENKU_OUTPUT_PATH}/output_o_old
 	cd ${WENKU_CODE_PATH}
-	fis3 release -cd ${WENKU_OUTPUT_PATH}/output_o_old --no-color
+#	fis3 release -cd ${WENKU_OUTPUT_PATH}/output_o_old --no-color
+	/home/work/bin/fis3 release -cd ${WENKU_OUTPUT_PATH}/output_o_old --no-color
 	echo $v > ${WENKU_OUTPUT_PATH}/output_o_old/fis_version.txt
     chmod 777 -R ${WENKU_OUTPUT_PATH}/output_o_old
 
