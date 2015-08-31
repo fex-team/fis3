@@ -51,7 +51,7 @@ then
 	#wenku
 	rm -rf ${WENKU_OUTPUT_PATH}/output_o_new
 	cd ${WENKU_CODE_PATH}
-	node ${FISP_PATH}/bin/fis3 release -cd ${WENKU_OUTPUT_PATH}/output_o_new --no-color
+	node ${FISP_PATH}/bin/fis release -cd ${WENKU_OUTPUT_PATH}/output_o_new --no-color
 	echo $v > ${WENKU_OUTPUT_PATH}/output_o_new/fis_version.txt
     chmod 777 ${WENKU_OUTPUT_PATH}
 
