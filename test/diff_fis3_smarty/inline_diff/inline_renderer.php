@@ -38,7 +38,7 @@
             // FIXME: don't output space if it's the last line.
         }
 
-        return "<pre>".$value."</pre>";   //wangrui10xiugai
+        return "<xmp>".$value."</xmp>";   //wangrui10xiugai
     }
 
     function _blockHeader($xbeg, $xlen, $ybeg, $ylen)
