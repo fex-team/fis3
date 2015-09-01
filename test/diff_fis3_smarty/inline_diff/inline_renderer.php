@@ -34,11 +34,11 @@
     {
         $value="";
         foreach ($lines as $line) {
-            $value.="$line \n";
+            $value.="$line ";
             // FIXME: don't output space if it's the last line.
         }
 
-        return "<xmp>".$value."</xmp>";   //wangrui10xiugai
+        return "<pre>".$value."</pre>";   //wangrui10xiugai
     }
 
     function _blockHeader($xbeg, $xlen, $ybeg, $ylen)
