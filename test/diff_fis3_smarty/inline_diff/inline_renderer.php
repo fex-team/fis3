@@ -34,7 +34,7 @@
     {
         $value="";
         foreach ($lines as $line) {
-            $value.="$line ";
+            $value.="$line <br>";
             // FIXME: don't output space if it's the last line.
         }
 
