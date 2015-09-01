@@ -52,7 +52,7 @@ then
 	rm -rf ${WENKU_OUTPUT_PATH}/output_o_new
 	cd ${WENKU_CODE_PATH}
 	node ${FISP_PATH}/bin/fis release -cd ${WENKU_OUTPUT_PATH}/output_o_new --no-color
-	echo $v > ${WENKU_OUTPUT_PATH}/output_o_new/fis_version.txt
+	echo $version > ${WENKU_OUTPUT_PATH}/output_o_new/fis_version.txt
     chmod 777 ${WENKU_OUTPUT_PATH}
 
 	#tieba
@@ -107,7 +107,7 @@ else
 	cd ${WENKU_CODE_PATH}
 #	fis3 release -cd ${WENKU_OUTPUT_PATH}/output_o_old --no-color
 	/home/work/bin/fis3 release -cd ${WENKU_OUTPUT_PATH}/output_o_old --no-color
-	echo $v > ${WENKU_OUTPUT_PATH}/output_o_old/fis_version.txt
+	echo $version > ${WENKU_OUTPUT_PATH}/output_o_old/fis_version.txt
     chmod 777 -R ${WENKU_OUTPUT_PATH}/output_o_old
 
 	#tieba
