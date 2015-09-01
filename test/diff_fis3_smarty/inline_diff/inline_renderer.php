@@ -34,10 +34,10 @@
     {
         $value="";
         foreach ($lines as $line) {
-            $value.="$line ";
+            $value.="$line \n";
             // FIXME: don't output space if it's the last line.
         }
-        print $value;
+
         return "<xmp>".$value."</xmp>";   //wangrui10xiugai
     }
 
