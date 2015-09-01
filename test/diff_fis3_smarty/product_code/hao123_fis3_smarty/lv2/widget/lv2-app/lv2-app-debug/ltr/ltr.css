@@ -1,0 +1,12 @@
+.open-debug-form {
+	height: 30px;
+	vertical-align: middle;
+	margin: 10px 0;
+}
+.open-debug-form label {
+	float: left;
+	margin-left: 10px;
+}
+.open-debug-form input {
+	padding: 3px 5px;
+}

@@ -1,0 +1,142 @@
+body,html{
+	height: auto;
+	width: auto;
+	overflow: hidden;
+}
+.mod-hao123launcher-app{
+	float: left;
+	min-height: 60px;
+}
+/*样式覆盖*/
+.mod-hao123launcher-app .mod-astro,
+.mod-hao123launcher-app .speed-test,
+.mod-hao123launcher-app .mod-rate,
+#sidebar-facebook{
+	width: 239px !important;
+}
+.mod-hao123launcher-app .mod-astro dt{
+	border: 1px solid #fff;
+	border-bottom: 0;
+	padding: 0 14px;
+	height: auto;
+	line-height: 26px;
+	font-size: 12px;
+	*position:relative;
+	*z-index:3;
+}
+.mod-hao123launcher-app .mod-astro .today{
+    position: relative;
+}
+.mod-hao123launcher-app .speed-test--cover .speed-test_panel{
+	height: 196px;
+}
+
+}
+.mod-hao123launcher-app .speed-test--result .speed-test_result_more{
+    background: 0;
+}
+
+.mod-hao123launcher-app .astro-tab {display:none;}
+.mod-hao123launcher-app .astro-panel {margin-top: 20px;}
+.mod-hao123launcher-app .mod-sidebar-football{
+	height: 455px;
+}
+.mod-hao123launcher-app .loading{
+	position: absolute;
+	display: block;
+	top: 50px;
+	left: 110px;
+	width: 100%;
+	height: 16px;
+	background: url(../img/widget_loading.gif) no-repeat;
+}
+.mod-hao123launcher-app .speed-test_hide{
+	display: none;
+}
+.mod-hao123launcher-app .speed-test,
+.mod-hao123launcher-app .speed-test_show,
+.mod-hao123launcher-app .speed-test_panel,
+.mod-hao123launcher-app .speed-test .speed-test_control,
+.mod-hao123launcher-app .speed-test--result .speed-test_result{
+    background-image: url(../img/speed_test.jpg);
+}
+.mod-hao123launcher-app .speed-test{
+    background-position: 0 0;
+    padding-top: 15px;
+    /*margin-left: -2px;*/
+    margin-top:-1px;
+    /*width: 240px;*/
+    width: 100%;
+}
+.mod-hao123launcher-app .speed-test_panel{
+    background-position: 0 -14px;
+    padding-bottom: 17px;
+    height: 195px;
+}
+.mod-hao123launcher-app .speed-test .speed-test_control{
+    background-position: 0 -266px;
+    height: 72px;
+}
+.mod-hao123launcher-app .speed-test--cover .speed-test_control{
+    /*background-image: url(../panel-box.jpg);*/
+    background-position: 0 -339px;
+}
+.mod-hao123launcher-app .speed-test_bandwidth{
+    left: 41px;
+}
+.mod-hao123launcher-app .speed-test_info{
+    height: 52px;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+.mod-hao123launcher-app .speed-test_btn{
+    margin-top:32px;
+}
+.mod-hao123launcher-app .speed-test_hide{
+    display:none;
+}
+.mod-hao123launcher-app .speed-test_result{
+    margin-bottom:5px;
+}
+.mod-hao123launcher-app .speed-test--result .speed-test_result{
+    background-position: 0 -427px;
+    height: 300px;
+    margin-bottom:0;
+}
+.mod-hao123launcher-app .speed-test--result .speed-test_result_more{
+    background: 0;
+}
+.mod-hao123launcher-app .speed-test_fbshare {
+    display: none;
+}
+/*汇率*/
+.mod-hao123launcher-app #rateFromDropDown{
+    z-index: 503;
+}
+.mod-hao123launcher-app #rateToDropDown{
+    z-index: 502;
+}
+.mod-hao123launcher-app .rate-placeholder{
+    top: 6px;
+    right: 37px;
+}
+.mod-hao123launcher-app .rate-amount-wrapper{
+    padding: 0;
+    padding-top: 3px;
+    padding-left: 7px;
+    padding-bottom: 3px;
+}
+.mod-hao123launcher-app .rate-input label{
+    margin-left: 3px;
+    padding-left: 0px;
+    padding-right: 4px;
+}
+.mod-hao123launcher-app .rate-input-s{
+    width: 123px;
+    padding-right: 25px;
+}
+.mod-hao123launcher-app .astro-luck li{
+    margin-bottom: 36px;
+}
+
+

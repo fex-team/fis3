@@ -1,0 +1,317 @@
+body .site-switch_container{ position: absolute; top: 28px; left: 140px; z-index: 99;}
+body .site-switch{ position: static;}
+/*.userbar{ position: relative;}*/
+
+body .userbar-btn i,
+body .custom_item .btn,
+body .hotsite-custom_list .add-btn,
+body .custom_item .sprite-del_normal,
+body .custom_item .sprite-modify_normal,
+body .site-switch a,
+body .weather-days_click p,
+body .userbar-weather_city-cur a,
+body .bar-addfav_icon,
+body .bar-addfav_btn,
+body .userbar-btn a{ background: url("../img/bg.png") 0 0 no-repeat;}
+
+
+/*.select_theme,
+.select_theme_hover{ background: #EDF0EF url("../img/theme_bg.png") 0 0 no-repeat;}*/
+
+body .hotsite-custom_bar a,
+body .hotsite-custom_bar a:hover,
+body .hotsite-custom .bar_open a,
+body .hotsite-custom .bar_open a:hover,
+body .hotsite-custom_list .add-btn,
+body .news-item_txt,
+body .news-btn_type i,
+body .charts-order,
+body .mod-joke .joke_refresh,
+body .scroll-arrow,
+body .news-btn_type i,
+body .top-arrow,
+body .bottom-arrow,
+body .hotsite-custom_list .add-btn-ico{ background: url("../img/i-news_item.png") no-repeat 0 0;}
+
+
+body .bar-addfav_icon {background-position: 0 -1068px;}
+
+body .bar-addfav{ border-bottom: 1px solid #0064C0;}
+
+body .charts-song:hover, body .charts-singer:hover { color: #1188F7;}
+
+
+body .mod-joke .joke_content:hover{ color: #1188F7;}
+
+#indexLogo{
+	float: left; width: 130px; height: 50px;
+	background: url(../img/logo_new.png);
+	_background: url(/static/web/tw/img/logo_new.png);
+}
+#indexLogoImg{display: none;}
+body .news-btn_type:hover{ border-color: #7EB8EB;}
+body .bar-addfav_btn{ background-position: 0 -1008px; background-repeat: repeat-x;
+
+	border-color: #82BBEF;
+}
+
+body .bar-addfav_btn:hover{
+	background-position: 0 -1028px; border-color: #1188F7;
+}
+
+body .site-switch a{ background-position: right -432px;}
+body .custom_item .sprite-del_normal{ background-position: 0 -639px;}
+body .custom_item .sprite-modify_normal{ background-position: -1px -931px;}
+body .hotsite-custom_bar a{ background-position: -1px -233px;}
+body .hotsite-custom_bar a:hover{ background-position: -1px -254px;}
+body .hotsite-custom .bar_open a{ background-position: -1px -296px;}
+body .hotsite-custom .bar_open a:hover{ background-position: -1px -317px;}
+body .hotsite-custom_list .add-btn{ background-position: 0 -685px; background-repeat: repeat-x; border:1px solid; border-color:#ebebeb #ebebeb #d9dcde #ebebeb; color:#909191;}
+
+body .hotsite-custom_list .add-btn-ico{ background-position: -12px -99px;}
+body dl.sortsite dt .arrow_r{ border-left-color: #5998FE;}
+body .bar-addfav_title, body .bar-addfav_text{ color: #1188F7;}
+
+body .charts_more .arrow_r{ color: #5998FE;}
+body .select_theme_hover{ background-position: 0 -31px;}
+body .mod-joke .joke_refresh{ background-position:0 -168px;}
+body .ui-tip .arrow{border-top-color: #5998FE;}
+body .ui-tip{ border-color: #5998FE;}
+body .news-btn_type i{ background-position: -12px -96px;}
+body .top-arrow { background-position: -15px -114px;}
+body .bottom-arrow{background-position: -15px -131px;}
+
+body .userbar-wrap {
+	background: #1082EC;
+	border-bottom: 1px solid #0069CA;
+	_border-bottom: 0 none;
+
+	background-image:-moz-linear-gradient(50% 0% -90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%); 
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(17,136,247)),color-stop(1, rgb(16,127,230)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%);
+	background-image:linear-gradient(-90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%);
+	/*-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff1188f7,endColorstr=#ff107fe6,GradientType=0)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff1188f7,endColorstr=#ff107fe6,GradientType=0);*/
+}
+
+
+body .site-switch{
+	background-image:-moz-linear-gradient(50% 0% -90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%); 
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(16,135,245)),color-stop(1, rgb(3,118,225)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+	background-image:linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+	border-color:#0070D8;
+	border-width:1px;
+	border-style:solid;
+	/*-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff1087f5,endColorstr=#ff0376e1,GradientType=0)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff1087f5,endColorstr=#ff0376e1,GradientType=0);*/
+}
+
+body .weather-days_click p{ background-position: 50% -552px;}
+body .userbar-weather_city-cur a{ background-position: right -431px;}
+body .site-switch_hover {
+	background: #0070D8;
+}
+
+body .site-switch_content {
+	border: 1px solid #fefefe;
+	background: #E2EAEF;
+}
+body .site-switch_container a {
+	color: #333;
+}
+body .site-switch_content a{ background-image: none;}
+
+body .site-switch_container a:hover {
+	background-color: #C0DAEF;
+}
+
+body .ui-button .ui-button-text,
+body .mod-btn_normal .ui-button-text{ color: #05ae76;}
+
+
+
+body .box-prompt{ background: #E2EAEF;
+	border: 1px solid #ceded9;
+	border-bottom: 1px solid #beccc7;
+}
+
+body .weather-more_wrap {
+	/*background: #0c815a;
+	border-top: 1px solid #0a6f4e;
+	border-bottom: 1px solid #0a6f4e;*/
+}
+body .weather-days {
+	border: 1px solid #0070D8;
+	border-bottom: 0 none;
+	background-image:-moz-linear-gradient(50% 0% -90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%); 
+background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(16,135,245)),color-stop(1, rgb(3,118,225)));
+background-image:-webkit-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+background-image:-o-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+background-image:-ms-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+background-image:linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+}
+body .weather-days_click {
+	border: 1px solid #0069CA;
+	border-bottom: 0 none;
+}
+body .weather-days:hover {
+	background: #0070D8;
+}
+body .weather-days_click p{ background-position: 50% -552px;}
+body .userbar-btn a {
+	background-position: 0 -84px;
+	background-repeat: repeat-x;
+	color: #0069CA;
+	border: 1px solid #0070D8;
+}
+body .userbar-btn i{
+	background-image: url("../img/bg.png") !important;
+}
+body .userbar-btn .userbar-sethome {
+	background-position: 0 0;
+}
+body .userbar-btn .userbar-addfav {
+	background-position: 0 -18px;
+}
+body .userbar-btn .userbar-down {
+	background-position: 0 -38px;
+}
+body .userbar-btn .userbar-btn_click .userbar-sethome {
+	background-position: 0 -710px;
+}
+body .userbar-btn .userbar-btn_click .userbar-addfav {
+	background-position: 0 -729px;
+}
+body .userbar-btn .userbar-btn_click .userbar-down {
+	background-position: 0 -748px;
+}
+body .weather-more_wrap{ background: #0070D8;}
+body .weather-more_show { height: auto; border-top: 1px solid #0069CA;}
+body .weather-more_line{border-bottom: 1px solid #0069CA;}
+body .weather-more_odd{ background: #0069CA;}
+body .box-search_tab a.cur { color:#0069CA;}
+body .hotsite_b{ border: 1px solid #DFE4E6;}
+
+body .hotsite-custom{ border-color: #D9E8FF;}
+body .sortsite dt a,
+body .charts_menu a:hover,
+body .charts_menu .cur,
+body .charts_menu .cur:hover,
+body .charts-imgitem a:hover,
+body .toolbar-v .charts_menu a:hover,
+body .charts_more{ color: #1188F7;}
+body .mod-btn_cancel .ui-button-text{ color: #e25856;}
+
+body .i-toolbar{ background: url(../img/i-news_item.png) no-repeat -16px -150px;}
+body .i-toolbar-0,
+body .i-toolbar-1,
+body .i-toolbar-2{ background-position: 0 -150px;}
+body .toolbar-v dd em{ color: #047AE3;}
+
+body .cur .i-hotsite, body .hotsite-tabs_btn:hover .i-hotsite {
+	background: url(../img/i-news_item.png) no-repeat 0 -360px;
+}
+body .cur .i-history, body .hotsite-tabs_btn:hover .i-history {
+	background: url(../img/i-news_item.png) no-repeat 0 -376px;
+}
+body .hotsite-tabs_btn:hover {color: #1188f7;}
+body .hotsite-tabs .cur {color: #1188f7;border-bottom: 2px solid #1188f7;}
+body .hist-block {background: #1188f7;}
+body .hotsite-hist_bg {color: #1188f7;}
+body .hotsite-hist_bg i{
+    background: url(../img/i-news_item.png) no-repeat 0 -390px;
+}
+body .hist-icon {background: url(../img/i-news_item.png) no-repeat 0 -462px;}
+
+body .settings-btn {
+	border: 1px solid #1185f2;
+	background: url(../img/bg.png) no-repeat 3px -1137px #1185f2;
+}
+body .settings-btn_open {
+	border: 1px solid #d4e0eb;
+	border-bottom: 0 none;
+	background: url(../img/bg.png) no-repeat 3px -1154px #eef3f8;
+}
+body .settings-dropdown {
+	border: 1px solid #d4e0eb;
+	background-color: #eef3f8;
+}
+body .select_theme {
+	border-top: 1px solid #d4e0eb;
+}
+body .settings-site .cur {
+	color: #1188f7;
+}
+body .settings-site a:hover {
+	background-color: #d6e2ef;
+}
+body .box-bot .t a:hover{ color: #1188F7;}
+
+
+body .news-tab li.nav-item-current{color: #1188f7;}
+body .playlist .arrow_r{color:#1188f7;}
+body .playlist .arrow_r_disabled{color:#DEDEDE;}
+div#current_indicator{border-bottom:3px solid #1188f7;}
+body .playlist-tab li.cur{color:#1188f7;}
+ul.playlist-tab .hover{color:#1188f7;}
+body .playlist-body .cur .playlist-song, body .playlist-body .cur_pause .playlist-song {color:#1188f7;}
+body .news-item a:hover .title, body .news-item_dbline a:hover .desc {color:#1188f7;text-decoration: underline;}
+body .news-tab .ui-nav .arrow-prev, body .news-tab .ui-nav .arrow-next{background-image: url(../img/i-news-icon-blue.png) !important;}
+body .news-tab .ui-nav .arrow-prev{background-position: -22px -1px;background-repeat:no-repeat;}
+body .news-tab .ui-nav .arrow-next{background-position: -36px -1px;background-repeat:no-repeat;}
+body .news-tab .ui-nav .prev-hover span.arrow-prev{background-position: -4px -1px;}
+body .news-tab .ui-nav .next-hover span.arrow-next{background-position: -54px -1px;}
+body .playing{background: url(../img/icon_playing.gif) no-repeat scroll 0 0 transparent;}
+body .user_controller {background: url(../img/icon_player.png) no-repeat scroll 0 0 transparent;}
+body .player-controller i{background-image: url(../img/icon_player.png);}
+body .playlist-body .cur .playlist-order{background-image: url(../img/icon_player.png);}
+body .playlist-body .cur_pause .playlist-order{background-image: url(../img/icon_player.png);}
+
+body .mod-login{border-color: #0070d8;}
+body .userbar-btn a{background:#0d83f1;color:white;}
+body .userbar-btn i{background-image:url(../img/bg.png);}
+body .dot_img{background:url(../img/bg.png) 0 -1244px no-repeat;}
+body .dot_img_head{background:url(../img/bg.png) -9px -1244px no-repeat;}
+
+body .cur .i-notepad, body .hotsite-tabs_btn:hover .i-notepad {
+	background: url(../img/i-news_item.png) no-repeat 0 -489px;
+}
+body .close .i-notepad, body .cur:hover .i-notepad {
+	background: url(../img/i-news_item.png) no-repeat 0 -507px;
+}
+
+span.hsrch_word a:hover{color:#1188f7;}
+body .news-slide .nav-item a:hover .title {
+color: #1188f7;
+text-decoration: underline;
+}
+body .charts-order {
+    background-position: 0 -150px;
+}
+body .charts-order_grey{
+    background-position: -15px -150px;
+}
+body .mod-side .news-tab li.nav-item-current{color: #1188f7;}
+
+
+/****** 皮肤盒子 ******/
+body .skinbox-more-wrap{background: #0070D8;border-top-color: #0069CA;border-bottom-color:#0069ca; }
+body .skinbox-normal-wrap .switch-item{border-color: #0070D8;}
+body .skinbox-more-hide .ico-skinbox-triangle{border-bottom-color: #0069ca;}
+body .skinbox-normal-wrap .prev, body .skinbox-normal-wrap .next{background: #0161c2;color: #80b0e1;}
+body .skinbox-item{border-color: #0358b2;}
+body .skinbox-item-selected, body .skinbox-item:hover{border-color: #80b6ed;}
+body .skinbox-normal-wrap .switch-item{background: url("../img/blue-not-current.png?__sprite") no-repeat;}
+body .skinbox-normal-wrap .switch-item-current{background: url("../img/blue-current.png?__sprite") no-repeat;}
+body .skinbox-item-selected .ico-skinbox-selected{background-color: #0084fa;}
+
+/****** 消息盒子 ******/
+body .wrap-message-content li{border-bottom-color:#d4e0eb;}
+body .wrap-message-content{background-color: #EEF3F8;}
+body .wrap-message-content li:hover{background-color: #D3E5F6}
+body .message-target:hover span{color: #1188f7;}

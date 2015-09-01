@@ -1,0 +1,58 @@
+.l-wrap-980 {
+	width: 980px;
+	margin: 0 auto;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.mod-hotsite {
+	width: 100%;
+	display: inline-block;
+	zoom: 1;
+}
+.i-hotsite-wrap {
+	float: right;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	position: relative;
+}
+.i-hotsite-last {
+	margin-left: 0;
+}
+.i-hotsite-wrap, .i-hotsite, .i-hotsite-wrap a {
+	height: 98px;
+	width: 118px;
+}
+.i-hotsite {
+	display: block;
+	margin: 0 auto;
+}
+.i-hotsite-wrap a {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: center;
+	transition: all 0.4s;
+}
+/*内容推荐模块通用样式*/
+.order-wrap {
+	display: inline-block;
+	margin-top: 4px;
+}
+.order {
+	float: right;
+	width: 317px;
+	height: 222px;
+	margin-left: 11px;
+	background-color: #EAECEF;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 2px;
+}
+.order .ctrl {
+	display: none;
+}
+
+.order-last {
+	margin-left: 0;
+}

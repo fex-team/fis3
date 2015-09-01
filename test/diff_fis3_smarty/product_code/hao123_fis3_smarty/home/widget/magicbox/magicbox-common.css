@@ -1,0 +1,265 @@
+.mod-magicbox{
+	_width:238px;
+	_overflow-x:hidden;
+	*position:relative;
+	*z-index:2;
+	*zoom:1;
+}
+.mod-magicbox .mod-side{
+	background:#f5f7f7;
+	border:1px solid #fff;
+	border-bottom:0;
+	padding-bottom: 0;
+}
+/*tabs*/
+.mod-magicbox .cycletabs{
+	height:58px;
+	line-height:58px;
+	background: #fafbfa;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.mod-magicbox .cycletabs .ui-nav .ctrl,.mod-magicbox .cycletabs .ui-nav .wrap{
+	height:59px;
+	padding-bottom:5px;
+}
+.mod-magicbox .cycletabs .ui-nav .ctrl{
+	border-bottom: 1px solid #e3e5e6;
+	background-color:#fafbfa;
+}
+.mod-magicbox .cycletabs .arrow-up{
+	border-bottom: 1px solid #43c196;
+	display: block;
+	bottom: 0px;
+	position: absolute;
+	line-height: 0;
+	width: 68px;
+	height: 60px;
+	left: 84px;
+}
+.mod-magicbox .cycletabs .triangle{
+	position: absolute;
+	bottom: 0;
+	border-color: transparent transparent #43c196 transparent;
+	border-style: dashed dashed solid dashed;
+	left: 29px;
+}
+.mod-magicbox .cycletabs .ui-nav .prev,.mod-magicbox .cycletabs .ui-nav .next{
+	height:58px;
+}
+.mod-magicbox .cycletabs .ui-nav .arrow-prev,.mod-magicbox .cycletabs .ui-nav .arrow-next{
+	height:28px;
+	margin-top:12px;
+	border-bottom:0;
+}
+.mod-magicbox .cycletabs .nav-item{
+	border:0;
+	text-indent: -999em;
+	filter:alpha(opacity=90);
+	-moz-opacity: 0.9;
+	-khtml-opacity: 0.9;
+	opacity: 0.9;
+}
+.mod-magicbox .cycletabs .nav-item:hover{
+	filter:alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+}
+.mod-magicbox .cycletabs .nav-item-current{
+	bottom:0;
+	font-size:13px!important;
+	cursor:pointer;
+}
+.nav-item_astro,
+.mod-magicbox .cycletabs .nav-item_astro{
+	background:url(./img/i-magicbox-astro.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_astro.nav-item-current{
+	background:url(./img/i-magicbox-astro-h.png?__sprite) no-repeat;
+}
+.nav-item_speedTest,
+.mod-magicbox .cycletabs .nav-item_speedTest{
+	background:url(./img/i-magicbox-speedtest.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_speedTest.nav-item-current{
+	background:url(./img/i-magicbox-speedtest-h.png?__sprite) no-repeat;
+}
+.nav-item_charts,
+.mod-magicbox .cycletabs .nav-item_charts{
+	background:url(./img/i-magicbox-charts.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_charts.nav-item-current{
+	background:url(./img/i-magicbox-charts-h.png?__sprite) no-repeat;
+}
+.nav-item_lottery,
+.mod-magicbox .cycletabs .nav-item_lottery{
+	background:url(./img/i-magicbox-lottery.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_lottery.nav-item-current{
+	background:url(./img/i-magicbox-lottery-h.png?__sprite) no-repeat;
+}
+.nav-item_pray,
+.mod-magicbox .cycletabs .nav-item_pray{
+	background:url(./img/i-magicbox-pray.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_pray.nav-item-current{
+	background:url(./img/i-magicbox-pray-h.png?__sprite) no-repeat;
+}
+.nav-item_bus,
+.mod-magicbox .cycletabs .nav-item_bus{
+	background:url(./img/i-magicbox-bus.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_bus.nav-item-current{
+	background:url(./img/i-magicbox-bus-h.png?__sprite) no-repeat;
+}
+.nav-item_translate,
+.mod-magicbox .cycletabs .nav-item_translate{
+	background:url(./img/i-magicbox-translate.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_translate.nav-item-current{
+	background:url(./img/i-magicbox-translate-h.png?__sprite) no-repeat;
+}
+.nav-item_gold,
+.mod-magicbox .cycletabs .nav-item_gold{
+	background:url(./img/i-magicbox-gold.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_gold.nav-item-current{
+	background:url(./img/i-magicbox-gold-h.png?__sprite) no-repeat;
+}
+.nav-item_score,
+.mod-magicbox .cycletabs .nav-item_score{
+	background:url(./img/i-magicbox-score.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_score.nav-item-current{
+	background:url(./img/i-magicbox-score-h.png?__sprite) no-repeat;
+}
+.nav-item_tvlive,
+.mod-magicbox .cycletabs .nav-item_tvlive{
+	background:url(./img/i-magicbox-tvlive.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_tvlive.nav-item-current{
+	background:url(./img/i-magicbox-tvlive-h.png?__sprite) no-repeat;
+}
+.nav-item_football,
+.mod-magicbox .cycletabs .nav-item_football{
+	background:url(./img/i-magicbox-football.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_football.nav-item-current{
+	background:url(./img/i-magicbox-football-h.png?__sprite) no-repeat;
+}
+.nav-item_lyrics,
+.mod-magicbox .cycletabs .nav-item_lyrics{
+	background:url(./img/i-magicbox-lyrics.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_lyrics.nav-item-current{
+	background:url(./img/i-magicbox-lyrics-h.png?__sprite) no-repeat;
+}
+.nav-item_usedcar,
+.mod-magicbox .cycletabs .nav-item_usedcar{
+	background:url(./img/i-magicbox-usedcar.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_usedcar.nav-item-current{
+	background:url(./img/i-magicbox-usedcar-h.png?__sprite) no-repeat;
+}
+.nav-item_rate,
+.mod-magicbox .cycletabs .nav-item_rate{
+	background:url(./img/i-magicbox-rate.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .nav-item_rate.nav-item-current{
+	background:url(./img/i-magicbox-rate-h.png?__sprite) no-repeat;
+}
+/*content panel*/
+.cyclepanel{
+	display:none;
+}
+.magicbox-title{
+	color: #00ac72;
+	font-weight: 600;
+	padding: 7px 15px 6px 20px;
+}
+.magicbox-title i{
+	cursor:pointer;
+	width:13px;
+	height:13px;
+	border: 1px solid #a8a8a8;
+	font-size:0;
+}
+.magicbox-title .refresh{
+	background: transparent url(./img/i-magicbox-refresh.png?__sprite) no-repeat;
+	border:0;
+}
+.magicbox-title .lock{
+	background: url(./img/i-magicbox-unlock.png?__sprite) no-repeat;
+	background-color: #bebebe;
+}
+.magicbox-title .locked{
+	background-image: url(./img/i-magicbox-lock.png?__sprite);
+}
+.magicbox-title .collapse{
+	background: url(./img/i-magicbox-close.png?__sprite) no-repeat;
+	background-color: #bebebe;
+}
+.magicbox-title .expand{
+	background: url(./img/i-magicbox-down.png?__sprite) no-repeat;
+	background-color: #bebebe;
+}
+.magicbox-title i:hover,.magicbox-title i:active,.magicbox-title .locked{
+	background-color: #00b075;
+	border: 1px solid #099465;
+}
+.magicbox-title .refresh:hover,.magicbox-title .refresh:active{
+	background-color: transparent;
+	border:0;
+}
+.magicbox-panel{
+	border-top: 1px solid #e3e5e6;
+	/* display:none; */
+	*position:relative;
+	*zoom:1;
+}
+/*rewrite some styles for inner modules to fullfil different requirements between in&out of magicbox*/
+/*more link*/
+.mod-magicbox .charts_more{
+	color: #00b075;
+}
+/*remove double white border for the module in magicbox*/
+.mod-magicbox .magicbox-panel .mod-side{
+	border:0;
+}
+
+/*astro*/
+#panel-astro .magicbox-title{
+	padding-right:15px;
+}
+
+.mod-magicbox .mod-astro dt,.mod-magicbox .mod-astro dd,.mod-magicbox .mod-charts .charts_menu{
+	border-left: 0;
+	border-right: 0;
+}
+.mod-magicbox .mod-charts .chartslist{
+	border:0;
+}
+/*skin*/
+body .ui-bubble--magicbox{
+	background: #d9f8ee;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+body .ui-bubble--magicbox .ui-bubble_out{
+	border-bottom-color: #2db378;
+}
+body .ui-bubble--magicbox .ui-bubble_in{
+	border-bottom-color: #d9f8ee;
+}
+
+
+/*显示模块*/
+.side-mod-preload-magicbox{
+	border:0!important;
+	background: transparent!important;
+}
+.side-mod-preload-magicbox > *{
+	visibility: visible!important;
+}

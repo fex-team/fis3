@@ -1,0 +1,49 @@
+.newerguide-tip {
+	display: none;
+	position: absolute; 
+	left: 20px;
+	top: 130px;
+	width: 220px;
+	height: 41px;
+	color: #585E5C;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	z-index: 8;
+	border: 1px solid #7BC6AC;
+	border-bottom-width: 2px;
+	background-color: #F7FFFD;
+}
+.newerguide-content {
+	margin: 6px 14px 6px 4px;
+	padding-left: 24px;
+	background: url("../img/finger.gif") no-repeat;
+}
+.newerguide-close {
+	position: absolute;
+	right: 6px;
+	top: 10px;
+	width: 7px; 
+	height: 7px;
+	cursor: pointer;
+	background: url("../img/cancel.png?__sprite") no-repeat;
+}
+.guide-arrow, .arrow-inner {
+	position: absolute;
+	height: 0;
+	width: 0;
+	border: 12px dashed transparent;
+}
+.guide-arrow {
+	border-top-color: #7BC6AC;
+	border-top-style: solid;
+	bottom: -24px;
+	left: 26px;
+}
+.arrow-inner {
+	border-width: 9px;
+	border-top-color: #F7FFFD;
+	border-top-style: solid;
+	margin: -12px 0 0 -9px;
+}

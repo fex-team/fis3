@@ -1,0 +1,320 @@
+/* weather */
+/*@require common:widget/ui/prompt/prompt.css*/
+#weatherView img{ width: 32px;}
+.userbar-weather {
+    color: #fff;
+    font-size: 11px;
+    height: 45px;
+    padding-top: 5px;
+    width:240px;
+    *width: 260px;
+    _width: auto;
+    zoom: 1;
+    position: relative;
+
+    display: block !important;
+}
+.userbar-weather_console{ display: none;}
+.userbar-weather ul {
+    margin-top: 5px;
+    *width: 222px;
+}
+.userbar-weather img, .userbar-weather .weather-info {
+    float: right;
+}
+.userbar-weather li {
+    display: block;
+    float: right;
+    *width: 100px;
+    margin-left: 20px;
+    *margin-left: 10px;
+}
+.userbar-weather li.weather_last {
+    margin-left: 0;
+}
+.userbar-weather img {
+    margin-left: 26px;
+}
+.userbar-weather span {
+    font-weight: bold;
+}
+.userbar-weather p {
+    margin: 2px 0;
+    direction: rtl;
+}
+.weather_last{
+    visibility: hidden;
+}
+.text{
+    visibility: hidden;
+}
+.dot_img{
+    background:url(../img/i-weather-hum.png?__sprite) no-repeat;
+    width:9px;
+    height:16px;
+    display:inline-block;
+    margin-bottom:-5px;
+    left: 10px;
+    position: relative;
+
+    margin-right: 20px;
+    margin-left: -5px;
+}
+
+/*----------more-------------*/
+
+/* weather */
+/*@require common:widget/ui/prompt/prompt.css*/
+
+.userbar-weather {
+    width:390px;
+    *width: 410px;
+}
+.userbar-weather_console {
+    height: 38px;
+    display: block;
+    margin-left: 20px;
+    *margin-left: 10px;
+    float: right;
+    *float: left;
+    _float: right;
+}
+.userbar-weather_console a {
+    color: #fff;
+}
+.weather-info{
+    direction: ltr;
+	width:110px;
+	right: -12px;
+	position: relative;
+}
+.userbar-weather_city {
+    padding-right: 7px;
+    text-align: left;
+    position: relative;
+    line-height: 15px;
+    z-index: 11;
+}
+.userbar-weather_city-cur {
+    height: 15px;
+}
+.userbar-weather_city-cur a {
+    padding-left: 10px;
+    background: url(/widget/img/bg.png) -12px 6px no-repeat;
+    zoom: 1;
+}
+.userbar-weather_city-click a {
+    background-position: right -442px;
+}
+
+
+.city-select {
+    left:-8px;
+    top:16px;
+    z-index:11;
+    text-align:right;
+    _width: 180px;
+}
+.city-select .box-prompt-inner {
+    *width: 100%;
+    _width: auto;
+    *position: relative;
+}
+.city-select p {
+    margin: 0;
+    font-size:12px;
+    zoom: 1;
+}
+.city-select label {
+    display: block;
+    margin-bottom: 5px;
+}
+.city-select select {
+    width: 160px;
+    margin-bottom: 7px;
+    border: 1px solid #d7d7d9;
+}
+.city-select .btn-bar {
+    width: 160px;
+    text-align:center;
+    *position: relative;
+}
+.weather-days {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 7px;
+    margin-top: 5px;
+    border: 1px solid #009e69;
+    border-bottom: 0 none;  
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+    _float: left;
+}
+.weather-days_click {
+    border: 1px solid #00ad73;
+    border-bottom: 0 none;
+}
+.weather-days p {
+    display: block;
+    line-height: 25px;
+    background: url(/widget/img/bg.png) 50% -12px no-repeat;
+    margin: 0;
+}
+.weather-days_click p {
+    background-position: 50% -35px;
+}
+.weather-days:hover {
+    background: #009e69;
+    -moz-border-top-left-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -o-border-top-left-radius: 2px;
+    border-top-left-radius: 2px;
+    -moz-border-top-right-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+    -o-border-top-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.weather-more_show .weather-more {
+    display: block;
+}
+.weather-more li {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0;
+    color: #fff;
+    direction: ltr;
+}
+.weather-more li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.weather-more li img {
+    padding: 10px 0;
+}
+.weather-more span {
+    padding: 0 5px;
+}
+.weather-more_odd {
+    background: #117a57;
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    -o-box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+}
+.weather-more_today p {
+    font-weight: bold;
+}
+.weather_last{
+    width:40px
+}
+.humidity{
+    float:left;
+    margin-left: 40px;
+}
+.dot_img{
+    margin-left: 10px;
+    margin-right: 0;
+}
+.dot_img_head{
+    background:url(../img/i-weather-more-hum.png?__sprite) no-repeat;
+    width:9px;
+    height:16px;
+    display:inline-block;
+    margin-left: -10px;
+    margin-bottom:-5px;
+    left:5px;
+    position:relative;
+    *left: 10px;
+    *float: right; 
+    *margin-right: 20px;
+}
+.temperature_p{
+    float: right;
+}
+.temperature_hum{
+    left: -33px; 
+    position: relative;
+}
+.temperature_big{
+    float:right;
+    margin-right:20px;
+}
+.userbar-weather{ 
+    position: relative; 
+    z-index: 99;
+}
+#weatherView .weather-info{ 
+    *position: absolute; 
+    *right: 240px;
+}
+.weather-more_today .dot_img_head{
+    position:relative;
+}
+.userbar-weather_tip {
+    position: absolute;
+    top: 49px;
+    right: 224px;
+    padding: 2px 12px 2px 32px;
+    width: 190px;
+    border: 1px solid #FFA97E;
+    color: #454545;
+    font-size: 12px;
+    background-color: #FFF8F4;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    z-index: 10;
+}
+.userbar-weather_tip .arrow, .userbar-weather_tip .arrow_bg {
+position: absolute;
+height: 0;
+width: 0;
+border: 8px dashed transparent;
+}
+.userbar-weather_tip .arrow {
+border-bottom-color: #FFB793;
+border-bottom-style: solid;
+border-width: 9px;
+top: -18px;
+right: 19px;
+}
+.userbar-weather_tip .arrow_bg {
+border-bottom-color: #fcfefd;
+border-bottom-style: solid;
+margin: -7px -8px 0 -8px;
+_margin-top: -22px;
+}
+.userbar-weather_tip .tips-close {
+display: block;
+width: 12px;
+height: 12px;
+position: absolute;
+top: 5px;
+left: 5px;
+background: url(../img/del_gray.png?__sprite) no-repeat;
+cursor: pointer;
+}
+.userbar-weather_tip .tips-close_hover {
+background: url(../img/del_ative.png?__sprite) no-repeat;
+}
+.userbar-weather_tip p {
+    text-indent: 16px;
+    background-position: right top;
+    white-space: normal;
+    line-height: 1.5;
+}
+.userbar-weather_tip .tips-light {
+    width: 12px;
+    height: 16px;
+    display: inline-block;
+    background: url(../img/light.png?__sprite) no-repeat;
+    position: absolute;
+    right: 12px;
+    top: 4px;
+}

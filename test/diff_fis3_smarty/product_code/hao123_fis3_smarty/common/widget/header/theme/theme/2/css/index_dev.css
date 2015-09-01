@@ -1,0 +1,249 @@
+.site-switch_container{ position: absolute; top: 28px; left: 140px; z-index: 99;}
+.site-switch{ position: static;}
+/*.userbar{ position: relative;}*/
+
+.userbar-btn i,
+.custom_item .btn,
+.hotsite-custom_list .add-btn,
+.custom_item .sprite-del_normal,
+.custom_item .sprite-modify_normal,
+.site-switch a,
+.weather-days_click p,
+.userbar-weather_city-cur a,
+.bar-addfav_icon,
+.bar-addfav_btn,
+.userbar-btn a{ background: url("../img/bg.png") 0 0 no-repeat;}
+
+
+/*.select_theme,
+.select_theme_hover{ background: #EDF0EF url("../img/theme_bg.png") 0 0 no-repeat;}*/
+
+.hotsite-custom_bar a,
+.hotsite-custom_bar a:hover,
+.hotsite-custom .bar_open a,
+.hotsite-custom .bar_open a:hover,
+.hotsite-custom_list .add-btn,
+.news-item_txt,
+.news-btn_type i,
+.charts-order,
+.mod-joke .joke_refresh,
+.scroll-arrow,
+.news-btn_type i,
+.top-arrow,
+.bottom-arrow,
+.hotsite-custom_list .add-btn-ico{ background: url("../img/i-news_item.png") no-repeat 0 0;}
+
+
+.bar-addfav_icon {background-position: 0 -1068px;}
+
+.bar-addfav{ border-bottom: 1px solid #0064C0;}
+
+.charts-song:hover, .charts-singer:hover { color: #1188F7;}
+
+
+.mod-joke .joke_content:hover{ color: #1188F7;}
+
+#indexLogo{
+	float: left; width: 130px; height: 50px;
+	background: url(../img/logo_new.png);
+	_background: url(/static/web/tw/img/logo_new.png);
+}
+#indexLogoImg{display: none;}
+.news-btn_type:hover{ border-color: #7EB8EB;}
+.bar-addfav_btn{ background-position: 0 -1008px; background-repeat: repeat-x;
+
+	border-color: #82BBEF;
+}
+
+.bar-addfav_btn:hover{
+	background-position: 0 -1028px; border-color: #1188F7;
+}
+
+.site-switch a{ background-position: right -432px;}
+.custom_item .sprite-del_normal{ background-position: 0 -639px;}
+.custom_item .sprite-modify_normal{ background-position: -1px -931px;}
+.hotsite-custom_bar a{ background-position: -1px -233px;}
+.hotsite-custom_bar a:hover{ background-position: -1px -254px;}
+.hotsite-custom .bar_open a{ background-position: -1px -296px;}
+.hotsite-custom .bar_open a:hover{ background-position: -1px -317px;}
+.hotsite-custom_list .add-btn{ background-position: 0 -685px; background-repeat: repeat-x; border:1px solid; border-color:#ebebeb #ebebeb #d9dcde #ebebeb; color:#909191;}
+
+.hotsite-custom_list .add-btn-ico{ background-position: -12px -96px;}
+.sortsite dt .arrow_r{ border-left-color: #5998FE;}
+.bar-addfav_title, .bar-addfav_text{ color: #1188F7;}
+
+.charts_more .arrow_r{ color: #5998FE;}
+.select_theme_hover{ background-position: 0 -31px;}
+.mod-joke .joke_refresh{ background-position:0 -168px;}
+.ui-tip .arrow{border-top-color: #5998FE;}
+.ui-tip{ border-color: #5998FE;}
+.news-btn_type i{ background-position: -12px -96px;}
+.top-arrow { background-position: -15px -114px;}
+.bottom-arrow{background-position: -15px -131px;}
+.userbar-wrap {
+	background: #1082EC;
+	border-bottom: 1px solid #0069CA;
+	_border-bottom: 0 none;
+
+	background-image:-moz-linear-gradient(50% 0% -90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%); 
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(17,136,247)),color-stop(1, rgb(16,127,230)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%);
+	background-image:linear-gradient(-90deg,rgb(17,136,247) 0%,rgb(16,127,230) 100%);
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff1188f7,endColorstr=#ff107fe6,GradientType=0)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff1188f7,endColorstr=#ff107fe6,GradientType=0);
+}
+
+
+.site-switch{
+	background-image:-moz-linear-gradient(50% 0% -90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%); 
+	background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(16,135,245)),color-stop(1, rgb(3,118,225)));
+	background-image:-webkit-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+	background-image:-o-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+	background-image:-ms-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+	background-image:linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+	border-color:#0070D8;
+	border-width:1px;
+	border-style:solid;
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff1087f5,endColorstr=#ff0376e1,GradientType=0)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff1087f5,endColorstr=#ff0376e1,GradientType=0);
+}
+
+.weather-days_click p{ background-position: 50% -552px;}
+.userbar-weather_city-cur a{ background-position: right -431px;}
+.site-switch_hover {
+	background: #0070D8;
+}
+
+.site-switch_content {
+	border: 1px solid #fefefe;
+	background: #E2EAEF;
+}
+.site-switch_container a {
+	color: #333;
+}
+.site-switch_content a{ background-image: none;}
+
+.site-switch_container a:hover {
+	background-color: #C0DAEF;
+}
+
+.ui-button .ui-button-text,
+.mod-btn_normal .ui-button-text{ color: #05ae76;}
+
+
+
+.box-prompt{ background: #E2EAEF;
+	border: 1px solid #ceded9;
+	border-bottom: 1px solid #beccc7;
+}
+
+.weather-more_wrap {
+	/*background: #0c815a;
+	border-top: 1px solid #0a6f4e;
+	border-bottom: 1px solid #0a6f4e;*/
+}
+.weather-days {
+	border: 1px solid #0070D8;
+	border-bottom: 0 none;
+	background-image:-moz-linear-gradient(50% 0% -90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%); 
+background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(16,135,245)),color-stop(1, rgb(3,118,225)));
+background-image:-webkit-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+background-image:-o-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+background-image:-ms-linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+background-image:linear-gradient(-90deg,rgb(16,135,245) 0%,rgb(3,118,225) 100%);
+}
+.weather-days_click {
+	border: 1px solid #0069CA;
+	border-bottom: 0 none;
+}
+.weather-days:hover {
+	background: #0070D8;
+}
+.weather-days_click p{ background-position: 50% -552px;}
+.userbar-btn a {
+	background-position: 0 -84px;
+	background-repeat: repeat-x;
+	color: #0069CA;
+	border: 1px solid #0070D8;
+}
+
+.weather-more_wrap{ background: #0070D8;}
+.weather-more_show { height: auto; border-top: 1px solid #0069CA;}
+.weather-more_line{border-bottom: 1px solid #0069CA;}
+.weather-more_odd{ background: #0069CA;}
+.box-search_tab a.cur { color:#0069CA;}
+.hotsite_b{ border: 1px solid #DFE4E6;}
+
+.hotsite-custom{ border-color: #D9E8FF;}
+.sortsite dt a,
+.charts_menu a:hover,
+.charts_menu .cur,
+.charts_menu .cur:hover,
+.charts-imgitem a:hover,
+.toolbar-v .charts_menu a:hover,
+.charts_more{ color: #1188F7;}
+.mod-btn_cancel .ui-button-text{ color: #e25856;}
+
+.i-toolbar{ background: url(../img/i-news_item.png) no-repeat -16px -150px;}
+.i-toolbar-0,
+.i-toolbar-1,
+.i-toolbar-2{ background-position: 0 -150px;}
+.toolbar-v dd em{ color: #047AE3;}
+
+.box-bot .t a:hover{ color: #1188F7;}
+
+.cur .i-hotsite, .hotsite-tabs_btn:hover .i-hotsite {
+	background: url(../img/i-news_item.png) no-repeat 0 -360px;
+}
+.cur .i-history, .hotsite-tabs_btn:hover .i-history {
+	background: url(../img/i-news_item.png) no-repeat 0 -376px;
+}
+.hotsite-tabs_btn:hover {color: #1188f7;}
+.hotsite-tabs .cur {color: #1188f7;border-bottom: 2px solid #1188f7;}
+.hist-block {background: #1188f7;}
+.hotsite-hist_bg {background: url(../img/i-news_item.png) no-repeat 0 -390px; color: #1188f7;}
+.hist-icon {background: url(../img/i-news_item.png) no-repeat 0 -462px;}
+
+.settings-btn {
+	border: 1px solid #1185f2;
+	background: url(../img/bg.png) no-repeat 3px -1137px #1185f2;
+}
+.settings-btn_open {
+	border: 1px solid #d4e0eb;
+	border-bottom: 0 none;
+	background: url(../img/bg.png) no-repeat 3px -1154px #eef3f8;
+}
+.settings-dropdown {
+	border: 1px solid #d4e0eb;
+	background-color: #eef3f8;
+}
+.select_theme {
+	border-top: 1px solid #d4e0eb;
+}
+.settings-site .cur {
+	color: #1188f7;
+}
+.settings-site a:hover {
+	background-color: #d6e2ef;
+}
+
+.news-tab li.nav-item-current{color: #1188f7;}
+.playlist .arrow_r{color:#1188f7;}
+.playlist .arrow_r_disabled{color:#DEDEDE;}
+div#current_indicator{border-bottom:3px solid #1188f7;}
+.playlist-tab li.cur{color:#1188f7;}
+ul.playlist-tab .hover{color:#1188f7;}
+.playlist-body .cur .playlist-song, .playlist-body .cur_pause .playlist-song {color:#1188f7;}
+.news-item a:hover .title, .news-item_dbline a:hover .desc {color:#1188f7;text-decoration: underline;}
+.news-tab .ui-nav .arrow-prev, .news-tab .ui-nav .arrow-next{background-image: url(../img/i-news-icon-blue.png);}
+.news-tab .ui-nav .arrow-prev{background-position: -22px -1px;background-repeat:no-repeat;}
+.news-tab .ui-nav .arrow-next{background-position: -36px -1px;background-repeat:no-repeat;}
+.news-tab .ui-nav .prev-hover span.arrow-prev{background-position: -4px -1px;}
+.news-tab .ui-nav .next-hover span.arrow-next{background-position: -54px -1px;}
+.playing{background: url(../img/icon_playing.gif) no-repeat scroll 0 0 transparent;}
+.user_controller {background: url(../img/icon_player.png) no-repeat scroll 0 0 transparent;}
+.player-controller i{background-image: url(../img/icon_player.png);}
+.playlist-body .cur .playlist-order{background-image: url(../img/icon_player.png);}
+.playlist-body .cur_pause .playlist-order{background-image: url(../img/icon_player.png);}

@@ -1,0 +1,109 @@
+.contents .contents-substance{
+	background: #f0f0f5;
+}
+.mod-sidebar-spoilers{
+	position: relative;
+    width: 240px;
+    height: 450px;
+}
+.sidebar-spoilers-block{
+	margin-bottom: 10px;
+}
+.sidebar-spoilers-period{
+	width: 215px;
+	height: 20px;
+	background: #fff;
+	margin: 0 auto;
+	line-height: 20px;
+	color: #8a6a38;
+	position: relative;
+	top: 10px;
+	font-size: 15px;
+	padding: 4px;
+}
+.sidebar-spoilers-period01{
+	width: 203px;
+	background: #fff;
+	margin: 0 auto;
+	/* overflow: hidden; */
+	position: relative;
+	top: 12px;
+	padding: 10px;
+}
+.sidebar-spoilers-intro{
+	position: relative;
+	top: 13px;
+	left: 10px;	
+}
+.sidebar-spoilers-del{
+	width: 184px;
+	display: inline-block;
+	margin-bottom: 11px;
+	margin-top: 6px;
+}
+.spoilers-title:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.sidebar-spoilers-intro:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.spoilers-title{
+	color: #8a6a38;
+	white-space: nowrap;
+	width: 210px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+}
+.sidebar-spoilers-del{
+	cursor: pointer;
+}
+.ui-bubble-spoilers{
+	position: absolute;
+	z-index: 1000;
+	border-radius: 8px;
+	line-height: 1.5;
+	border: 1px solid #e51f6c;
+	background-color: #fcfefd;
+	padding: 15px;
+	width: 195px;
+	box-shadow: 1px 1px 3px 0 rgba(0,0,0,.05);
+	display: inline-block;
+	zoom: 1;
+	margin-left: 137px;
+	margin-top: -64px;
+	height: 190px;
+	color: #666666;
+	font-size: 12px;
+}
+.ui-bubble-spoilers-l .ui-bubble-spoilers_in {
+	margin-left: 1px;
+	border-right-color: #fcfefd;
+	left: -14px;
+	top: 40px;
+}
+.ui-bubble-spoilers .ui-bubble-spoilers_in {
+	border-width: 7px;
+}
+.ui-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	border-style: solid;
+	border-color: rgba(385,123,255,0);
+}
+.ui-bubble-spoilers-l .ui-bubble-spoilers_out {
+	top: 39px;
+	left: -16px;
+	border-width: 8px;
+	border-right-color: #e51f6c;
+}
+.sidebar-spoilers-info{
+	height: 55px;
+}
+.sidebar-spoilers-bubble,.sidebar-spoilers-hidden{
+	display: none;
+}

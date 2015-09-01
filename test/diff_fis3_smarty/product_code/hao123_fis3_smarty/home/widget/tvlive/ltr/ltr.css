@@ -1,0 +1,104 @@
+.mod-tvlive{
+	position: relative;
+}
+.mod-tvlive .mod-side {
+	padding-bottom: 0;
+}
+.mod-magicbox .mod-tvlive .mod-side {
+	border: 0;
+}
+.mod-tvlive a{
+	display: block;
+}
+.tvlive-channel{
+	height: 36px;
+	line-height: 36px;
+	border-bottom: 1px solid #fff;
+	padding: 0 13px;
+}
+.tvlive-channel .thaitv3,.tvlive-channel .ch7{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #c7c7c7;
+	background-color: #e9e9e9;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	margin-right: 9px;
+	position:relative;
+}
+.tvlive-channel .thaitv3{
+	background-image:url(../img/i-channel3.png?__sprite);
+}
+.tvlive-channel .ch7{
+	background-image:url(../img/i-channel7.png?__sprite);
+}
+.tvlive-channel:hover .tvlive-mask{
+	background: rgb(34,26,18);
+	background: rgba(0,0,0,0.6);
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.tvlive-channel:hover .tvlive-mask .icon{
+	background: url(/static/widget/home/charts/i-charts_24.png) -45px 0 no-repeat;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+}
+.tvlive-content{
+	border-top: 1px solid #dcdcdc;
+	background: #e7e7e7;
+	padding: 3px 13px 8px;
+	font-size: 0;
+	border-bottom: 1px solid #fff;
+}
+.tvlive-program{
+	height: 14px;
+	padding-top: 3px;
+	margin-bottom: 4px;
+	border-bottom: 1px solid #e7e7e7;
+}
+.tvlive-content .cur{
+	color: #00ac72;
+}
+.tvlive-content .cur:hover{
+	border-bottom: 1px solid #00ac72;
+}
+.tvlive-content .cur .tvlive-name/*,.tvlive-program:hover .tvlive-name*/{
+	font-weight: 600;
+}
+.tvlive-time{
+	display: inline-block;
+	width: 36.85%;
+	font-size: 12px;
+	font-weight: 600;
+	vertical-align: middle;
+	padding-right: 2.38%;
+}
+.tvlive-name{
+	display: inline-block;
+	width: 60.76%;
+	font-size: 12px;
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/*显示模块*/
+.side-mod-preload-tvlive{
+
+}
+.side-mod-preload-tvlive > *{
+    visibility: visible!important;
+}

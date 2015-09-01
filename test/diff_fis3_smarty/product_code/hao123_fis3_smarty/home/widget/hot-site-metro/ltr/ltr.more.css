@@ -1,0 +1,67 @@
+
+
+/*hotsite metro*/
+.backlink{position: absolute;width: 100%;height: 100%;display: inline-block;left: 0;top: 0;background:#393939;filter: alpha(opacity=0);opacity: 0; }
+span.linkname{display: none;}
+div.metro-hover,span.metro-hover-opacity{position: absolute;height: 100%;width: 100%;left:0;top:0;overflow: hidden;}
+.hotsite-metro span.metro-hover-opacity{opacity: 0.8;background-color: #393939;filter: alpha(opacity=90); }
+.hotsite-metro span.metro-hover-title{color: white;font-size:15px;text-align: left;font-weight: bold;padding-left: 13px;margin-top: 10px;display: inline-block;width: 90%;cursor: default;}
+.metro-hover a.metro-hover-btn{z-index: 2;position: absolute;display:block;width: 60px;height: 28px;line-height:28px;background: url("../img/gonormal.png?__sprite") no-repeat;bottom:10px;left:50px;color: white;font-size: 14px;}
+.metro-hover a.metro-hover-btn:hover{background: url("../img/gohover.png?__sprite") no-repeat;}
+.hotsite-metro span.metro-hover-starts{position: relative;display: block;width: 100%;height: 18px;}
+.metro-hover-starts{display: block;width: 100%;height:18px;padding-left: 10px;}
+.metro-hover-starts i{display: inline-block;float:left;width: 16px;height:18px;border:0 none;}
+.star_normal{background: url("../img/star_normal.png?__sprite") no-repeat;}
+/*.starts_half{background: url("../img/star_half.png?__sprite") no-repeat;}*/
+.star_none{background: url("../img/star_none.png?__sprite") no-repeat;}
+.messageBubble{display: none;text-align: center;width: 18px;height: 15px;line-height:15px;position: absolute;background: url("../img/messagebubble.png?__sprite") no-repeat;right:-1px;top:-1px;color: white;}
+.messageBubble-hover{z-index: 1;left: 106px;top:10px;}
+.hotsite-metro span.description{width:86%;position: absolute;top: 45px;left: 4px;color: white;display: block;text-align: left;padding-left: 10px;cursor: default;}
+
+/*特殊的hover模块的遮罩和关闭变扭*/
+.hotsite-metro span.facebook{height: 100%;width: 100%;background-color: #39498e;left: 0;}
+.hotsite-metro span.google{height: 100%;width: 100%;background-color: #4690fa;left: -3px;}
+span.big-hover-close{position: absolute;display:inline-block;width: 24px;height: 24px;background: url("../img/bighover_close_none.png?__sprite") no-repeat;right: 3px;top:5px;z-index: 2; }
+span.big-hover-close-hover{background: url("../img/bighover_close.png?__sprite") no-repeat;cursor: pointer;}
+
+/*facebook hover*/
+.facebookContainer{width: 200%;height: 200%;}
+div.facebookHover{position: absolute;width: 100%;height: 100%;left: 0;top: 0;}
+.big_star_normal{background: url("../img/big_star_normal.png?__sprite") no-repeat;}
+.big_star_half{background: url("../img/big_star_half.png?__sprite") no-repeat;}
+.big_star_none{background: url("../img/big_star_none.png?__sprite") no-repeat;}
+div.metro-hover .facebookTitle{font-size: 20px;padding-left:3px;}
+span.metro-hover-subHead{display: block;width: 100%;height: 20px;color: white;text-align: left;line-height: 20px;padding-left: 13px;margin-bottom: 6px;cursor: default;}
+div.facebookHover i{margin-right: 5px;}
+div.metro-hover .facebookBtn{width: 74px;height: 30px;line-height:30px;background: url("../img/fgonormal.png?__sprite") no-repeat;bottom:20px;left:146px;}
+div.metro-hover .facebookBtn:hover{background: url("../img/fgohover.png?__sprite") no-repeat;}
+.hotsite-metro span.facebookDes{width: 90%;line-height: 14px;top:88px;}
+
+.facebookloginBtn{position: absolute;display:block;width: 119px;height: 33px;bottom:17px;left:13px;z-index: 2;color: white;font-size: 14px;line-height: 29px;}
+.facebookloginBtn-login{background: url("../img/lnormal.png?__sprite") no-repeat;}
+.facebookloginBtn-login:hover{background: url("../img/lhover.png?__sprite") no-repeat;}
+.facebookloginBtn-loginout{line-height: 29px;color:white;font-size: 14px;background-color: #e0232c;height:29px;bottom: 20px; -moz-border-radius: 2px;-webkit-border-radius: 2px;-o-border-radius: 2px;border-radius: 2px;}
+.facebookloginBtn-loginout:hover{background-color: #f23c3e;}
+
+
+/*google hover*/
+.googleContainer{width: 100%;left:0;}
+.googleHover{position: absolute;width: 100%;height: 100%;left: 0;top: 0;}
+.hotsiteMetroGoogleSearch{position: relative;width:348px;height: 33px;left:0;top:33px;line-height: 33px;display: none;}
+.hotsiteMetroGoogleSearch a{float: left;color: white;font-size: 20px;display: inline-block;margin:0 3px 0 13px;background: url("../img/i-google.png?__sprite") no-repeat;height: 33px;width: 69px;}
+span.hotsiteSearchGroup{float: left;display: inline-block;width: 250px;height:33px;margin: 0;text-align: left;background-color: white;position: relative;}
+span.hotsiteSearchGroup .inputText{width: 198px;border: 0 none;padding-left: 3px;}
+span.hotsiteSearchGroup .sub{float: right;background: url("../img/normal.png?__sprite") no-repeat;width: 45px;height: 33px;border:0 none;display: inline-block;cursor: pointer;}
+span.hotsiteSearchGroup .sub-hover{background: url("../img/hover.png?__sprite") no-repeat;}
+span.hotsiteSearchGroup .sub-down{background: url("../img/down.png?__sprite") no-repeat;margin-top:1px\9;  }
+span.hotsiteSearchGroup .metroSearchTips{position: absolute;display: block;left: 6px;color: #CDCDC1;font-size: 13px;}
+span.hotsiteSearchGroup .metroSearchTips:hover{color: #b6b8bc;cursor: text;}
+
+/*窄栏布局*/
+.smallmetro .hotsiteMetroGoogleSearch{top:28px;}
+.smallmetro .hotsiteMetroGoogleSearch a{margin:0 3px 0 10px;}
+
+
+/*sug*/
+span.hotsiteSearchGroup .sug-search {position:absolute;top: 28px;left: 0px;border:1px solid #e3e4e6;border-top: 0 none;background:#fff;width:204px;color:#454545;z-index:999;white-space:nowrap;overflow:hidden;}
+

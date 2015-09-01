@@ -1,0 +1,304 @@
+.mod-calendar{
+    width: 377px;
+    border-radius: 2px;
+    background: #F0FFFB;
+    position: relative;
+
+    /*fix ie prents bug*/
+    *padding-right: 3px;
+}
+
+.mod-calendar .ui-bubble_in{
+    border-bottom-color: #F0FFFB;
+}
+
+.mod-calendar a{
+    color: #39BE8D;
+}
+
+.mod-calendar_hd{
+    text-align: center;
+    padding: 10px;
+}
+
+.mod-calendar_prev a{ display: inline;}
+
+.mod-calendar_prev{ float: left; margin-left: 40px;}
+.mod-calendar_next{ float: right; margin-right: 40px;}
+
+.mod-calendar_bd{
+    /*background: #fff;*/
+    border-left: 1px solid #DCDEDD;
+    margin: 5px 0;
+}
+
+.mod-calendar_ft{
+    line-height: 23px;
+    text-align: right;
+}
+
+.mod-calendar_grid{
+    width: 100%;
+}
+
+.mod-calendar_grid li{
+/*    display: inline-block;
+    _display: inline;
+    zoom: 1;*/
+    float: left;
+
+    width: 14.285%;
+    *width: 13.1%;
+    /*_width: 12.2%;*/
+
+    text-align: center;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.mod-calendar_weeks{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    border-right: 1px solid #D8DAD9;
+    *border: none;
+}
+
+.mod-calendar_weeks li{
+
+    height: 32px;
+    line-height: 32px;
+
+    border-top: 3px solid #DCDEDD;
+    border-bottom: 1px solid #DCDEDD;
+    *border-right: 1px solid #DCDEDD;
+    *margin-right: -1px;
+    *padding-left: 1px;
+
+    background-color: #FCFCFC;
+    background-image: -o-linear-gradient(-90deg, #FFFFFF 0%, #F5F5F5 100%);
+    background-image: -moz-linear-gradient(-90deg, #FFFFFF 0%, #F5F5F5 100%);
+    background-image: -webkit-linear-gradient(-90deg, #FFFFFF 0%, #F5F5F5 100%);
+    background-image: -ms-linear-gradient(-90deg, #FFFFFF 0%, #F5F5F5 100%);
+    background-image: linear-gradient(-180deg, #FFFFFF 0%, #F5F5F5 100%);
+}
+
+
+.mod-calendar_days{
+}
+
+.mod-calendar_days li{
+    border-right: 1px solid #D8DAD9;
+    border-bottom: 1px solid #D8DAD9;
+}
+
+.mod-calendar_days a{
+    height: 50px;   
+    border: 1px solid #fff;
+    display: block;
+    position: relative;
+}
+
+.mod-calendar_days dl{
+    background: #fff;
+    color: #9E9D9D;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.mod-calendar_days dt{
+    color: #444;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 13px;
+}
+
+.mod-calendar_days dd{
+    /*top: 100%;*/
+    padding: 3px;
+    /*margin-left: 3px;*/
+    line-height: 2;
+    margin-top: -10px;
+    /*width: 100%;*/
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mod-calendar_days a:hover{
+    overflow: visible;
+}
+
+.mod-calendar_days a:hover dl{
+    overflow: visible;
+    position: absolute;
+    z-index: 9;
+    left: -2px;
+    top: -2px;
+    padding: 1px;
+    /*background: inherit;*/
+    border: 1px solid #DCDEDD;
+
+    width: auto;
+    _width: 200%;
+    min-width: 100%;
+}
+
+.mod-calendar_days a:hover dt{
+}
+
+.mod-calendar_days a:hover dd{
+    overflow: visible;
+}
+
+.mod-calendar_ft{
+    *padding-right: 3px;
+}
+
+/*
+status
+ */
+/*li.mod-calendar-today{ position: relative; border-bottom: none;}*/
+
+.mod-calendar-today dl{ background: #1EB57D; /*border: 1px solid #1A986A; padding: 1px 0; top: -1px; left: -1px; position: relative; z-index: 2; margin-bottom: -1px;  margin-right: -2px;*/ color: #fff;}
+.mod-calendar-today dt{ color: #fff;}
+/*.mod-calendar-today a{ border: none;}
+.mod-calendar-today a:hover dl{ border: 1px solid #1A986A; left: -1px; top: -1px; padding: 1px 0;}*/
+
+
+.mod-calendar-holiday dl{ background: #FCA438; color: #fff;}
+.mod-calendar-holiday dt{ color: #fff;}
+.mod-calendar-festival dl{ background: #E76984; color: #fff;}
+.mod-calendar-festival dt{ color: #fff;}
+.mod-calendar-event dl{ background: #4084F1; color: #fff;}
+.mod-calendar-event dt{ color: #fff;}
+.mod-calendar-event dd{ color: #fff;}
+.mod-calendar-holder a{ border-color: #F3F2F2; cursor: default; pointer-events: none;}
+.mod-calendar-holder dl{ background: #F3F2F2; color: #BFBEBE;}
+.mod-calendar-holder dt{ color: #B5B5B5;}
+
+.mod-calendar-disable{ color: #999 !important; cursor: default;}
+
+/*
+extend
+ */
+.mod-calendar--mini{
+    width: 250px;
+    *padding-right: 5px;
+    border-color: #E0E0E0;
+    padding: 0;
+    background: #fff;
+    display: none;
+    position: absolute;
+    z-index: 11;
+}
+
+.mod-calendar--mini .mod-calendar_hd{
+    border-bottom: 1px solid #DBDBDB;
+    margin-bottom: 0;
+    background: #FAFCFC;
+}
+
+.mod-calendar--mini .mod-calendar_bd{
+    margin: 0;
+    background: #fff;
+}
+
+.mod-calendar--mini .ui-bubble_in{
+    border-bottom-color: #FAFCFC;
+}
+
+.mod-calendar--mini .ui-bubble_out{
+    border-bottom-color: #E0E0E0;
+}
+
+.mod-calendar--mini .mod-calendar_prev{ float: left; margin-left: 5px;}
+.mod-calendar--mini .mod-calendar_next{ float: right; margin-right: 5px;}
+
+.mod-calendar--mini .mod-calendar_grid{
+    width: 95%;
+    /*padding: 0 10px;*/
+    margin: 0 auto;
+}
+
+.mod-calendar--mini .mod-calendar_weeks{
+    background-color: #F5F7F7;
+    border: none;
+    color: #7F7F7F;
+    padding: 0 5px;
+    width: 100%;
+}
+
+.mod-calendar--mini .mod-calendar_weeks li{
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    background: none;
+}
+
+.mod-calendar--mini .mod-calendar_days{
+    margin: 5px auto;
+}
+
+.mod-calendar--mini .mod-calendar_days li{
+    border: none;
+}
+
+
+.mod-calendar--mini .mod-calendar_grid li{
+    *width: 13.4%;
+}
+
+.mod-calendar--mini .mod-calendar_days li{
+    
+}
+
+.mod-calendar--mini .mod-calendar_days a{
+    height: 28px;
+    line-height: 28px;
+}
+
+.mod-calendar--mini .mod-calendar_days dl{
+    height: 28px;
+}
+
+.mod-calendar--mini .mod-calendar_days dt{
+    font-size: 14px;
+    font-weight: normal;
+    padding-top: 0;
+}
+.mod-calendar--mini .mod-calendar_days dd{
+    display: none;
+}
+
+.mod-calendar--mini .mod-calendar_days a:hover dl{
+    border-color: #fff;
+    background: #E8EAEB;
+}
+
+.mod-calendar--mini .mod-calendar-today dl{ background: #1EB57D; border-color: #fff;}
+.mod-calendar--mini .mod-calendar-today a:hover dl{ background: #1EB57D; border-color: #fff;}
+
+.mod-calendar--mini .mod-calendar-holder a{ border-color: #fff;}
+.mod-calendar--mini .mod-calendar-holder dl{ background: #fff; color: #aaa;}
+
+.mod-calendar--full{
+    width: 980px;
+    *padding-right: 2px;
+}
+
+.mod-calendar--full .ui-arrow{
+    display: none;
+}
+
+.mod-calendar--full .mod-calendar_grid li{
+    *width: 14.1%;
+}
+

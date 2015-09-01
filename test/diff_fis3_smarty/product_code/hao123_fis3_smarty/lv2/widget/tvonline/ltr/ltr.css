@@ -1,0 +1,188 @@
+.mod-tvonline{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+/*顶部样式*/
+.mod-tvonline .head{
+	position: relative;
+	width: 100%;
+	height: 269px;
+	background-color: #282c31;
+}
+.mod-tvonline .head-wrap{
+	position: relative;
+	width: 1024px;
+	margin: 0 auto;
+	padding-left: 149px;
+}
+
+.mod-tvonline .h1{
+	font-size: 24px;
+	color: #00ae74;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 23px;
+}
+.mod-tvonline .head-list{
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+	padding-top: 15px;
+}
+.mod-tvonline .head-item{
+	display: inline-block;
+	float: left;
+	width: 170px;
+	height: 132px;
+	margin-right: 20px;
+	text-align: center;
+}
+.mod-tvonline .head-link{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+}
+.mod-tvonline .head-img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border: 3px solid #484d53;
+}
+.mod-tvonline .head-title{
+	display: inline-block;
+	color: white;
+	padding-top: 20px;
+	width: 100%;
+}
+
+/*下部样式*/
+.mod-tvonline .content-wrap{
+	position: relative;
+	width: 1040px;
+	padding-top: 20px;
+	margin: 0 auto;
+	padding-left: 62px;
+}
+.mod-tvonline .content{
+	position: relative;
+	width: 100%;
+	height: auto;	
+	background-color: white;
+	border: 1px solid #e5e5e5;
+	box-shadow: 1px 1px 5px #88887c;
+	float: left;
+}
+.mod-tvonline .content-con{
+	position: relative;
+	width: 100%;
+	border-top: 1px dashed #e6e6e6;
+	float: left;
+}
+.mod-tvonline .content-con:first-child{
+	border-top: 0 none;
+}
+.mod-tvonline .mark{
+	position: absolute;
+	left: 0;
+	top: 20px;
+	width: 6px;
+  	height: 31px;
+  	background-color: #00ae74;
+}
+.mod-tvonline .h2{
+	font-size: 24px;
+	color: #00ae74;
+	width: 91%;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.mod-tvonline .con-list{
+	width: 100%;
+	margin-left: 49px;
+	height: auto;
+	padding-top: 15px;
+	float: left;
+}
+.mod-tvonline .con-item{
+	display: inline-block;
+	float: left;
+	width: 170px;
+	height: 132px;
+	margin-right: 22px;
+	margin-bottom: 55px;
+	text-align: center;
+}
+.mod-tvonline .con-link{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+}
+.mod-tvonline .con-img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #e1dede;
+}
+.mod-tvonline .con-title{
+	display: inline-block;
+	color: #656565;
+	padding-top: 10px;	
+	width: 100%;	
+}
+
+.mod-tvonline .grey{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 1px;
+	top: 0;
+	background-color: black;
+	opacity: 0.4;
+	filter:alpha(opacity=40);
+}
+.mod-tvonline .head .grey{
+	left: 3px;
+	top: 3px;
+}
+.mod-tvonline .content .grey{
+	left: 2px;
+	top: 2px;
+}
+
+/*小尺寸图片*/
+.mod-tvonline .small .con-item{
+	width: 105px;
+	height: 105px;
+	margin-right: 14px;
+}
+
+/*hover的效果*/
+.mod-tvonline .hover .grey{
+	display: block;
+}
+.mod-tvonline .hover .con-title,.mod-tvonline .hover .head-title{
+	color: #00ae74;
+}
+.mod-tvonline .hover .head-img,.mod-tvonline .hover .con-img{
+	border-color: #00ae74;
+}
+.mod-tvonline .hover .con-img{
+	height: 130px;
+	width: 168px;
+	border-width: 2px;
+}
+.mod-tvonline .small .hover .con-img{
+	height: 103px;
+	width: 103px;
+	border-width: 2px;
+}
+
+
+
+

@@ -1,0 +1,6 @@
+/*play history more list*/
+.game-page .more_links .site-icon{width:33px;height:33px;vertical-align:middle;}
+ body .game-page .more_links a{height:54px;line-height:54px;cursor:pointer;}
+.game-page .site-name{line-height:18px;width:55px;white-space:normal;text-indent:0;margin:7px 5px 0;height:35px;overflow:hidden;word-break:break-all;}
+.game-page .more_links .more{width:auto;height:26px;text-align:right;line-height:26px;border-top:1px solid #edeff0;}
+.game-page .more_links .arrow_r{color:#3dc094;padding-left:5px;font-size:20px;position:static;vertical-align:-2px;margin-right:3px;}

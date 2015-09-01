@@ -1,0 +1,11 @@
+@import url('/widget/big-ad-switch/big-ad-switch-common.css?__inline');
+
+/*
+广告模块样式
+*/
+.mod-big-ad-switch .slide-prev{
+    direction: ltr;
+}
+.mod-big-ad-switch .slide-next{
+    direction: ltr;
+}

@@ -1,0 +1,131 @@
+.mod-send-bless{
+	width: 125px;
+	height: 225px;
+	position: fixed;
+	right: 50%;
+	bottom: 80px;
+	margin-right: 483px;
+	background: url(../img/send-bless-bg.gif?__sprite) no-repeat;
+	font-size: 14px;
+	visibility: visible !important;
+}
+.mod-send-bless img{
+	position: absolute;
+	z-index: -1;
+}
+.mod-send-bless .cake-link{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 3px;
+	width: 120px;
+	height: 135px;
+}
+.mod-send-bless .landing-btn,
+.mod-send-bless .bless-btn{
+	display: block;
+	width: 100%;
+	position: absolute;
+	width: 111px;
+	height: 19px;
+	text-align: center;
+	line-height: 20px;
+	left: 6px;
+}
+.mod-send-bless .landing-btn{
+	color: #fff;
+	bottom: 67px;
+	background: url(../img/green-btn-bg.png?__sprite) repeat-x;
+	border: 1px solid #6eb624;
+}
+.mod-send-bless .landing-btn:hover{
+	background: url(../img/green-btn-bg-hover.png?__sprite) repeat-x;
+}
+.mod-send-bless .bless-btn{
+	color: #eee;
+	bottom: 40px;
+	background: url(../img/red-btn-v-bg.png?__sprite) repeat-x;
+	border: 1px solid #a3a2a2;
+	cursor: default;
+}
+.mod-send-bless .bless-btn.bless-able:hover{
+	background: url(../img/red-btn-bg-hover.png?__sprite) repeat-x;
+}
+.mod-send-bless .bless-btn.bless-able{
+	color: #fff;
+	background: url(../img/red-btn-bg.png?__sprite) repeat-x;
+	border: 1px solid #e54b6d;
+	cursor: pointer;
+	text-shadow:#bc2e48 0 0 1px;
+}
+.mod-send-bless .landing-btn a{
+	display: block;
+	width: 100%;
+	color: #fff;
+	text-shadow:#5a971d 0 0 1px;
+}
+.mod-send-bless .num-container{
+	position: absolute;
+	bottom: 14px;
+	color: #6c410a;
+	border: 1px solid #e5983d;
+	left: 6px;
+	padding: 2px;
+	background-color: #fff3c2;
+}
+.mod-send-bless .num-container i{
+	display: block;
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: url(../img/heart.png?__sprite);
+	margin-right: 2px;
+}
+.mod-send-bless .num-container span{
+	float: left;
+}
+.mod-send-bless .num-container .con{
+	display: block;
+	width: 9px;
+	height: 13px;
+	text-align: center;
+	background-color: #fff;
+	border: 1px solid #c48d4d;
+	line-height: 14px;
+	margin-right: 1px;
+}
+.mod-send-bless .num-container .dash{
+	display: block;
+	width: 2px;
+	height: 2px;
+	background-color: #c7924e;
+	margin-top: 13px;
+	margin-right: 1px;
+}
+.mod-send-bless .num-container em{
+	display: block;
+	position: absolute;
+	width: 2px;
+	height: 10px;
+	background-color: #bd612f;
+	bottom: 18px;
+}
+.mod-send-bless .num-container .left{
+	left: 8px;
+}
+.mod-send-bless .num-container .right{
+	right: 8px;
+}
+.mod-send-bless .close{
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	display: block;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	background: url(../img/close.png?__sprite);
+}
+.mod-send-bless .close:hover{
+	background: url(../img/close-hover.png?__sprite);
+}

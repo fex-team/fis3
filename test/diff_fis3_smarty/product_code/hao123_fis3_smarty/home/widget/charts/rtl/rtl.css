@@ -1,0 +1,84 @@
+/**
+榜单模块样式
+*/
+
+/*charts*/
+.mod-charts{/*height:303px;*/background:#f5f7f7;}
+.mod-charts .mod-side{
+	padding-bottom:3px;
+	/*padding-right:10px;
+	background:#f5f7f7;*/
+	border:1px solid #fff;
+	border-bottom:0;
+	*padding-bottom:14px;/*IE<=7容器触发hasLayout导致其浮动子元素margin-bottom消失http://www.w3help.org/zh-cn/causes/RB1005*/
+}
+.charts-item{overflow:hidden;padding-bottom:6px;line-height:0;}
+.charts_menu{border-left:1px solid #fff;border-right:1px solid #fff;/*for indivisible width percentage*/background:url(../img/tab-normal-bg.png?__sprite) repeat-x;}
+.charts_menu li{/*display:inline-block;*/float:right;position:relative;}
+.mod-charts .icon-new_red{position:absolute;left:0px;top:-5px;}
+.charts_menu a{display:block;line-height:30px;background:url(../img/tab-normal-bg.png?__sprite) repeat-x;text-align:center;border:1px solid #edeff0;border-top-color:#fff;border-right:0;}
+.charts_menu .cur{background:#f5f7f7;border-bottom-color:#f5f7f7;font-weight:600;color:#00b075;cursor:default;}
+.charts_menu .last{border-left:0;}
+.charts_menu a:hover{border-right-color:#e6e8e9;border-bottom-color:#e3e5e5;-moz-box-shadow:0px 2px 0px 0px rgba(227, 229, 229, 0.1);-webkit-box-shadow:0px 2px 0px 0px rgba(227, 229, 229, 0.1);box-shadow:0px 2px 0px 0px rgba(227, 229, 229, 0.1);font-weight:600;color:#00b075;}
+.charts_menu .cur:hover{border-right-color:#edeff0;border-bottom-color:#f5f7f7;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;}
+.charts_content{display:none;/*height:269px;*/position:relative;}
+.charts_more{display:block;background:#f2f2f2;height:23px;line-height:23px;text-align:left;color:#00b075;border-top:1px solid #E3E5E6;padding-left:20px;position:relative;}
+.charts_more:hover{background:#ebebeb;}
+.charts_more .arrow_r{color:#3dc094;left:10px;top:-1px;padding-right:5px;font-size:20px;}
+.charts-order{float:right;background:url(../img/charts-order-bg.png?__sprite) no-repeat;width:15px;height:15px;padding-top:3px;text-align:center;color:#fff;font-family:Tahoma;font-size:10px;margin:4px 0 0 9px;line-height:1;_display:inline;}
+.charts-pic{float:right;display:block;width:33px;border:1px solid #F5F7F7;/*height:35px;*/margin:4px 0 0 9px;_display:inline;max-height: 33px;}
+.charts-pic:hover{/*width:33px;height:33px;*/overflow:hidden;border:1px solid #3dc094;zoom:1;z-index:1;position:relative;}
+.charts-pic img{display:block;width:100%;/*height:35px;*/}
+.charts-pic:hover img{/*position:relative;top:-1px;right:-1px;z-index:0;*/}
+.charts-order_grey{background:url(../img/charts-order-bg-grey.png?__sprite) no-repeat;}
+.charts-song,.charts-singer{overflow:hidden;zoom:1;display:inline-block;line-height:20px;width:135px;_width:133px;text-overflow:ellipsis;white-space:nowrap;/*word-wrap:break-word;*/_margin-right:-3px;}
+.charts-song_l,.charts-singer_l{width:189px;}
+.mod-charts .charts-singer{color:#999;}
+.charts-song:hover,.charts-singer:hover{color:#00b075;}
+.mod-charts .chartslist{position:relative;padding:15px 10px 0 1px;border-top:0;height:232px;overflow:hidden;zoom:1;font-size:0;}
+.mod-charts .chartslist li{font-size:12px;}
+.charts-music .chartslist{padding-top:10px;padding-bottom:15px;}
+
+.charts-imgitem{display:inline-block;zoom:1;*display:inline;width:100px;position:relative;margin-bottom:16px;margin-left:8px;overflow:hidden;}
+.charts-imgitem a{display:block;}
+.charts-imgitem a:hover{color:#00b075;cursor:pointer;}
+
+.charts-name{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;width:100%;display:block;line-height:25px;}
+.charts-imgitem img{display:block;width:100%;_vertical-align:top;}
+.charts-mask{background:rgb(34,26,18);background:rgba(0,0,0,0.6);position:absolute;left:0;width:100px;}
+.charts-imgitem .icon{background-image:url(../i-charts_24.png);_background-image:url(../../img/i-news_item.png);background-repeat:no-repeat;display:inline-block;}
+.charts-mode1 .charts-mask{height:75px;top:0;visibility:hidden;}
+.charts-mode1 .icon{background-position:0 0;_background-position:0 -187px;width:25px;height:25px;position:absolute;top:50%;right:50%;margin-top:-12px;margin-right:-12px;}
+.charts-mode1 .charts-game .icon{background-position:0 -27px;_background-position:-26px -187px;}
+.charts-mode1 .charts-imgitem img{height:75px;}
+.charts-mode1 a{_zoom:1;/*hack for charts-name disappear bug when hovering in ie6*/}
+.charts-mode1 a:hover .charts-mask{visibility:visible;}
+.charts-mode2 .charts-imgitem img{height:100px;}
+.charts-mode2 .charts-mask,.charts-mode3 .charts-mask{height:25px;bottom:0;}
+.charts-mode2 a:hover,.charts-mode3 a:hover{text-decoration:none;}
+.charts-mode2 a:hover .charts-mask{height:100px;}
+.charts-mode2 .charts-name{text-align:center;position:absolute;bottom:0;right:0;color:#fff;width:80px;padding:0 10px;}
+.charts-mode2 a:hover .charts-name{text-align:right;bottom:auto;white-space:normal;top:5px;line-height:18px;max-height:70px;_height:70px;}
+.charts-mode2 a:hover .icon{background-position:-27px 0;_background-position:-34px -168px;width:16px;height:16px;position:absolute;bottom:5px;left:5px;}
+.charts-mode2 .charts-game a:hover .icon{background-position:-27px -27px;_background-position:-17px -168px;}
+.charts-mode3 .chartslist{padding: 0 13px!important;margin:20px 0 10px!important;}
+.charts-mode3 .charts-imgitem img{height:120px;}
+.charts-mode3 a:hover .charts-mask{height:120px;}
+.charts-mode3 .charts-name{text-align:center;position:absolute;bottom:0;right:0;color:#fff;width:70px;padding:0 10px;}
+.charts-mode3 a:hover .charts-name{text-align:right;bottom:auto;white-space:normal;top:5px;line-height:18px;max-height:90px;_height:90px;}
+.charts-mode3 a:hover .icon{background-position:-26px -53px;_background-position:-51px -168px;width:17px;height:17px;position:absolute;bottom:10px;left:10px;}
+.charts-image .charts-mask{display:none;}
+.charts_error{display:none;position:absolute;left:0;top:100px;width:100%;text-align:center;}
+.charts_error:hover{color:#00b075;}
+
+.mod-charts .top-arrow{left:2px;}
+.mod-charts .bottom-arrow{bottom:22px;left:2px;}
+
+/*显示模块*/
+.side-mod-preload-charts{
+    border:0!important;
+    background: transparent!important;
+}
+.side-mod-preload-charts > *{
+    visibility: visible!important;
+}

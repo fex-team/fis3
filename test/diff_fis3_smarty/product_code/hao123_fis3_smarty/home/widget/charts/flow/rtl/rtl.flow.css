@@ -1,0 +1,16 @@
+/* For 300px layout */
+@import url('/widget/charts/flow/charts.flow.css?__inline');
+.flow-on .charts-imgitem{
+	margin-left:10px;
+}
+/*bg icon for music chart*/
+.flow-on .charts-music .icon-bg{
+	left: 15px;
+	/*overturn image for rtl*/
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}

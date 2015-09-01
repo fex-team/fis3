@@ -1,0 +1,18 @@
+.l-ff, .l-g0 {
+    zoom: 1
+}
+
+.l-g {
+    zoom: 1;
+    _zoom: expression(function(el){el.firstChild.style.marginRight = 0;el.style.zoom = "1"}(this))
+}
+.l-g1-1, .l-g1-2, .l-g1-3, .l-g2-3, .l-g3-3, .l-g1-4, .l-g2-4, .l-g3-4, .l-g4-5, .l-g1-5, .l-g2-5, .l-g3-5, .l-g4-5, .l-g1-8, .l-g3-8, .l-g5-8, .l-g7-8 {
+    _margin-left: -3px
+}
+.l-g1, .l-g2, .l-g3, .l-g4, .l-g5, .l-g6, .l-g7, .l-g8, .l-g9, .l-g10, .l-g11, .l-g12 {
+    display: inline;
+}
+
+.l-g_1, .l-g_2, .l-g_3, .l-g_4, .l-g_5, .l-g_6, .l-g_7, .l-g_8, .l-g_9, .l-g_10, .l-g_11 {
+    _zoom: expression(function(el){if(!el.nextSibling || el.nextSibling.nodeType!== 1) el.style.marginLeft = 0;el.style.zoom = "1"}(this))
+}

@@ -1,0 +1,215 @@
+
+
+/***********
+* reset
+*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, figure, blockquote, th, td {
+	margin: 0;
+	padding: 0
+}
+
+fieldset, img, iframe {
+	border: 0
+}
+
+address, caption, cite, code, dfn, em, i, th, var {
+	font-style: normal;
+	font-weight: normal
+}
+
+ul, li, ol {
+	list-style: none
+}
+
+caption, th {
+	text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal
+}
+
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%
+}
+
+body {
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-o-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	vertical-align: baseline;
+	background-color: transparent;
+	 _zoom: expression(function(el){document.execCommand('BackgroundImageCache',false,true);el.style.zoom = "1"}(this))
+}
+
+a {
+	text-decoration: none;
+	color: #333
+}
+
+a:hover {
+	text-decoration: none
+}
+
+a:focus, a:hover, a:active, input:focus, textarea:focus {
+	outline: 0
+}
+
+a::-moz-focus-inner, input::-moz-focus-inner, button::-moz-focus-inner {
+	border: 0
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	padding: 0;
+	border: 0
+}
+
+img {
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle
+}
+
+table {
+	font-size: inherit;
+	font: 100%;
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+td {
+	vertical-align: top
+}
+
+th {
+	text-align: inherit
+}
+
+iframe {
+	display: block
+}
+
+svg:not(:root) {
+	overflow: hidden
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+	vertical-align: top
+}
+
+button, input, select, textarea {
+	font-size: 100%;
+	vertical-align: baseline;
+	*vertical-align: middle
+}
+
+button, input {
+	*overflow: visible;
+	line-height: normal;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box
+}
+
+button {
+	cursor: pointer
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+	-webkit-appearance: button
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none
+}
+
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+	*width: 13px;
+	*height: 13px
+}
+
+button[disabled], input[disabled] {
+	cursor: default
+}
+
+q {
+	quotes: none
+}
+
+q:before, q:after {
+	content: '';
+	content: none
+}
+
+abbr, acronym {
+	border: 0;
+	font-variant: normal
+}
+
+strong, .strong {
+	font-weight: bold
+}
+
+pre, .pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: pre-line;
+	word-wrap: break-word
+}
+
+h1, .h1 {
+	font-size: 1.8em
+}
+
+h2, .h2 {
+	font-size: 1.6em
+}
+
+h3, .h3 {
+	font-size: 1.4em
+}
+
+h4, .h4 {
+	font-size: 1.2em
+}
+
+h5, .h5 {
+	font-size: 1em
+}
+
+h6, .h6 {
+	font-size: 1em
+}
+
+small, .small {
+	font-size: 75%
+}
+
+sub, .sub, sup, .sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline
+}
+
+sup, .sup {
+	top: -0.5em
+}
+
+sub, .sub {
+	bottom: -0.25em
+}

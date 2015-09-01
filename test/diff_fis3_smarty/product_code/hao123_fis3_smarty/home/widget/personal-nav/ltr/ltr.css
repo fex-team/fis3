@@ -1,0 +1,123 @@
+.mod-personal-nav {
+	position: relative;
+	float: left;
+	width: 708px;
+	height: 33px;
+	line-height: 33px;
+	margin-bottom: 10px;
+	background: url(../img/back-img.png) repeat-x;
+	border: 1px solid #e4e6e5;
+	display: inline-block !important;
+}
+.mod-personal-nav .title{
+	position: relative;
+	float: left;
+	display: inline-block;
+	margin-left: 17px;
+	margin-right: 2px;
+	height: 100%;
+	color: #01b075;
+	overflow: hidden;
+	cursor: default;
+	font-weight: 600;
+	max-width: 85px;
+	overflow: hidden;
+}
+.mod-personal-nav .title-icon{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url(../img/i-title-icon.png?__sprite) no-repeat;
+	margin-bottom: -2px;
+}
+.mod-personal-nav .empty-icon{
+	display: none;
+	float: left;
+	width: 13px;
+	height: 12px;
+	background: url(../img/i-nav-delete.png?__sprite) no-repeat;
+	margin-top: 10px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.mod-personal-nav .ib{
+	display: inline-block !important;
+}
+.mod-personal-nav .websites{
+	float: left;
+	display: inline-block;
+	height: 100%;
+}
+.mod-personal-nav .websites-item{
+	position: relative;
+	float: left;
+	display: inline-block;
+	width: 114px;
+	height: 100%;
+	cursor: default;
+}
+.mod-personal-nav .websites-link{
+	display: inline-block;
+	height: 100%;
+	cursor: pointer;
+}
+.mod-personal-nav .websites-icon{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-bottom: 28px;
+}
+.mod-personal-nav .websites-name{
+	display: inline-block;
+	max-width: 81px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #767676;
+}
+.mod-personal-nav .websites-name:hover{
+	color: #01b075;
+}
+.mod-personal-nav .emptyTip{
+	height: 100%;
+	color: #c8c8c8;
+	padding-left: 11px;
+}
+#personalNavDeleteTip .mod-btn_normal,#personalNavDeleteTip .mod-btn_cancel{
+	display:inline-block;
+	float: none;
+}
+#personalNavDeleteTip .arrow{
+	border-top-style: none;
+	border-top-color: transparent;
+	border-bottom-style: solid;
+	border-bottom-color: #05ae76;
+	top: -10px !important;
+}
+#personalNavDeleteTip  .arrow_bg{
+	border-top-style: none;
+	border-top-color: transparent;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;
+	margin-top: 4px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

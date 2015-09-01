@@ -1,0 +1,280 @@
+.wrap-message {
+	float: left;
+	position: relative;
+}
+.wrap-message-content {
+	position: relative;
+	background-color: #0164C8;
+    background-color: rgba(0,99,199,0.97);
+	width: 277px;
+}
+.wrap-message-content li {
+	border-bottom: 1px solid #1B80E4;
+	border-bottom-color: rgba(28,129,229,0.96);
+}
+.wrap-message-content li:hover {
+	background-color: #075DB5;
+	background-color: rgba(0,0,0,.1);
+}
+.wrap-message-content .message-target {
+	float: left;
+	color: #fff;
+	width: 255px;
+	font-size: 12px;
+	min-height: 58px;
+}
+/*.message-target:hover span {
+	color: #fff;
+}*/
+a.message-target:hover span {
+	text-decoration: underline;
+}
+span.message-target span {
+	cursor: default;
+}
+.message-over-item .message-target {
+	color: #999999;
+}
+/*.message-over-item .message-target:hover span {
+	color: #777777;
+}*/
+.message-target span {
+	display: block;
+	width: 200px;
+	float: left;
+	margin: 19px 0 10px 10px;
+}
+.ico-message-delete {
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+	display: none;
+	width: 11px;
+	height: 11px;
+	background: url("../img/icon-delete.png?__sprite") no-repeat;
+}
+.ico-message-delete:hover {
+	cursor: pointer;
+	background: url("../img/icon-delete-hover.png?__sprite") no-repeat;
+}
+.wrap-message-content li:hover .ico-message-delete {
+	display: block;
+}
+.ico-message-new {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 12px;
+	height: 12px;
+	background: url("../img/icon-msg-new.png?__sprite") no-repeat;
+}
+.ico-message-type {
+	width: 28px;
+	height: 25px;
+	float: left;
+	margin-left: 15px;
+	margin-top: 17px;
+	background: url("../img/icon-msg-notice.png?__sprite") no-repeat;
+}
+.ico-message-type1,
+.ico-message-type2 {
+	background: url("../img/icon-msg-notice.png?__sprite") no-repeat;
+}
+.message-over-item .ico-message-type {
+	background-image: url("../img/icon-msg-notice-over.png?__sprite");
+}
+.message-over-item .ico-message-type1,
+.message-over-item .ico-message-type2 {
+	background-image: url("../img/icon-msg-notice-over.png?__sprite");
+}
+.message-no-item {
+	line-height: 58px;
+	text-align: center;
+}
+.message-no-item span {
+	width: 100%;
+	overflow: hidden;
+	color: #FFFFFF;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*head fixed*/
+.header-fixed-st .ico-message-new{top: 6px;}
+
+
+
+.account-msg-shop .wrap-message-content {
+	width: 428px;
+	border: 1px solid #CCCCCC;
+	border-bottom-width: 0;
+	background-color: #FFFFFF;
+	max-height: 396px;
+	position: relative;
+}
+.account-msg-shop .wrap-message-content li {
+	height: 76px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border-bottom: 1px dashed #E4E4E4;
+	position: relative;
+	margin-left: 13px;
+	margin-right: 18px;
+}
+.account-msg-shop .wrap-message-content li:hover {
+	background-color: transparent;
+}
+.account-msg-shop .ico-shop {
+	float: left;
+	width: 74px;
+	height: 74px;
+	border: 1px solid #E0E0E0;
+	margin-right: 14px;
+}
+.account-msg-shop .account-dropdown_wrap,
+.account-msg-shop .wrap-message-content .message-target {
+	color: #3E3E3E;
+}
+.account-msg-shop .wrap-message-content .message-target {
+	width: auto;
+}
+.account-msg-shop .wrap-message-content .message-target:hover .ico-des p {
+	text-decoration: underline;
+}
+.account-msg-shop .ico-des {
+	float: left;
+	width: 278px;
+	line-height: 16px;
+	height: 48px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.account-msg-shop .ico-fur {
+	position: absolute;
+	left: 100px;
+	bottom: 12px;
+	font-size: 14px;
+	width: 300px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #686868;
+}
+.account-msg-shop .ico-fur span {
+	font-size: 12px;
+}
+.account-msg-shop .ico-price {
+	color: #E02304;
+}
+.account-msg-shop .ico-more {
+	position: absolute;
+	right: 29px;
+	bottom: 15px;
+	height: 24px;
+	line-height: 24px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding-left: 12px;
+	padding-right: 12px;
+	background-color: #FF7200;
+	color: #ffffff;
+	font-size: 14px;
+	max-width: 100px;
+}
+.account-msg-shop .ico-more:hover {
+	background-color: #F85116;
+}
+.account-msg-shop .ico-more:active {
+	background-color: #A53209;
+}
+.account-msg-shop .ico-message-delete {
+	position: absolute;
+	right: -7px;
+	top: 3px;
+	width: 15px;
+	height: 15px;
+	background: url("../img/icon-delete-new.png?__sprite") no-repeat;
+}
+.account-msg-shop .ico-message-delete:hover {
+	background: url("../img/icon-delete-new_hover.png?__sprite") no-repeat;
+}
+
+.account-msg-shop .arrow,
+.account-msg-shop .arrow_bg {
+	position: absolute;
+	height: 0;
+	width: 0;
+	border: 8px dashed transparent;
+	z-index: 2;
+	pointer-events: none;
+}
+.account-msg-shop .arrow {
+	border-bottom-color: #CCCCCC;
+	border-bottom-style: solid;
+	top: -16px;
+	right: 15px;
+}
+.account-msg-shop .arrow_bg {
+	border-bottom-color: #fff;
+	border-bottom-style: solid;
+	margin: -7px 0 0 -8px;
+}
+.account-msg-shop .ico-message-new {
+	left: 22px;
+	right: auto;
+	top: 5px;
+	min-width: 14px;
+	line-height: 14px;
+	height: 14px;
+	text-align: center;
+	background: #FF7200;
+	border-radius: 7px;
+}
+.header-fixed-st .account-msg-shop .ico-message-new {
+	top: 1px;
+}
+.account-msg-shop .account-loginfo_wrap {
+	width: 388px;
+	border: 1px solid #CCCCCC;
+	border-top-color: #E4E4E4;
+	margin-top: -1px;
+	padding-top: 20px;
+	background-color: #ffffff;
+}
+.account-msg-shop .account_login-tip {
+	width: 242px;
+	margin: 0 auto;
+}
+.account-msg-shop  .login-tip_con {
+	background: url(../img/btn-facebook-logo.png?__sprite) no-repeat;
+	background-color: #587DC7;
+	color: #ffffff;
+	height: 28px;
+}
+.account-msg-shop .wrap-message-content .message-no-item {
+	border-bottom-width: 0;
+	height: 44px;
+	padding-top: 0;
+}
+.account-msg-shop .message-no-item span {
+	color: #3E3E3E;
+}
+.account-msg-shop .mod-scroll {
+	border-width: 0;
+}
+.account-msg-shop .account_logout_email {
+	color: #9D9D9D;
+}
+.account-msg-shop .account_logout_name {
+	color: #3E3E3E;
+}
+.account-msg-shop .account_logout-tip {
+	margin-left: 46px;
+}
+.account-msg-shop .account-loginfo_wrap img {
+	margin-right: 20px;
+}
+.account-msg-shop ..account_logout_content {
+	width: 220px;
+}

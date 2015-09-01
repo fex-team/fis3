@@ -1,0 +1,180 @@
+.mod-sidebar-shop{
+	background-color: #f7f7f7;
+	position: relative;
+	padding: 1px;
+}
+.mod-sidebar-shop .shop-search{
+	padding: 9px;
+	position: fixed;
+	z-index: 1;
+	background-color: #f7f7f7;
+}
+.mod-sidebar-shop .shop-input-container{
+	width: 181px;
+	background-color: #fff;
+	border: 1px solid #e6e6e6;
+	float: left;
+	margin-right: 5px;
+}
+.mod-sidebar-shop .shop-input-container i{
+	display: inline-block;
+	width: 19px;
+	height: 17px;
+	margin: 7px 0 0 3px;
+	float: left;
+	background: url(../img/sidebar-shop-search-icon.png?__sprite) no-repeat;
+}
+.mod-sidebar-shop .shop-input-container input{
+	padding: 5px 9px;
+	border: none;
+	height: 19px;
+	float: left;
+}
+.mod-sidebar-shop .shop-btn{
+	float: left;
+	width: 90px;
+	height: 31px;
+	/*line-height: 31px;
+	text-align: center;
+	color: #fff;
+	background-color: #ec3d41;
+	font-size: 20px;*/
+	cursor: pointer;
+	border: none;
+	background: url(../img/sidebar-shop-btn.png?__sprite);
+}
+.mod-sidebar-shop .shop-btn:hover{
+	box-shadow: 0px 0px 1px #555;
+}
+/*.mod-sidebar-shop .top-mask,
+.mod-sidebar-shop .bottom-mask{
+	display: block;
+	position: fixed;
+	width: 299px;
+	height: 20px;
+	z-index: 2;
+}
+.mod-sidebar-shop .top-mask{
+	background-image: linear-gradient(top,rgba(247,247,247,1),rgba(255,255,255,0.1));
+	background-image: -webkit-linear-gradient(top,rgba(247,247,247,1),rgba(255,255,255,0.1));
+}
+.mod-sidebar-shop .bottom-mask{
+	background-image: linear-gradient(top,rgba(247,247,247,0.1),rgba(255,255,255,1));
+	background-image: -webkit-linear-gradient(top,rgba(247,247,247,0.1),rgba(255,255,255,1));
+}*/
+/***/
+
+.mod-sidebar-shop .shop-scroll-box{
+	margin-top: 52px;
+	position: relative;
+	height: 400px;
+	overflow: hidden;
+}
+.mod-sidebar-shop .shop-list{
+	float: left;
+	width: 112px;
+	height: 190px;
+	margin-left: 9px;
+	border: 1px solid #e6e6e6;
+	background-color: #fff;
+	position: relative;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.mod-sidebar-shop .shop-list .shop-discount{
+	display: block;
+	position: absolute;
+	left: -5px;
+	top: 10px;
+	width: 37px;
+	height: 32px;
+	background-color: #ff5a00;
+	text-align: center;
+	color: #fff;
+	padding-top: 3px;
+	box-shadow: 2px 2px 1px #ccc;
+}
+.mod-sidebar-shop .shop-list .shop-discount-icon{
+	display: block;
+	position: absolute;
+	left: -5px;
+	top: 45px;
+	width: 4px;
+	height: 4px;
+	background: url(../img/sidebar-shop-shandow.png?__sprite);
+}
+.mod-sidebar-shop .shop-list .img-container{
+	display: block;
+	text-align: center;
+}
+.mod-sidebar-shop .shop-list img{
+	width: 80px;
+	height: 80px;
+}
+.mod-sidebar-shop .shop-list .name-container{
+	display: block;
+}
+.mod-sidebar-shop .shop-list .shop-name{
+	font-weight: 700;
+	font-size: 13px;
+	margin-top: 10px;
+	height: 35px;
+	overflow: hidden;
+	color: #565960;
+}
+.mod-sidebar-shop .shop-list .shop-name:hover{
+	color: #00ae74;
+}
+.mod-sidebar-shop .shop-list .shop-from{
+	color: #b8b8b8;
+	margin-top: 5px;
+}
+.mod-sidebar-shop .shop-list .original-price{
+	text-decoration: line-through;
+	color: #999;
+	margin-top: 5px;
+}
+.mod-sidebar-shop .shop-list .current-price{
+	color: #ff5a00;
+	font-size: 18px;
+	font-weight: 800;
+}
+
+/***/
+.mod-sidebar-shop .more-text{
+	text-align: center;
+	margin-bottom: -7px;
+	background-color: #f7f7f7;
+	width: 50px;
+	margin-left: 122px;
+	position: relative;
+	color: #999;
+}
+.mod-sidebar-shop .more-links{
+	border-top: 1px dashed #d2d2d2;
+	padding: 10px 0;
+}
+.mod-sidebar-shop .seller{
+	float: left;
+	margin-left: 9px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.mod-sidebar-shop .seller .img-container{
+	display: block;
+	border: 1px solid #e6e6e6;
+	margin-bottom: 10px;
+}
+.mod-sidebar-shop .seller .img-container:hover{
+	border: 1px solid #00ad73;
+}
+.mod-sidebar-shop .seller .name-container{
+	color: #454545;
+}
+.mod-sidebar-shop .seller .name-container:hover{
+	color: #00ad73;
+}
+.mod-sidebar-shop .seller img{
+	width: 132px;
+	height: 48px;
+}

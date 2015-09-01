@@ -1,0 +1,42 @@
+/*提示ui*/
+.ui-tip{
+    position: absolute;
+    left: 0;
+    top:0;
+    background-color: #FFF;
+    border-radius: 3px;
+    border:3px solid #05ae76;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+}
+.ui-tip .arrow,.ui-tip .arrow_bg{
+    position: absolute;
+    /*非IE6支持 transparent ，IE6用dashed边框模拟透明（此时border-width*5>height*/
+    border-color: transparent;
+    border-style: dashed;
+    border-width: 10px;
+    height: 0;
+    width: 0;
+}
+.ui-tip .arrow{
+    border-top-style:solid;
+    border-top-color: #05ae76;
+}
+.ui-tip .arrow_bg{
+    border-top-style:solid;
+    margin-left: -10px;
+    margin-top: -15px;
+    border-top-color: #FFF; 
+}
+.ui-tip .ui-tip-content{
+    padding: 10px 26px 0 26px;color:#454545;font-size: 12px;
+     white-space: nowrap;
+
+}
+.ui-tip button{display: inline-block;float: none;*display: inline;*zoom:1;}
+.ui-tip button .ui-button-text{height: 100%;width:100%;}
+.ui-tip .ui-tip-buttonset{
+    padding: 10px;
+    white-space: nowrap;
+}

@@ -1,0 +1,246 @@
+.unselect, i, .i, .icon {
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none
+}
+
+b, .b, .border {
+	display: block;
+	font: 0/0 a
+}
+
+.s-ptn, .s-pvn, .s-pan {
+	padding-top: 0 !important
+}
+
+.s-pts, .s-pvs, .s-pas {
+	padding-top: 5px !important
+}
+
+.s-ptm, .s-pvm, .s-pam {
+	padding-top: 10px !important
+}
+
+.s-ptl, .s-pvl, .s-pal {
+	padding-top: 20px !important
+}
+
+.s-prn, .s-phn, .s-pan {
+	padding-right: 0 !important
+}
+
+.s-prs, .s-phs, .s-pas {
+	padding-right: 5px !important
+}
+
+.s-prm, .s-phm, .s-pam {
+	padding-right: 10px !important
+}
+
+.s-prl, .s-phl, .s-pal {
+	padding-right: 20px !important
+}
+
+.s-pbn, .s-pvn, .s-pan {
+	padding-bottom: 0 !important
+}
+
+.s-pbs, .s-pvs, .s-pas {
+	padding-bottom: 5px !important
+}
+
+.s-pbm, .s-pvm, .s-pam {
+	padding-bottom: 10px !important
+}
+
+.s-pbl, .s-pvl, .s-pal {
+	padding-bottom: 20px !important
+}
+
+.s-pln, .s-phn, .s-pan {
+	padding-left: 0 !important
+}
+
+.s-pls, .s-phs, .s-pas {
+	padding-left: 5px !important
+}
+
+.s-plm, .s-phm, .s-pam {
+	padding-left: 10px !important
+}
+
+.s-pll, .s-phl, .s-pal {
+	padding-left: 20px !important
+}
+
+.s-mtn, .s-mvn, .s-man {
+	margin-top: 0 !important
+}
+
+.s-mts, .s-mvs, .s-mas {
+	margin-top: 5px !important
+}
+
+.s-mtm, .s-mvm, .s-mam {
+	margin-top: 10px !important
+}
+
+.s-mtl, .s-mvl, .s-mal {
+	margin-top: 20px !important
+}
+
+.s-mrn, .s-mhn, .s-man {
+	margin-right: 0 !important
+}
+
+.s-mrs, .s-mhs, .s-mas {
+	margin-right: 5px !important
+}
+
+.s-mrm, .s-mhm, .s-mam {
+	margin-right: 10px !important
+}
+
+.s-mrl, .s-mhl, .s-mal {
+	margin-right: 20px !important
+}
+
+.s-mbn, .s-mvn, .s-man {
+	margin-bottom: 0 !important
+}
+
+.s-mbs, .s-mvs, .s-mas {
+	margin-bottom: 5px !important
+}
+
+.s-mbm, .s-mvm, .s-mam {
+	margin-bottom: 10px !important
+}
+
+.s-mbl, .s-mvl, .s-mal {
+	margin-bottom: 20px !important
+}
+
+.s-mln, .s-mhn, .s-man {
+	margin-left: 0 !important
+}
+
+.s-mls, .s-mhs, .s-mas {
+	margin-left: 5px !important
+}
+
+.s-mlm, .s-mhm, .s-mam {
+	margin-left: 10px !important
+}
+
+.s-mll, .s-mhl, .s-mal {
+	margin-left: 20px !important
+}
+/*提供给bigrender作为lazyload*/
+.g-area-lazyload{
+	visibility: hidden;
+}
+.hide {
+	display: none !important;
+	visibility: hidden
+}
+/*
+.hide-layout {
+	visibility: hidden
+}
+
+.hide-text {
+	border: 0;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	background-color: transparent
+}
+
+.hide-read, .hide-focus {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px
+}
+
+.hide-focus:active, .hide-focus:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto
+}*/
+
+/* float */
+
+.cf:before, .cf:after {
+	content: '';
+	display: table
+}
+
+.cf:after {
+	clear: both
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+
+.ibw{
+	word-spacing: -0.35em;
+	letter-spacing: -.32em
+}
+
+.ib, .ibw .ib, s, .s, .space, .btn {
+	display: inline-block;
+}
+
+.ibw .ib{
+	word-spacing: normal;
+	letter-spacing: normal;
+	vertical-align: top
+}
+
+.mod {
+	overflow: hidden;
+}
+
+/*.mod .img {
+	float: left
+}
+
+.mod .img img {
+	display: block
+}
+
+.transparent {
+	filter: alpha(opacity=50);
+	-moz-opacity: .5;
+	-khtml-opacity: .5;
+	opacity: .5
+}*/
+
+/** from common.css
+常用的命名样式，方便PM在CMS中配置 */
+
+.triangle{
+	width:0;
+	height:0;
+	overflow:hidden;
+	font-size:0;
+	line-height:0;
+	border-color:transparent;
+	border-style:dashed;
+	border-width:5px;
+}

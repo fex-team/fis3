@@ -1,0 +1,36 @@
+{
+    "pkg/autopack_home_async_fs.js": [
+        "/widget/hot-site/hot-site-async.js",
+        "/widget/ui/anchorside/anchorside.js",
+        "/widget/history-add/history-add-async.js",
+        "/widget/history/history-c.js",
+        "/widget/sort-area/sort-area-tab-async.js",
+        "/widget/sort-area/sort-area-nav-async.js",
+        "/widget/sort-area/sort/sort-async.js",
+        "/widget/recommand/layout2/layout2-async.js",
+        "/widget/personal-nav/personal-nav-async.js",
+        "/widget/customsites/customsites-async.js"
+    ],
+    "pkg/home_sync_pri1_js_0_en.js": [
+        "/widget/ui/facebook/fbclient-tpl.js"
+    ],
+    "pkg/home_sync_pri1_css_0_en.css": [
+        "/widget/customsites/ltr/ltr.more.css",
+        "/widget/hot-site/game-history/game-history.css",
+        "/widget/hot-site/ltr/ltr.more.css",
+        "/widget/mail/ltr/ltr.css",
+        "/widget/sortsite/ltr/ltr.css"
+    ],
+    "pkg/home_async_pri1_js_0_en.js": [
+        "/widget/custom-sidebar/custom-sidebar-messagebubble.js",
+        "/widget/hot-site/game-history/game-history-async.js",
+        "/widget/sortsite/sortsite-async.js",
+        "/widget/ui/facebook/sns-share.js",
+        "/widget/ui/fool-day/fool-day.min.js",
+        "/widget/ui/sidebar-facebook/facebook-out.js",
+        "/widget/water/water-a.js",
+        "/widget/ui/facebook/fbclient-core.js",
+        "/widget/ui/facebook/fbclient.js",
+        "/widget/ui/facebook/facebook.js"
+    ]
+}

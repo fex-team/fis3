@@ -1,0 +1,45 @@
+@import url('/widget/bottombar/bottombar-c.css?__inline');
+
+/**
+底部分类导航区样式，需要和/common/css/heatsite.css合并（heatsite.css中【Line2~22】已不再用，可以去掉）
+*/
+
+/*bottom*/
+.box-bot .t {
+	/*_padding-top: 6px;
+	font-family: Arial;*/
+	font-size: 14px;
+	font-weight:600;
+}
+.box-bot .t a {color:#5a5a5a;}
+.box-bot {
+	/*font-size: 12px;*/
+	padding: 8px;
+	line-height:30px;/*letter-spacing:-.3em; *letter-spacing:normal; word-spacing:-.3em;*/
+	background:#F5F7F7;
+}
+.box-bot_inner {
+	/* overflow:hidden;
+		height: 32px;
+		width: 938px;*/
+}
+.box-bot li {
+	/*float:left;*/
+	display:inline;
+	overflow:hidden;
+	padding-right:10px;
+}
+.box-bot a{ vertical-align:baseline; height: 22px; line-height: 22px; display: inline-block; *display:inline;
+	*zoom:1; padding: 0 7px;color: #595959;}
+.box-bot a:hover{ background-color:#e8eaeb; border-radius:2px; }
+/*
+.box-bot span{ display:inline-block;*display:inline;zoom:1;vertical-align:top; width:67px; overflow:hidden; overflow:hidden; letter-spacing:normal; word-spacing:normal; margin-right:18px;}
+*/
+.box-bot .m {
+	padding-right:0;
+	float:right;
+}
+.box-bot .m a {
+	color:#919191;
+}
+.box-bot .m i{display: inline-block; *display:inline; vertical-align: 1px; padding-left:5px;}

@@ -1,0 +1,16 @@
+/* For 300px layout */
+.flow-on .astro_name{
+	width: 128px;
+}
+.flow-on .astro-tab li {
+	width: 132px;
+}
+.flow-on .astro-luck span{
+	width: 54px;
+}
+.flow-on .astro-list{
+	width: 223px;
+}
+.flow-on .astro-head{
+	width: 233px;
+}

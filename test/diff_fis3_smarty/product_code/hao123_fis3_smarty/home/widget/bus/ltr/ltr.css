@@ -1,0 +1,141 @@
+.mod-bus {
+	background:#f3f5f6;
+	margin:0 auto;
+	color:#5a5a5a;
+}
+.bus-info {
+	margin-left:8px;
+	padding-top:10px;
+}
+.bus-info-detail {
+	margin-top: 13px;
+	position:relative;
+
+}
+.bus-submit {
+	height:30px;
+	width:220px;
+	background:#5DB285;
+	cursor: pointer;
+	margin-bottom: 23px;
+	color: white;
+	border: 0;
+	border-radius: 5px;
+	font-size: 17px;
+	font-weight: bold;
+	position: relative;
+	top: 3px;
+}
+.charts_more {
+	display: block;
+	background: #f2f2f2;
+	height: 23px;
+	line-height: 23px;
+	text-align: right;
+	color: #00b075;
+	border-top: 1px solid #E3E5E6;
+	padding-right: 20px;
+	position: relative;
+}
+.bus-info-mesaage {
+	font-size: 15px;
+}
+#ym {
+	width: 106px;
+	margin-right: 18px;
+}
+#d {
+	width: 71px;
+}
+#m1 {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#m2 {
+	margin-right: 7px;
+}
+.bus-info-r {
+	position: absolute;
+	margin-right: 11px;
+	margin-top: -88px;
+	width: 25px;
+	height: 45px;
+	margin-left: 192px;
+}
+.bus-info-r i{
+	cursor: pointer;
+}
+.bus-info-b {
+	position: relative;
+	top: 2px;
+}
+/*.radio-type {
+	position: relative;
+	top: 4px;
+	margin-right: 3px;
+}*/
+.order-bus {
+	margin-right: 12px;
+}
+.from-position {
+	border: 1px solid #D9D9D9;
+	border-radius: 3px;
+	padding-left: 2px;
+	height:21px;
+}
+.to-position {
+	border: 1px solid #D9D9D9;
+	border-radius: 3px;
+	padding-left: 2px;
+	height:21px;
+}
+.via-position {
+	border: 1px solid #D9D9D9;
+	border-radius: 3px;
+	padding-left: 2px;
+	height: 21px;
+}
+.bus-note-info {
+	color: #BCBCBC;
+	cursor: text;
+	left: 55px;
+	top:5px;
+	position: absolute;
+}
+#mod-side-bus .charts_more {
+	color: #00b075;
+}
+.color_red {
+	border:1px solid red;
+}
+.color_gray {
+	border:1px solid #ccc;
+}
+.subBtn_color{
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#51A274), to(#65B38D));
+	background:-moz-linear-gradient(top, #51A274,#65B38D)
+}
+.bus-info-detail select {
+	height: 21px;
+}
+.bus-info-detail > select {
+	margin-right: 5px;
+}
+#bus-method {
+	margin-left: 12px;
+}
+.exchange {
+	background-image: url(../img/exchange.png?__sprite);
+	display: block;
+	width: 25px;
+	height: 45px;
+}
+
+
+/*显示模块*/
+.side-mod-preload-bus{
+
+}
+.side-mod-preload-bus > *{
+    visibility: visible!important;
+}

@@ -1,0 +1,49 @@
+#ieSetHomePage {
+	display: none;
+}
+.bar-addfav {
+	font-size: 14px;
+	position: relative;
+	z-index: 400;
+	background-repeat: repeat-x;
+	background-image: -webkit-linear-gradient(top, #FFFFFF,#F1F1F1, #E2E2E2);
+	background-image: -moz-linear-gradient(top, #FFFFFF,#F1F1F1, #E2E2E2);
+	background-image: -ms-linear-gradient(top, #FFFFFF,#F1F1F1, #E2E2E2);
+	background-image: linear-gradient(top, #FFFFFF,#F1F1F1, #E2E2E2);
+	background-color: #f1f1f1;
+}
+.bar-addfav .l-wrap {
+	overflow: hidden;
+	height: 37px;
+}
+.bar-addfav .fav-title,
+.bar-addfav .fav-text {
+	line-height: 37px;
+	float: left;
+	padding-right: 5px;
+	color: #3890e7;
+}
+.bar-addfav .fav-title {
+	font-weight: 700;
+}
+.bar-addfav .fav-down {
+	float: left;
+	width: 21px;
+	height: 20px;
+	margin: 9px 5px 0 0;
+}
+.bar-addfav .fav-btn {
+	line-height: 20px;
+	float: left;
+	max-width: 150px;
+	height: 20px;
+	margin: 8px 0 0 25px;
+	padding-right: 20px;
+	padding-left: 20px;
+	cursor: pointer;
+	color: #fff;
+	border: 1px solid #c87d00;
+	border-radius: 2px;
+	outline: 0;
+	background-color: #f08e00;
+}

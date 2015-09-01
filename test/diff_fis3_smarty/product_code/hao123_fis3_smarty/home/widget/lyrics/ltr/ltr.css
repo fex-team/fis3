@@ -1,0 +1,23 @@
+.mod-lyrics {position: relative;}
+.mod-magicbox .mod-lyrics .mod-side {border: 0;}
+.mod-lyrics .mod-side {padding:11px 0 0 16px;}
+.mod-lyrics .search-box {margin-bottom: 10px; height: 24px;}
+#lyricsMusicName {width: 171px; height: 24px; border:#d9d9d9 1px solid; text-indent: 3px; float: left; display: block; color: #c0bcbc; line-height: 24px;}
+#musicSearch {width: 33px; height: 26px; background: url('img/search.jpg') no-repeat; float: left; cursor: pointer; }
+#musicSearch:hover {background: url('img/search-h.jpg') no-repeat;}
+#musicSearch:active {background: url('img/search-c.jpg') no-repeat;}
+.lyrics-ui-wrapper{height: 230px;}
+.mod-lyrics li {height: 46px;}
+.mod-lyrics li a {
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.mod-lyrics .num {background:url('img/i-lastnum-bg.png') no-repeat; width: 15px; height: 15px; padding-top: 1px; text-align: center; color: #fff; float: left; margin-right: 10px;  letter-spacing:-1px; text-indent: -2px;}
+.mod-lyrics .top-three {background:url('img/i-topnum-bg.png') no-repeat;}
+.mod-lyrics .star-img {width: 25px; height: 33px; overflow: hidden; float: left;}
+.mod-lyrics .album {float: left; margin-left: 10px; /*width: 140px;*/width: 70%;}
+.mod-lyrics .album a:hover {text-decoration: underline; color:#00b075;}
+.mod-lyrics .album .artist {color:#999999; margin-top: 3px;}

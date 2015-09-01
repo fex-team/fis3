@@ -1,0 +1,125 @@
+/*from inline css*/
+.box-search_tab a:focus {
+    outline:none;
+}
+.box-search_logo a:focus {
+    outline: none;
+}
+.box-search_logo dt a { 
+    background: url(/widget/img/bg.png) right -61px no-repeat;
+}
+dt.box-search_logo_hover {
+    background-color: #e3e4e6;
+    border-radius: 2px;
+}
+.box-search_logos_show .box-search_logo_hover {
+    background-color: #f5f7f7;
+    border-radius: 0px;
+}
+.box-search_logos_show {
+    background-color: #fff;
+    border: 1px solid #e3e4e6
+}
+.box-search_logos_show dt a {
+    background-position: right -87px;
+}
+.box-search_form .box-search_focus {
+    border: 1px solid #4d90fe;
+}
+.btn-search_l, .btn-search_r {
+    display: none !important;
+}
+.btn-search_ico {
+    display: block;
+    margin: 0 auto;
+    width: 17px;
+    height: 17px;
+    background: url(../img/i-search.png?__sprite) no-repeat;
+    line-height: 27px;
+}
+
+.btn-search_hover{
+    border-color: #2F5BB7;
+    background-color: #357AE8;
+    background-image: linear-gradient(-180deg, #4C8FFD 0%, #357AE8 100%);
+}
+
+.btn-search_click{
+    border-color: #2B79E6;
+    background-color: #357AE8;
+    background-image: linear-gradient(-180deg, #4A8DFB 0%, #357AE8 100%);
+    box-shadow:         inset 0px 2px 3px 0px rgba(0,0,0,0.50);
+}
+
+.hsrch_word span .i-close{
+    position: absolute;
+    display: none;
+    width: 8px;
+    height: 7px;
+    top: -2px;
+    right: 6px;
+    background: url(../img/i-close.png?__sprite) no-repeat;
+}
+.hsrch_word span .i-close:hover{
+    display: inline-block;
+    background: url(../img/i-close-hover.png?__sprite) no-repeat;
+    cursor: pointer;
+}
+.skin-type-dark dt.box-search_logo_hover {
+    background: #737373;
+    background: rgba(0, 0, 0, 0.6);
+}
+.skin-type-dark .box-search_logos_show {
+    background: #8c8c8c;
+    background: rgba(0, 0, 0, 0.6);
+}
+.skin-type-dark .box-search_logos_show .box-search_logo_hover {
+    background: #737373;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+/*sug has url*/
+.sug-url {
+    height:45px;
+    border-bottom:1px solid #e1e1e1;
+}
+.sug-url a {
+    display: block;
+    text-decoration: none;
+    color: #0000EE;
+}
+.sug-url .sug-hl {
+    height: 25px;
+    text-decoration: underline;
+    font-weight:bold;
+    font-size:14px;
+}
+.sug-url .sug-frm {
+    line-height: 16px;
+    font-size: 12px;
+    color: green;
+}
+
+/*搜索条中增加new提示*/
+.box-search_tab .new_add_prompt{
+    display:block;
+    width:24px;
+    height:12px;
+    background: url(../img/tag_new_icon.png?__sprite) no-repeat 0 0;
+    position: absolute;
+    top: -6px;
+    right: -12px;
+}
+.box-search_tab .new_add_prompt_id{
+    display:block;
+    width:28px;
+    height:14px;
+    background: url(../img/id_new_add_icon.png?__sprite) no-repeat 0 0;
+    position: absolute;
+    top: -8px;
+    right: -12px;
+}

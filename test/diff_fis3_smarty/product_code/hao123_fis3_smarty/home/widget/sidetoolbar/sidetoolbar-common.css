@@ -1,0 +1,52 @@
+/* #sidetoolbarContainer .speed-test{
+	background-image: url(./img/panel-box.jpg);
+	background-position: 0 0;
+	padding-top: 15px;
+	margin-left: -2px;
+	margin-top:-1px;
+	width: 240px;
+}
+#sidetoolbarContainer .speed-test_show{
+	background-image: url(./img/panel-box.jpg);
+}
+#sidetoolbarContainer .speed-test_panel{
+	background-image: url(./img/panel-box.jpg);
+	background-position: 0 -14px;
+	padding-bottom: 17px;
+	height: 195px;
+}
+#sidetoolbarContainer .speed-test .speed-test_control{
+	background-image: url(./img/panel-box.jpg);
+	background-position: 0 -266px;
+	height: 72px;
+}
+#sidetoolbarContainer .speed-test--cover .speed-test_control{
+	background-image: url(./img/panel-box.jpg);
+	background-position: 0 -339px;
+}
+#sidetoolbarContainer.speed-test_btn{
+	margin-top:32px;
+}
+.#sidetoolbarContainer .speed-test_hide{
+	display:none;
+}
+#sidetoolbarContainer .speed-test_result{
+	margin-bottom:5px;
+}
+#sidetoolbarContainer .speed-test--result .speed-test_result{
+	background-image: url(./img/panel-box.jpg);
+	background-position: 0 -427px;
+	height: 300px;
+	margin-bottom:0;
+}
+#sidetoolbarContainer .speed-test_bandwidth{
+	left: 41px;
+}
+#sidetoolbarContainer .speed-test_info{
+	height: 52px;
+	margin-top: 13px;
+	margin-left: 10px;
+} */
+#sidetoolbarContainer .mod-news .scroll-container{
+	height: 404px !important;
+}

@@ -1,0 +1,206 @@
+html body {
+    max-height: 35px;
+}
+.mod-topbar {
+    background-color: #4F5862;
+    border-top: 1px solid #727981;
+    height: 34px;
+}
+.wr {
+    margin: 0 auto;
+    width: 960px;
+    height: 34px;
+}
+.logo {
+    height: 100%;
+    float: right;
+    display: inline;
+    width: 134px;
+    overflow: hidden;
+    border-left: 1px solid #666E77;
+    border-left-color: rgba(255, 255, 255, 0.2);
+}
+.logo a:hover .lg-hov {
+    display: inline-block !important;
+}
+.logo a:hover .lg-nor {
+    display: none !important;
+}
+.list {
+    float: right;
+    display: inline;
+    width: 625px;
+}
+.list li {
+    float: right;
+    position: relative;
+    height: 34px;
+    border-left: 1px solid #666E77;
+    border-left-color: rgba(255, 255, 255, 0.2);
+}
+.list li a {
+    display: block;
+    position: relative;
+    font-size: 15px;
+    height: 34px;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    line-height: 34px;
+    color: #ffffff;
+    font-weight: 700;
+}
+/*.list li a:hover {
+    background: #3E434B;
+    background-image: -webkit-linear-gradient(#5B646E, #444C56);
+    background-image: -o-linear-gradient(#5B646E, #444C56);
+    background-image: -moz-linear-gradient(#5B646E, #444C56);
+    background-image: -ms-linear-gradient(#5B646E, #444C56);
+    background-image: linear-gradient(#5B646E, #444C56);
+}*/
+ .list li a:hover {
+    background: #5C6671;
+}
+.list li a:hover .hr {
+    display: block;
+}
+.list .hr {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #00B075;
+    top: -1px;
+    display: none;
+}
+.list .co {
+    display: inline-block;
+    max-width: 124px;
+    overflow: hidden;
+}
+.list .co img {
+    margin-top: -2px;
+    margin-left: 15px;
+}
+.form {
+    float: left;
+    height: 34px;
+    position: relative;
+}
+.form .fo {
+    float: left;
+    margin-top: 6px;
+    position: relative;
+}
+.form .in {
+    width: 129px;
+    font-size: 14px;
+    height: 15px;
+    border: 1px solid #727981;
+    padding: 2px 4px 2px 34px;
+    background-color: #CDD1D2;
+}
+.form-focus .in {
+    /*border-color: #00B072;*/
+    background-color: #FFFFFF;
+}
+.form .re {
+    width: 9px;
+    height: 8px;
+    position: absolute;
+    left: 24px;
+    top: 7px;
+    pointer-events: none;
+    background: url(../img/topbar-return-rtl.png) no-repeat left top;
+    display: none;
+}
+.form-focus .re {
+    display: block;
+}
+.form .su {
+    float: right;
+    border: 0;
+    background: #727981 url(../img/topbar-search.png) no-repeat center center;
+    width: 20px;
+    height: 19px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    outline: 0;
+}
+.form-focus .su {
+    background-image: url(../img/topbar-search_focus.png);
+}
+.form .su:visited {
+    border: 0;
+}
+.form .su:active {
+    border: 0;
+}
+
+/*light mod*/
+.sk-light {
+    background-color: #FDFDFD;
+}
+.sk-light .list li a {
+    color: #595959;
+}
+.sk-light .list li,.sk-light .logo {
+    border-left-color: #EBECED;
+    border-left-color: rgba(163,168,173,.2);
+}
+.sk-light .list li a:hover {
+    background: #F5F7F7;
+}
+.sk-light .form .in {
+    border-color: #00AC73;
+    background-color: #FFFFFF;
+}
+.sk-light .form .su {
+    background-color: #00AC73;
+    background-image: url(../img/topbar-search_focus.png);
+}
+.sk-light .form-focus .su {
+    background-image: url(../img/topbar-search_focus.png);
+}
+.sk-light .form .re {
+    background-image: url(../img/topbar-return_light-rtl.png);
+}
+.sk-light .logo a .lg-nor {
+    transition: all .4s;
+}
+.sk-light .logo a:hover .lg-hov {
+    display: none !important;
+}
+.sk-light .logo a:hover .lg-nor {
+    display: inline !important;
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+}
+
+/*light bluse mod*/
+.sk-light-blue {
+    background-color: #FFFFFF;
+}
+.sk-light-blue .list .hr {
+    background: #00719A;
+}
+.sk-light-blue .list li a {
+    color: #00719a;
+}
+.sk-light-blue .form .in {
+    border-color: #00425A;
+    background-color: #E6E6E6;
+}
+.sk-light-blue .form-focus .in {
+    background-color: transparent;
+}
+.sk-light-blue .form .su {
+    background-color: #004D69;
+}
+.sk-light-blue .form .re {
+    background-image: url(../img/return_blue-rtl.png);
+}

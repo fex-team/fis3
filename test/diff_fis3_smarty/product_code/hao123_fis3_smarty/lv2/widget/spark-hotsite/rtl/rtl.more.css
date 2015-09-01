@@ -1,0 +1,20 @@
+.i-hotsite-wrap a:hover {
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	box-shadow: #646464 0 0 12px;
+	filter: alpha(opacity=60);
+	zoom: 1; 
+}
+/*内容推荐模块通用样式*/
+.order:hover {
+	box-shadow: #646464 0 0 24px;
+}
+.order:hover .ctrl {
+	display: block;
+}
+.order .item:hover span {
+	text-decoration: underline;
+}

@@ -1,0 +1,20 @@
+.middle-container {
+	position: relative;
+	overflow: hidden;
+	margin: 50px 0;
+}
+.middle-bg {
+	position: relative;
+	right: 0;
+	top: 0;
+}
+.middle-down {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	_margin-bottom: 100px;
+}
+.middle-top{margin: 30px 0 50px;}
+.middle-bottom{border:1px solid #e6e6e6;padding-top:55px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background:#fff;}
+.middle-bottom a{width:627px;height:88px;border:0;margin-left: auto;margin-right: auto;display: block;}
+.middle-bottom p{margin-top:35px;padding-bottom:55px;text-align: center;}

@@ -1,0 +1,18 @@
+.userbar-logo {
+    height: 50px;
+    position: relative;
+    z-index: 10;
+    font-size: 12px;
+}
+.userbar-logo_slogan {
+    position: absolute;
+    font-size: 13px;
+    right: 150px;
+    top: 30px;
+    white-space: nowrap;
+}
+.userbar-logo_tip {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+}

@@ -1,0 +1,63 @@
+/*lv2*/
+.mod-lottery dd{
+	padding-right:5px;
+	font-size:14px;
+	overflow:visible;
+}
+.mod-lottery table{	
+	width:100%;
+	color:#5a5a5a;
+}
+.mod-lottery th{
+	line-height:28px;
+	background:#f5f7f7;
+	font-weight:600;
+	text-align:center;
+}
+.mod-lottery th.col_l{
+	text-indent:40px;
+	text-align:left;
+}
+.mod-lottery td{
+	line-height:40px;
+	border:1px solid #f5f7f7;
+}
+.mod-lottery td.col_l{
+	text-indent:40px;
+	color:#00b075;	
+}
+.box-lv2 #citypicker,.box-lv2 #datepicker{
+	width:162px;
+}
+.box-lv2 .lottery-dropdownlist{
+	width:192px;	
+}
+.box-lv2 .lottery-search{
+	display:inline-block;
+	border:0;
+	width: 130px;
+	margin-left: 30px;
+	height: 26px;
+	line-height: 26px;
+}
+.box-lv2 .lottery-trigger i{
+	*left:0;
+}
+.box-lv2 .lottery-trigger,.box-lv2 .ui-datepicker-trigger{
+	_top:3px;
+}
+.box-lv2 .lottery-dropdownlist{
+	_top:28px;
+}
+.box-lv2 .precise-pos{
+	font-size: 20px; text-indent: 10px; line-height: 35px;
+}
+.box-lv2 .precise-pos span{
+	font-weight: bold;
+}
+.box-lv2 .precise-pos{
+	font-size: 21px; line-height: 35px; text-indent: 10px;
+}
+#preciseLottery{
+	font-weight: bold;
+}

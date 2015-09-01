@@ -1,0 +1,20 @@
+.box-search_keyboard {
+    cursor: pointer;
+    padding: 1px;    
+}
+#kbd{
+    position:absolute !important;   
+    top:136px;
+    border-width: 0;
+}
+.outerbox{
+    max-height:152px;
+    }
+ #kbd input.goog-button,#kbd button.goog-button{height:16px;}
+
+#kbda {
+	background-color: #ebfcf7;
+border-style: solid;
+border-color: #ceded9;
+border-width: 1px;
+}

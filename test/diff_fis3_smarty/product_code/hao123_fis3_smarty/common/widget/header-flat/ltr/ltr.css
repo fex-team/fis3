@@ -1,0 +1,71 @@
+/*============userbar=============*/
+
+.userbar-wrap {
+    background: #1c81e5;
+    min-width: 960px;
+    position: relative;
+    height: 50px;
+    zoom: 1;
+    z-index: 400;
+}
+
+.userbar {
+    height: 50px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+}
+/*.userbar-tool {
+    display: none;
+}
+.weather-more {
+    display: none;
+}
+
+.weather-more_wrap {
+    border-bottom: 1px solid #fff;
+}*/
+
+
+.userbar-logo {
+    max-width: 345px;
+}
+/*.weather-wrap {
+    position: relative;
+    float: left;
+    visibility: hidden;
+}
+div.userbar-weather {
+    float: left;
+}*/
+
+.userbar-glo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+/*.userbar-logoSibling {
+    margin-right: 62px;
+}*/
+
+/*960*/
+/*.w960 .userbar-logoSibling {
+    margin-right: 18px;
+}*/
+
+/*has skin*/
+body.skin-on .userbar-wrap {
+    background: #666666;
+    background: rgba(0,0,0,0.6);
+}
+
+
+/*head fixed*/
+.header-fixed .userbar-wrap {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}

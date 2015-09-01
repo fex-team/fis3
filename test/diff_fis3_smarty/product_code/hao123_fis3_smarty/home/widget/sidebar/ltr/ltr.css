@@ -1,0 +1,386 @@
+@import url('/widget/sidetoolbar/sidetoolbar-common.css?__inline');
+.sidebar-left .mod-sidetoolbar-container{
+	position: fixed;
+	left: 0;
+	top: 163px;
+	height: auto;
+	width: 45px;	
+	z-index:300;
+	display: block !important;
+}
+.sidebar-left .mod-sidetoolbar-container .sidetoolbar{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #70767d;
+	left: -51px;
+    transition: all 0.3s;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.sidebar-left .mod-sidetoolbar-container .sidetoolbar_fold{
+	left: 0;
+    transition: all 0.3s;
+}
+.sidebar-left .mod-sidetoolbar-container .applist{
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	border-bottom: 1px solid #878c92;
+}
+.sidebar-left .mod-sidetoolbar-container .applist-li{
+	width: 100%;
+	height: 57px;
+	line-height: 57px;
+	display: inline-block;
+	border-bottom: 1px solid #646c76;
+	border-top: 1px solid #878c92;
+	position: relative;
+}
+.sidebar-left .mod-sidetoolbar-container .applist-li:first-child{
+	border-top: none;
+}
+.sidebar-left .mod-sidetoolbar-container .applist-li:hover,.sidebar-left .mod-sidetoolbar-container .applist-li_fold{
+	background-color: #54585e;
+	cursor: pointer;
+}
+
+.sidebar-left .mod-sidetoolbar-container .applist-li img{
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+}
+.sidebar-left .mod-sidetoolbar-container .applist-div,.sidebar-left .mod-sidetoolbar-container .guide-bubble{
+	position: absolute;
+	height: 100%;
+	width: 150px;
+	background-color: #878888;
+	left: 45px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: white;
+    text-align: center;
+    display: none;
+    z-index: 1;
+    text-align: left;
+}
+.sidebar-left .mod-sidetoolbar-container .applist-div{
+	top: 0;	
+	padding: 0 10px;
+}
+.sidebar-left .mod-sidetoolbar-container .applist-div span{
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 16px;
+}
+.sidebar-left .mod-sidetoolbar-container .applist-i{
+	position: absolute;
+	min-width: 19px;
+	*min-width: 14px;
+	height: 16px;
+    border-radius: 8px;
+    background-color: #f71e01;
+    left: 30px;
+	top:0;
+    background-image:linear-gradient(180deg, #fd5025 0%, #ef0703 100%);
+    text-shadow:0 -1px 1px #6f1e00;
+    line-height: 16px;
+    color: white;
+    font-size: 14px;   
+    z-index: 2;
+    border-bottom:2px solid rgba(0,0,0,.5);
+    padding: 1px 1px 0px 0px;
+    padding: 0px\0;
+}
+.sidebar-left .mod-sidetoolbar-container .sidetoolbar-closebtn{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: url(../img/close-btn_normal.png?__sprite) no-repeat;
+	bottom:14px;	
+	cursor: pointer;
+	display: none;
+
+    transition: -webkit-transform 0.5s;
+    transition: -moz-transform 0.5;
+    transition: -ms-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.sidebar-left .mod-sidetoolbar-container .sidetoolbar-closebtn:hover,.sidebar-left .mod-sidetoolbar-container .sidetoolbar-closebtn_hover{
+	background: url(../img/close-btn_hover.png?__sprite) no-repeat;
+}
+.sidebar-left .mod-sidetoolbar-container .closebtn_close{
+	left: 10px;
+	-moz-transform: rotate(45deg); 
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+.sidebar-left .mod-sidetoolbar-container .closebtn_open{
+	left: 24px;
+	-moz-transform: rotate(360deg); 
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+}
+.sidebar-left .mod-sidetoolbar-container .contents-container{
+	position: absolute;
+	left: 45px;
+	top:-35px;
+	width: 240px;
+	height: auto;
+	z-index: -1;
+}
+.sidebar-left .mod-sidetoolbar-container .contents{
+	position: absolute;
+	width: 240px;
+	height: auto;
+	left: -302px;
+    transition: all 0.3s;
+    visibility: hidden;
+
+}
+.sidebar-left .mod-sidetoolbar-container .contents_unfold{
+	left: 0;
+ 	visibility: visible;	
+}
+.sidebar-left .mod-sidetoolbar-container .contents-title{
+	width:100%;
+	height: 35px;
+	line-height: 35px;
+	background: url(../img/content-bk.png?__sprite) repeat-x;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    box-shadow:6px 0px 10px #d0d3d2;
+}
+.sidebar-left .mod-sidetoolbar-container .contents-title_t{
+	display: inline-block;
+	float: left;
+	width:auto;
+	height: 100%;
+	color: #e0e0e0;
+	margin-left: 12px;
+	font-size: 15px;
+}
+.sidebar-left .mod-sidetoolbar-container .contents-title_ar{
+	display: inline-block;
+	float: right;
+	width:21px;
+	height: 21px;
+	margin-top: 8px;
+	margin-right: 11px;
+	background: url(../img/title-ar-normal.png?__sprite) no-repeat;
+}
+.sidebar-left .mod-sidetoolbar-container .contents-title_ar:hover{
+	background: url(../img/title-ar-hover.png?__sprite) no-repeat;
+	cursor: pointer;
+}
+.sidebar-left .mod-sidetoolbar-container .contents-substance{
+	width:239px;
+	min-height: 300px;
+	height: auto;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	background-color: #f5f7f7;
+	box-shadow: 6px 6px 10px #d0d3d2
+}
+.sidebar-left .mod-sidetoolbar-container .contents-substance .loading{
+	height: 250px;
+}
+.sidebar-left .mod-sidetoolbar-container .widget-load{
+	position: absolute;
+	display: block;
+	top: 150px;
+	left: 110px;
+	width: 100%;
+	height: 16px;
+	background: url(../img/widget_loading.gif) no-repeat;
+}
+.sidebar-left .mod-sidetoolbar-container .sidetoolbar-close_flod{
+	position: absolute;
+	width: 62px;
+	height: 48px;
+	background: url(../img/sidebar-close.png?__sprite) no-repeat;
+	bottom: 3px;
+	top: auto;	
+	left: -18px;
+	z-index: -1;
+	transition: all 0.3s;
+}
+.sidebar-left .mod-sidetoolbar-container .sidetoolbar_unfold{
+	left: 50px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.sidebar-left .mod-sidetoolbar-container .sidetoolbar-close_flod i{
+	text-align: center;
+	left:42px;
+	top: -10px;
+}
+.sidebar-left .mod-sidetoolbar-container .sidetoolbar b.ui-arrow-l{
+	border-right-color:white;
+	right: 0px;
+	left: auto;
+}
+.sidebar-left .mod-sidetoolbar-container .sidetoolbar b.ui-arrow{
+	display: none;
+}
+.sidebar-left .mod-sidetoolbar-container .guide-bubble{
+	display: inline;
+	height: 57px;
+	width: 150px;
+	text-align: left;
+	top: 0;
+}
+.sidebar-left .mod-sidetoolbar-container  .bubble-close{
+	position: absolute;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	top: -5px;
+	right: -5px;
+	background: url(../img/guid-close.png?__sprite) no-repeat;
+
+}
+.sidebar-left .mod-sidetoolbar-container .bubble-close:hover{
+	cursor: pointer;
+	background: url(../img/guid-close_hover.png?__sprite) no-repeat;
+}
+
+.sidebar-left .mod-sidetoolbar-container .open-content{
+	cursor: pointer;
+}
+.sidebar-left .mod-sidetoolbar-container .bubble-wrap{
+	height: 100%;
+	width: 100%;
+	cursor: default;
+	display: table;
+	cursor: pointer;
+}
+.sidebar-left .mod-sidetoolbar-container .bubble-text{
+	display: table-cell;
+	line-height: 16px;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.sidebar-left .mod-sidetoolbar-container .lottery label{
+	margin-right: 5px;
+}
+/* For 300px layout */
+.sidebar-left .mod-sidetoolbar-container .mod-news {
+    width: auto;
+}
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-tab .ui-nav {
+    width: auto;
+}
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-tab .ui-nav .wrap {
+    width: auto;
+}
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-tab .nav-item {
+    width: 66px;
+}
+.sidebar-left .mod-sidetoolbar-container .mod-news .scroll-pane {
+    width: auto;
+}
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-slide .nav-item {
+    width: 296px;
+}
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-slide .nav-item img,
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-item_img a,
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-item_img img{
+     height: 149px;
+     width: 296px;
+}
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-slide .nav-item .title{
+    width: 276px;
+}
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-item_img span{
+    width: 276px;
+}
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-item_tip {
+    width: 248px;
+    height: 151px;
+    padding-top: 80px;
+}
+
+/*图文混排*/
+.sidebar-left .mod-sidetoolbar-container .mod-news .news-item_imgtxt img{
+    width: 100px;
+    height: 58px;
+}
+/* For 300px layout */
+.sidebar-left .mod-sidetoolbar-container .astro_name{
+	width: 128px;
+}
+.sidebar-left .mod-sidetoolbar-container .astro-tab li {
+	width: 132px;
+}
+.sidebar-left .mod-sidetoolbar-container .astro-luck span{
+	width: 54px;
+}
+body .astro-list{
+	width: 223px;
+}
+.sidebar-left .mod-sidetoolbar-container .astro-head{
+	width: 233px;
+}
+.sidebar-left .mod-sidetoolbar-container .astro-luck span{
+	padding-left:22px;
+	margin-right: 20px;
+}
+.sidebar-left .mod-sidetoolbar-container .astro-luck i {
+	margin-right: 11px;
+}
+.sidebar-left .mod-pray .dropdown-input{
+	width: 171px;
+}
+.sidebar-left .mod-pray-h12 .dropdown-input{
+	width: 131px;
+}
+.sidebar-left .speed-test,
+.sidebar-left .speed-test_show,
+.sidebar-left .speed-test_panel,
+.sidebar-left .speed-test .speed-test_control,
+.sidebar-left .speed-test--result .speed-test_result {
+	background-image: url(../../speed-test/panel-box-wide.jpg);
+}
+.sidebar-left .speed-test{
+	background-position: 0 0;
+	/*width: 300px;*/
+}
+.sidebar-left .speed-test_panel {
+	/*width: 300px;*/
+}
+.sidebar-left .speed-test_needle {
+	left: 67px;
+}
+.sidebar-left .speed-test_chart_wrap {
+	left: 60px;
+}
+.sidebar-left .speed-test_bandwidth,
+.sidebar-left #sidetoolbarContainer .speed-test_bandwidth{
+	left: 71px;
+}
+.sidebar-left .speed-test--result .speed-test_result {
+	/*width: 300px;*/
+}
+.sidebar-left .speed-test--result .speed-test_result_more {
+	left: 6px;
+}
+.sidebar-left .speed-test--result .speed-test_result_down {
+	margin-left: 57px;
+}
+.sidebar-left #sidetoolbarContainer .speed-test,
+.sidebar-left #sidetoolbarContainer .speed-test_panel,
+.sidebar-left #sidetoolbarContainer .speed-test_control,
+.sidebar-left #sidetoolbarContainer .speed-test .speed-test_control,
+.sidebar-left #sidetoolbarContainer .speed-test--cover .speed-test_control,
+.sidebar-left #sidetoolbarContainer .speed-test--error .speed-test_control,
+/* .sidebar-right #sidetoolbarContainer .speed-test_result_more, */
+.sidebar-left #sidetoolbarContainer .speed-test_show,
+.sidebar-left #sidetoolbarContainer .speed-test--result .speed-test_result{
+    background-image: url(../../speed-test/panel-box-wide.jpg);
+}

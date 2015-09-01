@@ -1,0 +1,12 @@
+/* For 300px layout */
+@import url('/widget/astro/flow/astro.flow.css?__inline');
+.flow-on .today{
+	padding: 8px 0 0 20px;
+}
+.flow-on .astro-luck span{
+	padding-right:22px;
+	margin-left: 20px;
+}
+.flow-on .astro-luck i {
+	margin-left: 11px;
+}

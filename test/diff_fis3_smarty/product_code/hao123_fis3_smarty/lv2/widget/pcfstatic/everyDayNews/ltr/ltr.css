@@ -1,0 +1,187 @@
+html, body {
+    border: 0 none;
+    overflow: hidden;
+}
+
+.mod-pcf-evedn {
+    position: relative;
+    overflow: hidden;
+    width: 522px;
+    height: 370px;
+    background-color: white;
+}
+
+.mod-pcf-evedn .tabs-wrap {
+    width: 100%;
+    height: 38px;
+    color: #b0b0b0;
+    background-color: #f5f5f5;
+}
+
+.mod-pcf-evedn .tab {
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 104px;
+    height: 100%;
+    text-align: center;
+    /*background: url(../img/tab-normal-bk.png?__sprite) repeat-x;*/
+}
+
+.mod-pcf-evedn .tab:hover {
+    color: #6d6d6d;
+    cursor: pointer;
+}
+
+/*最后一个tab多了2像素 傻叉UE*/
+.mod-pcf-evedn .tab5 {
+    padding-right: 2px;
+}
+
+.mod-pcf-evedn .tab-selected {
+    color: #6d6d6d;
+    /*box-shadow: inset 0 -3px #3e87d1;*/
+    3e87d1
+}
+.mod-pcf-evedn .tab .title{
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    vertical-align: middle;
+}
+.mod-pcf-evedn .tab .line{
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.mod-pcf-evedn .tab-selected .line{
+    background-color: #3e87d1;
+}
+.mod-pcf-evedn .tab:hover .line{
+    background-color: #3e87d1;
+}
+.mod-pcf-evedn .tab .type-icon{
+    width: 23px;
+    height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.mod-pcf-evedn .tab1 .type-icon{
+    background: url(../img/01.png?__sprite) no-repeat;
+}
+.mod-pcf-evedn .tab2 .type-icon{
+    background: url(../img/02.png?__sprite) no-repeat;
+}
+.mod-pcf-evedn .tab3 .type-icon{
+    background: url(../img/03.png?__sprite) no-repeat;
+}
+.mod-pcf-evedn .tab4 .type-icon{
+    background: url(../img/04.png?__sprite) no-repeat;
+}
+.mod-pcf-evedn .tab5 .type-icon{
+    background: url(../img/05.png?__sprite) no-repeat;
+}
+.mod-pcf-evedn .content-wrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.mod-pcf-evedn .error, .mod-pcf-evedn .loading {
+    display: none;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 110px;
+    color: #808080;
+}
+
+.mod-pcf-evedn .loading {
+    display: block;
+}
+
+.mod-pcf-evedn .border-grey {
+    border: 1px solid #EEEEEE;
+}
+
+.mod-pcf-evedn .img {
+    display: block;
+    width: 100%;
+}
+
+.mod-pcf-evedn .title-mask {
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    z-index: 1;
+}
+.mod-pcf-evedn .blue-icon {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: 4px;
+    top: 11px;
+    background-color: #7bb6f1;
+}
+
+.mod-pcf-evedn .morelink {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    height: 27px;
+    color: #acacac;
+}
+.mod-pcf-evedn .morelink .more-text{
+    display: inline-block;
+    height: 27px;
+    line-height: 27px;
+    vertical-align: middle;
+}
+.mod-pcf-evedn .morelink .more-icon{
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    margin-left: 8px;
+    background: url(../img/more.png?__sprite) no-repeat;
+    vertical-align: middle;
+}
+.mod-pcf-evedn .evedn-top {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #3e87d1;;
+}
+.mod-pcf-evedn .evedn-title {
+    color: #ffffff;
+    padding-left: 10px;
+    font-size: 12px;
+}
+.mod-pcf-evedn .i-close {
+    position: absolute;
+    display: inline-block;
+    width: 11px;
+    height: 10px;
+    top: 9px;
+    right: 10px;
+    background-image: url(../img/i-close.png);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+

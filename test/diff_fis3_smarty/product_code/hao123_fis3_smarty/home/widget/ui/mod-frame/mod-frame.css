@@ -1,0 +1,21 @@
+.box-border {
+	border: 1px solid #e3e5e6;
+	border-bottom: 1px solid #d7d8d9;
+}
+
+
+/***** from wmf.css
+控制一个模块的链接hover效果是加下划线还是不加下划线
+****/
+.no-hover a:hover{text-decoration:none;}
+.hover a:hover{text-decoration:underline;}
+
+/***** from wmf.css
+右三角图标的公共样式
+*/
+.arrow_r{position: absolute;font-family:Tahoma;}
+
+
+/**/
+.ellipsis{display:none;position:absolute;bottom:5px;right:25px;width:12px;color:#fff;}
+
