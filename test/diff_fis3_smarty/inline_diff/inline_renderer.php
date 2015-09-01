@@ -18,14 +18,14 @@
 	var $ins_suffix = '</div>';
 	var $del_prefix = '<div class="del">';
 	var $del_suffix = '</div>';
-	
+
 	function Text_Diff_Renderer_inline($context_lines = 10000, $ins_prefix = '<div class="ins">', $ins_suffix = '</div>', $del_prefix = '<div class="del">', $del_suffix = '</div>')
     {
 		$this->$ins_prefix = $ins_prefix;
 		$this->$ins_suffix = $ins_suffix;
 		$this->$del_prefix = $del_prefix;
 		$this->$del_suffix = $del_suffix;
-		
+
         $this->_leading_context_lines = $context_lines;
         $this->_trailing_context_lines = $context_lines;
     }
@@ -37,7 +37,8 @@
             $value.="$line ";
             // FIXME: don't output space if it's the last line.
         }
-        return "<xmp>".$value."</xmp>";
+        print $value;
+        return "<xmp>".$value."</xmp>";   //wangrui10xiugai
     }
 
     function _blockHeader($xbeg, $xlen, $ybeg, $ylen)
