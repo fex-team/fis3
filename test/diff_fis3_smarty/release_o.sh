@@ -50,10 +50,10 @@ if [ $1 = 'new' ]
 then
 	#wenku
 	rm -rf ${WENKU_OUTPUT_PATH}/output_o_new
-	cd ${WENKU_CODE_PATH}
-	node ${FISP_PATH}/bin/fis release -cd ${WENKU_OUTPUT_PATH}/output_o_new --no-color
-	echo $version > ${WENKU_OUTPUT_PATH}/output_o_new/fis_version.txt
-    chmod 777 ${WENKU_OUTPUT_PATH}
+#	cd ${WENKU_CODE_PATH}
+#	node ${FISP_PATH}/bin/fis release -cd ${WENKU_OUTPUT_PATH}/output_o_new --no-color
+#	echo $version > ${WENKU_OUTPUT_PATH}/output_o_new/fis_version.txt
+#    chmod 777 ${WENKU_OUTPUT_PATH}
 
 	#tieba
 	rm -rf ${TIEBA_OUTPUT_PATH}/output_o_new
