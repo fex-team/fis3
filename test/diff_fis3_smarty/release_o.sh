@@ -22,10 +22,10 @@ WENKU_OUTPUT_PATH=${TEST_PATH}/product_output/wenku_svn_fis3_smarty
 #PLACE_OUTPUT_PATH=${TEST_PATH}/product_output/place
 #PLACE_MODULES=(admin beauty cater common detail hotel movie scope)
 
-HAO123_CODE_PATH=${TEST_PATH}/product_code/hao123
-HAO123_OUTPUT_PATH=${TEST_PATH}/product_output/hao123
-#HAO123_MODULES=(common home lv2)
-HAO123_MODULES=(common)
+HAO123_CODE_PATH=${TEST_PATH}/product_code/hao123_fis3_smarty
+HAO123_OUTPUT_PATH=${TEST_PATH}/product_output/hao123_fis3_smarty
+HAO123_MODULES=(common home lv2)
+#HAO123_MODULES=(common)
 
 #SUPERMAN_CODE_PATH=${TEST_PATH}/product_code/superman
 #SUPERMAN_OUTPUT_PATH=${TEST_PATH}/product_output/superman
@@ -84,13 +84,13 @@ then
 
     #hao123
     rm -rf ${HAO123_OUTPUT_PATH}/output_o_new
-#    for module in ${HAO123_MODULES[@]}
-#    do
-#        cd ${HAO123_CODE_PATH}/$module
-#        node ${FISP_PATH}/bin/fis release -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color
-#    done
-#    echo $v > ${HAO123_OUTPUT_PATH}/output_o_new/fis_version.txt
-#    chmod 777 ${HAO123_OUTPUT_PATH}
+    for module in ${HAO123_MODULES[@]}
+    do
+        cd ${HAO123_CODE_PATH}/$module
+        node ${FISP_PATH}/bin/fis release -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color
+    done
+    echo $$version > ${HAO123_OUTPUT_PATH}/output_o_new/fis_version.txt
+    chmod 777 ${HAO123_OUTPUT_PATH}
 
     #superman
     rm -rf ${SUPERMAN_OUTPUT_PATH}/output_o_new
@@ -139,13 +139,13 @@ else
 
     #hao123
     rm -rf ${HAO123_OUTPUT_PATH}/output_o_old
-#    for module in ${HAO123_MODULES[@]}
-#    do
-#        cd ${HAO123_CODE_PATH}/$module
-#        /home/work/bin/fis3 release -d ${HAO123_OUTPUT_PATH}/output_o_old --no-color
-#    done
-#    echo $v > ${HAO123_OUTPUT_PATH}/output_o_old/fis_version.txt
-#    chmod 777 -R ${HAO123_OUTPUT_PATH}/output_o_old
+    for module in ${HAO123_MODULES[@]}
+    do
+        cd ${HAO123_CODE_PATH}/$module
+        /home/work/bin/fis3 release -d ${HAO123_OUTPUT_PATH}/output_o_old --no-color
+    done
+    echo $version > ${HAO123_OUTPUT_PATH}/output_o_old/fis_version.txt
+    chmod 777 -R ${HAO123_OUTPUT_PATH}/output_o_old
 
     #superman
     rm -rf ${SUPERMAN_OUTPUT_PATH}/output_o_old
