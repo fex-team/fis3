@@ -50,10 +50,10 @@ if [ $1 = 'new' ]
 then
 	#wenku
 	rm -rf ${WENKU_OUTPUT_PATH}/output_o_new
-#	cd ${WENKU_CODE_PATH}
-#	node ${FISP_PATH}/bin/fis release -f ${WENKU_CODE_PATH}/fis-conf2.js -cd ${WENKU_OUTPUT_PATH}/output_o_new --no-color
-#	echo $version > ${WENKU_OUTPUT_PATH}/output_o_new/fis_version.txt
-#    chmod 777 ${WENKU_OUTPUT_PATH}
+	cd ${WENKU_CODE_PATH}
+	node ${FISP_PATH}/bin/fis release -f ${WENKU_CODE_PATH}/fis-conf2.js -cd ${WENKU_OUTPUT_PATH}/output_o_new --no-color
+	echo $version > ${WENKU_OUTPUT_PATH}/output_o_new/fis_version.txt
+    chmod 777 ${WENKU_OUTPUT_PATH}
 
 	#tieba
 	rm -rf ${TIEBA_OUTPUT_PATH}/output_o_new
@@ -84,17 +84,17 @@ then
 
     #hao123
     rm -rf ${HAO123_OUTPUT_PATH}/output_o_new
-#    for module in ${HAO123_MODULES[@]}
-#    do
-#        echo "cd ${HAO123_CODE_PATH}/$module"
-#        cd ${HAO123_CODE_PATH}/$module
-#
-#        echo "node ${FISP_PATH}/bin/fis release -f ${HAO123_CODE_PATH}/$module/fis-conf2.js -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color"
-#        node ${FISP_PATH}/bin/fis release -f ${HAO123_CODE_PATH}/$module/fis-conf2.js  -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color
-#
-#    done
-#    echo $version > ${HAO123_OUTPUT_PATH}/output_o_new/fis_version.txt
-#    chmod 777 ${HAO123_OUTPUT_PATH}
+    for module in ${HAO123_MODULES[@]}
+    do
+        echo "cd ${HAO123_CODE_PATH}/$module"
+        cd ${HAO123_CODE_PATH}/$module
+
+        echo "node ${FISP_PATH}/bin/fis release -f ${HAO123_CODE_PATH}/$module/fis-conf2.js -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color"
+        node ${FISP_PATH}/bin/fis release -f ${HAO123_CODE_PATH}/$module/fis-conf2.js  -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color
+
+    done
+    echo $version > ${HAO123_OUTPUT_PATH}/output_o_new/fis_version.txt
+    chmod 777 ${HAO123_OUTPUT_PATH}
 
     #superman
     rm -rf ${SUPERMAN_OUTPUT_PATH}/output_o_new
