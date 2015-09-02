@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash expect
 
 TEST_PATH=/home/work/repos/fis3.0/test/diff_fis3_smarty
 #TEST_PATH=/Users/ryan/workspace/fis-plus/test/util/diff
