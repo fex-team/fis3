@@ -55,12 +55,12 @@ then
 	echo $version > ${WENKU_OUTPUT_PATH}/output_o_new/fis_version.txt
     chmod 777 ${WENKU_OUTPUT_PATH}
 
-	#tieba
+	#image
 	rm -rf ${IMAGE_OUTPUT_PATH}/output_o_new
-	cd ${IMAGE_CODE_PATH}
-	node ${FISP_PATH}/bin/fis release -cd ${IMAGE_OUTPUT_PATH}/output_o_new --no-color
-	echo $v > ${IMAGE_OUTPUT_PATH}/output_o_new/fis_version.txt
-    chmod 777 ${IMAGE_OUTPUT_PATH}
+#	cd ${IMAGE_CODE_PATH}
+#	node ${FISP_PATH}/bin/fis release -cd ${IMAGE_OUTPUT_PATH}/output_o_new --no-color
+#	echo $version > ${IMAGE_OUTPUT_PATH}/output_o_new/fis_version.txt
+#    chmod 777 ${IMAGE_OUTPUT_PATH}
 
 	#batman
 	rm -rf ${BATMAN_OUTPUT_PATH}/output_o_new
@@ -118,7 +118,7 @@ else
 	rm -rf ${IMAGE_OUTPUT_PATH}/output_o_old
 	cd ${IMAGE_CODE_PATH}
 	/home/work/bin/fis3 release -d ${IMAGE_OUTPUT_PATH}/output_o_old --no-color
-	echo $v > ${IMAGE_OUTPUT_PATH}/output_o_old/fis_version.txt
+	echo $version > ${IMAGE_OUTPUT_PATH}/output_o_old/fis_version.txt
     chmod 777 -R ${IMAGE_OUTPUT_PATH}/output_o_old
 
     #batman
