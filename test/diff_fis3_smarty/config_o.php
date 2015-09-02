@@ -6,7 +6,7 @@ if(!defined('DIFF_ROOT_PATH')) define('DIFF_ROOT_PATH', str_replace('\\', '/', d
 if(!defined('WENKU_PATH')) define('WENKU_PATH',DIFF_ROOT_PATH.'product_output/wenku_svn_fis3_smarty/' );
 //if(!defined('BATMAN_PATH')) define('BATMAN_PATH',DIFF_ROOT_PATH.'product_output/batman/' );
 //if(!defined('PLACE_PATH')) define('PLACE_PATH',DIFF_ROOT_PATH.'product_output/place/' );
-//if(!defined('TIEBA_PATH')) define('TIEBA_PATH',DIFF_ROOT_PATH.'product_output/tieba/' );
+if(!defined('TIEBA_PATH')) define('TIEBA_PATH',DIFF_ROOT_PATH.'product_output/image/' );
 if(!defined('HAO123_PATH')) define('HAO123_PATH',DIFF_ROOT_PATH.'product_output/hao123_fis3_smarty/' );
 //if(!defined('SUPERMAN_PATH')) define('SUPERMAN_PATH',DIFF_ROOT_PATH.'product_output/superman/' );
 
@@ -25,13 +25,13 @@ $config = array(
 //            'oldoutputdir' => BATMAN_PATH.'output_o_old',  //使用旧版本编译后的产出
 //           "modules" =>"transit,place,common,index,addr,feedback,drive,walk" //待编译的模块
 //        ),
-//        'tieba'=>array(
-//            'name'=>'tieba',
-//            'newoutputdir' => TIEBA_PATH.'output_o_new',    //使用新版本编译后的产出
-//            'oldoutputdir' => TIEBA_PATH.'output_o_old',  //使用旧版本编译后的产出
-//            "modules" =>"xpb", //待编译的模块
-//            'result' => TIEBA_PATH.'result/'
-//        ),
+        'image'=>array(
+            'name'=>'image',
+            'newoutputdir' => TIEBA_PATH.'output_o_new',    //使用新版本编译后的产出
+            'oldoutputdir' => TIEBA_PATH.'output_o_old',  //使用旧版本编译后的产出
+            "modules" =>"wisepad", //待编译的模块
+            'result' => TIEBA_PATH.'result/'
+        ),
 //        'place'=>array(
 //            'name'=>'place',
 //            'newoutputdir' => PLACE_PATH.'output_o_new',    //使用新版本编译后的产出
