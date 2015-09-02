@@ -3,7 +3,7 @@
 set timeout 360
 set p [lindex $argv 0]
 set o [lindex $argv 1]
-spawn su npm install fis3-smarty --registry https://registry.npm.taobao.org
+spawn su "npm install fis3-smarty --registry https://registry.npm.taobao.org"
 expect "Password:"
 send $p\r
 expect eof
