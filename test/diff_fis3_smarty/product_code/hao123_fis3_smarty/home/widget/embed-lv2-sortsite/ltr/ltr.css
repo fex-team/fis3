@@ -1,0 +1,228 @@
+#embedlv2{
+	margin-top: 10px;
+	width: 100%;
+	/*****fix big icon bug*****/
+	z-index: 1;
+	visibility: visible !important;
+}
+#embed-iframe-nav {
+	position: relative;
+	width: 710px;
+}
+#embed-iframe-wrapper {
+	width:708px;
+	border: 1px solid;
+	border-top: none;
+	border-color: #d7ddde #d7ddde #cacccc #dfe4e6;
+	overflow: hidden;
+	background-color: #fcfdff;
+	min-height: 800px;
+	z-index: 1;
+	top:29px;
+}
+#embed-iframe-nav i {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 25px;
+	height: 29px;
+}
+#embed-iframe-nav .nav-item {
+	position: relative;
+	float: left;
+	line-height: 29px;
+	background: url(../img/tab-bg.png?__sprite) repeat-x;
+}
+#embed-iframe-nav .nav-item .border{
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 29px;
+	left: 0;
+	top: 0;
+	background-color: #5fcfaa;
+}
+#embed-iframe-nav .nav-item.home .border{
+	display: none;
+}
+
+#embed-iframe-nav .nav-item,
+#embed-iframe-nav .nav-item a,
+#embed-iframe-nav .nav-item p
+{
+	cursor: pointer;
+	text-align: center;
+	display: block;
+	height: 29px;
+	color: #fff;
+	font-size: 12px;
+}
+#embed-iframe-nav .nav-item a{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	overflow: hidden;
+	padding: 0 10px;
+}
+#embed-iframe-nav .nav-item i
+{
+	margin-right: 10px;
+	vertical-align: middle;
+}
+#embed-iframe-nav .nav-item.home i{
+	margin-right: 0px;
+}
+#embed-iframe-nav .nav-item span{
+	white-space: nowrap;
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+}
+#embed-iframe-nav .space {
+	float:left;
+	width: 15px;
+	line-height: 29px;
+	height: 29px;
+	background: url(../img/tab-edge.png?__sprite) no-repeat;
+}
+#embed-iframe-nav .nav-item.home{
+
+	-moz-border-radius-topleft: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius:3px;
+}
+#embed-iframe-nav .nav-item.last-nav{
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-right-radius:3px;
+}
+#embed-iframe-nav .home i{
+	background: url(../img/icon-home.png?__sprite) no-repeat 0 0;
+}
+#embed-iframe-nav .news i{
+	background: url(../img/icon-news.png?__sprite) no-repeat 0 0;
+}
+#embed-iframe-nav .image i{
+	background: url(../img/icon-image.png?__sprite) no-repeat 0 0;
+}
+#embed-iframe-nav .movie i{
+	background: url(../img/icon-movie.png?__sprite) no-repeat 0 0;
+}
+#embed-iframe-nav .games i{
+	background: url(../img/icon-game.png?__sprite) no-repeat 0 0;
+}
+#embed-iframe-nav .shop i{
+	background: url(../img/icon-shop.png?__sprite) no-repeat 0 0;
+}
+#embed-iframe-nav .video i{
+	background: url(../img/icon-movie.png?__sprite) no-repeat 0 0;
+}
+#embed-iframe-nav .apps i{
+	background: url(../img/icon-apps.png?__sprite) no-repeat 0 0;
+}
+#embed-iframe-nav .nav-item.hover .border,
+#embed-iframe-nav .nav-item.current .border,
+#embed-iframe-nav .nav-item.hover + li .border,
+#embed-iframe-nav .nav-item.current + li .border{
+	display: none;
+}
+#embed-iframe-nav li.nav-item.current{
+	background: url(../img/tab-current-bg.png?__sprite) repeat-x;
+}
+/*hover*/
+#embed-iframe-nav .nav-item.hover{
+	background: url(../img/tab-hover-bg.png?__sprite) repeat-x;
+}
+#embed-iframe-nav .nav-item.has-arrow em, #embed-iframe-nav .nav-item.current em{
+	position: absolute;
+	display: block;
+	width: 8px;
+	height: 4px;
+	top: 29px;
+	right: 50%;
+	margin-right: -2px;
+	background: url(../img/tab-bg-arrow.png?__sprite) no-repeat;
+	z-index: 1;
+}
+#embed-iframe-nav .nav-item.hover a{
+	text-decoration: none;
+}
+#embed-iframe-nav .nav-item.hover i{
+   
+	animation-name: shake;
+	animation-duration: 0.12s;
+	animation-timing-function: ease-in-out; 
+	animation-iteration-count: 3;
+	
+	-moz-animation-name: shake;
+	-moz-animation-duration: 0.12s;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-iteration-count: 3;
+
+	-webkit-animation-name: shake;
+	-webkit-animation-duration: 0.12s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 3;
+	
+	-o-animation-name: shake;
+	-o-animation-duration: 0.12s;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-iteration-count: 3;
+
+	-ms-animation-name: shake;
+	-ms-animation-duration: 0.12s;
+	-ms-animation-timing-function: ease-in-out;
+	-ms-animation-iteration-count: 3;
+	
+}
+/*是否将nav-item固定在页面顶端*/
+#embed-iframe-nav.embed-fixed {
+	position: fixed;
+	top: 0;
+	z-index: 10;
+}
+
+#embed-iframe-loading {
+	position: absolute;
+	z-index:2;
+	width: 710px;
+	height: 400px;
+	text-align: center;
+	visibility: visible !important;
+}
+#embed-iframe-loading .loading {
+	margin-top: 80px;
+	width: 45px;
+	height: 44px;
+}
+#embed-iframe-loading .loading-desc {
+	margin-top: 20px;
+	color: #999;
+}
+
+/*动画定义*/
+@keyframes shake {
+    0% {margin-top: 0px;}
+    50% {margin-top: -3px;}
+    100% {margin-top: 0px;}
+}
+@-webkit-keyframes shake {
+    0% {margin-top: 0px;}
+    50% {margin-top: -3px;}
+    100% {margin-top: 0px;}
+}
+@-moz-keyframes shake {
+    0% {margin-top: 0px;}
+    50% {margin-top: -3px;}
+    100% {margin-top: 0px;}
+}
+@-o-keyframes shake {
+    0% {margin-top: 0px;}
+    50% {margin-top: -3px;}
+    100% {margin-top: 0px;}
+}
+@-ms-keyframes shake {
+    0% {margin-top: 0px;}
+    50% {margin-top: -3px;}
+    100% {margin-top: 0px;}
+}

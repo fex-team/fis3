@@ -1,0 +1,76 @@
+.mod-sort-area .box-onesort-big {position: relative;}
+.mod-sort-area div.box-onesort-big dd a{width: 242px;color:#a9a9a9;}
+.mod-sort-area .box-onesort-big .link-name{font-weight: bold;}
+.mod-sort-area .box-onesort-big dd a.have-pre-icon{width: 222px;}
+.mod-sort-area .box-onesort-big .link-name{color: #595959;}
+.mod-sort-area .box-onesort-big .link-description {margin-left: 10px;font-size: 12px;font-weight: normal;}
+.mod-sort-area .box-onesort-big .i-sort-big {display: block;position: absolute;right: 25px;bottom: 20px;}
+
+/*cool sort big image*/
+.mod-sort-area .box-onesort-big .i-sort-big{background-image: url("../img/i-onesort-big.png");}
+.mod-sort-area .i-sort-big.i-sort-games {width: 71px;height: 54px;background-position: -54px -243px;}
+.mod-sort-area .i-sort-big.i-sort-gameweb {width: 61px;height: 56px;background-position: 0 -63px;}
+.mod-sort-area .i-sort-big.i-sort-image {width: 63px;height: 63px;background-position: 0px 0px;}
+.mod-sort-area .i-sort-big.i-sort-tv {width: 59px;height: 56px;background-position: -63px -297px;}
+.mod-sort-area .i-sort-big.i-sort-movie {width: 53px;height: 60px;background-position: 0px -119px;}
+.mod-sort-area .i-sort-big.i-sort-tieba {width: 61px;height: 61px;background-position: -62px -180px;}
+.mod-sort-area .i-sort-big.i-sort-bank {width: 63px;height: 57px;background-position: 0px -296px;}
+.mod-sort-area .i-sort-big.i-sort-music {width: 63px;height: 63px;background-position: -63px 0px;}
+.mod-sort-area .i-sort-big.i-sort-menhu {width: 61px;height: 56px;background-position: -61px -63px;}
+.mod-sort-area .i-sort-big.i-sort-sports {width: 54px;height: 54px;background-position: 0px -242px;}
+.mod-sort-area .i-sort-big.i-sort-software {width: 60px;height: 60px;background-position: -53px -119px;}
+.mod-sort-area .i-sort-big.i-sort-shopping {width: 62px;height: 63px;background-position: 0px -179px;}
+
+
+/*新版 可配置气泡*/
+.mod-sort-area .confAbleRed,
+.mod-sort-area .confAbleRed em,
+.mod-sort-area .confAbleRed span,
+.mod-sort-area .confAbleRed i,
+.mod-sort-area .confAbleGreen,
+.mod-sort-area .confAbleGreen em,
+.mod-sort-area .confAbleGreen span,
+.mod-sort-area .confAbleGreen i{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	color: #fff;
+	vertical-align: middle;
+	height: 15px;
+}
+.mod-sort-area .confAbleRed em,
+.mod-sort-area .confAbleGreen em{
+	float: left;
+	width: 8px;
+	
+}
+.mod-sort-area .confAbleRed i,
+.mod-sort-area .confAbleGreen i{
+	width: 5px;
+	float: left;
+
+}
+.mod-sort-area .confAbleRed span,
+.mod-sort-area .confAbleGreen span{
+	float: left;
+	line-height: 14px;
+	font-size: 11px;
+}
+.mod-sort-area .confAbleRed em{
+	background: url(../img/tips-front-bg-ltr.png?__sprite);
+}
+.mod-sort-area .confAbleGreen em{
+	background: url(../img/tips-front-bg-ltr-green.png?__sprite);
+}
+.mod-sort-area .confAbleRed i{
+	background: url(../img/tips-back-bg-ltr.png?__sprite);
+}
+.mod-sort-area .confAbleGreen i{
+	background: url(../img/tips-back-bg-ltr-green.png?__sprite);
+}
+.mod-sort-area .confAbleRed span{
+	background: url(../img/tips-middle-bg.png?__sprite) repeat-x;
+}
+.mod-sort-area .confAbleGreen span{
+	background: url(../img/tips-middle-bg-green.png?__sprite) repeat-x;
+}

@@ -1,0 +1,19 @@
+/*hotsites*/  
+.hotsite .more_trigger{border-top-color:#f56f2f;border-top-style:solid;border-width:5px;display:inline-block;vertical-align:middle;margin-top:2px;}
+.hotsite_hover .more_trigger{border-top-color:transparent;border-top-style:dashed;border-bottom-color:#f56f2f;border-bottom-style:solid;margin-top:-6px;}
+.hotsite .more_links{position:absolute;z-index:2;border:1px solid #E3E4E6;width:108px;background:#fff;display:none;visibility: visible;}
+.hotsite .more_links a{text-align:right;line-height:32px;text-indent:10px;text-overflow:ellipsis;white-space:nowrap;}
+.hotsite_hover {background: #ebebeb;}
+.hotsite .more_links a:hover{background:#f5f7f7;}
+.more_links .site-icon{border-bottom:1px solid #dedede;vertical-align:-4px;background-color:#fff;/*IE6 line-height hack*/_margin:7px 0;}
+
+
+
+
+
+/*hotsite quick search*/
+
+.hotsite .search-form{position:absolute;width:101px;height:17px;display:none;line-height: 17px;text-align: center;border:solid 1px #CDCDC1;background-color: white; visibility: visible;margin: 0px 4px 6px 4px;}
+.search-form-input-text{width:83px;height:17px;line-height: 17px;font-size: 12px;border:0 none;margin-right: -17px;display: inline-block;padding-right: 1px;}
+.search-form-input-submit{background:url('../img/maginifer.png?__sprite') no-repeat;background-color:transparent;border:none;width:13px;height:13px;position:absolute;left:2px;top:2px;}
+.search-form .tips{position: absolute;width: 15px;height: 15px;right:0;top:0;color:#CDCDC1;font-size: 12px;margin: 0px 4px 6px 4px;}

@@ -39,7 +39,7 @@ node_modules/
 *.tmp
 *.cmd
 ~*
-upload.py
+
 
 /test/fis-tmp/target/cache
 /doc/output
@@ -47,3 +47,4 @@ upload.py
 /test/downloads/
 /test/xpy/
 /test/xpy2/
+.svn

@@ -1,0 +1,4 @@
+/* 新首页的背景色为白色，写在这里是为了兼容老版本 */
+html {
+    background-color: #ffffff;
+}

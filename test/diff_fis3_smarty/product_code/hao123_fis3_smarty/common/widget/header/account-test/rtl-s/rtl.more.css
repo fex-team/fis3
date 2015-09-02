@@ -1,0 +1,142 @@
+.account_wrap {
+    float: left;
+    position: relative;
+    max-width: 170px;
+}
+.account_trig {
+    padding: 0 10px;
+    height: 50px;
+    width: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    display: table-cell;
+    *display: block;
+}
+.account_title {
+    width: auto;
+    max-width: 150px;
+    line-height: 50px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    color: rgba(255,255,255, 0.5);
+}
+.account_login-tip {
+    background: url("../img/btn-facebook-bg.png?__sprite") repeat-x;
+    border: 1px solid #456BB6;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.login-tip_con {
+    padding-right: 0px;
+    text-align: center;
+    height: 29px;
+    color: #ffffff;
+    line-height: 29px;
+    background: url("../img/btn-facebook-logo.png?__sprite") no-repeat;
+}
+.account-loginfo_wrap {
+    width: 220px;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding: 20px 30px;
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: #D6F8EF;
+}
+.account-loginfo_wrap img {
+    width: 90px;
+    height: 90px;
+    margin-left: 16px;
+    margin-top: 4px;
+    float: right;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -o-border-radius: 45px;
+    -ms-border-radius: 45px;
+    border: 2px solid #00AF74;
+}
+.account_logout_content {
+    float: right;
+    padding: 10px 0;
+    width: 106px;
+}
+.account_logout_name {
+    color: #000000;
+    line-height: 16px;
+    font-size: 13px;
+    margin-bottom: 4px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.account_logout_email {
+    color: #848D8A;
+    line-height: 16px;
+    font-size: 12px;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.account_logout_btn {
+    white-space: nowrap;
+    display: inline-block;
+    width: 94px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    background-color: #00AF74;
+    color: #FFFFFF;
+    font-size: 13px;
+    overflow: hidden;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+}
+.account-login_suc .account_trig img {
+    width: 26px;
+    height: 26px;
+    cursor: default;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -o-border-radius: 13px;
+    -ms-border-radius: 13px;
+    box-shadow: -2px 0 3px #ffffff,0 -2px 3px #ffffff,0 2px 3px #ffffff,2px 0 3px #ffffff;
+    -webkit-box-shadow: -2px 0 3px #ffffff,0 -2px 3px #ffffff,0 2px 3px #ffffff,2px 0 3px #ffffff;
+    -moz-box-shadow: -2px 0 3px #ffffff,0 -2px 3px #ffffff,0 2px 3px #ffffff,2px 0 3px #ffffff;
+    -o-box-shadow: -2px 0 3px #ffffff,0 -2px 3px #ffffff,0 2px 3px #ffffff,2px 0 3px #ffffff;
+    -ms-box-shadow: -2px 0 3px #ffffff,0 -2px 3px #ffffff,0 2px 3px #ffffff,2px 0 3px #ffffff;
+}
+
+.account-dropdown_wrap{ position: absolute; left: 0; top: 50px; display: none;border: 1px solid #BEE2D6;box-shadow: 2px 2px 2px #DEDEDE,-2px 0 2px #DEDEDE;border-top: 0;}
+.account_arrow { top: -12px;left: 18px; z-index: 2;position: absolute;height: 0;width: 0;border: 6px dashed transparent; border-bottom:6px solid #F0FFFC;}
+
+.header-fixed .account-dropdown_wrap{top: 30px;}
+.header-fixed-up .account-dropdown_wrap{top: 40px;}
+/*
+.body-theme_2 .account-dropdown_wrap{border-color: #d4e0eb;}
+.body-theme_2 .account-loginfo_wrap {border-color: #d4e0eb;background-color: #D3E5F6;}
+.body-theme_2 .account-loginfo_wrap img {border-color: #1187F6;}
+.body-theme_2 .account_logout_btn {background-color: #1187F6;}
+.body-theme_2 .account_arrow {border-bottom-color: #d4e0eb;}
+
+.body-theme_3 .account-dropdown_wrap{border-color: #ecdfe1;}
+.body-theme_3 .account-loginfo_wrap {border-color: #ecdfe1;background-color: #FCE7EA;}
+.body-theme_3 .account-loginfo_wrap img {border-color: #FC91A3;}
+.body-theme_3 .account_logout_btn {background-color: #FC91A3;}
+.body-theme_3 .account_arrow {border-bottom-color: #ecdfe1;}
+*/
+
+body .account_wrap {
+    visibility: visible;
+    visibility: visible !important;
+}

@@ -1,0 +1,48 @@
+.mod-sitemap-recommend{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.mod-sitemap-recommend h3{
+    height: 18px;
+    line-height: 18px;
+    font-size: 16px;
+    color: #222222;
+    font-weight: bold;
+}
+
+.mod-sitemap-recommend .container{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f3f3f3;
+}
+
+.mod-sitemap-recommend .container a{
+    display: block;
+    float: right;
+    width: 335px;
+    height: 35px;
+    margin-right: 52px;
+    margin-top: 10px;
+}
+
+.mod-sitemap-recommend .container a.first-column{
+    margin-right: 10px;
+}
+
+.mod-sitemap-recommend .name{
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #0063c4;
+}
+
+.mod-sitemap-recommend .desc{
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    color: #2d2d2d;
+    margin-top: 3px;
+}
+

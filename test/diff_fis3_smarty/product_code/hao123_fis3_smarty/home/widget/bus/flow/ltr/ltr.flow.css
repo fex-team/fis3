@@ -1,0 +1,37 @@
+/* For 1020px layout */
+.flow-on .bus-info {
+	margin: 0px 15px;
+	padding-top: 14px;
+}
+.flow-on .bus-info-detail {
+	margin: 0px 0px 14px;
+}
+.flow-on .bus-info-detail input[type=text] {
+	width: 176px;
+}
+.flow-on .bus-info-r {
+	margin-top: -104px;
+	margin-left: 240px;
+}
+.flow-on .bus-submit {
+	margin-left: 25px;
+	margin-bottom: 1px;
+	top: 1px;
+}
+.flow-on .bus-info-selet {
+	margin: 0 0 8px 55px;
+}
+.flow-on .bus-info-mesaage {
+	float: left;
+	line-height: 23px;
+}
+.flow-on #bus-method {
+	margin: 8px 0 0 0;
+}
+.flow-on .order-bus {
+	margin-right: 1px;
+}
+.flow-on #sidetoolbarContainer .bus-info {
+	margin-top: 0px;
+	padding-top: 14px;
+}

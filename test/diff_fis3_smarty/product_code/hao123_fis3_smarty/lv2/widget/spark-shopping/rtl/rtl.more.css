@@ -1,0 +1,58 @@
+.mod-shopping .item {
+	width: 143px;
+	height: 62px;
+	float: right;
+	position: relative;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.1) inset; 
+        display: table-cell;
+	vertical-align: middle;
+	background: #fff;
+	overflow: hidden;
+}
+.mod-shopping .item img {
+	width: 58px;
+	height: 56px;
+	margin-right: 8px;
+	margin-top: 3px;
+	margin-left: 4px;
+}
+.mod-shopping .info {
+	width: 70px;
+	overflow: hidden;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.mod-shopping .name {
+	max-height: 34px;
+	line-height: 1.4;
+	overflow: hidden;
+	color: #333;
+}
+.mod-shopping .price {
+	color: #fc2b3a;
+	font-size: 14px;
+	margin-top: 5px;
+}
+.mod-shopping .item:hover .name,
+.mod-shopping .item:hover .price {
+	text-decoration: underline;
+}
+.mod-shopping .nav-item {
+	width: 306px;
+}
+.mod-shopping .wrap {
+	float: right;
+	overflow: hidden;
+	height: 146px;
+	margin-right: 10px;
+}
+.mod-shopping .o-slogan a {
+	display: inline-block;
+}
+.mod-shopping .o-content {
+	padding-top: 8px;
+}

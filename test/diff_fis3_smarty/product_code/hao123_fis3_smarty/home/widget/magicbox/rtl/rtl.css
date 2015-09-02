@@ -1,0 +1,63 @@
+@import url('/widget/magicbox/magicbox-common.css?__inline');
+
+.mod-magicbox .cycletabs .ui-nav .prev{
+	right:-2px;
+}
+.mod-magicbox .cycletabs .ui-nav .next{
+	left:-2px;
+}
+.mod-magicbox .cycletabs .ui-nav .arrow-prev{
+	background:url(../img/i-magicbox-next-normal.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .ui-nav .arrow-next{
+	background:url(../img/i-magicbox-prev-normal.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .ui-nav .prev-hover .arrow-prev {
+    background:url(../img/i-magicbox-next-active.png?__sprite) no-repeat;
+}
+.mod-magicbox .cycletabs .ui-nav .next-hover .arrow-next {
+	background:url(../img/i-magicbox-prev-active.png?__sprite) no-repeat;
+}
+.magicbox-title .lock,.magicbox-title .refresh{
+	margin-left:5px;
+}
+.magicbox-title i{
+	float:left;
+	display:inline;
+}
+.magicbox-title .refresh{
+	width: 16px;
+	background-color: transparent;
+	border: 0;
+	margin-top: 1px;
+}
+.mod-magicbox .cycletabs .nav-item{
+	*float:right;
+}
+.mod-magicbox .cycletabs .nav-item-list{
+	*width:100%;
+}
+.mod-magicbox .speed-test{
+	margin-right: -2px;
+}
+/*new tab*/
+.magicbox-nav-others{
+	float: left;
+	border-right: 1px solid #d3d4d5;
+}
+body .ui-bubble-magicbox-newtab .ui-bubble_in,
+body .ui-bubble-magicbox-newtab .ui-bubble_out{
+	left: 25px;
+}
+.ui-bubble-magicbox-newtab .magicbox-tab{
+	float: right;
+}
+.magicbox-nav-others .icon-arrow{
+	left: 10px;
+}
+.magicbox-nav-others .icon-rect{
+	right: 10px;
+}
+.magicbox-nav-others .icon-line{
+	right: 20px;
+}

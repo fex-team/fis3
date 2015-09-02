@@ -1,0 +1,47 @@
+html{
+	background: #fff;
+}
+.box-lv2 {
+	border: 1px solid #e6e6e6;
+}
+.box-lv2 dt {
+	height: 45px;
+	background-color: #f7f6f6;
+	color: #4e4e4e;
+	font-size: 14px;
+	line-height: 45px;
+	border-bottom: 1px solid #e6e6e6;
+	padding-right: 9px;
+}
+.box-lv2 dd {
+	padding: 10px 5px 10px 0;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	overflow: hidden;
+	zoom: 1;
+}
+.box-lv2 a {
+	display: block;
+	float: right;
+	color: #353636;
+	width: 144px;
+	_width: 142px;
+	height: 30px;
+	line-height: 30px;
+	padding-right: 4px;
+	margin-right: 10px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+}
+.box-lv2 a:hover {
+	background-color: #e7e7e7;
+}
+
+.box-lv2 .column-5 a {
+	width: 176px;
+}

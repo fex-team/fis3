@@ -1,0 +1,38 @@
+.app-list-top{
+	border: 1px solid;
+	border-color: #dfe4e6 #d7ddde #cacccc #dfe4e6;
+	background: #FCFDFF;
+	overflow: hidden;
+}
+.app-list-top span {
+	display: inline-block;
+	letter-spacing: normal;
+	margin: 6px 4px;
+	vertical-align: top;
+	white-space: nowrap;
+	width: 116px;
+	word-spacing: normal;
+	*display:inline;
+	*zoom:1;
+}
+.app-list-top span:hover, .app-list-top .item-hover, .app-list-side .item-hover{
+	background: #ebebeb;
+	cursor: pointer;
+}
+.app-list-top a {
+	color: #454545;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+.app-list-top .a-link {
+	line-height: 28px;
+	padding-top: 10px;
+	text-align: center;
+}
+.app-list-top img {
+	display: block;
+	height: 48px;
+	margin: 0 auto;
+	width: 48px;
+}

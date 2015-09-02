@@ -1,0 +1,23 @@
+/*hotsite*/
+.hotsite_b{ border: 1px solid;border-color:#d7ddde #d7ddde #cacccc #dfe4e6; position: relative; z-index: 4;border-bottom: none;}
+.hotsite_wrap{width:100%;text-align: center;/*IE<=7 z-index hack*/ overflow: hidden; background-color: #fcfdff; *position: relative;}
+.hotsite-custom{ display: none;}
+
+
+
+.hotsite{background-color: #fcfdff; overflow:hidden;padding:0px 6px 0px 6px;border: 1px solid;border-color:#FFF;border-bottom:none;letter-spacing: -0.3em;word-spacing:-0.3em;float: left; width: 944px;}
+.hotsite span{ display: inline-block; *display:inline;*zoom:1;width: 110px; /*overflow: hidden; */vertical-align:top;white-space: nowrap;letter-spacing: normal;word-spacing: normal;margin: 6px 4px 0px 4px;/*position:relative;*/}        
+.hotsite a{display: block;color:#454545;width:100%;/*float:left;*/overflow:hidden;}
+.hotsite .hotsite_link{padding-top: 10px;line-height: 28px;text-align:center;/*position:relative;z-index:1;*/}        
+.hotsite .i-hot-sprites{ width: 48px; height: 48px; display: block;  margin: 0 auto;}
+.hotsite .more_trigger{border-top-color:#f56f2f;border-top-style:solid;border-width:5px;display:inline-block;vertical-align:middle;margin-top:2px;}
+
+
+.hotsite .hotsite-for_tn {display: none;}
+
+.hotsite .more_links, .hotsite .search-form{ display: none; position: absolute; visibility: hidden;}
+
+.hotsite_link .span-hot-name{height:22px;margin:0;}
+
+.hotsite_wrap__s .hotsite-container{ height: 343px; }
+.hotsite_wrap__s .hotsite-hist{height: 285px;}

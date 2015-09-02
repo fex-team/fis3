@@ -1,0 +1,100 @@
+/*general dropdown component, including input and list*/
+.dropdown{
+	position:relative;
+	_zoom:1;
+	vertical-align: middle;
+	display: inline-block;
+}
+.dropdown-trigger{
+	border: 1px solid #d9d9d9;
+	display: inline-block;
+	height:24px;
+}
+.dropdown-input{
+	cursor:pointer;
+	line-height:24px;
+	height:24px;
+	font-size:12px;
+	/*width: 71px;*/
+	border:0;
+	display:inline-block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	background: #fff;
+}
+.dropdown-ltr .dropdown-input{
+	padding-right: 25px;
+	padding-left: 5px;
+}
+.dropdown-rtl .dropdown-input{
+	padding-right: 5px;
+	padding-left: 25px;
+}
+.dropdown-arrow{
+	background-color:#f5f7f7;
+	background-image: -moz-linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	background-image: -webkit-linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	background-image: -o-linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	background-image: -ms-linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	background-image: linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	border:0;
+	width:23px;
+	height:24px;
+	position:absolute;
+	top: 1px;
+	_top:2px;
+	cursor:pointer;
+}
+.dropdown-ltr .dropdown-arrow{
+	right: 1px;
+	border-left:1px solid #ebebeb;
+}
+.dropdown-rtl .dropdown-arrow{
+	left: 1px;
+	border-right:1px solid #ebebeb;
+}
+.dropdown-arrow i{
+	background:url(./img/i-arrow-bottom-green.png?__sprite) no-repeat;
+	display:block;
+	width: 11px;
+	height: 6px;
+	position: relative;
+	font-size:0;
+	top: 9px;
+}
+.dropdown-ltr .dropdown-arrow i{
+	right: -6px;
+}
+.dropdown-rtl .dropdown-arrow i{
+	left: -6px;
+}
+.dropdown-arrow-up i{
+	background-image:url(./img/i-arrow-top-green.png?__sprite);
+}
+.dropdown-list{
+	position: absolute;
+	top: 26px;
+	_top:27px;
+	left: 0;
+	background: #fff;
+	border-top: 0;
+	text-indent:5px;
+	display:none;
+	/*text-align:left;*/
+	z-index:502;
+	border: 1px solid #d9d9d9;
+	border-top:0;
+	line-height:24px;
+	font-size:12px;
+}
+.dropdown-list li{
+	cursor:pointer;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	_width: 100%;
+	white-space: nowrap;
+}
+.dropdown-list li:hover, .dropdown-list-hover{
+	background:#e8eaeb;
+}

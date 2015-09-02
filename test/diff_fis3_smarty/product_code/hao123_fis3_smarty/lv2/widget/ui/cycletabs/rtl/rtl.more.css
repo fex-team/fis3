@@ -1,0 +1,44 @@
+.nav-item {
+	float: right;
+}
+.nav-item-list {
+	position: relative;
+}
+.ui-nav {
+	overflow: hidden;
+	position: relative;
+}
+.ui-nav .prev, .ui-nav .next {
+	position: absolute;
+	top: 36px;
+	z-index: 20;
+	width: 25px;
+	height: 65px;
+	cursor: pointer;
+}
+.ui-nav .next {
+	background: url(../img/prev_rtl.png?__sprite) no-repeat;
+	right: -1px;
+}
+.ui-nav .next-hover {
+	background: url(../img/prev_hover_rtl.png?__sprite) no-repeat;
+}
+.ui-nav .next-active {
+	background: url(../img/prev_active_rtl.png?__sprite) no-repeat;
+}
+.ui-nav .prev {
+	background: url(../img/next_rtl.png?__sprite) no-repeat;
+	left: -1px;
+}
+.ui-nav .prev-hover {
+	background: url(../img/next_hover_rtl.png?__sprite) no-repeat;
+}
+.ui-nav .prev-active {
+	background: url(../img/next_active_rtl.png?__sprite) no-repeat;
+}
+.arrow-next, .arrow-prev {
+	display: none;
+}
+.switch {
+	display: none;
+}

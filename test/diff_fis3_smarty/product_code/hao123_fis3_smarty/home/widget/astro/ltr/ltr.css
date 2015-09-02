@@ -1,0 +1,310 @@
+.mod-astro{
+	position: relative;
+}
+
+.mod-astro dl{
+	/*padding: 0 14px;*/
+	background: #f5f7f7;
+}
+.mod-astro i{
+	*font-size:0;
+}
+.i-pointer,.today i,.astro-desc i{
+	background-repeat:no-repeat;
+	display:inline-block;
+}
+.astro_ico,.astro-luck i{
+	background-repeat:no-repeat;
+	display:inline-block;
+}
+.box-border .mod-astro dt,.sidetoolbar .mod-astro dt,.mod-custom-sidebar .mod-astro dt{
+	border: 1px solid #fff;
+	border-bottom: 0;
+	padding: 0 14px;
+	height: auto;
+	line-height: 26px;
+	font-size: 12px;
+	*position:relative;
+	*z-index:3;
+}
+.mod-astro dd{
+	padding: 0 14px;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+.today{
+	font-size: 11px;
+	color: #919191;
+	font-weight: 500;
+	text-align: right;
+	padding-top: 8px;
+	height:26px;
+}
+.today i{
+	background-image:url(../img/i-calendar.png?__sprite);
+	display: inline-block;
+	*display:inline;
+	*zoom:1;
+	width: 9px;
+	height: 8px;
+	margin-right: 5px;
+}
+.astro-head{
+	background: #a1dac7;
+	width: 173px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	margin-left: 34px;
+	position:relative;
+	font-weight:500;
+	white-space:nowrap;
+}
+.astro-list{
+	display:none;
+	background:#fff;
+	position: absolute;
+	width: 160px;
+	z-index: 503;
+	right: 0;
+	top: 26px;
+	border: 1px solid #a1dac7;
+	border-top: 0;
+}
+.astro-list li{
+	padding:0 5px;
+	line-height:25px;
+	_line-height:18px;
+	cursor:pointer;
+}
+.astro-list li:hover{
+	background:#f5f7f7;
+}
+.astro-list .fr{
+	color:#999;
+	font-size: 10px;
+	font-family: Tahoma;
+}
+.i-pointer{
+	width: 11px;
+	height: 6px;
+	display: inline-block;
+	cursor:pointer;
+}
+.astro-head .i-pointer{
+	background:url(../img/i-arrow-bottom-white.png?__sprite) no-repeat;
+}
+.astro-head .i-pointer_up{
+	background:url(../img/i-arrow-top-white.png?__sprite) no-repeat;
+}
+.astro-desc .i-pointer{
+	background:url(../img/i-arrow-bottom-green.png?__sprite) no-repeat;
+	position:absolute;
+	right:0;
+	bottom:6px;
+}
+.astro-desc_s .i-pointer{
+
+}
+.astro-desc .i-pointer_up{
+	background:url(../img/i-arrow-top-green.png?__sprite) no-repeat;
+}
+.astro_period{
+
+	font-size: 12px;
+	font-family:Tahoma;
+	color: #fff;
+	cursor:pointer;
+}
+.astro_name{
+	margin-left:15px;
+	font-weight:bold;
+	color: #fff;
+	width: 72px;
+	display: inline-block;
+	cursor: pointer;
+}
+.astro_ico{
+	background-image:url(../img/i-astro.png);
+	background-position:0 0;
+	width:50px;
+	height:41px;
+	position: absolute;
+	top: -10px;
+	left: -34px;
+}
+.astro_ico_0{
+
+}
+.astro_ico_1{
+	background-image:url(../img/i-astro.png);
+	background-position:-50px 0;
+}
+.astro_ico_2{
+	background-image:url(../img/i-astro.png);
+	background-position:-100px 0;
+}
+.astro_ico_3{
+	background-image:url(../img/i-astro.png);
+	background-position:-150px 0;
+}
+.astro_ico_4{
+	background-image:url(../img/i-astro.png);
+	background-position:-200px 0;
+}
+.astro_ico_5{
+	background-image:url(../img/i-astro.png);
+	background-position:-250px 0;
+}
+.astro_ico_6{
+	background-image:url(../img/i-astro.png);
+	background-position: 0 -41px;
+}
+.astro_ico_7{
+	background-image:url(../img/i-astro.png);
+	background-position: -50px -41px;
+}
+.astro_ico_8{
+	background-image:url(../img/i-astro.png);
+	background-position: -100px -41px;
+}
+.astro_ico_9{
+	background-image:url(../img/i-astro.png);
+	background-position: -150px -41px;
+}
+.astro_ico_10{
+	background-image:url(../img/i-astro.png);
+	background-position: -200px -41px;
+}
+.astro_ico_11{
+	background-image:url(../img/i-astro.png);
+	background-position: -250px -41px;
+}
+.astro-tab{
+	display: inline-block;
+	white-space: nowrap;
+	font-size:0;
+	padding: 15px 0;
+}
+.astro-tab li {
+	display: inline-block;
+	*display:inline;
+	*zoom:1;
+	cursor: pointer;
+	line-height: 21px;
+	width: 102px;
+	text-align: center;
+	background: url(../../img/btn-normal-bg.png?__sprite) repeat-x;
+	border: 1px solid #EBEBEB;
+	border-bottom: 1px solid #D9DCDE;
+	margin-left: -1px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size:13px;
+}
+.astro-tab .cur {
+	z-index: 2;
+	position: relative;
+	border: 1px solid #D9DCDE;
+	border-bottom: 1px solid #F5F7F7;
+	background: #F5F7F7;
+	font-weight: 600;
+	color: #00B075;
+}
+.astro-panel{
+	*margin-top:-10px;
+}
+.astro-panel li{
+	display:none;
+	padding-bottom:10px;
+}
+.astro-luck li{
+	display:block;
+	height:20px;
+	line-height:20px;
+	padding-bottom: 0;
+	margin-bottom: 10px;
+	background: #f0f0f0;
+}
+.astro-luck i{
+	width:17px;
+	height:21px;
+	margin-right: 9px;
+}
+.astro-luck span{
+	display:inline-block;
+	background:#a1dac7;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	width: 49px;
+	color:#fff;
+	padding-left:9px;
+	margin-right: 10px;
+}
+.astro-luck span,.astro-luck i{
+	vertical-align: middle;
+}
+.astro-luck_overall i{
+	background-image:url(../img/i-astro.png);
+	background-position: -20px -82px;
+}
+.astro-luck_overall .sel{
+	background-image:url(../img/i-astro.png);
+	background-position: 0 -82px;
+}
+.astro-luck_love i{
+	background-image:url(../img/i-astro.png);
+	background-position: -60px -82px;
+}
+.astro-luck_love .sel{
+	background-image:url(../img/i-astro.png);
+	background-position: -40px -82px;
+}
+.astro-luck_wealth i{
+	background-image:url(../img/i-astro.png);
+	background-position: -100px -82px;
+}
+.astro-luck_wealth .sel{
+	background-image:url(../img/i-astro.png);
+	background-position: -81px -82px;
+}
+.astro-luck_career i{
+	background-image:url(../img/i-astro.png);
+	background-position: -138px -82px;
+}
+.astro-luck_career .sel{
+	background-image:url(../img/i-astro.png);
+	background-position: -118px -82px;
+}
+.astro-luck .triangle{
+	border-left: 5px solid #a1dac7;
+	display: inline-block;
+	margin-right: -10px;
+	float: right;
+	margin-top: 5px;
+}
+.astro-desc{
+	color:#595959;
+	line-height: 18px;
+	position:relative;
+	*zoom:1;
+}
+.astro-desc_s{
+	height:36px;
+	overflow:hidden;
+}
+.mod-astro .charts_more{
+	color: #00b075;
+}
+
+
+/*显示模块*/
+.side-mod-preload-astro{
+    border:0!important;
+    background: transparent!important;
+}
+.side-mod-preload-astro > *{
+    visibility: visible!important;
+}

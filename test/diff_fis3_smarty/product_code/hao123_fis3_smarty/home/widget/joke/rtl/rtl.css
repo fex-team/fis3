@@ -1,0 +1,18 @@
+/*笑话模块样式*/
+/*joke*/
+.mod-joke{background:#F5F7F7;}
+.mod-joke .mod-side{padding:10px;}
+.mod-joke .joke_text{float: right;width:190px;overflow: hidden;color: #5a5a5a;line-height: 21px;}
+.mod-joke .joke_title{font-weight: bold;}
+.mod-joke .joke_content{color: #5a5a5a;line-height: 21px;}
+.mod-joke .joke_content:hover{color:#00b075;text-decoration:underline;}
+.mod-joke .joke_refresh{float: left;height: 16px;width:16px;background: url("../img/i-joke-fresh.png?__sprite") no-repeat;}
+
+/*显示模块*/
+.side-mod-preload-joke{
+    border:0!important;
+    background: transparent!important;
+}
+.side-mod-preload-joke > *{
+    visibility: visible!important;
+}

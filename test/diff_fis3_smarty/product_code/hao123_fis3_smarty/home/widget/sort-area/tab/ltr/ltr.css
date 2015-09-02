@@ -1,0 +1,247 @@
+/**tabs***/
+.mod-sort-area .tabs{
+	position: relative;
+	visibility: visible !important;
+}
+.mod-sort-area .tab-item{
+	height: 29px;
+	position: relative;
+	float: left;
+	box-shadow: 1px 0px 0px #279973;
+	background: url(../img/tab-bg.png?__sprite) repeat-x\9;
+	background-image:-moz-linear-gradient(top, rgb(51,194,149), rgb(47,188,138));
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(51,194,149)), to(rgb(47,188,138)));
+	background-image:-webkit-linear-gradient(top, rgb(51,194,149), rgb(47,188,138));
+	background-image:-o-linear-gradient(top, rgb(51,194,149), rgb(47,188,138));
+	background-image:-ms-linear-gradient(top, rgb(51,194,149), rgb(47,188,138));
+	background-image:linear-gradient(top, rgb(51,194,149), rgb(47,188,138));
+	/*-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#33c295,endColorstr=#2fbc8a,GradientType=1)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33c295,endColorstr=#2fbc8a,GradientType=1) DXImageTransform.Microsoft.Alpha(enabled=false);*/
+}
+.mod-sort-area .tab{
+	line-height: 29px;
+	cursor: pointer;
+	text-align: center;
+	height: 29px;
+	color: #fff;
+	/*overflow: hidden;*/
+	padding: 0 6.21%;
+	transform: perspective(2px) rotateX(-0.6deg);
+    -ms-transform: perspective(2px) rotateX(-0.6deg);
+    -webkit-transform: perspective(2px) rotateX(-0.6deg);
+    backface-visibility: hidden;
+}
+.mod-sort-area .tab .icon {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 25px;
+	height: 29px;
+	margin-right: 5%;
+	vertical-align: middle;
+}
+.mod-sort-area .tab-item .border{
+	display: block\9;
+	position: absolute\9;
+	width: 1px\9;
+	height: 29px\9;
+	left: 0\9;
+	top: 0\9;
+	background-color: #5fcfaa;
+}
+.mod-sort-area .tab .text{
+	white-space: nowrap;
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	visibility: visible;
+	text-shadow:1px 0px 1px 1px rgba(0,0,0,.5);
+}
+/**同CMS配置耦合在一起，如何解决？***/
+.mod-sort-area .tabs .tab-item{
+	border-radius: 7px 7px 0 0;
+	transform: perspective(2px) rotateX(0.6deg);
+    -ms-transform: perspective(2px) rotateX(0.6deg);
+    -webkit-transform: perspective(2px) rotateX(0.6deg);
+    backface-visibility: hidden;
+}
+.mod-sort-area .tabs .first-tab{
+	border-top-left-radius: 3px;
+    transform: perspective(2px) rotateX(0.4deg);
+    -ms-transform: perspective(2px) rotateX(0.4deg);
+    -webkit-transform: perspective(2px) rotateX(0.4deg);
+    backface-visibility: hidden;
+    -webkit-transform-origin-x: left;
+	transform-origin-x: left;
+    -ms-transform-origin: left;
+    -moz-transform-origin:left;
+}
+.mod-sort-area .tabs .last-tab{
+	border-top-right-radius: 3px;
+     transform: perspective(2px) rotateX(0.4deg);
+    -ms-transform: perspective(2px) rotateX(0.4deg);
+    -webkit-transform: perspective(2px) rotateX(0.4deg);
+    backface-visibility: hidden;
+    -webkit-transform-origin-x: right;
+	transform-origin-x: right;
+    -ms-transform-origin: right;
+    -moz-transform-origin: right;
+}
+.mod-sort-area .tab-first{
+     transform: perspective(2px) rotateX(-0.4deg);
+    -ms-transform: perspective(2px) rotateX(-0.4deg);
+    -webkit-transform: perspective(2px) rotateX(-0.4deg);
+    backface-visibility: hidden;
+    -webkit-transform-origin-x: left;
+	transform-origin-x: left;
+    -ms-transform-origin: left;
+    -moz-transform-origin: left;
+}
+.mod-sort-area .tab-last{
+     transform: perspective(2px) rotateX(-0.4deg);
+    -ms-transform: perspective(2px) rotateX(-0.4deg);
+    -webkit-transform: perspective(2px) rotateX(-0.4deg);
+    backface-visibility: hidden;
+    -webkit-transform-origin-x: right;
+	transform-origin-x: right;
+    -ms-transform-origin: right;
+    -moz-transform-origin: right;
+}
+.mod-sort-area .tabs .sort .icon{
+	background: url(../img/icon-home.png?__sprite) no-repeat 0 0;
+}
+.mod-sort-area .tabs .news .icon{
+	background: url(../img/icon-news.png?__sprite) no-repeat 0 0;
+}
+.mod-sort-area .tabs .image .icon{
+	background: url(../img/icon-image.png?__sprite) no-repeat 0 0;
+}
+.mod-sort-area .tabs .movie .icon{
+	background: url(../img/icon-movie.png?__sprite) no-repeat 0 0;
+}
+.mod-sort-area .tabs .games .icon{
+	background: url(../img/icon-game.png?__sprite) no-repeat 0 0;
+}
+.mod-sort-area .tabs .shop .icon{
+	background: url(../img/icon-shop.png?__sprite) no-repeat 0 0;
+}
+.mod-sort-area .tabs .video .icon{
+	background: url(../img/icon-movie.png?__sprite) no-repeat 0 0;
+}
+.mod-sort-area .tabs .apps .icon{
+	background: url(../img/icon-apps.png?__sprite) no-repeat 0 0;
+}
+.mod-sort-area .tabs .tab-item:hover .border,
+.mod-sort-area .tabs .tab-item.current .border,
+.mod-sort-area .tabs .tab-item:hover + .tab-item .border,
+.mod-sort-area .tabs .tab-item.current + .tab-item .border{
+	display: none;
+}
+.mod-sort-area .tabs .tab-item:hover{
+	cursor: pointer;
+	background: url(../img/tab-hover-bg.png?__sprite) repeat-x\9;
+	background-image:-moz-linear-gradient(top, rgb(49,191,143), rgb(39,154,115));
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(49,191,143)), to(rgb(39,154,115)));
+	background-image:-webkit-linear-gradient(top, rgb(49,191,143), rgb(39,154,115));
+	background-image:-o-linear-gradient(top, rgb(49,191,143), rgb(39,154,115));
+	background-image:-ms-linear-gradient(top, rgb(49,191,143), rgb(39,154,115));
+	background-image:linear-gradient(top, rgb(49,191,143), rgb(39,154,115));
+	/*-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#31bf8f,endColorstr=#279a73,GradientType=1)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#31bf8f,endColorstr=#279a73,GradientType=1);*/
+}
+.mod-sort-area .tabs .tab-item.current{
+	z-index: 6!important;
+	background: url(../img/tab-current-bg.png?__sprite) repeat-x;
+	background-image:-moz-linear-gradient(top, rgb(33,151,112), rgb(44,172,130));
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(33,151,112)), to(rgb(44,172,130)));
+	background-image:-webkit-linear-gradient(top, rgb(33,151,112), rgb(44,172,130));
+	background-image:-o-linear-gradient(top, rgb(33,151,112), rgb(44,172,130));
+	background-image:-ms-linear-gradient(top, rgb(33,151,112), rgb(44,172,130));
+	background-image:linear-gradient(top, rgb(33,151,112), rgb(44,172,130));
+	/*-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#219770,endColorstr=#2cac82,GradientType=1)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#219770,endColorstr=#2cac82,GradientType=1);*/
+}
+.mod-sort-area .tabs .tab-item.current .arrow{
+	position: absolute;
+	display: block;
+	width: 8px;
+	height: 4px;
+	top: 29px;
+	right: 50%;
+	margin-right: -2px;
+	background: url(../img/tab-bg-arrow.png?__sprite) no-repeat;
+	z-index: 1;
+}
+.mod-sort-area .tab-last-arrow{
+	-webkit-transform-origin-x: left;
+	transform-origin-x: left;
+    -ms-transform-origin-x: left;
+    -moz-transform-origin:left;
+    backface-visibility: hidden;
+     transform: perspective(2px) rotateX(8.4deg);
+    -ms-transform: perspective(2px) rotateX(8.4deg);
+    -webkit-transform: perspective(2px) rotateX(8.4deg);
+}
+.mod-sort-area .tabs .tab-item:hover .icon{   
+	animation-name: sortAreaTabIconShake;
+	animation-duration: 0.12s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 3;
+
+	-moz-animation-name: sortAreaTabIconShake;
+	-moz-animation-duration: 0.12s;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-iteration-count: 3;
+
+	-webkit-animation-name: sortAreaTabIconShake;
+	-webkit-animation-duration: 0.12s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 3;
+
+	-o-animation-name: sortAreaTabIconShake;
+	-o-animation-duration: 0.12s;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-iteration-count: 3;
+
+	-ms-animation-name: sortAreaTabIconShake;
+	-ms-animation-duration: 0.12s;
+	-ms-animation-timing-function: ease-in-out;
+	-ms-animation-iteration-count: 3;
+}
+@keyframes sortAreaTabIconShake {
+    0% {margin-top: 0px;}
+    50% {margin-top: -3px;}
+    100% {margin-top: 0px;}
+}
+@-webkit-keyframes sortAreaTabIconShake {
+	0% {margin-top: 0px;}
+	50% {margin-top: -3px;}
+	100% {margin-top: 0px;}
+}
+@-moz-keyframes sortAreaTabIconShake {
+    0% {margin-top: 0px;}
+    50% {margin-top: -3px;}
+    100% {margin-top: 0px;}
+}
+@-o-keyframes sortAreaTabIconShake {
+    0% {margin-top: 0px;}
+    50% {margin-top: -3px;}
+    100% {margin-top: 0px;}
+}
+@-ms-keyframes sortAreaTabIconShake {
+    0% {margin-top: 0px;}
+    50% {margin-top: -3px;}
+    100% {margin-top: 0px;}
+}
+.mod-sort-area .tabs .tab-item.current:hover .icon{
+	animation-name: unSortAreaTabIconShake;
+	-moz-animation-name: unSortAreaTabIconShake;
+	-webkit-animation-name: unSortAreaTabIconShake;
+	-o-animation-name: unSortAreaTabIconShake;
+	-ms-animation-name: unSortAreaTabIconShake;
+}
+@keyframes unSortAreaTabIconShake {}
+@-webkit-keyframes unSortAreaTabIconShake {}
+@-moz-keyframes unSortAreaTabIconShake {}
+@-o-keyframes unSortAreaTabIconShake {}
+@-ms-keyframes unSortAreaTabIconShake {}

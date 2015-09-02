@@ -1,0 +1,14 @@
+html {
+    background: #edf0ef;
+}
+body {
+	font: 12px/1.231 arial,Tahoma,helvetica,clean,sans-serif;
+	position: relative;
+}
+a {
+    text-decoration: none;
+    color: #333
+}
+a:hover {
+    text-decoration: none
+}

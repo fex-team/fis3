@@ -1,0 +1,104 @@
+.toolbar-v{ background: #F5F7F7; overflow: hidden;*position: relative;}
+.toolbar-v a{ _display: inline; zoom: 1;}
+
+.toolbar-v .box-bot{
+    line-height: 20px;
+    padding-bottom: 0;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+#bottomTabs{
+	position: relative;
+	width: 97%;
+	height: 38px;
+	border-bottom:1px solid #eceeee;
+	margin-left: 15px;
+}
+#bottomTabs a{
+	display: inline-block;
+	width: 152px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	vertical-align: middle;	
+	font-size: 13px;
+	position: relative;
+	color:#686969;
+	font-weight: 600;
+}
+#bottomTabs a.title{
+	cursor: default;
+	text-align: left;
+}
+
+#bottomContent{
+	position: relative;
+	width: 100%;
+	height: auto;
+	border-bottom:1px solid #eceeee;
+	float: left;
+}
+#bottomContent div.cur{
+	display: block;
+}
+#bottomLinks{
+	padding-top: 18px; 
+	padding-left: 15px;
+	float: left;
+}
+.bottom_links-dd{
+	display: inline-block;
+	width: 130px;
+	height: 19px;
+	line-height: 19px;
+	font-size: 13px;
+	font-weight: 600;
+	*float: left;
+	
+}
+.bottom_links-dd a{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	vertical-align: middle;
+	display: inline-block;
+	color:#595959;
+}
+.bottom_links-dd a:hover{
+	background-color: #a7a7a7;
+	color: white;
+}
+.box-bot{
+	padding-bottom: 18px;
+	*padding-bottom: 38px;
+}
+
+
+.bottomTabs .triangle{
+	position: absolute;
+	bottom: 0;
+	border-color: transparent transparent #43c196 transparent;
+	border-style: dashed dashed solid dashed;
+	left: 70px;
+	display: none;
+}
+#bottomTabs a.cur{
+	border-bottom: 2px solid #00b075;
+	margin-top: -2px;
+	padding-top: 2px;
+}
+a.cur .triangle{
+	display: block;
+
+}
+.bottomContentItem{
+	display: none;
+}
+.toolbar-v .toolbar_menu{background: url(../img/dt-title-bg.png?__sprite) no-repeat;width: 114px;height: 19px; *float: left;}
+.toolbar-v .toolbar_menu,
+.toolbar-v .toolbar_menu a{ cursor: pointer; display:inline-block; padding-left: 3px;text-decoration: none;color: white;font-weight: 600;}
+
+
+
+.toolbar-v dd em{ float: right; color: #00b075; margin-right: 5px; font-size: 12px;}

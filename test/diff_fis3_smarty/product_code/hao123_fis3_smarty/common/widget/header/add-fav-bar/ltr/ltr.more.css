@@ -1,0 +1,71 @@
+/* set home & add fav top bar */
+
+.bar-addfav_inner{display: block;}
+.bar-addfav {
+    font-size: 14px;
+    height: 37px;
+    border-bottom: 1px solid #00894b;
+    background: url(../img/i-bar-bg.png?__sprite) repeat-x;
+    overflow: hidden;
+}
+.bar-addfav-inner {
+    height: 37px;
+    min-height: 37px;
+}
+.bar-addfav_title, .bar-addfav_text {
+    float: left;
+    line-height: 37px;
+    color: #009455;
+    padding-right: 5px;
+    font-weight: bold;
+}
+.bar-addfav_icon {
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    height: 13px;
+    width: 14px;
+    margin: 11px 5px 0 0;
+
+}
+.icon-setHome {
+   background: url(../img/i-bar-sethome.png?__sprite) no-repeat;
+}
+.icon-addFav {
+    background: url(../img/i-bar-addfav.png?__sprite) no-repeat;
+}
+.icon-download {
+    background: url(../img/i-bar-down.png?__sprite) no-repeat;
+}
+.bar-addfav_btn {
+    display: inline-block;
+    float: left;
+    color: #fff;
+    height: 19px;
+    line-height: 19px;
+    padding: 0 14px;
+    background: url(../img/i-bar-btn-bg.png?__sprite) repeat-x;
+    border: 1px solid #01a66f;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    margin: 8px 0 0 25px;
+    outline: none;
+}
+.bar-addfav_btn:hover {
+    background: url(../img/i-bar-btn-bg-hover.png?__sprite) repeat-x;
+    border: 1px solid #01925a;
+}
+.bar-addfav_close {
+    display: inline-block;
+    float: right;
+    overflow: hidden;
+    width: 10px;
+    height: 9px;
+    margin-top: 14px;
+    background: url(../img/i-close.png?__sprite) no-repeat;
+}
+.bar-addfav_close:hover {
+    background: url(../img/i-close-hover.png?__sprite) no-repeat;
+}

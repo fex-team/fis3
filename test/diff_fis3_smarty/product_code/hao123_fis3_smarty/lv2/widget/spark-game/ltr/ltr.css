@@ -1,0 +1,24 @@
+.order-spark-game {
+	border-color: #E1440D;
+}
+.mod-game .o-slogan {
+	text-align: center;
+	height: 68px;
+}
+
+
+/*支持手动配置和api组合*/
+.mod-game-wrap {
+	position: relative;
+	height: 222px;
+}
+.mod-game-wrap .game-more {
+	height: 50px;
+	position: absolute;
+	left: 11px;
+	width: 296px;
+	bottom: 0;
+	border-top: 1px dashed #B2B3B5;
+	overflow: hidden;
+	padding-top: 4px;
+}

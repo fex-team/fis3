@@ -1,0 +1,6 @@
+.mod-sidebar-iframe{
+	position: relative;
+}
+.mod-sidebar-iframe .loading{
+	height: 250px;
+}

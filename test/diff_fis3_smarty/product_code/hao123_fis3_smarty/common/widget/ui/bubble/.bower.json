@@ -1,0 +1,24 @@
+{
+  "name": "bubble",
+  "version": "0.1.3-pre",
+  "authors": [
+    "chenguangyin <chenguangyin@baidu.com>"
+  ],
+  "description": "A bubble plugin for jQuery.",
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "http://gitlab.pro/common-ui/bubble",
+  "ignore": [
+    "**/*",
+    "!src/**"
+  ],
+  "_release": "0.1.3-pre",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.3-pre",
+    "commit": "e2d7a4b8efa395f3f483aed56e3848dff2ecfb60"
+  },
+  "_source": "http://gitlab.pro/common-ui/bubble.git",
+  "_target": "*",
+  "_originalSource": "http://gitlab.pro/common-ui/bubble.git"
+}

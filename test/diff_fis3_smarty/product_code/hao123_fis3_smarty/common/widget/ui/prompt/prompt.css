@@ -1,0 +1,18 @@
+.box-prompt {
+	background: #ebfcf7;
+	border: 1px solid #ceded9;
+	border-bottom: 1px solid #beccc7;
+	position: absolute;
+	color: #454545;	
+	-moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    z-index: 100;
+}
+.box-prompt-inner{
+	border:1px solid #FFF;
+	border-bottom: none;
+	padding: 8px;
+	overflow: hidden;
+}

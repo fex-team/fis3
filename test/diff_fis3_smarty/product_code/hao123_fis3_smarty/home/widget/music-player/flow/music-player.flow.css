@@ -1,0 +1,15 @@
+.flow-on .mod-player .no-arrow{
+	width: 247px;
+}
+.flow-on .playlist-tabwrapper{
+	width: 217px;
+}
+.flow-on .playlist-tab li{
+	width: 116px;
+}
+.flow-on .no-arrow .playlist-tab li{
+	width: 131px;
+}
+.flow-on .playlist-name{
+	width: 235px;
+}

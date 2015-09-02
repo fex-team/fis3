@@ -1,0 +1,47 @@
+.mod-banner-site {
+	float: right;
+	position: relative;
+	height: 50px;
+	display: none;
+}
+.mod-banner-site .hd-item {
+	float: right;
+	width: 42px;
+	margin-right: 12px;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}
+.mod-banner-site .item-first {
+	margin-right: 0;
+}
+.mod-banner-site .game {
+	background-image: url(../img/game.png);
+}
+.mod-banner-site .picture {
+	background-image: url(../img/picture.png);
+}
+.mod-banner-site .video {
+	background-image: url(../img/video.png);
+}
+.mod-banner-site .game:hover {
+	background-color: #ff5c0d;
+	background-color: rgba(155,92,13,0.8);
+}
+.mod-banner-site .picture:hover {
+	background-color: #e51c63;
+	background-color: rgba(229,28,99,0.8);
+}
+.mod-banner-site .video:hover {
+	background-color: #1B1B1B;
+	background-color: rgba(27, 27, 27,0.8);
+}
+
+/*head fixed*/
+.header-fixed-st .mod-banner-site {
+	height: 40px;
+}
+.header-fixed .mod-banner-site {
+	display: block;
+}

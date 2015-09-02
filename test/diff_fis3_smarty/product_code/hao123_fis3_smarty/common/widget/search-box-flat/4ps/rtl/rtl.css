@@ -1,0 +1,18 @@
+/* for PS */
+body .sg_tri input,
+body .sg_v_tri input {
+	width: 482px !important;
+}
+.sg_btn,
+.sg_v_btn {
+	position: absolute;
+}
+
+/*fix label*/
+body .box-search_form .radios label {
+	padding-right: 22px;
+}
+.w960 .sg_tri input,
+.w960 .sg_v_tri input {
+	width: 403px !important;
+}

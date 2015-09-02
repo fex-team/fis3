@@ -1,0 +1,199 @@
+/*日本iTunes音乐模块*/
+.mod-iTunesMusic{
+	background:#f5f7f7;
+}
+.mod-iTunesMusic .im-tabControl{
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	background:url(../img/tab-normal-bg.png?__sprite) repeat-x;
+}
+.mod-iTunesMusic .im-tabControl li{
+	float:left;
+	position:relative;
+}
+.mod-iTunesMusic .im-tabControl a{
+	display:block;
+	line-height:30px;
+	/*background:url(../img/tab-normal-bg.png?__sprite) repeat-x;*/
+	text-align:center;
+	border:1px solid #edeff0;
+	border-top-color:#fff;
+	border-left:0;
+}
+.mod-iTunesMusic .im-tabControl a:hover{
+	border-right-color:#e6e8e9;
+	border-bottom-color:#e3e5e5;
+	-moz-box-shadow:0px 2px 0px 0px rgba(227, 229, 229, 0.1);
+	-webkit-box-shadow:0px 2px 0px 0px rgba(227, 229, 229, 0.1);
+	box-shadow:0px 2px 0px 0px rgba(227, 229, 229, 0.1);
+	font-weight:600;
+	color:#00b075;
+}
+.mod-iTunesMusic .im-tabControl a.current{
+	background:#f5f7f7;
+	border-bottom-color:#f5f7f7;
+	font-weight:600;
+	color:#00b075;
+	cursor:default;
+}
+.mod-iTunesMusic .im-tabControl a.current:hover{
+	border-right-color:#edeff0;
+	border-bottom-color:#f5f7f7;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+.mod-iTunesMusic .im-tabControl .last{
+	border-right:0;
+}
+
+.mod-iTunesMusic .container{
+	height: 435px;
+	overflow: hidden;
+}
+
+
+/*rank-unit*/
+.mod-iTunesMusic .rank-unit{
+	height: 108px;
+	border-bottom: 1px solid #E3E5E6;
+}
+.mod-iTunesMusic .rank-unit .media {
+    float: left;
+	width: 75px;
+	padding: 10px 10px 0 13px;
+}
+.mod-iTunesMusic .rank-unit .media .rank-photo{
+	width: 75px;
+	height: 75px;
+	display: block;
+	position: relative;
+}
+.mod-iTunesMusic .rank-unit .media .ic-rank{
+	position: absolute;
+	display: none;
+	width: 17px;
+	height: 15px;
+	top: -5px;
+	left: -2px;
+	background:url(../img/rank-bg.png?__sprite);
+	color: #fff;
+	text-align: center;
+	line-height: 18px;
+}
+.mod-iTunesMusic .rank-unit .media .rank-img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.mod-iTunesMusic .rank-unit .media .rank-price1{
+	display: block;
+	background: #646565;
+	height: 14px;
+	color: #fff;
+	text-align: center;
+}
+.mod-iTunesMusic .rank-unit .media .rank-price0{
+	display: none;
+}
+.mod-iTunesMusic .rank-unit .content {
+    overflow: hidden;
+    padding: 10px 0;
+}
+.mod-iTunesMusic .rank-unit .content .rank-title{
+	font-size: 14px;
+	height: 26px;
+	padding: 0 10px 10px 0;
+	word-break: break-all;
+	display: block;
+	overflow: hidden;
+}
+.mod-iTunesMusic .rank-unit .content .info-font{
+	display: block;
+	color: #595757;
+	line-height: 15px;
+	height: 15px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.mod-iTunesMusic .rank-unit .content .action-btn{
+	position: relative;
+	width: 43px;
+	height: 20px;
+	display: inline-block;
+	/*border: 1px solid #03aa71;*/
+	/*border-radius: 2px;*/
+	/*background: #03c584;*/
+	color: #fff;
+	line-height: 20px;
+	text-align: center;
+	padding-left: 13px;
+	background:url(../img/video-btn.png?__sprite);
+}
+.mod-iTunesMusic .rank-unit .content .action-btn:hover{
+	background:url(../img/video-btn-hover.png?__sprite);
+}
+.mod-iTunesMusic .rank-unit .content .action-btn i{
+	position: absolute;
+	left: 9px;
+	display: block;
+}
+.mod-iTunesMusic .rank-unit .content .on .action-btn i{
+	top: 3px;
+	width: 9px;
+	height: 13px;
+	display: block;
+	background:url(../img/btn-play.png?__sprite);
+}
+.mod-iTunesMusic .rank-unit .content .off .action-btn i{
+	top: 5px;
+	width: 10px;
+	height: 10px;
+	display: block;
+	background:url(../img/btn-stop.png?__sprite);
+}
+.mod-iTunesMusic .rank-unit .content .on .action-btn i{
+	top: 3px;
+	width: 9px;
+	height: 13px;
+	display: block;
+	background:url(../img/btn-play.png?__sprite);
+}
+.mod-iTunesMusic .rank-unit .content .store-btn{
+	display: inline-block;
+	width: 100px;
+	height: 20px;
+	border-radius: 2px;
+	margin-left: 10px;
+	line-height: 20px;
+	text-align: center;
+}
+.mod-iTunesMusic .rank-unit .content .on .store-btn{
+	border: 1px solid #04a56e;
+	color: #05ae76;
+	background: #fff;
+}
+.mod-iTunesMusic .rank-unit .content .on .store-btn:hover{
+	color: #088e61;
+}
+.mod-iTunesMusic .rank-unit .content .off .store-btn{
+	border: 1px solid #dd5a19;
+	color: #fff;
+	background: #f6702e;
+}
+.mod-iTunesMusic .rank-unit .content .off .store-btn:hover{
+	background: #e35f1e;
+}
+.mod-iTunesMusic .video-wrap{
+	position: relative;
+}
+.mod-iTunesMusic .video-wrap i{
+	position: absolute;
+	background: url(../img/video-arrow.png?__sprite) no-repeat;
+	width: 6px;
+	height: 5px;
+	top: -5px;
+	left: 47px; 
+	display: block;
+}

@@ -1,0 +1,62 @@
+/* For 300px layout */
+.flow-on .mod-charts .chartslist{
+	padding:20px 13px 10px;
+	height:280px;
+}
+.flow-on .charts-imgitem{
+	width:130px;
+	margin-bottom:10px;
+}
+.flow-on .charts-mask{
+	width:130px;
+}
+.flow-on .charts-mode1 .charts-imgitem img{
+	height:98px;
+}
+.flow-on .charts-mode1 .charts-mask{
+	height:98px;
+}
+.flow-on .charts-mode2 .charts-imgitem img{
+	height:130px;
+}
+.flow-on .charts-mode2 a:hover .charts-mask{
+	height:130px;
+}
+.flow-on .charts-mode2 .charts-name {
+	width: 110px;
+}
+.flow-on .charts-mode3 .charts-imgitem img{
+	height: 156px;
+}
+.flow-on .charts-mode3 a:hover .charts-mask{
+	height:156px;
+}
+.flow-on .charts_error{
+	top:140px;
+}
+
+.flow-on .charts-mode4 .chartslist{
+	height:200px;
+}
+.flow-on .charts-mode4 .container a img{
+	width: 270px;
+	height: 184px;
+}
+/*bg icon for music chart*/
+.flow-on .charts-music .icon-bg{
+	background: #f5f7f7 url(../img/charts-music-bg.png?__sprite) no-repeat;
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	bottom: 15px;
+}
+.flow-on .charts-music ul{
+	position: relative;
+}
+.flow-on .charts-song,
+.flow-on .charts-singer{
+	width: 195px;
+}
+.flow-on .charts-item{
+	padding-bottom: 16px;
+}

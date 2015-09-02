@@ -1,0 +1,156 @@
+.ui-bubble-anniversary{
+	position: absolute;
+	width: 196px;
+	border-color: #88b738;
+	border-radius: 10px;
+	z-index: 110 !important;
+	background-color: #fff;
+}
+.ui-bubble-anniversary .ui-bubble_close{
+	color: #ffbdc3;
+}
+.ui-bubble-anniversary .ui-arrow{
+	color: #81b32d;
+}
+.ui-bubble-anniversary.ui-bubble-r .ui-bubble_out{
+	border-left-color: #81b32d; 
+}
+.ui-bubble-anniversary.ui-bubble-b .ui-bubble_out{
+	border-top-color: #81b32d;
+}
+.ui-bubble-anniversary.ui-bubble-l .ui-bubble_out{
+	border-right-color: #81b32d;
+}
+.ui-bubble-anniversary.ui-bubble-t .ui-bubble_out{
+	border-bottom-color: #81b32d;
+}
+.ui-bubble-anniversary.ui-bubble-r .ui-bubble_in,
+.ui-bubble-anniversary.ui-bubble-r .ui-bubble_out,
+.ui-bubble-anniversary.ui-bubble-l .ui-bubble_in,
+.ui-bubble-anniversary.ui-bubble-l .ui-bubble_out{
+	top: 30px;
+}
+.ui-bubble-anniversary.ui-bubble-b .ui-bubble_in,
+.ui-bubble-anniversary.ui-bubble-b .ui-bubble_out,
+.ui-bubble-anniversary.ui-bubble-t .ui-bubble_in,
+.ui-bubble-anniversary.ui-bubble-t .ui-bubble_out{
+	left: 100px;
+}
+.ui-bubble-anniversary .decorate{
+	display: block;
+	position: absolute;
+	bottom: -6px;
+	left: -7px;
+	width: 103px;
+	height: 88px;
+	background-image: url(../img/anniversary02.png); 
+	background-position: 0 -120px;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.ui-bubble-anniversary .ui-bubble_t{
+	margin: 10px 20px 5px 40px;
+	min-height: 30px;
+	z-index: 2;
+
+}
+.ui-bubble-anniversary .ui-btn{
+	display: block;
+	visibility: hidden;
+	border-color: #81b32d;
+	background-color: #88cc35;
+	background-image: -webkit-linear-gradient(top, #8bce36, #7fc831, #75c42e);
+	background-image: -moz-linear-gradient(top, #8bce36, #7fc831, #75c42e);
+	background-image: linear-gradient(top, #8bce36, #7fc831, #75c42e);
+}
+.ui-bubble-anniversary .ui-btn.show{
+	visibility: visible;
+}
+/*.mod-anniversary.bottom{
+	border-bottom: 2px solid #88b738;
+}
+.mod-anniversary.left{
+	border-left: 2px solid #88b738;
+}
+.mod-anniversary.top{
+	border-top: 2px solid #88b738;
+}
+.mod-anniversary.right{
+	border-right: 2px solid #88b738;
+}
+.mod-anniversary .description{
+	margin: 10px 0 30px 40px;
+	width: 128px;
+	min-height: 30px;
+	z-index: 2;
+
+}
+.mod-anniversary span{
+	display: block;
+	position: absolute;
+}
+.mod-anniversary .decorate{
+	bottom: -6px;
+	left: -7px;
+	width: 103px;
+	height: 88px;
+	background-position: 0 -120px;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.mod-anniversary .closer{
+	cursor: pointer;
+	right: 10px;
+	top: 10px;
+	width: 7px;
+	height: 7px;
+	background-position: 0 -100px;
+	background-repeat: no-repeat;
+}
+.mod-anniversary .btn{
+	cursor: pointer;
+	width: 58px;
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+	bottom: 10px;
+	right: 10px;
+	color: #fff;
+	border: 1px solid #85b634;
+	background-position: 0 -80px;
+	background-repeat: no-repeat;
+}
+.mod-anniversary .bottom{
+	width: 18px;
+	height: 10px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	bottom: -10px;
+	right: 30px;
+}
+.mod-anniversary .left{
+	width: 10px;
+	height: 18px;
+	background-position: 0 -20px;
+	background-repeat: no-repeat;
+	top: 30px;
+	left: -10px;
+}
+.mod-anniversary .top{
+	width: 18px;
+	height: 10px;
+	background-position: 0 -60px;
+	background-repeat: no-repeat;
+	right: 30px;
+	top: -10px;
+}
+.mod-anniversary .right{
+	width: 10px;
+	height: 18px;
+	background-position: 0 -40px;
+	background-repeat: no-repeat;
+	top: 30px;
+	right: -10px;
+}
+
+*/

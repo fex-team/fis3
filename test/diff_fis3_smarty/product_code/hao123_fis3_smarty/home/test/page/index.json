@@ -1,0 +1,9 @@
+{
+    "title" : "来自json数据的标题",
+    "xss_data" : "<b>我不可以变成粗体！</b>",
+    "menu" : [
+        { "href" : "http://www.baidu.com", "title" : "百度首页"},
+        { "href" : "http://zhidao.baidu.com", "title" : "百度知道"},
+        { "href" : "http://ting.baidu.com", "title" : "Ting"}
+    ]
+}

@@ -1,0 +1,17 @@
+/*分类导航区样式*/
+
+.mod-useful{ padding-left:4px; padding-right:4px; background:#F5F7F7;}
+.mod-useful dt{ padding-right:9px;}
+.mod-useful dd a{ display:block; line-height:29px; height:29px; padding-right:10px}
+.mod-useful dd a:hover{ background-color:#e8eaeb; border-radius:2px;}
+.mod-useful dd{ width:50%; _width: 49%; float:right;}
+.mod-useful .long{width:100%;}
+
+/*显示模块*/
+.side-mod-preload-useful{
+    border:0!important;
+    background: transparent!important;
+}
+.side-mod-preload-useful > *{
+    visibility: visible!important;
+}

@@ -1,0 +1,648 @@
+.speed-test_panel,
+.speed-test_control,
+.speed-test_result_more,
+.speed-test_show,
+.speed-test--result .speed-test_result{
+    background: url(../panel.jpg);
+}
+
+.speed-test{ direction: ltr;}
+
+.speed-test_needle {
+    background: url(../needle.png);
+}
+
+.speed-test_panel {
+    background-color: #DEE6E6;
+    border-bottom: 1px solid #F0F2F3;
+    position: relative;
+    overflow: hidden;
+    /*width: 240px;*/
+    width: 100%;
+    height: 195px;
+    -ms-transition: height .3s ease-out;
+    -webkit-transition: height .3s ease-out;
+    -moz-transition: height .3s ease-out;
+    -o-transition: height .3s ease-out;
+    transition: height .3s ease-out;
+}
+
+.speed-test_needle {
+    width: 92px;
+    height: 20px;
+    position: absolute;
+    left: 37px;
+    top: 102px;
+    transform: rotate(6deg);
+    transform-origin: 90% 42%;
+    -ms-transform: rotate(6deg);
+    -ms-transform-origin: 90% 42%;
+    -webkit-transform: rotate(6deg);
+    -webkit-transform-origin: 90% 42%;
+    -moz-transform: rotate(6deg);
+    -moz-transform-origin: 90% 42%;
+    -o-transform: rotate(6deg);
+    -o-transform-origin: 90% 42%;
+    -ms-transition: -ms-transform .3s ease-out;
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -moz-transition: -moz-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+}
+
+.speed-test_chart_wrap {
+    width: 85px;
+    height: 27px;
+    position: absolute;
+    left: 30px;
+    top: 150px;
+    background: #fff;
+    overflow: hidden;
+    display: none\0;
+    *display: none;
+    -moz-box-shadow: 1px 1px 1px #999 inset;
+    -webkit-box-shadow: 1px 1px 1px #999 inset;
+    box-shadow: 1px 1px 1px #999 inset;
+}
+
+.speed-test_chart_wrap canvas {
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
+
+.speed-test_bandwidth {
+    width: 54px;
+    position: absolute;
+    display: inline-block;
+    top: 129px;
+    left: 37px;
+    *left: 34px;
+    color: #fff;
+    -webkit-text-size-adjust: none;
+    font: 11px "courier new",Tahoma;
+    letter-spacing: 4px;
+    text-align: right;
+}
+
+.speed-test_hide {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+}
+
+.speed-test_control {
+    height: 61px;
+    background-color: #16A462;
+    background-position: 0 -233px;
+    color: #fff;
+    text-shadow: 1px 2px 1px #009E69;
+    position: relative;
+}
+
+.speed-test_btn {
+    width: 95px;
+    height: 25px;
+    line-height: 25px;
+    float: right;
+    _display: inline;
+    position: relative;
+    z-index: 1;
+    margin: 24px 8px 0 0;
+    border: 1px solid #009E69;
+    text-align: center;
+    text-shadow: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-image: -moz-linear-gradient(top,#fefefe 0,#dde4ec 100%);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0,#fefefe),color-stop(1,#dde4ec));
+    background-image: -webkit-linear-gradient(top,#fefefe 0,#dde4ec 100%);
+    background-image: -o-linear-gradient(top,#fefefe 0,#dde4ec 100%);
+    background-image: -ms-linear-gradient(top,#fefefe 0,#dde4ec 100%);
+    background-image: linear-gradient(top,#fefefe 0,#dde4ec 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#fffefefe, endColorstr=#ffdde4ec, GradientType=0)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fffefefe, endColorstr=#ffdde4ec, GradientType=0);
+}
+
+.speed-test_btn a {
+    width: 100%;
+    height: 25px;
+    text-decoration: none;
+    color: #333;
+    font: bold 13px Tahoma;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+    line-height: 25px;
+}
+
+.speed-test_start {
+    position: relative;
+}
+
+.speed-test_progress {
+    width: 0;
+    height: 25px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    background-image: -moz-linear-gradient(top,#fbad7e 0,#f87d33 100%);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0,#fbad7e),color-stop(1,#f87d33));
+    background-image: -webkit-linear-gradient(top,#fbad7e 0,#f87d33 100%);
+    background-image: -o-linear-gradient(top,#fbad7e 0,#f87d33 100%);
+    background-image: -ms-linear-gradient(top,#fbad7e 0,#f87d33 100%);
+    background-image: linear-gradient(top,#fbad7e 0,#f87d33 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#fffbad7e, endColorstr=#fff87d33, GradientType=0)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fffbad7e, endColorstr=#fff87d33, GradientType=0);
+}
+
+.speed-test_result {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+}
+
+.speed-test_result em {
+    width: 90px;
+    height: 33px;
+    margin-right: 3px;
+    font-style: normal;
+    font: 24px Tahoma;
+    display: inline-block;
+    overflow: hidden;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.speed-test_result span {
+    min-width: 30px;
+    font-style: italic;
+    font-size: 11px;
+    position: absolute;
+    bottom: 5px;
+}
+
+.speed-test_result_more {
+    /*width: 240px;*/
+    width: 100%;
+    height: 32px;
+    background-position: 0 -195px;
+    display: none;
+    position: relative;
+    top: -20px;
+    padding-top: 17px;
+}
+
+.speed-test_ip {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    z-index: 9;
+    -webkit-text-size-adjust: none;
+    font: 11px Tahoma;
+    display: inline-block;
+}
+
+.speed-test_show {
+    width: 100%;
+    height: 19px;
+    background-position: 0 -356px;
+    cursor: pointer;
+    display: none;
+}
+
+.speed-test_info {
+    width: 115px;
+    height: 52px;
+    line-height: 1.1;
+    font-size: 15px;
+    margin-left: 7px;
+    margin-top: 5px;
+    z-index: 10;
+    font-family: tahoma;
+    display: none;
+    position: absolute;
+    background: #00B075;
+}
+
+.speed-test--cover .speed-test_panel {
+    height: 0;
+}
+
+.speed-test--cover .speed-test_result {
+    display: none;
+}
+
+.speed-test--cover .speed-test_control {
+    background-position: 0 -296px;
+}
+
+.speed-test--hide .speed-test_panel {
+    height: 0;
+}
+
+.speed-test--hide .speed-test_show {
+    display: block;
+}
+
+.speed-test--result .speed-test_result_more {
+    display: block;
+}
+
+.speed-test--result .speed-test_chart_wrap {
+    z-index: 9;
+    top: auto;
+    bottom: 0;
+    left: 141px;
+}
+
+.speed-test--error .speed-test_info {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.speed-test_ip,.speed-test_showtime,.speed-test_result_t,.speed-test_result_info {
+    display: none;
+}
+
+.speed-test_result_t {
+    padding-left: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-shadow: none;
+}
+
+.speed-test_hide {
+    z-index: 9;
+}
+
+.speed-test--result .speed-test_result {
+    background-position: 0 -389px;
+    /*width: 240px;*/
+    width: 100%;
+    height: 255px;
+}
+
+.speed-test--result .speed-test_result_more {
+    background: 0;
+}
+
+.speed-test_result_info {
+    color: #474748;
+    text-shadow: none;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.speed-test_result_info a {
+    color: #474748;
+    text-decoration: underline;
+}
+
+.speed-test_result_info li {
+    background: url(../i_speedtest.png) -38px 3px no-repeat;
+    padding-left: 12px;
+}
+
+.speed-test_ip {
+    color: #474748;
+    text-shadow: none;
+    width: 120px;
+    line-height: 18px;
+    left: 10px;
+    bottom: 10px;
+    top: auto;
+}
+
+.speed-test_ip p {
+    color: #999;
+}
+
+.speed-test_ip span {
+    font-style: normal;
+    position: static;
+}
+
+.speed-test--result em {
+    font-size: 18px;
+}
+
+.speed-test--result .speed-test_result_more {
+    width: 100px;
+    top: 15px;
+    padding-top: 17px;
+    float: left;
+    left: -10px;
+}
+
+.speed-test--result .speed-test_result span {
+    top: 69px;
+}
+
+.speed-test--result .speed-test_result_more span {
+    top: 23px;
+}
+
+.speed-test--result .speed-test_result_bandwidth {
+    top: 0;
+}
+
+.speed-test--result .speed-test_result_down {
+    margin-left: 15px;
+    margin-top: 32px;
+}
+
+.speed-test_faster em {
+    width: auto;
+    bottom: -5px;
+    position: relative;
+    color: #ff1f19;
+    font-weight: bold;
+}
+
+.speed-test_grade span {
+    position: relative;
+    top: auto!important;
+    bottom: -5px;
+    left: 10px;
+}
+
+.speed-test_grade i {
+    background: url(../i_speedtest.png) 0 0;
+    width: 22px;
+    height: 26px;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.speed-test--result .speed-test_btn {
+    border-color: #ccc;
+}
+
+.speed-test--result .speed-test_chart_wrap {
+    display: none;
+}
+
+.speed-test--result .speed-test_result_t,.speed-test--result .speed-test_ip,.speed-test--result .speed-test_showtime,.speed-test--result .speed-test_result_info {
+    display: block;
+}
+
+.speed-test_result_more{ background: none;}
+
+.speed-test_result_info li {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 12px;
+    background: none;
+}
+
+.speed-test_result_info {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.speed-test_grade span {
+    margin-right: 10px;
+}
+/*image ad in result panel*/
+.speed-test_result_info .speed-test_imagead{
+    margin-left: 10px;
+    border-top: 1px solid #e5e6e6;
+    border-bottom: 1px solid #f3f4f7;
+    background: none;
+    padding-right: 0;
+}
+.speed-test_imagead-inner{
+    padding-top: 6px;
+    padding-right: 12px;
+    border-top: 1px solid #f3f4f7;
+    border-bottom: 1px solid #e5e6e6;
+    overflow: hidden;
+}
+.speed-test-adpic{
+    float: right;
+    width: 63px;
+    height: 69px;
+}
+.speed-test-adtext{
+    overflow: hidden;
+    zoom: 1;
+    padding-right: 15px;
+    padding-top: 3px;
+    line-height: 1.4;
+}
+.speed-test-addesc,
+.speed-test-adlink{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    /*word-wrap: break-word;*/
+    word-break: break-all;
+}
+.speed-test_result_info .speed-test-adlink{
+    color: #01ad82;
+    padding-bottom: 7px;
+    padding-top: 4px;
+    display: block;
+    text-decoration: none;
+}
+.speed-test-adlink:hover,
+.speed-test-adlink:hover .arrow_r{
+    text-decoration: underline;
+}
+
+/*显示模块*/
+.side-mod-preload-speed-test{
+    border:0!important;
+    background: transparent!important;
+}
+.side-mod-preload-speed-test > *{
+    visibility: visible!important;
+}
+
+/*facebook share button*/
+.speed-test_fbshare{
+    height: 37px;
+    margin-top: 15px;
+    text-align: center;
+    display:none;
+}
+.speed-test--result .speed-test_fbshare{
+    display: block;
+}
+.speed-test_fbshare .ui-o{
+    width: 36px;
+    height: 36px;
+    display: none;
+}
+.speed-test_fbsharebtn{
+    display: inline-block;
+    height: 100%;
+    outline: 0;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+.speed-test_fbshare strong{
+    padding: 0 21px 0 16px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 37px;
+    float: right;
+    text-shadow: none;
+}
+.speed-test_fbshare i{
+    background: url(../fb-btn-normal.png?__sprite);
+    width: 37px;
+    height: 37px;
+    display: inline-block;
+}
+.speed-test_fbsharebtn:hover i{
+    background: url(../fb-btn-hover.png?__sprite);
+}
+.speed-test_fbsharebtn:active i{
+    background: url(../fb-btn-active.png?__sprite);
+}
+.gradient-bg-darkblue {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    background-color: #7d94d5;
+    background-image: -moz-linear-gradient(top,#7d94d5,#425fb0 100.0%);
+    background-image: -webkit-linear-gradient(top,#7d94d5,#425fb0 100.0%);
+    background-image: -o-linear-gradient(top,#7d94d5,#425fb0 100.0%);
+    background-image: -ms-linear-gradient(top,#7d94d5,#425fb0 100.0%);
+    background-image: linear-gradient(top,#7d94d5,#425fb0 100.0%);
+    border:none;
+}
+a.gradient-bg-darkblue{
+    color: #fff;
+}
+.gradient-bg-darkblue:hover {
+    background-color: #8ca2e2;
+    background-image: -moz-linear-gradient(top,#8ca2e2,#5571c1 100.0%);
+    background-image: -webkit-linear-gradient(top,#8ca2e2,#5571c1 100.0%);
+    background-image: -o-linear-gradient(top,#8ca2e2,#5571c1 100.0%);
+    background-image: -ms-linear-gradient(top,#8ca2e2,#5571c1 100.0%);
+    background-image: linear-gradient(top,#8ca2e2,#5571c1 100.0%);
+    /* -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.3);
+    -o-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.3);
+    -ms-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.3); */
+}
+.gradient-bg-darkblue:active {
+    background-color: #5572c2;
+    background-image: -moz-linear-gradient(top,#3b58a8,#5572c2 100.0%);
+    background-image: -webkit-linear-gradient(top,#3b58a8,#5572c2 100.0%);
+    background-image: -o-linear-gradient(top,#3b58a8,#5572c2 100.0%);
+    background-image: -ms-linear-gradient(top,#3b58a8,#5572c2 100.0%);
+    background-image: linear-gradient(top,#3b58a8,#5572c2 100.0%);
+}
+.speed-test_fbshare-disable,
+.speed-test_fbshare-disable:hover,
+.speed-test_fbshare-disable:active{
+    background: #c0c0c0;
+    cursor: default;
+}
+.speed-test_fbshare-disable i,
+.speed-test_fbshare-disable:hover i,
+.speed-test_fbshare-disable:active i{
+    background: url(../fb-btn-disable.png?__sprite);
+}
+
+/*speedtest in magicbox*/
+.mod-magicbox .speed-test,
+.mod-magicbox .speed-test_show,
+.mod-magicbox .speed-test_panel,
+.mod-magicbox .speed-test .speed-test_control,
+.mod-magicbox .speed-test--result .speed-test_result,
+.mod-custom-sidebar .speed-test,
+.mod-custom-sidebar .speed-test_show,
+.mod-custom-sidebar .speed-test_panel,
+.mod-custom-sidebar .speed-test .speed-test_control,
+.mod-custom-sidebar .speed-test--result .speed-test_result,
+#sidetoolbarContainer .speed-test,
+#sidetoolbarContainer .speed-test_show,
+#sidetoolbarContainer .speed-test_panel,
+#sidetoolbarContainer .speed-test .speed-test_control,
+#sidetoolbarContainer .speed-test--result .speed-test_result{
+    background-image: url(../panel-box.jpg);
+}
+.mod-magicbox .speed-test,
+.mod-custom-sidebar .speed-test,
+#sidetoolbarContainer .speed-test{
+    background-position: 0 0;
+    padding-top: 15px;
+    /*margin-left: -2px;*/
+    margin-top:-1px;
+    /*width: 240px;*/
+    width: 100%;
+}
+.mod-magicbox .speed-test_panel,
+.mod-custom-sidebar .speed-test_panel,
+#sidetoolbarContainer .speed-test_panel{
+    background-position: 0 -14px;
+    padding-bottom: 17px;
+    height: 195px;
+}
+.mod-magicbox .speed-test .speed-test_control,
+.mod-custom-sidebar .speed-test .speed-test_control,
+#sidetoolbarContainer .speed-test .speed-test_control{
+    background-position: 0 -266px;
+    height: 72px;
+}
+.mod-magicbox .speed-test--cover .speed-test_control,
+.mod-custom-sidebar .speed-test--cover .speed-test_control,
+#sidetoolbarContainer .speed-test--cover .speed-test_control{
+    /*background-image: url(../panel-box.jpg);*/
+    background-position: 0 -339px;
+}
+.mod-magicbox .speed-test_bandwidth,
+.mod-custom-sidebar .speed-test_bandwidth,
+#sidetoolbarContainer .speed-test_bandwidth{
+    left: 41px;
+}
+.mod-magicbox .speed-test_info,
+.mod-custom-sidebar .speed-test_info,
+#sidetoolbarContainer .speed-test_info{
+    height: 52px;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+.mod-magicbox .speed-test_btn,
+.mod-custom-sidebar .speed-test_btn,
+#sidetoolbarContainer.speed-test_btn{
+    margin-top:32px;
+}
+.mod-magicbox .speed-test_hide,
+.mod-custom-sidebar .speed-test_hide,
+.#sidetoolbarContainer .speed-test_hide{
+    display:none;
+}
+.mod-magicbox .speed-test_result,
+.mod-custom-sidebar .speed-test_result,
+#sidetoolbarContainer .speed-test_result{
+    margin-bottom:5px;
+}
+.mod-magicbox .speed-test--result .speed-test_result,
+.mod-custom-sidebar .speed-test--result .speed-test_result,
+#sidetoolbarContainer .speed-test--result .speed-test_result{
+    background-position: 0 -427px;
+    height: 300px;
+    margin-bottom:0;
+}
+.mod-magicbox .speed-test--result .speed-test_result_more,
+.mod-custom-sidebar .speed-test--result .speed-test_result_more,
+#sidetoolbarContainer .speed-test--result .speed-test_result_more{
+    background: 0;
+}

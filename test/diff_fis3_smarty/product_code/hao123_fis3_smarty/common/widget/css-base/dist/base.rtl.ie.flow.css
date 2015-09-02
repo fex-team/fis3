@@ -1,0 +1,30 @@
+.w960{
+    min-width: 960px;
+}
+.w1020{
+    min-width: 1020px;
+}
+.l-flow-side{
+    width: 300px;
+    float: right;
+}
+.l-flow-main{
+    float: right;
+    width: 720px;
+}
+.w1020 .l-wrap{
+    width: 1020px;
+}
+.w960 .l-flow-main{
+    width: 660px;
+}
+
+.w1120 {
+    min-width: 1120px;
+}
+.w1120 .l-wrap {
+    width: 1120px;
+}
+.w1120 .l-flow-main {
+    width: 820px;
+}

@@ -1,0 +1,355 @@
+/*sidebar外框*/
+.mod-custom-sidebar{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;		
+	z-index: 300; 
+	display: block !important;
+}
+.mod-custom-sidebar .sidebar-wrap{
+	width: 45px;
+	height: 100%;
+	background-color: #dbdedd;
+}
+.mod-custom-sidebar .sidebar-fold{
+	margin-left: -50px;
+}
+
+
+
+/*通用动画*/
+.mod-custom-sidebar .trans-all{
+	transition: all 0.3s;
+}
+/*所有icon通用样式*/
+.mod-custom-sidebar .icons-wrap{
+	position: relative;
+	width: 45px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	cursor: pointer;
+}
+.mod-custom-sidebar .icons-wrap .icons{
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+}
+.mod-custom-sidebar .show{
+	display: block !important;
+}
+.mod-custom-sidebar .widget-load{
+	position: absolute;
+	display: block;
+	top: 100px;
+	left: 110px;
+	width: 100%;
+	height: 16px;
+	background: url(../img/widget_loading.gif) no-repeat;
+}
+
+
+/*展开/收起sidebar的开关*/
+.mod-custom-sidebar .sidebar-switch{
+	position: absolute;
+	height: 45px;
+	bottom: 0px;
+}
+/*sidebar展开的时候*/
+.mod-custom-sidebar .arrow-wrap{
+	position: absolute;
+	bottom: 8px;
+	width: 62px;
+	height: 49px;
+	z-index: -1;
+	left: -17px;
+	background: url(../img/arrow-wrap.png?__sprite) no-repeat;
+}
+.mod-custom-sidebar .switch-arrow{
+	display: block;
+	width: 25px;
+	height: 24px;
+	margin-left: 10px;
+	background: url(../img/i-closebar.png?__sprite) no-repeat;
+}
+.mod-custom-sidebar .switch-arrow:hover{
+	cursor: pointer;
+	background: url(../img/i-closebar-hover.png?__sprite) no-repeat;
+}
+/*sidebar收起的时候*/
+.mod-custom-sidebar .switch-out .arrow-wrap{
+	left: 0;
+}
+.mod-custom-sidebar .switch-out .switch-arrow{
+	margin-left: 25px;
+	background: url(../img/i-openbar.png?__sprite) no-repeat;
+}
+.mod-custom-sidebar .switch-out .switch-arrow:hover{
+	background: url(../img/i-openbar-hover.png?__sprite) no-repeat;
+}
+
+
+
+
+/*展开定制APP模块的icon*/
+.mod-custom-sidebar .open-apps{
+	position: absolute;
+	bottom: 54px;
+}
+.mod-custom-sidebar .open-apps .icons{
+	background: url(../img/i-apps.png?__sprite) no-repeat;
+}
+
+
+
+/*app列表*/
+.mod-custom-sidebar .apps-wrap{
+	position: relative;
+	max-height: 660px;
+}
+.mod-custom-sidebar .applist{
+	position: relative;
+	width: 45px;
+	height: auto;
+}
+.mod-custom-sidebar .app-icons-wrap:hover,.mod-custom-sidebar .app-selected,.mod-custom-sidebar .app-hover{
+	background-color: #c6c7ca;
+}
+/*app鼠标hover以后的提示语*/
+.mod-custom-sidebar .hover-tip{
+	position: absolute;
+	height: 60px;
+	line-height: 16px;
+	width: 150px;	
+	left: 45px;
+	top: 0;
+	background-color: #c6c7ca;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: white;
+    text-align: center;
+    display: none;
+    text-align: left;
+    padding:0 10px;
+}
+.mod-custom-sidebar .hover-tip span{
+	display: table-cell;
+	vertical-align: middle;
+	color: #808080;
+}
+.mod-custom-sidebar .dis-table{
+	display: table;
+}
+/*app删除按钮*/
+.mod-custom-sidebar .delete-app{
+	position: absolute;
+	display: none;
+	width: 18px;
+	height: 16px;
+	top: 5px;
+	right: -3px;
+	background: url(../img/i-delete-app.png?__sprite) no-repeat;
+}
+/*appicon的白色箭头*/
+.mod-custom-sidebar b.ui-arrow-l{
+	border-right-color:white;
+	right: 0px;
+	left: auto;
+}
+.mod-custom-sidebar b.ui-arrow{
+	display: none;
+	right: -1px;
+}
+.mod-custom-sidebar .app-selected b.ui-arrow{
+	display: block;
+}
+
+/*app切屏按钮*/
+.mod-custom-sidebar .app-switch{
+	position: absolute;
+	bottom: 114px;
+	border-top: 1px solid #c7c7c7;
+	border-bottom: 1px solid #c7c7c7;
+	display: none;
+}
+.mod-custom-sidebar .switch-icon{
+	background: url(../img/i-scroll.png?__sprite) no-repeat;
+}
+.mod-custom-sidebar .switch-icon:hover{
+	background: url(../img/i-scroll-hover.png?__sprite) no-repeat;
+}
+.mod-custom-sidebar .app-switch .click{
+	background: url(../img/i-scroll-click.png?__sprite) no-repeat;
+}
+
+
+
+/*app内容区*/
+.mod-custom-sidebar .app-content{
+	height: auto;
+}
+.mod-custom-sidebar .app-content .show{
+	left: 45px;
+	transition: left 0.3s;
+}
+.mod-custom-sidebar .content-wrap{
+	position: absolute;
+	min-width: 239px;
+	height: auto;
+	background-color: #ffffff;
+	top: 0;
+	left: -500px;
+	border: 1px solid #cdcdcd;
+	box-shadow: 4px 4px 10px #d0d3d2;
+	z-index: -1;
+	transition: left 0.3s;
+}
+/*内容区通栏*/
+.mod-custom-sidebar div.fullsize{
+	height: 100%;
+	width: 300px;
+}
+.mod-custom-sidebar .app-substance{
+	min-height: 100px;
+	min-width: 100px;
+}
+.mod-custom-sidebar .fullsize .app-substance{
+	position: absolute;
+	width: 100%;
+	top: 47px;
+	bottom: 0;
+	overflow: auto;
+}
+
+.mod-custom-sidebar .app-title{
+	width: auto;
+	height: 46px;
+	line-height: 46px;
+	border-bottom: 1px solid #cdcdcd;
+	color: #00ac73;
+	padding-left: 15px;
+	font-size: 14px;
+}
+.mod-custom-sidebar .app-title .content-close{
+	position: absolute;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	right: 15px;
+	top: 13px;
+	background: url(../img/i-closecon.png?__sprite) no-repeat;
+	cursor: pointer;
+}
+.mod-custom-sidebar .app-title .content-close:hover{
+	background: url(../img/i-closecon-hover.png?__sprite) no-repeat;
+}
+
+
+/*引导气泡*/
+.mod-custom-sidebar .guide-bubble{
+	position: absolute;
+	display: inline-block;
+	height: 60px;
+	width: 150px;
+	text-align: left;
+	top: 0;
+	background-color: #c6c7ca;
+	left: 45px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #808080;
+}
+.mod-custom-sidebar  .bubble-close{
+	position: absolute;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	top: -5px;
+	right: -5px;
+	background: url(../img/i-close-bubble.png?__sprite) no-repeat;
+
+}
+.mod-custom-sidebar .bubble-close:hover{
+	cursor: pointer;
+	background: url(../img/i-close-bubble-hover.png?__sprite) no-repeat;
+}
+
+.mod-custom-sidebar .open-content{
+	cursor: pointer;
+}
+.mod-custom-sidebar .bubble-wrap{
+	height: 100%;
+	width: 100%;
+	cursor: default;
+	display: table;
+	cursor: pointer;
+}
+.mod-custom-sidebar .bubble-text{
+	display: table-cell;
+	line-height: 16px;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+/*红色消息提醒气泡*/
+.mod-custom-sidebar .message{
+	position: absolute;
+	min-width: 19px;
+	*min-width: 14px;
+	height: 16px;
+    border-radius: 8px;
+    background-color: #f71e01;
+    left: 30px;
+	top:0;
+    background-image:linear-gradient(180deg, #fd5025 0%, #ef0703 100%);
+    text-shadow:0 -1px 1px #6f1e00;
+    line-height: 16px;
+    color: white;
+    font-size: 14px;   
+    z-index: 2;
+    border-bottom:2px solid rgba(0,0,0,.5);
+    padding: 1px 1px 0px 0px;
+    padding: 0px\0;
+}
+.mod-custom-sidebar .arrow-wrap .message{
+	left: 44px;
+	top: -4px;
+	text-align: center;
+}
+
+.mod-custom-sidebar .dragging{
+	z-index: 10;
+}
+.mod-custom-sidebar .shaking{
+	-moz-transform: rotate(-3deg); 
+	-webkit-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+}
+.mod-custom-sidebar .invisible{
+	visibility: hidden;
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

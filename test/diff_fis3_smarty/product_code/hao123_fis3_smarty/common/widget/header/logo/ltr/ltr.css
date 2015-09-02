@@ -1,0 +1,20 @@
+/* Site's logo */
+
+.userbar-logo {
+    height: 50px;
+    position: relative;
+    z-index: 10;
+    font-size: 12px;
+}
+.userbar-logo_slogan {
+    position: absolute;
+    font-size: 13px;
+    left: 44px;
+    top: 30px;
+    white-space: nowrap;
+}
+.userbar-logo_tip {
+    display: none;
+    position: absolute;
+    visibility: hidden;
+}

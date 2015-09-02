@@ -1,0 +1,69 @@
+.mod-launcher-mid{
+	background: #167bdf url(../img/bg.png?__sprite) no-repeat center center;
+}
+.mod-launcher-mid .mid-inner{
+	width: 1200px;
+	margin: 0 auto;
+	height: 750px;
+	position: relative;
+}
+.mod-launcher-mid .left-block, .mod-launcher-mid .right-block{
+	float: left;
+}
+.mod-launcher-mid .left-block{
+	width: 570px;
+	padding: 140px 0 0 65px;
+}
+.mod-launcher-mid .right-block{
+	width: 560px;
+	padding: 80px 0 0 0px;
+}
+.mod-launcher-mid .left-zi{
+
+}
+.mod-launcher-mid .dl-btn{
+	width: 350px;
+	height: 64px;
+	display: block;
+	background: url(../img/btn.png?__sprite) no-repeat;
+	margin: 15px 0 0 20px;
+	position: relative;
+}
+.mod-launcher-mid .dl-btn i{
+	background: url(../img/ic-dl.png?__sprite) no-repeat;
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: 13px;
+}
+.mod-launcher-mid .dl-btn span{
+	display: block;
+	line-height: 64px;
+	position: absolute;
+	font-size: 30px;
+	color: #fff;
+}
+.mod-launcher-mid .dl-btn:hover{
+	background: url(../img/btn-hover.png?__sprite) no-repeat;
+}
+.mod-launcher-mid #rightSlide{
+	height: 700px;
+	position: relative;
+	overflow: hidden;
+}
+.mod-launcher-mid .slide-container li{
+	position: absolute;
+	width: 603px;
+	height: 558px;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.mod-launcher-mid .slide-container li.cur {
+    display: block;
+}
+.mod-launcher-mid .slide-container li img{
+	width: 100%;
+	height: 100%;
+}

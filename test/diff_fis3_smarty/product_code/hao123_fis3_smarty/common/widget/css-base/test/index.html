@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hao123</title>
+<style>
+*{margin: 0; padding: 0;}
+li{ list-style: none;}
+html,body{ width: 100%; height: 100%; overflow: hidden;}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.bar-ctrl{ position: absolute; margin: 20px;}
+/*.bar-ctrl ul{ background: #fff; width: 50px; float: left;}
+.bar-ctrl span{ float: left; overflow: hidden; background: #fff; line-height: 1.5; text-align: center;}
+
+.bar-ctrl li:hover{ background: #eee;}*/
+
+.bar-ctrl_list{}
+
+.bar-ctrl_list li {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background: #d9d9d9;
+  margin-bottom: 10px;
+  border-radius: 4px;
+
+  text-indent: 50px;
+  font-size: 40px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.bar-ctrl_list span{
+    pointer-events: none;
+}
+.bar-ctrl_list li:before {
+  content: " ";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 3px;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+}
+.bar-ctrl_list .cur i {
+  position: absolute;
+  pointer-events: none;
+  top: 15px;
+  left: 0;
+  height: 15px;
+  width: 30px;
+  border-radius: 3px 0 0 3px;
+  -ms-transform: rotate(40deg);
+  /* IE 9 */
+  -webkit-transform: rotate(40deg);
+  /* Safari and Chrome */
+  transform: rotate(40deg);
+  background-color: #EE4137;
+}
+.bar-ctrl_list .cur i:before {
+  content: " ";
+  position: absolute;
+  height: 40px;
+  width: 15px;
+  left: 15px;
+  bottom: 10px;
+  background-color: #EE4137;
+}
+</style>
+</head>
+<body>
+<div class="bar-ctrl">
+    <ul id="ctrlList" class="bar-ctrl_list">
+        <li></li>
+    </ul>
+</div>
+<iframe id="ifr" src="hao123/ar-index.html" frameborder="0"></iframe>
+</body>
+<script>
+!function() {
+    var caseList = "ar,br,en,jp,th,vn".split(","),
+        ctrlList = document.getElementById("ctrlList"),
+        ifr = document.getElementById("ifr"),
+        i = 0,
+        li,
+        ret = [],
+        curSelect;
+
+    for(; li = caseList[i++];) ret.push('<li data-name="' + li + '"><i></i><span>' + li + '</span></li>');
+
+    ctrlList.innerHTML = ret.join("");
+
+    ctrlList.onclick = function(e) {
+        e = e || window.event;
+        var el = e.target || e.srcElement;
+        if(el.tagName === "LI") {
+            curSelect && (curSelect.className = "");
+            el.className = "cur";
+            curSelect = el;
+            ifr.src = "hao123/" + el.getAttribute("data-name") + "-index.html";
+        }
+        return false;
+    }
+
+    // init
+    curSelect = ctrlList.getElementsByTagName("li")[0];
+    curSelect.className = "cur";
+
+}();
+</script>
+</html>

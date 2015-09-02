@@ -1,0 +1,139 @@
+{
+    "pkg/autopack_common_base.js": [
+        "/static/lazyload.js",
+        "/static/mod.js",
+        "/static/BigPipe.js"
+    ],
+    "pkg/common_sync_pri1_js_0_tw.js": [
+        "/static/open-api/lazyload.js",
+        "/widget/ui/date-new/date.js",
+        "/widget/ui/jquery/widget/jquery.addfav/jquery.addfav.js",
+        "/widget/ui/jquery/widget/jquery.sethome/jquery.sethome.js",
+        "/widget/ui/jquery/widget/jquery.ui.button/jquery.ui.button.js",
+        "/widget/ui/suggest/suggest.js",
+        "/widget/ui/weather/tw/tw_flat.js"
+    ],
+    "pkg/common_sync_pri1_js_1_tw.js": [
+        "/widget/ui/weather/tw/tw.js"
+    ],
+    "pkg/common_sync_pri1_js_2_tw.js": [
+        "/widget/header/skinbox/skin-mod.js",
+        "/widget/header/skinbox/skinbox-async.js",
+        "/widget/ui/bubble/src/bubble.js",
+        "/widget/ui/jquery/widget/jquery.ui.tip/jquery.ui.tip.js"
+    ],
+    "pkg/common_sync_pri2_css_0_tw.css": [
+        "/widget/ui/dialog/dialog.css",
+        "/widget/ui/jquery/widget/jquery.ui.autocomplete/jquery.ui.autocomplete.css",
+        "/widget/ui/scrollable/scrollable.css",
+        "/widget/ui/sns-share/sns-share.css"
+    ],
+    "pkg/common_sync_pri2_css_1_tw.css": [
+        "/widget/css-base/dist/base.ltr.css",
+        "/widget/css-base/dist/base.ltr.ie.css",
+        "/widget/css-flatbase/ltr/ltr.css",
+        "/widget/ui/css-ui/css-ui.css"
+    ],
+    "pkg/common_sync_pri1_css_0_tw.css": [
+        "/widget/header-flat/account/ltr/ltr.more.css",
+        "/widget/header-flat/userbar-btn-header/ltr/ltr.more.css",
+        "/widget/ui/suggest/suggest.css"
+    ],
+    "pkg/common_sync_pri1_css_1_tw.css": [
+        "/widget/header-flat/clock/ltr/ltr.more.css",
+        "/widget/header-flat/logo/ltr/ltr.more.css",
+        "/widget/header-flat/ltr/ltr.more.css",
+        "/widget/search-box-new/ltr/ltr.more.css",
+        "/widget/ui/dropdownlist/dropdownlist.css",
+        "/widget/ui/prompt/prompt.css",
+        "/widget/header-flat/weather/ltr/ltr.more.css"
+    ],
+    "pkg/common_sync_pri1_css_2_tw.css": [
+        "/widget/footer/ltr/ltr.css",
+        "/widget/header/account-test/ltr-s/ltr.more.css",
+        "/widget/header/add-fav-bar/ltr/ltr.more.css",
+        "/widget/header/clock/ltr/ltr.more.css",
+        "/widget/header/header-com/ltr-s/ltr.more.css",
+        "/widget/header/header-com/ltr-s/ltr.ps.css",
+        "/widget/header/logo/ltr/ltr.more.css",
+        "/widget/header/message/ltr/ltr.more.css",
+        "/widget/header/site-switch/ltr/ltr.more.css",
+        "/widget/header/skin-trans/ltr/ltr.more.css",
+        "/widget/header/userbar-btn-header/ltr-s/ltr.more.css",
+        "/widget/header/userbar-btn-test/ltr-s/ltr.more.css",
+        "/widget/header/weather/ltr/ltr.more.css",
+        "/widget/login-popup/ltr/ltr.css",
+        "/widget/ui/jquery/widget/jquery.ui.button/ltr/ltr.css"
+    ],
+    "pkg/common_sync_pri1_css_3_tw.css": [
+        "/widget/header/skinbox/ltr/ltr.more.css"
+    ],
+    "pkg/common_async_pri1_js_0_tw.js": [
+        "/widget/header-flat/clock/calendar-async.js",
+        "/widget/header-flat/header-flat-async.js",
+        "/widget/search-box-new/search-box-new-async.js"
+    ],
+    "pkg/common_async_pri1_js_1_tw.js": [
+        "/widget/header-flat/account/account-async.js",
+        "/widget/header-flat/logo/logo-async.js",
+        "/widget/header-flat/userbar-btn-header/userbar-btn-header-async.js",
+        "/widget/ui/calendar/calendar.js",
+        "/widget/ui/date-new/plugin/buddhist.js",
+        "/widget/ui/date-new/plugin/isl.js",
+        "/widget/ui/date-new/plugin/lunar.js",
+        "/widget/ui/date-new/plugin/rokuyou.js",
+        "/widget/ui/dropdownlist/dropdownlist.js",
+        "/widget/ui/weather/weather_flat.js",
+        "/widget/header-flat/clock/clock-async.js"
+    ],
+    "pkg/common_async_pri1_js_2_tw.js": [
+        "/widget/header/account-test/account-test-async.js",
+        "/widget/header/add-fav-bar/add-fav-bar-async.js",
+        "/widget/header/clock/calendar-async.js",
+        "/widget/header/clock/clock-async.js",
+        "/widget/header/header-com/header-com-async.js",
+        "/widget/header/logo/logo-async.js",
+        "/widget/header/message/message-async.js",
+        "/widget/header/site-switch/site-switch-async.js",
+        "/widget/search-box-4ps/search-box-4ps-async.js",
+        "/widget/ui/popup/popup.js",
+        "/widget/ui/sethome-ff/sethome-ff-c.js",
+        "/widget/ui/weather/weather.js",
+        "/widget/header/userbar-btn-header/userbar-btn-header-async.js",
+        "/widget/header/userbar-btn-test/userbar-btn-test-async.js"
+    ],
+    "pkg/common_async_pri1_js_3_tw.js": [
+        "/widget/header/skin-trans/skin-trans-async.js",
+        "/widget/ui/notice-pop/notice-pop.js"
+    ],
+    "pkg/common_sync_pri2_js_0_tw.js": [
+        "/widget/ui/cookieless/cookieless.js",
+        "/widget/ui/date/date.js",
+        "/widget/ui/helper/helper.js",
+        "/widget/ui/jquery/1.8.3/jquery.min.js",
+        "/widget/ui/jquery/jquery.cookie.js",
+        "/widget/ui/jquery/jquery.json.js",
+        "/widget/ui/jquery/jquery.mousewheel.js",
+        "/widget/ui/jquery/jquery.ui.core.js",
+        "/widget/ui/jquery/jquery.ui.widget.js",
+        "/widget/ui/md5/md5.js",
+        "/widget/ui/message/src/message.js",
+        "/widget/ui/ut/ut.js",
+        "/widget/ui/drap/drap.js",
+        "/widget/ui/jquery/jquery.js",
+        "/widget/ui/jquery/widget/jquery.lazyload/jquery.lazyload.js",
+        "/widget/ui/jquery/widget/jquery.ui.autocomplete.html/jquery.ui.autocomplete.html.js",
+        "/widget/ui/jquery/widget/jquery.ui.autocomplete/jquery.ui.autocomplete.js",
+        "/widget/ui/jquery/widget/jquery.ui.position/jquery.ui.position.js",
+        "/widget/ui/localstorage/localstorage.js",
+        "/widget/ui/time/time.js",
+        "/widget/ui/cycletabs/cycletabs.js",
+        "/widget/ui/dialog/dialog.js",
+        "/widget/ui/localcookie/localcookie.js"
+    ],
+    "pkg/common_async_pri2_js_0_tw.js": [
+        "/widget/ui/monitor/monitor.js",
+        "/widget/ui/scrollable/scrollable.js",
+        "/widget/ui/sns-share/sns-share.js"
+    ]
+}

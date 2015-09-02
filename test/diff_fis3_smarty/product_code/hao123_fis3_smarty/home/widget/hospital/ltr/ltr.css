@@ -1,0 +1,115 @@
+.mod-hospitle{
+	font-size: 14px;
+	height: 464px;
+}
+
+/***hd-part***/
+.mod-hospitle .hd{
+	padding: 10px 15px;
+	background: #fff;
+	border-bottom: 2px solid #e9eaea;
+}
+.mod-hospitle .top-searchbox{
+	border: 1px solid #e3e4e6;
+	background: #f7fafa;
+}
+.mod-hospitle .search-row{
+	padding: 5px;
+	font-size: 14px;
+	position: relative;
+}
+.mod-hospitle .ic-plus{
+	background: url(../img/line.png?__sprite) no-repeat 3px 10px;
+	padding: 10px 0;
+}
+.mod-hospitle .inputbox{
+	display: block;
+	width: 236px;
+	height: 28px;
+	border: 1px solid #d9d9d9;
+	padding-left: 10px;
+	padding-top: 5px\9;
+	height: 23px\9;
+	margin-top: 2px;
+}
+.mod-hospitle .searchbutton{
+	background-image: url(../img/searchbtn.png?__sprite);
+	width: 79px;
+	height: 28px;
+	border: 0;
+	color: #fff;
+	text-align: center;
+	line-height: 28px;
+	margin: 10px 0 0 95px;
+	cursor: pointer;
+	
+}
+.mod-hospitle .searchbutton:hover{
+	background-image: url(../img/searchbtn-hover.png?__sprite);
+}
+/*************/
+
+/***bd-part***/
+.mod-hospitle .bd{
+	padding: 0 0 10px 15px;
+}
+.mod-hospitle .bd-row{
+	padding-top: 7px;
+}
+.mod-hospitle .bd-title{
+	border-left: 2px solid #00b371;
+	font-weight: bold;
+	padding-left: 5px;
+	line-height: 21px;
+}
+.mod-hospitle .bd-content{
+	padding-top: 5px;
+}
+.mod-hospitle .time-title{
+	display: inline-block;
+}
+.mod-hospitle .time-content{
+	display: inline;
+	margin-left: 20px;
+}
+/*************/
+
+/***public***/
+/*.mod-hospitle .radio-item{
+	display: inline-block;
+	cursor: pointer;
+	margin: 4px 0;
+	padding-left: 20px;
+	line-height: 15px;
+	margin-right: 20px;
+	background: url(../img/ic-radio-default.png?__sprite) no-repeat;
+}
+.mod-hospitle .radio-checked{
+	background: url(../img/ic-radio-checked.png?__sprite) no-repeat;
+}
+.mod-hospitle .checkbox-item{
+	display: inline-block;
+	cursor: pointer;
+	margin: 4px 0;
+	padding-left: 20px;
+	line-height: 15px;
+	margin-right: 5px;
+	background: url(../img/ic-checkbox-default.png?__sprite) no-repeat;
+}
+.mod-hospitle .checkbox-checked{
+	background: url(../img/ic-checkbox-checked.png?__sprite) no-repeat;
+}
+.mod-hospitle .ml14{
+	margin-left: 14px;
+}*/
+.mod-hospitle .color-red{
+	color: #ff470a;
+}
+.mod-hospitle .placeholder-iefix{
+	position: absolute;
+	bottom: 10px;
+	left: 15px;
+	color: #a9a9a9;
+	cursor: text;
+}
+/*************/

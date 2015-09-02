@@ -1,0 +1,117 @@
+body .userbar-weather .fl:hover {
+    background: #474747;
+    background: rgba(0,0,0,0.2);
+}
+body.header-fixed .account-dropdown_wrap {
+    /*top: 30px;*/
+}
+body .account-dropdown_wrap {
+    /*top: 50px;*/
+    box-shadow: none;
+    /*border-color: #4C474A;
+    border-color: rgba(0,0,0,0.7);*/
+    border-width: 0;
+}
+body .wrap-message-content,body .account-loginfo_wrap {
+    background: #595959;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid #4C474A;
+    border-color: rgba(0,0,0,0.7);
+    border-top-width: 0;
+}
+body .account-message_wrap,body .wrap-message-content {
+    margin-top: 6px;
+    border-bottom-width: 0;
+}
+body .message-no-item span {
+    color: #fff;
+}
+body .wrap-message-content li {
+    border-bottom-color: #3B383B;
+    border-bottom-color: rgba(0,0,0,0.4);
+}
+body .wrap-message-content li:hover {
+    background: #474747;
+    background: rgba(0,0,0,0.2);
+}
+body .account_arrow {
+    border-bottom-color: #595959; 
+    border-bottom-color: rgba(0,0,0,0.6); 
+    top: -6px;
+}
+body .login-tip_con {
+    height: 28px;
+    line-height: 28px;
+}
+body .account_login-tip {
+    border-left: 0;
+}
+body .wrap-message-content .message-target {
+    color: #C2C2C2;
+}
+body .message-target:hover span {
+    color:#ffffff;
+}
+body .message-over-item .message-target {
+    color: #8c8c8c;
+}
+body .ico-message-delete {
+    background: url("../img/icon-delete.png?__sprite") no-repeat left top;
+}
+body .ico-message-delete:hover{
+    background: url("../img/icon-delete-hover.png?__sprite") no-repeat left top;
+}
+body .ico-message-type1,body .ico-message-type2 {
+    background: url("../img/icon-msg-notice.png?__sprite") no-repeat left top;
+}
+body .message-over-item .ico-message-type1,body .message-over-item .ico-message-type2{
+    background: url("../img/icon-msg-notice-over.png?__sprite") no-repeat left top;
+}
+body .account_logout_name {
+    color: #ffffff;
+}
+body .account_logout_email {
+    color: #8c8c8c;
+}
+body .account-loginfo_wrap img {
+    border-color: #EFFCF9;
+    border-color: rgba(255,255,255, 0.6);
+}
+
+/*logo*/
+body .userbar-logo_tip {
+    background: #595959;
+    background: rgba(0,0,0,.6);
+    border: 1px solid #4C474A;
+    border-color: rgba(0,0,0,.7);
+    border-top-width: 0;
+    top: 56px;
+}
+body .userbar-logo_tip .arrow_bg {
+    display: none;
+}
+body .userbar-logo_tip .arrow {
+    border-width: 6px;
+    top: -12px;
+    border-bottom-color: #595959;
+    border-bottom-color: rgba(0,0,0,0.6);
+}
+body .userbar-logo_tip a {
+    color: #FAFCFA;
+}
+body .userbar-logo_tip a:hover {
+    /*color: #ffffff;*/
+    text-decoration: underline;
+}
+body .userbar-logo_tip .tip-close {
+    background: url("../img/icon-delete.png?__sprite") no-repeat left top;
+}
+body .userbar-logo_tip .tip-close:hover{
+    background: url("../img/icon-delete-hover.png?__sprite") no-repeat left top;
+}
+body .userbar-logo_tip .tipLinkArrow {
+    background: url("../img/icon-logotips.png?__sprite") no-repeat left top;
+}
+body .userbar-logo_tip {
+    color: #E2E2E2;
+}

@@ -1,0 +1,492 @@
+.mod-vote-wraper{
+	width: 240px;
+	overflow: hidden;
+	visibility: visible!important;
+}
+/*响应式*/
+.flow-on .mod-vote-wraper{
+	width: 300px;
+}
+.mod-vote-tem{
+	width: 200%;
+	position: relative;
+}
+.mod-vote-tem .vote-item{
+	float: right;
+	border: 1px solid #e3e5e6;
+	text-align: center;
+	padding: 2px;
+	margin-right: -1px;
+	cursor: pointer;
+}
+.mod-vote-tem .vote-item-06, .mod-vote-tem .vote-item-05{
+	height: 85px;
+	width: 74px;
+}
+.mod-vote-tem .vote-item-04{
+	width: 114px;
+	height: 85px;
+}
+.mod-vote-tem .vote-item-03{
+	width: 74px;
+	height: 175px;
+}
+.mod-vote-tem .vote-item-02{
+	width: 114px;
+	height: 175px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .vote-item-06, .flow-on .mod-vote-tem .vote-item-05{
+	width: 94px;
+	height: 105px;
+}
+.flow-on .mod-vote-tem .vote-item-04{
+	width: 144px;
+	height: 105px;
+}
+.flow-on .mod-vote-tem .vote-item-03{
+	width: 94px;
+	height: 217px;
+}
+.flow-on .mod-vote-tem .vote-item-02{
+	width: 144px;
+	height: 218px;
+}
+
+
+.mod-vote-tem .vote-tel-area{
+	background: #fff;
+	display: inline-block;
+}
+.mod-vote-tem .vote-template{
+	border: 1px solid #e3e5e6;
+	background: #f5f7f7;
+	width: 238px;
+	float: right;
+	display: inline-block;
+	position: relative;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .vote-template{
+	width: 298px;
+}
+.mod-vote-tem .vote-tel-title{	
+	color: #474848;
+	padding: 10px;
+	font-size: 14px;
+	border-bottom: 1px solid #e3e5e6;
+	background-image:-moz-linear-gradient(top, rgb(254,254,254), rgb(246,248,247));
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(254,254,254)), to(rgb(246,248,247)));
+	background-image:-webkit-linear-gradient(top, rgb(254,254,254), rgb(246,248,247));
+	background-image:-o-linear-gradient(top, rgb(254,254,254), rgb(246,248,247));
+	background-image:-ms-linear-gradient(top, rgb(254,254,254), rgb(246,248,247));
+	background-image:linear-gradient(top, rgb(254,254,254), rgb(246,248,247));
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#fefefe,endColorstr=#f6f8f7,GradientType=1)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#fefefe,endColorstr=#f6f8f7,GradientType=1) DXImageTransform.Microsoft.Alpha(enabled=false);
+}
+.mod-vote-tem .vote-tel-title span{
+	display: inline-block;
+	width: 150px;
+	overflow: hidden;
+	max-height: 35px;
+}
+.flow-on .mod-vote-tem .vote-tel-title span{
+	width: 200px;
+}
+.exchange-btn{
+	z-index: 1;
+	margin-right: 212px;
+	margin-top: 13px;
+	color: #00ae74;
+	border: 0;
+	padding: 4px;
+	position: absolute;
+	cursor: pointer;
+	border: 1px solid #d9dcde;
+	background: url(../img/exchange.png) no-repeat;
+	width: 7px;
+	height:7px;
+}
+/*响应式换一换按钮*/
+.flow-on .exchange-btn{
+	margin-right: 269px;
+}
+.mod-vote-tem .vote-tel-btn{
+	background: #00ad73;
+	border-radius: 3px;
+	text-align: center;
+	padding: 4px 44px;
+	color: #66ffcc;
+	font-size: 15px;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+}
+.mod-vote-tem .vote-btn-w{
+	color: #fff;
+}
+.mod-vote-tem .vote-tel-btn:hover{
+	background:#01a06b;
+}
+.mod-vote-tem .vote-handle-area{
+	background: #f5f7f7;
+	padding: 4px 18px 35px;
+}
+.mod-vote-tem .vote-template-result .vote-handle-area-result{
+	padding: 0 0 40px 0;
+}
+.mod-vote-tem .vote-tel-result{
+	display: inline-block;
+	color: #00ae74;
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: 14px;
+	float: left;
+	top: 6px;
+	position: relative;
+}
+.mod-vote-tem .vote-tel-result-back{
+	display: inline-block;
+	color: #00ae74;
+	text-decoration: underline;
+	cursor: pointer;
+	float: left;
+	position: relative;
+	left: 10px;
+}
+.mod-vote-tem .vote-hanlde{
+	background: #f5f7f7;
+}
+/*结果页面数据样式*/
+.mod-vote-tem .vote-tel-result-items{
+	padding: 10px 20px;
+	line-height: 27px;
+}
+.mod-vote-tem .vote-tel-result-items-05{
+	padding: 25px 20px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .vote-tel-result-items-06{
+	padding: 31px 32px;
+}
+.flow-on .mod-vote-tem .vote-tel-result-items-05{
+	padding: 44px 32px;
+}
+.mod-vote-tem .vote-tel-result-items-04{
+	padding: 38px 20px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .vote-tel-result-items-04{
+	padding: 58px 32px;
+}
+
+.mod-vote-tem .vote-tel-result-items-03{
+	padding: 51px 20px;
+}
+.flow-on .mod-vote-tem .vote-tel-result-items-03{
+	padding: 72px 32px;
+}
+
+.mod-vote-tem .vote-tel-result-items-02{
+	padding: 63px 20px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .vote-tel-result-items-02{
+	padding: 85px 32px;
+}
+.mod-vote-tem .vote-tel-items-del{
+	position: relative;
+}
+.mod-vote-tem .vote-tel-items-name{
+	position: absolute;
+	/* left: 118px; */
+	width: 55px;
+	height: 25px;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left: 20px;
+	white-space: nowrap;
+	cursor: pointer;
+}
+/*百分比条*/
+.mod-vote-tem .vote-tel-items-percent-wrap{
+	position: relative;
+	width: 65px;
+	height: 10px;
+	border: 1px solid #d7d9d9;
+	background-color: #e3e6e6;
+	display: inline-block;
+	right: 59px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .vote-tel-items-percent-wrap{
+	width: 100px;
+}
+.mod-vote-tem .vote-tel-items-percent{
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+}
+.mod-vote-tem .vote-tel-items-num{
+	right: 64px;
+	position: relative;
+}
+.mod-vote-tem .vote-item-text{
+	display: inline-block;
+	overflow: hidden;
+	width: 60px;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+.mod-vote-tem .vote-item-img06,.mod-vote-tem .vote-item-img05{
+	width: 74px;
+	height: 72px;
+}
+.mod-vote-tem .vote-item-img04{
+	width: 114px;
+	height: 72px;
+}
+.mod-vote-tem .vote-item-img03{
+	width: 74px;
+	height: 160px;
+}
+.mod-vote-tem .vote-item-img02{
+	width: 114px;
+	height: 160px;
+}
+/*响应式图标*/
+.flow-on .mod-vote-tem .vote-item-img06, .flow-on .mod-vote-tem .vote-item-img05{
+	width: 94px;
+	height: 91px;
+}
+.flow-on .mod-vote-tem .vote-item-img04{
+	width: 144px;
+	height: 91px;
+}
+.flow-on .mod-vote-tem .vote-item-img03{
+	width: 94px;
+	height: 203px;
+}
+.flow-on .mod-vote-tem .vote-item-img02{
+	width: 144px;
+	height: 203px;
+}
+.mod-vote-tem .vote-checked{
+	background-image: url(../img/checked.png);
+	width: 19px;
+	height: 19px;
+	position: relative;
+	display: none;
+}
+.mod-vote-tem .vote-checked-06,.mod-vote-tem .vote-checked-05{
+	top: -107%;
+	right: 74%;
+}
+.mod-vote-tem .vote-checked-04{
+	top: -107%;
+	right: 83%;
+}
+.mod-vote-tem .vote-checked-03{
+	top: -103%;
+	right: 74%;
+}
+.mod-vote-tem .vote-checked-02{
+	top: -102%;
+	right: 83%;
+}
+/*响应式图小对号*/
+.flow-on .mod-vote-tem .vote-checked-06,.flow-on .mod-vote-tem .vote-checked-05{
+	top: -105%;
+	right: 80%;
+}
+.flow-on .mod-vote-tem .vote-checked-04{
+	top: -105%;
+	right: 87%;
+}
+.flow-on .mod-vote-tem .vote-checked-03{
+	top: -103%;
+	right: 80%;
+}
+.flow-on .mod-vote-tem .vote-checked-02{
+	top: -102%;
+	right: 87%;
+}
+
+.mod-vote-tem .vote-template-result{
+	width: 238px;
+	
+	display: inline-block;
+	border: 1px solid #e3e5e6;
+	background: #f5f7f7;
+}
+/*结果页响应式*/
+.flow-on .mod-vote-tem .vote-template-result{
+	width: 298px;
+}
+.mod-vote-tem .vote-template-result .vote-tel-items-del i{
+	width: 15px;
+	height: 15px;
+	background: url(../img/vote-rank.png) no-repeat;
+	display: inline-block;
+	position: relative;
+	right: -6px;
+	top: 5px;
+	visibility: hidden;
+}
+.mod-vote-tem .vote-result-checked{
+	background: url(../img/vote-item-checked.png) no-repeat;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	position: relative;
+	right: 67px;
+	top: 3px;
+	visibility: hidden;
+}
+.mod-vote-tem .vote-template-result .vote-tel-items-del i span{
+	position: relative;
+	top: -5px;
+	right: 4px;
+	color: white;
+}
+.mod-vote-tem .vote-share{
+	right: 15px;
+	position: relative;
+	cursor: pointer;
+	width: 210px;
+}
+.flow-on .mod-vote-tem .vote-share{
+	width: 270px;
+}
+/*FB按钮*/
+.mod-vote-tem .vote-share-fb{
+	float: right;
+	background: #5170c5;
+	color: white;
+	height: 28px;
+	border-radius: 2px;
+	line-height: 28px;
+	text-align: center;
+}
+.mod-vote-tem .vote-share-fb:hover{
+	background:#5c7cd3;
+}
+.mod-vote-tem .vote-share-fb i{
+	background: url(../img/vote-fb.png);
+	width: 27px;
+	height: 28px;
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+}
+.mod-vote-tem .vote-share-fb span,.mod-vote-tem .vote-share-ter span{
+	padding: 0 14px 0 10px;
+}
+/*Ter按钮*/
+.mod-vote-tem .vote-share-ter{
+	float: right;
+	background: #1694ff;
+	color: #fff;
+	height: 28px;
+	border-radius: 2px;
+	line-height: 28px;
+	text-align: center;
+}
+.mod-vote-tem .vote-share-ter:hover{
+	background: #2f9fff;
+}
+.mod-vote-tem .vote-share-ter i{
+	background: url(../img/vote-ter.png);
+	width: 27px;
+	height: 28px;
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+}
+/*是非题分享*/
+.mod-vote-tem .pray-fb span{
+	padding: 3px;
+}
+.mod-vote-tem .pray-ter span{
+	padding: 3px;
+}
+.vote-tel-active{
+	background:#00ad73;
+	color: white;
+}
+/*.vote-tel-active{
+	background:#e3e3e3;
+	color: #009a66;
+}*/
+.mod-vote-tem .pray-template{
+	width: 238px;
+	
+	border: 1px solid #e3e5e6;
+	background: #f5f7f7;
+	text-align: center;
+}
+.mod-vote-tem .pray-template .pray-template-img{
+	width: 238px;
+	height: 118px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .pray-template .pray-template-img{
+	width: 298px;
+	height: 148px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .pray-template{
+	width: 298px;
+}
+.mod-vote-tem .pray-template .vote-handle-area-result{
+	display: inline-block;
+	padding: 10px 0px 10px 30px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .pray-template .vote-handle-area-result{
+	padding: 17px 0px 10px 30px;
+}
+.mod-vote-tem .pray-template .vote-agree,.mod-vote-tem .pray-template .vote-disagree{
+	background: #00ae74;
+	color: #fff;
+	border: 0;
+	border-radius: 3px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	margin: 6px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .pray-template .vote-agree, .flow-on .mod-vote-tem .pray-template .vote-disagree{
+	width: 128px;
+}
+.mod-vote-tem .pray-template .vote-agree-ordis{
+	top: 9px;
+	position: relative;
+}
+.flow-on .mod-vote-tem .pray-template .vote-agree-ordis{
+	top: 12px;
+}
+.mod-vote-tem .vote-common-line{
+	width: 220px;
+	height: 1px;
+	background: #e3e5e6;
+	display: inline-block;
+	position: relative;
+	top: 4px;
+}
+/*响应式*/
+.flow-on .mod-vote-tem .vote-common-line{
+	width: 267px;
+	top: 9px;
+}
+.mod-vote-tem .pray-template .pray-title{
+	text-align: right;
+}
+.mod-vote-tem .pray-template .voted-check,.mod-vote-tem .vote-template .voted-check{
+	background:#c5c5c5;
+}

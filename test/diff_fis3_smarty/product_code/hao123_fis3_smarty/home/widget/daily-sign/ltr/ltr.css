@@ -1,0 +1,257 @@
+body .mod-daily-sign {
+	visibility: visible;
+	visibility: visible !important;
+}
+.mod-daily-sign {
+    /* width: 238px;
+    _width: 233px; */
+    position: relative;
+    border: 1px solid #e4e6e5;
+    font-size: 12px;
+    background: #fafbfc;
+    color: #333;
+    z-index: 3;
+}
+.mod-daily-sign .ds-title {
+    height: 46px;
+    /* width: 236px; */
+    line-height: 46px;
+    color: #E9FDF5;
+    overflow: hidden;
+    border: 1px solid #fff;
+    cursor: pointer;
+    background: #01A971;
+    /*background: url(../img/bg-hover.png?__sprite) no-repeat;*/
+    background-image: linear-gradient(top, #03BE80, #01A971, #009C68);
+    background-image: -webkit-linear-gradient(top, #03BE80, #01A971, #009C68);
+    background-image: -o-linear-gradient(top, #03BE80, #01A971, #009C68);
+    background-image: -moz-linear-gradient(top, #03BE80, #01A971, #009C68);
+    background-image: -ms-linear-gradient(top, #03BE80, #01A971, #009C68);
+}
+.mod-daily-sign .ds-title:hover {
+    background: #01B67F;
+    /*background: url(../img/bg-hover.png?__sprite) no-repeat;*/
+    background-image: linear-gradient(top, #04C98E, #01B67F, #00A874);
+    background-image: -webkit-linear-gradient(top, #04C98E, #01B67F, #00A874);
+    background-image: -o-linear-gradient(top, #04C98E, #01B67F, #00A874);
+    background-image: -moz-linear-gradient(top, #04C98E, #01B67F, #00A874);
+    background-image: -ms-linear-gradient(top, #04C98E, #01B67F, #00A874);
+}
+.mod-daily-sign .ds-in-title {
+	display: block;
+	color: #E9FDF5;
+}
+.mod-daily-sign .ds-bubble {
+    position: absolute;
+    left: -1px;
+    top: 48px;
+    z-index: 599;
+    /* width: 238px; */
+    border: 1px solid #BDE2D6;
+    box-shadow: 2px 2px 2px #DBDDDC, -2px 0 2px #DBDDDC;
+    background-color: #F0FFFB;
+}
+.mod-daily-sign .ds-out-box {
+    float: left;
+    margin-left: 4px;
+    _margin-left: 2px;
+    margin-right: 5px;
+    width: 56px;
+    height: 46px;
+}
+.mod-daily-sign .ds-out-gift {
+    float: right;
+}
+.mod-daily-sign .ds-out-tip {
+    font-size: 20px;
+}
+.mod-daily-sign .ds-in-box {
+    float: left;
+    margin-left: 2px;
+    _margin-left: 1px;
+    margin-right: 8px;
+    width: 56px;
+    height: 46px;
+}
+.mod-daily-sign .ds-in-gift {
+    float: right;
+    font-size: 14px;
+    color: #80D5B9;
+    margin-right: 6px;
+}
+.mod-daily-sign .ds-bracket-l {
+    margin-right: 8px;
+}
+.mod-daily-sign .ds-bracket-r {
+    margin-left: 8px;
+}
+.mod-daily-sign .ds-in-tip {
+    font-size: 20px;
+}
+.mod-daily-sign .ds-key {
+    display: inline-block;
+    height: 28px;
+    width: 14px;
+    vertical-align: middle;
+    background: url(../img/key.png?__sprite) no-repeat;
+}
+.mod-daily-sign .ds-in-multi {
+	 margin-left: 6px;
+    margin-right: 6px;
+}
+.mod-daily-sign .ds-num {
+	color: #ffffff;
+}
+
+.mod-daily-sign .ui-arrow-t {
+    border-width: 6px;
+    top: -12px;
+    left: 100px;
+    border-bottom-color: #F0FFFB;
+}
+.mod-daily-sign .ds-out-bubble, .mod-daily-sign .ds-in-bubble {
+    position: relative;
+}
+.mod-daily-sign .ds-content {
+    line-height: 1.7;
+    color: #666666;
+    padding: 14px 16px 14px 8px;
+    border-bottom: 1px solid #D6F8EF;
+}
+.mod-daily-sign .ds-out-close, .mod-daily-sign .ds-in-close {
+    display: block;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background: url(../img/close-btn.png?__sprite) no-repeat;
+}
+.mod-daily-sign .ds-more {
+    color: #00ae74;
+    padding-left: 6px;
+}
+.mod-daily-sign .ds-more-gt {
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    margin-left: 4px;
+    background: url(../img/more-gt.png?__sprite) no-repeat;
+}
+.mod-daily-sign .ds-btn-wrap {
+    border-top: 1px solid #FBFEFE;
+    background-color: #D6F8EF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.mod-daily-sign .ds-btn {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    cursor: pointer;
+    color: #ffffff;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.mod-daily-sign .ds-out-bubble .ds-btn {
+    height: 29px;
+    line-height: 29px;
+    padding-left: 30px;
+    text-align: center;
+    font-size: 14px;
+    /*border-width: 1px;
+	border-style: solid;
+	border-color: #5F7CB9 #526C9F #495F8A #3B5392;*/
+    background: url(../img/fb.png?__sprite) no-repeat;
+    background-color: #4F6CBD;
+}
+.mod-daily-sign .ds-out-btn-content {
+    display: inline-block;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 15px;
+    padding-right: 15px;
+    white-space: nowrap;
+}
+.mod-daily-sign .ds-in-bubble .ds-btn {
+    width: 180px;
+    background-color: #00B075;
+}
+.mod-daily-sign .ds-in-btn-content {
+    display: block;
+    line-height: 1.4;
+    padding: 8px 30px;
+    color: #ffffff;
+}
+.mod-daily-sign .ds-direct {
+    margin-top: 8px;
+}
+
+
+.mod-ds-pop {
+	position: fixed;
+	width: 378px;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	background-color: #FFFFFF;
+	border: 1px solid #588B00;
+	color: #464646;
+	/*display: none;*/
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.mod-ds-pop .ds-pop-close-x {
+	position: absolute;
+	right: 0;
+	top: -13px;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url(../img/popup-btn.png?__sprite) no-repeat;
+}
+.mod-ds-pop .ds-pop-hd {
+	font-size: 18px;
+	color: #ffffff;
+	background-color: #69A100;
+	height: 40px;
+	width: 100%;
+	overflow: hidden;
+	line-height: 40px;
+}
+.mod-ds-pop .ds-pop-content {
+	margin: 24px 60px;
+	line-height: 1.2;
+}
+.mod-ds-pop .ds-pop-btn {
+	margin-bottom: 22px;
+	font-size: 14px;
+}
+.mod-ds-pop .ds-pop-btn a {
+	display: inline-block;
+	width: 112px;
+	height: 32px;
+	line-height: 32px;
+	border: 1px solid #4A9800;
+	color: #eaffc5;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: #72AB00;
+}
+.mod-ds-pop .ds-pop-btn .ds-pop-close-btn {
+	margin-left: 8px;
+	background-color: #C5C5C5;
+	border-color: transparent;
+	color: #636363;
+}

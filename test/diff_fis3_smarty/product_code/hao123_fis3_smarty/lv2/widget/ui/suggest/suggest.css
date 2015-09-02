@@ -1,0 +1,68 @@
+/*------------------------suggest------------------------*/
+/*提示层外框*/
+.sug-search {
+	position:absolute;
+	top: 28px;
+	left: -2px;
+	border:1px solid #e3e4e6;
+	border-top: 0 none;
+	background:#fff;
+	width:528px;
+	color:#454545;
+	z-index:999;
+	white-space:nowrap;
+	overflow:hidden;
+}
+/*ie6 shim*/
+.sug-shim {
+	position:absolute;
+	top:-1px;
+	left:-2px;
+	z-index:-1;
+	filter:alpha(opacity="0");
+	width:430px;
+	height:250px;
+}
+/*列表外框*/
+.sug-search ol {
+	font:bold 12px/23px Tahoma,arial,helvetica,clean,sans-serif;
+	cursor:default;
+}
+/*列表项*/
+.sug-search li {
+	padding: 3px 10px;
+	cursor: pointer;
+}
+.sug-search li b {
+	font: inherit;
+	display: inline;
+}
+/*选中样式*/
+.sug-search .sug-select {
+	background: #f5f7f7;
+}
+/*头部*/
+.sug-search .top {
+	font-weight:normal;
+	color:#999;
+	height:21px;
+	line-height:21px;
+	background:#eee;
+	padding:0 2px;
+}
+/*底部*/
+.sug-search .bot {
+	position:relative;
+	height:19px;
+	line-height:19px;
+	font-weight:normal;
+	border-top:1px solid #666;
+}
+/*高亮查询词*/
+.sug-search .sug-query {
+	font-weight:normal;
+}
+.sug-search font {
+	font-weight:normal !important;
+	color:#333 !important;
+}

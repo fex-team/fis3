@@ -1,0 +1,26 @@
+
+/*sug has url*/
+.sug-url {
+    height:45px;
+    border-bottom:1px solid #e1e1e1;
+}
+.sug-url a {
+    display: block;
+    text-decoration: none;
+    color: #0000EE;
+}
+.sug-url .sug-hl {
+    height: 25px;
+    text-decoration: underline;
+    font-weight:bold;
+    font-size:14px;
+}
+.sug-url .sug-frm {
+    line-height: 16px;
+    font-size: 12px;
+    color: green;
+}
+body .sg_tri .sg_btn.sg_up i,
+body .sg_v_tri .sg_v_btn.sg_v_up i {
+    top: 7px;
+}

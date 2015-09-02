@@ -1,0 +1,117 @@
+.mod-ecommerce-prompt{
+	position: fixed;
+	bottom:-60px;
+	width: 960px;
+	height:50px;
+	line-height: 50px;
+	margin-left: -8px;
+	z-index: 400;
+	border-left: 8px solid #646464;
+	display: block !important;
+}
+.mod-ecommerce-prompt .ep-goods-list{
+	position: relative;
+	float: left;
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	color: white;
+	font-size: 15px;
+}
+.mod-ecommerce-prompt .goods-list-item{
+	float: left;
+	height: 100%;
+	border-left: 1px dashed #979797;
+	border-right: 1px dashed #595959;
+	color: white;
+	cursor: pointer;
+}
+.mod-ecommerce-prompt .items{
+	/*width: 238px;*/
+	width: 24.79%;
+	background-color: #8a8a8a;
+}
+.mod-ecommerce-prompt .items:hover{
+	background-color: #717070;
+	cursor: pointer;
+}
+.mod-ecommerce-prompt .item-selleer{
+	/*width: 115px;*/
+	width: 11.9%;
+	margin-left: -4px;
+	text-align:center;
+	cursor: default;
+	background-color: #8a8a8a;
+}
+
+.mod-ecommerce-prompt .item-jump{
+	/*width: 125px;*/
+	width: 13.2%;
+	text-align:center;
+	border-right:0 none;
+	border-left: 1px dashed #398f74;
+	background-color: #289773;
+	cursor: pointer;
+}
+.mod-ecommerce-prompt .item-jump:hover{
+	background-color: #1c7b5c;
+}
+.mod-ecommerce-prompt .i-jump-bottom,.mod-ecommerce-prompt .jump-des{
+	float:left;
+	margin-left: 5px;
+}
+.mod-ecommerce-prompt .i-jump-bottom{
+	width: 20px;
+	height: 20px;
+	background: url(../img/i-jump.png?__sprite) no-repeat;
+	margin-left: 10px;
+	margin-top: 14px;
+}
+.mod-ecommerce-prompt .item-link{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.mod-ecommerce-prompt .item-img{
+	width: 39px;
+	height: 39px;
+	border: 1px solid #717171;
+	margin-left: 19px;
+	margin-top: -1px;
+}
+.mod-ecommerce-prompt .item-title,.mod-ecommerce-prompt .item-price{
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+	display: inline-block;
+	/*width: 165px;*/
+	width: 69.32%;
+	position: relative;
+	color: white;
+	font-size: 13px;
+	left: 70px;
+	position: absolute;
+	font-weight: 700;
+}
+.mod-ecommerce-prompt .item-title{
+	top:-10px;
+}
+.mod-ecommerce-prompt .item-price{
+	bottom: -8px;
+	color: #ffcc00;
+}
+.mod-ecommerce-prompt .ep-i-close{
+	position: absolute;
+	display: block;
+	width: 17px;
+	height: 17px;
+	right: -10px;
+	top: -10px;
+	background: url(../img/i-close.png?__sprite) no-repeat;
+	cursor: pointer;
+}
+.mod-ecommerce-prompt .ep-i-close:hover{
+	background: url(../img/i-close_hover.png?__sprite) no-repeat;
+}
