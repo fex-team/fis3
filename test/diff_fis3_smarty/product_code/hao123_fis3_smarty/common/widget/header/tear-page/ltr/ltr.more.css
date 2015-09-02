@@ -1,6 +1,0 @@
-.tear-page{position: absolute;right: 0px; top: 0px; width: 52px;height: 50px;overflow: hidden;z-index: 9; visibility: visible !important;}
-.tear-page img, .tear-page i{position: absolute;left: 0px;top: 0px;}
-.i-tear-page{display: block;width: 52px; height: 50px;background: url(../img/close.png?__sprite) no-repeat;}
-.tear-page .i-tear-page-close{display: block;left: 12px;top:25px;width: 12px;height: 12px; background: url(../img/del_grey.png?__sprite) no-repeat;}
-.tear-page .i-tear-page-close:hover{cursor: pointer;background: url(../img/del_active.png?__sprite) no-repeat;}
-.tear-page .tear-page_btn {	display: block;	height: 20px; width: 58px; position: absolute; cursor: pointer;	right: 0px;	top: 0px; overflow: hidden;}

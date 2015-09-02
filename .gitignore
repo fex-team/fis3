@@ -45,3 +45,5 @@ upload.py
 /doc/output
 /test/www
 /test/downloads/
+/test/xpy/
+/test/xpy2/

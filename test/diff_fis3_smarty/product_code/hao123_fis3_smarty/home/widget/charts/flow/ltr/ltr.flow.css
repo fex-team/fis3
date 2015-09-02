@@ -1,9 +1,0 @@
-/* For 300px layout */
-@import url('/widget/charts/flow/charts.flow.css?__inline');
-.flow-on .charts-imgitem{
-	margin-right:10px;
-}
-/*bg icon for music chart*/
-.flow-on .charts-music .icon-bg{
-	right: 15px;
-}

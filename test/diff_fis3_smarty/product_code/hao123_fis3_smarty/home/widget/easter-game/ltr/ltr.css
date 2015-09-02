@@ -1,9 +1,0 @@
-.mod-easter-game{
-	position: fixed;
-	top: 20px;
-	bottom: 0;
-	left: 50%;
-	margin-left: -375px;
-	z-index: 10000;
-	display: none;
-}

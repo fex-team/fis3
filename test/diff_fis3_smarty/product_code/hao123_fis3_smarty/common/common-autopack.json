@@ -1,9 +1,0 @@
-{
-    "pack" : {
-        "pkg/autopack_common_base.js": [
-            "/static/lazyload.js",
-            "/static/mod.js",
-            "/static/BigPipe.js"
-        ]
-    }
-}

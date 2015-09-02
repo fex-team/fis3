@@ -1,1 +1,0 @@
-<%widget name="common:widget/footer/footer.tpl" linkList=$body.footprint.links copyright=$html.copyright%>

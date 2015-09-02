@@ -1,7 +1,0 @@
-/* set home & add fav top bar */
-.bar-addfav,.bar-addfav_inner {
-    display: none;
-}
-#ieSetHomePage {
-    display: none;
-}
