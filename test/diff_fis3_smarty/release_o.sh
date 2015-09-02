@@ -86,10 +86,14 @@ then
     rm -rf ${HAO123_OUTPUT_PATH}/output_o_new
     for module in ${HAO123_MODULES[@]}
     do
+        echo "cd ${HAO123_CODE_PATH}/$module"
         cd ${HAO123_CODE_PATH}/$module
+
+        echo "node ${FISP_PATH}/bin/fis release -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color"
         node ${FISP_PATH}/bin/fis release -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color
+
     done
-    echo $$version > ${HAO123_OUTPUT_PATH}/output_o_new/fis_version.txt
+    echo $version > ${HAO123_OUTPUT_PATH}/output_o_new/fis_version.txt
     chmod 777 ${HAO123_OUTPUT_PATH}
 
     #superman
