@@ -6,6 +6,7 @@ cd  ${TEST_PATH}
 if [ -f "result"$4"/report.xml" ]
 then
    rm "result"$4"/report.xml"
+   rm "result"$4"/*.html"
 fi
 sh product_code.sh $1 $2     #拉取代码form svn
 sh new_fis_ready.sh $4       #安装新的fis版本
