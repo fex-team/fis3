@@ -11,8 +11,8 @@ cd ${TEST_PATH}
 WENKU_CODE_PATH=${TEST_PATH}/product_code/wenku_svn_fis3_smarty
 WENKU_OUTPUT_PATH=${TEST_PATH}/product_output/wenku_svn_fis3_smarty
 
-#TIEBA_CODE_PATH=${TEST_PATH}/product_code/tieba
-#TIEBA_OUTPUT_PATH=${TEST_PATH}/product_output/tieba
+IMAGE_CODE_PATH=${TEST_PATH}/product_code/image
+IMAGE_OUTPUT_PATH=${TEST_PATH}/product_output/image
 
 #BATMAN_CODE_PATH=${TEST_PATH}/product_code/batman
 #BATMAN_OUTPUT_PATH=${TEST_PATH}/product_output/batman
@@ -55,12 +55,12 @@ then
 	echo $version > ${WENKU_OUTPUT_PATH}/output_o_new/fis_version.txt
     chmod 777 ${WENKU_OUTPUT_PATH}
 
-	#tieba
-	rm -rf ${TIEBA_OUTPUT_PATH}/output_o_new
-	#cd ${TIEBA_CODE_PATH}
-	#node ${FISP_PATH}/bin/fis-plus release -copd ${TIEBA_OUTPUT_PATH}/output_o_new --no-color
-	#echo $v > ${TIEBA_OUTPUT_PATH}/output_o_new/fis_version.txt
-    #chmod 777 ${TIEBA_OUTPUT_PATH}
+	#image
+	rm -rf ${IMAGE_OUTPUT_PATH}/output_o_new
+#	cd ${IMAGE_CODE_PATH}
+#	node ${FISP_PATH}/bin/fis release -cd ${IMAGE_OUTPUT_PATH}/output_o_new --no-color
+#	echo $version > ${IMAGE_OUTPUT_PATH}/output_o_new/fis_version.txt
+#    chmod 777 ${IMAGE_OUTPUT_PATH}
 
 	#batman
 	rm -rf ${BATMAN_OUTPUT_PATH}/output_o_new
@@ -114,12 +114,12 @@ else
 	echo $version > ${WENKU_OUTPUT_PATH}/output_o_old/fis_version.txt
     chmod 777 -R ${WENKU_OUTPUT_PATH}/output_o_old
 
-	#tieba
-	rm -rf ${TIEBA_OUTPUT_PATH}/output_o_old
-	#cd ${TIEBA_CODE_PATH}
-	#fisp release -copd ${TIEBA_OUTPUT_PATH}/output_o_old --no-color
-	#echo $v > ${TIEBA_OUTPUT_PATH}/output_o_old/fis_version.txt
-    #chmod 777 -R ${TIEBA_OUTPUT_PATH}/output_o_old
+	#image
+	rm -rf ${IMAGE_OUTPUT_PATH}/output_o_old
+	cd ${IMAGE_CODE_PATH}
+	/home/work/bin/fis3 release -d ${IMAGE_OUTPUT_PATH}/output_o_old --no-color
+	echo $version > ${IMAGE_OUTPUT_PATH}/output_o_old/fis_version.txt
+    chmod 777 -R ${IMAGE_OUTPUT_PATH}/output_o_old
 
     #batman
 	rm -rf ${BATMAN_OUTPUT_PATH}/output_o_old

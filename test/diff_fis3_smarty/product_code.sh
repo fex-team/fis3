@@ -19,8 +19,8 @@ cd ${TEST_PATH}
 HAO123_SVN=https://svn.baidu.com/app/global/hao123/trunk/fe
 HAO123_DIR=./product_code/hao123
 
-#SUPERMAN_SVN=https://svn.baidu.com/app/search/lbs-webapp/trunk/mmap/superman
-#SUPERMAN_DIR=./product_code/superman
+img_SVN=https://svn.baidu.com/app/search/image/tags/fe/fis2-template/wisepadnew/wisepadnew_1-0-4-0_PD_BL/
+img_DIR=./product_code/image
 
 #svn co --username=$1 --password=$2 --no-auth-cache ${PLACE_SVN} ${PLACE_DIR}
 #svn co --username=$1 --password=$2 --no-auth-cache ${BATMAN_SVN} ${BATMAN_DIR}
@@ -29,4 +29,4 @@ HAO123_DIR=./product_code/hao123
 #svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/common ${HAO123_DIR}/common
 #svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/home ${HAO123_DIR}/home
 #svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/lv2 ${HAO123_DIR}/lv2
-#svn co --username=$1 --password=$2 --no-auth-cache ${SUPERMAN_SVN} ${SUPERMAN_DIR}
+svn co --username=$1 --password=$2 --no-auth-cache ${img_SVN} ${img_DIR}
