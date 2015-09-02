@@ -1,0 +1,159 @@
+.box-search_tab a:hover {
+    color: #1c81e5;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, .05);
+}
+.box-search_logo dt:hover,
+.box-search_logo dd:hover {
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, .05);
+}
+.box-search_logos_show {
+    border: 1px solid #e5e6e7;
+    background-color: #fff;
+}
+.box-search_logos_show dt,
+.box-search_logos_show dd {
+    padding: 10px 13px 10px 11px;
+}
+.box-search_logos_show dt {
+    padding-top: 9px;
+}
+.box-search_logo a {
+    display: block;
+
+    padding-left: 15px;
+}
+.box-search_logo dt a {
+    background: url(/widget/img/bg.png) -10px -61px no-repeat;
+}
+.box-search_logos_show dt a {
+    background-position: -10px -87px;
+}
+
+.box-search_logo_disabled {
+    border-width: 0;
+    background-color: transparent;
+}
+.box-search_logo_disabled dt,
+.box-search_logo_disabled dd {
+    padding: 10px 14px 10px 12px;
+}
+.box-search_logo_disabled dt:hover,
+.box-search_logo_disabled dd:hover {
+    padding: 10px 14px 10px 12px;
+
+    background-color: transparent;
+}
+.box-search_logo_disabled dt a {
+    background: none;
+}
+
+
+.box-search_form .box-search_focus {
+    border-color: #4ca6ff;
+}
+
+.btn-search_ico {
+    line-height: 27px;
+
+    display: block;
+
+    width: 17px;
+    height: 17px;
+    margin: 0 auto;
+
+    background: url(../img/i-search.png?__sprite) no-repeat;
+}
+.btn-search_c:hover {
+    background-color: #1e7ddc;
+}
+
+.btn-search_c:active {
+    background-color: #1D6CBB;
+}
+
+.hsrch_word a:hover {
+    text-decoration: underline;
+    color: #1c81e5;
+}
+
+
+body .box-search .sug-search {
+    top: 0;
+    left: 0;
+
+    visibility: visible;
+
+    width: 548px;
+    height: auto;
+    margin-top: 34px;
+
+    border-top: 0;
+}
+
+/****黑色皮肤****/
+.skin-type-dark .box-search_tab a {
+    color: #fff;
+}
+.skin-type-dark .box-search_tab a:hover,
+.skin-type-dark .box-search_logo dt:hover,
+.skin-type-dark .box-search_logo dd:hover {
+    background-color: #0d0d0d;
+    background-color: rgba(0, 0, 0, .3);
+}
+.skin-type-dark .box-search_logos_show {
+    border: 1px solid #0d0d0d;
+    border-color: rgba(0, 0, 0, .3);
+    background-color: #8c8c8c;
+    background-color: rgba(0, 0, 0, .6);
+}
+.skin-type-dark .box-search_tab a:hover,
+.skin-type-dark .box-search_tab a.cur {
+    color: #fff;
+}
+.skin-type-dark .hsrch_title,
+.skin-type-dark .hsrch_word a {
+    color: #bbb;
+}
+.skin-type-dark .hsrch_word a:hover {
+    color: #eee;
+}
+
+
+/* 960 */
+.w960 .box-search .sug-search {
+    width: 469px;
+}
+
+
+/*header fixed*/
+.header-fixed-up .box-search_logo dt:hover,
+.header-fixed-up .box-search_logo dd:hover {
+    background-color: #f2f2f2;
+}
+.header-fixed-up .box-search_logos_show {
+    border-width: 0 !important;
+}
+
+/*搜索条中增加new提示*/
+.box-search_tab .new_add_prompt{
+    display:block;
+    width:24px;
+    height:12px;
+    background: url(../img/tag_new_icon.png?__sprite) no-repeat 0 0;
+    position: absolute;
+    top: -6px;
+    left: -8px;
+}
+.box-search_tab .new_add_prompt_id{
+    display:block;
+    width:28px;
+    height:14px;
+    background: url(../img/id_new_add_icon.png?__sprite) no-repeat 0 0;
+    position: absolute;
+    top: -8px;
+    left: -12px;
+}

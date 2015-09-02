@@ -1,0 +1,13 @@
+body {
+     _zoom: expression(function(el){document.execCommand('BackgroundImageCache',false,true);el.style.zoom = "1"}(this))
+}
+img {
+    -ms-interpolation-mode: bicubic;
+}
+button, input, select, textarea {
+    *vertical-align: middle
+}
+
+button, input {
+    *overflow: visible;
+}

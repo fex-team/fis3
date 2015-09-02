@@ -1,0 +1,55 @@
+
+.userbar-btns {
+    height: 32px;
+    font-size: 12px;
+    visibility: visible !important;
+    border: 1px solid #e3e4e6;
+    max-width: 190px;
+    left: 0;
+    top: 24px;
+    text-align: center;
+}
+.userbar-btns a {
+    color: #0d7ee8;
+    background: #fff;
+    float: right;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.userbar-btns a:hover {
+    background: #0d7ee8;
+    color: #fff;
+}
+.userbar-btns i {
+    display: block;
+    width: 17px;
+    height: 17px;
+    margin: 7px 0;
+}
+.userbar-btns .userbar-btns-content {
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 13px;
+    max-width: 133px;
+    text-overflow: ellipsis;
+}
+.userbar-btns .userbar-btns-icon {
+    display: inline-block;
+    padding-left: 7px;
+    height: 100%;
+}
+.userbar-btns .userbar-btns-down {
+    background: url(../img/down.png?__sprite) no-repeat;
+}
+.userbar-btns:hover .userbar-btns-down {
+    background: url(../img/down-h.png?__sprite) no-repeat;
+}
+

@@ -1,0 +1,84 @@
+{
+    "pkg/autopack_home_async_fs.js": [
+        "/widget/hot-site/hot-site-async.js",
+        "/widget/ui/anchorside/anchorside.js",
+        "/widget/history-add/history-add-async.js",
+        "/widget/history/history-c.js",
+        "/widget/sort-area/sort-area-tab-async.js",
+        "/widget/sort-area/sort-area-nav-async.js",
+        "/widget/sort-area/sort/sort-async.js",
+        "/widget/recommand/layout2/layout2-async.js",
+        "/widget/personal-nav/personal-nav-async.js",
+        "/widget/customsites/customsites-async.js"
+    ],
+    "pkg/home_sync_pri1_js_0_jp.js": [
+        "/widget/news/mod-news.js",
+        "/widget/ui/facebook/fbclient-tpl.js",
+        "/widget/ui/sidebar-facebook/fbclient-tpl.js"
+    ],
+    "pkg/home_async_pri1_js_0_jp.js": [
+        "/widget/ad-switch/ad-switch-async.js",
+        "/widget/bottom-book/bottom-book-async.js",
+        "/widget/bottom-vote/bottom-vote-async.js",
+        "/widget/bottom/bottom-async.js",
+        "/widget/custom-sidebar/custom-sidebar-messagebubble.js",
+        "/widget/hot-site/game-history/game-history-async.js",
+        "/widget/hotsite-newtab/hotsite-newtab-async.js",
+        "/widget/news/news-async.js",
+        "/widget/popupsite/popupsite-c.js",
+        "/widget/sidetoolbar/sidetoolbar-async.js",
+        "/widget/sort-area/create-content-async.js",
+        "/widget/ui/astro/astro.js",
+        "/widget/ui/bus/bus.js",
+        "/widget/ui/charts/charts.js",
+        "/widget/ui/facebook/sns-share.js",
+        "/widget/ui/fb-feed/fb-feed.js",
+        "/widget/ui/fool-day/fool-day.min.js",
+        "/widget/ui/hospital/hospital.js",
+        "/widget/ui/sidebar-facebook/facebook-out.js",
+        "/widget/ui/speed-test/speed-test-core.js",
+        "/widget/ui/speed-test/speed-test.js",
+        "/widget/water/water-a.js",
+        "/widget/ui/facebook/fbclient-core.js",
+        "/widget/ui/facebook/fbclient.js",
+        "/widget/ui/sidebar-facebook/fbclient-core.js",
+        "/widget/ui/sidebar-facebook/fbclient.js",
+        "/widget/ui/facebook/facebook.js",
+        "/widget/ui/sidebar-facebook/facebook.js"
+    ],
+    "pkg/home_async_pri1_js_1_jp.js": [
+        "/widget/snow/snow-async.js",
+        "/widget/ui/side-like/side-like-async.js"
+    ],
+    "pkg/home_sync_pri1_css_0_jp.css": [
+        "/widget/ad-switch/ltr/ltr.css",
+        "/widget/anchorside/ltr/ltr.css",
+        "/widget/astro/ltr/ltr.css",
+        "/widget/bottom-book/ltr/ltr.css",
+        "/widget/bottom-vote/ltr/ltr.css",
+        "/widget/bottom/ltr/ltr.css",
+        "/widget/charts/ltr/ltr.css",
+        "/widget/customsites/ltr/ltr.more.css",
+        "/widget/hot-site/game-history/game-history.css",
+        "/widget/hot-site/ltr/ltr.more.css",
+        "/widget/hotsite-newtab/ltr/ltr.css",
+        "/widget/mail/ltr/ltr.css",
+        "/widget/news/ltr/ltr.css",
+        "/widget/popupsite/ltr/ltr.css",
+        "/widget/sidetoolbar/ltr/ltr.css",
+        "/widget/sort-area/sort/ltr/ltr.more.css",
+        "/widget/sort-area/tab/ltr/ltr.css",
+        "/widget/trigger-flow/ltr/ltr.css"
+    ],
+    "pkg/home_sync_pri1_css_1_jp.css": [
+        "/widget/bus/ltr/ltr.css",
+        "/widget/hospital/ltr/ltr.css",
+        "/widget/sidebar-facebook/ltr/ltr.css",
+        "/widget/speed-test/ltr/ltr.css"
+    ],
+    "pkg/home_sync_pri1_css_2_jp.css": [
+        "/widget/history/flow/ltr/ltr.flow.css",
+        "/widget/history/ltr/ltr.more.css",
+        "/widget/history/small-ltr/small-ltr.css"
+    ]
+}

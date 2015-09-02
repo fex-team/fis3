@@ -1,0 +1,74 @@
+.mod-translate-container{
+	margin: 8px 8px 0;
+}
+.mod-translate-container {
+	position: relative;
+}
+.translate-submit{
+	height:30px;
+	width:100%;
+	background:#5DB285;
+	cursor: pointer;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	color: white;
+	border: 0;
+	border-radius: 5px;
+	font-size: 17px;
+	font-weight: bold;
+	position: relative;
+	top: 3px;
+}
+.mod-translate-text{
+	color:#5a5a5a;
+	font-size:15px;
+}
+.pickLanguage {
+	height: 24px;
+	padding-left: 5px;
+	padding-right: 25px;
+	width: 112px;
+}
+.mod-translate .charts_more{
+	color: #00b075;
+}
+.pick_language {
+	width: 100%;
+	height: 26px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.translate_note_info {
+	color: #BCBCBC;
+	cursor: text;
+	position: absolute;
+	top:98px;
+	left: 9px;
+}
+.translate_content_wrapper{
+	border: 1px solid #ccc;
+	padding-top: 3px;
+	padding-left:3px;
+	margin-top: 10px;
+	background: #fff;
+}
+.translate_content {
+	border: 0;
+	width: 100%;
+	height: 120px;
+}
+.color_red {
+	border:1px solid red;
+}
+.subBtn_color{
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#51A274), to(#65B38D));
+	background:-moz-linear-gradient(top, #51A274,#65B38D)
+}
+
+/*显示模块*/
+.side-mod-preload-translate{
+
+}
+.side-mod-preload-translate > *{
+    visibility: visible!important;
+}

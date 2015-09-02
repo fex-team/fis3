@@ -1,0 +1,58 @@
+/*============userbar=============*/
+
+.userbar-wrap {
+    background: #00ad73;
+    border-bottom: 1px solid #009e69;
+    _border-bottom: 0 none;
+    min-width: 960px;
+    position: relative;
+    height: 50px;
+}
+.userbar {
+    height: 50px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+}
+.userbar-tool {
+    display: none;
+}
+/*.userbar-tool {
+    width: 220px;
+    margin-top: 4px;
+    position: relative;
+    overflow: visible;
+    z-index: 11;
+}
+
+.userbar a:hover {
+    text-decoration: none;
+}
+.weather-more_wrap {
+    background: #0c815a;
+    overflow: hidden;
+    height: 0;
+    border-top: 0 none;
+    border-bottom: 1px solid #fff;
+    zoom: 1;
+}
+.weather-more_show {
+    height: auto;
+    border-top: 1px solid #0a6f4e;
+}
+.weather-more_line {
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    -o-box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    border-bottom: 1px solid #0a6f4e;
+
+}*/
+.weather-more {
+    display: none;
+}
+
+.weather-more_wrap {
+    border-bottom: 1px solid #fff;
+}

@@ -1,0 +1,24 @@
+.w960 .notepad-login{
+	width: auto;
+	margin-left: -60px;
+}
+.w960 .notepad-list{
+	width: 259px;
+}
+.w960 .notepad-notes{
+	width: 345px;
+}
+.w960 .notepad-article-shadow1,
+.w960 .notepad-article-shadow2{
+	left: 287px;
+	width: 341px;
+}
+.w960 .notepad-article-shadow2{
+	left: 289px;
+}
+.w960 .notepad-add{
+	width: 227px;
+}
+.w960 .notepad-ring{
+	left: 261px;
+}

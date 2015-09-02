@@ -1,0 +1,205 @@
+.pr{
+	position:relative;
+}
+
+.mod-pray{
+	position: relative;
+}
+
+.mod-pray .mod-side {
+	background: #f5f7f7;
+	border: 1px solid #fff;
+	/*border-bottom: 0;
+	min-height: 240px;*/
+	padding: 15px;
+}
+.mod-pray p{
+	text-align:center;
+	height:21px;
+	line-height:21px;
+}
+.mod-pray-more p{
+	height:20px;
+	line-height:20px;
+}
+#prayDatePart{
+	display:none;
+}
+#prayCurTime{
+	width:57px;
+	height:24px;
+	border: 1px solid #d9d9d9;
+	height: 24px;
+	line-height: 24px;
+	vertical-align: middle;
+	text-align:center;
+}
+.mod-pray-h12 #prayCurTime{
+	width:97px;
+}
+#prayCityPicker{
+	vertical-align:middle;
+}
+#prayCurTime .hourclock{
+	float:right;
+	border-left:1px solid #d9d9d9;
+	width:24px;
+	background-color:#f9f9f9;
+}
+/* .mod-pray input{
+	line-height:24px;
+	font-size:12px;
+	height:24px;
+	padding-right: 25px;
+	padding-left: 5px;
+	width: 111px;
+	border:0;
+}
+.mod-pray-h12 input{
+	width: 71px;
+} */
+/*general dropdown component, including input and list*/
+.mod-pray .dropdown{
+	position:relative;
+	_zoom:1;
+}
+.mod-pray .dropdown-trigger{
+	border: 1px solid #d9d9d9;
+	display: inline-block;
+}
+.mod-pray .dropdown-input{
+	cursor:pointer;
+	line-height:24px;
+	height:24px;
+	font-size:12px;
+	width: 111px;
+	border:0;
+}
+.mod-pray-h12 .dropdown-input{
+	width: 71px;
+}
+.mod-pray .dropdown-ltr .dropdown-input{
+	padding-right: 25px;
+	padding-left: 5px;
+}
+.mod-pray .dropdown-arrow{
+	background-color:#f5f7f7;
+	background-image: -moz-linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	background-image: -webkit-linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	background-image: -o-linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	background-image: -ms-linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	background-image: linear-gradient(top , #f5f7f7, #ffffff 100.0%);
+	border:0;
+	width:23px;
+	height:24px;
+	position:absolute;
+	top: 1px;
+	_top:2px;
+	cursor:pointer;
+}
+.mod-pray .dropdown-ltr .dropdown-arrow{
+	right: 1px;
+	border-left:1px solid #ebebeb;
+}
+.mod-pray .dropdown-arrow i{
+	background:url(../img/i-arrow-bottom-green.png?__sprite) no-repeat;
+	display:block;
+	width: 11px;
+	height: 6px;
+	position: relative;
+	font-size:0;
+	top: 9px;
+}
+.mod-pray .dropdown-ltr .dropdown-arrow i{
+	right: -6px;
+}
+.mod-pray .dropdown-arrow-up i{
+	background-image:url(../img/i-arrow-top-green.png?__sprite);
+}
+.mod-pray .dropdown-list{
+	position: absolute;
+	top: 26px;
+	_top:27px;
+	left: 0;
+	background: #fff;
+	border-top: 0;
+	text-indent:5px;
+	display:none;
+	/*text-align:left;*/
+	z-index:2;
+	border: 1px solid #d9d9d9;
+	border-top:0;
+	line-height:24px;
+	font-size:12px;
+}
+.mod-pray .dropdown-list ul{
+	height:144px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.mod-pray .scroll-arrow{
+	display:block;
+}
+.mod-pray .dropdown-list li{
+	cursor:pointer;
+}
+.mod-pray .dropdown-list li:hover{
+	background:#e8eaeb;
+}
+
+.mod-pray table{
+	border-top:1px solid #d8d8d8;
+	background:#f9fafa;
+	width: 100%;
+}
+.mod-pray tr.cur{
+	background:#31b387;
+	color:#fff;
+	font-weight:600;
+}
+.mod-pray .passed{
+	color:#b6b6b7;
+}
+.mod-pray td{
+	width:90px;
+	height:29px;
+	line-height:29px;
+	border-bottom:1px solid #e2e3e3;
+	text-align:left;
+	text-indent:10px;
+}
+.mod-pray-more td{
+	height:27px;
+	line-height:27px;
+}
+.mod-pray-h12 td{
+	width:60px;
+}
+td.pray-time{
+	width:42px;
+	padding:0;
+}
+.mod-pray-h12 td.pray-time{
+	width:72px;
+}
+td.pray-countdown{
+	width:73px;
+	padding:0;
+	text-align:center;
+}
+.mod-magicbox .mod-pray .mod-side{
+	border:0;
+	padding-bottom:15px;
+}
+.mod-magicbox .mod-pray-more .mod-side{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+/*显示模块*/
+.side-mod-preload-pray{
+
+}
+.side-mod-preload-pray > *{
+    visibility: visible!important;
+}

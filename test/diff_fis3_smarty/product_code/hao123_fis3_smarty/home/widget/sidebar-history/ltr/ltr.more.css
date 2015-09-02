@@ -1,0 +1,102 @@
+/* history */
+.sidebar-icon-new_red {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+}
+.mod-historysites {
+    width: 239px;
+    height: 350px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.sidebar-hotsite-hist {
+    height: 100%;
+}
+.sidebar-hotsite-content {
+    padding-top: 5px;
+    padding-left: 5px;
+    height: 100%;
+    overflow: hidden;
+}
+.sidebar-hist-block {
+    display: block;
+    width: 102px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    float: left;
+    margin: 5px;
+    background: #0bb079;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+    border: 1px solid #BFBFBF;
+}
+.sidebar-hotsite-hist_bg {
+    text-align: center;
+    padding-top: 76px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 274px;
+    background-color: #F2F2F2;
+}
+.sidebar-hotsite-hist_bg i{
+    background: url(../img/i-history-hist-bg.png?__sprite) no-repeat;
+    height: 51px;
+    width:55px;
+    display: block;
+    margin: 0 auto 20px;
+}
+.sidebar-hotsite-hist_bg span {
+    color: #A6A6A6;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.sidebar-hist-block_big {
+    width: 216px;
+}
+.sidebar-hist-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+    margin-bottom: -3px;
+    background: url(../img/i-history-hist-icon.png?__sprite) no-repeat;
+}
+.sidebar-hist-block_remove {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: url(../img/i-history-remove-btn.png?__sprite) no-repeat;
+    cursor: pointer;
+    font-size: 0;
+    display: none;
+}
+.sidebar-hist-block_img {
+    *font-size: 70px;
+}
+.sidebar-hist-block_img .sidebar-hist-block_title {
+    display: none;
+}
+.sidebar-hist-block_img .sidebar-hist-icon {
+    display: none;
+}
+.sidebar-hist-block:hover .sidebar-hist-block_remove {
+    display: block;
+}
+.sidebar-hist-block_remove:hover {
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}

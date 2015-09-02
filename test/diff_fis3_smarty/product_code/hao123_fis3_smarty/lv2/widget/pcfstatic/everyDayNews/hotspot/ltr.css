@@ -1,0 +1,196 @@
+.mod-pcf-evedn .hotspot .slide-wrap {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    margin-top: 10px;
+    margin-left: 11px;
+    overflow: hidden;
+    float: left;
+}
+
+.mod-pcf-evedn .hotspot .nav-item {
+    float: left;
+}
+
+.mod-pcf-evedn .hotspot .ctrl p {
+    position: absolute;
+    top: 53px;
+    font-size: 0;
+    display: inline-block;
+    width: 18px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.mod-pcf-evedn .hotspot .prev {
+    left: 0;
+    background: url(../img/slide-big-switch-left.png?__sprite) no-repeat;
+}
+
+.mod-pcf-evedn .hotspot .next {
+    right: 0;
+    background: url(../img/slide-big-switch-right.png?__sprite) no-repeat;
+}
+
+.mod-pcf-evedn .hotspot .prev:hover {
+    left: 0;
+    background: url(../img/slide-big-switch-left_hover.png?__sprite) no-repeat;
+}
+
+.mod-pcf-evedn .hotspot .next:hover {
+    right: 0;
+    background: url(../img/slide-big-switch-right_hover.png?__sprite) no-repeat;
+}
+.mod-pcf-evedn .hotspot .slide {
+    position: relative;
+    display: block;
+    width: 248px;
+    height: 153px;
+}
+
+.mod-pcf-evedn .hotspot .slide:hover,
+.mod-pcf-evedn .hotspot .thumb:hover,
+.mod-pcf-evedn .hotspot .thumb:hover .thumb-title {
+    border-color: #61a7ed;
+}
+.mod-pcf-evedn .hotspot .slide:hover .title-mask{
+    background-color: #3e87d1;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.mod-pcf-evedn .hotspot .img {
+    height: 100%;
+}
+
+.mod-pcf-evedn .hotspot .nav-item-list {
+    position: relative;
+}
+
+.mod-pcf-evedn .hotspot .switch {
+    position: absolute;
+    bottom: 29px;
+    right: 4px;
+    display: inline-block;
+    width: 56px;
+    height: 12px;
+    background: url(../img/slide-quick-switch-bk.png?__sprite) no-repeat;
+    z-index: 1;
+}
+
+.mod-pcf-evedn .hotspot .switch-item {
+    display: inline-block;
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin-top: 3px;
+    margin-left: 8px;
+    background: url(../img/slide-quick-switch.png?__sprite) no-repeat;
+    cursor: pointer;
+}
+
+.mod-pcf-evedn .hotspot .switch-item-current {
+    margin-top: 2px;
+    background: url(../img/slide-quick-switch-cur.png?__sprite) no-repeat;
+}
+
+.mod-pcf-evedn .hotspot .title-mask {
+    height: 25px;
+}
+
+.mod-pcf-evedn .hotspot .slide-title {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #ffffff;
+    font-size: 12px;
+    z-index: 2;
+}
+
+.mod-pcf-evedn .hotspot .thumb-wrap {
+    position: absolute;
+    display: inline-block;
+    width: 258px;
+    height: 119px;
+    left: 10px;
+    top: 172px;
+    overflow: hidden;
+}
+
+.mod-pcf-evedn .hotspot .thumb {
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 120px;
+    height: 117px;
+    margin-right: 7px;
+    background-color: #f8f7f7;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+.mod-pcf-evedn .hotspot .thumb:hover{
+    background-color: #3e87d1;
+    color: #fff;
+}
+.mod-pcf-evedn .hotspot .thumb-img {
+    display: inline-block;
+    width: 100%;
+    height: 88px;
+}
+
+.mod-pcf-evedn .hotspot .thumb-title {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 27px;
+    color: #666;
+    font-size: 12px;
+    line-height: 14px;
+    border-top: 1px solid #EEEEEE;
+    padding-left: 2px;
+}
+
+.mod-pcf-evedn .hotspot .thumb:hover .thumb-title {
+    color: #fff;
+}
+
+.mod-pcf-evedn .hotspot .text-wrap {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 240px;
+    height: 260px;
+    margin-top: 10px;
+    overflow: hidden;
+    margin-left: 8px;
+}
+
+.mod-pcf-evedn .hotspot .text {
+    position: relative;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    width: 237px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    padding-left: 11px;
+    color: #666666;
+}
+.mod-pcf-evedn .hotspot .text:hover {
+    text-decoration: underline;
+    color: #1c81e5;
+}
+.mod-pcf-evedn .hotspot .text:first-child {
+    font-size: 14px;
+    color: #3e87d1!important;
+}

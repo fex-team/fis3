@@ -1,0 +1,339 @@
+﻿.popup-site_mask {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000906;
+	z-index: 950;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+.popup-site_container {
+	position: absolute;
+	right: 50%;
+	width: 938px;
+	padding: 0 10px 6px; 
+	border: 1px solid #D7DDDE;
+	border-color: #E2F2ED #D7DDDE #EDF0EF #DFE4E6;
+	margin-right: -480px;
+	background-color: #fff;
+	color: #454545;
+	z-index: 951;
+}
+
+/*****头部样式*****/
+.popup-site_head {
+	height: 28px;
+	color: #00AC73;
+	border-bottom: 1px solid #F2F2F2;
+	position: relative;
+}
+.popup-site_title {
+	font-size: 14px;
+	line-height: 28px;
+}
+.popup-site_close {
+	position: absolute;
+	left: -3px;
+	top: 6px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	background: url(../img/i-close.png?__sprite) no-repeat;
+}
+.popup-site_close-hover {
+background-image: url(../img/i-close_hover.png?__sprite);
+}
+
+/*****已收藏网址*****/
+.popup-site_self {
+	position: relative;
+}
+.self_site {
+	padding: 12px 0;
+	overflow: hidden;
+}
+/***每个网址项***/
+.site_item, .item_default {
+	float: right;
+	display: inline;
+	width: 168px;
+	height: 24px;
+	line-height: 24px;
+	margin: 6px 15px 6px 0;
+	background-color: #FAFBFC;
+	border: 1px solid #F5F6F7;
+	overflow: hidden;
+}
+.site_item-hl {
+	border-color: #DEF0EA;
+	background-color: #ECFAF6;
+}
+.item_default {
+	border: 1px dashed #D6D6D6;
+	cursor: default;
+}
+.item_text {
+	height: 16px;
+	line-height: 16px;
+	margin: 4px;
+	width: 126px;
+	overflow: hidden;
+	float: right;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+.item_icon {
+	height: 16px;
+	width: 16px;
+	overflow: hidden;
+	display: inline-block;
+	margin-left: 5px;
+	vertical-align: top;
+}
+/*编辑、删除按钮*/
+.item_edit, .item_delete {
+	float: right;
+	height: 12px;
+	width: 12px;
+	overflow: hidden;
+	margin-top: 6px;
+	margin-left: 5px;
+	cursor: pointer;
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+.item_edit {
+	background-image: url(../img/i-edit.png?__sprite);
+}
+.item_edit-hover {
+	background-image: url(../img/i-edit_hover.png?__sprite);
+}
+.item_delete {
+	background-image: url(../img/i-del.png?__sprite);
+}
+.item_delete-hover {
+	background-image: url(../img/i-del_hover.png?__sprite);
+}
+/***网址多于规定数目时警告信息***/
+.self_tips {
+	position: absolute;
+	left: 14px;
+	top: 113px;
+	width: 230px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	background-color: #FCE9E9;
+	color: #E65050;
+	border: 1px solid #FCE1E1;
+	border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	white-space: nowrap;
+	display: none;
+}
+.self_tips_icon {
+	margin-left: 5px;
+    margin-bottom: -2px;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url(../img/i-warn.png?__sprite) no-repeat;
+}
+.self_tips p {
+	white-space: nowrap;
+	width: 230px;
+	margin: 0 auto;
+	text-overflow: ellipsis;
+}
+/*箭头*/
+.self_arrow, .self_arrow div {
+	position: absolute;
+	height: 0;
+	width: 0;
+	border: 8px solid transparent;
+}
+.self_arrow {
+	border-bottom-color: #FCE1E1;
+	top: -17px;
+	right: 112px;
+}
+.self_arrow div {
+	border-bottom-color: #FCE9E9;
+	margin: -7px -8px 0 0;
+}
+
+/*****添加、修改网址表单*****/
+.popup-site_set {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-top: 1px dotted #F2F2F2;
+	vertical-align: middle;
+}
+/***输入框***/
+.popup-site_set input,.popup-site_set label {
+	vertical-align: middle;
+}
+.popup-site_set label {
+	display: inline-block;
+}
+.popup-site_set input {
+	line-height: 16px;
+	height: 16px;
+	margin-right: 10px;
+	border: 1px solid #D9D9D9;
+	padding: 4px 4px 4px 7px;
+	margin-left: 9px;
+	background-color: #FFF;
+}
+.popup-site_set .site_input-focus {
+	border-color: #00B174;
+}
+.popup-site_set .site_url {
+	margin-left: 20px;
+	width: 264px;
+}
+.popup-site_set .site_name {
+	width: 134px;
+}
+/***添加、编辑按钮***/
+.site_add, .site_edit {
+	display: inline-block;
+	width: 86px;
+	height: 26px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	background: url(../img/add-btn.png?__sprite) no-repeat;
+	cursor: pointer;
+}
+.site_edit {
+	display: none;
+}
+.popup-site_set .site_disabled {
+	background-image: url(../img/add-btn_dis.png?__sprite);
+	cursor: default;
+	color: #EAEAEA;
+}
+
+/*****历史*****/
+.popup-site_history {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-top: 1px dotted #F2F2F2;
+}
+.history_head {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	position: relative;
+}
+.history_tips {
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 100px;
+	top: 4px;
+	width: 300px;
+	height: 20px;
+}
+.history_content {
+	overflow: hidden;
+}
+.history_nosite {
+	display: none;
+	text-indent: 18px;
+	color: #999999;
+	font-weight: bold;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+/***历史记录、CMS***/
+.history_content .site_item ,.popup-site_cms .site_item {
+	cursor: pointer;
+	background-color: transparent;
+	border-color: transparent;
+}
+.history_content .site_item-hover,.popup-site_cms .site_item-hover {
+	background: url(../img/addsite_hover_rtl.png?__sprite) no-repeat;
+	border-color: #DEF0EA;
+}
+.history_content .site_item-hover .item_text,.popup-site_cms .site_item-hover .item_text {
+	margin-right: 24px;
+}
+.history_content .item_text,.popup-site_cms .item_text {
+	width: 132px;
+}
+
+
+/*****CMS热点网站分类*****/
+.popup-site_cms {
+	position: relative;
+}
+.cms_sort {
+	border-top: 1px dotted #F2F2F2;
+	overflow: hidden;
+}
+.sort_content {
+	overflow: hidden;
+}
+.sort_head {
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+/*****CMS热点网站更新时提醒*****/
+.popup-site_remind {
+	position: absolute;
+	left: 3px;
+	top: -4px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	line-height: 16px;
+	font-size: 12px;
+	color: #FFFFFF;
+	background: url(../img/newsite-tips.png?__sprite) no-repeat;
+}
+
+.popup-site_set, .history_head, .sort_head {
+	padding-right: 14px;
+}
+
+
+/*****一键添加成功后显示动画*****/
+#popAddSuc {
+	width: 170px;
+	height: 26px;
+	position: absolute;
+	overflow: hidden;
+}
+#popAddInner {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 170px;
+	height: 52px;
+	overflow: hidden;
+}
+#popAddInner .site_item {
+	margin: 0;
+	width: 144px;
+	padding-right: 24px;
+	background-color: transparent;
+	border-color: transparent;
+}
+#popAddInner .item_text {
+	width: 132px;
+}
+#popAddInner span.item_icon {
+	background: url(../img/i-add_suc.png?__sprite) no-repeat;
+} 

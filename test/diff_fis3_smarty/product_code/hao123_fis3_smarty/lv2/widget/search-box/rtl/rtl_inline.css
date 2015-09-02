@@ -1,0 +1,273 @@
+/* .box-search_form .input div {
+    float: left;
+}
+*/ /* 为啥加？会导致ps sug出现问题 */
+.box-search_keyboard {
+    padding: 1px;
+    margin-top: 3px;
+}
+
+/* ============box_search============= */
+.box-search {
+    margin: 50px auto 15px;
+    width: 798px;
+}
+.box-search_wrap {
+    margin-top: 6px;
+}
+.box-search_inner {
+    height: 74px;
+}
+
+/* box-search_tab */
+.box-search_tab {
+    white-space: nowrap;
+    margin-right: 161px;
+    position: relative;
+    z-index: 8;
+    clear: both;
+}
+.box-search_tab a {
+    /* font-size: 12px;
+    */
+    float: right;
+    padding: 4px 12px 3px;
+    margin-right: -1px;
+    text-decoration: none;
+    letter-spacing: normal;
+    position: relative;
+    z-index: 1;
+}
+.box-search_tab a:hover {
+    text-decoration: none;
+    background: #dcdcde;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.box-search_tab a:focus {
+    outline: none;
+}
+
+/* clear FF's focusborder */
+.box-search_tab a.cur {
+    color: #00b075;
+    /* font-weight: bold;
+    */
+    cursor: default;
+    text-decoration: none;
+    font-weight: bold;
+}
+.box-search_sep {
+    display: block;
+    float: right;
+    height: 6px;
+    line-height: 6px;
+    margin-top: 8px;
+    border-left: 1px solid #b3b3b3;
+    position: relative;
+    z-index: 0;
+    margin-right: -1px;
+}
+
+/* box-search_logo */
+.box-search_logo_wrap {
+    position: relative;
+    width: 155px;
+    height: 67px;
+    margin: -12px 0 0 5px;
+    float: right;
+    z-index: 6;
+}
+.box-search_logo {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    vertical-align: bottom;
+    text-align: center;
+}
+.box-search_logo a {
+    padding-left: 18px;
+    display: block;
+}
+.box-search_logo a:focus {
+    outline: none;
+}
+.box-search_logo dt,
+.box-search_logo dd {
+    padding: 10px 7px 10px 8px;
+    cursor: pointer;
+}
+.box-search_logo dt a {
+    background: url(../img/bg.png) -10px -61px no-repeat;
+}
+dt.box-search_logo_hover {
+    background-color: #e3e4e6;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.box-search_logos_show .box-search_logo_hover {
+    background-color: #f5f7f7;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+}
+.box-search_logos_show {
+    background-color: #fff;
+}
+.box-search_logos_show dt a {
+    background-position: -10px -87px;
+}
+.box-search_logo_hide {
+    display: none;
+}
+.box-search_logo img {
+    width: 120px;
+    height: 45px;
+}
+.box-search_logo_disabled {
+    background: none;
+    border: 1px solid #EDF0EF;
+}
+.box-search_logo_disabled dt.box-search_logo_hover,
+.box-search_logo_disabled dt a {
+    background: none;
+    cursor: default;
+}
+
+/* box-search_form */
+.box-search_form {
+    padding: 3px 113px 5px 0px;
+}
+.box-search_form .input {
+    background-color: #fff;
+    border: 2px solid #d9d9d9;
+    border-top: 2px solid #bfbfbf;
+    margin-left: 13px;
+    position: relative;
+    z-index: 5;
+}
+.box-search_form .input input {
+    border: none;
+    background: #fff;
+    width: 483px;
+    float: right;
+    overflow: hidden;
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: top;
+    padding: 6px 7px 2px\9;
+    padding: 4px 7px 4px 9px; /* fix ie10 bug */
+    margin-right: 1px;
+}
+.box-search_form input,
+.box-search_form button:focus {
+    outline: none;
+}
+.box-search_form .input label {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    font-size: 14px;
+    color: #D7D8D9;
+    white-space: nowrap;
+}
+.box-search_form .box-search_focus {
+    border: 2px solid #71AAF7;
+}
+.btn-search {
+    white-space: nowrap;
+    line-height: 34px;
+    overflow: hidden;
+    _float: left;
+    *margin: 0; /* fix non-IE'problem because of vertical-align */
+    /* --css3-- */
+    width: 90px;
+    border-radius: 2px;
+    border: 1px solid #3079ED;
+    background-color: #4787ED;
+    background-image: -o-linear-gradient(-90deg, #4D8FFD 0%, #4787ED 100%);
+    background-image: -moz-linear-gradient(-90deg, #4D8FFD 0%, #4787ED 100%);
+    background-image: -webkit-linear-gradient(-90deg, #4D8FFD 0%, #4787ED 100%);
+    background-image: -ms-linear-gradient(-90deg, #4D8FFD 0%, #4787ED 100%);
+    background-image: linear-gradient(-180deg, #4D8FFD 0%, #4787ED 100%);
+}
+.btn-search_l,
+.btn-search_r {
+    display: none !important;
+}
+.btn-search_c {
+    /* background: url(../img/bg-search-btn.png?__sprite) repeat-x;
+    */
+    vertical-align: top;
+    border: none;
+    color: #fff;
+    height: 34px;
+    text-align: center;
+    width: 90px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    float: left;
+    background: none;
+}
+.btn-search_ico {
+    display: block;
+    margin: 0 auto;
+    width: 21px;
+    height: 21px;
+    background: transparent url(../img/i-search.png?__sprite) no-repeat;
+    line-height: 34px;
+}
+.btn-search_hover {
+    border-color: #2F5BB7;
+    background-color: #357AE8;
+    background-image: -o-linear-gradient(-90deg, #4C8FFD 0%, #357AE8 100%);
+    background-image: -moz-linear-gradient(-90deg, #4C8FFD 0%, #357AE8 100%);
+    background-image: -webkit-linear-gradient(-90deg, #4C8FFD 0%, #357AE8 100%);
+    background-image: -ms-linear-gradient(-90deg, #4C8FFD 0%, #357AE8 100%);
+    background-image: linear-gradient(-180deg, #4C8FFD 0%, #357AE8 100%);
+}
+.btn-search_click {
+    border-color: #2B79E6;
+    background-color: #357AE8;
+    background-image: -o-linear-gradient(-90deg, #4A8DFB 0%, #357AE8 100%);
+    background-image: -moz-linear-gradient(-90deg, #4A8DFB 0%, #357AE8 100%);
+    background-image: -webkit-linear-gradient(-90deg, #4A8DFB 0%, #357AE8 100%);
+    background-image: -ms-linear-gradient(-90deg, #4A8DFB 0%, #357AE8 100%);
+    background-image: linear-gradient(-180deg, #4A8DFB 0%, #357AE8 100%);
+    -moz-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.50);
+    -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.50);
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.50);
+}
+body .baidu_sug,
+body .baidu_video_sug {
+    margin: 34px -2px 0 0;
+    _margin: 34px -1px 0 0;
+    width: 529px;
+}
+body .sg_tri input, 
+body .sg_v_tri input {
+    width: 453px !important;
+}
+body .sg_tri .sg_btn i, 
+body .sg_v_tri .sg_v_btn i {
+    top: 13px;
+}
+body .sg_tri .sg_btn .sg_new_num, 
+body .sg_v_tri .sg_v_btn .sg_v_new_num  {
+    top: -7px;
+}
+body .sug-search {
+    top: 35px;
+    width: 529px;
+}
+body .sg_tri .sg_btn.sg_up i,
+body .sg_v_tri .sg_v_btn.sg_v_up i {
+    top: 7px;
+}

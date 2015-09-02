@@ -1,0 +1,165 @@
+.mod-sidebar-applist{
+	position: relative;
+	width: 300px;
+	height: 100%;
+	overflow: hidden;
+}
+.mod-sidebar-applist .container{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	bottom: 53px;
+	top: 0;
+}
+.mod-sidebar-applist .applist{
+	position: relative;
+	width: 100%;
+}
+.mod-sidebar-applist .appitem{
+	position: relative;
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #ededed;
+	background-color: #ffffff;
+	padding-top: 2px;
+}
+.mod-sidebar-applist .app-install{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	background-color: #fafcfc;
+	padding-top: 13px;
+}
+.mod-sidebar-applist .app-icon{
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	float: left;
+	margin-left: 13px;
+}
+.mod-sidebar-applist .app-info{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 155px;
+	height: 100%;
+	padding-left: 10px;
+	color: rgb( 77, 77, 77 );
+	font-size: 14px;
+}
+.mod-sidebar-applist .new{
+	display: inline-block;
+	width: 28px;
+	height: 13px;
+	background: url(../img/i-new.png?__sprite) no-repeat;
+	margin-bottom: -2px;
+	font-size: 12px;
+}
+.mod-sidebar-applist .install{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 88px;
+	height: 100%;
+}
+
+.mod-sidebar-applist .installed .btn-install{
+	border-color: #a8a8a8;
+	background-color: gray;
+	cursor: default;
+	background-image: linear-gradient( -180deg, rgb(215,215,215) 0%, rgb(205,205,205) 80%);
+}
+.mod-sidebar-applist .btn-install{
+	float: right;
+	margin-right: 13px;
+	background-image: linear-gradient( -180deg, rgb(2,202,135) 0%, rgb(4,179,119) 80%);
+}
+.mod-sidebar-applist .not-installed .btn-install:hover{
+	background-color: #06be7f;
+	background-image: linear-gradient(-180deg, rgb(3,211,141) 0%, rgb(6,190,127) 80%);
+}
+.mod-sidebar-applist .not-installed .install span.click{
+	background-color: #04b377;
+	background-image:  linear-gradient( -90deg, rgb(2,202,135) 0%, rgb(4,179,119) 80%);
+}
+.mod-sidebar-applist .description{
+	padding: 7px 13px;
+	color: rgb( 153, 153, 153 );
+	background-color: #fafcfc;
+}
+.mod-sidebar-applist .download{
+	float: right;
+	margin-right: 13px;
+	padding-top: 4px;
+	color: #cacaca;
+}
+.mod-sidebar-applist .i-download{
+	display: inline-block;
+	width: 15px;
+	height: 13px;
+	background: url(../img/i-download.png?__sprite) no-repeat;
+	margin-bottom: -2px;
+}
+.mod-sidebar-applist .manage{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 53px;
+	line-height: 36px;
+	background-color: #ecfcf7;
+	background-image: linear-gradient(-180deg, #ecfcf7 0%, #e3f2ed 100%);
+	z-index: 1;
+	cursor: pointer;
+	border-top: 1px solid #d0d3d5;
+}
+.mod-sidebar-applist .manage:hover{
+	background-color: #ecfcf7;
+	background-image: linear-gradient(-90deg, #ecfcf7 0%, #e6f6f0 80%);
+}
+.mod-sidebar-applist .manage-click{
+	background-color: #ecfcf7;
+	background-image: linear-gradient(-180deg, #e6f6f0 0%, #ecfcf7 80%);
+}
+.mod-sidebar-applist .i-manage{
+	position: absolute;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url(../img/i-manage.png?__sprite) no-repeat;
+	left: 13px;
+	top: 8px;
+}
+.mod-sidebar-applist .manage span{
+	display: inline-block;
+	margin-left: 58px;
+	margin-top: 4px;
+    font-size: 16px;
+    color: rgba( 102, 102, 102, 0.8 );
+    text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );  
+}
+.mod-sidebar-applist .stars{
+	position: absolute;
+	left: 9px;
+	top: 20px;
+}
+.mod-sidebar-applist .star{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	float: left;
+}
+.mod-sidebar-applist .fullstar{
+	background: url(../img/i-star1.png?__sprite) no-repeat;
+}
+.mod-sidebar-applist .emptystar{
+	background: url(../img/i-star0.png?__sprite) no-repeat;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,131 @@
+.mod-lv2-app dd {
+	padding: 0;
+	border: none;
+	overflow:hidden;
+}
+.mod-lv2-app .app-list {
+	width: 187px;
+	padding: 8px 5px;
+	border-left: 1px solid #edeff0;
+	background-color: #f5f7f7;
+	border-top: 1px solid #F9FBFB;
+	float: right;
+	position: relative;
+}
+.mod-lv2-app .app-canvas-wrapper {
+	float:right;
+	width: 760px;
+}
+.mod-lv2-app .app-item {
+	height: 35px;
+	padding: 7px 0 7px 57px;
+	text-align: left;
+	font-size: 12px;
+	line-height: 14px;
+}
+.mod-lv2-app .app-item:hover {
+	cursor: pointer;
+	background-color: #eff1f1;
+}
+.mod-lv2-app .app-item.current {
+	background-color: #eff1f1;
+	cursor: default;
+}
+.mod-lv2-app .app-icon {
+	float: left;
+	margin-left: -43px;
+	background-color: gray;
+	width:35px;
+	height:35px;
+}
+.mod-lv2-app .app-name {
+	color: #595959;
+	font-size: 12px;
+	overflow: hidden;
+	word-wrap: break-word;
+	height: 13px;
+}
+.mod-lv2-app .app-type {
+	margin-top: 4px;
+	color: #999;
+	overflow: hidden;
+	word-wrap: break-word;
+	height: 13px;
+}
+/* reset hash-target <a> */
+#lv2_app_canvas {
+	width: 0;
+	padding: 0;
+	margin: 0;
+	height: 0;
+	border: none;
+}
+.default_asc {
+	float: right;
+	width: 178px;
+	margin-right: 4px;
+	cursor: pointer;
+	/*border-radius: 5px;*/
+	background-image:-moz-linear-gradient(top, rgb(255,255,255), rgb(245,247,247));
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255,255,255)), to(rgb(245,247,247)));
+	background-image:-webkit-linear-gradient(top, rgb(255,255,255), rgb(245,247,247));
+	background-image:-o-linear-gradient(top, rgb(255,255,255), rgb(245,247,247));
+	background-image:-ms-linear-gradient(top, rgb(255,255,255), rgb(245,247,247));
+	background-image:linear-gradient(top, rgb(255,255,255), rgb(245,247,247));
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#f5f7f7,GradientType=0)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#f5f7f7,GradientType=0);
+	height: 30px;
+	border: 1px solid #E3E5E6;
+}
+.sort_related {
+	float: right;
+	position: relative;
+	top: 13px;
+	left: 140px;
+}
+#charts_more {
+	background: #f2f2f2;
+	height: 23px;
+	line-height: 23px;
+	text-align: right;
+	color: #00b075;
+	border-top: 1px solid #e3e5e6;
+	padding-right: 20px;
+	position: absolute;
+	cursor: pointer;
+	bottom: 0px;
+	width: 182px;
+	left: 0px;
+}
+.bg-up-down {
+	width:10px;
+	height: 20px;
+	float: left;
+	position: relative;
+	left: 117px;
+	top: 5px;
+	background: url(../img/sort_up.png?m=z) no-repeat;
+}
+.sort_up_down {
+	background: url(../img/sort_down.png?m=z) no-repeat !important;
+}
+#lv2AppList ul {
+	margin-top: 40px;
+}
+.default_word {
+	position: relative;
+	top: 5px;
+	color: #00b075;
+	left: 9px;
+	font-weight: bold;
+	font-size: 15px;
+}
+#app-list-content{
+	background: white;
+	width: 178px;
+	margin-left: 3px;
+	border: 1px solid #E3E5E6;
+	position: relative;
+	top: -8px;
+	border-top: 0;
+}

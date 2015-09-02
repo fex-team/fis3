@@ -1,0 +1,8 @@
+.app-wrapper {
+	float: left;
+	position: relative;
+	visibility: hidden;
+}
+.app-group {
+	display: none;
+}

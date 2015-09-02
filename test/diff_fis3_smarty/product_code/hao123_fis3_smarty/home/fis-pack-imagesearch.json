@@ -1,0 +1,14 @@
+{
+    "pkg/autopack_home_async_fs.js": [
+        "/widget/hot-site/hot-site-async.js",
+        "/widget/ui/anchorside/anchorside.js",
+        "/widget/history-add/history-add-async.js",
+        "/widget/history/history-c.js",
+        "/widget/sort-area/sort-area-tab-async.js",
+        "/widget/sort-area/sort-area-nav-async.js",
+        "/widget/sort-area/sort/sort-async.js",
+        "/widget/recommand/layout2/layout2-async.js",
+        "/widget/personal-nav/personal-nav-async.js",
+        "/widget/customsites/customsites-async.js"
+    ]
+}

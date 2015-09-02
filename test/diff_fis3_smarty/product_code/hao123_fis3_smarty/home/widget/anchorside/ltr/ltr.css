@@ -1,0 +1,51 @@
+.mod-anchorside {
+	position: fixed;
+	left: 50%;
+	top: 400px;
+	width: 50px;
+	margin-left: 484px;
+	display:block !important;
+}
+.mod-anchorside .guid-item{
+	height: 46px;
+	line-height: 46px;
+	width: 46px;
+	background-color: #ffffff;
+	overflow: hidden;
+	cursor: pointer;
+	margin-bottom: 1px;
+}
+.mod-anchorside .guid-item:hover{
+	transition: width 0.3s;
+}
+.mod-anchorside .guid-item .guid-description{
+	height: 100%;
+	display: none;
+	color: #727171;
+	padding-left: 3px;
+}
+.mod-anchorside i {
+	float: left;
+	display: inline-block;
+	height: 100%;
+	width: 46px;
+	margin-bottom: 1px;
+}
+.mod-anchorside .backtop{
+	display: none;
+}
+.mod-anchorside .link{
+	display: block;
+	width: 80px;
+	height: 80px;
+}
+.mod-anchorside .link img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/*text item*/
+.mod-anchorside .textonly:hover,
+.mod-anchorside .textonly a:hover{
+	color: #00B075;
+}

@@ -1,0 +1,51 @@
+.flow-on .speed-test,
+.flow-on .speed-test_show,
+.flow-on .speed-test_panel,
+.flow-on .speed-test .speed-test_control,
+.flow-on .speed-test--result .speed-test_result {
+	background-image: url(../panel-box-wide.jpg);
+}
+.flow-on .speed-test{
+	background-position: 0 0;
+	/*width: 300px;*/
+}
+.flow-on .speed-test_panel {
+	/*width: 300px;*/
+}
+.flow-on .speed-test_needle {
+	left: 67px;
+}
+.flow-on .speed-test_chart_wrap {
+	left: 60px;
+}
+.flow-on .speed-test_bandwidth,
+.flow-on .mod-magicbox .speed-test_bandwidth,
+.flow-on #sidetoolbarContainer .speed-test_bandwidth{
+	left: 71px;
+}
+.flow-on .speed-test--result .speed-test_result {
+	/*width: 300px;*/
+}
+.flow-on .speed-test--result .speed-test_result_more {
+	left: 6px;
+}
+.flow-on .speed-test--result .speed-test_result_down {
+	margin-left: 57px;
+}
+.flow-on .mod-magicbox .speed-test,
+.flow-on .mod-magicbox .speed-test_panel,
+.flow-on .mod-magicbox .speed-test_control,
+/*.flow-on .mod-magicbox .speed-test_result_more,*/
+.flow-on .mod-magicbox .speed-test_show,
+.flow-on .mod-magicbox .speed-test--jp .speed-test--result .speed-test_result,
+.flow-on #sidetoolbarContainer .speed-test,
+.flow-on #sidetoolbarContainer .speed-test_panel,
+.flow-on #sidetoolbarContainer .speed-test_control,
+.flow-on #sidetoolbarContainer .speed-test .speed-test_control,
+.flow-on #sidetoolbarContainer .speed-test--cover .speed-test_control,
+.flow-on #sidetoolbarContainer .speed-test--error .speed-test_control,
+/* .flow-on #sidetoolbarContainer .speed-test_result_more, */
+.flow-on #sidetoolbarContainer .speed-test_show,
+.flow-on #sidetoolbarContainer .speed-test--result .speed-test_result{
+    background-image: url(../panel-box-wide.jpg);
+}

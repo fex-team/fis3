@@ -1,0 +1,49 @@
+.mod-sa-spread{
+	width:300px;
+	height:250px;
+	background:#0559a2;
+}
+.mod-sa-spread a{
+	display: block;
+}
+.mod-sa-spread .hd{
+	padding: 7px 8px 10px 8px;
+	height:186px;
+}
+.mod-sa-spread .hd .image-big{
+	float:left;
+	width:189px;
+	height:189px;
+}
+.mod-sa-spread .hd .image-big img{
+	border-radius: 5px;
+}
+.mod-sa-spread .hd .image-mid{
+	width:84px;
+	height:105px;
+	margin-bottom: 8px;
+}
+.mod-sa-spread .hd .image-small{
+	width:84px;
+	height:75px;
+}
+.mod-sa-spread .bd{
+	height:39px;
+	background: #0f58d9;
+	padding: 8px 10px 0 0;
+}
+.mod-sa-spread .bd .btn{
+	background: url(../img/btn.png?__sprite) no-repeat;
+	width: 153px;
+	height: 32px;
+	float: right;
+	margin-right: 14px;
+	line-height: 32px;
+	color: #81262b;
+	text-align: center;
+}
+.mod-sa-spread .bd .logo{
+	width: 110px;
+	height: 26px;
+	float: right;
+}

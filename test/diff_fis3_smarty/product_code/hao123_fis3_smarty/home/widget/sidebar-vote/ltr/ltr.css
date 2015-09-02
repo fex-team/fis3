@@ -1,0 +1,152 @@
+.mod-sidebar-vote{
+	background-color: #fff;
+	overflow: hidden;
+}
+.mod-sidebar-vote .tab{
+	float: left;
+	font-size: 14px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border-left: 1px solid #edeff0;
+	border-bottom: 1px solid #edeff0;
+	height: 31px;
+	line-height: 30px;
+	color: #5a5a5a;
+	text-align: center; 
+	cursor: pointer;
+	background: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,1)),to(rgba(255,255,255,1)),color-stop(50%,rgba(250,250,250,1)));
+	background: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(250,250,250,1), rgba(255,255,255,1));
+	background: linear-gradient(top, rgba(255,255,255,1), rgba(250,250,250,1), rgba(255,255,255,1));
+}
+.mod-sidebar-vote .tab:hover{
+	color: #00b075;
+	box-shadow: 0px 1px 0px #eee;
+}
+.mod-sidebar-vote .tab.current{
+	background: transparent;
+	color: #00b075;
+	border-bottom: none;
+}
+.mod-sidebar-vote .tab.current:hover{
+	box-shadow: none;
+}
+.mod-sidebar-vote .vote-container .content{
+	display: none;
+}
+.mod-sidebar-vote .vote-container .content.current{
+	display: block;
+}
+/**news**/
+.mod-sidebar-vote .ui-o{
+	height: 320px;
+}
+.mod-sidebar-vote .news{
+	padding: 3px;
+}
+.mod-sidebar-vote .new-container{
+	height: 420px;
+}
+.mod-sidebar-vote .news .item-text{
+	color: #666666;
+	padding: 7px 10px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.mod-sidebar-vote .news .item-text a span{
+	font-size: 13px;
+}
+.mod-sidebar-vote .news .item-text:hover a span{
+	color: #03a972;
+	text-decoration: underline;
+}
+.mod-sidebar-vote .news .news-des{
+	margin-top: 5px;
+	color: #b0b0b0;
+}
+/*party**/
+.mod-sidebar-vote .content.party{
+	height: 426px;
+}
+.mod-sidebar-vote .party-items{
+	padding: 0 10px;
+}
+.mod-sidebar-vote .party-item{
+	float: left;
+	margin-top: 13px;
+	width: 93px;
+	text-align: center;
+}
+.mod-sidebar-vote .party-item img{
+	width: 50px;
+	height: 50px;
+}
+.mod-sidebar-vote .party-item a{
+	display: block;
+}
+.mod-sidebar-vote .party-item .party-name{
+	color: #666;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	font-size: 13px;
+	overflow: hidden;
+}
+.mod-sidebar-vote .party-item a:hover .party-name{
+	font-weight: 800;
+}
+
+.bubble-sidebar-vote{
+	z-index: 500;
+	position: fixed;
+	border: 1px solid #00b075;
+	padding: 15px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+.bubble-sidebar-vote .sidebar-vote-bubble-info{
+	display: block;
+	width: 210px;
+	max-height: 291px;
+	line-height: 18px;
+	overflow: hidden;
+}
+.bubble-sidebar-vote .bubble_out,
+.bubble-sidebar-vote .bubble_in{
+	pointer-events: none;
+	border-width:7px;
+	top: 12px;
+	border-right-color: #00b075;
+}
+.bubble-sidebar-vote .bubble_out{
+	left: -14px;
+}
+.bubble-sidebar-vote .bubble_in{
+	border-right-color: #fff;
+	left: -13px;
+}
+.bubble-sidebar-vote.top .bubble_out,
+.bubble-sidebar-vote.top .bubble_in{
+	left: 10px;
+	border-right-color: transparent;
+	border-bottom-color: #00b075;
+}
+.bubble-sidebar-vote.top .bubble_out{
+	top: -15px;
+}
+.bubble-sidebar-vote.top .bubble_in{
+	border-bottom-color: #fff;
+	top: -14px;
+}
+.bubble-sidebar-vote.bottom .bubble_out,
+.bubble-sidebar-vote.bottom .bubble_in{
+	left: 10px;
+	border-right-color: transparent;
+	border-top-color: #00b075;
+}
+.bubble-sidebar-vote.bottom .bubble_out{
+	top: -12px;
+}
+.bubble-sidebar-vote.bottom .bubble_in{
+	border-top-color: #fff;
+	top: -14px;
+}

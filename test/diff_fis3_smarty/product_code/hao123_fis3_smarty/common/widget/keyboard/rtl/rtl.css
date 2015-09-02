@@ -1,0 +1,56 @@
+.box-search_keyboard {
+    cursor: pointer;    
+    border-radius: 2px;
+    background-color: #e1e1e3;
+    width: 23px;
+    height: 23px;
+    margin: 1px;
+    margin-bottom: 0;
+}
+.box-search_keyboard:hover {
+    background-color: #dcdcde;
+}
+.keyboard-down{
+	background-color: #52ac79 !important;
+}
+#kbd{
+    position:absolute !important;   
+    top:130px;
+    z-index: 100;
+}
+.outerbox{
+    max-height:152px;
+}
+#kbd input.goog-button,#kbd button.goog-button{height:16px;}
+
+ /* 新版首页 keyboard */
+.flow-on #kbd,body #kbd td{
+    background-color: #f5f6f7;
+}
+.flow-on #kbd{
+    border-color: #e6e6e6;
+    padding-top: 5px;
+}
+.flow-on #kbd #close{
+    background: url(../img/icon-n.png) no-repeat;
+    margin-left: 7px;
+    width: 5px !important;
+    height: 7px !important;
+    padding: 2px 1px;
+}
+.flow-on #kbd #close:hover{
+    background: url(../img/icon_hover-n.png) no-repeat;
+}
+
+.flow-on .box-search_keyboard{
+    margin-top: 3px;
+    background-color: #919191;
+    visibility: visible;
+}
+
+.flow-on .box-search_keyboard:hover{
+    background-color: #919191;   
+}
+.flow-on .keyboard-down{
+    background-color: #1c81e5 !important;
+}

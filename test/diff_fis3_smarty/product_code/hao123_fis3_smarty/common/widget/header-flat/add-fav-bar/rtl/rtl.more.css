@@ -1,0 +1,14 @@
+.bar-addfav .fav-down {
+    background: url(../img/i-bar-down.png?__sprite) no-repeat;
+}
+.bar-addfav .fav-close {
+    float: left;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    margin-top: 9px;
+    background: url(../img/i-close.png?__sprite) no-repeat;
+}
+.bar-addfav .fav-close:hover {
+    background: url(../img/i-close-hover.png?__sprite) no-repeat;
+}

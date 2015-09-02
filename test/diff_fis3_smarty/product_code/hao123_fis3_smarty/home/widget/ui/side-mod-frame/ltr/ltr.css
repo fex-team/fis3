@@ -1,0 +1,12 @@
+@import url('/widget/ui/side-mod-frame/side-mod-frame-c.css?__inline');
+
+/*右侧模块标题下方的分隔线，多个模块公用*/
+.bot_line{margin-right:10px;}
+
+/*右侧滚动条jScrollPane样式，多个模块公用*/
+.scroll-list{zoom:1}
+.scroll-arrow{right:1px;}
+
+/*更多按钮，多个模块公用*/
+.charts_more{text-align:right;padding-right:20px;}
+.charts_more .arrow_r{right:10px;padding-left:5px;}

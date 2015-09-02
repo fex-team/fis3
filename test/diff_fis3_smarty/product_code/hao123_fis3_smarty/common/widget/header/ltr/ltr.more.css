@@ -1,0 +1,45 @@
+/*============userbar=============*/
+.userbar-tool {
+    width: 220px;
+    margin-top: 4px;
+    position: relative;
+    overflow: visible;
+    z-index: 11;
+    display: block;
+}
+.userbar-wrap {
+    background-image:-moz-linear-gradient(50% 0% -90deg,rgb(0,176,117) 0%,rgb(0,171,114) 100%); 
+    background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(0,176,117)),color-stop(1, rgb(0,171,114)));
+    background-image:-webkit-linear-gradient(-90deg,rgb(0,176,117) 0%,rgb(0,171,114) 100%);
+    background-image:-o-linear-gradient(-90deg,rgb(0,176,117) 0%,rgb(0,171,114) 100%);
+    background-image:-ms-linear-gradient(-90deg,rgb(0,176,117) 0%,rgb(0,171,114) 100%);
+    background-image:linear-gradient(-90deg,rgb(0,176,117) 0%,rgb(0,171,114) 100%);
+    /*-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff00b075,endColorstr=#ff00ab72,GradientType=0)";
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff00b075,endColorstr=#ff00ab72,GradientType=0);*/
+}
+
+.userbar a:hover {
+    text-decoration: none;
+}
+.weather-more_wrap {
+    background: #0c815a;
+    overflow: hidden;
+    height: 0;
+    border-top: 0 none;
+    zoom: 1;
+}
+.weather-more_show {
+    height: auto;
+    border-top: 1px solid #0a6f4e;
+}
+.weather-more_line {
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    -o-box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1) inset;
+    border-bottom: 1px solid #0a6f4e;
+
+}
+.weather-more {
+    display: none;
+}

@@ -1,0 +1,17 @@
+.unselect, i, .i, .icon {
+    -khtml-user-select: none;
+}
+.cf {
+    zoom: 1
+}
+.fl, .fr {
+    display: inline
+}
+.mod {
+    *overflow: visible;
+    zoom: 1
+}
+.ib, .ibw .ib, s, .s, .space, .btn {
+    *display: inline;
+    zoom: 1
+}

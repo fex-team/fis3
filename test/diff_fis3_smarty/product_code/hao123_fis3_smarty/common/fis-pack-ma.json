@@ -1,0 +1,92 @@
+{
+    "pkg/autopack_common_base.js": [
+        "/static/lazyload.js",
+        "/static/mod.js",
+        "/static/BigPipe.js"
+    ],
+    "pkg/common_sync_pri1_js_0_ma.js": [
+        "/static/open-api/lazyload.js",
+        "/widget/ui/cookieless/cookieless.js",
+        "/widget/ui/date-new/date.js",
+        "/widget/ui/date/date.js",
+        "/widget/ui/helper/helper.js",
+        "/widget/ui/jquery/1.8.3/jquery.min.js",
+        "/widget/ui/jquery/jquery.cookie.js",
+        "/widget/ui/jquery/jquery.json.js",
+        "/widget/ui/jquery/jquery.mousewheel.js",
+        "/widget/ui/jquery/jquery.ui.core.js",
+        "/widget/ui/jquery/jquery.ui.widget.js",
+        "/widget/ui/md5/md5.js",
+        "/widget/ui/message/src/message.js",
+        "/widget/ui/ut/ut.js",
+        "/widget/ui/jquery/jquery.js",
+        "/widget/ui/jquery/widget/jquery.addfav/jquery.addfav.js",
+        "/widget/ui/jquery/widget/jquery.lazyload/jquery.lazyload.js",
+        "/widget/ui/jquery/widget/jquery.sethome/jquery.sethome.js",
+        "/widget/ui/jquery/widget/jquery.ui.button/jquery.ui.button.js",
+        "/widget/ui/localstorage/localstorage.js",
+        "/widget/ui/time/time.js",
+        "/widget/ui/weather/ma/ma.js",
+        "/widget/ui/bubble/src/bubble.js",
+        "/widget/ui/cycletabs/cycletabs.js"
+    ],
+    "pkg/common_sync_pri1_js_1_ma.js": [
+        "/widget/ui/jquery/widget/jquery.ui.autocomplete.html/jquery.ui.autocomplete.html.js",
+        "/widget/ui/jquery/widget/jquery.ui.autocomplete/jquery.ui.autocomplete.js",
+        "/widget/ui/jquery/widget/jquery.ui.position/jquery.ui.position.js",
+        "/widget/ui/jquery/widget/jquery.ui.tip/jquery.ui.tip.js",
+        "/widget/ui/suggest/suggest.js"
+    ],
+    "pkg/common_sync_pri1_css_0_ma.css": [
+        "/widget/footer/rtl/rtl.css",
+        "/widget/header/account/rtl/rtl.more.css",
+        "/widget/header/add-fav-bar/rtl/rtl.more.css",
+        "/widget/header/clock/rtl/rtl.more.css",
+        "/widget/header/logo/rtl/rtl.more.css",
+        "/widget/header/rtl/rtl.more.css",
+        "/widget/header/site-switch/rtl/rtl.more.css",
+        "/widget/header/userbar-btn/rtl/rtl.more.css",
+        "/widget/keyboard/rtl/rtl.css",
+        "/widget/login-popup/rtl/rtl.css",
+        "/widget/search-box/rtl/rtl.more.css",
+        "/widget/ui/jquery/widget/jquery.ui.autocomplete/jquery.ui.autocomplete.css",
+        "/widget/ui/jquery/widget/jquery.ui.button/rtl/rtl.css",
+        "/widget/ui/prompt/prompt.css",
+        "/widget/ui/scrollable/scrollable.css",
+        "/widget/ui/sns-share/sns-share.css",
+        "/widget/ui/suggest/suggest.css",
+        "/widget/header/weather/rtl/rtl.more.css"
+    ],
+    "pkg/common_async_pri1_js_0_ma.js": [
+        "/widget/search-box/search-box-async.js",
+        "/widget/ui/localcookie/localcookie.js",
+        "/widget/ui/notice-pop/notice-pop.js",
+        "/widget/ui/popup/popup.js",
+        "/widget/ui/scrollable/scrollable.js",
+        "/widget/ui/sns-share/sns-share.js"
+    ],
+    "pkg/common_async_pri1_js_1_ma.js": [
+        "/widget/header/account/account-async.js",
+        "/widget/header/add-fav-bar/add-fav-bar-async.js",
+        "/widget/header/logo/logo-async.js",
+        "/widget/header/site-switch/site-switch-async.js",
+        "/widget/keyboard/keyboard-main.js",
+        "/widget/ui/calendar/calendar.js",
+        "/widget/ui/date-new/plugin/buddhist.js",
+        "/widget/ui/date-new/plugin/isl.js",
+        "/widget/ui/date-new/plugin/lunar.js",
+        "/widget/ui/date-new/plugin/rokuyou.js",
+        "/widget/ui/dropdownlist/dropdownlist.js",
+        "/widget/ui/sethome-ff/sethome-ff-c.js",
+        "/widget/ui/weather/weather.js",
+        "/widget/header/clock/calendar-async.js",
+        "/widget/header/clock/clock-async.js",
+        "/widget/header/userbar-btn/userbar-btn-async.js",
+        "/widget/keyboard/keyboard-async.js"
+    ],
+    "pkg/common_async_pri1_css_0_ma.css": [
+        "/widget/ui/calendar/calendar.css",
+        "/widget/ui/dropdownlist/dropdownlist.css",
+        "/widget/ui/popup/popup.css"
+    ]
+}

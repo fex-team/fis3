@@ -1,0 +1,26 @@
+/** from common.css
+常用的命名样式，方便PM在CMS中配置 */
+
+/*special status of links*/
+
+.icon-hot, .icon-new, .icon-new_red{
+    display: inline-block;
+    margin-right: 3px;
+    cursor: pointer;
+    font-size:0;
+}
+.icon-hot{
+    width: 30px;
+    height: 11px;
+    background: url(../img/i-hot.png?__sprite) no-repeat;
+}
+.icon-new{
+    width: 30px;
+    height: 11px;
+    background: url(../img/i-new.png?__sprite) no-repeat;
+}
+.icon-new_red{
+    width: 25px;
+    height: 15px;
+    background: url(../img/i-big-new.png?__sprite) no-repeat;
+}

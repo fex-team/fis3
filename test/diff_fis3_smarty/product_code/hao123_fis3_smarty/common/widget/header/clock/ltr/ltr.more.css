@@ -1,0 +1,199 @@
+/*.userbar-date {
+    float: right;
+    margin: 5px 6px 5px 0;
+    text-align: right;
+    font-size: 11px;
+    height: 14px;
+    width: auto;
+}*/
+.userbar-date{
+    position: absolute;
+    left: 535px;
+    margin-top: 8px;
+    white-space: nowrap;
+    z-index: 100;
+    display: block !important;
+}
+.userbar-date a {
+    color: #fff;
+}
+.userbar-date span {
+    color: #b8e1cf;
+    font-size: 9px;
+    padding: 0 2px;
+}
+
+/*for countdown*/
+.userbar-date .down-wrapper {
+    height: 30px;
+    overflow: hidden;
+}
+.userbar-date .down-wrapper span {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 0;
+}
+.down-wrapper .down-time {
+    float: right;
+    overflow: hidden;
+    height: 30px;
+/*    width: 72px;*/
+}
+.userbar-date .down-wrapper .down-day {
+    font-size: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 4px;
+    color: #fff000;
+}
+.down-wrapper .down-dhm {
+    float: right;
+}
+.userbar-date .down-wrapper .down-d {
+    color: #9BD5C1;
+    color: rgba(255,255,255,0.6);
+}
+.down-wrapper .down-tip {
+    float: left;
+    position: absolute;
+    left: 18px;
+}
+.userbar-date .mod-calendar_ft a {
+    display: inline;
+}
+.userbar-date .mod-calendar a {
+    color: #39BE8D;
+}
+.userbar-date .mod-calendar_weeks {
+    color: #000000;
+}
+.userbar-date .mod-calendar_next, .userbar-date .mod-calendar_prev {
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    text-indent: -1000px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.userbar-date .mod-calendar_next {
+    background: url(../img/next.png?__sprite) no-repeat;
+}
+.userbar-date .mod-calendar_next:hover {
+    background: url(../img/next_hover.png?__sprite) no-repeat;
+}
+.userbar-date .mod-calendar_prev {
+    background: url(../img/prev.png?__sprite) no-repeat;
+}
+.userbar-date .mod-calendar_prev:hover {
+    background: url(../img/prev_hover.png?__sprite) no-repeat;
+}
+.userbar-date .mod-calendar_year {
+    width: 56px;
+}
+.userbar-date .mod-calendar_month {
+    width: 40px;
+}
+.userbar-date .dropdown,.calendar-wrapper span {
+    font-size: 12px;
+    color: #000000;
+    padding: 0;
+}
+.userbar-date .mod-calendar_hd {
+    padding-bottom: 2px;
+}
+#calYearDropDown {
+    margin-right: 5px;
+}
+/*.userbar-date .mod-calendar-holder dd {
+    display: none;
+}*/
+.userbar-date .mod-calendar-countdown dl {
+    background: url(../img/bell.png) no-repeat center 4px;
+    background-color: #FCA438; 
+    color: #fff;
+}
+.userbar-date .mod-calendar-countdown dt{ 
+    text-indent: -1000px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.userbar-date .mod-calendar-football dl {
+    background: #68b821; 
+    color: #fff;
+}
+.userbar-date .mod-calendar-football dt {
+    color: #fff;
+}
+.down-show {
+    background-color: #049565;
+}
+.userbar-date .no-link {
+    cursor: default;
+}
+.header-fixed .down-show {
+    background-color: transparent;
+}
+.header-fixed .calendar-open {
+    background-color: #06B67B;
+}
+.userbar-date .ui-bubble-t .ui-bubble_in, .userbar-date .ui-bubble-t .ui-bubble_out {
+    left: 64px;
+}
+/*.userbar-date li.mod-calendar-today {
+    border-bottom: 3px solid;
+}*/
+.userbar-date .mod-calendar_days a:hover dl {
+    left: -2px;
+    right: auto;
+}
+/*.userbar-date .mod-calendar-today a:hover dl {
+    left: -1px;
+}*/
+.date-wrapper {
+    max-height: 30px;
+}
+.userbar-date .mod-calendar_days li:nth-of-type(7n+7) a:hover dl {
+    left: auto;
+    right: -2px;
+}
+
+/**世界杯赛事**/
+.userbar-data-worldcup .userbar-date-cal{
+    padding: 0
+}
+.userbar-data-worldcup .worldcup{
+    margin: 8px 16px 0 14px;
+    height: 42px;
+    overflow: hidden;
+}
+.userbar-data-worldcup .match-info{
+    float: left;
+    margin-right: 8px;
+    color: #ffef00;
+    width: 50px;
+}
+.userbar-data-worldcup .match-info .des{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:hidden;
+}
+.userbar-data-worldcup .match-info .time{
+    font-size: 21px;
+}
+.userbar-data-worldcup .team-vs{
+    float: left;
+}
+.userbar-data-worldcup .team-vs .team-vs-icon{
+    display: inline-block;
+    width: 38px;
+    height: 33px;
+    background: url(../img/worldcup-vs.png?__sprite);
+    vertical-align: middle;
+}
+.header-fixed .userbar-data-worldcup .worldcup{
+    display: none;
+}
+.header-fixed .userbar-data-worldcup .userbar-date-cal{
+    padding: 0 16px;
+}

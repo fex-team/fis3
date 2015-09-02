@@ -1,0 +1,42 @@
+/* For 300px layout */
+.flow-on .mod-news {
+    width: auto;
+}
+.flow-on .mod-news .news-tab .ui-nav {
+    width: auto;
+}
+.flow-on .mod-news .news-tab .ui-nav .wrap {
+    width: auto;
+}
+.flow-on .mod-news .news-tab .nav-item {
+    width: 66px;
+}
+.flow-on .mod-news .scroll-pane {
+    width: auto;
+}
+.flow-on .mod-news .news-slide .nav-item {
+    width: 296px;
+}
+.flow-on .mod-news .news-slide .nav-item img,
+.flow-on .mod-news .news-item_img a,
+.flow-on .mod-news .news-item_img img{
+     height: 149px;
+     width: 296px;
+}
+.flow-on .mod-news .news-slide .nav-item .title{
+    width: 276px;
+}
+.flow-on .mod-news .news-item_img span{
+    width: 276px;
+}
+.flow-on .mod-news .news-item_tip {
+    width: 248px;
+    height: 151px;
+    padding-top: 80px;
+}
+
+/*图文混排*/
+.flow-on .mod-news .news-item_imgtxt img{
+    width: 100px;
+    height: 58px;
+}

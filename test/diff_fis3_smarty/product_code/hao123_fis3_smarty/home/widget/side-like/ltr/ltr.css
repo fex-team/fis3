@@ -1,0 +1,99 @@
+.mod-side-like{
+	position: relative;
+	display: block !important;
+	width: 300px;
+	height: 100px;
+	background: url(../img/bk-jp-like.png?__sprite) no-repeat;
+}
+.mod-side-like .like-wrap{
+	position: absolute;
+	width: 170px;
+	height: 40px;
+	left: 104px;
+	top: 44px;
+	background-color: #fe070f;
+	background-image: -moz-linear-gradient(top , #fe070f, #f61000 100.0%);
+	background-image: -webkit-linear-gradient(top , #fe070f, #f61000 100.0%);
+	background-image: -o-linear-gradient(top , #fe070f, #f61000 100.0%);
+	background-image: -ms-linear-gradient(top , #fe070f, #f61000 100.0%);
+	background-image: linear-gradient(top , #fe070f, #f61000 100.0%);
+	box-shadow:-1px 1px 4px #d7d7d7;
+}
+.mod-side-like .hover{
+	cursor: pointer;
+	background-color: #dd0b06;
+	background-image: -moz-linear-gradient(top , #fe070f, #c80d00 100.0%);
+	background-image: -webkit-linear-gradient(top , #fe070f, #c80d00 100.0%);
+	background-image: -o-linear-gradient(top , #fe070f, #c80d00 100.0%);
+	background-image: -ms-linear-gradient(top , #fe070f, #c80d00 100.0%);
+	background-image: linear-gradient(top , #fe070f, #c80d00 100.0%);
+}
+.mod-side-like .selected{
+	border: 2px solid #f90c06;
+	background-color: white !important;
+	background-image: none;
+	cursor: default;
+	width: 166px;
+}
+.mod-side-like .i-hand{
+	position: absolute;
+	top: -4px;
+	left: 17px;
+	margin-right: 12px;
+	width: 39px;
+	height: 38px;
+	background: url(../img/i-hand.png?__sprite) no-repeat;
+}
+.mod-side-like .selected .i-hand{
+	top: -6px;
+	left: 15px;
+}
+.mod-side-like .like-wrap:hover .i-hand,.mod-side-like .selected .i-hand{
+	background: url(../img/i-hand-hc.png?__sprite) no-repeat;
+}
+.mod-side-like .like-num{
+	position: relative;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 22px;
+	margin-left: 56px;
+	color: white;
+	text-align: center;
+	font-weight: 700;
+}
+.mod-side-like .selected .like-num{
+	color: #f90c06;
+	height: 38px;
+	line-height: 38px;
+}
+.mod-side-like .like-add{
+	position: absolute;
+	display: none;
+	width: 38px;
+	height: 27px;
+	left: 128px;
+	top: -15px;
+	background: url(../img/i-add1.png?__sprite) no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

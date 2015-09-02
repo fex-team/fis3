@@ -1,0 +1,174 @@
+.mod-br-bottom-vote{
+	padding-top: 15px;
+	padding-bottom: 10px;
+	height: auto;
+	width: 210%;
+	float: left;
+}
+.mod-br-bottom-vote .votePage,.mod-br-bottom-vote .resultPage{
+	width: 941px;
+	height: 100%;
+	float: left;
+	margin-left: 15px;
+	display: inline-block;
+}
+.mod-br-bottom-vote .resultPage{
+	width: 960px;
+	position: relative;
+	margin-top:-5px;
+}
+.mod-br-bottom-vote .voteReview,.voteVote{
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+.mod-br-bottom-vote .voteReview a, .voteReview img{
+	width: 161px;
+	height: 90px;
+	display: block;
+}
+.mod-br-bottom-vote .voteVote{
+	width: 766px;
+	padding-left: 14px;
+}
+.mod-br-bottom-vote .voteTitle{
+	width: 755px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.mod-br-bottom-vote .voteTitle-title{
+	text-shadow: 0px 0 0 #686969;
+}
+.mod-br-bottom-vote .voteTitle .voteTitle-check{
+	float: right;
+	color: #00b075;
+	font-size: 14px;
+	cursor: pointer;
+}
+.mod-br-bottom-vote .votes{
+	display: inline-block;
+	width: 106px;
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.mod-br-bottom-vote .bottomVoteIcon{
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	margin-bottom: -3px;
+}
+.mod-br-bottom-vote .voteRadio{
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	background: url(../img/i-radio-normal.png?__sprite) no-repeat;
+	cursor: pointer;
+	margin-bottom: -1px;
+	margin-right: 3px;
+}
+.mod-br-bottom-vote .voteRadio-hover{
+	background: url(../img/i-radio-hover.png?__sprite) no-repeat;
+}
+.mod-br-bottom-vote .voteRadio-check{
+	background: url(../img/i-radio-checkd.png?__sprite) no-repeat;
+}
+.mod-br-bottom-vote .voteBtnContatiner{
+	position: absolute;
+	right: 85px;
+	top:-3px;
+	width: 63px;
+	height: 22px;
+	background-color: #1db77e;
+	border: 1px solid #169c64;
+	border-radius: 2px;
+}
+.mod-br-bottom-vote .voteBtnContatiner button{
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: 0 none;
+	color: white;
+	font-size: 13px;
+}
+
+.mod-br-bottom-vote .voteItem{
+	width: 88px;
+	float: left;
+	margin-right: 7px;
+	cursor: default;
+}
+.mod-br-bottom-vote .voteItem.seleced{
+	border:1px solid #65ad94;
+	margin-right: 6px;
+	margin-left: -1px;
+	margin-top: -1px;
+}
+.mod-br-bottom-vote .votePercentNum,.mod-br-bottom-vote .votePercentImage,.mod-br-bottom-vote .votePercentName{
+	display: block;
+	text-align: center;
+}
+.mod-br-bottom-vote .votePercentImage{
+	height: 56px;
+	width: 10px;
+	margin: 1px auto 2px auto;
+	border: 1px solid #d7d9d9;
+	background-color: #e3e6e6;
+	position: relative;
+}
+.mod-br-bottom-vote .votePercent{
+	display: inline-block;
+	width: 100%;
+	border-left: 1px solid #65ad94;
+	border-right: 1px solid #65ad94;
+	border-bottom: 1px solid #65ad94;
+	background-color: #6dbca1;
+	height: 0%;
+	position: absolute;
+	bottom: -1px;
+	left: -1px;
+}
+.mod-br-bottom-vote .votePercentName{
+	display: inline-block;
+	width: 100%;
+	height: 15px;
+	line-height: 15px;
+}
+.mod-br-bottom-vote .votePercentName .i-rank-green{
+	display: inline-block;
+	width: 14px;
+	height: 15px;
+	background: url(../img/i-voteResult2.png?__sprite) no-repeat;
+	padding-right: 1px;
+	color: white;
+	font: 400 10px/17px Tahoma;
+	text-align: center;
+}
+.mod-br-bottom-vote .votePercentName .i-rank{
+	background: url(../img/i-voteResult.png?__sprite) no-repeat;
+}
+.mod-br-bottom-vote i.i-hide{display: none;}
+.mod-br-bottom-vote span.backToVote{
+	position: absolute;
+	color: #00b075;
+	right: 30px;
+	top:-35px;
+	font: 13px Tahoma;
+	cursor: pointer;
+}
+.mod-br-bottom-vote .normal{
+	background: url(../img/br-vote-normal.png?__sprite) no-repeat;
+}
+.mod-br-bottom-vote .leader{
+	background: url(../img/br-vote-leader.png?__sprite) no-repeat;
+}
+.mod-br-bottom-vote .dead{
+	background: url(../img/br-vote-dead.png?__sprite) no-repeat;
+}
+.mod-br-bottom-vote .angel{
+	background: url(../img/br-vote-angel.png?__sprite) no-repeat;
+}

@@ -1,0 +1,22 @@
+.mod-channel-breads{
+	margin-bottom: 5px;
+}
+
+.mod-channel-breads h2{
+	font-size: 24px;
+	font-weight: bold;
+	height: 32px;
+	line-height: 32px;
+	color: #1c81e5;
+}
+
+.mod-channel-breads p{
+	height: 22px;
+	line-height: 22px;
+	font-size: 12px;
+	color: #363636;
+}
+
+.mod-channel-breads p a:hover{
+	text-decoration: underline;
+}

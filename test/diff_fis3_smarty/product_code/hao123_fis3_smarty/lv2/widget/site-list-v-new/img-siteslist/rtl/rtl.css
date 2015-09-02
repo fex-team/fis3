@@ -1,0 +1,42 @@
+/*二级竖版图片模块*/
+.img-siteslist a{
+	height: 240px;
+	width: 161px;
+	padding: 15px;
+	padding-bottom: 0;
+	margin:0;
+	text-align: center;
+}
+.img-siteslist dd{
+	padding: 0 0 15px 0 !important;
+}
+.img-siteslist .img-mask{
+	background-color: #000000;
+	height: 100%;
+	opacity: 0.4;
+	position: absolute;
+	-moz-border-right-colors: 0;
+	top: 0;
+	right: 0;
+	width: 100%;
+	filter:alpha(opacity=40);
+	_height: 215px;
+	z-index:1;
+	display: none;
+}
+.img-siteslist .img-con{
+	position: relative;
+}
+.img-siteslist .img-con img{
+	height:215px;
+	width:161px;
+}
+.img-siteslist a:hover{
+	background:none !important;
+	text-decoration:underline;
+	color:#00ac73;
+}
+.img-siteslist a:hover .img-mask{
+	display: block;
+	cursor: pointer;
+}

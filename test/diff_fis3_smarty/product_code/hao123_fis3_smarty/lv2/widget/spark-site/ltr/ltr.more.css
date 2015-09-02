@@ -1,0 +1,25 @@
+.mod-site .item {
+	width: 143px;
+	height: 62px;
+	float: left;
+	position: relative;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.1) inset; 
+}
+.mod-site .item img {
+	width: 100%;
+	height: 100%;
+}
+.mod-site .wrap {
+	float: left;
+	overflow: hidden;
+	height: 146px;
+	margin-left: 10px;
+}
+.mod-site .o-slogan a {
+	display: inline-block;
+}
+.mod-site .o-content {
+	padding-top: 8px;
+}

@@ -1,0 +1,16 @@
+/*for PS*/
+.header-fixed-up .radios {
+    display: none;
+    display: none !important;
+}
+body.header-fixed-up .box-search_logo dt {
+    padding-left: 18px;
+    background-color: #F0F0F0;
+    background: url(../img/btn-rtl.png) no-repeat right top;
+    border-left: 1px solid #B1B1B1;
+    cursor: pointer;
+}
+body.header-fixed-up .box-search_logos_show dt {
+    width: 30px;
+    background: url(../img/i-arrow-open.png) no-repeat 10px 12px;
+}

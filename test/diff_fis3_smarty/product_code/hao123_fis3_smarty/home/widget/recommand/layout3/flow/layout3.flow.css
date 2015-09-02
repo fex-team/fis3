@@ -1,0 +1,39 @@
+.mod-recommand .layout3-1 .layout3-main{
+	padding-bottom: 0;
+}
+.mod-recommand .layout3-1 .layout3-main .des{
+	font-weight: bold;
+}
+.mod-recommand .layout3-1 .layout3-main img{
+	width: 298px;
+	height: 95px;
+}
+.mod-recommand .layout3-1 .layout3-detail .detail-pic-wrap img{
+	width: 75px;
+	height: 75px;
+	border: 1px solid #D2D4D5;
+}
+.mod-recommand .layout3-1 .layout3-detail .star-bg{
+	margin-top: 6px;
+}
+.mod-recommand .layout3-1 .layout3-detail{
+	border-bottom: 1px solid #EEE;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+.mod-recommand .layout3-1 .layout3-detail:last-child{
+	border-bottom: 0;
+}
+.mod-recommand .layout3-1 .layout3-detail .detail-des-wrap{
+	width: 178px;
+	height: 75px;
+}
+.mod-recommand .layout3-1 .layout3-main:hover .des{
+	color: #fff;
+}
+.mod-recommand .layout3-1 .layout3-detail .detail-des-wrap:hover{
+	color: #333;
+}
+.mod-recommand .layout3-1 .layout3-detail .detail-des-wrap:hover .title{
+	text-decoration: underline;
+}

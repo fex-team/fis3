@@ -1,0 +1,65 @@
+/*default style*/
+
+.mod-scroll{
+    /* position: absolute; */
+    width: 0; height: 0;
+
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    border: 1px dotted transparent; box-sizing: border-box;
+}
+
+.mod-scroll_bar-x{
+    width: 100%;
+    height: 9px;
+    background: #000;
+    opacity: .1; filter: alpha(opacity=10);
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0; left: 0;
+    font-size: 0;
+    z-index: 3;
+}
+
+.mod-scroll_bar-y{
+    width: 9px;
+    height: 100%;
+    background: #000;
+    opacity: .1; filter: alpha(opacity=10);
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+
+.mod-scroll_thumb-x{
+    width: 30%;
+    height: 9px;
+    background: #000;
+    position: absolute;
+    bottom: 0; left: 0;
+    opacity: .5; filter: alpha(opacity=50);
+    border-radius: 5px;
+    font-size: 0;
+    z-index: 3;
+}
+
+.mod-scroll_thumb-y{
+    width: 9px;
+    height: 30%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    opacity: .5; filter: alpha(opacity=50);
+    border-radius: 5px;
+    z-index: 3;
+}
+
+.mod-scroll--activate .mod-scroll_bar-x,
+.mod-scroll--activate .mod-scroll_bar-y{
+    opacity: .2; filter: alpha(opacity=20);
+}
+.mod-scroll--activate .mod-scroll_thumb-x,
+.mod-scroll--activate .mod-scroll_thumb-y{
+    opacity: .6; filter: alpha(opacity=60);
+}

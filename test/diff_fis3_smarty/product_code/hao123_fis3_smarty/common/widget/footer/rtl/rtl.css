@@ -1,0 +1,44 @@
+/*footer*/
+.t-c{ 
+    text-align: center;
+}
+.box-fot {
+    margin:19px 0;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 12px;
+}
+.box-fot li {
+    display: inline;
+    text-align: right;
+}
+/*.box-fot li,  x:-moz-any-link, x:default {
+    float: left;
+    direction: ltr;
+}*/
+.box-fot a{
+    color: #999;
+}
+.box-fot .space {
+    display:inline-block;
+    font-size:0;
+    border-right:1px solid #999;
+    height:10px;
+    padding-left:10px;
+    margin-right:10px;
+    margin-bottom:-2px;
+}
+.fb_like {
+    display: inline-block !important;
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+.fb_like_label {
+    display:inherit;
+    color:red;
+}
+p.fb_like_label a {
+    color: red;
+}

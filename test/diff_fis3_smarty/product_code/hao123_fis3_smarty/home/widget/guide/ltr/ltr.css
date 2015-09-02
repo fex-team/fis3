@@ -1,0 +1,255 @@
+.guide-mask {
+	background-color: #000000;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	overflow: hidden;
+	position: fixed;
+	z-index: 998;
+}
+.guide-main-wrap{
+	position: absolute;
+	z-index: 999;
+	width: 960px;
+	top: 180px;
+	text-align: center;
+	color: #fff;
+	overflow: hidden;
+}
+.guide-frame0{
+	top: 180px;
+}
+.guide-frame1{
+	top: 56px;
+}
+.guide-frame2{
+	top: 60px;
+}
+.guide-main{
+	position: relative;
+	width: 960px;
+	top: 23px;
+	left: 0px;
+}
+.guide-btn-wrap{
+	clear: left;
+}
+.guide-progress-wrap{
+	float: left;
+	margin-left: 240px;
+	margin-top: 20px;
+}
+
+.btn-guide-next{
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	width: 107px;
+	height: 30px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #3ad4a1 #1ebe88 #006342 #26c28f;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background-image:-moz-linear-gradient(top,rgb(9,202,138),rgb(0,172,115)); 
+	background-image:-webkit-gradient(linear,0% 0%,0% 100%,from(rgb(9,202,138)),to(rgb(0,172,115)));
+	background-image:-webkit-linear-gradient(top,rgb(9,202,138),rgb(0,172,115));
+	background-image:-o-linear-gradient(top,rgb(9,202,138),rgb(0,172,115));
+	background-image:-ms-linear-gradient(top,rgb(9,202,138),rgb(0,172,115));
+	background-image:linear-gradient(top,rgb(9,202,138),rgb(0,172,115));
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#09ca8a,endColorstr=#00ac73,GradientType=0)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#09ca8a,endColorstr=#00ac73,GradientType=0);
+}
+.btn-guide-next:hover{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #51e6be #04c38a #006342 #04c38a;
+	background-image:-moz-linear-gradient(top,rgb(14,224,171),rgb(0,172,115)); 
+	background-image:-webkit-gradient(linear,0% 0%,0% 100%,from(rgb(14,224,171)),to(rgb(0,172,115)));
+	background-image:-webkit-linear-gradient(top,rgb(14,224,171),rgb(0,172,115));
+	background-image:-o-linear-gradient(top,rgb(14,224,171),rgb(0,172,115));
+	background-image:-ms-linear-gradient(top,rgb(14,224,171),rgb(0,172,115));
+	background-image:linear-gradient(top,rgb(14,224,171),rgb(0,172,115));
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#0ee0ab,endColorstr=#00ac73,GradientType=0)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0ee0ab,endColorstr=#00ac73,GradientType=0);
+}
+.i-frame0{
+	display: block;
+	float: left;
+	background-image: url("../img/i-guide-frame0.png");
+}
+.i-frame2{
+	display: block;
+	float: left;
+}
+.btn-guide-close{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.i-guide-close{
+	width: 27px;
+	height: 27px;
+	background-position: -72px -223px;
+}
+.i-guide-close:hover{
+	cursor: pointer;
+	background-position: -101px -223px;
+}
+.guide-frame0 .guide-btn-wrap{
+	padding-top: 128px;
+}
+.guide-frame1 .guide-btn-wrap{
+	padding-top: 237px;
+}
+.guide-frame2 .guide-btn-wrap{
+	padding-top: 50px;
+}
+.i-frame0-hotsite{
+	width: 135px;
+	height: 135px;
+	background-position: 0px 0px;
+	margin-left: 7px;
+	margin-top: 6px;
+}
+.i-frame0-arrow{
+	width: 150px;
+	height: 44px;
+	background-position: 0px -134px;
+	margin-top: 73px;
+	margin-left: -8px;
+}
+.i-frame1-google-logo{
+	width: 119px;
+	height: 40px;
+	background-position: 0px -182px;
+	margin-left: 38px;
+	margin-top: 45px;
+}
+.i-frame1-google-btn{
+	width: 72px;
+	height: 55px;
+	background-position: 0px -223px;
+	margin-left: 11px;
+	margin-top: 52px;
+}
+.i-frame2-glass{
+	width: 146px;
+	height: 147px;
+	display: block;
+	float: left;
+	margin-left: -235px;
+	margin-top: 3px;
+}
+.i-frame2-magicbox{
+	width: 169px;
+	height: 232px;
+	background-position: 0px 0px;
+	margin-left: 139px;
+	margin-top: 37px;
+}
+.i-frame2-news{
+	width: 169px;
+	height: 232px;
+	background-position: -168px 0px;
+	margin-left: 65px;
+	margin-top: 37px;
+}
+.i-frame2-resources{
+	width: 182px;
+	height: 232px;
+	background-position: -336px 0px;
+	margin-left: 65px;
+	margin-top: 37px;
+}
+.i-frame-header{
+	width: 649px;
+	height: 140px;
+	background-position: 0px 140px;
+	margin-left: 139px;
+	margin-top: 30px;
+}
+.p-frame0-hotsite{
+	font-size: 22px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 68px;
+	font-weight: bold;
+}
+.guide-progress{
+	float: left;
+	width: 121px;
+}
+.guide-progress-0 .i-progress-line{
+	visibility: hidden;
+}
+.guide-progress-over .i-progress-round, .guide-progress-0 .i-progress-round{
+	width: 9px;
+	height: 9px;
+	background-position: -129px -223px;
+}
+.i-progress-round{
+	width: 9px;
+	height: 9px;
+	background-position: -129px -233px;
+}
+.guide-progress-over .i-progress-line{
+	height: 2px;
+	width: 112px;
+	margin-top: 3px;
+	background-position: 0px -178px;
+}
+.i-progress-line{
+	height: 2px;
+	width: 112px;
+	margin-top: 3px;
+	background-position: 0px -180px;
+}
+.guide-progress-wrap p{
+	clear: left;
+	float: left;
+	margin-left: -100px;
+	margin-top: 10px;
+}
+.progress-title, .progress-title-over{
+	clear: left;
+	display: block;
+	float: none;
+	font-weight: bold;
+	margin-right: -112px;
+	padding-top: 5px;
+	zoom: 1;
+}
+.guide-progress-over .progress-title, .guide-progress-0 .progress-title{
+	color: #00ac72;
+	text-shadow: 1px 1px 1px #00cc88;
+}
+.input-frame1-google{
+	width: 530px;
+	height: 28px;
+	border: 1px solid #4d90fe;
+	margin-left: 23px;
+	margin-top: 52px;
+	float: left;
+	background-color: #fff;
+}
+.p-frame1-google{
+	clear: left;
+	font-size: 22px;
+	font-weight: bold;
+	padding-top: 22px;
+}
+.p-frame2-more{
+	clear: left;
+	font-size: 22px;
+	padding-top: 16px;
+	font-weight: bold;
+}
+.frame2-dot{
+	font-weight: bold;
+	color: #b8bbbd;
+}

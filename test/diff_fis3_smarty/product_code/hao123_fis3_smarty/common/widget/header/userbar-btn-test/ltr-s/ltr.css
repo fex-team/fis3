@@ -1,0 +1,28 @@
+.userbar-btns{ visibility: hidden;display: none;}
+
+body .box-search_hsrch {
+    width: 582px;
+    margin-left: 168px;
+}
+body .box-search_tab {
+	margin-left: 170px;
+}
+body .box-search_form .radios label {
+    padding-left: 24px;
+}
+body .box-search {
+	margin-left: 22px;
+}
+body .sug-search, body .baidu_sug, body .baidu_video_sug {
+    width: 490px;
+}
+body .box-search .box-search_form .input input {
+	width: 480px;
+}
+body .box-search .box-search_form .input {
+	margin-left: 9px;
+}
+/* For 1020px layout */
+/* body.l-1020 .box-search{
+	margin-left: 26px;
+} */

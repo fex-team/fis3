@@ -1,0 +1,83 @@
+.mod-404 .desc-wrap {
+    position: relative;
+    margin-top: 20px;
+}
+
+.mod-404 .desc,
+.mod-404 .jump,
+.mod-404 .jump-lv2,
+.mod-404 .jump-lv2-title {
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    color: #005cb8;
+}
+
+.mod-404 .jump a,
+.mod-404 .jump-lv2 .item {
+    text-decoration: underline;
+    color: #004283;
+}
+
+.mod-404 .jump-lv2-title {
+    margin-top: 10px;
+    line-height: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #5b8fc0;
+}
+
+.mod-404 .jump-lv2 .item {
+    padding: 0 25px;
+    font-size: 16px;
+    color: #5b8fc0;
+}
+
+.mod-404 .bg-light {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 348px;
+    background-color: #deefff;
+}
+
+.mod-404 .bg-deep {
+    position: absolute;
+    top: 398px;
+    width: 100%;
+    height: 175px;
+    background-color: #d5eaff;
+}
+
+.mod-404 .bg-cloud {
+    position: absolute;
+    top: 512px;
+    width: 100%;
+    height: 61px;
+    background: url(../img/bg-cloud.png?__sprite) top center no-repeat;
+}
+
+.mod-404 .bg-content {
+    position: relative;
+    height: 280px;
+    max-width: 1200px;
+    margin: 15px auto 60px auto;
+}
+
+.mod-404 .ad-404 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 250px;
+}
+
+.mod-404 .bg-404 {
+    position: absolute;
+    top: 0;
+    right: 38%;
+    width: 707px;
+    height: 254px;
+    margin-left: -430px;
+    background: url(../img/bg-404.png?__sprite) no-repeat;
+}

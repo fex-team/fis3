@@ -1,0 +1,26 @@
+.mod-charges_switch{
+	overflow: hidden;
+	width: 240px;
+	height: 66px;
+}
+.pr{
+	position: relative;
+}
+/*显示模块*/
+.side-mod-preload-ad-switch{
+    border:0!important;
+    background: transparent!important;
+}
+.side-mod-preload-ad-switch > *{
+    visibility: visible!important;
+}
+/*为了在右侧栏第一个的位置时不会先小后大，把一部分控制大小的样式放到common样式里*/
+/*.flow-on .mod-ad_switch {
+	width: 300px;
+	height: 100px;
+}
+.flow-on .mod-ad img{
+	width: 294px;
+	height: 96px;
+}
+.flow-on .mod-ad .nav-item{width: 300px;}*/

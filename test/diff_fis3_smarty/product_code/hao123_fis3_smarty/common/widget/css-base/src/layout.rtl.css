@@ -1,0 +1,204 @@
+.l-fl {
+	float: left;
+}
+
+.l-fr {
+	float: right;
+}
+
+.l-ff, .l-g0 {
+	overflow: hidden;
+}
+
+.l-wrap {
+	width: 960px;
+	margin: 0 auto
+}
+
+/**********
+* layout
+*/
+
+.l-g {
+	width: 100%;
+}
+
+.l-g:before, .l-g:after {
+	content: '';
+	display: table
+}
+
+.l-g:after {
+	clear: both
+}
+
+.l-g1-1 {
+	float: none
+}
+
+.l-g1-2 {
+	width: 50%
+}
+
+.l-g1-3 {
+	width: 33.33333%
+}
+
+.l-g2-3 {
+	width: 66.66666%
+}
+
+.l-g1-4 {
+	width: 25%
+}
+
+.l-g3-4 {
+	width: 75%
+}
+
+.l-g1-5 {
+	width: 20%
+}
+
+.l-g2-5 {
+	width: 40%
+}
+
+.l-g3-5 {
+	width: 60%
+}
+
+.l-g4-5 {
+	width: 80%
+}
+
+.l-g1-8 {
+	width: 12.5%
+}
+
+.l-g3-8 {
+	width: 37.5%
+}
+
+.l-g5-8 {
+	width: 62.5%
+}
+
+.l-g7-8 {
+	width: 87.5%
+}
+
+.l-g1-1, .l-g1-2, .l-g1-3, .l-g2-3, .l-g3-3, .l-g1-4, .l-g2-4, .l-g3-4, .l-g4-5, .l-g1-5, .l-g2-5, .l-g3-5, .l-g4-5, .l-g1-8, .l-g3-8, .l-g5-8, .l-g7-8 {
+	float: right;
+	_margin-left: -3px !important;
+}
+
+.l-g1, .l-g2, .l-g3, .l-g4, .l-g5, .l-g6, .l-g7, .l-g8, .l-g9, .l-g10, .l-g11, .l-g12 {
+	display: inline;
+	float: right;
+	margin-right: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+[class*="l-g"]:first-child {
+	margin-right: 0
+}
+
+.l-g1 {
+	width: 70px
+}
+
+.l-g2 {
+	width: 150px
+}
+
+.l-g3 {
+	width: 230px
+}
+
+.l-g4 {
+	width: 310px
+}
+
+.l-g5 {
+	width: 390px
+}
+
+.l-g6 {
+	width: 470px
+}
+
+.l-g7 {
+	width: 550px
+}
+
+.l-g8 {
+	width: 630px
+}
+
+.l-g9 {
+	width: 710px
+}
+
+.l-g10 {
+	width: 790px
+}
+
+.l-g11 {
+	width: 870px
+}
+
+.l-g12 {
+	width: 950px
+}
+
+.l-g_1 {
+	margin-right: 80px !important;
+}
+
+.l-g_2 {
+	margin-right: 160px !important;
+}
+
+.l-g_3 {
+	margin-right: 240px !important;
+}
+
+.l-g_4 {
+	margin-right: 320px !important;
+}
+
+.l-g_5 {
+	margin-right: 400px !important;
+}
+
+.l-g_6 {
+	margin-right: 480px !important;
+	margin-left: 0 !important
+}
+
+.l-g_7 {
+	margin-right: 560px !important;
+}
+
+.l-g_8 {
+	margin-right: 640px !important;
+}
+
+.l-g_9 {
+	margin-right: 720px !important;
+}
+
+.l-g_10 {
+	margin-right: 800px !important;
+}
+
+.l-g_11 {
+	margin-right: 880px !important;
+}
+
+.l-g_1, .l-g_2, .l-g_3, .l-g_4, .l-g_5, .l-g_6, .l-g_7, .l-g_8, .l-g_9, .l-g_10, .l-g_11 {
+	margin-left: 10px;
+}

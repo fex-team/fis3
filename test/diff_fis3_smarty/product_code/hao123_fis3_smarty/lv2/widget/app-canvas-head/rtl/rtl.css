@@ -1,0 +1,33 @@
+.userbar-wrap{
+	background: #00ad73;
+	border-bottom: 1px solid #009e69;
+	_border-bottom: 0 none;
+	background-image:-moz-linear-gradient(50% 0% -90deg, rgb(0,176,117) 0%, rgb(0,171,114) 100%);
+	background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, rgb(0,176,117)), color-stop(1, rgb(0,171,114)));
+	background-image:-webkit-linear-gradient(-90deg, rgb(0,176,117) 0%, rgb(0,171,114) 100%);
+	background-image:-o-linear-gradient(-90deg, rgb(0,176,117) 0%, rgb(0,171,114) 100%);
+	background-image:-ms-linear-gradient(-90deg, rgb(0,176,117) 0%, rgb(0,171,114) 100%);
+	background-image:linear-gradient(-90deg, rgb(0,176,117) 0%, rgb(0,171,114) 100%);
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff00b075,endColorstr=#ff00ab72,GradientType=0)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff00b075,endColorstr=#ff00ab72,GradientType=0);
+	min-width: 1280px;
+}
+.userbar{
+	height: 50px;
+	margin: 0 auto;
+	color: #fff;
+}
+.userbar-logo {
+	height: 50px;
+	position: relative;
+	z-index: 10;
+	font-size: 12px;
+	float: right;
+}
+.userbar-logoSlogan {
+	position: absolute;
+	font-size: 13px;
+	right: 150px;
+	top: 30px;
+	white-space: nowrap;
+}
