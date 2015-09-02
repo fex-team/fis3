@@ -114,7 +114,7 @@ else
 	echo $version > ${WENKU_OUTPUT_PATH}/output_o_old/fis_version.txt
     chmod 777 -R ${WENKU_OUTPUT_PATH}/output_o_old
 
-	#tieba
+	#image
 	rm -rf ${IMAGE_OUTPUT_PATH}/output_o_old
 	cd ${IMAGE_CODE_PATH}
 	/home/work/bin/fis3 release -d ${IMAGE_OUTPUT_PATH}/output_o_old --no-color

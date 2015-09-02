@@ -25,8 +25,8 @@ $config = array(
 //            'oldoutputdir' => BATMAN_PATH.'output_o_old',  //使用旧版本编译后的产出
 //           "modules" =>"transit,place,common,index,addr,feedback,drive,walk" //待编译的模块
 //        ),
-        'image'=>array(
-            'name'=>'image',
+        'tieba'=>array(
+            'name'=>'tieba',
             'newoutputdir' => TIEBA_PATH.'output_o_new',    //使用新版本编译后的产出
             'oldoutputdir' => TIEBA_PATH.'output_o_old',  //使用旧版本编译后的产出
             "modules" =>"wisepad", //待编译的模块
