@@ -14,5 +14,6 @@ npm install
 npm install fis3-hook-module
 npm install fis3-postpackager-loader
 npm install fis3-smarty --registry https://registry.npm.taobao.org
+npm install fis-packager-autopack
 
 sh ${TEST_PATH}/release$1.sh new       #执行fis release 操作
