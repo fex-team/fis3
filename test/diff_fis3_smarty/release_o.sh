@@ -90,7 +90,7 @@ then
         cd ${HAO123_CODE_PATH}/$module
 
         echo "node ${FISP_PATH}/bin/fis release -f ${HAO123_CODE_PATH}/$module/fis-conf2.js -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color"
-        node ${FISP_PATH}/bin/fis release -f ${HAO123_CODE_PATH}/$module/fis-conf2.js  -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color --verbose
+        node ${FISP_PATH}/bin/fis release -f ${HAO123_CODE_PATH}/$module/fis-conf2.js  -d ${HAO123_OUTPUT_PATH}/output_o_new --no-color
 
     done
     echo $version > ${HAO123_OUTPUT_PATH}/output_o_new/fis_version.txt
@@ -146,7 +146,7 @@ else
     for module in ${HAO123_MODULES[@]}
     do
         cd ${HAO123_CODE_PATH}/$module
-        node /home/work/bin/fis3 release -f ${HAO123_CODE_PATH}/$module/fis-conf2.js -d ${HAO123_OUTPUT_PATH}/output_o_old --no-color --verbose
+        node /home/work/bin/fis3 release -f ${HAO123_CODE_PATH}/$module/fis-conf2.js -d ${HAO123_OUTPUT_PATH}/output_o_old --no-color
     done
     echo $version > ${HAO123_OUTPUT_PATH}/output_o_old/fis_version.txt
     chmod 777 -R ${HAO123_OUTPUT_PATH}/output_o_old
