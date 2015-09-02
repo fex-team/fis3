@@ -19,12 +19,6 @@ $config = array(
             "modules" =>"bookeditor", //待编译的模块
             'result' => WENKU_PATH.'result/'
         ),
-//        'batman'=>array(
-//            'name'=>'batman',
-//            'newoutputdir' => BATMAN_PATH.'output_o_new',    //使用新版本编译后的产出
-//            'oldoutputdir' => BATMAN_PATH.'output_o_old',  //使用旧版本编译后的产出
-//           "modules" =>"transit,place,common,index,addr,feedback,drive,walk" //待编译的模块
-//        ),
         'tieba'=>array(
             'name'=>'tieba',
             'newoutputdir' => TIEBA_PATH.'output_o_new',    //使用新版本编译后的产出
@@ -32,6 +26,12 @@ $config = array(
             "modules" =>"wisepad", //待编译的模块
             'result' => TIEBA_PATH.'result/'
         ),
+//        'batman'=>array(
+//            'name'=>'batman',
+//            'newoutputdir' => BATMAN_PATH.'output_o_new',    //使用新版本编译后的产出
+//            'oldoutputdir' => BATMAN_PATH.'output_o_old',  //使用旧版本编译后的产出
+//           "modules" =>"transit,place,common,index,addr,feedback,drive,walk" //待编译的模块
+//        ),
 //        'place'=>array(
 //            'name'=>'place',
 //            'newoutputdir' => PLACE_PATH.'output_o_new',    //使用新版本编译后的产出
