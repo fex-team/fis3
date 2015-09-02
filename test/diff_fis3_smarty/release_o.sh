@@ -24,8 +24,8 @@ WENKU_OUTPUT_PATH=${TEST_PATH}/product_output/wenku_svn_fis3_smarty
 
 HAO123_CODE_PATH=${TEST_PATH}/product_code/hao123_fis3_smarty
 HAO123_OUTPUT_PATH=${TEST_PATH}/product_output/hao123_fis3_smarty
-HAO123_MODULES=(common home lv2)
-#HAO123_MODULES=(common)
+#HAO123_MODULES=(common home lv2)
+HAO123_MODULES=(common lv2)
 
 #SUPERMAN_CODE_PATH=${TEST_PATH}/product_code/superman
 #SUPERMAN_OUTPUT_PATH=${TEST_PATH}/product_output/superman

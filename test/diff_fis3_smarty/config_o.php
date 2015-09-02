@@ -7,7 +7,7 @@ if(!defined('WENKU_PATH')) define('WENKU_PATH',DIFF_ROOT_PATH.'product_output/we
 //if(!defined('BATMAN_PATH')) define('BATMAN_PATH',DIFF_ROOT_PATH.'product_output/batman/' );
 //if(!defined('PLACE_PATH')) define('PLACE_PATH',DIFF_ROOT_PATH.'product_output/place/' );
 //if(!defined('TIEBA_PATH')) define('TIEBA_PATH',DIFF_ROOT_PATH.'product_output/tieba/' );
-//if(!defined('HAO123_PATH')) define('HAO123_PATH',DIFF_ROOT_PATH.'product_output/hao123/' );
+if(!defined('HAO123_PATH')) define('HAO123_PATH',DIFF_ROOT_PATH.'product_output/hao123_fis3_smarty/' );
 //if(!defined('SUPERMAN_PATH')) define('SUPERMAN_PATH',DIFF_ROOT_PATH.'product_output/superman/' );
 
 $config = array(
@@ -18,7 +18,7 @@ $config = array(
             'oldoutputdir' => WENKU_PATH.'output_o_old',  //使用旧版本编译后的产出
             "modules" =>"bookeditor", //待编译的模块
             'result' => WENKU_PATH.'result/'
-        )
+        ),
 //        'batman'=>array(
 //            'name'=>'batman',
 //            'newoutputdir' => BATMAN_PATH.'output_o_new',    //使用新版本编译后的产出
@@ -38,12 +38,12 @@ $config = array(
 //            'oldoutputdir' => PLACE_PATH.'output_o_old',  //使用旧版本编译后的产出
 //            "modules" =>"admin,beauty,cater,common,detail,hotel,movie,scope" //待编译的模块
 //        ),
-//        'hao123'=>array(
-//            'name'=>'hao123',
-//            'newoutputdir' => HAO123_PATH.'output_o_new',    //使用新版本编译后的产出
-//            'oldoutputdir' => HAO123_PATH.'output_o_old',  //使用旧版本编译后的产出
-//            "modules" =>"common,home,lv2" //待编译的模块
-//        ),
+        'hao123'=>array(
+            'name'=>'hao123',
+            'newoutputdir' => HAO123_PATH.'output_o_new',    //使用新版本编译后的产出
+            'oldoutputdir' => HAO123_PATH.'output_o_old',  //使用旧版本编译后的产出
+            "modules" =>"common,home,lv2" //待编译的模块
+        )
 //        'superman'=>array(
 //            'name'=>'superman',
 //            'newoutputdir' => SUPERMAN_PATH.'output_o_new',    //使用新版本编译后的产出
