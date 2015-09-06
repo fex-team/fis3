@@ -19,8 +19,8 @@ $config = array(
             "modules" =>"bookeditor", //待编译的模块
             'result' => WENKU_PATH.'result/'
         ),
-        'tieba'=>array(
-            'name'=>'tieba',
+        'image'=>array(
+            'name'=>'image',
             'newoutputdir' => TIEBA_PATH.'output_o_new',    //使用新版本编译后的产出
             'oldoutputdir' => TIEBA_PATH.'output_o_old',  //使用旧版本编译后的产出
             "modules" =>"wisepad", //待编译的模块
