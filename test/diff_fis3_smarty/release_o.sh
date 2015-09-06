@@ -64,13 +64,13 @@ then
 
 	#tieba
 	rm -rf ${TIEBA_OUTPUT_PATH}/output_o_new
-	for module in ${TIEBA_MODULES[@]}
-	do
-	    cd ${TIEBA_CODE_PATH}/$module
-	    node ${FISP_PATH}/bin/fis release prod -cd ${TIEBA_OUTPUT_PATH}/output_o_new --no-color
-	done
-	echo $version > ${TIEBA_OUTPUT_PATH}/output_o_new/fis_version.txt
-    chmod 777 ${TIEBA_OUTPUT_PATH}
+#	for module in ${TIEBA_MODULES[@]}
+#	do
+#	    cd ${TIEBA_CODE_PATH}/$module
+#	    node ${FISP_PATH}/bin/fis release prod -cd ${TIEBA_OUTPUT_PATH}/output_o_new --no-color
+#	done
+#	echo $version > ${TIEBA_OUTPUT_PATH}/output_o_new/fis_version.txt
+#    chmod 777 ${TIEBA_OUTPUT_PATH}
 
 	#place
 	rm -rf ${PLACE_OUTPUT_PATH}/output_o_new
