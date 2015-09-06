@@ -26,8 +26,8 @@ $config = array(
             "modules" =>"wisepad", //待编译的模块
             'result' => TIEBA_PATH.'result/'
         ),
-        'tieba'=>array(
-            'name'=>'tieba',
+        'tieba_orcp'=>array(
+            'name'=>'tieba_orcp',
             'newoutputdir' => BATMAN_PATH.'output_o_new',    //使用新版本编译后的产出
             'oldoutputdir' => BATMAN_PATH.'output_o_old',  //使用旧版本编译后的产出
            "modules" =>"orcp-common,orcp-admin,orcp-online,orcp-machine" //待编译的模块
