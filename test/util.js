@@ -989,6 +989,12 @@ describe('util: _.copy(rSource, target, include, exclude, uncover, move)', funct
     _.del(target);
     _.del(source);
   });
+
+  it('target undefine', function () {
+    var taxp;
+    var xp = _(taxp);
+    expect(xp == '').to.be.true;
+  });
 });
 
 //后缀相关的信息
@@ -1151,7 +1157,7 @@ describe('util: _parseUrl(url, opt)', function () {
   });
 
 });
-
+//hide- local
 describe('util: _download(url, [callback], [extract], [opt])', function () {
   var downdir = __dirname + '/download/';
   this.timeout(25000);
@@ -1450,7 +1456,7 @@ describe('util: _install(name, [version], opt)', function () {
     _.install(name, version, opt);
   });
 });
-
+//hide- local -end
 describe('util: _.readJSON(path)', function () {
   it('general-readJson', function () {
     var path = _(__dirname) + "/util/json/json.json";
@@ -1726,22 +1732,114 @@ describe('util: _.nohup(type, callback, def)', function (){
   });
 });
 
-//describe('util: _.pipe(type, callback, def)', function (){
-//  it('general', function () {
-//    config.env().set('modules.hook','module');
-//    _.pipe('hook', function (processor, settings, key, type){
-//      expect("hook.module" == key).to.be.true;
-//    }, '');
-//
-//    var str = '';
-//    config.env().set('modules.hook',['module','components']);
-//    _.pipe('hook', function (processor, settings, key, type){
-//      str += key + ',';
-//    }, '');
-//    expect("hook.module,hook.components," == str).to.be.true;
-//
-//  });
-//});
+describe('util: _.pipe(type, callback, def)1', function (){
+  it('general', function () {
+    config.env().set('modules.hook','module');
+    _.pipe('hook', function (processor, settings, key, type){
+      expect("hook.module" == key).to.be.true;
+    }, '');
+
+    var str = '';
+    config.env().set('modules.hook',['module','components']);
+    _.pipe('hook', function (processor, settings, key, type){
+      str += key + ',';
+    }, '');
+    expect("hook.module,hook.components," == str).to.be.true;
+
+    var str = '';
+
+    config.env().set('modules.hook',function a(){});
+    _.pipe('hook', function (processor, settings, key, type){
+      str += key + ',';
+    }, '');
+    expect("hook.0," == str).to.be.true;
+
+
+    //var root2 = path.join(__dirname);
+    ////var x2 = _.applyMatches(path.join(root, 'util','upload','main.css'),['*.css']);
+    ////console.log(x2);
+
+  });
+
+  it('_.applyMatches', function() {
+
+    var ma = [ { reg: /^(?:(?:(?!(?:\/|^)\.).)*?\/(?!\.)(?=.)[^/]*?\.gif)$/,
+      raw: '**/*.gif',
+      negate: false,
+      properties: { packTo:'static/$0',release: function(){var x =0} ,useHash:false},
+      media: 'GLOBAL',
+      weight: 0,
+      index: 35 } ];
+
+    var x2 = _.applyMatches("file/embed/embed.gif",ma);
+    var pp = '{"__packToIndex":0,"packTo":"static/file/embed/embed.gif","__releaseIndex":0,"__useHashIndex":0,"useHash":false}';
+    expect(JSON.stringify(x2)).to.be.equal(pp);
+
+  });
+
+  it('_.applyMatches : properties=null', function() {
+
+    var ma = [ { reg: /^(?:(?:(?!(?:\/|^)\.).)*?\/(?!\.)(?=.)[^/]*?\.gif)$/,
+      raw: '**/*.gif',
+      negate: false,
+      //properties: { release: false ,useHash:false},
+      media: 'GLOBAL',
+      weight: 0,
+      index: 35 } ];
+
+    var x2 = _.applyMatches("/file/embed/embed.gif",ma);
+    var pp = '{"__releaseIndex":0,"release":false,"__useHashIndex":0,"useHash":false}';
+    expect(JSON.stringify(x2)).to.be.equal('{}');
+  });
+
+  it('_.applyMatches : many match', function() {
+
+    fis.match('file/embed/embed.gif', {
+      deploy: [
+        fis.plugin('local-deliver', {
+          to: "./output3"
+        }),
+        fis.plugin('local-deliver', {
+          to: "./output2"
+        })
+      ]
+    });
+    var ma = [ { reg: /^(?:(?:(?!(?:\/|^)\.).)*?\/(?!\.)(?=.)[^/]*?\.gif)$/,
+      raw: '**/*.gif',
+      negate: false,
+      properties: { useHash:false,packTo:'static/$0',release: function(){var x =0},
+        deploy:
+        { to: './output3',
+          __plugin: 'local-deliver',
+          __name: 'local-deliver',
+          __pos: 2 }
+      },
+      media: 'GLOBAL',
+      weight: 0,
+      index: 35 } ];
+
+    var ma2 = [ { reg: /^(?:(?:(?!(?:\/|^)\.).)*?\/(?!\.)(?=.)[^/]*?\.gif)$/,
+      raw: '**/*.gif',
+      negate: false,
+      properties: { useHash:true,packTo:'static/$0',release: function(){var x =1},
+        deploy:
+          { to: './output3',
+            __plugin: 'local-deliver',
+            __name: 'local-deliver',
+            __pos: 2 }
+
+      },
+      media: 'GLOBAL',
+      weight: 0,
+      index: 35 } ];
+
+    var x2 = _.applyMatches("file/embed/embed.gif",ma);
+    var x3 = _.applyMatches("file/embed/embed.gif",ma2);
+    var pp = '{"__releaseIndex":0,"release":false,"__useHashIndex":0,"useHash":false}';
+    expect(JSON.stringify(x3)).to.be.equal('{}');
+  });
+
+});
 
 describe('util: _.pipe(type, callback, def)2', function (){
   var root = path.join(__dirname);
