@@ -1740,11 +1740,11 @@ describe('util: _.pipe(type, callback, def)1', function (){
     }, '');
 
     var str = '';
-    config.env().set('modules.hook',['module','components']);
+    config.env().set('modules.hook',['components']);
     _.pipe('hook', function (processor, settings, key, type){
       str += key + ',';
     }, '');
-    expect("hook.module,hook.components," == str).to.be.true;
+    expect("hook.components," == str).to.be.true;
 
     var str = '';
 
@@ -1836,7 +1836,7 @@ describe('util: _.pipe(type, callback, def)1', function (){
     var x2 = _.applyMatches("file/embed/embed.gif",ma);
     var x3 = _.applyMatches("file/embed/embed.gif",ma2);
     var pp = '{"__releaseIndex":0,"release":false,"__useHashIndex":0,"useHash":false}';
-    expect(JSON.stringify(x3)).to.be.equal('{}');
+    expect(JSON.stringify(x3)).to.be.equal('{"__useHashIndex":0,"useHash":true,"__packToIndex":0,"packTo":"static/file/embed/embed.gif","__releaseIndex":0,"__deployIndex":0,"deploy":{"to":"./output3","__plugin":"local-deliver","__name":"local-deliver","__pos":2}}');
   });
 
 });
