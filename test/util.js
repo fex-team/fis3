@@ -1734,9 +1734,9 @@ describe('util: _.nohup(type, callback, def)', function (){
 
 describe('util: _.pipe(type, callback, def)1', function (){
   it('general', function () {
-    config.env().set('modules.hook','module');
+    config.env().set('modules.hook','components');
     _.pipe('hook', function (processor, settings, key, type){
-      expect("hook.module" == key).to.be.true;
+      expect("hook.components" == key).to.be.true;
     }, '');
 
     var str = '';
