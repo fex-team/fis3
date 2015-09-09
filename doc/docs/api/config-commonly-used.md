@@ -222,7 +222,7 @@ FIS3 会读取全部项目目录下的资源，如果有些资源不想被构建
 ```js
 fis.set('project.ignore', [
   'output/**',
-  'node_nodules/**',
+  'node_modules/**',
   '.git/**',
   '.svn/**'
 ]);
