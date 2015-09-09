@@ -56,7 +56,7 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
 
   ### 特殊用法（类 css 伪类）
 
-  1. `::packager` 用来匹配 fis 的打包过程。
+  1. `::package` 用来匹配 fis 的打包过程。
   2. `::text` 用来匹配文本文件。
 
     默认识别这类后缀的文件。
