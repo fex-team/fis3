@@ -117,7 +117,7 @@ fis.set('project.files', ['page/**','map.json','modules/**','lib']);
 
     参考
 
-    https://github.com/fex-team/fis3-hook-module/blob/master/lib/commonJs.js
+    https://github.com/fex-team/fis3-hook-commonjs/blob/master/index.js
 
 - 如果感觉自己写插件太麻烦
 
