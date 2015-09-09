@@ -120,6 +120,8 @@ describe('compile: builtin uri', function () {
     });
     fis.compile(file);
     expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.css')));
+    fis.compile.clean(file);
+    fis.compile.clean();
 
     fis.cache.clean();
     //setTimeout(function(){
