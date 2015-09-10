@@ -57,6 +57,7 @@ describe('compile: builtin require', function () {
     var file = fis.file.wrap(path.join(root, 'main.js'));
     file.useCache = false;
     fis.compile(file);
+    console.log(file.getContent());
     expect(file.requires).to.be.deep.equal(['comp_a.js', 'comp_b.js']);
     expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.js')));
   });
@@ -86,6 +87,21 @@ describe('compile: builtin uri', function () {
     fis.media().init();
     fis.config.init();
     fis.compile.setup();
+  });
+
+  it('compile .html file', function () {
+    var file = fis.file.wrap(path.join(root, 'main.html'));
+
+    fis.match('comp_**.css', {
+      useHash: false
+    });
+
+    fis.match('comp_*.js', {
+      useHash: false
+    });
+
+    fis.compile(file);
+    expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.html')));
   });
 
   it('compile .js file', function () {
