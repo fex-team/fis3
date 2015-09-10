@@ -115,6 +115,32 @@ describe('check parser postion', function () {
   });
 });
 
+describe('use dep', function () {
+  var root = path.join(__dirname, 'compile');
+  beforeEach(function () {
+    fis.project.setProjectRoot(root);
+    fis.media().init();
+    fis.config.init();
+    fis.compile.setup();
+  });
+
+  it ('build a empty .js file', function () {
+    fis.match('*.js', {
+      useCache: false,
+      parser: function(content, file) {
+        var lang = fis.compile.lang;
+        return lang.dep.wrap('./index.js');
+      }
+    });
+
+    var file = fis.file.wrap(path.join(root, 'files', 'empty.js'));
+    fis.compile(file);
+
+    var exists = !!file.cache.deps[fis.file.wrap(path.join(root, 'files', 'index.js')).realpath];
+    expect(exists).to.be.equal(true);
+  });
+});
+
 describe('compile: build a virtual file', function () {
   var root = path.join(__dirname, 'compile');
   beforeEach(function () {
