@@ -42,6 +42,7 @@ describe('compile check cache revierted', function () {
     var origin = fis.compile.settings.beforeCacheRevert;
     file.useCache = true;
     fis.compile.settings.useLint = true;
+    fis.compile.settings.unique = true;
     fis.compile.settings.beforeCacheRevert = function() {
       cachedRevierted = true;
     };
@@ -76,6 +77,41 @@ describe('check parser', function () {
     var file = fis.file.wrap(path.join(root, 'files', 'empty.js'));
     fis.compile(file);
     expect(file.getContent()).to.be.equal('hello world');
+  });
+});
+
+describe('check parser postion', function () {
+  var root = path.join(__dirname, 'compile');
+  beforeEach(function () {
+    fis.project.setProjectRoot(root);
+    fis.media().init();
+    fis.config.init();
+    fis.compile.setup();
+  });
+
+  it ('build a empty .js file', function () {
+    var date1, date2;
+    var count = 0;
+
+    fis.match('*.js', {
+      useCache: false,
+      parser: function(content, file) {
+        date1 = count++;
+        return 'hello world';
+      }
+    });
+
+    fis.match('*.js', {
+      parser: fis.plugin(function() {
+        date2 = count++;
+        return 'hello world2'
+      }, {}, 'append')
+    });
+
+    var file = fis.file.wrap(path.join(root, 'files', 'empty.js'));
+    fis.compile(file);
+    expect(date2 - date1 >= 0).to.be.equal(true);
+    expect(file.getContent()).to.be.equal('hello world2');
   });
 });
 
