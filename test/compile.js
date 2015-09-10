@@ -18,6 +18,67 @@ describe('compile: build single file', function () {
   });
 });
 
+describe('compile check cache revierted', function () {
+  var root = path.join(__dirname, 'compile');
+  beforeEach(function () {
+    fis.project.setProjectRoot(root);
+    fis.media().init();
+    fis.config.init();
+    fis.compile.setup();
+  });
+
+  it ('build a empty .js file', function () {
+    var linted = false;
+
+    fis.match('**', {
+      lint: function() {
+        linted = true;
+      }
+    })
+
+    var file = fis.file.wrap(path.join(root, 'files', 'empty.js'));
+    var cachedRevierted = false;
+
+    var origin = fis.compile.settings.beforeCacheRevert;
+    file.useCache = true;
+    fis.compile.settings.useLint = true;
+    fis.compile.settings.beforeCacheRevert = function() {
+      cachedRevierted = true;
+    };
+    fis.compile(file);
+    fis.emit('release:end');
+    file = fis.file.wrap(path.join(root, 'files', 'empty.js'));
+    fis.compile(file);
+    fis.compile.settings.beforeCacheRevert = origin;
+
+    expect(cachedRevierted).to.be.equal(true);
+    expect(linted).to.be.equal(true);
+  });
+});
+
+describe('check parser', function () {
+  var root = path.join(__dirname, 'compile');
+  beforeEach(function () {
+    fis.project.setProjectRoot(root);
+    fis.media().init();
+    fis.config.init();
+    fis.compile.setup();
+  });
+
+  it ('build a empty .js file', function () {
+    fis.match('*.js', {
+      useCache: false,
+      parser: function(content, file) {
+        return 'hello world';
+      }
+    });
+
+    var file = fis.file.wrap(path.join(root, 'files', 'empty.js'));
+    fis.compile(file);
+    expect(file.getContent()).to.be.equal('hello world');
+  });
+});
+
 describe('compile: build a virtual file', function () {
   var root = path.join(__dirname, 'compile');
   beforeEach(function () {
@@ -100,8 +161,36 @@ describe('compile: builtin uri', function () {
       useHash: false
     });
 
+    fis.match('*.html:template', {
+      isHtmlLike: true
+    });
+
     fis.compile(file);
     expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main.html')));
+  });
+
+  it('compile .html file', function () {
+
+    fis.match('*.html', {
+      useCache: false,
+      pipeEmbed: false
+    })
+
+    fis.match('comp_**.css', {
+      useHash: false
+    });
+
+    fis.match('comp_*.js', {
+      useHash: false
+    });
+
+    fis.match('*.html:template', {
+      isHtmlLike: true
+    });
+
+    var file = fis.file.wrap(path.join(root, 'main.html'));
+    fis.compile(file);
+    expect(file.getContent()).to.be.equal(fis.util.read(path.join(root, 'expect', 'main2.html')));
   });
 
   it('compile .js file', function () {
