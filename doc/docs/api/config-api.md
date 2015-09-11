@@ -135,7 +135,7 @@ fis.media('rd').match('*.js', {
 
 **语法**
 
-fis.plugin(name [, props [, place]])
+fis.plugin(name [, props [, position]])
 
 **属性**
 - name
@@ -154,6 +154,10 @@ fis.plugin(name [, props [, place]])
 - props
 
     对象，给插件设置用户属性
+    
+- position
+  
+    设置插件位置，如果目标文件已经设置了某插件，默认再次设置会覆盖掉。如果希望在已设插件执行之前插入或者之后插入，请传入 `prepend` 或者 `append`
 
 
 ```js
