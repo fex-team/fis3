@@ -164,7 +164,7 @@ fis.plugin(name [, props [, position]])
   
     设置插件位置，如果目标文件已经设置了某插件，默认再次设置会覆盖掉。如果希望在已设插件执行之前插入或者之后插入，请传入 `prepend` 或者 `append`
   
-  ```
+  ```js
   fis.match('*.less', {
      parser: fis.plugin('another', null, 'append');
   });
