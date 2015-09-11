@@ -13,11 +13,11 @@ cd ${TEST_PATH}
 #WENKU_SVN=https://svn.baidu.com/app/search/wenku/branches/fe/bookeditor/wenku_1001-0-253_BRANCH
 #WENKU_DIR=./product_code/wenku
 
-#TIEBA_SVN=https://svn.baidu.com/app/search/forum/branches/fe/pad/xpad/pb/xpadpb_1-0-0_BRANCH
-#TIEBA_DIR=./product_code/tieba
+TIEBA_SVN=https://svn.baidu.com/inf/odp/trunk/orp/cmodule/fe
+TIEBA_DIR=./product_code/tieba
 
-HAO123_SVN=https://svn.baidu.com/app/global/hao123/trunk/fe
-HAO123_DIR=./product_code/hao123
+#HAO123_SVN=https://svn.baidu.com/app/global/hao123/trunk/fe
+#HAO123_DIR=./product_code/hao123
 
 img_SVN=https://svn.baidu.com/app/search/image/tags/fe/fis2-template/wisepadnew/wisepadnew_1-0-4-0_PD_BL/
 img_DIR=./product_code/image
@@ -26,7 +26,8 @@ img_DIR=./product_code/image
 #svn co --username=$1 --password=$2 --no-auth-cache ${BATMAN_SVN} ${BATMAN_DIR}
 #svn co --username=$1 --password=$2 --no-auth-cache ${WENKU_SVN} ${WENKU_DIR}
 #svn co --username=$1 --password=$2 --no-auth-cache ${TIEBA_SVN} ${TIEBA_DIR}
-#svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/common ${HAO123_DIR}/common
-#svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/home ${HAO123_DIR}/home
-#svn co --username=$1 --password=$2 --no-auth-cache ${HAO123_SVN}/lv2 ${HAO123_DIR}/lv2
+svn co --username=$1 --password=$2 --no-auth-cache ${TIEBA_SVN}/orcp-common ${TIEBA_DIR}/orcp-common
+svn co --username=$1 --password=$2 --no-auth-cache ${TIEBA_SVN}/orcp-admin ${TIEBA_DIR}/orcp-admin
+svn co --username=$1 --password=$2 --no-auth-cache ${TIEBA_SVN}/orcp-online ${TIEBA_DIR}/orcp-online
+svn co --username=$1 --password=$2 --no-auth-cache ${TIEBA_SVN}/orcp-machine ${TIEBA_DIR}/orcp-machine
 svn co --username=$1 --password=$2 --no-auth-cache ${img_SVN} ${img_DIR}

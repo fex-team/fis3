@@ -8,8 +8,4 @@
     	<title>{%$title%}</title>
     	{%block name="block_head_static"%}{%/block%}
 	{%/head%}
-	{%* 使用body插件替换body标签，主要为可控制加载JS资源 *%}
-	{%body%}
-		{%block name="content"%}{%/block%}
-	{%/body%}
-{%/html%}
+	{%* 使用body插件替换body标签，主要为可控制加载JS资

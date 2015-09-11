@@ -14,9 +14,9 @@ WENKU_OUTPUT_PATH=${TEST_PATH}/product_output/wenku_svn_fis3_smarty
 IMAGE_CODE_PATH=${TEST_PATH}/product_code/image
 IMAGE_OUTPUT_PATH=${TEST_PATH}/product_output/image
 
-#BATMAN_CODE_PATH=${TEST_PATH}/product_code/batman
-#BATMAN_OUTPUT_PATH=${TEST_PATH}/product_output/batman
-#BATMAN_MODULES=(transit place common index addr feedback drive walk)
+TIEBA_CODE_PATH=${TEST_PATH}/product_code/tieba
+TIEBA_OUTPUT_PATH=${TEST_PATH}/product_output/tieba
+TIEBA_MODULES=(orcp-common orcp-admin orcp-online orcp-machine)
 
 #PLACE_CODE_PATH=${TEST_PATH}/product_code/place
 #PLACE_OUTPUT_PATH=${TEST_PATH}/product_output/place
@@ -57,20 +57,20 @@ then
 
 	#image
 	rm -rf ${IMAGE_OUTPUT_PATH}/output_o_new
-#	cd ${IMAGE_CODE_PATH}
-#	node ${FISP_PATH}/bin/fis release -cd ${IMAGE_OUTPUT_PATH}/output_o_new --no-color
-#	echo $version > ${IMAGE_OUTPUT_PATH}/output_o_new/fis_version.txt
-#    chmod 777 ${IMAGE_OUTPUT_PATH}
+	cd ${IMAGE_CODE_PATH}
+	node ${FISP_PATH}/bin/fis release -cd ${IMAGE_OUTPUT_PATH}/output_o_new --no-color
+	echo $version > ${IMAGE_OUTPUT_PATH}/output_o_new/fis_version.txt
+    chmod 777 ${IMAGE_OUTPUT_PATH}
 
-	#batman
-	rm -rf ${BATMAN_OUTPUT_PATH}/output_o_new
-#	for module in ${BATMAN_MODULES[@]}
-#	do
-#	    cd ${BATMAN_CODE_PATH}/$module
-#	    node ${FISP_PATH}/bin/fis-plus release -copd ${BATMAN_OUTPUT_PATH}/output_o_new --no-color
-#	done
-#	echo $v > ${BATMAN_OUTPUT_PATH}/output_o_new/fis_version.txt
-#    chmod 777 ${BATMAN_OUTPUT_PATH}
+	#tieba
+	rm -rf ${TIEBA_OUTPUT_PATH}/output_o_new
+	for module in ${TIEBA_MODULES[@]}
+	do
+	    cd ${TIEBA_CODE_PATH}/$module
+	    node ${FISP_PATH}/bin/fis release prod -cd ${TIEBA_OUTPUT_PATH}/output_o_new --no-color
+	done
+	echo $version > ${TIEBA_OUTPUT_PATH}/output_o_new/fis_version.txt
+    chmod 777 ${TIEBA_OUTPUT_PATH}
 
 	#place
 	rm -rf ${PLACE_OUTPUT_PATH}/output_o_new
@@ -121,15 +121,15 @@ else
 	echo $version > ${IMAGE_OUTPUT_PATH}/output_o_old/fis_version.txt
     chmod 777 -R ${IMAGE_OUTPUT_PATH}/output_o_old
 
-    #batman
-	rm -rf ${BATMAN_OUTPUT_PATH}/output_o_old
-#	for module in ${BATMAN_MODULES[@]}
-#	do
-#		cd ${BATMAN_CODE_PATH}/$module
-#		fisp release -copd ${BATMAN_OUTPUT_PATH}/output_o_old --no-color
-#	done
-#	echo $v > ${BATMAN_OUTPUT_PATH}/output_o_old/fis_version.txt
-#    chmod 777 -R ${BATMAN_OUTPUT_PATH}/output_o_old
+    #tieba
+	rm -rf ${TIEBA_OUTPUT_PATH}/output_o_old
+	for module in ${TIEBA_MODULES[@]}
+	do
+		cd ${TIEBA_CODE_PATH}/$module
+		node /home/work/bin/fis3 release prod -cd ${TIEBA_OUTPUT_PATH}/output_o_old --no-color
+	done
+	echo $version > ${TIEBA_OUTPUT_PATH}/output_o_old/fis_version.txt
+    chmod 777 -R ${TIEBA_OUTPUT_PATH}/output_o_old
 
 	#place
 	rm -rf ${PLACE_OUTPUT_PATH}/output_o_old
