@@ -55,7 +55,7 @@ fis.match('/test/**', {
 });
 
 fis.match('/test/server.conf', {
-  release: '/config/server-conf.json'
+  release: '/config/server.conf'
 });
 ```
 
