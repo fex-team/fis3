@@ -54,4 +54,5 @@
     - [glob](./api/config-glob.md)
   - [内置插件及配置](./api/config-system-plugin.md)
   - [自定义插件](./api/dev-plugin.md)
+- [mock 假数据模拟](./node-mock.md)
 - [FIS2 到 FIS3](./fis2-to-fis3.md)
