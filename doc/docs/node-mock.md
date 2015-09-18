@@ -6,7 +6,7 @@ fis 中默认的 node 服务就支持此功能。
 
 ## 步骤
 
-1. 准备好假数据文件，如 sample.json 文件，放在服务器的 `/test/sample.json` 目录。然后就可以通过 `http://127.0.0.1:8080/test/sample.json` 访问了。
+1. 准备好假数据文件，如 sample.json 文件，放在服务器的 `/test/sample.json` 目录，确保通过 `http://127.0.0.1:8080/test/sample.json` 可访问到。
 
   ```json
   {
@@ -18,12 +18,12 @@ fis 中默认的 node 服务就支持此功能。
     }
   }
   ```
-2. 准备一个 `server.conf` 配置文件，放在服务器的 `/config/server.conf`，内容如下。
+2. 准备一个 `server.conf` 配置文件，放在服务器目录的 `/config/server.conf`，内容如下。
 
   ```
   rewrite ^\/api\/user$ /test/sample.json
   ```
-3. 然后就当你请求 `http://127.0.0.1:8080/api/user` 的时候，返回的就是 sample.json 中的内容。
+3. 然后当你请求 `http://127.0.0.1:8080/api/user` 的时候，返回的就是 sample.json 中的内容。
 
 ## 说明
 
@@ -37,7 +37,7 @@ fis 中默认的 node 服务就支持此功能。
 * `正则规则` 用来命中需要作假的请求路径。
 * `目标文件` 设置转发的目标地址，需要配置一个可请求的 url 地址。
 
-刚刚说的是直接把文件放在服务器目录，操作起来不是很方便，这类假数据文件放在项目源码中，然后通过 fis3 release 伴随源码一起发布到调试服务器，应该更合理。
+刚说的是把文件放在服务器目录，操作起来其实并不是很方便，这类假数据文件建议放在项目源码中，然后通过 fis3 release 伴随源码一起发布到调试服务器。
 
 推荐以下存放规范。
 
@@ -47,7 +47,7 @@ fis 中默认的 node 服务就支持此功能。
     └── server.conf
 ```
 
-然后配置 fis-conf.js, 保证产出到服务端的存放路径是正确的。
+然后配置 fis-conf.js, 保证产出到服务端的路径是正确的。
 
 ```js
 fis.match('/test/**', {
