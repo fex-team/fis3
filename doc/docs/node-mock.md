@@ -70,7 +70,8 @@ module.exports = function(req, res, next) {
 
   res.write('Hello world ');
 
-  res.setHeader('xxxx', 'xxx');
+  // set custom header.
+  // res.setHeader('xxxx', 'xxx');
 
   res.end('The time is ' + Date.now());
 };
