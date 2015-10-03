@@ -6,6 +6,8 @@
 
 详细过程参考官网 https://nodejs.org
 
+> Node **版本要求** 0.8.x，0.10.x, 0.12.x，不在此列表中的版本不予支持。最新版本 node 支持会第一时间跟进，支持后更新支持列表。
+
 - Ubuntu 用户使用 `apt-get` 安装 node 后，安装的程序名叫 `nodejs`，需要软链成 `node`
 - Windows 用户安装完成后需要在 CMD 下确认是否能执行 node 和 npm
 
