@@ -117,17 +117,17 @@ fis.set('project.files', ['page/**','map.json','modules/**','lib']);
 
     参考
 
-    https://github.com/fex-team/fis3-hook-module/blob/master/lib/commonJs.js
+    https://github.com/fex-team/fis3-hook-commonjs/blob/master/index.js
 
 - 如果感觉自己写插件太麻烦
 
-    可以安装 FIS组 提供的模块化方案的支持插件 fis3-hook-module
+    可以安装 FIS组 提供的模块化方案的支持插件 fis3-hook-commonjs
 
     ```js
-    fis.hook('module');
+    fis.hook('commonjs');
 
     // 如果 jswrapper 自定义要做
-    fis.hook('module', {wrap: false});
+    fis.hook('commonjs', {wrap: false});
     
     ```
 
