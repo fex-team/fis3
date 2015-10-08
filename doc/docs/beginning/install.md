@@ -41,7 +41,7 @@ $ fis3 -v
           \///              \///////////    \///////////
 ```
 
-如果提示找不到 `fis3` 命令并且 **npm** 安装成功推出，请参考文档 [fis#565](https://github.com/fex-team/fis/issues/565) 解决
+如果提示找不到 `fis3` 命令,但 **npm** 成功退出安装过程，请参考文档 [fis#565](https://github.com/fex-team/fis/issues/565) 解决
 
 ### 升级 FIS3
 
