@@ -52,7 +52,7 @@ fis.match('**.css', {
 // 所有image目录下的.png，.gif文件
 fis.match('/images/(*.{png,gif})', {
     //发布到/static/pic/xxx目录下
-    release: '/static/pic/$1'
+    release: '/static/pic/$1$2'
 });
 ```
 
@@ -296,7 +296,7 @@ fis.match('**.css', {
 //所有image目录下的.png，.gif文件
 fis.match('/images/(*.{png,gif})', {
     //发布到/static/pic/xxx目录下
-    release : '/static/pic/$1'
+    release : '/static/pic/$1$2'
 });
 ```
 
