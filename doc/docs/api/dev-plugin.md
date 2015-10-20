@@ -175,6 +175,40 @@ module.exports = function(options, modified, total, next) {
 - https://www.npmjs.com/package/fis3-deploy-zip
 - https://www.npmjs.com/package/fis3-deploy-replace
 
+### 命令行插件
+
+fis3 默认提供了 [release](https://github.com/fex-team/fis3-command-release)、[server](https://github.com/fex-team/fis3-command-server)、[inspect](https://github.com/fex-team/fis3-command-inspect)、[init](https://github.com/fex-team/fis3-command-init) 和 [install](https://github.com/fex-team/fis-command-install)五个子命令，每个子命令都是通过独立 npm 包来完成, 命名规范为 `fis3-command-xxxx`。如果希望扩展新的子命令如 `foo`, 则需要开发 npm 包 `fis3-command-foo`，全局安装或者安装在对应的 fis 项目目录，代码请参考如下所示。
+
+```js
+exports.name = 'foo';
+exports.desc = 'description of foo.';
+exports.options = {
+  '-h, --help': 'print this help message',
+  '--files'   : 'some options.'
+};
+
+exports.run = function(argv, cli) {
+  // 如果输入为 fis3 foo -h
+  // 或者 fis3 foo --help
+  // 则输出帮助信息。
+  if (argv.h || argv.help) {
+    return cli.help(exports.name, exports.options);
+  }
+
+  // 可以通过 argv 知道命令行中有哪些参数以及是什么值。
+  console.log('I am working..');
+};
+
+```
+
+参考插件
+
+- https://github.com/fex-team/fis3-command-release
+- https://github.com/fex-team/fis3-command-server
+- https://github.com/fex-team/fis3-command-inspect
+- https://github.com/fex-team/fis3-command-init
+- https://github.com/fex-team/fis-command-install
+
 ### 插件类型
 
 - lint

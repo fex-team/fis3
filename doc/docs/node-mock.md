@@ -83,4 +83,4 @@ module.exports = function(req, res, next) {
 rewrite ^\/api\/dynamic\/time$ /test/dynamic.js
 ```
 
-如上面的例子，当请求 `http://127.0.0.1:8080/api/dynamic/time` 时，还回：`Hello world The time is 1442556037130`
+如上面的例子，当请求 `http://127.0.0.1:8080/api/dynamic/time` 时，返回：`Hello world The time is 1442556037130`
