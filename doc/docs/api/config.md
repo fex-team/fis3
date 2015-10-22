@@ -148,7 +148,7 @@ fis.match('index.html:css', {
 });
 
 // 压缩 index.tpl 内联的 css
-fis.match('index.tpl:js', {
+fis.match('index.tpl:css', {
   optimizer: fis.plugin('clean-css')
 })
 ```
