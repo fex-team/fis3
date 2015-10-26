@@ -12,6 +12,8 @@ sh product_code.sh $1 $2     #拉取代码form svn
 sh new_fis_ready.sh $4       #安装新的fis版本
 chmod +x old_fis_scp.sh
 #./old_fis_scp.sh $3
+#diff不同版本的smarty
+npm install fis3-smarty@1.1.2 --registry https://registry.npm.taobao.org
 chmod +x old_fis_ready.sh
 ./old_fis_ready.sh $3 $4
 rm -rf result$4/*.html
