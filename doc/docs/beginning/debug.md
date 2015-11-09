@@ -37,7 +37,7 @@ fis3 server -h
 
 ### 预览
 
-启动 Web Server 以后，会自动打开浏览器，访问 `http://127.0.0.1:8080` URL，这时即可查看到页面渲染结果。正如所有其他 Web Server，<font color="red">FIS3 内置的 Server 是常驻的，如果不重启计算机或者调用命令关闭</font>。
+启动 Web Server 以后，会自动打开浏览器，访问 `http://127.0.0.1:8080` URL，这时即可查看到页面渲染结果。正如所有其他 Web Server，<font color="red">FIS3 内置的 Server 是常驻的，如果不重启计算机或者调用命令关闭是不会关闭的</font>。
 
 所以后续只需访问对应链接即可，而不需要每次 `release` 就启动一次 `server`。
 
