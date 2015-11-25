@@ -54,7 +54,7 @@ fis3 release -w
 
 ### 浏览器自动刷新
 
-文件修改自动构建发布了，如果浏览器能自动刷新，这是一个非常好的体验。
+文件修改自动构建发布后，如果浏览器能自动刷新，这是一个非常好的开发体验。
 
 FIS3 支持浏览器自动刷新功能，只需要给 `release` 命令添加 `-L` 参数，通常 `-w` 和 `-L` 一起使用。
 
@@ -66,7 +66,7 @@ fis3 release -wL
 
 ### 发布到远端机器
 
-当我们开发项目后，需要发布到测试机（联调机），一般可以通过如 smb、ftp 等上传代码。FIS3 默认支持使用 HTTP 上传代码，首先需要在测试机部署上传接收脚本（或者服务），这个脚本非常简单，现在给出了 [php 的实现版本](https://github.com/fex-team/fis-command-release/blob/master/tools/receiver.php)，可以把它放到测试机上某个 Web 服务根目录，并且配置一个 url 能访问到即可。
+当我们开发项目后，需要发布到测试机（联调机），一般可以通过如 SMB、FTP 等上传代码。FIS3 默认支持使用 HTTP 上传代码，首先需要在测试机部署上传接收脚本（或者服务），这个脚本非常简单，现在给出了 [php 的实现版本](https://github.com/fex-team/fis-command-release/blob/master/tools/receiver.php)，可以把它放到测试机上某个 Web 服务根目录，并且配置一个 url 能访问到即可。
 
 > 示例脚本是 php 脚本，测试机 Web 需要支持 PHP 的解析 <br />
 > 如果需要其他语言实现，请参考这个 php 脚本实现，如果嫌麻烦，我们提供了一个 node 版本的[接收端](https://github.com/fex-team/receiver)

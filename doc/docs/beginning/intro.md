@@ -1,6 +1,6 @@
 ## FIS3
 
-![](https://raw.githubusercontent.com/fex-team/fis3/master/doc/logo.png)
+![FIS Logo](https://raw.githubusercontent.com/fex-team/fis3/master/doc/logo.png)
 
 ### FIS3 是什么
 
