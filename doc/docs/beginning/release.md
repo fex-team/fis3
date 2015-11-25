@@ -143,7 +143,7 @@ fis.match('*.png', {
 
 #### fis.media()
 
-`fis.media()` 接口提供多种状态功能，比如有些属性配置是开发阶段的，有些则是上线时需要起作用的。
+`fis.media()` 接口提供多种状态功能，比如有些配置是仅供开发环境下使用，有些则是仅供生产环境使用的。
 
 ```js
 fis.match('*', {
@@ -164,7 +164,7 @@ fis3 release <media>
 fis3 release prod
 ```
 
-release 读取 prod 对应的配置，对 js 进行压缩。
+编译时使用 prod 指定的编译配置，即对 js 进行压缩。
 
 如上，fis.media() 可以使配置文件变为多份（多个状态，一个状态一份配置）。
 

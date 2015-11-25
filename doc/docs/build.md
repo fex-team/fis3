@@ -44,9 +44,9 @@ fis.release = function (opt) {
 
 如上述代码，整个 FIS3 的构建流程大题概括分为三个阶段。
 
-1. 扫描项目目录拿到文件并初始化出一个文件对象列表；
-2. 对文件对象中每一个文件进行[单文件编译](#单文件编译流程)；
-3. 获取用户设置的 `package` 插件，进行打包处理（包括合并图片）。
+1. 扫描项目目录拿到文件并初始化出一个文件对象列表
+2. 对文件对象中每一个文件进行[单文件编译](#单文件编译流程)
+3. 获取用户设置的 `package` 插件，进行打包处理（包括合并图片）
 
 其中打包处理开了四个扩展点，通过用户配置启用某些插件。
 
@@ -94,11 +94,11 @@ function process(file) {
 
 其中插件扩展点包括：
 
-- lint：代码校验检查，比较特殊，所以需要 `release` 命令命令行添加 `-l` 参数；
-- parser：预处理阶段，比如 less、sass、es6、react 前端模板等都在此处预编译处理；
-- preprocessor：标准化前处理插件；
-- standard：标准化插件，处理[内置语法](./user-dev/inline.md)；
-- postprocessor：标准化后处理插件。
+- lint：代码校验检查，比较特殊，所以需要 `release` 命令命令行添加 `-l` 参数
+- parser：预处理阶段，比如 less、sass、es6、react 前端模板等都在此处预编译处理
+- preprocessor：标准化前处理插件
+- standard：标准化插件，处理[内置语法](./user-dev/inline.md)
+- postprocessor：标准化后处理插件
 
 > 预处理阶段一般是对异构语言等进行预编译，如 less、sass 编译为标准的 css；前端模板被编译为 js 等等
 
