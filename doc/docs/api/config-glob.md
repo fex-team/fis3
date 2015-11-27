@@ -40,7 +40,7 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
 
   ```js
   // 让 a 目录下面的 js 发布到 b 目录下面，保留原始文件名。
-  fis.match(/^\/a/(.*\.js$)/i, {
+  fis.match(/^\/a\/(.*\.js$)/i, {
     release: '/b/$1'
   });
   ```
