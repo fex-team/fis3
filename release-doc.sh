@@ -51,5 +51,3 @@ cd ../../
 
 # 删掉产出的 output 目录，为了方便本地跑脚本
 rm -rf ./doc/output
-
-curl http://fex.baidu.com/cleanCache

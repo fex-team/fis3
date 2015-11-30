@@ -140,7 +140,7 @@ fis.media('prod')
         packTo: '/static/all_others.js'
     })
     .match('*.css', {
-        packTo: '/staitc/all_others.js'
+        packTo: '/staitc/all_others.css'
     })
     .match('/widget/**/*.js', {
         packTo: '/static/all_comp.js'

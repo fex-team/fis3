@@ -30,7 +30,7 @@ module.exports = function (content, file, settings) {
 
 为了搞清楚哪些功能用那种类型的插件去实现比较好，建议详细阅读[单文件编译流程][]这篇文档。
 
-fis 的插件是以 NPM 包的形式提供的，这将意味着 fis 的插件都是一个 NPM 包，并且最终也需要发布到 NPM 平台上。在开始之前你需要了解 node 是如何加载一个 NPM 包的 https://nodejs.org/api/modules.html。
+fis 的插件是以 NPM 包的形式提供的，这将意味着 fis 的插件都是一个 NPM 包，并且最终也需要发布到 NPM 平台上。在开始之前你需要了解 node 是如何加载一个 NPM 包的 https://nodejs.org/api/modules.html
 
 FIS3 不再强制用户必须把插件（一个 NPM 包）进行全局安装，可把包安装到 fis-conf.js 同目录下（项目目录）或者某一个父目录，这个遵循 node 加载一个包的规范即可。
 
@@ -73,7 +73,7 @@ my-proj/node_modules/fis3-<type>-<name>/index.js
 
 ----
 
-为了便捷解决一些简短功能，也可以插件功能直接写到 `fis-conf.js` 中。
+为了便捷解决一些简短功能，也可以插件功能直接写到 `fis-conf.js` 中：
 
 ```js
 fis.match('*.js', {
@@ -94,7 +94,7 @@ fis.match('*.js', {
 
 ### 打包阶段插件
 
-原理请详细参考文档 [构建流程][]，到打包阶段，所有的文件都经过了单文件处理，该压缩的已经被压缩，该预编译的也进行了预编译。这个阶段主要实现一些共性的功能，比如打包合并。所以插件接口也不太一样了。
+原理请详细参考文档 [构建流程][]。到打包阶段，所有的文件都经过了单文件处理，该压缩的已经被压缩，该预编译的也进行了预编译。这个阶段主要实现一些共性的功能，比如打包合并。所以插件接口也不太一样了。
 
 ```js
 /**
@@ -113,7 +113,7 @@ module.exports = function (ret, conf, settings, opt) {
 }
 ```
 
-跟编译是打包一样，也可项目本地开发或者是直接写到 fis-conf.js 中。参考 [打包阶段插件](./config-api.md#打包阶段插件)其配置方式与单文件编译阶段插件配置方式不同。由于 packager 时所有文件都在处理之列，所以需要通过以下方式进行配置；
+跟编译时打包一样，也可项目本地开发或者是直接写到 fis-conf.js 中。参考 [打包阶段插件](./config-api.md#打包阶段插件)。其配置方式与单文件编译阶段插件配置方式不同。由于 packager 时所有文件都在处理之列，所以需要通过以下方式进行配置；
 
 ```js
 fis.match('::package', {
@@ -134,7 +134,7 @@ fis.match('::package', {
 
 deploy 插件是一类比较特殊的插件，它的功能只是发布数据，比如发布到某个文件夹下或者是发布到远端服务器上，以及用什么方式发布（http，ftp，git等等），deploy 插件是**异步模型**的。
 
-deploy 作用于某些文件或者全部文件；它依然以文件属性的方式分配给某些文件；比如
+deploy 作用于某些文件或者全部文件；它依然以文件属性的方式分配给某些文件，比如：
 
 ```js
 fis.match('*.js', {
@@ -148,9 +148,9 @@ fis.match('*.js', {
 })
 ```
 
-也就是说可以在 deploy 阶段做一些转码、replace 这样的一些事情，最后一个插件必然是发布文件到磁盘或者远端的一个插件。
+也就是说可以在 deploy 阶段做一些转码、replace 这样的事情，最后一个插件必然是发布文件到磁盘或者远端的插件。
 
-插件接口如下
+插件接口如下：
 
 ```js
 /**
@@ -177,7 +177,7 @@ module.exports = function(options, modified, total, next) {
 
 ### 命令行插件
 
-fis3 默认提供了 [release](https://github.com/fex-team/fis3-command-release)、[server](https://github.com/fex-team/fis3-command-server)、[inspect](https://github.com/fex-team/fis3-command-inspect)、[init](https://github.com/fex-team/fis3-command-init) 和 [install](https://github.com/fex-team/fis-command-install)五个子命令，每个子命令都是通过独立 npm 包来完成, 命名规范为 `fis3-command-xxxx`。如果希望扩展新的子命令如 `foo`, 则需要开发 npm 包 `fis3-command-foo`，全局安装或者安装在对应的 fis 项目目录，代码请参考如下所示。
+fis3 默认提供了 [release](https://github.com/fex-team/fis3-command-release)、[server](https://github.com/fex-team/fis3-command-server)、[inspect](https://github.com/fex-team/fis3-command-inspect)、[init](https://github.com/fex-team/fis3-command-init) 和 [install](https://github.com/fex-team/fis-command-install)五个子命令，每个子命令都是通过独立 npm 包来完成，命名规范为 `fis3-command-xxxx`。如果希望扩展新的子命令如 `foo`, 则需要开发 npm 包 `fis3-command-foo`，全局安装或者安装在对应的 fis 项目目录，代码请参考如下所示：
 
 ```js
 exports.name = 'foo';
