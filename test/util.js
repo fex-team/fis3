@@ -468,6 +468,7 @@ describe('util: _.touch(path, mtime)', function () {
     expect(_.mtime(__filename).getTime()).to.equal(mtimeNum);
     _.touch(__filename, mtimeNum + 1000);
 
+    console.log("wangrui:");
     console.log(stat.mtime);
     console.log(mtimeNum);
     console.log(_.mtime(__filename).getTime());
