@@ -479,7 +479,9 @@ describe('util: _.touch(path, mtime)', function () {
     var x2 = Math.floor(mtimeNum/1000);
     expect(x1).to.equal(x2 + 1);
     _.touch(__filename, mtime);
-    expect(_.mtime(__filename).getTime()).to.equal(mtimeNum);
+    var y1 = Math.floor(_.mtime(__filename).getTime());
+    var y2 = Math.floor(mtimeNum);
+    expect(y1).to.equal(y2);
   });
 
   it('file does not exist.', function () {
