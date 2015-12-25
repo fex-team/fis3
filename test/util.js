@@ -472,8 +472,8 @@ describe('util: _.touch(path, mtime)', function () {
     var x2 = Math.floor(mtimeNum/1000);
     expect(x1).to.equal(x2 + 1);
     _.touch(__filename, mtime);
-    var y1 = Math.floor(_.mtime(__filename).getTime());
-    var y2 = Math.floor(mtimeNum);
+    var y1 = Math.floor(_.mtime(__filename).getTime()/1000);
+    var y2 = Math.floor(mtimeNum/1000);
     expect(y1).to.equal(y2);
   });
 
