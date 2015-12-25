@@ -30,5 +30,6 @@ cache:
 branches:
   only:
   - master
+  - test-more-platform
 sudo:
  - true
