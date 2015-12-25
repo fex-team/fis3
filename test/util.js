@@ -475,7 +475,7 @@ describe('util: _.touch(path, mtime)', function () {
     console.log(Math.floor(mtimeNum/1000));
     console.log(Math.floor(_.mtime(__filename).getTime()/1000));
 
-    expect(_.mtime(__filename).getTime()).to.equal(mtimeNum + 1000);
+    expect(Math.floor(_.mtime(__filename).getTime()/1000)).to.equal(Math.floor((mtimeNum + 1000)/1000));
     _.touch(__filename, mtime);
     expect(_.mtime(__filename).getTime()).to.equal(mtimeNum);
   });
