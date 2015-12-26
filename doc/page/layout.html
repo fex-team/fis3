@@ -35,6 +35,7 @@
     <![endif]-->
 
     <script src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
     <script src="/static/js/scrollspy.js"></script>
 </head>
 
@@ -158,6 +159,11 @@
             }        
             lastScrollTop = st;
         });
+
+
+        if ($.cookie("isInternal") === "1") {
+            $(".nav-left").append($("<a></a>").attr("href", "baidu://message?appid=wJUNQ3gXdlgOsRPajPapUQ").addClass("nav-link").text("在线客服"));
+        }
     }());
 </script>
 <link rel="import" href="/widget/tongji.html?__inline">

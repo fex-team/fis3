@@ -418,10 +418,14 @@
     <link rel="import" href="/widget/tongji.html?__inline">
 
     <script type="text/javascript" src="./static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="./static/js/slider.js"></script>
     <script type="text/javascript">
         $(function() {
             $('#slider').cbpContentSlider();
+            if ($.cookie("isInternal") === "1") {
+                $(".nav-left").append($("<a></a>").attr("href", "baidu://message?appid=wJUNQ3gXdlgOsRPajPapUQ").addClass("nav-link").text("在线客服"));
+            }
         });
     </script>
 </body>
