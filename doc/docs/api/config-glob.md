@@ -22,7 +22,6 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
 而 `/foo/**/*.js` 是命中所有子目录以及其子目录下面的所有 js 文件，不包含当前目录下面的 js 文件。
 如果需要命中 `foo` 目录下面以及所有其子目录下面的 js 文件，请使用 `/foo/**.js`。
 
-
 ### 扩展的规则
 
 1. 假设匹配 `widget` 目录下以及其子目录下的所有 js 文件，使用 `node-glob` 需要这么写
@@ -51,6 +50,22 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
   // 让 a 目录下面的 js 发布到 b 目录下面，保留原始文件名。
   fis.match('/a/(**.js)', {
     release: '/b/$1'
+  });
+  ```
+ 
+  ### 捕获分组
+  
+  使用 `node-glob` 捕获的分组，可以用于其他属性的设定，如 `release`, `url`, `id` 等。使用的方式与正则替换类似，我们可以用 $1, $2, $3 来代表响应的捕获分组。其中 $0 代表的是 match 到的整个字符串。
+  
+    ```js
+  fis.match('/a/(**.js)', {
+    release: '/b/$1' // $1 代表 (**.js) 匹配的内容
+  });
+  ```
+
+  ```js
+  fis.match('/a/(**.js)', {
+    release: '/b/$0' // $0 代表 /a/(**.js) 匹配的内容
   });
   ```
 
