@@ -138,7 +138,7 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
 
 ## 注意事项
 
-> fis3 小于 3.3.4 的版本需要注意， 3.3.4 以上的版本已修复次问题。
+> fis3 小于 3.3.4 的版本需要注意， 3.3.4 以上的版本已修复此问题。
 
 给 [node-glob](https://github.com/isaacs/node-glob) 扩展分组功能确实还存在缺陷。分组 `()` 与 或`{}` 搭配使用时存在问题。
 
