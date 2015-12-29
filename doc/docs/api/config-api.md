@@ -15,7 +15,7 @@ fis3 通过配置来决定代码、资源该如何处理，包括配置、压缩
 
 - key
         
-    任意字符串，但系统占用了 `project`、`namespace`、`modules`、`settings` 它们在系统中有特殊含义，[详见](#全局属性)
+    任意字符串，但系统占用了 `project`、`namespace`、`modules`、`settings` 它们在系统中有特殊含义，详见[全局属性](config-props.html)
 
     **当字符串以 `.` 分割的，`.`字符后的字符将会是字符前字符同名对象的健**
 
