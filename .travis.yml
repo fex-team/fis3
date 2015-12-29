@@ -13,7 +13,7 @@ before_script:
     - sudo ln -s $(pwd) /var/www/fis3
     - sudo service apache2 restart
 script:
-- sh ./release-doc.sh
+- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && sh ./release-doc.sh || false'
 - "npm run-script test-travis"
 after_script:
 - "npm install coveralls@2.10.0 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
