@@ -55,7 +55,7 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
  
   ### 捕获分组
   
-  使用 `node-glob` 捕获的分组，可以用于其他属性的设定，如 `release`, `url`, `id` 等。使用的方式与正则替换类似，我们可以用 $1, $2, $3 来代表响应的捕获分组。其中 $0 代表的是 match 到的整个字符串。
+  使用 `node-glob` 捕获的分组，可以用于其他属性的设定，如 `release`, `url`, `id` 等。使用的方式与正则替换类似，我们可以用 $1, $2, $3 来代表相应的捕获分组。其中 $0 代表的是 match 到的整个字符串。
   
     ```js
   fis.match('/a/(**.js)', {
@@ -138,7 +138,7 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
 
 ## 注意事项
 
-> fis3 小于 3.3.4 的版本需要注意， 3.3.4 以上的版本已修复次问题。
+> fis3 小于 3.3.4 的版本需要注意， 3.3.4 以上的版本已修复此问题。
 
 给 [node-glob](https://github.com/isaacs/node-glob) 扩展分组功能确实还存在缺陷。分组 `()` 与 或`{}` 搭配使用时存在问题。
 

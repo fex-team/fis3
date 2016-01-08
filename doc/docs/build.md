@@ -118,7 +118,7 @@ fis.match('*.es6', {
 
 其他插件扩展点亦然。
 
-### File 对象
+### File对象
 
 ```js
 function File(filepath) {
