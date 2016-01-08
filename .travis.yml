@@ -16,7 +16,7 @@ script:
 - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && sh ./release-doc.sh || true'
 - 'npm run-script test-travis'
 after_script:
-- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && npm install coveralls@2.10.0 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || true'
+- 'npm install coveralls@2.10.0 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js'
 cache:
   directories:
   - node_modules
