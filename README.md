@@ -14,6 +14,8 @@ FIS3 面向**前端**的**工程构建系统**。解决前端工程中性能优�
 npm install -g fis3
 ```
 
+fis3 已经开始支持针对npm的node_modules的模块读取，[fis3-hook-node_modules](https://github.com/fex-team/fis3-hook-node_modules)
+
 ## 文档
 
 快速入门、配置、插件开发以及原理等文档 [doc/docs/INDEX.md](doc/docs/INDEX.md)
@@ -72,6 +74,9 @@ fis.media('production');
 https://github.com/fex-team/fis3-demo
 
 ## 常用插件
+
+###依赖管理类
+- [fis3-hook-node_modules](https://github.com/fex-team/fis3-hook-node_modules) 让fis3支持npm的node_modules 
 
 ###优化类（插件属性：optimizer）
 - [fis-optimizer-uglify-js](https://www.npmjs.com/package/fis-optimizer-uglify-js) UglifyJS2 压缩插件
