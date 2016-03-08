@@ -39,6 +39,8 @@ var DEFAULT_SETTINGS = {
     ```js
     fis.set('project.charset', 'gbk');
     ```
+  
+  > 使用 charset 编码需要使用[encoding](https://github.com/fex-team/fis3-deploy-encoding)插件发布编译结果
 
 ### project.md5Length
 
@@ -259,6 +261,8 @@ fis.match('/mod.js', {
         charset: 'gbk'
     });
     ```
+  
+  > 使用 charset 编码需要使用[encoding](https://github.com/fex-team/fis3-deploy-encoding)插件发布编译结果
 
 #### isHtmlLike
 * 解释：指定对文件进行 [html](../user-dev/extlang.md#html) 相关语言能力处理
