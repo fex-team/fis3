@@ -94,7 +94,7 @@ b.js 最终分配到的规则属性是
 
 ```js
 fis.match('*.js', {
-  useHash: true,
+  important: true,
   release: '/static/$0'
 });
 ```
