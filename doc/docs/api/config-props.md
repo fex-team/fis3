@@ -438,7 +438,7 @@ fis.match('*.sass', {
 
 ```js
 fis.match('*.{css,less}', {
-    paser: fis.plugin('image-set')
+    preprocessor: fis.plugin('image-set')
 });
 ```
 
