@@ -1,6 +1,6 @@
 {
   "name": "fis3",
-  "version": "3.3.19",
+  "version": "3.3.20",
   "description": "fis 3.0",
   "main": "index.js",
   "bin": {
@@ -22,7 +22,7 @@
     "fis-optimizer-clean-css": "0.0.9",
     "fis-optimizer-png-compressor": "0.1.5",
     "fis-optimizer-uglify-js": "0.1.10",
-    "fis-spriter-csssprites": "0.3.8",
+    "fis-spriter-csssprites": "0.3.9",
     "fis3-command-init": "1.0.13",
     "fis3-command-inspect": "1.0.3",
     "fis3-command-release": "1.2.9",
