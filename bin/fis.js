@@ -4,6 +4,7 @@ var Liftoff = require('liftoff');
 var argv = require('minimist')(process.argv.slice(2));
 var path = require('path');
 var cli = new Liftoff({
+  name: 'fis3',
   processTitle: 'fis',
   moduleName: 'fis3',
   configName: 'fis-conf',
