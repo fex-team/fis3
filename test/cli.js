@@ -12,12 +12,12 @@ var expect = require('chai').expect;
 var root = fis.util(__dirname);
 
 describe('cache: save(content, info)', function () {
-
   project.setProjectRoot(root);
   project.setTempRoot(root);
   var cwd1 = root + "/fis3_test";
   var cwd2 = root.substring(0,root.lastIndexOf("/")) + "/bin/fis.js";
   it('general', function () {
+    this.timeout(15000);
     process.argv = [ 'node', cwd2, '-h' ];
     var argv = { _: [], h: true };
     var env = { cwd: cwd1,
