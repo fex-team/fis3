@@ -6,9 +6,9 @@ fis 中默认的 node 服务就支持此功能。
 
 ## 步骤
 
-1. 准备好假数据文件，如 sample.json 文件，放在服务器的 `/test/sample.json` 目录，确保通过 `http://127.0.0.1:8080/test/sample.json` 可访问到。
+1. 准备好假数据文件，如 sample.json 文件，放在服务器的 `/mock/sample.json` 目录，确保通过 `http://127.0.0.1:8080/mock/sample.json` 可访问到。
 
-  ```json
+  ```jsonte
   {
     "error": 0,
     "message": "ok",
@@ -18,10 +18,10 @@ fis 中默认的 node 服务就支持此功能。
     }
   }
   ```
-2. 准备一个 `server.conf` 配置文件，放在服务器目录的 `/config/server.conf`，内容如下。
+2. 准备一个 `server.conf` 配置文件，放在服务器目录的 `/mock/server.conf`，内容如下。
 
   ```
-  rewrite ^\/api\/user$ /test/sample.json
+  rewrite ^\/api\/user$ /mock/sample.json
   ```
 3. 然后当你请求 `http://127.0.0.1:8080/api/user` 的时候，返回的就是 sample.json 中的内容。
 
@@ -33,7 +33,7 @@ fis 中默认的 node 服务就支持此功能。
 指令名称 正则规则 目标文件
 ```
 
-* `指令名称` 支持 `rewrite` 和 `redirect`。
+* `指令名称` 支持 `rewrite` 、 `redirect` 和 `proxy`。
 * `正则规则` 用来命中需要作假的请求路径。
 * `目标文件` 设置转发的目标地址，需要配置一个可请求的 url 地址。
 
@@ -42,28 +42,24 @@ fis 中默认的 node 服务就支持此功能。
 推荐以下存放规范。
 
 ```
-└── test
+└── mock
     ├── sample.json
     └── server.conf
 ```
 
-然后配置 fis-conf.js, 保证产出到服务端的路径是正确的。
+## 直接代理到其他服务的 api 地址。
 
-```js
-fis.match('/test/**', {
-  release: '$0'
-});
+这个功能要求 fis3 >= 3.3.29 使用格式如:
 
-fis.match('/test/server.conf', {
-  release: '/config/server.conf'
-});
+```
+proxy ^\/api\/test http://127.0.0.1:9119/api/test
 ```
 
 ## 动态假数据
 
 静态的假数据可以通过 json 文件提供，那么动态数据怎么提供？node 服务器可以通过 js 的方式提供动态家数据。
 
-/test/dynamic.js
+/mock/dynamic.js
 
 ```js
 module.exports = function(req, res, next) {
@@ -80,7 +76,7 @@ module.exports = function(req, res, next) {
 然后结合 server.conf 就可以模拟各种动态请求了。
 
 ```
-rewrite ^\/api\/dynamic\/time$ /test/dynamic.js
+rewrite ^\/api\/dynamic\/time$ /mock/dynamic.js
 ```
 
 如上面的例子，当请求 `http://127.0.0.1:8080/api/dynamic/time` 时，返回：`Hello world The time is 1442556037130`
