@@ -1365,7 +1365,7 @@ describe('util: _install(name, [version], opt)', function () {
 
   it('version-done', function (done) {
     var name = 'installTest';
-    var version = '0.2';
+    var version = '0.3';
     var opt = {
       //'remote': 'http://10.48.30.87:8088/test/install',
       //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
