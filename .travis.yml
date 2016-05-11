@@ -7,6 +7,7 @@ node_js:
   - "0.10"
   - "0.12"
   - "4"
+  - "6"
 
 env:
   global:
@@ -20,8 +21,8 @@ before_script:
     - sudo ln -s $(pwd) /var/www/fis3
     - sudo service apache2 restart
 script:
-# - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && sh ./release-doc.sh || true'
-- sh ./release-doc.sh
+- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && sh ./release-doc.sh || true'
+#- sh ./release-doc.sh
 - 'npm run-script test-travis'
 after_script:
 - 'npm install coveralls@2.10.0 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js'
