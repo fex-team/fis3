@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+#set -e
+#
+
 rev="fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
 
 echo "Fetching https://raw.githubusercontent.com/fex-team/fis3/gh-pages/commitId.log"
@@ -5,6 +9,11 @@ lastCommitId=$(curl https://raw.githubusercontent.com/fex-team/fis3/gh-pages/com
 
 echo "git diff --name-only $lastCommitId^..HEAD"
 midified=$(git diff --name-only $lastCommitId^..HEAD)
+
+if [ "$?" != "0" ]; then
+  echo "git diff --name-only HEAD^..HEAD"
+  midified=$(git diff --name-only HEAD^..HEAD)
+fi
 
 run="0"
 
