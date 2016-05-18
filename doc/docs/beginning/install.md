@@ -21,7 +21,8 @@ npm install -g fis3
 - 安装过程中遇到问题具体请参考 [fis#565](https://github.com/fex-team/fis/issues/565) 解决
 - 如果已经安装了 [FIS](https://github.com/fex-team/fis)，也执行上面的命令进行安装，FIS3 和 FIS 是不同的构建工具，向下无法完全兼容。如果要从 FIS 迁移到 FIS3，请参考文档 [FIS 升级 FIS3](../fis2-to-fis3.md) 
 
-安装完成后执行 `fis3 -v` 判断是否安装成功，如果安装；
+安装完成后执行 `fis3 -v` 判断是否安装成功。  
+如果安装成功，则回显如下：
 
 ```
 $ fis3 -v
