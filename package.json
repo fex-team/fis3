@@ -31,7 +31,7 @@
     "fis3-deploy-encoding": "1.0.0",
     "fis3-deploy-local-deliver": "1.0.0",
     "fis3-hook-components": "1.0.4",
-    "fis3-packager-map": "1.0.9",
+    "fis3-packager-map": "1.1.2",
     "fis3-errors": "*"
   },
   "devDependencies": {
