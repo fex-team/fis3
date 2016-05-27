@@ -1780,6 +1780,13 @@ describe('util: _.glob(pattern, [str])', function () {
       expect(!!m2).to.be.false;
     });
 
+    it('(**/js.js) /abc/ef/xxx/js.js', function() {
+      var reg = _.glob('(**/js.js)');
+      var m = reg.exec('/abc/ef/xxx/js.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/abc/ef/xxx/js.js");
+    });
+
 });
 
 describe('util: _.is(source, type)', function (){
