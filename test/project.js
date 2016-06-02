@@ -177,7 +177,7 @@ describe('project: currentMedia', function () {
     project.setProjectRoot(root);
   });
 
-  it("not event", function () {
+  it("general", function () {
     var info = project.currentMedia('pro');
     assert.equal(info,'pro' );
   });
