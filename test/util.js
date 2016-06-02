@@ -1681,6 +1681,112 @@ describe('util: _.glob(pattern, [str])', function () {
       expect(_.glob('/*/*.js', 'aaa/bbbs/ad.js')).to.be.false;
     });
 
+    it('_*.*  /_xx.scss and /xxx/yyy/_xx.scss', function () {
+      expect(_.glob('_*.*', '/_xx.scss')).to.be.true;
+      expect(_.glob('_*.*', '/xxx/yyy/_xx.scss')).to.be.true;
+    });
+
+    it('_(*).*  /_xx.scss and /xxx/yyy/_xx.scss', function () {
+      var reg = _.glob('_(*).*');
+      var m = reg.exec('/_xx.scss');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("xx");
+
+      var m2 = reg.exec('/xxx/yyy/_xx.scss');
+      expect(!!m2).to.be.true;
+      expect(m2 && m2[1]).to.be.equal("xx");
+    });
+
+    it('(_*).*  /_xx.scss and /xxx/yyy/_xx.scss', function () {
+      var reg = _.glob('(_*).*');
+      var m = reg.exec('/_xx.scss');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("_xx");
+
+      var m2 = reg.exec('/xxx/yyy/_xx.scss');
+      expect(!!m2).to.be.true;
+      expect(m2 && m2[1]).to.be.equal("_xx");
+    });
+
+    it('/abc/(**.js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc/(**.js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("xxx/xx.js");
+    });
+
+    it('/abc(/**.js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/**.js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/xxx/xx.js");
+    });
+
+    it('/abc(/(**).js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/(**).js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/xxx/xx.js");
+      expect(m && m[2]).to.be.equal("xxx/xx");
+    });
+
+    it('/abc/(*.js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc/(*.js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.false;
+
+      var m2 = reg.exec('/abc/xx.js');
+      expect(!!m2).to.be.true;
+      expect(m2 && m2[1]).to.be.equal("xx.js");
+    });
+
+    it('/abc(/**.js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/**.js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/xxx/xx.js");
+    });
+
+    it('/abc/(ef/**.js) /abc/ef/xxx/xx.js', function() {
+      var reg = _.glob('/abc/(ef/**.js)');
+      var m = reg.exec('/abc/ef/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("ef/xxx/xx.js");
+    });
+
+    it('/abc(/ef/**.js) /abc/ef/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/ef/**.js)');
+      var m = reg.exec('/abc/ef/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/ef/xxx/xx.js");
+    });
+
+    it('/abc(/ef/(**).js) /abc/ef/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/ef/(**).js)');
+      var m = reg.exec('/abc/ef/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/ef/xxx/xx.js");
+      expect(m && m[2]).to.be.equal("xxx/xx");
+    });
+
+    it('/abc(/ef/(*).js) /abc/ef/xxx/xx.js and /abc/ef/xx.js', function() {
+      var reg = _.glob('/abc(/ef/(*).js)');
+      var m = reg.exec('/abc/ef/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/ef/xx.js");
+      expect(m && m[2]).to.be.equal("xx");
+
+      var m2 = reg.exec('/abc/ef/xxx/xx.js');
+      expect(!!m2).to.be.false;
+    });
+
+    it('(**/js.js) /abc/ef/xxx/js.js', function() {
+      var reg = _.glob('(**/js.js)');
+      var m = reg.exec('/abc/ef/xxx/js.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/abc/ef/xxx/js.js");
+    });
+
 });
 
 describe('util: _.is(source, type)', function (){
