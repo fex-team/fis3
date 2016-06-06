@@ -18,7 +18,7 @@
     "tar": "2.2.1",
     "fis-command-install": "0.2.15",
     "fis-lolcat": "1.0.1",
-    "fis-optimizer-clean-css": "0.0.13",
+    "fis-optimizer-clean-css": "0.0.9",
     "fis-optimizer-png-compressor": "0.1.6",
     "fis-optimizer-uglify-js": "0.2.0",
     "fis-spriter-csssprites": "0.3.11",
