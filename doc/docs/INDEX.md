@@ -56,3 +56,4 @@
   - [自定义插件](./api/dev-plugin.md)
 - [mock 假数据模拟](./node-mock.md)
 - [FIS2 到 FIS3](./fis2-to-fis3.md)
+- [常见的插件列表](./common-plugin.md)
