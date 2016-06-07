@@ -331,4 +331,24 @@ fis.match('**', {
 
 ### hook 插件
 
-待补充
+#### [fis3-hook-commonjs](https://github.com/fex-team/fis3-hook-commonjs)
+
+[强烈推荐] CommonJs 模块化支持插件。 详情请见 [README](https://github.com/fex-team/fis3-hook-commonjs)
+
+
+#### [fis3-hook-amd](https://github.com/fex-team/fis3-hook-amd)
+
+AMD 模块化支持插件。
+
+#### [fis3-hook-cmd](https://github.com/fex-team/fis3-hook-cmd)
+
+CMD 模块化支持插件。
+
+#### [fis3-hook-system](https://github.com/fex-team/fis3-hook-system)
+
+System 模块化支持插件。
+
+#### [fis3-hook-node_modules](https://github.com/fex-team/fis3-hook-node_modules)
+
+支持 npm 组件的插件，npm 包中的模块，直接通过包名就能 `require` 到。
+
