@@ -1,4 +1,4 @@
-## 常见插件列表
+## 常用插件列表
 
 
 ### parser 插件
@@ -335,6 +335,10 @@ fis.match('**', {
 
 [强烈推荐] CommonJs 模块化支持插件。 详情请见 [README](https://github.com/fex-team/fis3-hook-commonjs)
 
+```
+fis.hook('commonjs')
+```
+
 
 #### [fis3-hook-amd](https://github.com/fex-team/fis3-hook-amd)
 
@@ -352,3 +356,10 @@ System 模块化支持插件。
 
 支持 npm 组件的插件，npm 包中的模块，直接通过包名就能 `require` 到。
 
+```
+fis.hook('node_modules');
+```
+
+#### [fis3-hook-releative](https://github.com/fex-team/fis3-hook-relative)
+
+支持产出为相对路径。
