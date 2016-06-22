@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 #set -e
-#
+
+## only publish doc in node 6.x
+VERSION=$(node -v)
+echo $VERSION
+if [[ $VERSION != v6* ]]
+then
+    exit
+fi
 
 rev="fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
 
@@ -24,6 +31,7 @@ for m in $midified; do
 done
 
 test $run = "0" && echo "#### Doc no change" && exit 0
+
 
 echo "#### Document Building..."
 currentCommitId=$(git rev-parse HEAD)
