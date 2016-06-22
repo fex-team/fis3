@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #set -e
 
 ## only publish doc in node 6.x
