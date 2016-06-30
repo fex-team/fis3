@@ -91,6 +91,19 @@ fis.match('*.{js,es,es6,jsx,ts,tsx}', {
 })
 ```
 
+### [fis-preprocessor-autoprefixer](https://www.npmjs.com/package/fis-preprocessor-autoprefixer)
+
+自动给 css 属性添加前缀，让标准的 css3 支持更多的浏览器.
+
+```js
+fis.match('*.{css,less,scss}', {
+  preprocessor: fis.plugin('autoprefixer', {
+    "browsers": ["Android >= 2.1", "ChromeAndroid > 1%", "iOS >= 4", "ie >= 8", "firefox >= 15"],
+    "cascade": true
+  })
+})
+```
+
 ### postprocessor 插件
 
 待补充
