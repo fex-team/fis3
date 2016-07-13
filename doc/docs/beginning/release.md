@@ -94,7 +94,7 @@ fis3 release -d ../output
 ```js
 fis.match(selector, props);
 ```
-- `selector` ：FIS3 把匹配文件路径的路径作为selector，匹配到的文件会分配给它设置的 `props`。关于 selector 语法，请参看 [Glob 说明](/docs/api/config-glob.html)
+- `selector` ：FIS3 把匹配文件路径的路径作为selector，匹配到的文件会分配给它设置的 `props`。关于 selector 语法，请参看 [Glob 说明](/fis3/docs/api/config-glob.html)
 - `props` ：编译规则属性，包括文件属性和插件属性，[更多属性](../api/config-props.md#%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7)
 
 我们修改例子的配置文件 `fis-conf.js`，添加以下内容
