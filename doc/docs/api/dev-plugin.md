@@ -32,7 +32,7 @@ module.exports = function (content, file, settings) {
 
 fis 的插件是以 NPM 包的形式提供的，这将意味着 fis 的插件都是一个 NPM 包，并且最终也需要发布到 NPM 平台上。在开始之前你需要了解 node 是如何加载一个 NPM 包的 https://nodejs.org/api/modules.html
 
-FIS3 不再强制用户必须把插件（一个 NPM 包）进行全局安装，可把包安装到 fis-conf.js 同目录下（项目目录）或者某一个父目录，这个遵循 node 加载一个包的规范即可。
+FIS3 不再强制用户必须把插件（一个 NPM 包）进行全局安装，可把插件安装到项目根目录 (fis-conf.js 所在目录或 --root 指定的目录)，这个遵循 node 加载一个包的规范即可。
 
 ```
 my-proj/
