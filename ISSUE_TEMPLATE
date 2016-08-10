@@ -3,18 +3,19 @@
 
 1. 已经在 fis3 与 fis 的历史 Issue 中寻找过相关问题，并没有找到相关的问题，或者历史问题无法解决您的问题。
    Issue 地址是 https://github.com/fex-team/fis/issues 与 https://github.com/fex-team/fis3/issues
-2. 问题描述时请使用正确的格式包裹 html、js、css内容，例如
+2. 问题描述时请使用正确的Markdown格式包裹 html、js、css内容，例如
+
 
 ```html
-<html></html>
+<!-- 请勿在此处填写你的问题 -->
 ```
 
 ```javascript
-var a = 1;
+// 请勿在此处填写你的问题
 ```
 
 ```css
-body {}
+/* 请勿在此处填写你的问题 */
 ```
 
 3. 如果可以提供复现DEMO，您的问题会被更快的解决
