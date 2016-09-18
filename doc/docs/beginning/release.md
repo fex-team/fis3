@@ -336,7 +336,7 @@ fis.match('*.{js,css,png}', {
 // 启用 fis-spriter-csssprites 插件
 fis.match('::package', {
   spriter: fis.plugin('csssprites')
-})
+});
 
 // 对 CSS 进行图片合并
 fis.match('*.css', {
