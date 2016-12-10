@@ -43,7 +43,7 @@ $ fis3 -v
 ```
 
 如果提示找不到 `fis3` 命令并且 **npm** 安装成功退出，请参考文档 [fis#565](https://github.com/fex-team/fis/issues/565) 解决
-
+如果windows下提示 `basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")` 则找到 C:\Users\win-7\AppData\Roaming\npm下面的fis脚本删除，留下fis.cmd就好了（没有识别系统是不是Windows）
 ### 升级 FIS3
 
 ```bash
