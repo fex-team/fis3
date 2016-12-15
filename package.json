@@ -1,6 +1,6 @@
 {
   "name": "fis3",
-  "version": "3.4.26",
+  "version": "3.4.27",
   "description": "fis 3.0",
   "main": "index.js",
   "bin": {
@@ -27,7 +27,7 @@
     "fis3-command-release": "1.3.12",
     "fis3-command-server": "0.0.9",
     "fis3-server-node": "0.1.1",
-    "fis3-deploy-http-push": "1.1.1",
+    "fis3-deploy-http-push": "2.0.0",
     "fis3-deploy-encoding": "1.0.0",
     "fis3-deploy-local-deliver": "1.0.0",
     "fis3-hook-components": "1.0.4",
