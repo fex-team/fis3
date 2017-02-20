@@ -25,8 +25,13 @@ cli.launch({
   } else {
     fis = require(env.modulePath);
   }
-  fis.set('system.localNPMFolder', path.join(env.cwd, 'node_modules/fis3'));
-  fis.set('system.globalNPMFolder', path.dirname(__dirname));
+
+  process.title = this.name +' ' + process.argv.slice(2).join(' ') + ' [ ' + env.cwd + ' ]';
+
+  // 配置插件查找路径，优先查找本地项目里面的 node_modules
+  // 然后才是全局环境下面安装的 fis3 目录里面的 node_modules
+  fis.require.paths.unshift(path.join(env.cwd, 'node_modules'));
+  fis.require.paths.push(path.join(path.dirname(__dirname), 'node_modules'));
   fis.cli.name = this.name;
   fis.cli.run(argv, env);
 });

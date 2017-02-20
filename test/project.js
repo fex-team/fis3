@@ -31,7 +31,7 @@ describe('project: tempPath', function () {
   it ('setTempRoot', function () {
     var pth = path.join(root, '.fis-tmp');
     project.setTempRoot(pth);
-    assert.equal(project.getTempPath(), pth);
+    assert.equal(path.normalize(project.getTempPath()), path.normalize(pth));
     fs.rmdirSync(pth);
   });
 
@@ -63,7 +63,7 @@ describe('project: projectPath', function () {
 
   it('setProjectRoot', function () {
     project.setProjectRoot(root);
-    assert.equal(project.getProjectPath(), root);
+    assert.equal(path.normalize(project.getProjectPath()), path.normalize(root));
   });
 });
 
@@ -164,5 +164,21 @@ describe('project: lookup', function () {
   it("not event", function () {
     var info = project.lookup('/qfis-test.js');
     assert.deepEqual({id: info.id, moduleId: info.moduleId}, {id: 'qfis-test.js', moduleId: 'qfis-test'});
+  });
+});
+
+describe('project: currentMedia', function () {
+  var project;
+  beforeEach(function () {
+    fis.config.init(); // @TODO
+    fis.media().init(); // @TODO
+    require.del('../lib/project');
+    project = require('../lib/project');
+    project.setProjectRoot(root);
+  });
+
+  it("general", function () {
+    var info = project.currentMedia('pro');
+    assert.equal(info,'pro' );
   });
 });

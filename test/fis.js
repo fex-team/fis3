@@ -44,8 +44,8 @@ describe('fis: plugin', function() {
       ]
     },'123');
     var y = fis.plugin('b', null, 'append');
-		expect(x).to.deep.equal({ __name: 'sass', __plugin: 'sass',include_paths: ["./static/scss/libaray"],__pos: "123"});
-		expect(y).to.deep.equal({ __name: 'b', __plugin: 'b',__pos: "append"});
+		expect(x).to.deep.equal({ __isPlugin: true, __name: 'sass', __plugin: 'sass',include_paths: ["./static/scss/libaray"],__pos: "123"});
+		expect(y).to.deep.equal({ __isPlugin: true, __name: 'b', __plugin: 'b',__pos: "append"});
     fis.time("123");
 	});
 });

@@ -1,3 +1,14 @@
+#!/bin/bash
+#set -e
+
+## only publish doc in node 6.x
+VERSION=$(node -v)
+echo $VERSION
+if [[ $VERSION != v6* ]]
+then
+    exit
+fi
+
 rev="fex-team/fis3@$(git log --pretty=format:'%h' -n 1)"
 
 echo "Fetching https://raw.githubusercontent.com/fex-team/fis3/gh-pages/commitId.log"
@@ -5,6 +16,11 @@ lastCommitId=$(curl https://raw.githubusercontent.com/fex-team/fis3/gh-pages/com
 
 echo "git diff --name-only $lastCommitId^..HEAD"
 midified=$(git diff --name-only $lastCommitId^..HEAD)
+
+if [ "$?" != "0" ]; then
+  echo "git diff --name-only HEAD^..HEAD"
+  midified=$(git diff --name-only HEAD^..HEAD)
+fi
 
 run="0"
 
@@ -15,6 +31,7 @@ for m in $midified; do
 done
 
 test $run = "0" && echo "#### Doc no change" && exit 0
+
 
 echo "#### Document Building..."
 currentCommitId=$(git rev-parse HEAD)
@@ -48,6 +65,8 @@ git checkout gh-pages
 git push -f origin gh-pages
 
 cd ../../
+
+sh pub.sh
 
 # 删掉产出的 output 目录，为了方便本地跑脚本
 rm -rf ./doc/output

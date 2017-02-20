@@ -52,11 +52,11 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
     release: '/b/$1'
   });
   ```
- 
+
   ### 捕获分组
-  
+
   使用 `node-glob` 捕获的分组，可以用于其他属性的设定，如 `release`, `url`, `id` 等。使用的方式与正则替换类似，我们可以用 $1, $2, $3 来代表相应的捕获分组。其中 $0 代表的是 match 到的整个字符串。
-  
+
     ```js
   fis.match('/a/(**.js)', {
     release: '/b/$1' // $1 代表 (**.js) 匹配的内容
@@ -135,6 +135,9 @@ FIS3 中支持的 glob 规则，FIS3 使用 [node-glob](https://github.com/isaac
         optimizer: fis.plugin('clean-css')
     });
     ```
+
+  6. `*.html:inline-style` 用来匹配命中的 html 文件中的内联样式。可以配置些 auto prefix 之类的插件。
+  7. `*.html:scss` 用来命中 html 文件中的 scss 部分，具体请参考 [fis3-demo](https://github.com/fex-team/fis3-demo) 中的 [use-xlang](https://github.com/fex-team/fis3-demo/tree/master/use-xlang)
 
 ## 注意事项
 

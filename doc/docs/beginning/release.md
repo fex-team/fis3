@@ -85,7 +85,7 @@ fis3 release -d ../output
 
 ### 配置文件
 
-默认配置文件为 `fis-conf.js`，FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的[配置方式](../api/config.md)。固化了构建流程，以期让工程构建变得简单。
+默认配置文件为 `fis-conf.js`，FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的[配置方式](../api/config.md)。固化了构建流程，让工程构建变得简单。
 
 #### fis.match()
 
@@ -94,8 +94,8 @@ fis3 release -d ../output
 ```js
 fis.match(selector, props);
 ```
-- `selector` ：FIS3 把匹配文件路径的路径作为selector，匹配到的文件会分配给它设置的 `props`
-- `props` ：编译规则属性，包括文件属性和插件属性，[更多属性](../api/config-props.md)
+- `selector` ：FIS3 把匹配文件路径的路径作为selector，匹配到的文件会分配给它设置的 `props`。关于 selector 语法，请参看 [Glob 说明](/fis3/docs/api/config-glob.html)
+- `props` ：编译规则属性，包括文件属性和插件属性，[更多属性](../api/config-props.md#%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7)
 
 我们修改例子的配置文件 `fis-conf.js`，添加以下内容
 
@@ -354,7 +354,7 @@ fis.match('*.{js,css,png}', {
 // 启用 fis-spriter-csssprites 插件
 fis.match('::package', {
   spriter: fis.plugin('csssprites')
-})
+});
 
 // 对 CSS 进行图片合并
 fis.match('*.css', {

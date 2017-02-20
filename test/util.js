@@ -104,11 +104,11 @@ describe('util: _.normalize(path1, [path2], [...])', function () {
     expect(_('../a')).to.equal('../a');
     expect(_('../../a')).to.equal('../../a');
     expect(_('a/../../b')).to.equal('../b');
-    expect(_('/.a/b../..')).to.equal('/.a');
+    // expect(_('/.a/b../..')).to.equal('/.a');
     expect(_('../.a/b/c d/e/../f/../g')).to.equal('../.a/b/c d/g');
   });
 
-  it('remove last ' / '', function () {
+  it('remove last  / ', function () {
     expect(_('a/')).to.equal('a');
     expect(_('/')).to.equal('/');
     expect(_('/.')).to.equal('/');
@@ -467,9 +467,14 @@ describe('util: _.touch(path, mtime)', function () {
         mtimeNum = mtime.getTime();
     expect(_.mtime(__filename).getTime()).to.equal(mtimeNum);
     _.touch(__filename, mtimeNum + 1000);
-    expect(_.mtime(__filename).getTime()).to.equal(mtimeNum + 1000);
+
+    var x1 = Math.floor(_.mtime(__filename).getTime()/1000);
+    var x2 = Math.floor(mtimeNum/1000);
+    expect(x1).to.equal(x2 + 1);
     _.touch(__filename, mtime);
-    expect(_.mtime(__filename).getTime()).to.equal(mtimeNum);
+    var y1 = Math.floor(_.mtime(__filename).getTime()/1000);
+    var y2 = Math.floor(mtimeNum/1000);
+    expect(y1).to.equal(y2);
   });
 
   it('file does not exist.', function () {
@@ -1360,7 +1365,7 @@ describe('util: _install(name, [version], opt)', function () {
 
   it('version-done', function (done) {
     var name = 'installTest';
-    var version = '0.2';
+    var version = '0.3';
     var opt = {
       //'remote': 'http://10.48.30.87:8088/test/install',
       //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
@@ -1676,6 +1681,112 @@ describe('util: _.glob(pattern, [str])', function () {
       expect(_.glob('/*/*.js', 'aaa/bbbs/ad.js')).to.be.false;
     });
 
+    it('_*.*  /_xx.scss and /xxx/yyy/_xx.scss', function () {
+      expect(_.glob('_*.*', '/_xx.scss')).to.be.true;
+      expect(_.glob('_*.*', '/xxx/yyy/_xx.scss')).to.be.true;
+    });
+
+    it('_(*).*  /_xx.scss and /xxx/yyy/_xx.scss', function () {
+      var reg = _.glob('_(*).*');
+      var m = reg.exec('/_xx.scss');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("xx");
+
+      var m2 = reg.exec('/xxx/yyy/_xx.scss');
+      expect(!!m2).to.be.true;
+      expect(m2 && m2[1]).to.be.equal("xx");
+    });
+
+    it('(_*).*  /_xx.scss and /xxx/yyy/_xx.scss', function () {
+      var reg = _.glob('(_*).*');
+      var m = reg.exec('/_xx.scss');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("_xx");
+
+      var m2 = reg.exec('/xxx/yyy/_xx.scss');
+      expect(!!m2).to.be.true;
+      expect(m2 && m2[1]).to.be.equal("_xx");
+    });
+
+    it('/abc/(**.js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc/(**.js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("xxx/xx.js");
+    });
+
+    it('/abc(/**.js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/**.js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/xxx/xx.js");
+    });
+
+    it('/abc(/(**).js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/(**).js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/xxx/xx.js");
+      expect(m && m[2]).to.be.equal("xxx/xx");
+    });
+
+    it('/abc/(*.js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc/(*.js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.false;
+
+      var m2 = reg.exec('/abc/xx.js');
+      expect(!!m2).to.be.true;
+      expect(m2 && m2[1]).to.be.equal("xx.js");
+    });
+
+    it('/abc(/**.js) /abc/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/**.js)');
+      var m = reg.exec('/abc/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/xxx/xx.js");
+    });
+
+    it('/abc/(ef/**.js) /abc/ef/xxx/xx.js', function() {
+      var reg = _.glob('/abc/(ef/**.js)');
+      var m = reg.exec('/abc/ef/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("ef/xxx/xx.js");
+    });
+
+    it('/abc(/ef/**.js) /abc/ef/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/ef/**.js)');
+      var m = reg.exec('/abc/ef/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/ef/xxx/xx.js");
+    });
+
+    it('/abc(/ef/(**).js) /abc/ef/xxx/xx.js', function() {
+      var reg = _.glob('/abc(/ef/(**).js)');
+      var m = reg.exec('/abc/ef/xxx/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/ef/xxx/xx.js");
+      expect(m && m[2]).to.be.equal("xxx/xx");
+    });
+
+    it('/abc(/ef/(*).js) /abc/ef/xxx/xx.js and /abc/ef/xx.js', function() {
+      var reg = _.glob('/abc(/ef/(*).js)');
+      var m = reg.exec('/abc/ef/xx.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/ef/xx.js");
+      expect(m && m[2]).to.be.equal("xx");
+
+      var m2 = reg.exec('/abc/ef/xxx/xx.js');
+      expect(!!m2).to.be.false;
+    });
+
+    it('(**/js.js) /abc/ef/xxx/js.js', function() {
+      var reg = _.glob('(**/js.js)');
+      var m = reg.exec('/abc/ef/xxx/js.js');
+      expect(!!m).to.be.true;
+      expect(m && m[1]).to.be.equal("/abc/ef/xxx/js.js");
+    });
+
 });
 
 describe('util: _.is(source, type)', function (){
@@ -1725,7 +1836,7 @@ describe('util: _.isEmpty(obj)', function (){
 
 describe('util: _.nohup(type, callback, def)', function (){
   it('general', function () {
-    var re1 = _.nohup('fis server start',function (){var x = 3});
+    var re1 = _.nohup('fis server start --no-browse',function (){var x = 3});
     var re2 = _.nohup('fis server stop',function (){var c = 9});
     expect(!!re1.stdout._hadError).to.be.false;
     expect(!!re2.stdout._hadError).to.be.false;

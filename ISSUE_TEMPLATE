@@ -1,0 +1,31 @@
+<!--
+感谢反馈问题：）为了降低沟通成本，让我们更快的响应您的问题，请审阅您的 Issue 是否符合以下几点
+
+1. 已经在 fis3 与 fis 的历史 Issue 中寻找过相关问题，并没有找到相关的问题，或者历史问题无法解决您的问题。
+   Issue 地址是 https://github.com/fex-team/fis/issues 与 https://github.com/fex-team/fis3/issues
+2. 问题描述时请使用正确的Markdown格式包裹 html、js、css内容，例如
+
+
+```html
+<h1>请勿在此处填写你的问题</h1>
+```
+
+```javascript
+// 请勿在此处填写你的问题
+```
+
+```css
+/* 请勿在此处填写你的问题 */
+```
+
+3. 如果可以提供复现DEMO，您的问题会被更快的解决
+4. 请按照下列格式填写一些基础信息
+-->
+
+* **操作系统**:
+* **Node版本**: <node --version>
+* **FIS版本**: <fis3 --version>
+* **解决方案**: <fis3-smarty/fis3-jello/yog2>
+* **依赖插件**:
+
+<!-- 请在下方填写您的问题 -->

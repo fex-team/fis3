@@ -80,5 +80,5 @@ https://github.com/fex-team/fis3-demo
 
 ###预处理类（插件属性：parser）
 - [fis-parser-less](https://www.npmjs.com/package/fis-parser-less) less 解析插件
-- [fis-parser-sass](https://www.npmjs.com/package/fis-parser-sass) sass / scss 解析插件
+- [fis-parser-node-sass](https://www.npmjs.com/package/fis-parser-node-sass) sass / scss 解析插件
 - [fis-parser-handlebars](https://www.npmjs.com/package/fis-parser-handlebars) handlebars 解析插件
