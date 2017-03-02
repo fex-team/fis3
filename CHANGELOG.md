@@ -1,3 +1,5 @@
+请转移到 [Release](https://github.com/fex-team/fis3/releases) 页面
+==================================
 
 ## 3.2.0 / Fri Aug 28 2015
 - 升级 fis3-packager-map 支持从配置项中配置复杂的打包规则。
