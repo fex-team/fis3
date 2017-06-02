@@ -133,6 +133,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 - [requires](#requires)
 - [useSameNameRequire](#useSameNameRequire)
 - [useCache](#useCache)
+- [useCompile](#useCompile)
 
 #### release
 * 解释：设置文件的产出路径。默认是文件相对项目根目录的路径，以 / 开头。该值可以设置为 false ，表示为不产出（unreleasable）文件。
@@ -398,6 +399,18 @@ fis.match('/mod.js', {
     ```js
     fis.match('**.html', {
         useCache: false
+    });
+    ```
+
+#### useCompile
+* 注释： FIS是否对文件进行编译
+* 值类型：`bool`
+* 默认值： `true`
+* 说明：设置为 `false` 后文件会通过FIS发布，但是FIS不对文件做任何修改
+
+    ```js
+    fis.match('**.html', {
+        useCompile: false
     });
     ```
 
