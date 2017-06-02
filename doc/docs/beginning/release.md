@@ -258,6 +258,24 @@ fis3 release -d ../output
 ![](./img/demo-hash-css-diff.png)
 - 对应 url 也带上了 md5 戳
 
+### 片段编译
+
+有些插件会对文件中的一部分先进行片段编译`fis.compile.partial`, 这时可以对相应的片段编译配置对应的规则。
+
+```
+// vue组件中的less片段处理
+fis.match('src/vue/**.vue:less', {
+  rExt: 'css',
+  parser: fis.plugin('less'),
+  release: 'xxx' // 这个无效
+});
+
+// 注意：因为组件中的样式片段编译只是编译内容，所以上面的release配置是无效的。要配置其release，需要针对生成的css文件：
+fis.match('src/vue/(**.css)', {
+  release: '/vue-style/$1'
+});
+```
+
 ### 压缩资源
 
 为了减少资源网络传输的大小，通过压缩器对 js、css、图片进行压缩是一直以来前端工程优化的选择。在 FIS3 中这个过程非常简单，通过给文件配置压缩器即可。
