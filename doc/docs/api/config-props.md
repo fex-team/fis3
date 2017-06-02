@@ -456,7 +456,7 @@ fis.match('*.less', {
 
 ```js
 fis.match('*.sass', {
-    parser: fis.plugin('sass'), //启用fis-parser-sass插件
+    parser: fis.plugin('node-sass'), //启用fis-parser-node-sass插件
     rExt: '.css'
 });
 ```
@@ -468,7 +468,7 @@ fis.match('*.sass', {
 
 ```js
 fis.match('*.{css,less}', {
-    paser: fis.plugin('image-set')
+    preprocessor: fis.plugin('image-set')
 });
 ```
 
