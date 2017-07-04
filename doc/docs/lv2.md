@@ -51,7 +51,7 @@ my-proj/node_modules/fis3-parser-translate-es6/index.js
 // 参考: 阮一峰的es6入门 http://es6.ruanyifeng.com/#docs/intro
 var babel = require('babel-core');
 module.exports = function (content, file, options) {
-  var result = babel.transform(content, opts);
+  var result = babel.transform(content, options);
   return result.code; // 处理后的文件内容
 }
 ```
