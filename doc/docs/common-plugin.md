@@ -373,6 +373,6 @@ System 模块化支持插件。
 fis.hook('node_modules');
 ```
 
-#### [fis3-hook-releative](https://github.com/fex-team/fis3-hook-relative)
+#### [fis3-hook-relative](https://github.com/fex-team/fis3-hook-relative)
 
 支持产出为相对路径。
