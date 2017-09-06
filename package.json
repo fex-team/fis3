@@ -1,7 +1,7 @@
 {
   "name": "fis3-async",
-  "version": "3.4.35",
-  "description": "fis 3.0",
+  "version": "3.0.0",
+  "description": "fis-async 3.0",
   "main": "index.js",
   "bin": {
     "fis3-async": "bin/fis.js"
