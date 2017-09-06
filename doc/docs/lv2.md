@@ -46,7 +46,9 @@ my-proj/node_modules/fis3-parser-translate-es6/index.js
 
 ```js
 // vi index.js
-// babel node.js api 只需要 babel-core 即可
+// babel node.js api 只有 babel-core 不能完成翻译
+// babel-core 需要安装依赖 babel-preset-es2015
+// 参考: 阮一峰的es6入门 http://es6.ruanyifeng.com/#docs/intro
 var babel = require('babel-core');
 module.exports = function (content, file, options) {
   var result = babel.transform(content, opts);
@@ -69,7 +71,9 @@ my-proj/index.html
 
 ```js
 fis.match('*.es6', {
-  parser: fis.plugin('translate-es6'),
+  parser: fis.plugin('translate-es6', {
+    presets: ['es2015']
+  }),
   rExt: '.js' // .es6 最终修改其后缀为 .js
 })
 ```

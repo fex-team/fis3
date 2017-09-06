@@ -1,31 +1,30 @@
 language: node_js
-
 os:
-  - linux
-
+- linux
 node_js:
-  - "0.10"
-  - "0.12"
-  - "4"
-  - "6"
-
+- '0.10'
+- '0.12'
+- '4'
+- '6'
 env:
   global:
+  - GH_REF: git.duapp.com/appidenoe6p61ew/
   - secure: jKTCY7zQ/8YsHjfTYOkzeEAH4WASb1Nt92dXvMgAzDB2/GmGlmRbp2wO/3/SABbHA7oow3Ocniayl3wp29WNkzffylnOC6g9ThFekTqBjdh/gpCDK/MBjJ+J/ZhIjhGjKGSddicyVyVhsEaO1ZlxSMUnLjUtAEkYAgjtxWD0QJnoke7JjKgqKSwKcK0nisJ2hbHMKEGj5J3IdeMPq4db66ofZnkNqPkGdG1irVmRVksTtC911eqq8EaSZuwbp8TaVrmF3JsVshoVbDTrIHrGjCM98YNi54W1gPhPHuKupENNAJcKAA6IRiWXG3frCAZJDkLpsj+RweGDLVgNpQfdrqi/K1NCfnENG4xfkAzW8vBl22TQmIysbVo6iMgtlGkYq4dgw6T3MTnVS5utqbqd0VMDRpoPZfjhZv0r+akwdS/6lgno6/T3bLAqlNThqCuhIdK7VMzgQ0PCkXEWEbF5XXZjjs8QwESqPImtP9ZXQ8oYaOts+QIxX7kHDxoLZWJ14vsuw1cIYM5gCIEUmEeSzbGH6SrU/USn+QU4HYgdNWsfkjraEli58ThrS1xb9/soF3at1hpAZWPaIH32bqL6XfQrPFwiF6VLu5C1g3tdEFox+ylArVOMAB6FUl9xonKyGRAkVYbRi9sGI/JpTOMYTbqiocb/qviKPTHv4l2/m5o=
+  - secure: gPdCRj/7HpM7whMkm4h9eB22JZ47ANluae9nSRH9aExuJnutlic/4SKjnbDrkczo5/+y1RU9PoLg4kEyeE4se2jp3z5PDUb2Y0OYqeV30YYV7zMjLM6B+jpvZFb9SD9Gy2Yo0kBy79yDZ5ArRCN4UBoSlO4YRMy1tVq2LoNuw57o8nesZ9Q8VVLJp9vH3kcqo600w25m3GyRGfkI5SV02g293UUL5w2XxdMuKATCdbcPCOW09xBFh1Kg99uGduYRIQRIW7aIhZuWrEckD9dO7cmZhI1czC3rB1jtZLIHkIpE2Uv2TVYMYfHqE9B3yA88tvI1OadmGefNAiCJQD3nr+d/NfqQ7g8mOOgi8xCvR6VM4NUIfw2xz+QNGjduKYn8R/loQfW3P5ZQTojYKYDVALlYU1lzW6XpndkgR0KzTVjNRVXur5c1X71Cs7JBLeLDHabqByjHaInVhcNLNXNyowJcU5L6qkGnYs9AOgVqwpyDwRWt51RQNwOVMBxeOFMPtyYR0AIw0BinBl/u22K+wNOX56FGLKewksqnVrzzuf1IYyrKbSpN78s42aDqEppAeoWZH5JMplOo0N6NF1kPj3PP8isFo4BFgOxvuCvZ0olkhAtufQWqqktrtVYS+aYWmYjpqZT5J8rz156XCLVJK9snaasPwX6oSkYBnr6ZFNE=
+  - secure: vLzBXMNwQupoavD880TqnF799azdeTKXQgKOB382TG/vovKTS+YiX5DqPXkDoRTrarSuWQHUx6iTaT/ehTwWz3Bpmf5lKDC1q6Kt4h/hxTseESlMvZI8XBHh3LihdvFcOqzPOcdd43ut+oqY8jJQxUD8fy1Yd629h8ADSsZyfVwWfrY9I2IYZYFR5FBqrroAIDIOSyWGocIezWxc6S+swMF6bn0B3SXnu0ISVLQSo3gyeWOAnDQYZ7ghuR19KTfWR+Ww+GPY1jSad9s6dqEq046aLOb7TD/RWzzb5IJxdQA4CErZg9ITnfa2cl6lTZa6mAXFwmFwcq9UFyLiZMwjXoUd4suXU+MuMCAbsFfXUYNYruMzIvuCCkVq8lQ/N2Ah9gWQZhisFnAsuDWLo94IH7RyHHPD2SSLRs8ZM5duPT9Kh/5E8LjjU7AHClinBvVc4gw49ZxxXWRxldAS7WnMRa0meg/b4Hrawz/PROcmmjSqbb+40/LL3x6YCw2wi+VQkNZY8AloKuVnohowJZvj/a3ufZFEDUI3rll2Q6XvdFLlHwUsx+eZlstxNodDOYPm4S9LUekapHo4+EXX9GhxrcXMSEZFrQPqIZpCNae7ML7gJrl6yJ02oNltAYR4+mkWuQYpAtZtRDQjytvrmJ5+zhdPoS4U0hFBIdkwVSON3fk=
 install:
 - npm install
 before_script:
-    - sudo apt-get update
-    - sudo apt-get install apache2
-    - sudo apt-get install php5
-    - sudo ln -s $(pwd) /var/www/fis3
-    - sudo service apache2 restart
+- sudo apt-get update
+- sudo apt-get install apache2
+- sudo apt-get install php5
+- sudo ln -s $(pwd) /var/www/fis3
+- sudo service apache2 restart
 script:
-- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && sh ./release-doc.sh || true'
-#- sh ./release-doc.sh
-- 'npm run-script test-travis'
+- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bash ./release-doc.sh || true'
+- npm run-script test-travis
 after_script:
-- 'npm install coveralls@2.10.0 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js'
+- npm install coveralls@2.10.0 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 cache:
   directories:
   - node_modules
@@ -34,4 +33,4 @@ branches:
   - master
   - test-more-platform
 sudo:
- - true
+- true

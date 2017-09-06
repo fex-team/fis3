@@ -166,3 +166,19 @@ describe('project: lookup', function () {
     assert.deepEqual({id: info.id, moduleId: info.moduleId}, {id: 'qfis-test.js', moduleId: 'qfis-test'});
   });
 });
+
+describe('project: currentMedia', function () {
+  var project;
+  beforeEach(function () {
+    fis.config.init(); // @TODO
+    fis.media().init(); // @TODO
+    require.del('../lib/project');
+    project = require('../lib/project');
+    project.setProjectRoot(root);
+  });
+
+  it("general", function () {
+    var info = project.currentMedia('pro');
+    assert.equal(info,'pro' );
+  });
+});

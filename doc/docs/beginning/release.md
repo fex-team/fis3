@@ -85,7 +85,7 @@ fis3 release -d ../output
 
 ### 配置文件
 
-默认配置文件为 `fis-conf.js`，FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的[配置方式](../api/config.md)。固化了构建流程，以期让工程构建变得简单。
+默认配置文件为 `fis-conf.js`，FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的[配置方式](../api/config.md)。固化了构建流程，让工程构建变得简单。
 
 #### fis.match()
 
@@ -94,8 +94,8 @@ fis3 release -d ../output
 ```js
 fis.match(selector, props);
 ```
-- `selector` ：FIS3 把匹配文件路径的路径作为selector，匹配到的文件会分配给它设置的 `props`
-- `props` ：编译规则属性，包括文件属性和插件属性，[更多属性](../api/config-props.md)
+- `selector` ：FIS3 把匹配文件路径的路径作为selector，匹配到的文件会分配给它设置的 `props`。关于 selector 语法，请参看 [Glob 说明](/fis3/docs/api/config-glob.html)
+- `props` ：编译规则属性，包括文件属性和插件属性，[更多属性](../api/config-props.md#%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7)
 
 我们修改例子的配置文件 `fis-conf.js`，添加以下内容
 
@@ -258,6 +258,24 @@ fis3 release -d ../output
 ![](./img/demo-hash-css-diff.png)
 - 对应 url 也带上了 md5 戳
 
+### 片段编译
+
+有些插件会对文件中的一部分先进行片段编译`fis.compile.partial`, 这时可以对相应的片段编译配置对应的规则。
+
+```
+// vue组件中的less片段处理
+fis.match('src/vue/**.vue:less', {
+  rExt: 'css',
+  parser: fis.plugin('less'),
+  release: 'xxx' // 这个无效
+});
+
+// 注意：因为组件中的样式片段编译只是编译内容，所以上面的release配置是无效的。要配置其release，需要针对生成的css文件：
+fis.match('src/vue/(**.css)', {
+  release: '/vue-style/$1'
+});
+```
+
 ### 压缩资源
 
 为了减少资源网络传输的大小，通过压缩器对 js、css、图片进行压缩是一直以来前端工程优化的选择。在 FIS3 中这个过程非常简单，通过给文件配置压缩器即可。
@@ -336,7 +354,7 @@ fis.match('*.{js,css,png}', {
 // 启用 fis-spriter-csssprites 插件
 fis.match('::package', {
   spriter: fis.plugin('csssprites')
-})
+});
 
 // 对 CSS 进行图片合并
 fis.match('*.css', {
