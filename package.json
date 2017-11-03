@@ -1,6 +1,6 @@
 {
   "name": "fis3-async",
-  "version": "3.0.0-beta7",
+  "version": "3.0.0-beta8",
   "description": "fis-async 3.0",
   "main": "index.js",
   "bin": {
@@ -44,9 +44,7 @@
     "mocha-junit-reporter": "^1.4.0",
     "npm-watch": "0.0.0",
     "istanbul": "~0.2.14",
-    "coveralls": "2.10.0",
-    "fis3-postpackager-loader": "1.2.7",
-    "fis3-hook-cmd": "0.0.1"
+    "coveralls": "2.10.0"
   },
   "watch": {
     "jsdoc": "lib/*.js"
