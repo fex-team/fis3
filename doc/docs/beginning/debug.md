@@ -68,6 +68,9 @@ fis3 release -wL
 
 当我们开发项目后，需要发布到测试机（联调机），一般可以通过如 SMB、FTP 等上传代码。FIS3 默认支持使用 HTTP 上传代码，首先需要在测试机部署上传接收脚本（或者服务），这个脚本非常简单，现在给出了 [php 的实现版本](https://github.com/fex-team/fis-command-release/blob/master/tools/receiver.php)，可以把它放到测试机上某个 Web 服务根目录，并且配置一个 url 能访问到即可。
 
+> 注意：**此代码存在很大的安全隐患，没有做任何安全考虑，请不要部署到线上服务。**
+> 百度内部请使用：http://agroup.baidu.com/fis/md/article/196978
+
 > 示例脚本是 php 脚本，测试机 Web 需要支持 PHP 的解析 <br />
 > 如果需要其他语言实现，请参考这个 php 脚本实现，如果嫌麻烦，我们提供了一个 node 版本的[接收端](https://github.com/fex-team/receiver)
 
