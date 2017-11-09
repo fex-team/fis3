@@ -1163,105 +1163,105 @@ describe('util: _parseUrl(url, opt)', function () {
 
 });
 //hide- local
-describe('util: _download(url, [callback], [extract], [opt])', function () {
-  var downdir = __dirname + '/download/';
-  this.timeout(25000);
-  before(function () {
-    //清空fis tmp download dir
-    var files = [];
-    var tmpdir = fis.project.getTempPath('downloads');
-    var path = tmpdir;
-    if (fs.existsSync(path)) {
-      files = fs.readdirSync(path);
-      files.forEach(function (file, index) {
-        var curPath = path + "/" + file;
-        fs.unlinkSync(curPath);
-      });
-    }
-  });
-  it('general', function (done) {
-    //var url = 'http://10.48.30.87:8088/test/download/downTest01.tar';
-    //var url = 'http://fex.baidu.com/fis3/static/images/code_1750c9a.png';
-    var url = 'http://127.0.0.1/fis3/test/attachment/code_1750c9a.png';
-    //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/logo_8652a39.png';
+// describe('util: _download(url, [callback], [extract], [opt])', function () {
+//   var downdir = __dirname + '/download/';
+//   this.timeout(25000);
+//   before(function () {
+//     //清空fis tmp download dir
+//     var files = [];
+//     var tmpdir = fis.project.getTempPath('downloads');
+//     var path = tmpdir;
+//     if (fs.existsSync(path)) {
+//       files = fs.readdirSync(path);
+//       files.forEach(function (file, index) {
+//         var curPath = path + "/" + file;
+//         fs.unlinkSync(curPath);
+//       });
+//     }
+//   });
+//   it('general', function (done) {
+//     //var url = 'http://10.48.30.87:8088/test/download/downTest01.tar';
+//     //var url = 'http://fex.baidu.com/fis3/static/images/code_1750c9a.png';
+//     var url = 'http://127.0.0.1/fis3/test/attachment/code_1750c9a.png';
+//     //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/logo_8652a39.png';
 
-    var path = fis.project.getTempPath('downloads');
-    var hash = fis.util.md5(url, 8);
-    _.download(url, function (err) {
-      //expect(path + '/' + hash + '.png').to.be.exist;
-      expect(fs.existsSync(path + '/' + hash + '.png')).to.be.true;
-      done();
-    });
+//     var path = fis.project.getTempPath('downloads');
+//     var hash = fis.util.md5(url, 8);
+//     _.download(url, function (err) {
+//       //expect(path + '/' + hash + '.png').to.be.exist;
+//       expect(fs.existsSync(path + '/' + hash + '.png')).to.be.true;
+//       done();
+//     });
 
-  });
+//   });
 
-  it('extract', function (done) {
-    var name = 'downTest';
-    //var url = 'http://10.48.30.87:8088/test/download/' + name + '.tar';
-    //var url = 'http://fex.baidu.com/fis3/test/attachment/downTest.tar';
-    var url = 'http://127.0.0.1/fis3/test/attachment/downTest.tar';
-    //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/test/test.jar';
-    var extract = downdir;
-    _.download(url, function (err) {
-      var hash = fis.util.md5(url, 8);
-      var path = fis.project.getTempPath('downloads');
-      expect(fs.existsSync(path + '/' + hash + '.tar')).to.be.true;
-      expect(fs.existsSync(extract + '/downTest')).to.be.true;
+//   it('extract', function (done) {
+//     var name = 'downTest';
+//     //var url = 'http://10.48.30.87:8088/test/download/' + name + '.tar';
+//     //var url = 'http://fex.baidu.com/fis3/test/attachment/downTest.tar';
+//     var url = 'http://127.0.0.1/fis3/test/attachment/downTest.tar';
+//     //var url = 'https://raw.githubusercontent.com/fex-team/fis3/gh-pages/test/test.jar';
+//     var extract = downdir;
+//     _.download(url, function (err) {
+//       var hash = fis.util.md5(url, 8);
+//       var path = fis.project.getTempPath('downloads');
+//       expect(fs.existsSync(path + '/' + hash + '.tar')).to.be.true;
+//       expect(fs.existsSync(extract + '/downTest')).to.be.true;
 
-      done();
-    }, extract);   //, extract  解压有问题  这种情况 还未处理
+//       done();
+//     }, extract);   //, extract  解压有问题  这种情况 还未处理
 
-  });
+//   });
 
-  it('not_exist', function (done) {
-    //var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';         //不存在的包
-    var url = 'http://127.0.0.1/fis3/test/downTest05.tar';         //不存在的包
-    var not_exist = 0;
-    _.download(url, function (msg) {
-      if (msg == 404)
-        not_exist = 1;
+//   it('not_exist', function (done) {
+//     //var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';         //不存在的包
+//     var url = 'http://127.0.0.1/fis3/test/downTest05.tar';         //不存在的包
+//     var not_exist = 0;
+//     _.download(url, function (msg) {
+//       if (msg == 404)
+//         not_exist = 1;
 
-      var path = fis.project.getTempPath('downloads');
-      var hash = fis.util.md5(url, 8);
-      expect(fs.existsSync(path + '/' + hash + '.tar')).to.be.false;
-      expect(not_exist).to.be.equal(1);
+//       var path = fis.project.getTempPath('downloads');
+//       var hash = fis.util.md5(url, 8);
+//       expect(fs.existsSync(path + '/' + hash + '.tar')).to.be.false;
+//       expect(not_exist).to.be.equal(1);
 
-      done();
+//       done();
 
-    });
+//     });
 
-  });
+//   });
 
-  it('extract-error', function (done) {
-    //var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';
-    var url = 'http://127.0.0.1/fis3/test/downTest05.tar';
-    var not_exist = 0;
-    var extract = downdir;
-    _.download(url, function (msg) {
-      if (msg == 404)
-        not_exist = 1;
+//   it('extract-error', function (done) {
+//     //var url = 'http://fex.baidu.com/fis3/test/downTest05.tar';
+//     var url = 'http://127.0.0.1/fis3/test/downTest05.tar';
+//     var not_exist = 0;
+//     var extract = downdir;
+//     _.download(url, function (msg) {
+//       if (msg == 404)
+//         not_exist = 1;
 
-      var hash = fis.util.md5(url, 8);
-      expect(fs.existsSync(extract + '/' + hash + '.tar')).to.be.false;
-      expect(not_exist).to.be.equal(1);
+//       var hash = fis.util.md5(url, 8);
+//       expect(fs.existsSync(extract + '/' + hash + '.tar')).to.be.false;
+//       expect(not_exist).to.be.equal(1);
 
-      done();
-    }, extract, {
-      'data': "write opt.data!"
-    });
-  });
+//       done();
+//     }, extract, {
+//       'data': "write opt.data!"
+//     });
+//   });
 
-  it('下载错误', function () {
-    var url = 'http://10.48.30.87:8088/test/download/test.tar.gz';
-    var extract = downdir;
-    _.download(url, function () {
-      var hash = fis.util.md5(url, 8);
-      var path = fis.project.getTempPath('downloads');
-      expect(fs.existsSync(path + '/' + hash + '.tar')).to.be.false;
-    }, extract);
-  });
+//   it('下载错误', function () {
+//     var url = 'http://10.48.30.87:8088/test/download/test.tar.gz';
+//     var extract = downdir;
+//     _.download(url, function () {
+//       var hash = fis.util.md5(url, 8);
+//       var path = fis.project.getTempPath('downloads');
+//       expect(fs.existsSync(path + '/' + hash + '.tar')).to.be.false;
+//     }, extract);
+//   });
 
-});
+// });
 
 describe('util: _upload(url, [opt], [data], content, subpath, callback)', function () {
   this.timeout(20000);
@@ -1334,133 +1334,133 @@ describe('util: _upload(url, [opt], [data], content, subpath, callback)', functi
   // });
 });
 
-describe('util: _install(name, [version], opt)', function () {
-  var installdir = __dirname + '/install/';
-  this.timeout(25000);
-  after(function () {
-    //清空install文件夹
-    fis.cache.clean(installdir);
-  });
+// describe('util: _install(name, [version], opt)', function () {
+//   var installdir = __dirname + '/install/';
+//   this.timeout(25000);
+//   after(function () {
+//     //清空install文件夹
+//     fis.cache.clean(installdir);
+//   });
 
-  it('general', function (done) {
-    var name = 'installTest';
-    var version = '*';//*
-    var opt = {
-      //'remote': 'http://10.48.30.87:8088/test/install',
-      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
-      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
-      'extract': installdir,
-      'done': function () {
-        var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
-        var path = fis.project.getTempPath('downloads');
-        expect(path + '/' + hash + '.tar').to.be.exist;
-        expect(installdir + name).to.be.exist;
-        done();
-      }
-    };
+//   it('general', function (done) {
+//     var name = 'installTest';
+//     var version = '*';//*
+//     var opt = {
+//       //'remote': 'http://10.48.30.87:8088/test/install',
+//       //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+//       'remote': 'http://127.0.0.1/fis3/test/attachment/install',
+//       'extract': installdir,
+//       'done': function () {
+//         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
+//         var path = fis.project.getTempPath('downloads');
+//         expect(path + '/' + hash + '.tar').to.be.exist;
+//         expect(installdir + name).to.be.exist;
+//         done();
+//       }
+//     };
 
-    _.install(name, version, opt);
+//     _.install(name, version, opt);
 
-  });
+//   });
 
-  it('version-done', function (done) {
-    var name = 'installTest';
-    var version = '0.3';
-    var opt = {
-      //'remote': 'http://10.48.30.87:8088/test/install',
-      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
-      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
-      'extract': installdir,
-      'done': function () {
-        var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
-        var path = fis.project.getTempPath('downloads');
-        expect(path + '/' + hash + '.tar').to.be.exist;
-        expect(installdir + name + version).to.be.exist;
+//   it('version-done', function (done) {
+//     var name = 'installTest';
+//     var version = '0.3';
+//     var opt = {
+//       //'remote': 'http://10.48.30.87:8088/test/install',
+//       //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+//       'remote': 'http://127.0.0.1/fis3/test/attachment/install',
+//       'extract': installdir,
+//       'done': function () {
+//         var hash = fis.util.md5(opt.remote + '/' + name + '/' + version + '/.tar', 8);
+//         var path = fis.project.getTempPath('downloads');
+//         expect(path + '/' + hash + '.tar').to.be.exist;
+//         expect(installdir + name + version).to.be.exist;
 
-        done();
-      }
-    };
+//         done();
+//       }
+//     };
 
-    _.install(name, version, opt);
-  });
+//     _.install(name, version, opt);
+//   });
 
-  it('opt.before', function (done) {
-    var gname = 'installTest';
-    var version = '0.2';
-    var opt = {
-      //'remote': 'http://10.48.30.87:8088/test/install',
-      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
-      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
-      'extract': installdir,
-      'done': function (name, version) {
-        expect(path + '/' + hash + '.tar').to.be.exist;
-        expect(installdir + name + version).to.be.exist;
+//   it('opt.before', function (done) {
+//     var gname = 'installTest';
+//     var version = '0.2';
+//     var opt = {
+//       //'remote': 'http://10.48.30.87:8088/test/install',
+//       //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+//       'remote': 'http://127.0.0.1/fis3/test/attachment/install',
+//       'extract': installdir,
+//       'done': function (name, version) {
+//         expect(path + '/' + hash + '.tar').to.be.exist;
+//         expect(installdir + name + version).to.be.exist;
 
-        done();
-      },
-      'before': function (name, version) {
-        expect(name).to.be.equal(gname);
-        expect(version).to.be.equal("0.2");
-      }
-    };
-    var hash = fis.util.md5(opt.remote + '/' + gname + '/' + version + '/.tar', 8);
-    var path = fis.project.getTempPath('downloads');
+//         done();
+//       },
+//       'before': function (name, version) {
+//         expect(name).to.be.equal(gname);
+//         expect(version).to.be.equal("0.2");
+//       }
+//     };
+//     var hash = fis.util.md5(opt.remote + '/' + gname + '/' + version + '/.tar', 8);
+//     var path = fis.project.getTempPath('downloads');
 
-    _.install(gname, version, opt);
-  });
+//     _.install(gname, version, opt);
+//   });
 
-  it('opt.err_not exist', function (done) {
-    var gname = 'installTest';
-    var version = '0.5';                //不存在的版本
-    var opt = {
-      //'remote': 'http://10.48.30.87:8088/test/install',
-      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
-      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
-      'extract': installdir,
-      'done': function (name, version) {
-        expect(true).to.be.false;
-      },
-      'before': function (name, version) {
-        expect(name).to.be.equal(gname);
-        expect(version).to.be.equal("0.5");
-      },
-      'error': function (err) {
-        var hash = fis.util.md5(opt.remote + '/' + gname + '/' + version + '/.tar', 8);
-        var path = fis.project.getTempPath('downloads');
-        expect(fs.existsSync(path + '/' + hash + '.tar')).to.be.false;
-        expect(fs.existsSync(installdir + gname + version)).to.be.false;
+//   it('opt.err_not exist', function (done) {
+//     var gname = 'installTest';
+//     var version = '0.5';                //不存在的版本
+//     var opt = {
+//       //'remote': 'http://10.48.30.87:8088/test/install',
+//       //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+//       'remote': 'http://127.0.0.1/fis3/test/attachment/install',
+//       'extract': installdir,
+//       'done': function (name, version) {
+//         expect(true).to.be.false;
+//       },
+//       'before': function (name, version) {
+//         expect(name).to.be.equal(gname);
+//         expect(version).to.be.equal("0.5");
+//       },
+//       'error': function (err) {
+//         var hash = fis.util.md5(opt.remote + '/' + gname + '/' + version + '/.tar', 8);
+//         var path = fis.project.getTempPath('downloads');
+//         expect(fs.existsSync(path + '/' + hash + '.tar')).to.be.false;
+//         expect(fs.existsSync(installdir + gname + version)).to.be.false;
 
-        done();
-      }
-    };
-    _.install(gname, version, opt);
+//         done();
+//       }
+//     };
+//     _.install(gname, version, opt);
 
-  });
+//   });
 
-  it('extract, pkg', function () {
-    //pkg项目package.json里配置依赖pkg0.2,两个都应该install
-    var name = 'pkgTest';
-    var version = '*';
-    var opt = {
-      //'remote': 'http://10.48.30.87:8088/test/install',
-      //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
-      'remote': 'http://127.0.0.1/fis3/test/attachment/install',
-      'extract': installdir,
-      'done': function () {
-        var hash = fis.util.md5(opt.remote + '/' + name + '/latest.tar', 8);
-        var hash_dep = fis.util.md5(opt.remote + '/' + name + '/0.2.tar', 8);
-        var path = fis.project.getTempPath('downloads');
-        expect(path + '/' + hash + '.tar').to.be.exist;
-        expect(path + '/' + hash_dep + '.tar').to.be.exist;
-        expect(installdir + name).to.be.exist;
-        expect(installdir + dep_name).to.be.exist;
-      }
-    };
-    var dep_name = 'pkgTest0.2';
+//   it('extract, pkg', function () {
+//     //pkg项目package.json里配置依赖pkg0.2,两个都应该install
+//     var name = 'pkgTest';
+//     var version = '*';
+//     var opt = {
+//       //'remote': 'http://10.48.30.87:8088/test/install',
+//       //'remote': 'http://fex.baidu.com/fis3/test/attachment/install',
+//       'remote': 'http://127.0.0.1/fis3/test/attachment/install',
+//       'extract': installdir,
+//       'done': function () {
+//         var hash = fis.util.md5(opt.remote + '/' + name + '/latest.tar', 8);
+//         var hash_dep = fis.util.md5(opt.remote + '/' + name + '/0.2.tar', 8);
+//         var path = fis.project.getTempPath('downloads');
+//         expect(path + '/' + hash + '.tar').to.be.exist;
+//         expect(path + '/' + hash_dep + '.tar').to.be.exist;
+//         expect(installdir + name).to.be.exist;
+//         expect(installdir + dep_name).to.be.exist;
+//       }
+//     };
+//     var dep_name = 'pkgTest0.2';
 
-    _.install(name, version, opt);
-  });
-});
+//     _.install(name, version, opt);
+//   });
+// });
 //hide- local -end
 describe('util: _.readJSON(path)', function () {
   it('general-readJson', function () {
