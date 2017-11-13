@@ -11,8 +11,14 @@ FIS3 面向**前端**的**工程构建系统**。解决前端工程中性能优�
 > 如果对FIS先有些了解，但理解不深的，可试着带着这句话去看文档 <br>
 > FIS3 会在配置文件中给文件添加相应属性，用于控制文件的编译、合并等各种操作；文件属性包括基本属性和插件属性，[详细请参考](https://github.com/fex-team/fis3/blob/master/doc/docs/api/config-props.md#文件属性)
 
-```
+```bash
 npm install -g fis3
+```
+
+**如果 Node 版本低于 4.x 请安装旧版本**
+
+```bash
+npm install -g fis3@3.4.36
 ```
 
 ## 文档
