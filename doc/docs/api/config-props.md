@@ -124,6 +124,7 @@ fis3 以文件属性控制文件的编译合并以及各种操作；文件属性
 - [isHtmlLike](#isHtmlLike)
 - [isCssLike](#isCssLike)
 - [isJsLike](#isJsLike)
+- [isJsonLike](#isJsonLike)
 - [useHash](#useHash)
 - [domain](#domain)
 - [rExt](#rExt)
@@ -278,7 +279,12 @@ fis.match('/mod.js', {
 
 #### isJsLike
 * 解释：指定对文件进行 [js](../user-dev/extlang.md#js) 相关的语言能力处理
-* 值类型：`string`
+* 值类型：`bool`
+* 默认值：无
+
+#### isJsonLike
+* 解释：指定对文件进行 [json](../user-dev/extlang.md#js) 相关的语言能力处理
+* 值类型：`bool`
 * 默认值：无
 
 #### useHash
