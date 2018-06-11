@@ -75,10 +75,10 @@ fis.match('::package', {
       // main.js 的所有同步依赖加入队列
       '/static/hello/src/main.js:deps',
 
-      // 将 main.js 所以异步依赖加入队列
+      // 将 main.js 的所有异步依赖加入队列
       '/static/hello/src/main.js:asyncs',
 
-      // 移除 comp.js 所有同步依赖
+      // 移除 comp.js 的所有同步依赖
       '!/static/hello/src/comp.js:deps'
     ],
 
