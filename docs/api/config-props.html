@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="_FIS_构建工具_前端工具框架" />
+    <meta name="keywords" content=",百度前端团队,FIS,百度FIS,百度前端,fis,前端模块化,前端工程,性能优化,web performance" />
+    <link rel="shortcut icon" href="/fis3/static/images/favicon-fis.ico"/>
+    <title>FIS3 :  全局属性</title>
+    <meta name="description" content="FIS3 面向前端的工程构建系统">
+    <meta name="author" content="fis-team">
+    
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/fis3/static/css/common_3a72140.css">
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+    <script type="text/javascript">
+        //检查页面域名
+        (function(){
+            var url = window.location.href;
+            if (url.indexOf('http://fex.baidu.com/fis-site') !== -1) {
+                window.location.href = url.replace('http://fex.baidu.com/fis-site','http://fis.baidu.com');
+            }
+        })();
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script type="text/javascript" src="/fis3/static/js/jquery.cookie_a5283b2.js"></script>
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  is-active">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  ">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar">
+    <ul>
+<li><a href="/fis3/docs/beginning/intro.html">介绍</a></li>
+<li><a href="/fis3/docs/beginning/install.html">安装</a></li>
+<li>起步<ul>
+<li><a href="/fis3/docs/beginning/release.html">构建</a><ul>
+<li><a href="/fis3/docs/beginning/release.html#%E4%BE%8B%E5%AD%90">例子</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%91%BD%E4%BB%A4">命令</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D">资源定位</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">配置文件</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9">文件指纹</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8E%8B%E7%BC%A9%E8%B5%84%E6%BA%90">压缩资源</a></li>
+<li><a href="/fis3/docs/beginning/release.html#CssSprite%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6">CssSprite图片合并</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8A%9F%E8%83%BD%E7%BB%84%E5%90%88">功能组合</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/beginning/debug.html">调试</a><ul>
+<li><a href="/fis3/docs/beginning/debug.html#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83">发布</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%90%AF%E5%8A%A8">启动</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E9%A2%84%E8%A7%88">预览</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC">文件监听</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0">浏览器自动刷新</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83%E5%88%B0%E8%BF%9C%E7%AB%AF%E6%9C%BA%E5%99%A8">发布到远端机器</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%9B%BF%E4%BB%A3%E5%86%85%E7%BD%AEServer">替代内置Server</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/user-dev/extlang.html">内置语法</a><ul>
+<li><a href="/fis3/docs/user-dev/inline.html">内容嵌入</a></li>
+<li><a href="/fis3/docs/user-dev/uri.html">定位资源</a></li>
+<li><a href="/fis3/docs/user-dev/require.html">声明依赖</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/fis3/docs/build.html">工作原理</a><ul>
+<li><a href="/fis3/docs/build.html#%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B">构建流程</a></li>
+<li><a href="/fis3/docs/build.html#%E5%8D%95%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B">单文件编译流程</a></li>
+<li><a href="/fis3/docs/build.html#File%E5%AF%B9%E8%B1%A1">File对象</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv1.html">初级使用</a><ul>
+<li><a href="/fis3/docs/lv1.html#%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%82%B9%E7%9A%84%E4%BE%8B%E5%AD%90">一个复杂点的例子</a></li>
+<li><a href="/fis3/docs/lv1.html#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E6%8F%92%E4%BB%B6">安装一些插件</a></li>
+<li><a href="/fis3/docs/lv1.html#%E9%A2%84%E5%A4%84%E7%90%86">预处理</a></li>
+<li><a href="/fis3/docs/lv1.html#%E7%AE%80%E5%8D%95%E5%90%88%E5%B9%B6">简单合并</a></li>
+<li><a href="/fis3/docs/lv1.html#%E6%9E%84%E5%BB%BA%E8%B0%83%E8%AF%95%E9%A2%84%E8%A7%88">构建调试预览</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv2.html">中级使用</a><ul>
+<li><a href="/fis3/docs/lv2.html#%E9%A2%84%E5%A4%84%E7%90%86%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">预处理插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E6%89%93%E5%8C%85%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">打包插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E5%8F%91%E5%B8%83%E6%8F%92%E4%BB%B6">发布插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv3.html">高级使用</a><ul>
+<li><a href="/fis3/docs/lv3.html#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A1%A8">静态资源映射表</a></li>
+<li><a href="/fis3/docs/lv3.html#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91">模块化开发</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1">资源映射表的模块化方案设计</a></li>
+<li><a href="/fis3/docs/lv3.html#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B0%81%E8%A3%85">解决方案封装</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ESmarty%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Smarty的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E7%BA%AFPHP%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于纯PHP的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ELaravel%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Laravel的解决方案</a></li>
+</ul>
+</li>
+<li>接口文档<ul>
+<li><a href="/fis3/docs/api/command.html">命令行</a></li>
+<li><a href="/fis3/docs/api/config.html">配置</a><ul>
+<li><a href="/fis3/docs/api/config-api.html">配置接口</a></li>
+<li><a href="/fis3/docs/api/config-props.html">配置属性</a></li>
+<li><a href="/fis3/docs/api/config-commonly-used.html">常用配置</a></li>
+<li><a href="/fis3/docs/api/config-glob.html">glob</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/api/config-system-plugin.html">内置插件及配置</a></li>
+<li><a href="/fis3/docs/api/dev-plugin.html">自定义插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/fis2-to-fis3.html">FIS2 到 FIS3</a></li>
+<li><a href="/fis3/docs/pack.html">资源合并</a></li>
+<li><a href="/fis3/docs/node-mock.html">mock 假数据模拟</a></li>
+<li><a href="/fis3/docs/common-plugin.html">常用的插件列表</a></li>
+</ul>
+
+    <div class="bottom-shadow"></div>
+</div>
+
+    <div class="content api with-sidebar">
+        <a name="%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7" class="title-anchor"></a><h3 class="" id="全局属性">全局属性</h3><p>全局属性通过 <code>fis.set</code> 设置，通过 <code>fis.get</code> 获取；</p>
+<a name="%E5%86%85%E7%BD%AE%E7%9A%84%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE" class="title-anchor"></a><h4 class="" >内置的默认配置</h4><pre><code class="hljs lang-js">var DEFAULT_SETTINGS = {
+  project: {
+    charset: <span class="hljs-string">'utf8'</span>,
+    md5Length: <span class="hljs-number">7</span>,
+    md5Connector: <span class="hljs-string">'_'</span>,
+    files: [<span class="hljs-string">'**'</span>],
+    ignore: [<span class="hljs-string">'node_modules/**'</span>, <span class="hljs-string">'output/**'</span>, <span class="hljs-string">'.git/**'</span>, <span class="hljs-string">'fis-conf.js'</span>]
+  },
+
+  component: {
+    skipRoadmapCheck: true,
+    protocol: <span class="hljs-string">'github'</span>,
+    author: <span class="hljs-string">'fis-components'</span>
+  },
+
+  modules: {
+    hook: <span class="hljs-string">'components'</span>,
+    packager: <span class="hljs-string">'map'</span>
+  },
+
+  options: {}
+};
+</code></pre>
+<a name="project.charset" class="title-anchor"></a><h4 class="" >project.charset</h4><ul>
+<li>解释：指定项目编译后产出文件的编码。</li>
+<li>值类型：<code>string</code></li>
+<li>默认值：&#39;utf8&#39;</li>
+<li><p>用法：在项目的fis-conf.js里可以覆盖为</p>
+<pre><code class="hljs lang-js">  fis.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.charset'</span>, <span class="hljs-string">'gbk'</span>);
+</code></pre>
+<blockquote>
+<p>使用 charset 编码需要使用<a href="https://github.com/fex-team/fis3-deploy-encoding">encoding</a>插件发布编译结果</p>
+</blockquote>
+</li>
+</ul>
+<a name="project.md5Length" class="title-anchor"></a><h4 class="" >project.md5Length</h4><ul>
+<li>解释：文件MD5戳长度。</li>
+<li>值类型：<code>number</code></li>
+<li>默认值：7</li>
+<li><p>用法：在项目的fis-conf.js里可以修改为</p>
+<pre><code class="hljs lang-js">  fis.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.md5Length'</span>, <span class="hljs-number">8</span>);
+</code></pre>
+</li>
+</ul>
+<a name="project.md5Connector" class="title-anchor"></a><h4 class="" >project.md5Connector</h4><ul>
+<li>解释：设置md5与文件的连字符。</li>
+<li>值类型：<code>string</code></li>
+<li>默认值：<code>_</code></li>
+<li><p>用法：在项目的fis-conf.js里可以修改为</p>
+<pre><code class="hljs lang-js">  fis.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.md5Connector '</span>, <span class="hljs-string">'.'</span>);
+</code></pre>
+</li>
+</ul>
+<a name="project.files" class="title-anchor"></a><h4 class="" >project.files</h4><ul>
+<li>解释：设置项目源码文件过滤器。</li>
+<li>值类型：<code>Array</code></li>
+<li>默认值：&#39;**&#39;</li>
+<li><p>用法：</p>
+<pre><code class="hljs lang-js">  fis.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.files'</span>, [<span class="hljs-string">'*.html'</span>]);
+</code></pre>
+</li>
+</ul>
+<a name="project.ignore" class="title-anchor"></a><h4 class="" >project.ignore</h4><ul>
+<li>解释：排除某些文件</li>
+<li>值类型：<code>Array</code></li>
+<li>默认值：<code>[&#39;node_modules/**&#39;, &#39;output/**&#39;, &#39;fis-conf.js&#39;]</code></li>
+<li><p>用法</p>
+<pre><code>  fis.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.ignore'</span>, [<span class="hljs-string">'*.bak'</span>]); <span class="hljs-comment">// set 为覆盖不是叠加</span>
+</code></pre></li>
+</ul>
+<a name="project.fileType.text" class="title-anchor"></a><h4 class="" >project.fileType.text</h4><ul>
+<li>解释：追加文本文件后缀列表。</li>
+<li>值类型：<code>Array</code> | <code>string</code></li>
+<li>默认值：无</li>
+<li>说明：fis系统在编译时会对文本文件和图片类二进制文件做不同的处理，文件分类依据是后缀名。虽然内部已列出一些常见的文本文件后缀，但难保用户有其他的后缀文件，内部已列入文本文件后缀的列表为： [ <strong>&#39;css&#39;, &#39;tpl&#39;, &#39;js&#39;, &#39;php&#39;, &#39;txt&#39;, &#39;json&#39;, &#39;xml&#39;, &#39;htm&#39;, &#39;text&#39;, &#39;xhtml&#39;, &#39;html&#39;, &#39;md&#39;, &#39;conf&#39;, &#39;po&#39;, &#39;config&#39;, &#39;tmpl&#39;, &#39;coffee&#39;, &#39;less&#39;, &#39;sass&#39;, &#39;jsp&#39;, &#39;scss&#39;, &#39;manifest&#39;, &#39;bak&#39;, &#39;asp&#39;, &#39;tmp&#39;</strong> ]，用户配置会 <strong>追加</strong>，而非覆盖内部后缀列表。</li>
+<li><p>用法：编辑项目的fis-conf.js配置文件</p>
+<pre><code class="hljs lang-js">  fis.set(<span class="hljs-symbol">'project</span>.fileType.text', <span class="hljs-symbol">'tpl</span>, js, css');
+</code></pre>
+</li>
+</ul>
+<a name="project.fileType.image" class="title-anchor"></a><h4 class="" >project.fileType.image</h4><ul>
+<li>解释：追加图片类二进制文件后缀列表。</li>
+<li>值类型：<code>Array</code> | <code>string</code></li>
+<li>默认值：无</li>
+<li>说明：fis系统在编译时会对文本文件和图片类二进制文件做不同的处理，文件分类依据是后缀名。虽然内部已列出一些常见的图片类二进制文件后缀，但难保用户有其他的后缀文件，内部已列入文本文件后缀的列表为： [ <strong>&#39;svg&#39;, &#39;tif&#39;, &#39;tiff&#39;, &#39;wbmp&#39;, &#39;png&#39;, &#39;bmp&#39;, &#39;fax&#39;, &#39;gif&#39;, &#39;ico&#39;, &#39;jfif&#39;, &#39;jpe&#39;, &#39;jpeg&#39;, &#39;jpg&#39;, &#39;woff&#39;, &#39;cur&#39;</strong> ]，用户配置会 <strong>追加</strong>，而非覆盖内部后缀列表。</li>
+<li><p>用法：编辑项目的fis-conf.js配置文件</p>
+<pre><code class="hljs lang-js">  fis.set(<span class="hljs-symbol">'project</span>.fileType.image', <span class="hljs-symbol">'swf</span>, cur, ico');
+</code></pre>
+</li>
+</ul>
+<a name="%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7" class="title-anchor"></a><h3 class="" id="文件属性">文件属性</h3><p>fis3 以文件属性控制文件的编译合并以及各种操作；文件属性包括基本属性和插件属性，插件属性是为了方便在不同的插件扩展点设置插件；</p>
+<a name="%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7" class="title-anchor"></a><h4 class="" >基本属性</h4><ul>
+<li><a href="#release">release</a></li>
+<li><a href="#packTo">packTo</a></li>
+<li><a href="#packOrder">packOrder</a></li>
+<li><a href="#query">query</a></li>
+<li><a href="#id">id</a></li>
+<li><a href="#url">url</a></li>
+<li><a href="#charset">charset</a></li>
+<li><a href="#isHtmlLike">isHtmlLike</a></li>
+<li><a href="#isCssLike">isCssLike</a></li>
+<li><a href="#isJsLike">isJsLike</a></li>
+<li><a href="#useHash">useHash</a></li>
+<li><a href="#domain">domain</a></li>
+<li><a href="#rExt">rExt</a></li>
+<li><a href="#useMap">useMap</a></li>
+<li><a href="#isMod">isMod</a></li>
+<li><a href="#extras">extras</a></li>
+<li><a href="#requires">requires</a></li>
+<li><a href="#useSameNameRequire">useSameNameRequire</a></li>
+<li><a href="#useCache">useCache</a></li>
+<li><a href="#useCompile">useCompile</a></li>
+</ul>
+<a name="release" class="title-anchor"></a><h5 class="" >release</h5><ul>
+<li>解释：设置文件的产出路径。默认是文件相对项目根目录的路径，以 / 开头。该值可以设置为 false ，表示为不产出（unreleasable）文件。</li>
+<li>值类型：<code>string</code></li>
+<li><p>默认值：无</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/widget/{*,**/*}.js'</span>, {
+      <span class="hljs-attribute">isMod</span>: true,
+      <span class="hljs-attribute">release</span>: <span class="hljs-string">'/static/$0'</span>
+  });
+</code></pre>
+</li>
+</ul>
+<a name="packTo" class="title-anchor"></a><h5 class="" >packTo</h5><ul>
+<li>解释：分配到这个属性的文件将会合并到这个属性配置的文件中</li>
+<li>值类型：<code>string</code></li>
+<li><p>默认值：无</p>
+<pre><code>  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/widget/{*,**/*}.js'</span>, {
+      <span class="hljs-attribute">packTo</span>: <span class="hljs-string">'/static/pkg_widget.js'</span>
+  })
+</code></pre><p>  widget 目录下的所有 js 文件将会被合并到 /static/pkg_widget.js 中。
+  <strong>packTo 设置的是源码路径，也会受到已经设置的 fis.match 规则的影响</strong>，比如可以配置<a href="#fis.match(">fis.match</a>) 来更改 <code>packTo</code> 的产出路径或者 url；</p>
+<pre><code class="hljs lang-js">  fis.<span class="hljs-keyword">match</span>('/<span class="hljs-keyword">static</span>/pkg_widget.js', {
+      release: '/<span class="hljs-keyword">static</span>/${<span class="hljs-keyword">namespace</span>}/pkg/widget.js' <span class="hljs-comment">// fis.set('namespace', 'home'),</span>
+      url: '/<span class="hljs-keyword">static</span>/<span class="hljs-keyword">new</span>/${<span class="hljs-keyword">namespace</span>}/pkg/widget.js'
+  })
+</code></pre>
+</li>
+</ul>
+<a name="packOrder" class="title-anchor"></a><h5 class="" >packOrder</h5><ul>
+<li>解释：用来控制合并时的顺序，值越小越在前面。配合 <code>packTo</code> 一起使用。</li>
+<li>值类型：<code>Integer</code></li>
+<li>默认值：<code>0</code></li>
+</ul>
+<pre><code class="hljs lang-javascript">fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'/*.js'</span>, {
+  packTo: <span class="hljs-string">'pkg/script.js'</span>
+})
+
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'/mod.js'</span>, {
+  packOrder: -<span class="hljs-number">100</span>
+})
+</code></pre>
+<a name="query" class="title-anchor"></a><h5 class="" >query</h5><ul>
+<li>解释：指定文件的资源定位路径之后的query，比如&#39;?t=123124132&#39;。</li>
+<li>值类型：<code>string</code></li>
+<li><p>默认值：无</p>
+<pre><code class="hljs lang-js">  fis<span class="hljs-built_in">.</span><span class="hljs-built_in">set</span>(<span class="hljs-string">'new date'</span>, <span class="hljs-built_in">Date</span><span class="hljs-built_in">.</span>now());
+  fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'*.js'</span>, {
+      query: <span class="hljs-string">'?=t'</span> + fis<span class="hljs-built_in">.</span>get(<span class="hljs-string">'new date'</span>)
+  });
+</code></pre>
+</li>
+</ul>
+<a name="id" class="title-anchor"></a><h5 class="" >id</h5><ul>
+<li>解释：指定文件的资源id。默认是 <strong>namespace + subpath</strong> 的值</li>
+<li>值类型：<code>string</code></li>
+<li><p>默认值：<strong>namespace + subpath</strong></p>
+<p>  如下方例子，假设 <code>/static/lib/jquery.js</code> 设定了特定的 id <code>jquery</code>,
+  那么在使用这个组件的时候，可以直接用这个 id；</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/static/lib/jquery.js'</span>, {
+      <span class="hljs-attribute">id</span>: <span class="hljs-string">'jquery'</span>,
+      <span class="hljs-attribute">isMod</span>: true
+  });
+</code></pre>
+<p>  使用</p>
+<pre><code class="hljs lang-js">  var <span class="hljs-variable">$ </span>= <span class="hljs-keyword">require</span>(<span class="hljs-string">'jquery'</span>);
+</code></pre>
+</li>
+</ul>
+<a name="moduleId" class="title-anchor"></a><h5 class="" >moduleId</h5><ul>
+<li>解释：指定文件资源的模块id。在插件<code>fis3-hook-module</code>里面自动包裹<code>define</code>的时候会用到，默认是 id 的值。</li>
+<li>类型：<code>string</code></li>
+<li><p>默认值：<code>**namespace + subpath**</code></p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/static/lib/a.js'</span>, {
+      <span class="hljs-attribute">id</span>: <span class="hljs-string">'a'</span>,
+      <span class="hljs-attribute">moduleId</span>: <span class="hljs-string">'a'</span>
+      <span class="hljs-attribute">isMod</span>: true
+  });
+</code></pre>
+<p>  编译前</p>
+<pre><code class="hljs lang-js">  exports<span class="hljs-class">.a</span> = <span class="hljs-number">10</span>
+</code></pre>
+<p>  编译后</p>
+<pre><code class="hljs lang-js">  define(<span class="hljs-string">'a'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(<span class="hljs-keyword">require</span>,exports,<span class="hljs-keyword">module</span>)</span><span class="hljs-comment">{
+    exports.a = 10
+  }</span>)</span>
+</code></pre>
+</li>
+</ul>
+<a name="url" class="title-anchor"></a><h5 class="" >url</h5><ul>
+<li>解释：指定文件的资源定位路径，以 / 开头。默认是 <a href="#release">release</a> 的值，url可以与发布路径 release 不一致。</li>
+<li>值类型：<code>string</code></li>
+<li><p>默认值：无</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.{js,css}'</span>, {
+      <span class="hljs-attribute">release</span>: <span class="hljs-string">'/static/$0'</span>,
+      <span class="hljs-attribute">url</span>: <span class="hljs-string">'/static/new_project/$0'</span>
+  })
+</code></pre>
+</li>
+</ul>
+<a name="charset" class="title-anchor"></a><h5 class="" >charset</h5><ul>
+<li>解释：指定文本文件的输出编码。默认是 utf8，可以制定为 gbk 或 gb2312等。</li>
+<li>值类型：<code>string</code></li>
+<li><p>默认值：无</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'some/file/path'</span>, {
+      <span class="hljs-attribute">charset</span>: <span class="hljs-string">'gbk'</span>
+  });
+</code></pre>
+<blockquote>
+<p>使用 charset 编码需要使用<a href="https://github.com/fex-team/fis3-deploy-encoding">encoding</a>插件发布编译结果</p>
+</blockquote>
+</li>
+</ul>
+<a name="isHtmlLike" class="title-anchor"></a><h5 class="" >isHtmlLike</h5><ul>
+<li>解释：指定对文件进行 <a href="/fis3/docs/user-dev/extlang.html#html">html</a> 相关语言能力处理</li>
+<li>值类型：<code>bool</code></li>
+<li>默认值：无</li>
+</ul>
+<a name="isCssLike" class="title-anchor"></a><h5 class="" >isCssLike</h5><ul>
+<li>解释：指定对文件进行 <a href="/fis3/docs/user-dev/extlang.html#css">css</a> 相关的语言能力处理</li>
+<li>值类型：<code>bool</code></li>
+<li>默认值：无</li>
+</ul>
+<a name="isJsLike" class="title-anchor"></a><h5 class="" >isJsLike</h5><ul>
+<li>解释：指定对文件进行 <a href="/fis3/docs/user-dev/extlang.html#js">js</a> 相关的语言能力处理</li>
+<li>值类型：<code>string</code></li>
+<li>默认值：无</li>
+</ul>
+<a name="useHash" class="title-anchor"></a><h5 class="" >useHash</h5><ul>
+<li>解释：文件是否携带 md5 戳</li>
+<li>值类型：<code>bool</code></li>
+<li>默认值：false</li>
+<li><p>说明：文件分配到此属性后，其 url 及其产出带 md5 戳；</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.css'</span>, {
+      <span class="hljs-attribute">useHash</span>: false
+  });
+
+  <span class="hljs-tag">fis</span><span class="hljs-class">.media</span>(<span class="hljs-string">'prod'</span>)<span class="hljs-class">.match</span>(<span class="hljs-string">'*.css'</span>, {
+      <span class="hljs-attribute">useHash</span>: true
+  });
+
+</code></pre>
+<ul>
+<li>fis3 release 时不带hash</li>
+<li>fis3 release prod 时带 hash</li>
+</ul>
+</li>
+</ul>
+<a name="domain" class="title-anchor"></a><h5 class="" >domain</h5><ul>
+<li>解释：给文件 URL 设置 domain 信息</li>
+<li>值类型：<code>string</code></li>
+<li>默认值：无</li>
+<li><p>说明：如果需要给某些资源添加 cdn，分配到此属性的资源 url 会被添加 domain；</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.media</span>(<span class="hljs-string">'prod'</span>)<span class="hljs-class">.match</span>(<span class="hljs-string">'*.js'</span>, {
+      <span class="hljs-attribute">domain</span>: <span class="hljs-string">'http://cdn.baidu.com/'</span>
+  });
+</code></pre>
+<ul>
+<li>fis3 release prod 时添加cdn</li>
+</ul>
+</li>
+</ul>
+<a name="rExt" class="title-anchor"></a><h5 class="" >rExt</h5><ul>
+<li>解释：设置最终文件产出后的后缀</li>
+<li>值类型：<code>string</code></li>
+<li>默认值：无</li>
+<li><p>说明：分配到此属性的资源的真实产出后缀</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.less'</span>, {
+      <span class="hljs-attribute">rExt</span>: <span class="hljs-string">'.css'</span>
+  });
+</code></pre>
+<p>  源码为<code>.less</code>文件产出后修改为<code>.css</code>文件；</p>
+</li>
+</ul>
+<a name="useMap" class="title-anchor"></a><h5 class="" >useMap</h5><ul>
+<li>解释：文件信息是否添加到 map.json</li>
+<li>值类型：<code>bool</code></li>
+<li>默认值：无</li>
+<li><p>说明： 分配到此属性的资源出现在静态资源表中，现在对 js、css 等文件默认加入了静态资源表中；</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'logo.png'</span>, {
+      <span class="hljs-attribute">useMap</span>: true
+  });
+</code></pre>
+</li>
+</ul>
+<a name="isMod" class="title-anchor"></a><h5 class="" >isMod</h5><ul>
+<li>解释：标示文件是否为组件化文件。</li>
+<li>值类型：<code>bool</code></li>
+<li>默认值：无</li>
+<li><p>说明：标记文件为组件化文件。被标记成组件化的文件会入map.json表。并且会对js文件进行组件化包装。</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/widget/{*,**/*}.js'</span>, {
+      <span class="hljs-attribute">isMod</span>: true
+  });
+</code></pre>
+</li>
+</ul>
+<a name="extras" class="title-anchor"></a><h5 class="" >extras</h5><ul>
+<li>注释：在[静态资源映射表][]中的附加数据，用于扩展[静态资源映射表][]表的功能。</li>
+<li>值类型：<code>Object</code></li>
+<li>默认值：无</li>
+<li><p>说明：无</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/page/layout.tpl'</span>, {
+      <span class="hljs-tag">extras</span>: {
+          <span class="hljs-attribute">isPage</span>: true
+      }
+  });
+</code></pre>
+</li>
+</ul>
+<a name="requires" class="title-anchor"></a><h5 class="" >requires</h5><ul>
+<li>注释：默认依赖的资源id表</li>
+<li>值类型：<code>Array</code></li>
+<li>默认值：无</li>
+<li><p>说明：</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/widget/*.js'</span>, {
+      <span class="hljs-attribute">requires</span>: [
+          <span class="hljs-string">'static/lib/jquery.js'</span>
+      ]
+  });
+</code></pre>
+</li>
+</ul>
+<a name="useSameNameRequire" class="title-anchor"></a><h5 class="" >useSameNameRequire</h5><ul>
+<li>注释：开启同名依赖</li>
+<li>值类型：<code>bool</code></li>
+<li>默认值：<code>false</code></li>
+<li><p>说明：当设置开启同名依赖，模板会依赖同名css、js；js 会依赖同名 css，不需要显式引用。</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/widget/**'</span>, {
+      <span class="hljs-attribute">useSameNameRequire</span>: true
+  });
+</code></pre>
+</li>
+</ul>
+<a name="useCache" class="title-anchor"></a><h5 class="" >useCache</h5><ul>
+<li>注释： 文件是否使用编译缓存</li>
+<li>值类型：<code>bool</code></li>
+<li>默认值： <code>true</code></li>
+<li><p>说明：当设置使用编译缓存，每个文件的编译结果均会在磁盘中保存以供下次编译使用。设置为 <code>false</code> 后，则该文件每次均会被编译。</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**.html'</span>, {
+      <span class="hljs-attribute">useCache</span>: false
+  });
+</code></pre>
+</li>
+</ul>
+<a name="useCompile" class="title-anchor"></a><h5 class="" >useCompile</h5><ul>
+<li>注释： FIS是否对文件进行编译</li>
+<li>值类型：<code>bool</code></li>
+<li>默认值： <code>true</code></li>
+<li><p>说明：设置为 <code>false</code> 后文件会通过FIS发布，但是FIS不对文件做任何修改</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**.html'</span>, {
+      <span class="hljs-attribute">useCompile</span>: false
+  });
+</code></pre>
+</li>
+</ul>
+<a name="%E6%8F%92%E4%BB%B6%E5%B1%9E%E6%80%A7" class="title-anchor"></a><h4 class="" >插件属性</h4><p>插件属性决定了匹配的文件进行哪些插件的处理；</p>
+<ul>
+<li><a href="#lint">lint</a></li>
+<li><a href="#parser">parser</a></li>
+<li><a href="#preprocessor">preprocessor</a></li>
+<li><a href="#standard">standard</a></li>
+<li><a href="#postprocessor">postprocessor</a></li>
+<li><a href="#optimizer">optimizer</a></li>
+</ul>
+<a name="lint" class="title-anchor"></a><h5 class="" >lint</h5><p>启用 lint 插件进行代码检查</p>
+<pre><code class="hljs lang-js"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.js'</span>, {
+    <span class="hljs-tag">lint</span>: <span class="hljs-tag">fis</span><span class="hljs-class">.plugin</span>(<span class="hljs-string">'js'</span>, {
+
+    })
+})
+</code></pre>
+<p><a href="http://npmsearch.com/?q=fis-lint%20fis3-lint">更多插件</a></p>
+<a name="parser" class="title-anchor"></a><h5 class="" >parser</h5><p>启用 parser 插件对文件进行处理；</p>
+<p>如编译less文件</p>
+<pre><code class="hljs lang-js"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.less'</span>, {
+   <span class="hljs-attribute">parser</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'less'</span>), <span class="hljs-comment">//启用fis-parser-less插件</span>
+   <span class="hljs-attribute">rExt</span>: <span class="hljs-string">'.css'</span>
+});
+</code></pre>
+<p>如编译sass文件</p>
+<pre><code class="hljs lang-js"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.sass'</span>, {
+    <span class="hljs-attribute">parser</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'node-sass'</span>), <span class="hljs-comment">//启用fis-parser-node-sass插件</span>
+    <span class="hljs-attribute">rExt</span>: <span class="hljs-string">'.css'</span>
+});
+</code></pre>
+<p><a href="http://npmsearch.com/?q=fis-parser%20fis3-parser">更多插件</a></p>
+<a name="preprocessor" class="title-anchor"></a><h5 class="" >preprocessor</h5><p>标准化前处理</p>
+<pre><code class="hljs lang-js"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.{css,less}'</span>, {
+    <span class="hljs-attribute">preprocessor</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'image-set'</span>)
+});
+</code></pre>
+<p><a href="http://npmsearch.com/?q=fis-preprocessor%20fis3-preprocessor">更多插件</a></p>
+<a name="standard" class="title-anchor"></a><h5 class="" >standard</h5><p>自定义标准化，可以自定义 uri、embed、require 等三种能力，可自定义三种语言能力的语法；</p>
+<p><a href="http://npmsearch.com/?q=fis-standard%20fis3-standard">更多插件</a></p>
+<a name="postprocessor" class="title-anchor"></a><h5 class="" >postprocessor</h5><p>标准化后处理</p>
+<pre><code class="hljs lang-js"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.{js,tpl}'</span>, {
+   <span class="hljs-attribute">postprocessor</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'require-async'</span>)
+});
+</code></pre>
+<p><a href="http://npmsearch.com/?q=fis-postprocessor%20fis3-postprocessor">更多插件</a></p>
+<a name="optimizer" class="title-anchor"></a><h5 class="" >optimizer</h5><p>启用优化处理插件，并配置其属性</p>
+<pre><code class="hljs lang-js"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.css'</span>, {
+    <span class="hljs-attribute">optimizer</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'clean-css'</span>)
+});
+</code></pre>
+<p><a href="http://npmsearch.com/?q=fis-optimizer%20fis3-optimizer">更多插件</a></p>
+<a name="%E6%89%93%E5%8C%85%E9%98%B6%E6%AE%B5%E6%8F%92%E4%BB%B6" class="title-anchor"></a><h5 class="" >打包阶段插件</h5><p>打包阶段插件设置时<strong>必须分配给所有文件</strong>，设置时必须 match <code>::package</code>，不然不做处理。</p>
+<pre><code class="hljs lang-js"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'::package'</span>, {
+    <span class="hljs-attribute">packager</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'map'</span>),
+    <span class="hljs-attribute">spriter</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'csssprites'</span>)
+});
+</code></pre>
+<a name="prepackager" class="title-anchor"></a><h6 class="" >prepackager</h6><ul>
+<li>解释：打包预处理插件</li>
+<li>值类型：<code>Array</code> | <code>fis.plugin</code> | <code>function</code></li>
+<li>默认值：无</li>
+<li><p>用法：</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'::package'</span>, {
+      <span class="hljs-attribute">prepackager</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'plugin-name'</span>)
+  })
+</code></pre>
+</li>
+</ul>
+<a name="packager" class="title-anchor"></a><h6 class="" >packager</h6><ul>
+<li>解释：打包插件</li>
+<li>值类型：<code>Array</code> | <code>fis.plugin</code> | <code>function</code></li>
+<li>默认值：无</li>
+<li><p>用法：</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'::package'</span>, {
+      <span class="hljs-attribute">packager</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'map'</span>)
+  })
+</code></pre>
+<p>  <em>例子</em></p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.media</span>(<span class="hljs-string">'prod'</span>)<span class="hljs-class">.match</span>(<span class="hljs-string">'::package'</span>, {
+      <span class="hljs-attribute">packager</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'map'</span>)
+  });
+</code></pre>
+<p>  <code>fis3 release prod</code> 当在 prod 状态下进行打包</p>
+</li>
+</ul>
+<a name="spriter" class="title-anchor"></a><h6 class="" >spriter</h6><ul>
+<li>解释：打包后处理csssprite的插件。</li>
+<li>值类型：<code>Array</code> | <code>fis.plugin</code> | <code>function</code></li>
+<li>默认值：无</li>
+<li><p>用法：</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'::package'</span>, {
+      <span class="hljs-attribute">spriter</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'csssprites'</span>)
+  })
+</code></pre>
+<p>  <em>例子</em></p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.media</span>(<span class="hljs-string">'prod'</span>)<span class="hljs-class">.match</span>(<span class="hljs-string">'::package'</span>, {
+      <span class="hljs-attribute">spriter</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'csssprites'</span>)
+  });
+</code></pre>
+<p>  <code>fis3 release prod</code> 当在 prod 状态下进行 csssprites 处理</p>
+</li>
+</ul>
+<a name="postpackager" class="title-anchor"></a><h6 class="" >postpackager</h6><ul>
+<li>解释：打包后处理插件。</li>
+<li>值类型：<code>Array</code> | <code>fis.plugin</code> | <code>function</code></li>
+<li>默认值：无</li>
+<li><p>用法：</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'::package'</span>, {
+      <span class="hljs-attribute">postpackager</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'plugin-name'</span>)
+  })
+</code></pre>
+<p>  <em>例子</em></p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.media</span>(<span class="hljs-string">'prod'</span>)<span class="hljs-class">.match</span>(<span class="hljs-string">'::package'</span>, {
+      <span class="hljs-attribute">postpackager</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'plugin-name'</span>)
+  });
+</code></pre>
+<p>  <code>fis3 release prod</code> 当在 prod 状态下调用打包后处理插件</p>
+</li>
+</ul>
+<a name="deploy" class="title-anchor"></a><h5 class="" >deploy</h5><ul>
+<li>解释：设置项目发布方式</li>
+<li>值类型：<code>Array</code> | <code>fis.plugin</code> | <code>function</code></li>
+<li>默认值：<code>fis.plugin(&#39;local-deliver&#39;)</code></li>
+<li>说明：编译打包后，新增发布阶段，这个阶段主要决定了资源的发布方式，而这些方式都是以插件的方式提供的。比如你想一键部署到远端或者是把文件打包到 Tar/Zip 又或者是直接进行 Git 提交，都可以通过设置此属性，调用相应的插件就能搞定了。</li>
+<li><p>用法：</p>
+<p>  假设项目开发完后，想部署到其他机器上，我们选择 http 提交数据的方式部署</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**'</span>, {
+      <span class="hljs-tag">deploy</span>: <span class="hljs-tag">fis</span><span class="hljs-class">.plugin</span>(<span class="hljs-string">'http-push'</span>, {
+          <span class="hljs-attribute">receiver</span>: <span class="hljs-string">'http://target-host/receiver.php'</span>, <span class="hljs-comment">// 接收端</span>
+          <span class="hljs-attribute">to</span>: <span class="hljs-string">'/home/work/www'</span> <span class="hljs-comment">// 将部署到服务器的这个目录下</span>
+      })
+  })
+</code></pre>
+</li>
+<li><p>常用插件</p>
+<ul>
+<li><a href="https://github.com/fex-team/fis3-deploy-local-deliver">local-deliver</a></li>
+<li><a href="https://github.com/fex-team/fis3-deploy-http-push">http-push</a></li>
+<li><a href="https://github.com/fex-team/fis3-deploy-replace">replace</a></li>
+<li><a href="https://github.com/fex-team/fis3-deploy-encoding">encoding</a></li>
+</ul>
+</li>
+</ul>
+<blockquote class="warning"><p>文档内容有误，可提 PR，文档地址: <i class="fa fa-github"></i><a href="https://github.com/fex-team/fis3/blob/dev/doc/docs/api/config-props.md">/doc/docs/api/config-props.md</a></p></blockquote>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4206d67a3ea708c0d2a9354c8d88525f' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+            
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){                 
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");  
+            $(".sidebar").removeClass("open");        
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                var range = st - lastScrollTop;
+                if(range > 5){
+                    $("body").addClass("hide-header");
+                }else if(range < -5){
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }        
+            lastScrollTop = st;
+        });
+
+
+        if ($.cookie("isInternal") === "1") {
+            $(".nav-left").append($("<a></a>").attr("href", "baidu://message?appid=wJUNQ3gXdlgOsRPajPapUQ").addClass("nav-link").text("在线客服"));
+        }
+    }());
+</script>
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?58781c9e97848ee4bfe5b036058c99e7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

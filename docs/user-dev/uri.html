@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="_FIS_构建工具_前端工具框架" />
+    <meta name="keywords" content=",百度前端团队,FIS,百度FIS,百度前端,fis,前端模块化,前端工程,性能优化,web performance" />
+    <link rel="shortcut icon" href="/fis3/static/images/favicon-fis.ico"/>
+    <title>FIS3 :  定位资源</title>
+    <meta name="description" content="FIS3 面向前端的工程构建系统">
+    <meta name="author" content="fis-team">
+    
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/fis3/static/css/common_3a72140.css">
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+    <script type="text/javascript">
+        //检查页面域名
+        (function(){
+            var url = window.location.href;
+            if (url.indexOf('http://fex.baidu.com/fis-site') !== -1) {
+                window.location.href = url.replace('http://fex.baidu.com/fis-site','http://fis.baidu.com');
+            }
+        })();
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script type="text/javascript" src="/fis3/static/js/jquery.cookie_a5283b2.js"></script>
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  is-active">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  ">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar">
+    <ul>
+<li><a href="/fis3/docs/beginning/intro.html">介绍</a></li>
+<li><a href="/fis3/docs/beginning/install.html">安装</a></li>
+<li>起步<ul>
+<li><a href="/fis3/docs/beginning/release.html">构建</a><ul>
+<li><a href="/fis3/docs/beginning/release.html#%E4%BE%8B%E5%AD%90">例子</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%91%BD%E4%BB%A4">命令</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D">资源定位</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">配置文件</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9">文件指纹</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8E%8B%E7%BC%A9%E8%B5%84%E6%BA%90">压缩资源</a></li>
+<li><a href="/fis3/docs/beginning/release.html#CssSprite%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6">CssSprite图片合并</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8A%9F%E8%83%BD%E7%BB%84%E5%90%88">功能组合</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/beginning/debug.html">调试</a><ul>
+<li><a href="/fis3/docs/beginning/debug.html#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83">发布</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%90%AF%E5%8A%A8">启动</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E9%A2%84%E8%A7%88">预览</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC">文件监听</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0">浏览器自动刷新</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83%E5%88%B0%E8%BF%9C%E7%AB%AF%E6%9C%BA%E5%99%A8">发布到远端机器</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%9B%BF%E4%BB%A3%E5%86%85%E7%BD%AEServer">替代内置Server</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/user-dev/extlang.html">内置语法</a><ul>
+<li><a href="/fis3/docs/user-dev/inline.html">内容嵌入</a></li>
+<li><a href="/fis3/docs/user-dev/uri.html">定位资源</a></li>
+<li><a href="/fis3/docs/user-dev/require.html">声明依赖</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/fis3/docs/build.html">工作原理</a><ul>
+<li><a href="/fis3/docs/build.html#%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B">构建流程</a></li>
+<li><a href="/fis3/docs/build.html#%E5%8D%95%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B">单文件编译流程</a></li>
+<li><a href="/fis3/docs/build.html#File%E5%AF%B9%E8%B1%A1">File对象</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv1.html">初级使用</a><ul>
+<li><a href="/fis3/docs/lv1.html#%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%82%B9%E7%9A%84%E4%BE%8B%E5%AD%90">一个复杂点的例子</a></li>
+<li><a href="/fis3/docs/lv1.html#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E6%8F%92%E4%BB%B6">安装一些插件</a></li>
+<li><a href="/fis3/docs/lv1.html#%E9%A2%84%E5%A4%84%E7%90%86">预处理</a></li>
+<li><a href="/fis3/docs/lv1.html#%E7%AE%80%E5%8D%95%E5%90%88%E5%B9%B6">简单合并</a></li>
+<li><a href="/fis3/docs/lv1.html#%E6%9E%84%E5%BB%BA%E8%B0%83%E8%AF%95%E9%A2%84%E8%A7%88">构建调试预览</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv2.html">中级使用</a><ul>
+<li><a href="/fis3/docs/lv2.html#%E9%A2%84%E5%A4%84%E7%90%86%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">预处理插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E6%89%93%E5%8C%85%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">打包插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E5%8F%91%E5%B8%83%E6%8F%92%E4%BB%B6">发布插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv3.html">高级使用</a><ul>
+<li><a href="/fis3/docs/lv3.html#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A1%A8">静态资源映射表</a></li>
+<li><a href="/fis3/docs/lv3.html#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91">模块化开发</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1">资源映射表的模块化方案设计</a></li>
+<li><a href="/fis3/docs/lv3.html#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B0%81%E8%A3%85">解决方案封装</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ESmarty%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Smarty的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E7%BA%AFPHP%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于纯PHP的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ELaravel%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Laravel的解决方案</a></li>
+</ul>
+</li>
+<li>接口文档<ul>
+<li><a href="/fis3/docs/api/command.html">命令行</a></li>
+<li><a href="/fis3/docs/api/config.html">配置</a><ul>
+<li><a href="/fis3/docs/api/config-api.html">配置接口</a></li>
+<li><a href="/fis3/docs/api/config-props.html">配置属性</a></li>
+<li><a href="/fis3/docs/api/config-commonly-used.html">常用配置</a></li>
+<li><a href="/fis3/docs/api/config-glob.html">glob</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/api/config-system-plugin.html">内置插件及配置</a></li>
+<li><a href="/fis3/docs/api/dev-plugin.html">自定义插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/fis2-to-fis3.html">FIS2 到 FIS3</a></li>
+<li><a href="/fis3/docs/pack.html">资源合并</a></li>
+<li><a href="/fis3/docs/node-mock.html">mock 假数据模拟</a></li>
+<li><a href="/fis3/docs/common-plugin.html">常用的插件列表</a></li>
+</ul>
+
+    <div class="bottom-shadow"></div>
+</div>
+
+    <div class="content api with-sidebar">
+        <a name="%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90" class="title-anchor"></a><h3 class="" id="定位资源">定位资源</h3><p>定位资源能力，可以有效地分离开发路径与部署路径之间的关系，工程师不再关心资源部署到线上之后去了哪里，变成了什么名字，这些都可以通过配置来指定。而工程师只需要使用相对路径来定位自己的开发资源即可。这样的好处是：资源可以发布到任何静态资源服务器的任何路径上而不用担心线上运行时找不到它们，而且代码具有很强的可移植性，甚至可以从一个产品线移植到另一个产品线而不用担心线上部署不一致的问题。</p>
+<p><img src="https://raw.githubusercontent.com/fouber/fis-wiki-img/master/uri.png" alt="定位资源"></p>
+<a name="%E5%9C%A8html%E4%B8%AD%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90" class="title-anchor"></a><h4 class="" >在html中定位资源</h4><p>FIS3 支持对html中的script、link、style、video、audio、embed等标签的src或href属性进行分析，一旦这些标签的资源定位属性可以命中已存在文件，则把命中文件的url路径替换到属性中，同时可保留原来url中的query查询信息。</p>
+<p>例如：</p>
+<pre><code class="hljs lang-html"><span class="hljs-comment">&lt;!--源码：
+&lt;img title="百度logo" src="images/logo.gif"/&gt;
+编译后--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"百度logo"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/images/logo_74e5229.gif"</span>/&gt;</span>
+
+<span class="hljs-comment">&lt;!--源码：
+&lt;link rel="stylesheet" type="text/css" href="demo.css"&gt;
+编译后--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/demo_7defa41.css"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--源码：
+&lt;script type="text/javascript" src="demo.js"&gt;&lt;/script&gt;
+编译后--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/demo_33c5143.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>值得注意的是， <strong>资源定位结果可以被fis的配置文件控制</strong>，比如添加配置，调整文件发布路径：</p>
+<p><img src="https://raw.githubusercontent.com/fouber/fis-wiki-img/master/uri.png" alt="资源定位工作原理"></p>
+<pre><code class="hljs lang-javascript"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.{js,css,png,gif}'</span>, {
+    <span class="hljs-attribute">useHash</span>: true <span class="hljs-comment">// 开启 md5 戳</span>
+});
+
+<span class="hljs-comment">// 所有的 js</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**.js'</span>, {
+    <span class="hljs-comment">//发布到/static/js/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release </span>: <span class="hljs-string">'/static/js$0'</span>
+});
+
+<span class="hljs-comment">// 所有的 css</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**.css'</span>, {
+    <span class="hljs-comment">//发布到/static/css/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release </span>: <span class="hljs-string">'/static/css$0'</span>
+});
+
+<span class="hljs-comment">// 所有image目录下的.png，.gif文件</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/images/(*.{png,gif})'</span>, {
+    <span class="hljs-comment">//发布到/static/pic/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release</span>: <span class="hljs-string">'/static/pic/$1$2'</span>
+});
+</code></pre>
+<p>再次编译得到：</p>
+<pre><code class="hljs lang-html"><span class="hljs-comment">&lt;!--源码：
+&lt;img title="百度logo" src="images/logo.gif"/&gt;
+编译后--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"百度logo"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/static/pic/logo_74e5229.gif"</span>/&gt;</span>
+
+<span class="hljs-comment">&lt;!--源码：
+&lt;link rel="stylesheet" type="text/css" href="demo.css"&gt;
+编译后--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/static/css/demo_7defa41.css"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--源码：
+&lt;script type="text/javascript" src="demo.js"&gt;&lt;/script&gt;
+编译后--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/static/js/demo_33c5143.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>我们甚至可以让 <strong>url和发布目录不一致</strong>。比如：</p>
+<pre><code class="hljs lang-javascript">
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.{js,css,png,gif}'</span>, {
+    <span class="hljs-attribute">useHash</span>: true <span class="hljs-comment">// 开启 md5 戳</span>
+});
+
+<span class="hljs-comment">// 所有的 js</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**.js'</span>, {
+    <span class="hljs-comment">//发布到/static/js/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release </span>: <span class="hljs-string">'/static/js$0'</span>,
+    <span class="hljs-comment">//访问url是/mm/static/js/<span class="hljs-label">xxx</span></span>
+    <span class="hljs-attribute">url </span>: <span class="hljs-string">'/mm/static/js$0'</span>
+});
+
+<span class="hljs-comment">// 所有的 css</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**.css'</span>, {
+    <span class="hljs-comment">//发布到/static/css/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release </span>: <span class="hljs-string">'/static/css$0'</span>,
+    <span class="hljs-comment">//访问url是/pp/static/css/<span class="hljs-label">xxx</span></span>
+    <span class="hljs-attribute">url </span>: <span class="hljs-string">'/pp/static/css$0'</span>
+});
+
+<span class="hljs-comment">// 所有image目录下的.png，.gif文件</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/images/(*.{png,gif})'</span>, {
+    <span class="hljs-comment">//发布到/static/pic/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release</span>: <span class="hljs-string">'/static/pic/$1'</span>,
+    <span class="hljs-comment">//访问url是/oo/static/baidu/<span class="hljs-label">xxx</span></span>
+    <span class="hljs-attribute">url </span>: <span class="hljs-string">'/oo/static/baidu$0'</span>
+});
+</code></pre>
+<p>再次编译得到：</p>
+<pre><code class="hljs lang-html"><span class="hljs-comment">&lt;!--源码：
+&lt;img title="百度logo" src="images/logo.gif"/&gt;
+编译后--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"百度logo"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/oo/static/baidu/logo_74e5229.gif"</span>/&gt;</span>
+
+<span class="hljs-comment">&lt;!--源码：
+&lt;link rel="stylesheet" type="text/css" href="demo.css"&gt;
+编译后--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/pp/static/css/demo_7defa41.css"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--源码：
+&lt;script type="text/javascript" src="demo.js"&gt;&lt;/script&gt;
+编译后--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/mm/static/js/demo_33c5143.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<a name="%E5%9C%A8js%E4%B8%AD%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90" class="title-anchor"></a><h4 class="" >在js中定位资源</h4><p>js语言中，可以使用编译函数 <strong>__uri(path)</strong> 来定位资源，fis分析js文件或 <strong>html中的script标签内内容</strong> 时会替换该函数所指向文件的线上url路径。</p>
+<ul>
+<li><p>源码:</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> img = __uri(<span class="hljs-string">'images/logo.gif'</span>);
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> img = <span class="hljs-string">'/images/logo_74e5229.gif'</span>;
+</code></pre>
+</li>
+<li><p>源码:</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> css = __uri(<span class="hljs-string">'demo.css'</span>);
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> css = <span class="hljs-string">'/demo_7defa41.css'</span>;
+</code></pre>
+</li>
+<li><p>源码:</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> js = __uri(<span class="hljs-string">'demo.js'</span>);
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> js = <span class="hljs-string">'/demo_33c5143.js'</span>;
+</code></pre>
+</li>
+</ul>
+<p><strong>资源定位结果可以被fis的配置文件控制</strong>，比如添加配置，调整文件发布路径：</p>
+<pre><code class="hljs lang-javascript"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.{js,css,png,gif}'</span>, {
+    <span class="hljs-attribute">useHash</span>: true <span class="hljs-comment">// 开启 md5 戳</span>
+});
+
+<span class="hljs-comment">// 所有的 js</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**.js'</span>, {
+    <span class="hljs-comment">//发布到/static/js/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release </span>: <span class="hljs-string">'/static/js$0'</span>
+});
+
+<span class="hljs-comment">// 所有的 css</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**.css'</span>, {
+    <span class="hljs-comment">//发布到/static/css/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release </span>: <span class="hljs-string">'/static/css$0'</span>
+});
+
+<span class="hljs-comment">// 所有image目录下的.png，.gif文件</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/images/(*.{png,gif})'</span>, {
+    <span class="hljs-comment">//发布到/static/pic/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release</span>: <span class="hljs-string">'/static/pic/$1'</span>
+});
+</code></pre>
+<p>再次编译得到：</p>
+<ul>
+<li><p>源码:</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> img = __uri(<span class="hljs-string">'images/logo.gif'</span>);
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> img = <span class="hljs-string">'/static/pic/logo_74e5229.gif'</span>;
+</code></pre>
+</li>
+<li><p>源码:</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> css = __uri(<span class="hljs-string">'demo.css'</span>);
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> css = <span class="hljs-string">'/static/css/demo_7defa41.css'</span>;
+</code></pre>
+</li>
+<li><p>源码:</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> js = __uri(<span class="hljs-string">'demo.js'</span>);
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-keyword">var</span> js = <span class="hljs-string">'/static/js/demo_33c5143.js'</span>;
+</code></pre>
+</li>
+</ul>
+<a name="%E5%9C%A8css%E4%B8%AD%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90" class="title-anchor"></a><h4 class="" >在css中定位资源</h4><p>fis编译工具会识别css文件或 <strong>html的style标签内容</strong> 中 <strong>url(path)</strong> 以及 <strong>src=path</strong> 字段，并将其替换成对应资源的编译后url路径</p>
+<ul>
+<li><p>源码：</p>
+<pre><code class="hljs lang-css">  <span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-function">url</span>(<span class="hljs-string">'demo.css'</span>)</span>;
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-css">  <span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-function">url</span>(<span class="hljs-string">'/demo_7defa41.css'</span>)</span>;
+</code></pre>
+</li>
+<li><p>源码：</p>
+<pre><code class="hljs lang-css">  <span class="hljs-class">.style</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(<span class="hljs-string">'images/body-bg.png'</span>)</span></span>;
+  }</span>
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-css">  <span class="hljs-class">.style</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(<span class="hljs-string">'/images/body-bg_1b8c3e0.png'</span>)</span></span>;
+  }</span>
+</code></pre>
+</li>
+<li><p>源码：</p>
+<pre><code class="hljs lang-css">  <span class="hljs-class">.style</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">_filter</span>:<span class="hljs-value">progid:DXImageTransform.Microsoft.<span class="hljs-function">AlphaImageLoader</span>(src=<span class="hljs-string">'images/body-bg.png'</span>)</span></span>;
+  }</span>
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-css">  <span class="hljs-class">.style</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">_filter</span>:<span class="hljs-value">progid:DXImageTransform.Microsoft.<span class="hljs-function">AlphaImageLoader</span>(src=<span class="hljs-string">'/images/body-bg_1b8c3e0.png'</span>)</span></span>;
+  }</span>
+</code></pre>
+</li>
+</ul>
+<p><strong>资源定位结果可以被fis的配置文件控制</strong>，比如添加配置，调整文件发布路径：</p>
+<pre><code class="hljs lang-javascript">
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*.{js,css,png,gif}'</span>, {
+    <span class="hljs-attribute">useHash</span>: true <span class="hljs-comment">// 开启 md5 戳</span>
+});
+
+<span class="hljs-comment">//所有的css文件</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'**.css'</span>, {
+    <span class="hljs-comment">//发布到/static/css/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release </span>: <span class="hljs-string">'/static/css$0'</span>
+});
+
+<span class="hljs-comment">//所有image目录下的.png，.gif文件</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/images/(*.{png,gif})'</span>, {
+    <span class="hljs-comment">//发布到/static/pic/<span class="hljs-label">xxx目录下</span></span>
+    <span class="hljs-attribute">release </span>: <span class="hljs-string">'/static/pic/$1$2'</span>
+});
+</code></pre>
+<p>再次编译得到：</p>
+<ul>
+<li><p>源码：</p>
+<pre><code class="hljs lang-css">  <span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-function">url</span>(<span class="hljs-string">'demo.css'</span>)</span>;
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-css">  <span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-function">url</span>(<span class="hljs-string">'/static/css/demo_7defa41.css'</span>)</span>;
+</code></pre>
+</li>
+<li><p>源码：</p>
+<pre><code class="hljs lang-css">  <span class="hljs-class">.style</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(<span class="hljs-string">'images/body-bg.png'</span>)</span></span>;
+  }</span>
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-css">  <span class="hljs-class">.style</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(<span class="hljs-string">'/static/pic/body-bg_1b8c3e0.png'</span>)</span></span>;
+  }</span>
+</code></pre>
+</li>
+<li><p>源码：</p>
+<pre><code class="hljs lang-css">  <span class="hljs-class">.style</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">_filter</span>:<span class="hljs-value">progid:DXImageTransform.Microsoft.<span class="hljs-function">AlphaImageLoader</span>(src=<span class="hljs-string">'images/body-bg.png'</span>)</span></span>;
+  }</span>
+</code></pre>
+</li>
+<li><p>编译后</p>
+<pre><code class="hljs lang-css">  <span class="hljs-class">.style</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">_filter</span>:<span class="hljs-value">progid:DXImageTransform.Microsoft.<span class="hljs-function">AlphaImageLoader</span>(src=<span class="hljs-string">'/static/pic/body-bg_1b8c3e0.png'</span>)</span></span>;
+  }</span>
+</code></pre>
+</li>
+</ul>
+<blockquote class="warning"><p>文档内容有误，可提 PR，文档地址: <i class="fa fa-github"></i><a href="https://github.com/fex-team/fis3/blob/dev/doc/docs/user-dev/uri.md">/doc/docs/user-dev/uri.md</a></p></blockquote>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4206d67a3ea708c0d2a9354c8d88525f' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+            
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){                 
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");  
+            $(".sidebar").removeClass("open");        
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                var range = st - lastScrollTop;
+                if(range > 5){
+                    $("body").addClass("hide-header");
+                }else if(range < -5){
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }        
+            lastScrollTop = st;
+        });
+
+
+        if ($.cookie("isInternal") === "1") {
+            $(".nav-left").append($("<a></a>").attr("href", "baidu://message?appid=wJUNQ3gXdlgOsRPajPapUQ").addClass("nav-link").text("在线客服"));
+        }
+    }());
+</script>
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?58781c9e97848ee4bfe5b036058c99e7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

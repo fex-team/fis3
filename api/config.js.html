@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>config.js - Documentation</title>
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script src="/fis3/api/scripts/prettify/prettify_cedfcfe.js"></script>
+    <script src="/fis3/api/scripts/prettify/lang-css_837b4b4.js"></script>
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/fis3/static/css/common_3a72140.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/ionicons.min_abcba5d.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/prettify-tomorrow_da53376.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/jsdoc-default_edaf81d.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  ">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  is-active">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar scrollbar ps-container jsdoc-nav">
+      <h3>Namespaces</h3><ul><li><a href="fis.html">fis</a><ul class='methods'><li data-type='method'><a href="fis.html#.emit">emit</a></li><li data-type='method'><a href="fis.html#.on">on</a></li><li data-type='method'><a href="fis.html#.once">once</a></li><li data-type='method'><a href="fis.html#.plugin">plugin</a></li><li data-type='method'><a href="fis.html#.release">release</a></li><li data-type='method'><a href="fis.html#.removeAllListeners">removeAllListeners</a></li><li data-type='method'><a href="fis.html#.removeListener">removeListener</a></li><li data-type='method'><a href="fis.html#.require">require</a></li><li data-type='method'><a href="fis.html#.time">time</a></li></ul></li><li><a href="fis.cache.html">cache</a><ul class='methods'><li data-type='method'><a href="fis.cache.html#.clean">clean</a></li></ul></li><li><a href="fis.cli.html">cli</a><ul class='methods'><li data-type='method'><a href="fis.cli.html#.help">help</a></li><li data-type='method'><a href="fis.cli.html#.run">run</a></li><li data-type='method'><a href="fis.cli.html#.version">version</a></li></ul></li><li><a href="fis.compile.html">compile</a><ul class='methods'><li data-type='method'><a href="fis.compile.html#.analyseComment">analyseComment</a></li><li data-type='method'><a href="fis.compile.html#.clean">clean</a></li><li data-type='method'><a href="fis.compile.html#.extCss">extCss</a></li><li data-type='method'><a href="fis.compile.html#.extHtml">extHtml</a></li><li data-type='method'><a href="fis.compile.html#.extJs">extJs</a></li><li data-type='method'><a href="fis.compile.html#.isInline">isInline</a></li><li data-type='method'><a href="fis.compile.html#.partial">partial</a></li><li data-type='method'><a href="fis.compile.html#.process">process</a></li><li data-type='method'><a href="fis.compile.html#.setup">setup</a></li><li data-type='method'><a href="fis.compile.html#.xLang">xLang</a></li><li data-type='method'><a href="fis.compile.html#~builtinStandard">builtinStandard</a></li><li data-type='method'><a href="fis.compile.html#~pipe">pipe</a></li><li data-type='method'><a href="fis.compile.html#~postStandard">postStandard</a></li></ul></li><li><a href="fis.compile.lang.html">lang</a><ul class='methods'><li data-type='method'><a href="fis.compile.lang.html#.add">add</a></li></ul></li><li><a href="fis.config.html">config</a></li><li><a href="fis.emitter.html">emitter</a></li><li><a href="fis.file.html">file</a></li><li><a href="fis.log.html">log</a><ul class='methods'><li data-type='method'><a href="fis.log.html#.debug">debug</a></li><li data-type='method'><a href="fis.log.html#.error">error</a></li><li data-type='method'><a href="fis.log.html#.format">format</a></li><li data-type='method'><a href="fis.log.html#.info">info</a></li><li data-type='method'><a href="fis.log.html#.notice">notice</a></li><li data-type='method'><a href="fis.log.html#.now">now</a></li><li data-type='method'><a href="fis.log.html#.warn">warn</a></li><li data-type='method'><a href="fis.log.html#.warning">warning</a></li><li data-type='method'><a href="fis.log.html#~log">log</a></li></ul></li><li><a href="fis.project.html">project</a><ul class='methods'><li data-type='method'><a href="fis.project.html#.currentMedia">currentMedia</a></li><li data-type='method'><a href="fis.project.html#.getCachePath">getCachePath</a></li><li data-type='method'><a href="fis.project.html#.getProjectPath">getProjectPath</a></li><li data-type='method'><a href="fis.project.html#.getSource">getSource</a></li><li data-type='method'><a href="fis.project.html#.getTempPath">getTempPath</a></li><li data-type='method'><a href="fis.project.html#.getTempRoot">getTempRoot</a></li><li data-type='method'><a href="fis.project.html#.lookup">lookup</a></li><li data-type='method'><a href="fis.project.html#.setProjectRoot">setProjectRoot</a></li><li data-type='method'><a href="fis.project.html#.setTempRoot">setTempRoot</a></li></ul></li><li><a href="fis.uri.html">uri</a></li><li><a href="fis.util.html">util</a><ul class='methods'><li data-type='method'><a href="fis.util.html#.applyMatches">applyMatches</a></li><li data-type='method'><a href="fis.util.html#.base64">base64</a></li><li data-type='method'><a href="fis.util.html#.camelcase">camelcase</a></li><li data-type='method'><a href="fis.util.html#.clone">clone</a></li><li data-type='method'><a href="fis.util.html#.copy">copy</a></li><li data-type='method'><a href="fis.util.html#.del">del</a></li><li data-type='method'><a href="fis.util.html#.download">download</a></li><li data-type='method'><a href="fis.util.html#.escapeReg">escapeReg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellArg">escapeShellArg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellCmd">escapeShellCmd</a></li><li data-type='method'><a href="fis.util.html#.exist">exist</a></li><li data-type='method'><a href="fis.util.html#.ext">ext</a></li><li data-type='method'><a href="fis.util.html#.filter">filter</a></li><li data-type='method'><a href="fis.util.html#.find">find</a></li><li data-type='method'><a href="fis.util.html#.getMimeType">getMimeType</a></li><li data-type='method'><a href="fis.util.html#.glob">glob</a></li><li data-type='method'><a href="fis.util.html#.install">install</a></li><li data-type='method'><a href="fis.util.html#.isAbsolute">isAbsolute</a></li><li data-type='method'><a href="fis.util.html#.isDir">isDir</a></li><li data-type='method'><a href="fis.util.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="fis.util.html#.isFile">isFile</a></li><li data-type='method'><a href="fis.util.html#.isImageFile">isImageFile</a></li><li data-type='method'><a href="fis.util.html#.isTextFile">isTextFile</a></li><li data-type='method'><a href="fis.util.html#.isUtf8">isUtf8</a></li><li data-type='method'><a href="fis.util.html#.isWin">isWin</a></li><li data-type='method'><a href="fis.util.html#.map">map</a></li><li data-type='method'><a href="fis.util.html#.md5">md5</a></li><li data-type='method'><a href="fis.util.html#.merge">merge</a></li><li data-type='method'><a href="fis.util.html#.mkdir">mkdir</a></li><li data-type='method'><a href="fis.util.html#.mtime">mtime</a></li><li data-type='method'><a href="fis.util.html#.nohup">nohup</a></li><li data-type='method'><a href="fis.util.html#.pad">pad</a></li><li data-type='method'><a href="fis.util.html#.parseUrl">parseUrl</a></li><li data-type='method'><a href="fis.util.html#.pathinfo">pathinfo</a></li><li data-type='method'><a href="fis.util.html#.pipe">pipe</a></li><li data-type='method'><a href="fis.util.html#.query">query</a></li><li data-type='method'><a href="fis.util.html#.read">read</a></li><li data-type='method'><a href="fis.util.html#.readBuffer">readBuffer</a></li><li data-type='method'><a href="fis.util.html#.readJson">readJson</a></li><li data-type='method'><a href="fis.util.html#.realpath">realpath</a></li><li data-type='method'><a href="fis.util.html#.realpathSafe">realpathSafe</a></li><li data-type='method'><a href="fis.util.html#.stringQuote">stringQuote</a></li><li data-type='method'><a href="fis.util.html#.toEncoding">toEncoding</a></li><li data-type='method'><a href="fis.util.html#.touch">touch</a></li><li data-type='method'><a href="fis.util.html#.upload">upload</a></li><li data-type='method'><a href="fis.util.html#.write">write</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="fis.cache-Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="fis.cache-Cache.html#addDeps">addDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#addMissingDeps">addMissingDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#mergeDeps">mergeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#removeDeps">removeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#revert">revert</a></li><li data-type='method'><a href="fis.cache-Cache.html#save">save</a></li></ul></li><li><a href="fis.config.Config.html">Config</a><ul class='methods'><li data-type='method'><a href="fis.config.Config.html#del">del</a></li><li data-type='method'><a href="fis.config.Config.html#get">get</a></li><li data-type='method'><a href="fis.config.Config.html#getMatches">getMatches</a></li><li data-type='method'><a href="fis.config.Config.html#getSortedMatches">getSortedMatches</a></li><li data-type='method'><a href="fis.config.Config.html#hook">hook</a></li><li data-type='method'><a href="fis.config.Config.html#match">match</a></li><li data-type='method'><a href="fis.config.Config.html#media">media</a></li><li data-type='method'><a href="fis.config.Config.html#merge">merge</a></li><li data-type='method'><a href="fis.config.Config.html#set">set</a></li><li data-type='method'><a href="fis.config.Config.html#unhook">unhook</a></li></ul></li><li><a href="fis.file-File.html">File</a><ul class='methods'><li data-type='method'><a href="fis.file-File.html#addAsyncRequire">addAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#addLink">addLink</a></li><li data-type='method'><a href="fis.file-File.html#addRequire">addRequire</a></li><li data-type='method'><a href="fis.file-File.html#addSameNameRequire">addSameNameRequire</a></li><li data-type='method'><a href="fis.file-File.html#defineLikes">defineLikes</a></li><li data-type='method'><a href="fis.file-File.html#exists">exists</a></li><li data-type='method'><a href="fis.file-File.html#getBase64">getBase64</a></li><li data-type='method'><a href="fis.file-File.html#getCacheData">getCacheData</a></li><li data-type='method'><a href="fis.file-File.html#getContent">getContent</a></li><li data-type='method'><a href="fis.file-File.html#getHash">getHash</a></li><li data-type='method'><a href="fis.file-File.html#getHashRelease">getHashRelease</a></li><li data-type='method'><a href="fis.file-File.html#getId">getId</a></li><li data-type='method'><a href="fis.file-File.html#getUrl">getUrl</a></li><li data-type='method'><a href="fis.file-File.html#isDir">isDir</a></li><li data-type='method'><a href="fis.file-File.html#isFile">isFile</a></li><li data-type='method'><a href="fis.file-File.html#isImage">isImage</a></li><li data-type='method'><a href="fis.file-File.html#isText">isText</a></li><li data-type='method'><a href="fis.file-File.html#removeAsyncRequire">removeAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#removeRequire">removeRequire</a></li><li data-type='method'><a href="fis.file-File.html#revertFromCacheData">revertFromCacheData</a></li><li data-type='method'><a href="fis.file-File.html#setContent">setContent</a></li><li data-type='method'><a href="fis.file-File.html#toString">toString</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="fis.html#.event:lookup:file">lookup:file</a></li></ul><h3>Global</h3><ul><li><a href="global.html#caseSensiveFileExits">caseSensiveFileExits</a></li></ul>
+    </div>
+
+    <div class="content api with-sidebar">
+        
+        <h1 class="page-title">config.js</h1>
+        
+
+        
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+/*
+ * Config默认设置
+ * @type {Object}
+ */
+var DEFAULT_SETTINGS = {
+
+  project: {
+    charset: 'utf8',
+    md5Length: 7,
+    md5Connector: '_',
+    files: ['**'],
+    ignore: ['node_modules/**', 'output/**', '.git/**', 'fis-conf.js']
+  },
+
+  component: {
+    skipRoadmapCheck: true,
+    protocol: 'github',
+    author: 'fis-components'
+  },
+
+  modules: {
+    hook: 'components',
+    packager: 'map'
+  },
+
+  options: {},
+
+  system : {
+    repos : 'http://fis.baidu.com/repos'
+  }
+};
+
+var rVariable = /\$\{([^\}]+)\}/g;
+var _ = require('./util.js');
+var matchIndex = 0;
+var minimatch = require('minimatch');
+
+//You can't use merge in util.js
+function merge(source, target) {
+  if (typeof source === 'object' &amp;&amp; typeof target === 'object') {
+    for (var key in target) {
+      if (target.hasOwnProperty(key)) {
+        source[key] = merge(source[key], target[key]);
+      }
+    }
+  } else {
+    source = target;
+  }
+  return source;
+}
+
+function sortByWeight(a, b) {
+  if (a.weight === b.weight) {
+    return a.index - b.index;
+  }
+
+  return a.weight - b.weight;
+}
+
+/**
+ * 配置类。
+ * @class
+ * @memberOf fis.config
+ * @param {Object} [initialOpitions] 初始配置。
+ * @example
+ * var Config = fis.confilg.Config;
+ * var config = new Config({
+ *   a: 1
+ * });
+ * console.log(config.get('a')); // => 1
+ *
+ * config.set('b.c', 2);
+ * console.log(config.get('b')); // => {c: 2}
+ */
+var Config = Object.derive(/** @lends fis.config.Config.prototype */{
+  constructor: function() {
+    this.init.apply(this, arguments);
+  },
+
+  init: function() {
+    this.data = {};
+    this._matches = [];
+    this._forks = [];
+    this._groups = {};
+    this._sortedMatches = null;
+    this._media = 'GLOBAL';
+    if (arguments.length > 0) {
+      this.merge.apply(this, arguments);
+    }
+    return this;
+  },
+
+  /**
+   * 通过路径获取配置值。
+   */
+  get: function(path, def) {
+    var ret = this._get(path);
+
+    if (typeof ret === 'undefined' &amp;&amp; this.parent) {
+      ret = this.parent._get(path);
+    }
+
+    return typeof ret === 'undefined' ? def : this._filter(ret);
+  },
+  _get: function(path) {
+    var result = this.data;
+    path = String(path || '').trim(); 
+    path.split('.').forEach(function(key) {
+      if (key &amp;&amp; (typeof result !== 'undefined')) {
+        result = result[key];
+      }
+    });
+    return result;
+  },
+
+  _filter: function(string) {
+    // 可能有 Maximum call stack size exceeded
+    // 不过，这就应该报错。
+    if ('string' === typeof string &amp;&amp; rVariable.test(string)) {
+      rVariable.lastIndex = 0;
+      var self = this;
+
+      return string.replace(rVariable, function(all, key) {
+        var val = self.get(key);
+
+        if(typeof val === 'undefined'){
+            fis.log.error('undefined property [%s].', key);
+        } else {
+            return val || '';
+        }
+      });
+    }
+
+    return string;
+  },
+
+  /**
+   * 通过路径设置配置项。
+   *
+   * 注意：当设置路径时，如果目标路径已经存在，则会被覆盖。如果是多级路径，同时上级目录存在且值不为对象，则会报错。
+   *
+   * 如：
+   *
+   * ```
+   * fis.config.set('a', 'sting');
+   *
+   * // 如果这样设置会报错。
+   * fis.config.set('a.subpath', 2);
+   * ```
+   *
+   * @param {String} path  配置项路径。
+   * @param {Mixed} value 值
+   * @example
+   * fis.config.set('xxxx', 1);
+   */
+  set: function(path, value) {
+    if (typeof value === 'undefined') {
+      this.data = path;
+    } else {
+      path = String(path || '').trim();
+      if (path) {
+        var paths = path.split('.'),
+          last = paths.pop(),
+          data = this.data || {};
+        paths.forEach(function(key) {
+          var type = typeof data[key];
+          if (type === 'object') {
+            data = data[key];
+          } else if (type === 'undefined') {
+            data = data[key] = {};
+          } else {
+            fis.log.error('forbidden to set property[%s] of [%s] data', key, type);
+          }
+        });
+        data[last] = value;
+      }
+    }
+    return this;
+  },
+
+  /**
+   * 删除指定路径的配置。
+   * @param {String} path  配置项路径。
+   */
+  del: function(path) {
+    path = String(path || '').trim();
+    if (path) {
+      var paths = path.split('.'),
+        data = this.data,
+        last = paths.pop(),
+        key;
+      for (var i = 0, len = paths.length; i &lt; len; i++) {
+        key = paths[i];
+        if (typeof data[key] === 'object') {
+          data = data[key];
+        } else {
+          return this;
+        }
+      }
+      if (typeof data[last] !== 'undefined') {
+        delete data[last];
+      }
+    }
+    return this;
+  },
+
+  /**
+   * 将目标配置项合并到当前配置中，类似于 jQuery.extend.
+   * @param {Object} target 其他配置对象
+   */
+  merge: function() {
+    var self = this;
+    [].slice.call(arguments).forEach(function(arg) {
+      if (typeof arg === 'object') {
+        merge(self.data, arg);
+      } else {
+        fis.log.warning('unable to merge data[' + arg + '].');
+      }
+    });
+    return this;
+  },
+
+  require: function(name) {
+    fis.require('config', name);
+    return this;
+  },
+
+  /**
+   * 分组配置项。
+   * @param  {String} group 组名
+   * @return {Config} 返回一个新的 Config 对象，用来分割配置项。
+   */
+  media: function(group) {
+    group = group || fis.project.currentMedia() || 'dev';
+    var groups = this.parent ? this.parent._groups : this._groups;
+
+    if (!groups[group]) {
+      var forked = groups[group] = new Config();
+      forked._media = group;
+      forked.parent = module.exports;
+      this._forks.push(forked);
+    }
+
+    return groups[group];
+  },
+
+  /*
+   * 等价于 media 方法
+   */
+  env: function() {
+    return this.media.apply(this, arguments);
+  },
+
+  /**
+   * 添加文件属性。
+   * @param {Glob | RegExp | String } pattern 匹配文件路径规则。
+   * @param {Object} properties 属性对象。
+   * @param {Boolean | int} [weight] 规则的权重，数字越大优先级越高。
+   * @example
+   * fis.config.match('*.js', {
+   *   release: 'static/$0'
+   * });
+   */
+  match: function(pattern, properties, weight) {
+    if (!pattern) {
+      fis.log.error('Invalid selector, must be a `RegExp` or `glob`');
+    } else if (pattern === '::packager') {
+      // 兼容处理，原来我们叫 ::packager
+      // 现在改名叫 ::package 了，为了老用法。
+      pattern = '::package';
+    }
+
+    if (!fis.util.is(properties, 'Object')) {
+      fis.log.error('Invalid Properties, must be an `Object`');
+    }
+
+    var match = {
+      pattern: pattern,
+      properties: properties || {},
+      weight: weight === true ? 1 : (parseInt(weight, 10) || 0),
+      media: this._media,
+      index: matchIndex++
+    };
+
+    this._matches.push(match);
+    this._sortedMatches = null;
+
+    this._forks.forEach(function(forked) {
+      forked._sortedMatches = null;
+    });
+
+    return this;
+  },
+
+  /**
+   * 获取所有 matches 表。
+   */
+  getMatches: function() {
+    if (this.parent) {
+      return this.parent._matches.concat(this._matches);
+    } else {
+      return this._matches;
+    }
+  },
+
+  /**
+   * 获取根据 weight 排序后的 matches 表。
+   */
+  getSortedMatches: function() {
+    if (!this._sortedMatches) {
+      var self = this;
+      this._sortedMatches = this.getMatches().map(function(match) {
+        var negate = false;
+        var pattern = self._filter(match.pattern);
+        var raw = pattern;
+        var properties = match.properties;
+
+        if (typeof pattern === 'string') {
+
+          // 去掉空格
+          pattern = pattern.replace(/\s+/g, '');
+
+          if (pattern[0] === '!') {
+            negate = true;
+            pattern = pattern.substring(1);
+          }
+
+          if (~pattern.indexOf('(') &amp;&amp; ~pattern.indexOf('{')) {
+            pattern = minimatch.braceExpand(pattern).map(function(pattern) {
+              return fis.util.glob(pattern);
+            });
+          } else {
+            pattern = fis.util.glob(pattern);
+          }
+        }
+
+        Object.keys(properties).forEach(function(key) {
+          var val = properties[key];
+
+          if (typeof val === 'string') {
+            properties[key] = self._filter(val);
+          }
+        });
+
+        return {
+          reg: pattern,
+          raw: raw,
+          negate: negate,
+          properties: properties,
+          media: match.media,
+          weight: match.weight,
+          index: match.index
+        };
+      }).sort(sortByWeight);
+    }
+
+    return this._sortedMatches;
+  },
+
+  /**
+   * 挂载 {@link https://github.com/search?q=fis3-hook&amp;ref=opensearch hook} 插件
+   * @param  {string} name     插件名称
+   * @param  {Object} settings 插件配置项
+   * @example
+   * fis.config.hook('module');
+   */
+  hook: function(name, settings) {
+    var key = 'modules.hook';
+    var origin = this.get(key);
+
+    if (origin) {
+      origin = typeof origin === 'string' ? origin.split(/\s*,\s*/) : (Array.isArray(origin) ? origin : [origin]);
+    }
+
+    // 如果已经添加过，避免重复添加。
+    _.remove(origin, function(item) {
+      return name === (item.__name || item);
+    });
+
+    origin.push(fis.plugin(name, settings));
+
+    return this.set(key, origin);
+  },
+
+  /**
+   * 取消 hook 插件
+   */
+  unhook: function(name) {
+    var key = 'modules.hook';
+    var origin = this.get(key);
+
+    if (origin) {
+      origin = typeof origin === 'string' ? origin.split(/\s*,\s*/) : (Array.isArray(origin) ? origin : [origin]);
+    }
+
+    _.remove(origin, function(item) {
+      return name === (item.__name || item);
+    });
+
+    return this.set(key, origin);
+  }
+});
+
+/**
+ * config 配置对象，该对象为 {@link fis.config.Config} 实例，详情请查看 {@link fis.config.Config Config 类}说明。
+ * @namespace fis.config
+ */
+var exports = module.exports = (new Config).init(DEFAULT_SETTINGS);
+exports.Config = Config;
+exports.DEFALUT_SETTINGS = DEFAULT_SETTINGS;
+
+// exports.media('dev').match('*', {
+//   useHash: false
+// });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 21 2018 07:31:50 GMT+0000 (UTC) using the Minami theme.
+    </div>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="/fis3/api/scripts/linenumber_9ec4215.js"></script>
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");
+            $(".sidebar").removeClass("open");
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                if(st > lastScrollTop){
+                    $("body").addClass("hide-header");
+                }else{
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }
+            lastScrollTop = st;
+        });
+    }());
+</script>
+</body>
+</html>

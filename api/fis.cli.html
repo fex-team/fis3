@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>cli - Documentation</title>
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script src="/fis3/api/scripts/prettify/prettify_cedfcfe.js"></script>
+    <script src="/fis3/api/scripts/prettify/lang-css_837b4b4.js"></script>
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/fis3/static/css/common_3a72140.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/ionicons.min_abcba5d.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/prettify-tomorrow_da53376.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/jsdoc-default_edaf81d.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  ">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  is-active">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar scrollbar ps-container jsdoc-nav">
+      <h3>Namespaces</h3><ul><li><a href="fis.html">fis</a><ul class='methods'><li data-type='method'><a href="fis.html#.emit">emit</a></li><li data-type='method'><a href="fis.html#.on">on</a></li><li data-type='method'><a href="fis.html#.once">once</a></li><li data-type='method'><a href="fis.html#.plugin">plugin</a></li><li data-type='method'><a href="fis.html#.release">release</a></li><li data-type='method'><a href="fis.html#.removeAllListeners">removeAllListeners</a></li><li data-type='method'><a href="fis.html#.removeListener">removeListener</a></li><li data-type='method'><a href="fis.html#.require">require</a></li><li data-type='method'><a href="fis.html#.time">time</a></li></ul></li><li><a href="fis.cache.html">cache</a><ul class='methods'><li data-type='method'><a href="fis.cache.html#.clean">clean</a></li></ul></li><li><a href="fis.cli.html">cli</a><ul class='methods'><li data-type='method'><a href="fis.cli.html#.help">help</a></li><li data-type='method'><a href="fis.cli.html#.run">run</a></li><li data-type='method'><a href="fis.cli.html#.version">version</a></li></ul></li><li><a href="fis.compile.html">compile</a><ul class='methods'><li data-type='method'><a href="fis.compile.html#.analyseComment">analyseComment</a></li><li data-type='method'><a href="fis.compile.html#.clean">clean</a></li><li data-type='method'><a href="fis.compile.html#.extCss">extCss</a></li><li data-type='method'><a href="fis.compile.html#.extHtml">extHtml</a></li><li data-type='method'><a href="fis.compile.html#.extJs">extJs</a></li><li data-type='method'><a href="fis.compile.html#.isInline">isInline</a></li><li data-type='method'><a href="fis.compile.html#.partial">partial</a></li><li data-type='method'><a href="fis.compile.html#.process">process</a></li><li data-type='method'><a href="fis.compile.html#.setup">setup</a></li><li data-type='method'><a href="fis.compile.html#.xLang">xLang</a></li><li data-type='method'><a href="fis.compile.html#~builtinStandard">builtinStandard</a></li><li data-type='method'><a href="fis.compile.html#~pipe">pipe</a></li><li data-type='method'><a href="fis.compile.html#~postStandard">postStandard</a></li></ul></li><li><a href="fis.compile.lang.html">lang</a><ul class='methods'><li data-type='method'><a href="fis.compile.lang.html#.add">add</a></li></ul></li><li><a href="fis.config.html">config</a></li><li><a href="fis.emitter.html">emitter</a></li><li><a href="fis.file.html">file</a></li><li><a href="fis.log.html">log</a><ul class='methods'><li data-type='method'><a href="fis.log.html#.debug">debug</a></li><li data-type='method'><a href="fis.log.html#.error">error</a></li><li data-type='method'><a href="fis.log.html#.format">format</a></li><li data-type='method'><a href="fis.log.html#.info">info</a></li><li data-type='method'><a href="fis.log.html#.notice">notice</a></li><li data-type='method'><a href="fis.log.html#.now">now</a></li><li data-type='method'><a href="fis.log.html#.warn">warn</a></li><li data-type='method'><a href="fis.log.html#.warning">warning</a></li><li data-type='method'><a href="fis.log.html#~log">log</a></li></ul></li><li><a href="fis.project.html">project</a><ul class='methods'><li data-type='method'><a href="fis.project.html#.currentMedia">currentMedia</a></li><li data-type='method'><a href="fis.project.html#.getCachePath">getCachePath</a></li><li data-type='method'><a href="fis.project.html#.getProjectPath">getProjectPath</a></li><li data-type='method'><a href="fis.project.html#.getSource">getSource</a></li><li data-type='method'><a href="fis.project.html#.getTempPath">getTempPath</a></li><li data-type='method'><a href="fis.project.html#.getTempRoot">getTempRoot</a></li><li data-type='method'><a href="fis.project.html#.lookup">lookup</a></li><li data-type='method'><a href="fis.project.html#.setProjectRoot">setProjectRoot</a></li><li data-type='method'><a href="fis.project.html#.setTempRoot">setTempRoot</a></li></ul></li><li><a href="fis.uri.html">uri</a></li><li><a href="fis.util.html">util</a><ul class='methods'><li data-type='method'><a href="fis.util.html#.applyMatches">applyMatches</a></li><li data-type='method'><a href="fis.util.html#.base64">base64</a></li><li data-type='method'><a href="fis.util.html#.camelcase">camelcase</a></li><li data-type='method'><a href="fis.util.html#.clone">clone</a></li><li data-type='method'><a href="fis.util.html#.copy">copy</a></li><li data-type='method'><a href="fis.util.html#.del">del</a></li><li data-type='method'><a href="fis.util.html#.download">download</a></li><li data-type='method'><a href="fis.util.html#.escapeReg">escapeReg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellArg">escapeShellArg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellCmd">escapeShellCmd</a></li><li data-type='method'><a href="fis.util.html#.exist">exist</a></li><li data-type='method'><a href="fis.util.html#.ext">ext</a></li><li data-type='method'><a href="fis.util.html#.filter">filter</a></li><li data-type='method'><a href="fis.util.html#.find">find</a></li><li data-type='method'><a href="fis.util.html#.getMimeType">getMimeType</a></li><li data-type='method'><a href="fis.util.html#.glob">glob</a></li><li data-type='method'><a href="fis.util.html#.install">install</a></li><li data-type='method'><a href="fis.util.html#.isAbsolute">isAbsolute</a></li><li data-type='method'><a href="fis.util.html#.isDir">isDir</a></li><li data-type='method'><a href="fis.util.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="fis.util.html#.isFile">isFile</a></li><li data-type='method'><a href="fis.util.html#.isImageFile">isImageFile</a></li><li data-type='method'><a href="fis.util.html#.isTextFile">isTextFile</a></li><li data-type='method'><a href="fis.util.html#.isUtf8">isUtf8</a></li><li data-type='method'><a href="fis.util.html#.isWin">isWin</a></li><li data-type='method'><a href="fis.util.html#.map">map</a></li><li data-type='method'><a href="fis.util.html#.md5">md5</a></li><li data-type='method'><a href="fis.util.html#.merge">merge</a></li><li data-type='method'><a href="fis.util.html#.mkdir">mkdir</a></li><li data-type='method'><a href="fis.util.html#.mtime">mtime</a></li><li data-type='method'><a href="fis.util.html#.nohup">nohup</a></li><li data-type='method'><a href="fis.util.html#.pad">pad</a></li><li data-type='method'><a href="fis.util.html#.parseUrl">parseUrl</a></li><li data-type='method'><a href="fis.util.html#.pathinfo">pathinfo</a></li><li data-type='method'><a href="fis.util.html#.pipe">pipe</a></li><li data-type='method'><a href="fis.util.html#.query">query</a></li><li data-type='method'><a href="fis.util.html#.read">read</a></li><li data-type='method'><a href="fis.util.html#.readBuffer">readBuffer</a></li><li data-type='method'><a href="fis.util.html#.readJson">readJson</a></li><li data-type='method'><a href="fis.util.html#.realpath">realpath</a></li><li data-type='method'><a href="fis.util.html#.realpathSafe">realpathSafe</a></li><li data-type='method'><a href="fis.util.html#.stringQuote">stringQuote</a></li><li data-type='method'><a href="fis.util.html#.toEncoding">toEncoding</a></li><li data-type='method'><a href="fis.util.html#.touch">touch</a></li><li data-type='method'><a href="fis.util.html#.upload">upload</a></li><li data-type='method'><a href="fis.util.html#.write">write</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="fis.cache-Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="fis.cache-Cache.html#addDeps">addDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#addMissingDeps">addMissingDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#mergeDeps">mergeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#removeDeps">removeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#revert">revert</a></li><li data-type='method'><a href="fis.cache-Cache.html#save">save</a></li></ul></li><li><a href="fis.config.Config.html">Config</a><ul class='methods'><li data-type='method'><a href="fis.config.Config.html#del">del</a></li><li data-type='method'><a href="fis.config.Config.html#get">get</a></li><li data-type='method'><a href="fis.config.Config.html#getMatches">getMatches</a></li><li data-type='method'><a href="fis.config.Config.html#getSortedMatches">getSortedMatches</a></li><li data-type='method'><a href="fis.config.Config.html#hook">hook</a></li><li data-type='method'><a href="fis.config.Config.html#match">match</a></li><li data-type='method'><a href="fis.config.Config.html#media">media</a></li><li data-type='method'><a href="fis.config.Config.html#merge">merge</a></li><li data-type='method'><a href="fis.config.Config.html#set">set</a></li><li data-type='method'><a href="fis.config.Config.html#unhook">unhook</a></li></ul></li><li><a href="fis.file-File.html">File</a><ul class='methods'><li data-type='method'><a href="fis.file-File.html#addAsyncRequire">addAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#addLink">addLink</a></li><li data-type='method'><a href="fis.file-File.html#addRequire">addRequire</a></li><li data-type='method'><a href="fis.file-File.html#addSameNameRequire">addSameNameRequire</a></li><li data-type='method'><a href="fis.file-File.html#defineLikes">defineLikes</a></li><li data-type='method'><a href="fis.file-File.html#exists">exists</a></li><li data-type='method'><a href="fis.file-File.html#getBase64">getBase64</a></li><li data-type='method'><a href="fis.file-File.html#getCacheData">getCacheData</a></li><li data-type='method'><a href="fis.file-File.html#getContent">getContent</a></li><li data-type='method'><a href="fis.file-File.html#getHash">getHash</a></li><li data-type='method'><a href="fis.file-File.html#getHashRelease">getHashRelease</a></li><li data-type='method'><a href="fis.file-File.html#getId">getId</a></li><li data-type='method'><a href="fis.file-File.html#getUrl">getUrl</a></li><li data-type='method'><a href="fis.file-File.html#isDir">isDir</a></li><li data-type='method'><a href="fis.file-File.html#isFile">isFile</a></li><li data-type='method'><a href="fis.file-File.html#isImage">isImage</a></li><li data-type='method'><a href="fis.file-File.html#isText">isText</a></li><li data-type='method'><a href="fis.file-File.html#removeAsyncRequire">removeAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#removeRequire">removeRequire</a></li><li data-type='method'><a href="fis.file-File.html#revertFromCacheData">revertFromCacheData</a></li><li data-type='method'><a href="fis.file-File.html#setContent">setContent</a></li><li data-type='method'><a href="fis.file-File.html#toString">toString</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="fis.html#.event:lookup:file">lookup:file</a></li></ul><h3>Global</h3><ul><li><a href="global.html#caseSensiveFileExits">caseSensiveFileExits</a></li></ul>
+    </div>
+
+    <div class="content api with-sidebar">
+        
+        <h1 class="page-title">cli</h1>
+        
+
+        
+
+
+
+
+<section>
+
+<div>
+    
+        <h2>
+            <span class="ancestors"><a href="fis.html">fis</a>.</span>
+        
+        cli
+        </h2>
+        
+    
+</div>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>命令行相关的信息和工具类方法暴露在此模块中。</p></div>
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cli.js.html">cli.js</a>, <a href="cli.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<a class="title-anchor" name=".colors"></a>
+<h4 class="name"><span class="type-signature">(static) </span>colors<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>指向 <a href="https://%3Ca">href="http://www.npmjs.com/package/colors">www.npmjs.com/package/colors</a> colors</a> 模块。</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cli.js.html">cli.js</a>, <a href="cli.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<a class="title-anchor" name=".info"></a>
+<h4 class="name"><span class="type-signature">(static) </span>info<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>package.json 中的信息</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cli.js.html">cli.js</a>, <a href="cli.js.html#line30">line 30</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<a class="title-anchor" name=".name"></a>
+<h4 class="name"><span class="type-signature">(static) </span>name<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>命令行工具名字</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>fis3</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cli.js.html">cli.js</a>, <a href="cli.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<a class="title-anchor" name=".options"></a>
+<h4 class="name"><span class="type-signature">(static) </span>options<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>支持命令合集</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cli.js.html">cli.js</a>, <a href="cli.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".help"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>help<span class="signature">(cmdName<span class="signature-attributes">opt</span>, options<span class="signature-attributes">opt</span>, commands<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>显示帮助信息，主要用来格式化信息，处理缩进等。fis command 插件，可以用此方法来输出帮助信息。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>cmdName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>命令名称</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>配置</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>commands</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>支持的命令集合</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cli.js.html">cli.js</a>, <a href="cli.js.html#line51">line 51</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".run"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>run<span class="signature">(argv, env)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>fis命令行执行入口。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>argv</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>由 <a href="https://github.com/substack/minimist">minimist</a> 解析得到的 argv, 已经转换成了对象。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>env</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>liftoff env</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cli.js.html">cli.js</a>, <a href="cli.js.html#line179">line 179</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".version"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>version<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>输出 fis 版本信息。</p>
+<pre class="prettyprint source"><code>v3.0.0
+
+/\\\\\\\\\\\\\\\  /\\\\\\\\\\\     /\\\\\\\\\\\
+\/\\\///////////  \/////\\\///    /\\\/////////\\\
+ \/\\\                 \/\\\      \//\\\      \///
+  \/\\\\\\\\\\\         \/\\\       \////\\\
+   \/\\\///////          \/\\\          \////\\\
+    \/\\\                 \/\\\             \////\\\
+     \/\\\                 \/\\\      /\\\      \//\\\
+      \/\\\              /\\\\\\\\\\\ \///\\\\\\\\\\\/
+       \///              \///////////    \///////////</code></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cli.js.html">cli.js</a>, <a href="cli.js.html#line116">line 116</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 21 2018 07:31:50 GMT+0000 (UTC) using the Minami theme.
+    </div>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="/fis3/api/scripts/linenumber_9ec4215.js"></script>
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");
+            $(".sidebar").removeClass("open");
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                if(st > lastScrollTop){
+                    $("body").addClass("hide-header");
+                }else{
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }
+            lastScrollTop = st;
+        });
+    }());
+</script>
+</body>
+</html>

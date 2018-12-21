@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>project.js - Documentation</title>
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script src="/fis3/api/scripts/prettify/prettify_cedfcfe.js"></script>
+    <script src="/fis3/api/scripts/prettify/lang-css_837b4b4.js"></script>
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/fis3/static/css/common_3a72140.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/ionicons.min_abcba5d.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/prettify-tomorrow_da53376.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/jsdoc-default_edaf81d.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  ">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  is-active">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar scrollbar ps-container jsdoc-nav">
+      <h3>Namespaces</h3><ul><li><a href="fis.html">fis</a><ul class='methods'><li data-type='method'><a href="fis.html#.emit">emit</a></li><li data-type='method'><a href="fis.html#.on">on</a></li><li data-type='method'><a href="fis.html#.once">once</a></li><li data-type='method'><a href="fis.html#.plugin">plugin</a></li><li data-type='method'><a href="fis.html#.release">release</a></li><li data-type='method'><a href="fis.html#.removeAllListeners">removeAllListeners</a></li><li data-type='method'><a href="fis.html#.removeListener">removeListener</a></li><li data-type='method'><a href="fis.html#.require">require</a></li><li data-type='method'><a href="fis.html#.time">time</a></li></ul></li><li><a href="fis.cache.html">cache</a><ul class='methods'><li data-type='method'><a href="fis.cache.html#.clean">clean</a></li></ul></li><li><a href="fis.cli.html">cli</a><ul class='methods'><li data-type='method'><a href="fis.cli.html#.help">help</a></li><li data-type='method'><a href="fis.cli.html#.run">run</a></li><li data-type='method'><a href="fis.cli.html#.version">version</a></li></ul></li><li><a href="fis.compile.html">compile</a><ul class='methods'><li data-type='method'><a href="fis.compile.html#.analyseComment">analyseComment</a></li><li data-type='method'><a href="fis.compile.html#.clean">clean</a></li><li data-type='method'><a href="fis.compile.html#.extCss">extCss</a></li><li data-type='method'><a href="fis.compile.html#.extHtml">extHtml</a></li><li data-type='method'><a href="fis.compile.html#.extJs">extJs</a></li><li data-type='method'><a href="fis.compile.html#.isInline">isInline</a></li><li data-type='method'><a href="fis.compile.html#.partial">partial</a></li><li data-type='method'><a href="fis.compile.html#.process">process</a></li><li data-type='method'><a href="fis.compile.html#.setup">setup</a></li><li data-type='method'><a href="fis.compile.html#.xLang">xLang</a></li><li data-type='method'><a href="fis.compile.html#~builtinStandard">builtinStandard</a></li><li data-type='method'><a href="fis.compile.html#~pipe">pipe</a></li><li data-type='method'><a href="fis.compile.html#~postStandard">postStandard</a></li></ul></li><li><a href="fis.compile.lang.html">lang</a><ul class='methods'><li data-type='method'><a href="fis.compile.lang.html#.add">add</a></li></ul></li><li><a href="fis.config.html">config</a></li><li><a href="fis.emitter.html">emitter</a></li><li><a href="fis.file.html">file</a></li><li><a href="fis.log.html">log</a><ul class='methods'><li data-type='method'><a href="fis.log.html#.debug">debug</a></li><li data-type='method'><a href="fis.log.html#.error">error</a></li><li data-type='method'><a href="fis.log.html#.format">format</a></li><li data-type='method'><a href="fis.log.html#.info">info</a></li><li data-type='method'><a href="fis.log.html#.notice">notice</a></li><li data-type='method'><a href="fis.log.html#.now">now</a></li><li data-type='method'><a href="fis.log.html#.warn">warn</a></li><li data-type='method'><a href="fis.log.html#.warning">warning</a></li><li data-type='method'><a href="fis.log.html#~log">log</a></li></ul></li><li><a href="fis.project.html">project</a><ul class='methods'><li data-type='method'><a href="fis.project.html#.currentMedia">currentMedia</a></li><li data-type='method'><a href="fis.project.html#.getCachePath">getCachePath</a></li><li data-type='method'><a href="fis.project.html#.getProjectPath">getProjectPath</a></li><li data-type='method'><a href="fis.project.html#.getSource">getSource</a></li><li data-type='method'><a href="fis.project.html#.getTempPath">getTempPath</a></li><li data-type='method'><a href="fis.project.html#.getTempRoot">getTempRoot</a></li><li data-type='method'><a href="fis.project.html#.lookup">lookup</a></li><li data-type='method'><a href="fis.project.html#.setProjectRoot">setProjectRoot</a></li><li data-type='method'><a href="fis.project.html#.setTempRoot">setTempRoot</a></li></ul></li><li><a href="fis.uri.html">uri</a></li><li><a href="fis.util.html">util</a><ul class='methods'><li data-type='method'><a href="fis.util.html#.applyMatches">applyMatches</a></li><li data-type='method'><a href="fis.util.html#.base64">base64</a></li><li data-type='method'><a href="fis.util.html#.camelcase">camelcase</a></li><li data-type='method'><a href="fis.util.html#.clone">clone</a></li><li data-type='method'><a href="fis.util.html#.copy">copy</a></li><li data-type='method'><a href="fis.util.html#.del">del</a></li><li data-type='method'><a href="fis.util.html#.download">download</a></li><li data-type='method'><a href="fis.util.html#.escapeReg">escapeReg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellArg">escapeShellArg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellCmd">escapeShellCmd</a></li><li data-type='method'><a href="fis.util.html#.exist">exist</a></li><li data-type='method'><a href="fis.util.html#.ext">ext</a></li><li data-type='method'><a href="fis.util.html#.filter">filter</a></li><li data-type='method'><a href="fis.util.html#.find">find</a></li><li data-type='method'><a href="fis.util.html#.getMimeType">getMimeType</a></li><li data-type='method'><a href="fis.util.html#.glob">glob</a></li><li data-type='method'><a href="fis.util.html#.install">install</a></li><li data-type='method'><a href="fis.util.html#.isAbsolute">isAbsolute</a></li><li data-type='method'><a href="fis.util.html#.isDir">isDir</a></li><li data-type='method'><a href="fis.util.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="fis.util.html#.isFile">isFile</a></li><li data-type='method'><a href="fis.util.html#.isImageFile">isImageFile</a></li><li data-type='method'><a href="fis.util.html#.isTextFile">isTextFile</a></li><li data-type='method'><a href="fis.util.html#.isUtf8">isUtf8</a></li><li data-type='method'><a href="fis.util.html#.isWin">isWin</a></li><li data-type='method'><a href="fis.util.html#.map">map</a></li><li data-type='method'><a href="fis.util.html#.md5">md5</a></li><li data-type='method'><a href="fis.util.html#.merge">merge</a></li><li data-type='method'><a href="fis.util.html#.mkdir">mkdir</a></li><li data-type='method'><a href="fis.util.html#.mtime">mtime</a></li><li data-type='method'><a href="fis.util.html#.nohup">nohup</a></li><li data-type='method'><a href="fis.util.html#.pad">pad</a></li><li data-type='method'><a href="fis.util.html#.parseUrl">parseUrl</a></li><li data-type='method'><a href="fis.util.html#.pathinfo">pathinfo</a></li><li data-type='method'><a href="fis.util.html#.pipe">pipe</a></li><li data-type='method'><a href="fis.util.html#.query">query</a></li><li data-type='method'><a href="fis.util.html#.read">read</a></li><li data-type='method'><a href="fis.util.html#.readBuffer">readBuffer</a></li><li data-type='method'><a href="fis.util.html#.readJson">readJson</a></li><li data-type='method'><a href="fis.util.html#.realpath">realpath</a></li><li data-type='method'><a href="fis.util.html#.realpathSafe">realpathSafe</a></li><li data-type='method'><a href="fis.util.html#.stringQuote">stringQuote</a></li><li data-type='method'><a href="fis.util.html#.toEncoding">toEncoding</a></li><li data-type='method'><a href="fis.util.html#.touch">touch</a></li><li data-type='method'><a href="fis.util.html#.upload">upload</a></li><li data-type='method'><a href="fis.util.html#.write">write</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="fis.cache-Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="fis.cache-Cache.html#addDeps">addDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#addMissingDeps">addMissingDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#mergeDeps">mergeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#removeDeps">removeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#revert">revert</a></li><li data-type='method'><a href="fis.cache-Cache.html#save">save</a></li></ul></li><li><a href="fis.config.Config.html">Config</a><ul class='methods'><li data-type='method'><a href="fis.config.Config.html#del">del</a></li><li data-type='method'><a href="fis.config.Config.html#get">get</a></li><li data-type='method'><a href="fis.config.Config.html#getMatches">getMatches</a></li><li data-type='method'><a href="fis.config.Config.html#getSortedMatches">getSortedMatches</a></li><li data-type='method'><a href="fis.config.Config.html#hook">hook</a></li><li data-type='method'><a href="fis.config.Config.html#match">match</a></li><li data-type='method'><a href="fis.config.Config.html#media">media</a></li><li data-type='method'><a href="fis.config.Config.html#merge">merge</a></li><li data-type='method'><a href="fis.config.Config.html#set">set</a></li><li data-type='method'><a href="fis.config.Config.html#unhook">unhook</a></li></ul></li><li><a href="fis.file-File.html">File</a><ul class='methods'><li data-type='method'><a href="fis.file-File.html#addAsyncRequire">addAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#addLink">addLink</a></li><li data-type='method'><a href="fis.file-File.html#addRequire">addRequire</a></li><li data-type='method'><a href="fis.file-File.html#addSameNameRequire">addSameNameRequire</a></li><li data-type='method'><a href="fis.file-File.html#defineLikes">defineLikes</a></li><li data-type='method'><a href="fis.file-File.html#exists">exists</a></li><li data-type='method'><a href="fis.file-File.html#getBase64">getBase64</a></li><li data-type='method'><a href="fis.file-File.html#getCacheData">getCacheData</a></li><li data-type='method'><a href="fis.file-File.html#getContent">getContent</a></li><li data-type='method'><a href="fis.file-File.html#getHash">getHash</a></li><li data-type='method'><a href="fis.file-File.html#getHashRelease">getHashRelease</a></li><li data-type='method'><a href="fis.file-File.html#getId">getId</a></li><li data-type='method'><a href="fis.file-File.html#getUrl">getUrl</a></li><li data-type='method'><a href="fis.file-File.html#isDir">isDir</a></li><li data-type='method'><a href="fis.file-File.html#isFile">isFile</a></li><li data-type='method'><a href="fis.file-File.html#isImage">isImage</a></li><li data-type='method'><a href="fis.file-File.html#isText">isText</a></li><li data-type='method'><a href="fis.file-File.html#removeAsyncRequire">removeAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#removeRequire">removeRequire</a></li><li data-type='method'><a href="fis.file-File.html#revertFromCacheData">revertFromCacheData</a></li><li data-type='method'><a href="fis.file-File.html#setContent">setContent</a></li><li data-type='method'><a href="fis.file-File.html#toString">toString</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="fis.html#.event:lookup:file">lookup:file</a></li></ul><h3>Global</h3><ul><li><a href="global.html#caseSensiveFileExits">caseSensiveFileExits</a></li></ul>
+    </div>
+
+    <div class="content api with-sidebar">
+        
+        <h1 class="page-title">project.js</h1>
+        
+
+        
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+var _ = require('./util.js');
+var glob = require('glob');
+var path = require('path');
+
+/**
+ * fis 项目相关
+ * @namespace fis.project
+ */
+
+exports.DEFAULT_REMOTE_REPOS = 'http://fis.baidu.com/repos';
+
+/**
+ * 获取项目目录中，需要编译的文件集合，返回格式为对象，`key` 为文件基于项目目录的绝对路径， `value` 为文件对象。
+ *
+ * 当前 media 环境下面设置有 `project.files` 列表时，走 {@link fis.project.getSourceByPatterns}， 否则兼容 fis 2 中
+ * 的用法，基于 `project.include` 和 `fis.exclude` 走 {@link fis.util.find} 查找。
+ *
+ * @name getSource
+ * @function
+ * @memberOf fis.project
+ */
+exports.getSource = function() {
+  var patterns = fis.media().get('project.files');
+
+  if (patterns &amp;&amp; patterns.length) {
+    return exports.getSourceByPatterns(patterns);
+  }
+
+  var root = exports.getProjectPath(),
+    source = {},
+    project_exclude = /^(\/output\b|\/fis-[^\/]+)$/,
+    include = fis.config.get('project.include'),
+    exclude = fis.config.get('project.exclude');
+  if (fis.util.is(exclude, 'Array')) {
+    project_exclude = [project_exclude].concat(exclude);
+  } else if (exclude) {
+    project_exclude = [project_exclude, exclude];
+  }
+  fis.util.find(root, include, project_exclude, root).forEach(function(file) {
+    // 产生对应的 File对象
+    file = fis.file(file);
+    if (file.release) {
+      source[file.subpath] = file;
+    }
+  });
+  return source;
+};
+
+/**
+ * 返回项目目录下符合检索规则的文件。以 `project.files` 为匹配规则，`project.ignore` 为排除规则进行检索
+ * @param  {String} patterns 匹配规则，glob文法
+ * @param  {Object} opts     配置 @see glob.sync options
+ * @return {Object}          返回
+ * @memberOf fis.project
+ * @name getSourceByPatterns
+ */
+exports.getSourceByPatterns = function(patterns, opts) {
+  patterns = patterns || fis.media().get('project.files');
+
+  if (!Array.isArray(patterns)) {
+    patterns = [patterns];
+  }
+
+  opts = _.assign({
+    cwd: exports.getProjectPath(),
+    matchBase: true,
+    ignore: fis.media().get('project.ignore', []).map(function(pattern) {
+      return pattern[0] === '/' ? pattern.substring(1) : pattern;
+    })
+  }, opts || {});
+
+  opts.nodir = true;
+  opts.sync = true;
+
+  var ret = [];
+  var source = {};
+
+  patterns.forEach(function(pattern, index) {
+    var exclude = pattern.substring(0, 1) === '!';
+
+    if (exclude) {
+      pattern = pattern.substring(1);
+
+      // 如果第一个规则就是排除用法，都没有获取结果就排除，这是不合理的用法。
+      // 不过为了保证程序的正确性，在排除之前，通过 `**` 先把所有文件获取到。
+      // 至于性能问题，请用户使用时规避。
+      (index === 0) &amp;&amp; (ret = glob.sync('**', opts));
+    }
+
+    // glob 列文件规则带 / 表现不对。
+    pattern[0] === '/' &amp;&amp; (pattern = pattern.substring(1));
+
+    var mathes = glob.sync(pattern, opts);
+
+    ret = _[exclude ? 'difference' : 'union'](ret, mathes);
+  });
+
+  ret.forEach(function(file) {
+    file = fis.file(opts.cwd, file);
+    if (file.release &amp;&amp; !file.isDir()) {
+      source[file.subpath] = file;
+    }
+  });
+
+  return source;
+};
+
+//paths
+var PROJECT_ROOT;
+var TEMP_ROOT;
+
+/*
+ * 返回由 root 和 args 拼接成的标准路径。
+ * @param  {String} root rootPath
+ * @param  {String|Array} args 后续路径
+ * @return {String}      标准路径格式
+ * @example
+ *   getPath('/Users/', ['apple', '/someone/', '/Destop/']) === getPath('/Users/', 'apple/someone//Destop/')
+ *   /Users/apple/someone/Destop
+ */
+function getPath(root, args) {
+  if (args &amp;&amp; args.length > 0) {
+    args = root + '/' + Array.prototype.join.call(args, '/');
+    return fis.util(args);
+  } else {
+    return fis.util(root);
+  }
+}
+
+/*
+ * 初始化文件夹
+ * @param  {String} path  文件夹路径
+ * @param  {String} title
+ * @return {String}       若文件夹已存在返回其觉得对路径，若不存在新建病返回绝对路径，若为文件则打印错误信息，返回path绝对路径
+ */
+function initDir(path, title) {
+  if (fis.util.exists(path)) {
+    if (!fis.util.isDir(path)) {
+      fis.log.error('unable to set path[%s] as %s directory.', path, title);
+    }
+  } else {
+    fis.util.mkdir(path);
+  }
+  path = fis.util.realpath(path);
+  if (path) {
+    return path;
+  } else {
+    fis.log.error('unable to create dir [%s] for %s directory.', path, title);
+  }
+}
+
+/**
+ * 获取项目所在目录。
+ * 注意：返回的文件路径，已经被 normalize 了。
+ * @param {String} [subpath] 如果指定了子目录，将返回子目录路径。
+ * @return {String}
+ * @function
+ * @memberOf fis.project
+ * @name getProjectPath
+ */
+exports.getProjectPath = function() {
+  if (PROJECT_ROOT) {
+    return getPath(PROJECT_ROOT, arguments);
+  } else {
+    fis.log.error('undefined project root');
+  }
+};
+
+/**
+ * 设置项目根目录
+ * @param {String} path 项目根目录
+ * @function
+ * @memberOf fis.project
+ * @name setProjectRoot
+ */
+exports.setProjectRoot = function(path) {
+  if (fis.util.isDir(path)) {
+    PROJECT_ROOT = fis.util.realpath(path);
+  } else {
+    fis.log.error('invalid project root path [%s]', path);
+  }
+};
+
+/**
+ * 设置并创建临时文件夹
+ * @param {String} tmp 临时文件夹路径
+ * @function
+ * @memberOf fis.project
+ * @name setTempRoot
+ */
+exports.setTempRoot = function(tmp) {
+  TEMP_ROOT = initDir(tmp);
+};
+
+/**
+ * 获取临时文件夹根目录，若未手动设置，则遍历用户环境变量中['FIS_TEMP_DIR', 'LOCALAPPDATA', 'APPDATA', 'HOME']这几项是否有设置，有则作为临时目录path，没有则以fis3/.fis-tmp作为临时文件夹
+ * @function
+ * @memberOf fis.project
+ * @name getTempRoot
+ */
+exports.getTempRoot = function() {
+  if (!TEMP_ROOT) {
+    var list = ['FIS_TEMP_DIR', 'LOCALAPPDATA', 'APPDATA', 'HOME'];
+    var name = fis.cli &amp;&amp; fis.cli.name ? fis.cli.name : 'fis';
+    var tmp;
+    for (var i = 0, len = list.length; i &lt; len; i++) {
+      if ((tmp = process.env[list[i]])) {
+        break;
+      }
+    }
+    tmp = tmp || __dirname + '/../';
+    exports.setTempRoot(tmp + '/.' + name + '-tmp');
+  }
+  return TEMP_ROOT;
+};
+
+/**
+ * 获取临时文件夹路径
+ * @return {String}
+ * @function
+ * @memberOf fis.project
+ * @name getTempPath
+ */
+exports.getTempPath = function() {
+  return getPath(exports.getTempRoot(), arguments);
+};
+
+/**
+ * 获取对应缓存的文件路径，缓存存放在 TEMP_ROOT/cache 下
+ * @return {String} 对应缓存的路径
+ * @function
+ * @memberOf fis.project
+ * @name getCachePath
+ */
+exports.getCachePath = function() {
+  return getPath(exports.getTempPath('cache'), arguments);
+};
+
+/**
+ * 根据路径查找路径，支持相对路径和基于项目文件夹的绝对路径。
+ *
+ * @param  {string} path 文件路径。
+ * @param  {File} file 文件对象，当路径为相对路径时，此文件对象所在目录将用于查找目标文件。
+ * @return {Object}      返回查找结果对象。
+ * @function
+ * @memberOf fis.project
+ * @name lookup
+ */
+exports.lookup = function(path, file, silent) {
+  var info = fis.uri(path, file ? file.dirname : exports.getProjectPath());
+
+  /**
+   * 当查找文件时派送, 可以扩展 fis 默认的查找文件功能。如：支持无后缀文件查找，支持 components 文件查找。
+   * @event lookup:file
+   * @property {Object} info 包含查找路径信息。
+   * @property {File} file 文件对象。
+   * @memberOf fis
+   */
+  fis.emit('lookup:file', info, file, silent);
+  if (!info.id) {
+    info.id = info.file ? info.file.id : info.rest;
+  }
+
+  if (!info.moduleId) {
+    info.moduleId = info.file &amp;&amp; info.file.moduleId || info.id;
+  }
+
+  return info;
+};
+
+var mediaName;
+
+/**
+ * 返回当前用户所在的 media 名称。
+ * @return {String} 当前用户所在分支
+ * @function
+ * @memberOf fis.project
+ * @name currentMedia
+ */
+exports.currentMedia = function (value) {
+  if (arguments.length) {
+    mediaName = value;
+  }
+
+  return mediaName || 'dev';
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 21 2018 07:31:50 GMT+0000 (UTC) using the Minami theme.
+    </div>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="/fis3/api/scripts/linenumber_9ec4215.js"></script>
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");
+            $(".sidebar").removeClass("open");
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                if(st > lastScrollTop){
+                    $("body").addClass("hide-header");
+                }else{
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }
+            lastScrollTop = st;
+        });
+    }());
+</script>
+</body>
+</html>

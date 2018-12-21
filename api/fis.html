@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>fis - Documentation</title>
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script src="/fis3/api/scripts/prettify/prettify_cedfcfe.js"></script>
+    <script src="/fis3/api/scripts/prettify/lang-css_837b4b4.js"></script>
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/fis3/static/css/common_3a72140.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/ionicons.min_abcba5d.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/prettify-tomorrow_da53376.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/jsdoc-default_edaf81d.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  ">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  is-active">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar scrollbar ps-container jsdoc-nav">
+      <h3>Namespaces</h3><ul><li><a href="fis.html">fis</a><ul class='methods'><li data-type='method'><a href="fis.html#.emit">emit</a></li><li data-type='method'><a href="fis.html#.on">on</a></li><li data-type='method'><a href="fis.html#.once">once</a></li><li data-type='method'><a href="fis.html#.plugin">plugin</a></li><li data-type='method'><a href="fis.html#.release">release</a></li><li data-type='method'><a href="fis.html#.removeAllListeners">removeAllListeners</a></li><li data-type='method'><a href="fis.html#.removeListener">removeListener</a></li><li data-type='method'><a href="fis.html#.require">require</a></li><li data-type='method'><a href="fis.html#.time">time</a></li></ul></li><li><a href="fis.cache.html">cache</a><ul class='methods'><li data-type='method'><a href="fis.cache.html#.clean">clean</a></li></ul></li><li><a href="fis.cli.html">cli</a><ul class='methods'><li data-type='method'><a href="fis.cli.html#.help">help</a></li><li data-type='method'><a href="fis.cli.html#.run">run</a></li><li data-type='method'><a href="fis.cli.html#.version">version</a></li></ul></li><li><a href="fis.compile.html">compile</a><ul class='methods'><li data-type='method'><a href="fis.compile.html#.analyseComment">analyseComment</a></li><li data-type='method'><a href="fis.compile.html#.clean">clean</a></li><li data-type='method'><a href="fis.compile.html#.extCss">extCss</a></li><li data-type='method'><a href="fis.compile.html#.extHtml">extHtml</a></li><li data-type='method'><a href="fis.compile.html#.extJs">extJs</a></li><li data-type='method'><a href="fis.compile.html#.isInline">isInline</a></li><li data-type='method'><a href="fis.compile.html#.partial">partial</a></li><li data-type='method'><a href="fis.compile.html#.process">process</a></li><li data-type='method'><a href="fis.compile.html#.setup">setup</a></li><li data-type='method'><a href="fis.compile.html#.xLang">xLang</a></li><li data-type='method'><a href="fis.compile.html#~builtinStandard">builtinStandard</a></li><li data-type='method'><a href="fis.compile.html#~pipe">pipe</a></li><li data-type='method'><a href="fis.compile.html#~postStandard">postStandard</a></li></ul></li><li><a href="fis.compile.lang.html">lang</a><ul class='methods'><li data-type='method'><a href="fis.compile.lang.html#.add">add</a></li></ul></li><li><a href="fis.config.html">config</a></li><li><a href="fis.emitter.html">emitter</a></li><li><a href="fis.file.html">file</a></li><li><a href="fis.log.html">log</a><ul class='methods'><li data-type='method'><a href="fis.log.html#.debug">debug</a></li><li data-type='method'><a href="fis.log.html#.error">error</a></li><li data-type='method'><a href="fis.log.html#.format">format</a></li><li data-type='method'><a href="fis.log.html#.info">info</a></li><li data-type='method'><a href="fis.log.html#.notice">notice</a></li><li data-type='method'><a href="fis.log.html#.now">now</a></li><li data-type='method'><a href="fis.log.html#.warn">warn</a></li><li data-type='method'><a href="fis.log.html#.warning">warning</a></li><li data-type='method'><a href="fis.log.html#~log">log</a></li></ul></li><li><a href="fis.project.html">project</a><ul class='methods'><li data-type='method'><a href="fis.project.html#.currentMedia">currentMedia</a></li><li data-type='method'><a href="fis.project.html#.getCachePath">getCachePath</a></li><li data-type='method'><a href="fis.project.html#.getProjectPath">getProjectPath</a></li><li data-type='method'><a href="fis.project.html#.getSource">getSource</a></li><li data-type='method'><a href="fis.project.html#.getTempPath">getTempPath</a></li><li data-type='method'><a href="fis.project.html#.getTempRoot">getTempRoot</a></li><li data-type='method'><a href="fis.project.html#.lookup">lookup</a></li><li data-type='method'><a href="fis.project.html#.setProjectRoot">setProjectRoot</a></li><li data-type='method'><a href="fis.project.html#.setTempRoot">setTempRoot</a></li></ul></li><li><a href="fis.uri.html">uri</a></li><li><a href="fis.util.html">util</a><ul class='methods'><li data-type='method'><a href="fis.util.html#.applyMatches">applyMatches</a></li><li data-type='method'><a href="fis.util.html#.base64">base64</a></li><li data-type='method'><a href="fis.util.html#.camelcase">camelcase</a></li><li data-type='method'><a href="fis.util.html#.clone">clone</a></li><li data-type='method'><a href="fis.util.html#.copy">copy</a></li><li data-type='method'><a href="fis.util.html#.del">del</a></li><li data-type='method'><a href="fis.util.html#.download">download</a></li><li data-type='method'><a href="fis.util.html#.escapeReg">escapeReg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellArg">escapeShellArg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellCmd">escapeShellCmd</a></li><li data-type='method'><a href="fis.util.html#.exist">exist</a></li><li data-type='method'><a href="fis.util.html#.ext">ext</a></li><li data-type='method'><a href="fis.util.html#.filter">filter</a></li><li data-type='method'><a href="fis.util.html#.find">find</a></li><li data-type='method'><a href="fis.util.html#.getMimeType">getMimeType</a></li><li data-type='method'><a href="fis.util.html#.glob">glob</a></li><li data-type='method'><a href="fis.util.html#.install">install</a></li><li data-type='method'><a href="fis.util.html#.isAbsolute">isAbsolute</a></li><li data-type='method'><a href="fis.util.html#.isDir">isDir</a></li><li data-type='method'><a href="fis.util.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="fis.util.html#.isFile">isFile</a></li><li data-type='method'><a href="fis.util.html#.isImageFile">isImageFile</a></li><li data-type='method'><a href="fis.util.html#.isTextFile">isTextFile</a></li><li data-type='method'><a href="fis.util.html#.isUtf8">isUtf8</a></li><li data-type='method'><a href="fis.util.html#.isWin">isWin</a></li><li data-type='method'><a href="fis.util.html#.map">map</a></li><li data-type='method'><a href="fis.util.html#.md5">md5</a></li><li data-type='method'><a href="fis.util.html#.merge">merge</a></li><li data-type='method'><a href="fis.util.html#.mkdir">mkdir</a></li><li data-type='method'><a href="fis.util.html#.mtime">mtime</a></li><li data-type='method'><a href="fis.util.html#.nohup">nohup</a></li><li data-type='method'><a href="fis.util.html#.pad">pad</a></li><li data-type='method'><a href="fis.util.html#.parseUrl">parseUrl</a></li><li data-type='method'><a href="fis.util.html#.pathinfo">pathinfo</a></li><li data-type='method'><a href="fis.util.html#.pipe">pipe</a></li><li data-type='method'><a href="fis.util.html#.query">query</a></li><li data-type='method'><a href="fis.util.html#.read">read</a></li><li data-type='method'><a href="fis.util.html#.readBuffer">readBuffer</a></li><li data-type='method'><a href="fis.util.html#.readJson">readJson</a></li><li data-type='method'><a href="fis.util.html#.realpath">realpath</a></li><li data-type='method'><a href="fis.util.html#.realpathSafe">realpathSafe</a></li><li data-type='method'><a href="fis.util.html#.stringQuote">stringQuote</a></li><li data-type='method'><a href="fis.util.html#.toEncoding">toEncoding</a></li><li data-type='method'><a href="fis.util.html#.touch">touch</a></li><li data-type='method'><a href="fis.util.html#.upload">upload</a></li><li data-type='method'><a href="fis.util.html#.write">write</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="fis.cache-Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="fis.cache-Cache.html#addDeps">addDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#addMissingDeps">addMissingDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#mergeDeps">mergeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#removeDeps">removeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#revert">revert</a></li><li data-type='method'><a href="fis.cache-Cache.html#save">save</a></li></ul></li><li><a href="fis.config.Config.html">Config</a><ul class='methods'><li data-type='method'><a href="fis.config.Config.html#del">del</a></li><li data-type='method'><a href="fis.config.Config.html#get">get</a></li><li data-type='method'><a href="fis.config.Config.html#getMatches">getMatches</a></li><li data-type='method'><a href="fis.config.Config.html#getSortedMatches">getSortedMatches</a></li><li data-type='method'><a href="fis.config.Config.html#hook">hook</a></li><li data-type='method'><a href="fis.config.Config.html#match">match</a></li><li data-type='method'><a href="fis.config.Config.html#media">media</a></li><li data-type='method'><a href="fis.config.Config.html#merge">merge</a></li><li data-type='method'><a href="fis.config.Config.html#set">set</a></li><li data-type='method'><a href="fis.config.Config.html#unhook">unhook</a></li></ul></li><li><a href="fis.file-File.html">File</a><ul class='methods'><li data-type='method'><a href="fis.file-File.html#addAsyncRequire">addAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#addLink">addLink</a></li><li data-type='method'><a href="fis.file-File.html#addRequire">addRequire</a></li><li data-type='method'><a href="fis.file-File.html#addSameNameRequire">addSameNameRequire</a></li><li data-type='method'><a href="fis.file-File.html#defineLikes">defineLikes</a></li><li data-type='method'><a href="fis.file-File.html#exists">exists</a></li><li data-type='method'><a href="fis.file-File.html#getBase64">getBase64</a></li><li data-type='method'><a href="fis.file-File.html#getCacheData">getCacheData</a></li><li data-type='method'><a href="fis.file-File.html#getContent">getContent</a></li><li data-type='method'><a href="fis.file-File.html#getHash">getHash</a></li><li data-type='method'><a href="fis.file-File.html#getHashRelease">getHashRelease</a></li><li data-type='method'><a href="fis.file-File.html#getId">getId</a></li><li data-type='method'><a href="fis.file-File.html#getUrl">getUrl</a></li><li data-type='method'><a href="fis.file-File.html#isDir">isDir</a></li><li data-type='method'><a href="fis.file-File.html#isFile">isFile</a></li><li data-type='method'><a href="fis.file-File.html#isImage">isImage</a></li><li data-type='method'><a href="fis.file-File.html#isText">isText</a></li><li data-type='method'><a href="fis.file-File.html#removeAsyncRequire">removeAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#removeRequire">removeRequire</a></li><li data-type='method'><a href="fis.file-File.html#revertFromCacheData">revertFromCacheData</a></li><li data-type='method'><a href="fis.file-File.html#setContent">setContent</a></li><li data-type='method'><a href="fis.file-File.html#toString">toString</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="fis.html#.event:lookup:file">lookup:file</a></li></ul><h3>Global</h3><ul><li><a href="global.html#caseSensiveFileExits">caseSensiveFileExits</a></li></ul>
+    </div>
+
+    <div class="content api with-sidebar">
+        
+        <h1 class="page-title">fis</h1>
+        
+
+        
+
+
+
+
+<section>
+
+<div>
+    
+        <h2>
+        fis
+        </h2>
+        
+    
+</div>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>fis 名字空间，fis 中所有工具和方法都是通过此变量暴露给外部使用。</p></div>
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line63">line 63</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+        <h3 class="subsection-title">Namespaces</h3>
+
+        <dl>
+            <dt><a href="fis.cache.html">cache</a></dt>
+            <dd></dd>
+        
+            <dt><a href="fis.cli.html">cli</a></dt>
+            <dd></dd>
+        
+            <dt><a href="fis.compile.html">compile</a></dt>
+            <dd></dd>
+        
+            <dt><a href="fis.config.html">config</a></dt>
+            <dd></dd>
+        
+            <dt><a href="fis.emitter.html">emitter</a></dt>
+            <dd></dd>
+        
+            <dt><a href="fis.file.html">file</a></dt>
+            <dd></dd>
+        
+            <dt><a href="fis.log.html">log</a></dt>
+            <dd></dd>
+        
+            <dt><a href="fis.project.html">project</a></dt>
+            <dd></dd>
+        
+            <dt><a href="fis.uri.html">uri</a></dt>
+            <dd></dd>
+        
+            <dt><a href="fis.util.html">util</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<a class="title-anchor" name=".info"></a>
+<h4 class="name"><span class="type-signature">(static) </span>info<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>fis 的 npm 包信息。</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line307">line 307</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<a class="title-anchor" name=".version"></a>
+<h4 class="name"><span class="type-signature">(static) </span>version<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>fis 版本号</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line313">line 313</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".emit"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>emit<span class="signature">(type)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>发送事件，将所有监听此事件名的响应函数挨个执行一次，并把消息体参数 args.. 带过去。</p>
+<p>代理 fis.emitter.emit.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Sring</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args...</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>消息体数据，任意多个，所有参数都可以在 <code>handler</code> 中获取到。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line161">line 161</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://nodejs.org/api/events.html">https://nodejs.org/api/events.html</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>如果有事件响应了，则返回 <code>true</code> 否则返回 <code>false</code>.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>fis.emit('donthing', {
+  foo: 1
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".on"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>on<span class="signature">(type, handler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>用来监听 fis 中的事件。每次添加都不会有额外的检测工作，也就是说重复添加有可能被调用多次。</p>
+<p>注意：以下示例中 type 为 <code>project:lookup</code>, 但是它没有多余的意思，就是一段字符串，跟 namespace 没有一点关系。</p>
+<p>代理 fis.emitter.on.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Sring</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>响应函数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line95">line 95</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://nodejs.org/api/events.html">https://nodejs.org/api/events.html</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>fis.on('project:lookup', function(uri, file) {
+  // looking for uri from file.
+  console.log('Looking for %s from $s', uri, file.subpath);
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".once"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>once<span class="signature">(type, handler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>跟 fis.on 差不多，但是只会触发一次。</p>
+<p>代理 fis.emitter.once.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Sring</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>响应函数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line114">line 114</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="fis.html#.on">fis.on</a></li>
+        
+            <li><a href="https://nodejs.org/api/events.html">https://nodejs.org/api/events.html</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>fis.once('compile:start', function(file) {
+  console.log('The file %s is gona compile.', file.subpath);
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".plugin"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>plugin<span class="signature">(pluginName, options, position<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>仅限于 fis-conf.js 中使用，用来包装 fis 插件配置。</p>
+<p>需要在对应的插件扩展点中配置才有效，否则直接执行 fis.plugin 没有任何意义。</p>
+<p>单文件扩展点：</p>
+<ul>
+<li>lint</li>
+<li>parser</li>
+<li>preprocess</li>
+<li>standard</li>
+<li>postprocess</li>
+<li>optimizer</li>
+</ul>
+<p>打包阶段扩展点：</p>
+<ul>
+<li>prepacakger</li>
+<li>sprite</li>
+<li>packager</li>
+<li>postpackager</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pluginName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>插件名字。</p>
+<p>说明：pluginName 不是对应的 npm 包名，而是对应 npm 包名去掉 fis 前缀，去掉插件扩展点前缀。</p>
+<p>如：fis-parser-sass 包，在这里面配置就是:</p>
+<pre class="prettyprint source lang-js"><code>fis.match('*.scss', {
+  parser: fis.plugin('sass')
+});</code></pre></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>插件配置项，具体请参看插件说明。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>position</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>可选：'prepend' | 'append'。默认为空，当给某类文件配置插件时，都是覆盖式的。而通过设置此插件可以做到，往前追加和往后追加。</p>
+<p>如：</p>
+<pre class="prettyprint source lang-js"><code>fis.match('*.xxx', {
+  parser: fis.plugin('a')
+});
+
+// 保留 plugin a 同时，之后再执行 plugin b
+fis.match('*.xxx', {
+  parser: fis.plugin('b', null, 'append')
+});</code></pre></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line290">line 290</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>fis.match('*.scss', {
+  parser: fis.plugin('sass', {
+    include_paths: [
+      './static/scss/libaray'
+    ]
+  })
+});
+
+fis.match('::packager', {
+  postpackager: fis.plugin('loader', {
+    allInOne: true
+  });
+})</code></pre>
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".release"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>release<span class="signature">(opt, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>fis 整体编译入口。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opt</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>配置项</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>srcCache</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>需要编译的文件列表，当没有填写时，fis 将通过 <a href="fis.project.html#.getSource">fis.project.getSource</a>() 获取</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>beforeEach</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>编译开始前执行的回调函数，无论走缓存与否。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>afterEach</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>编译完成后执行的回调函数，无论走缓存与否。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>beforeCompile</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>编译开始前执行，当采用缓存时不执行。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>afterCompile</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>编译完成后执行，当采用缓存时不执行。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>beforeCacheRevert</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>在缓存被应用到文件对象前执行。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>afterCacheRevert</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>在缓存被应用到文件对象后执行。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Callback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>当整体编译完成后执行。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="release.js.html">release.js</a>, <a href="release.js.html#line8">line 8</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".removeAllListeners"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>removeAllListeners<span class="signature">(type<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>取消监听所有事件监听，如果指定了事件类型，那么只会取消掉指定的事件类型的所有监听。</p>
+<p>代理 fis.emitter.removeAllListeners.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>事件类型</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line150">line 150</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://nodejs.org/api/events.html">https://nodejs.org/api/events.html</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".removeListener"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>removeListener<span class="signature">(type, handler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>取消监听某事件。注意，如果同一个事件类型和同一响应函数被监听了多次，此函数一次只会移除一次。</p>
+<p>代理 fis.emitter.removeListener.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>事件类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>响应函数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line131">line 131</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://nodejs.org/api/events.html">https://nodejs.org/api/events.html</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>fis.on('project:lookup', function onLookup(uri, file) {
+  // looking for uri from file.
+  console.log('Looking for %s from $s', uri, file.subpath);
+});
+
+fis.removeListener('project:lookup', onLookup);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".require"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>require<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>用来加载 fis 插件。通过它来加载插件，会优先从本地安装的 node_modules 目录里面找，然后才是 global<br>全局安装的 node_modules 里面找。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>paths...</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>去掉 fis 前缀的包名字，可以以多个参数传进来，多个参数会自动通过 <code>-</code> 符号连接起来。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>prefixes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>用来配置 fis.require 前缀的查找规则的。默认：['fis3', 'fis']。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_cache</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>用来缓存模块加载，避免重复查找。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="require.js.html">require.js</a>, <a href="require.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// 查找顺序
+// local: fis3-parser-sass
+// local: fis-parser-sass
+// global: fis3-parser-sass
+// global: fis-parser-sass
+fis.require('parser-sass');</code></pre>
+
+
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".time"></a>
+    <h4 class="name"><span class="type-signature">(static) </span>time<span class="signature">(title)</span><span class="type-signature"> &rarr; {Undefined}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>输出时间消耗，单位为 ms.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>描述内容</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fis.js.html">fis.js</a>, <a href="fis.js.html#line179">line 179</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>fis.time('Comiple cost');
+// => compile cost 56ms</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        
+            
+
+    
+
+    <a class="title-anchor" name=".event:lookup:file"></a>
+    <h4 class="name">lookup:file</h4>
+
+    
+
+
+
+<div class="description">
+    <p>当查找文件时派送, 可以扩展 fis 默认的查找文件功能。如：支持无后缀文件查找，支持 components 文件查找。</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>info</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>包含查找路径信息。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">File</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>文件对象。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="project.js.html">project.js</a>, <a href="project.js.html#line253">line 253</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+</article>
+
+</section>
+
+
+
+
+    </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 21 2018 07:31:50 GMT+0000 (UTC) using the Minami theme.
+    </div>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="/fis3/api/scripts/linenumber_9ec4215.js"></script>
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");
+            $(".sidebar").removeClass("open");
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                if(st > lastScrollTop){
+                    $("body").addClass("hide-header");
+                }else{
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }
+            lastScrollTop = st;
+        });
+    }());
+</script>
+</body>
+</html>

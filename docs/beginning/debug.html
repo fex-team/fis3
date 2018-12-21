@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="_FIS_构建工具_前端工具框架" />
+    <meta name="keywords" content=",百度前端团队,FIS,百度FIS,百度前端,fis,前端模块化,前端工程,性能优化,web performance" />
+    <link rel="shortcut icon" href="/fis3/static/images/favicon-fis.ico"/>
+    <title>FIS3 :  调试</title>
+    <meta name="description" content="FIS3 面向前端的工程构建系统">
+    <meta name="author" content="fis-team">
+    
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/fis3/static/css/common_3a72140.css">
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+    <script type="text/javascript">
+        //检查页面域名
+        (function(){
+            var url = window.location.href;
+            if (url.indexOf('http://fex.baidu.com/fis-site') !== -1) {
+                window.location.href = url.replace('http://fex.baidu.com/fis-site','http://fis.baidu.com');
+            }
+        })();
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script type="text/javascript" src="/fis3/static/js/jquery.cookie_a5283b2.js"></script>
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  is-active">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  ">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar">
+    <ul>
+<li><a href="/fis3/docs/beginning/intro.html">介绍</a></li>
+<li><a href="/fis3/docs/beginning/install.html">安装</a></li>
+<li>起步<ul>
+<li><a href="/fis3/docs/beginning/release.html">构建</a><ul>
+<li><a href="/fis3/docs/beginning/release.html#%E4%BE%8B%E5%AD%90">例子</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%91%BD%E4%BB%A4">命令</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D">资源定位</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">配置文件</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9">文件指纹</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8E%8B%E7%BC%A9%E8%B5%84%E6%BA%90">压缩资源</a></li>
+<li><a href="/fis3/docs/beginning/release.html#CssSprite%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6">CssSprite图片合并</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8A%9F%E8%83%BD%E7%BB%84%E5%90%88">功能组合</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/beginning/debug.html">调试</a><ul>
+<li><a href="/fis3/docs/beginning/debug.html#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83">发布</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%90%AF%E5%8A%A8">启动</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E9%A2%84%E8%A7%88">预览</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC">文件监听</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0">浏览器自动刷新</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83%E5%88%B0%E8%BF%9C%E7%AB%AF%E6%9C%BA%E5%99%A8">发布到远端机器</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%9B%BF%E4%BB%A3%E5%86%85%E7%BD%AEServer">替代内置Server</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/user-dev/extlang.html">内置语法</a><ul>
+<li><a href="/fis3/docs/user-dev/inline.html">内容嵌入</a></li>
+<li><a href="/fis3/docs/user-dev/uri.html">定位资源</a></li>
+<li><a href="/fis3/docs/user-dev/require.html">声明依赖</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/fis3/docs/build.html">工作原理</a><ul>
+<li><a href="/fis3/docs/build.html#%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B">构建流程</a></li>
+<li><a href="/fis3/docs/build.html#%E5%8D%95%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B">单文件编译流程</a></li>
+<li><a href="/fis3/docs/build.html#File%E5%AF%B9%E8%B1%A1">File对象</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv1.html">初级使用</a><ul>
+<li><a href="/fis3/docs/lv1.html#%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%82%B9%E7%9A%84%E4%BE%8B%E5%AD%90">一个复杂点的例子</a></li>
+<li><a href="/fis3/docs/lv1.html#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E6%8F%92%E4%BB%B6">安装一些插件</a></li>
+<li><a href="/fis3/docs/lv1.html#%E9%A2%84%E5%A4%84%E7%90%86">预处理</a></li>
+<li><a href="/fis3/docs/lv1.html#%E7%AE%80%E5%8D%95%E5%90%88%E5%B9%B6">简单合并</a></li>
+<li><a href="/fis3/docs/lv1.html#%E6%9E%84%E5%BB%BA%E8%B0%83%E8%AF%95%E9%A2%84%E8%A7%88">构建调试预览</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv2.html">中级使用</a><ul>
+<li><a href="/fis3/docs/lv2.html#%E9%A2%84%E5%A4%84%E7%90%86%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">预处理插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E6%89%93%E5%8C%85%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">打包插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E5%8F%91%E5%B8%83%E6%8F%92%E4%BB%B6">发布插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv3.html">高级使用</a><ul>
+<li><a href="/fis3/docs/lv3.html#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A1%A8">静态资源映射表</a></li>
+<li><a href="/fis3/docs/lv3.html#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91">模块化开发</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1">资源映射表的模块化方案设计</a></li>
+<li><a href="/fis3/docs/lv3.html#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B0%81%E8%A3%85">解决方案封装</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ESmarty%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Smarty的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E7%BA%AFPHP%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于纯PHP的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ELaravel%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Laravel的解决方案</a></li>
+</ul>
+</li>
+<li>接口文档<ul>
+<li><a href="/fis3/docs/api/command.html">命令行</a></li>
+<li><a href="/fis3/docs/api/config.html">配置</a><ul>
+<li><a href="/fis3/docs/api/config-api.html">配置接口</a></li>
+<li><a href="/fis3/docs/api/config-props.html">配置属性</a></li>
+<li><a href="/fis3/docs/api/config-commonly-used.html">常用配置</a></li>
+<li><a href="/fis3/docs/api/config-glob.html">glob</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/api/config-system-plugin.html">内置插件及配置</a></li>
+<li><a href="/fis3/docs/api/dev-plugin.html">自定义插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/fis2-to-fis3.html">FIS2 到 FIS3</a></li>
+<li><a href="/fis3/docs/pack.html">资源合并</a></li>
+<li><a href="/fis3/docs/node-mock.html">mock 假数据模拟</a></li>
+<li><a href="/fis3/docs/common-plugin.html">常用的插件列表</a></li>
+</ul>
+
+    <div class="bottom-shadow"></div>
+</div>
+
+    <div class="content api with-sidebar">
+        <a name="%E8%B0%83%E8%AF%95" class="title-anchor"></a><h3 class="" id="调试">调试</h3><p>FIS3 构建后，默认情况下会对资源的 URL 进行修改，改成绝对路径。这时候本地双击打开文件是无法正常工作的。这给开发调试带来了绝大的困惑。</p>
+<p>FIS3 内置一个简易 Web Server，可以方便调试构建结果。</p>
+<a name="%E7%9B%AE%E5%BD%95" class="title-anchor"></a><h4 class="" >目录</h4><p>构建时不指定输出目录，即不指定 <code>-d</code> 参数时，构建结果被发送到内置 Web Server 的根目录下。此目录可以通过执行以下命令打开。</p>
+<pre><code class="hljs lang-bash">fis3 <span class="hljs-keyword">server</span> open
+</code></pre>
+<a name="%E5%8F%91%E5%B8%83" class="title-anchor"></a><h4 class="" >发布</h4><pre><code class="hljs lang-bash"><span class="hljs-title">fis3</span> release
+</code></pre>
+<p>不加 <code>-d</code> 参数默认被发布到内置 Web Server的根目录下，当启动服务时访问此目录下的资源。</p>
+<a name="%E5%90%AF%E5%8A%A8" class="title-anchor"></a><h4 class="" >启动</h4><p>通过</p>
+<pre><code class="hljs lang-bash">fis3 <span class="hljs-keyword">server</span> start
+</code></pre>
+<p>来启动本地 Web Server，当此 Server 启动后，会自动浏览器打开 <code>http://127.0.0.1:8080</code>，默认监听端口 <code>8080</code></p>
+<p>通过执行以下命令得到更多启动参数，可以设置不同的端口号（当 <code>8080</code> 占用时）</p>
+<pre><code class="hljs lang-bash">fis3 <span class="hljs-keyword">server</span> -h
+</code></pre>
+<a name="%E9%A2%84%E8%A7%88" class="title-anchor"></a><h4 class="" >预览</h4><p>启动 Web Server 以后，会自动打开浏览器，访问 <code>http://127.0.0.1:8080</code> URL，这时即可查看到页面渲染结果。正如所有其他 Web Server，<font color="red">FIS3 内置的 Server 是常驻的，如果不重启计算机或者调用命令关闭是不会关闭的</font>。</p>
+<p>所以后续只需访问对应链接即可，而不需要每次 <code>release</code> 就启动一次 <code>server</code>。</p>
+<a name="%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC" class="title-anchor"></a><h4 class="" >文件监听</h4><p>为了方便开发，FIS3 支持文件监听，当启动文件监听时，修改文件会构建发布。而且其编译是增量的，编译花费时间少。</p>
+<p>FIS3 通过对 <code>release</code> 命令添加 <code>-w</code> 或者 <code>--watch</code> 参数启动文件监听功能。</p>
+<pre><code class="hljs lang-bash"><span class="hljs-title">fis3</span> release -w
+</code></pre>
+<blockquote>
+<p>添加 <code>-w</code> 参数时，程序不会执行终止；停止程序用快捷键 <kbd>CTRL</kbd>+<kbd>c</kbd></p>
+</blockquote>
+<a name="%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0" class="title-anchor"></a><h4 class="" >浏览器自动刷新</h4><p>文件修改自动构建发布后，如果浏览器能自动刷新，这是一个非常好的开发体验。</p>
+<p>FIS3 支持浏览器自动刷新功能，只需要给 <code>release</code> 命令添加 <code>-L</code> 参数，通常 <code>-w</code> 和 <code>-L</code> 一起使用。</p>
+<pre><code class="hljs lang-bash"><span class="hljs-title">fis3</span> release -wL
+</code></pre>
+<blockquote>
+<p>程序停止用快捷键 <kbd>CTRL</kbd>+<kbd>c</kbd></p>
+</blockquote>
+<a name="%E5%8F%91%E5%B8%83%E5%88%B0%E8%BF%9C%E7%AB%AF%E6%9C%BA%E5%99%A8" class="title-anchor"></a><h4 class="" >发布到远端机器</h4><p>当我们开发项目后，需要发布到测试机（联调机），一般可以通过如 SMB、FTP 等上传代码。FIS3 默认支持使用 HTTP 上传代码，首先需要在测试机部署上传接收脚本（或者服务），这个脚本非常简单，现在给出了 <a href="https://github.com/fex-team/fis-command-release/blob/master/tools/receiver.php">php 的实现版本</a>，可以把它放到测试机上某个 Web 服务根目录，并且配置一个 url 能访问到即可。</p>
+<blockquote>
+<p>注意：<strong>此代码存在很大的安全隐患，没有做任何安全考虑，请不要部署到线上服务。</strong><br>百度内部请使用：<a href="http://agroup.baidu.com/fis/md/article/196978">http://agroup.baidu.com/fis/md/article/196978</a></p>
+</blockquote>
+<blockquote>
+<p>示例脚本是 php 脚本，测试机 Web 需要支持 PHP 的解析 <br />
+如果需要其他语言实现，请参考这个 php 脚本实现，如果嫌麻烦，我们提供了一个 node 版本的<a href="https://github.com/fex-team/receiver">接收端</a></p>
+</blockquote>
+<p>假定这个 URL 是：<code>http://cq.01.p.p.baidu.com:8888/receiver.php</code></p>
+<p>那么我们只需要在配置文件配置</p>
+<pre><code class="hljs lang-js"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*'</span>, {
+  <span class="hljs-tag">deploy</span>: <span class="hljs-tag">fis</span><span class="hljs-class">.plugin</span>(<span class="hljs-string">'http-push'</span>, {
+    <span class="hljs-attribute">receiver</span>: <span class="hljs-string">'http://cq.01.p.p.baidu.com:8888/receiver.php'</span>,
+    <span class="hljs-attribute">to</span>: <span class="hljs-string">'/home/work/htdocs'</span> <span class="hljs-comment">// 注意这个是指的是测试机器的路径，而非本地机器</span>
+  })
+})
+</code></pre>
+<blockquote>
+<p>如果你想通过其他协议上传代码，请参考 <a href="/fis3/docs/api/dev-plugin.html#Deploy%20%E6%8F%92%E4%BB%B6">deploy 插件开发</a> 实现对应协议插件即可。</p>
+</blockquote>
+<ul>
+<li>当执行 <code>fis3 release</code> 时上传测试机器</li>
+</ul>
+<p>可能上传测试机是最后联调时才会有的，更好的做法是设置特定 <code>media</code>。</p>
+<pre><code class="hljs lang-js"><span class="hljs-comment">// 其他配置</span>
+...
+<span class="hljs-tag">fis</span><span class="hljs-class">.media</span>(<span class="hljs-string">'qa'</span>)<span class="hljs-class">.match</span>(<span class="hljs-string">'*'</span>, {
+  <span class="hljs-tag">deploy</span>: <span class="hljs-tag">fis</span><span class="hljs-class">.plugin</span>(<span class="hljs-string">'http-push'</span>, {
+    <span class="hljs-attribute">receiver</span>: <span class="hljs-string">'http://cq.01.p.p.baidu.com:8888/receiver.php'</span>,
+    <span class="hljs-attribute">to</span>: <span class="hljs-string">'/home/work/htdocs'</span> <span class="hljs-comment">// 注意这个是指的是测试机器的路径，而非本地机器</span>
+  })
+});
+</code></pre>
+<ul>
+<li><code>fis3 release qa</code> 上传测试机器</li>
+<li><code>fis3 release</code> 产出到本地测试服务器根目录</li>
+</ul>
+<a name="%E6%9B%BF%E4%BB%A3%E5%86%85%E7%BD%AEServer" class="title-anchor"></a><h4 class="" >替代内置Server</h4><p>FIS3 内置了一个 Web Server 提供给构建后的代码进行调试。如果你自己启动了你自己的 Web Server 依然可以使用它们。</p>
+<p>假设你的 Web Server 的根目录是 <code>/Users/my-name/work/htdocs</code>，那么发布时只需要设置产出目录到这个目录即可。</p>
+<pre><code class="hljs lang-bash">fis3 <span class="hljs-operator"><span class="hljs-keyword">release</span> -<span class="hljs-keyword">d</span> /<span class="hljs-keyword">Users</span>/my-<span class="hljs-keyword">name</span>/<span class="hljs-keyword">work</span>/htdocs</span>
+</code></pre>
+<p>如果想执行 <code>fis3 release</code> 直接发布到此目录下，可在配置文件配置；</p>
+<pre><code class="hljs lang-js"><span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'*'</span>, {
+  <span class="hljs-tag">deploy</span>: <span class="hljs-tag">fis</span><span class="hljs-class">.plugin</span>(<span class="hljs-string">'local-deliver'</span>, {
+    <span class="hljs-attribute">to</span>: <span class="hljs-string">'/Users/my-name/work/htdocs'</span>
+  })
+})
+</code></pre>
+<blockquote class="warning"><p>文档内容有误，可提 PR，文档地址: <i class="fa fa-github"></i><a href="https://github.com/fex-team/fis3/blob/dev/doc/docs/beginning/debug.md">/doc/docs/beginning/debug.md</a></p></blockquote>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4206d67a3ea708c0d2a9354c8d88525f' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+            
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){                 
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");  
+            $(".sidebar").removeClass("open");        
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                var range = st - lastScrollTop;
+                if(range > 5){
+                    $("body").addClass("hide-header");
+                }else if(range < -5){
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }        
+            lastScrollTop = st;
+        });
+
+
+        if ($.cookie("isInternal") === "1") {
+            $(".nav-left").append($("<a></a>").attr("href", "baidu://message?appid=wJUNQ3gXdlgOsRPajPapUQ").addClass("nav-link").text("在线客服"));
+        }
+    }());
+</script>
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?58781c9e97848ee4bfe5b036058c99e7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

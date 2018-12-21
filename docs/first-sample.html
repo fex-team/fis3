@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="_FIS_构建工具_前端工具框架" />
+    <meta name="keywords" content=",百度前端团队,FIS,百度FIS,百度前端,fis,前端模块化,前端工程,性能优化,web performance" />
+    <link rel="shortcut icon" href="/fis3/static/images/favicon-fis.ico"/>
+    <title>FIS3 :  从零开始</title>
+    <meta name="description" content="FIS3 面向前端的工程构建系统">
+    <meta name="author" content="fis-team">
+    
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/fis3/static/css/common_3a72140.css">
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+    <script type="text/javascript">
+        //检查页面域名
+        (function(){
+            var url = window.location.href;
+            if (url.indexOf('http://fex.baidu.com/fis-site') !== -1) {
+                window.location.href = url.replace('http://fex.baidu.com/fis-site','http://fis.baidu.com');
+            }
+        })();
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script type="text/javascript" src="/fis3/static/js/jquery.cookie_a5283b2.js"></script>
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  is-active">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  ">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar">
+    <ul>
+<li><a href="/fis3/docs/beginning/intro.html">介绍</a></li>
+<li><a href="/fis3/docs/beginning/install.html">安装</a></li>
+<li>起步<ul>
+<li><a href="/fis3/docs/beginning/release.html">构建</a><ul>
+<li><a href="/fis3/docs/beginning/release.html#%E4%BE%8B%E5%AD%90">例子</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%91%BD%E4%BB%A4">命令</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D">资源定位</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">配置文件</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9">文件指纹</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8E%8B%E7%BC%A9%E8%B5%84%E6%BA%90">压缩资源</a></li>
+<li><a href="/fis3/docs/beginning/release.html#CssSprite%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6">CssSprite图片合并</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8A%9F%E8%83%BD%E7%BB%84%E5%90%88">功能组合</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/beginning/debug.html">调试</a><ul>
+<li><a href="/fis3/docs/beginning/debug.html#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83">发布</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%90%AF%E5%8A%A8">启动</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E9%A2%84%E8%A7%88">预览</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC">文件监听</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0">浏览器自动刷新</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83%E5%88%B0%E8%BF%9C%E7%AB%AF%E6%9C%BA%E5%99%A8">发布到远端机器</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%9B%BF%E4%BB%A3%E5%86%85%E7%BD%AEServer">替代内置Server</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/user-dev/extlang.html">内置语法</a><ul>
+<li><a href="/fis3/docs/user-dev/inline.html">内容嵌入</a></li>
+<li><a href="/fis3/docs/user-dev/uri.html">定位资源</a></li>
+<li><a href="/fis3/docs/user-dev/require.html">声明依赖</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/fis3/docs/build.html">工作原理</a><ul>
+<li><a href="/fis3/docs/build.html#%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B">构建流程</a></li>
+<li><a href="/fis3/docs/build.html#%E5%8D%95%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B">单文件编译流程</a></li>
+<li><a href="/fis3/docs/build.html#File%E5%AF%B9%E8%B1%A1">File对象</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv1.html">初级使用</a><ul>
+<li><a href="/fis3/docs/lv1.html#%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%82%B9%E7%9A%84%E4%BE%8B%E5%AD%90">一个复杂点的例子</a></li>
+<li><a href="/fis3/docs/lv1.html#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E6%8F%92%E4%BB%B6">安装一些插件</a></li>
+<li><a href="/fis3/docs/lv1.html#%E9%A2%84%E5%A4%84%E7%90%86">预处理</a></li>
+<li><a href="/fis3/docs/lv1.html#%E7%AE%80%E5%8D%95%E5%90%88%E5%B9%B6">简单合并</a></li>
+<li><a href="/fis3/docs/lv1.html#%E6%9E%84%E5%BB%BA%E8%B0%83%E8%AF%95%E9%A2%84%E8%A7%88">构建调试预览</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv2.html">中级使用</a><ul>
+<li><a href="/fis3/docs/lv2.html#%E9%A2%84%E5%A4%84%E7%90%86%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">预处理插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E6%89%93%E5%8C%85%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">打包插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E5%8F%91%E5%B8%83%E6%8F%92%E4%BB%B6">发布插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv3.html">高级使用</a><ul>
+<li><a href="/fis3/docs/lv3.html#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A1%A8">静态资源映射表</a></li>
+<li><a href="/fis3/docs/lv3.html#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91">模块化开发</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1">资源映射表的模块化方案设计</a></li>
+<li><a href="/fis3/docs/lv3.html#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B0%81%E8%A3%85">解决方案封装</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ESmarty%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Smarty的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E7%BA%AFPHP%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于纯PHP的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ELaravel%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Laravel的解决方案</a></li>
+</ul>
+</li>
+<li>接口文档<ul>
+<li><a href="/fis3/docs/api/command.html">命令行</a></li>
+<li><a href="/fis3/docs/api/config.html">配置</a><ul>
+<li><a href="/fis3/docs/api/config-api.html">配置接口</a></li>
+<li><a href="/fis3/docs/api/config-props.html">配置属性</a></li>
+<li><a href="/fis3/docs/api/config-commonly-used.html">常用配置</a></li>
+<li><a href="/fis3/docs/api/config-glob.html">glob</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/api/config-system-plugin.html">内置插件及配置</a></li>
+<li><a href="/fis3/docs/api/dev-plugin.html">自定义插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/fis2-to-fis3.html">FIS2 到 FIS3</a></li>
+<li><a href="/fis3/docs/pack.html">资源合并</a></li>
+<li><a href="/fis3/docs/node-mock.html">mock 假数据模拟</a></li>
+<li><a href="/fis3/docs/common-plugin.html">常用的插件列表</a></li>
+</ul>
+
+    <div class="bottom-shadow"></div>
+</div>
+
+    <div class="content api with-sidebar">
+        <a name="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B" class="title-anchor"></a><h3 class="" id="从零开始">从零开始</h3><p>从零开启一个 FIS3 项目，并学习 FIS3 如何使用。</p>
+<a name="%E7%9B%AE%E5%BD%95" class="title-anchor"></a><h4 class="" >目录</h4><ul>
+<li><a href="#%E5%BC%80%E5%A7%8B%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%A1%B9%E7%9B%AE">开始一个小项目</a></li>
+<li><a href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8E%8B%E7%BC%A9">静态资源压缩</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8F%91%E5%B8%83%E8%B7%AF%E5%BE%84">修改静态资源发布路径</a></li>
+</ul>
+<a name="%E5%BC%80%E5%A7%8B%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%A1%B9%E7%9B%AE" class="title-anchor"></a><h4 class="" >开始一个小项目</h4><ul>
+<li><p>创建项目目录</p>
+<pre><code class="hljs lang-bash">  $ <span class="hljs-keyword">mkdir</span> <span class="hljs-keyword">my</span>-proj
+</code></pre>
+</li>
+<li><p>在项目中新建配置文件</p>
+<p>  <em>在 fis3 中，文件处理流程都以配置文件为主，所以配置文件是必须要有的</em></p>
+<pre><code class="hljs lang-bash">  $ <span class="hljs-built_in">cd</span> my-proj <span class="hljs-comment">#进入项目目录</span>
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">''</span> &gt; fis-conf.js <span class="hljs-comment">#最初为空即可</span>
+</code></pre>
+</li>
+</ul>
+<p>通过以上两步，我们建了一个空的 <code>fis3</code> 项目</p>
+<pre><code><span class="hljs-keyword">my</span>-proj/
+<span class="hljs-keyword">my</span>-proj/fis-conf.js
+</code></pre><p>现在我们要开始写代码了，我们需要完成以下几个任务；</p>
+<p>新建一个页面 <code>index.html</code> 并且引入样式文件 <code>style.css</code> 和 JS 脚本文件 <code>app.js</code>。并且发布这个项目，查看结果。</p>
+<pre><code>my-proj/index<span class="hljs-class">.html</span>
+my-proj/style<span class="hljs-class">.css</span>
+my-proj/app<span class="hljs-class">.js</span>
+my-proj/fis-conf.js
+</code></pre><ul>
+<li><p>写代码</p>
+<p>  <em>index.html</em></p>
+<pre><code class="hljs lang-html">  <span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Hello, world<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"./style.css"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"./app.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<p>  <em>style.css</em></p>
+<pre><code class="hljs lang-css">  <span class="hljs-tag">body</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#FFCCFF</span></span></span>;
+  }</span>
+</code></pre>
+<p>  <em>app.js</em></p>
+<pre><code>  alert<span class="hljs-list">(<span class="hljs-string">"Hello, World"</span>)</span><span class="hljs-comment">;</span>
+</code></pre></li>
+<li><p>发布项目</p>
+<pre><code class="hljs lang-bash">  <span class="hljs-variable">$ </span>cd my-proj
+  <span class="hljs-variable">$ </span>fis3 release
+</code></pre>
+<blockquote>
+<p><code>fis3 release -d &lt;dest&gt;</code> 通过 <code>-d</code> 参数指定产出目录，如果未制定并且 <code>fis-conf.js</code> 未配置 <code>deploy</code> 属性，则文件默认被发布到 <code>fis3 server open</code> 打开的目录</p>
+</blockquote>
+</li>
+<li><p>查看发布的结果</p>
+<pre><code>  fis3 <span class="hljs-keyword">server</span> start
+</code></pre><blockquote>
+<p>默认启动 <code>node</code> 的调试服务器，默认开启端口 <code>8080</code></p>
+</blockquote>
+<p>  执行以上命令，会自动启动本地调试服务，并且打开默认浏览器访问 <code>http://127.0.0.1:8080</code> 地址</p>
+<p>  <img src="/fis3/docs/img/qk-task-1_0a36dc2.png" alt=""></p>
+</li>
+</ul>
+<p>通过以上三步，我们的简易项目发布成功了，而且运行也很 OK。得到了我们想要的结果，那么 FIS3 在整个发布过程中干了什么？不妨比较下源码和产出，来直观感受下。
+我们通过给 <code>release</code> 命令添加 <code>-d</code> 来把产出发布到源码目录的 <code>my-proj/output</code> 目录下。</p>
+<pre><code class="hljs lang-bash"># pwd == my-proj
+$ fis3 <span class="hljs-operator"><span class="hljs-keyword">release</span> -<span class="hljs-keyword">d</span> ./<span class="hljs-keyword">output</span></span>
+</code></pre>
+<p><em>文件比较</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">源码</th>
+<th style="text-align:left">产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">/app.js</td>
+<td style="text-align:left">/app_3effe6a.js</td>
+</tr>
+<tr>
+<td style="text-align:left">/style.css</td>
+<td style="text-align:left">/style_03f76e1.css</td>
+</tr>
+<tr>
+<td style="text-align:left">/index.html</td>
+<td style="text-align:left">/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">/fis-conf.js</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>js、css 文件名携带了 <code>_&lt;md5&gt;</code></li>
+<li>html 文件名不变</li>
+</ul>
+<p><strong>解释</strong>：fis3 默认对部分文件启用添加 md5 戳，其中包含 js、css、图片等，其余文件如果要添加 md5 戳，需要进行定制化配置。</p>
+<p><em>文件内容</em></p>
+<ul>
+<li>js、css 无变化</li>
+<li><p>html</p>
+<p>  <img src="/fis3/docs/img/qk-task-1-html-diff_85cb043.png" alt=""></p>
+<ul>
+<li><p>其中引入的 js、css 的 url 发生了变化</p>
+<ul>
+<li>相对路径转化为绝对路径</li>
+<li>url 中携带 md5 戳，文件名也加上了对应的 md5 戳，正好能对应上</li>
+</ul>
+<p><strong>解释</strong>：fis3 中资源引入相对路径都会替换成<strong>绝对路径引入</strong>，主要是满足资源合并、文件产出路径按需变更。携带 md5 戳是为了方便开启强缓存时文件修改可刷新缓存。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>我们做完了第一个小任务，创建了一个简单的项目，并且在默认情况下进行了发布，得到了以上结果。那么我们增加一些难度，来用 <code>fis-conf.js</code> 控制文件的编译，实现一些更有意思的事情。</p>
+<a name="%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8E%8B%E7%BC%A9" class="title-anchor"></a><h4 class="" >静态资源压缩</h4><p>继续操作 <code>my-proj</code> 项目，在其基础上<strong>实现 js、css 的压缩</strong>。</p>
+<blockquote>
+<p>html 压缩有很多坑，不建议进行压缩，如果有这方面的需求，请参见插件 <a href="https://www.npmjs.com/package/fis-optimizer-html-minifier">fis-optimizer-html-minifier</a></p>
+</blockquote>
+<p>FIS3 中文件编译都是通过配置文件去进行控制的，那么其他代码不动，我们这节只关心配置文件 <code>fis-conf.js</code>。</p>
+<ul>
+<li><p>修改配置文件</p>
+<pre><code class="hljs lang-js">  <span class="hljs-comment">// vi fis-conf.js</span>
+
+  <span class="hljs-comment">// 给所有 js 分配属性</span>
+  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'{*,**/*}.js'</span>, {
+      <span class="hljs-comment">// 启用 fis-optimizer-uglify-js 进行压缩</span>
+      <span class="hljs-attribute">optimizer</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'uglify-js'</span>)
+  });
+
+  <span class="hljs-comment">// 给所有 css 分配属性</span>
+  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'{*,**/*}.css'</span>, {
+      <span class="hljs-comment">// 启用 fis-optimizer-clean-css 进行压缩</span>
+      <span class="hljs-attribute">optimizer</span>: fis.<span class="hljs-function">plugin</span>(<span class="hljs-string">'clean-css'</span>)
+  });
+
+</code></pre>
+<ul>
+<li><a href="./config-api.md#fismatch">fis.match()</a></li>
+</ul>
+</li>
+<li><p>发布预览</p>
+<p>  和 <a href="#task-1">task 1</a> 一样，得到了正确的运行结果；</p>
+</li>
+</ul>
+<p>我们通过查看编译发布前后的代码变化来看看 FIS3 做了什么。</p>
+<p><em>文件路径</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">源码</th>
+<th style="text-align:left">产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">/app.js</td>
+<td style="text-align:left">/app_3effe6a.js</td>
+</tr>
+<tr>
+<td style="text-align:left">/style.css</td>
+<td style="text-align:left">/style_1c8b450.css</td>
+</tr>
+<tr>
+<td style="text-align:left">/index.html</td>
+<td style="text-align:left">/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">/fis-conf.js</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>依然js、css 添加了 md5 戳不相同，这是因为此处的文档内容被压缩发生了变化</p>
+<blockquote>
+<p>js 文件的相同，因为 app.js 的内容只有一句 <code>alert(&quot;Hello, World&quot;)</code>，压缩前后并没有变化</p>
+</blockquote>
+</li>
+</ul>
+<p><em>文件内容</em></p>
+<ul>
+<li><p>css 内容</p>
+<p>  <img src="/fis3/docs/img/qk-task-2-css-diff_42b470a.png" alt=""></p>
+<p>  编译时根据配置文件 css 文件分配到 <code>optimizer</code> 并且启用了 <code>clean-css</code> 进行压缩，压缩为一行。</p>
+</li>
+<li><p>html 内容</p>
+<p>  <img src="/fis3/docs/img/qk-task-2-html-diff_f1aadbe.png" alt=""></p>
+<ul>
+<li>依然修改 url 为绝对路径</li>
+<li>资源 url 添加 md5 戳</li>
+</ul>
+</li>
+</ul>
+<p>通过给文件分配 <code>optimizer</code> <a href="./config-api.md#%E6%8F%92%E4%BB%B6%E5%B1%9E%E6%80%A7">插件属性</a>，文件在编译的过程中就会调用它，并执行这个插件属性配置的插件。</p>
+<a name="%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8F%91%E5%B8%83%E8%B7%AF%E5%BE%84" class="title-anchor"></a><h4 class="" >修改静态资源发布路径</h4><p><strong>修改发布路径，并且添加 CDN。</strong></p>
+<p>前端项目有这样一个特点，开发完成后都要部署到远端（除了移动打包发布APP），那么由于环境的种种限制，源码组织目录极大可能是和产出目录是对不上号的。比如源码中 js、css 散落在各地，而最终发布到线上都得放到统一的目录 <code>public</code> 或者是 <code>static</code> 或者得发布到统一的静态资源服务器上。</p>
+<p>一般，这个工作会交给后端的某一个变量，来磨平这种差异；</p>
+<pre><code class="hljs lang-php"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"<span class="php"><span class="hljs-preprocessor">&lt;?</span>=<span class="hljs-variable">$static_root</span><span class="hljs-preprocessor">?&gt;</span></span>/app.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>或者是定规范使得源码目录规范和线上一模一样；</p>
+<p>在 FIS3 里面，由于源码要经过发布，我们可以根据配置的规则，修改发布路径和引用 URL。</p>
+<p>操作 <code>my-proj</code> 并且修改其配置文件来达到我们的目标。</p>
+<a name="%E4%BF%AE%E6%94%B9%E5%8F%91%E5%B8%83%E8%B7%AF%E5%BE%84" class="title-anchor"></a><h5 class="" >修改发布路径</h5><ul>
+<li><p>修改配置文件</p>
+<pre><code class="hljs lang-js">  <span class="hljs-comment">// vi fis-conf.js</span>
+
+  <span class="hljs-comment">// 给所有 js，css 分配属性</span>
+  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'{*,**/*}.{js,css}'</span>, {
+      <span class="hljs-comment">// js, css 发布后都放到 `public/static` 目录下。</span>
+      <span class="hljs-attribute">release</span>: <span class="hljs-string">'/public/static/$0'</span>
+  });
+</code></pre>
+<ul>
+<li><a href="./config-api.md#fismatch">fis.match()</a></li>
+</ul>
+</li>
+<li><p>编译发布查看</p>
+<p>  <em>编译发布</em></p>
+<pre><code>  <span class="hljs-title">fis3</span> release
+</code></pre><p>  <em>查看结果</em>
+  浏览器访问 <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a> 查看结果</p>
+</li>
+</ul>
+<p>我们通过查看编译发布前后的代码变化来看看 FIS3 做了什么。</p>
+<p><em>文件路径</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">源码</th>
+<th style="text-align:left">产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">/app.js</td>
+<td style="text-align:left">/public/static/app_3effe6a.js</td>
+</tr>
+<tr>
+<td style="text-align:left">/style.css</td>
+<td style="text-align:left">/public/static/style_03f76e1.css</td>
+</tr>
+<tr>
+<td style="text-align:left">/index.html</td>
+<td style="text-align:left">/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">/fis-conf.js</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<p>我们得到了预期的结果 js、css 文件被最终产出到了 <code>public/static</code> 目录下。</p>
+<p><em>文件内容</em></p>
+<ul>
+<li>js、css 文件内容没有发生变化，因为我们并没有给它们分配<a href="./config-api.md#%E6%8F%92%E4%BB%B6%E5%B1%9E%E6%80%A7">插件属性</a>来启用某一个插件进行编译时处理。</li>
+<li><p>html js、css 产出目录发生了变化，那么引用的 url 是否也跟着变了</p>
+<p>  <img src="/fis3/docs/img/qk-task-3-html-diff_61b551f.png" alt=""></p>
+<p>  如我们所愿引用 url 也发生了变化，这种编译时处理能力，就是 FIS3 的<a href="./ext-lang.md">三种语言能力</a>之<a href="./uri.md">定位资源</a>能力</p>
+<p>  可以方便的更改产出后的发布路径以及 url。</p>
+<p>  等等，我们在这块可能忘了一个事情，产出路径可能和 url 是不一样的。可以通过通过 <code>url</code> 属性进行调整。</p>
+<pre><code class="hljs lang-js">  <span class="hljs-comment">// vi fis-conf.js</span>
+
+  <span class="hljs-comment">// 给所有 js、css 分配属性</span>
+  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'{*,**/*}.{js,css}'</span>, {
+      <span class="hljs-comment">// js, css 发布后都放到 `public/static` 目录下。</span>
+      <span class="hljs-attribute">release</span>: <span class="hljs-string">'/public/static/$0'</span>,
+      <span class="hljs-attribute">url</span>: <span class="hljs-string">'/static/$0'</span>
+  });
+</code></pre>
+<ul>
+<li><a href="./config-api.md#fismatch">fis.match()</a></li>
+</ul>
+</li>
+</ul>
+<a name="%E6%B7%BB%E5%8A%A0%20CDN" class="title-anchor"></a><h5 class="" >添加 CDN</h5><ul>
+<li><p>修改配置文件</p>
+<pre><code class="hljs lang-js">  <span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'{*,**/*}.{js,css}'</span>, {
+      <span class="hljs-comment">// js, css 发布后都放到 `public/static` 目录下。</span>
+      <span class="hljs-attribute">release</span>: <span class="hljs-string">'/static/$0'</span>,
+      <span class="hljs-attribute">domain</span>: <span class="hljs-string">'http://127.0.0.1:8080'</span>
+  });
+</code></pre>
+<ul>
+<li><a href="./config-api.md#fismatch">fis.match()</a></li>
+</ul>
+</li>
+</ul>
+<pre><code>其实可能有人会疑问 <span class="hljs-escape">`u</span>rl<span class="hljs-escape">` </span>里面添加 <span class="hljs-escape">`d</span>omain<span class="hljs-escape">` </span>不就行了，但是毕竟概念上要区分出来。所以按部就班，该是啥就是啥！
+</code></pre><ul>
+<li><p>发布查看结果</p>
+<p>  <em>编译发布</em></p>
+<pre><code>  <span class="hljs-title">fis3</span> release
+</code></pre><p>  <em>查看结果</em>
+  浏览器访问 <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a> 查看结果</p>
+</li>
+</ul>
+<p>我们通过查看编译发布前后的代码变化来看看 FIS3 做了什么。</p>
+<p><em>文件路径</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">源码</th>
+<th style="text-align:left">产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">/app.js</td>
+<td style="text-align:left">/static/app_3effe6a.js</td>
+</tr>
+<tr>
+<td style="text-align:left">/style.css</td>
+<td style="text-align:left">/static/style_03f76e1.css</td>
+</tr>
+<tr>
+<td style="text-align:left">/index.html</td>
+<td style="text-align:left">/index.html</td>
+</tr>
+<tr>
+<td style="text-align:left">fis-conf.js</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>js、css 按照 <code>release</code> 发布到了 static 目录下</li>
+</ul>
+<p><em>文件内容</em></p>
+<ul>
+<li>js、css 不变</li>
+<li><p>html 引入的 js、css 的 url 发生了什么变化</p>
+<p>  <img src="/fis3/docs/img/qk-task-3-html-diff-1_ddd5f65.png" alt=""></p>
+<p>  url 的前面添加了对应 cdn 的 <code>domain</code></p>
+</li>
+</ul>
+<a name="%E5%B0%8F%E7%BB%93" class="title-anchor"></a><h4 class="" >小结</h4><p>似乎我们已经能轻松搞一个 FIS3 的前端项目了，而且我们也通过一个小例子，实现了静态资源的压缩以及更改产出目录。但我们想实现更多，比如需要</p>
+<ul>
+<li>资源合并</li>
+<li>模块化开发</li>
+<li>保持相对路径</li>
+<li>使用 less、scss</li>
+<li>最低成本实现模块化方案</li>
+<li>BigPipe</li>
+<li>Quickling</li>
+<li>BigRender</li>
+<li>......</li>
+</ul>
+<p>那么这一切的事情都是有可能的，而且似乎也比较简单。那么如何让这一切变得简单，这就是 FIS3 的魅力。</p>
+<ul>
+<li><a href="https://github.com/fex-team/fis3-demo">https://github.com/fex-team/fis3-demo</a> 大量 fis3 的 Demo，几乎你想要的我们都给你提供了，参考实践即可。</li>
+<li><a href="./config-api.md">配置 API</a> 配置 API，扩展 FIS3 以及配置控制文件的编译都靠这些 API。</li>
+</ul>
+<a name="%E6%96%87%E4%BB%B6%E5%90%88%E5%B9%B6" class="title-anchor"></a><h3 class="" id="文件合并">文件合并</h3><a name="%E8%BE%85%E5%8A%A9%E5%BC%80%E5%8F%91" class="title-anchor"></a><h3 class="" id="辅助开发">辅助开发</h3><blockquote class="warning"><p>文档内容有误，可提 PR，文档地址: <i class="fa fa-github"></i><a href="https://github.com/fex-team/fis3/blob/dev/doc/docs/first-sample.md">/doc/docs/first-sample.md</a></p></blockquote>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4206d67a3ea708c0d2a9354c8d88525f' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+            
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){                 
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");  
+            $(".sidebar").removeClass("open");        
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                var range = st - lastScrollTop;
+                if(range > 5){
+                    $("body").addClass("hide-header");
+                }else if(range < -5){
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }        
+            lastScrollTop = st;
+        });
+
+
+        if ($.cookie("isInternal") === "1") {
+            $(".nav-left").append($("<a></a>").attr("href", "baidu://message?appid=wJUNQ3gXdlgOsRPajPapUQ").addClass("nav-link").text("在线客服"));
+        }
+    }());
+</script>
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?58781c9e97848ee4bfe5b036058c99e7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

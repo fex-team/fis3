@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="FIS">
+    <title>FIS3 - 前端工程构建工具</title>
+    <link rel="stylesheet" href="/fis3/static/css/common_3a72140.css">
+    <link rel="stylesheet" href="/fis3/static/css/index_5493620.css">
+    <link rel="shortcut icon" href="/fis3/static/images/favicon-fis.ico"/>
+    <link rel="bookmark" href="/fis3/static/images/favicon-fis.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  ">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  ">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+    <section class="section--hero">
+        <div class="section__content">
+            <h1 class="hero__heading"><b>FIS3</b> , 为你定制的前端工程构建工具</h1>
+            <h2 class="hero__subheading">解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题</h2>
+
+            <a href="/fis3/docs/beginning/intro.html" class="button button--large">
+                Getting Started now!
+            </a>
+            <!-- 火箭动画 -->
+            <div id="animation">
+                <a href="#" title="点击了解更多">
+                    <div class="spaceship">
+                        <div class="antenna"></div>
+                        <div class="body"></div>
+                        <div class="window"></div>
+                        <div class="fins"></div>
+                        <div class="rocket"></div>
+                        <div class="fireWrapper">
+                            <div class="fire">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="fis-data">
+            <div class="number"><span>60+</span>个百度产品线/项目</div>
+            <div class="number"><span>30+</span>外部公司</div>
+            <div class="number"><span>440+</span>NPM包</div>
+        </div>
+    </section>
+
+    <!-- FIS3特色 -->
+    <section class="section--position">
+        <div class="section__content">
+            <div class="section-heading">
+                岂止于工具
+                <p class="section-desc">FIS3与一般构建工具有何不同</p>
+            </div>
+            <div class="section-features" id="slider">
+                <nav class="icon-tabs">
+                    <a href="#slider-1">
+                        <i class="fa fa-css3"></i>
+                        类CSS配置
+                    </a>
+                    <a href="#slider-2">
+                        <i class="fa fa-code"></i>
+                        Glob扩展
+                    </a>
+                    <a href="#slider-3">
+                        <i class="fa fa-folder"></i>
+                        目录定制
+                    </a>
+                    <a href="#slider-4">
+                        <i class="fa fa-cogs"></i>
+                        依赖分析
+                    </a>              
+                    <a href="#slider-5">
+                        <i class="fa fa-th-list"></i>
+                        静态资源表
+                    </a>
+                    <a href="#slider-6">
+                        <i class="fa fa-database"></i>
+                        后端结合
+                    </a>
+                </nav>
+
+                <div class="tab-container">
+                    <ul>
+                        <li id="slider-1" class="row">
+                            <div class="col-md-8">
+                                <img src="/fis3/static/images/match.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>类css风格的配置语法</h3>
+                                <p>FIS3采取了类似CSS语法一样的配置风格，易于理解与上手。编译配置不再枯燥而令人生畏，构建项目变得如此简单。</p>
+                                <a target="_blank" href="/fis3/docs/beginning/release.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">查看配置文档</a>
+                            </div>
+                        </li>
+                        <li id="slider-2" class="hide">
+                            <div class="col-md-8">
+                                <img src="/fis3/static/images/glob.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>Glob语法扩展</h3>
+                                <p>不会写正则？不用怕，FIS3不仅提供了友好易用的Glob匹配语法，更扩展了分组功能，再没有更简单易用的文件匹配了。</p>
+                                <a target="_blank" href="/fis3/docs/api/config-glob.html">查看Glob说明</a>
+                            </div>
+                        </li>
+                        <li id="slider-3" class="hide">
+                            <div class="col-md-8">
+                                <img src="/fis3/static/images/custom.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>面向开发的目录规范</h3>
+                                <p>FIS3强大的资源定位和内嵌等能力让你能真正面向开发定义利于维护的目录规范，同时能适配任意服务器的发布需求。一份代码，多种发布。迁移变得如此简单！</p>
+                                <a target="_blank" href="/fis3/docs/lv3.html#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B0%81%E8%A3%85">查看目录规范配置</a>
+                            </div>
+                        </li>
+                        <li id="slider-4" class="hide">
+                            <div class="col-md-8">
+                                <img src="/fis3/static/images/dependent.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>自动依赖分析</h3>
+                                <p>FIS3通过依赖声明自动分析资源依赖，支持适配CommonJS/AMD/CMD等多种模块化规范;类似WebPack依赖打包变得更加简单</p>
+                                <a target="_blank" href="/fis3/docs/lv3.html#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91">查看模块化文档</a>
+                            </div>
+                        </li>
+                        <li id="slider-5" class="hide">
+                            <div class="col-md-8">
+                                <img src="/fis3/static/images/mapjson.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>强大的静态资源管理</h3>
+                                <p>FIS3绝不仅是Task管理工具，其核心思想在于整站强大的静态资源管理能力。无论是按需加载、组件内嵌、BigRender、Quickling等方案都能快速实施</p>
+                                <a target="_blank" href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1">静态资源管理说明</a>
+                            </div>
+                        </li>
+                        <li id="slider-6" class="hide">
+                            <div class="col-md-8">
+                                <img src="/fis3/static/images/backend.jpg" />
+                            </div>
+                            <div class="col-md-4 desc">
+                                <h3>与后端框架的无缝结合</h3>
+                                <p>FIS3将静态资源管理能力延伸到后端框架，无论是PHP的、smarty，Nodejs，还是JAVA的velocity，都有相应的解决方案支持</p>
+                                <a target="_blank" href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ESmarty%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">查看后端解决方案</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>        
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 各个阶段 -->
+    <section class="section--position back-blue">
+        <div class="section__content">
+            <div class="section-heading">
+                如何利用工具提升项目开发效率
+                <p class="section-desc">FIS3助您在各个阶段得心应手</p>
+            </div>
+            <div class="section-features">
+                <div class="row">
+                    <a class="col-md-3 feature" href="#simple">
+                        <span class="fa fa-desktop">
+                        </span>
+                        <h4>
+                            简单页面制作
+                        </h4>
+                    </a>
+                    <a class="col-md-3 feature" href="#normal">
+                        <span class="fa fa-cube">
+                        </span>
+                        <h4>
+                            初级项目研发
+                        </h4>
+                    </a>
+                    <a class="col-md-3 feature" href="#higher">
+                        <span class="fa fa-cubes">
+                        </span>
+                        <h4>
+                            中等规模项目
+                        </h4>
+                    </a>
+                    <a class="col-md-3 feature" href="#complex">
+                        <span class="fa fa-dashboard">
+                        </span>
+                        <h4>
+                            大流量产品攻克
+                        </h4>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- 简单页面制作 -->
+    <a id="simple"></a>
+    <section class="section--position   back_grey">
+        <div class="section__content">          
+            <div class="row feature-detail">
+                <div class="col-md-6">
+                    <div class="section-heading">
+                        <i class="fa fa-desktop"></i> 简单页面制作
+                    </div>
+                    <h3>
+                        丰富的脚手架与组件仓库，自动监听、本地预览，让您的页面快速Run起来
+                    </h3>
+                    <ul>
+                        <li>丰富的脚手架和组件仓库，让您快速上手</li>
+                        <li>提供本地调试服务器，方便快速预览、本地数据模拟等功能。支持文件监听、自动刷新，您的每次改动都能快速呈现在页面中</li>
+                        <li>方便的资源定位机制、css语法般的目录和发布配置，让您保持高可维护性的开发目录结构不变同时，轻松适配任意服务器部署的目录要求</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-preview__screenshot"><img src="/fis3/static/images/simple_page_f5a0f87.png" /></div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 初级项目 -->
+    <a id="normal"></a>
+    <section class="section--position">      
+        <div class="section__content">   
+            <div class="section-heading">
+                <i class="fa fa-cube"></i> 初级项目研发
+            </div>
+            <div class="section-subheading">
+                工欲善其事，必先利其器。灵活运用开发工具提速开发
+            </div>
+
+            <div class="feature-detail">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>自动雪碧图</h3>
+                        <p>雪碧图通过合并文件减少网络请求，提升页面加载性能。</p>
+
+                        <p>FIS能根据CSS中的文件引用<a target="_blank" href="/fis3/docs/beginning/release.html#/docs/beginning/release.html#CssSprite%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6">自动生成雪碧图</a>，有力提升css开发效率</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ml-30">
+                            <img src="/fis3/static/images/csssprite.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="ml-30">
+                            <img src="/fis3/static/images/code_1750c9a.png" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>资源内嵌，文件校验、压缩、合并</h3>
+                        <p>内容嵌入可以为工程师提供诸如图片base64嵌入到css、js里，前端模板编译到js文件中，将js、css、html拆分成几个文件最后合并到一起的能力</p>
+
+                        <p>通过简单的几行配置便能完成资源校验、压缩、合并工作<a target="_blank" href="/fis3/docs/beginning/release.html#%E5%8E%8B%E7%BC%A9%E8%B5%84%E6%BA%90">了解详细</a></p>
+                    </div>          
+                </div>
+
+                
+                <div class="row plugins">
+                    <p><h3>更多开源编译工具应有尽有<small>还不够？快速<a target="_blank" href="/fis3/docs/lv2.html#%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E9%A2%84%E5%A4%84%E7%90%86%E6%8F%92%E4%BB%B6">封装一个</a></small></h3></p>
+                    <a target="_blank" href="https://www.npmjs.com/package/fis-parser-coffee-script" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/logo-coffeescript.jpg" alt="CoffeeScript">
+                        </span>
+                    </a>
+                    <a target="_blank"  href="https://www.npmjs.com/package/fis-parser-handlebars" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/logo-handlebars.jpg" alt="Handlebars">
+                        </span>
+                    </a>
+                    <a target="_blank"  href="https://www.npmjs.com/package/fis-parser-jade" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/logo-jade.jpg" alt="Jade">
+                        </span>
+                    </a>
+                    <a target="_blank"  href="https://www.npmjs.com/package/fis-lint-jshint" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/logo-jshint.jpg" alt="JSHint">
+                        </span>
+                    </a>
+                    <a target="_blank"  href="https://www.npmjs.com/package/fis-parser-less" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/logo-less.jpg" alt="Less">
+                        </span>
+                    </a>
+                    <a target="_blank"  href="https://www.npmjs.com/package/fis-parser-utc" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/underscore_78077a6.png" alt="underscore.js">
+                        </span>
+                    </a>
+                    <a target="_blank"  href="https://www.npmjs.com/package/fis-parser-sass" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/logo-sass.jpg" alt="Sass">
+                        </span>
+                    </a>
+                    <a target="_blank"  href="https://www.npmjs.com/package/fis-parser-stylus2" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/logo-sylus.jpg" alt="Stylus">
+                        </span>
+                    </a>
+                    <a target="_blank"  href="https://www.npmjs.com/package/fis-parser-es6-babel" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/babel_cbad511.png" alt="babel">
+                        </span>
+                    </a>
+                    <a target="_blank"  href="https://www.npmjs.com/package/fis-parser-react" class="technology">
+                        <span class="logo">
+                            <img src="/fis3/static/images/plugins/react_9ff28b4.png" alt="react">
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 中等规模项目 -->
+    <a id="higher"></a>
+    <section class="section--position   back_grey">    
+        <div class="section__content">
+           
+            <div class="section-heading">
+                <i class="fa fa-cubes"></i> 中等规模项目
+            </div>
+            <div class="section-subheading">
+                利用模块化提升可维护性，灵活适配开发框架
+            </div>
+
+            <div class="feature-detail">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>模块化开发</h3>
+                        <p>模块化是提升网站可维护性、功能复用性的重要手段，它能实现积木式的搭建网页。</p>
+
+                        <p>FIS提供了ModJS模块化方案让用户无需关注模块化方案细节，只需像NodeJS一样简单的声明模块依赖便能轻松完成模块化工作，支持同步、异步的加载方式和依赖的管理。<a target="_blank" href="/fis3/docs/lv3.html#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91">了解详细</a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ml-30">
+                            <img src="/fis3/static/images/page_ffc62a4.png" width="380" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/fis3/static/images/amd_65170f6.png" />
+                    </div>
+                    <div class="col-md-6">
+                        <h3>无缝支持AMD/CMD等规范</h3>
+                        <p>FIS同样支持开源的AMD/CMD等规范，通过自动化编译简化现有模块化方案的开发和依赖的分析管理等工作，让用户更专注于功能开发。<a target="_blank" href="/fis3/docs/lv3.html#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91">了解详细</a></p>
+
+                      
+                    </div>          
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>更简单的依赖打包机制</h3>
+                        <p>FIS在分析过程中获取了整个项目模块化资源的依赖分析工作，使得诸如webpack的依赖打包和管理变得更加简单。</p>
+
+                        <p>同样您可以自定义打包插件来自由扩展，例如<a href="#">Rosseta的打包</a></p>
+                    </div> 
+                    <div class="col-md-6">
+                        <img src="/fis3/static/images/map_56dd54f.png" />
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 大流量产品攻克 -->
+    <a id="complex"></a>
+    <section class="section--position">      
+        <div class="section__content">
+            
+            <div class="section-heading">
+                <i class="fa fa-dashboard"></i> 大流量产品攻克
+            </div>
+            <div class="section-subheading">
+                全面管理整站静态资源，轻松搞定性能优化
+            </div>
+
+        
+            
+
+            <div class="feature-detail row">
+                
+                <img class="over_pic" src="/fis3/static/images/press_3bbd21f.png" />
+                
+                <div>
+                    <div class="col-md-4">
+                        <h3 class="text-c"><a href="#">静态资源表机制</a></h3>
+                        <p>作为FIS静态资源管理的核心，通过它不仅能灵活适配modjs/AMD/CMD等模块化方案，更能方便地扩展实现更多应用。<a target="_blank" href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1">了解更多</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-c"><a href="#">后端静态资源管理框架</a></h3>
+                        <p>静态资源管理应当能适配php、java等各种后端方案，通过与后端的结合更好的实现网站资源的管理。<a target="_blank" href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ESmarty%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">了解更多</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-c"><a href="#">灵活控制资源加载</a></h3>
+                        <p>按需加载、延迟加载、预加载等多种方式灵活控制，从性能优化角度出发优化首屏渲染等页面展现性能。<!-- <a href="">了解更多</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+    <div class="footer__content">
+
+        <div class="row">
+
+            <div class="link-column col-md-3 col-sm-3">
+                <div class="title">友情链接</div>
+                <a href="http://fex.baidu.com/">FEX</a>
+            </div>
+
+            <div class="link-column col-md-3 col-sm-3">
+                <div class="title">我们的项目</div>
+                <a href="http://fis.baidu.com">FIS</a>
+                <a href="http://fex-team.github.io/fis-plus">FIS-Plus</a>
+            </div>
+
+
+            <div class="link-column col-md-3 col-sm-3">
+                <div class="title">文档</div>
+                <a href="/fis3/docs/beginning/intro.html">开发文档</a>
+            </div>
+            <div class="link-column col-md-3 col-sm-3">
+                <div class="title">联系我们</div>
+                <a href="http://fex.baidu.com">Blog</a>
+                <a href="http://weibo.com/fisdev">微博</a>
+                <a href="https://twitter.com/baidu_fis">Twitter</a>
+                <a href="https://github.com/fex-team">GitHub</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            ©2015 FIS-team
+        </div>
+
+    </div>
+</div>
+
+    <script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?58781c9e97848ee4bfe5b036058c99e7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    <script type="text/javascript" src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script type="text/javascript" src="/fis3/static/js/jquery.cookie_a5283b2.js"></script>
+    <script type="text/javascript" src="/fis3/static/js/slider_3ac76b1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#slider').cbpContentSlider();
+            if ($.cookie("isInternal") === "1") {
+                $(".nav-left").append($("<a></a>").attr("href", "baidu://message?appid=wJUNQ3gXdlgOsRPajPapUQ").addClass("nav-link").text("在线客服"));
+            }
+        });
+    </script>
+</body>
+</html>

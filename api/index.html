@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script src="/fis3/api/scripts/prettify/prettify_cedfcfe.js"></script>
+    <script src="/fis3/api/scripts/prettify/lang-css_837b4b4.js"></script>
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/fis3/static/css/common_3a72140.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/ionicons.min_abcba5d.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/prettify-tomorrow_da53376.css">
+    <link type="text/css" rel="stylesheet" href="/fis3/api/styles/jsdoc-default_edaf81d.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  ">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  is-active">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar scrollbar ps-container jsdoc-nav">
+      <h3>Namespaces</h3><ul><li><a href="fis.html">fis</a><ul class='methods'><li data-type='method'><a href="fis.html#.emit">emit</a></li><li data-type='method'><a href="fis.html#.on">on</a></li><li data-type='method'><a href="fis.html#.once">once</a></li><li data-type='method'><a href="fis.html#.plugin">plugin</a></li><li data-type='method'><a href="fis.html#.release">release</a></li><li data-type='method'><a href="fis.html#.removeAllListeners">removeAllListeners</a></li><li data-type='method'><a href="fis.html#.removeListener">removeListener</a></li><li data-type='method'><a href="fis.html#.require">require</a></li><li data-type='method'><a href="fis.html#.time">time</a></li></ul></li><li><a href="fis.cache.html">cache</a><ul class='methods'><li data-type='method'><a href="fis.cache.html#.clean">clean</a></li></ul></li><li><a href="fis.cli.html">cli</a><ul class='methods'><li data-type='method'><a href="fis.cli.html#.help">help</a></li><li data-type='method'><a href="fis.cli.html#.run">run</a></li><li data-type='method'><a href="fis.cli.html#.version">version</a></li></ul></li><li><a href="fis.compile.html">compile</a><ul class='methods'><li data-type='method'><a href="fis.compile.html#.analyseComment">analyseComment</a></li><li data-type='method'><a href="fis.compile.html#.clean">clean</a></li><li data-type='method'><a href="fis.compile.html#.extCss">extCss</a></li><li data-type='method'><a href="fis.compile.html#.extHtml">extHtml</a></li><li data-type='method'><a href="fis.compile.html#.extJs">extJs</a></li><li data-type='method'><a href="fis.compile.html#.isInline">isInline</a></li><li data-type='method'><a href="fis.compile.html#.partial">partial</a></li><li data-type='method'><a href="fis.compile.html#.process">process</a></li><li data-type='method'><a href="fis.compile.html#.setup">setup</a></li><li data-type='method'><a href="fis.compile.html#.xLang">xLang</a></li><li data-type='method'><a href="fis.compile.html#~builtinStandard">builtinStandard</a></li><li data-type='method'><a href="fis.compile.html#~pipe">pipe</a></li><li data-type='method'><a href="fis.compile.html#~postStandard">postStandard</a></li></ul></li><li><a href="fis.compile.lang.html">lang</a><ul class='methods'><li data-type='method'><a href="fis.compile.lang.html#.add">add</a></li></ul></li><li><a href="fis.config.html">config</a></li><li><a href="fis.emitter.html">emitter</a></li><li><a href="fis.file.html">file</a></li><li><a href="fis.log.html">log</a><ul class='methods'><li data-type='method'><a href="fis.log.html#.debug">debug</a></li><li data-type='method'><a href="fis.log.html#.error">error</a></li><li data-type='method'><a href="fis.log.html#.format">format</a></li><li data-type='method'><a href="fis.log.html#.info">info</a></li><li data-type='method'><a href="fis.log.html#.notice">notice</a></li><li data-type='method'><a href="fis.log.html#.now">now</a></li><li data-type='method'><a href="fis.log.html#.warn">warn</a></li><li data-type='method'><a href="fis.log.html#.warning">warning</a></li><li data-type='method'><a href="fis.log.html#~log">log</a></li></ul></li><li><a href="fis.project.html">project</a><ul class='methods'><li data-type='method'><a href="fis.project.html#.currentMedia">currentMedia</a></li><li data-type='method'><a href="fis.project.html#.getCachePath">getCachePath</a></li><li data-type='method'><a href="fis.project.html#.getProjectPath">getProjectPath</a></li><li data-type='method'><a href="fis.project.html#.getSource">getSource</a></li><li data-type='method'><a href="fis.project.html#.getTempPath">getTempPath</a></li><li data-type='method'><a href="fis.project.html#.getTempRoot">getTempRoot</a></li><li data-type='method'><a href="fis.project.html#.lookup">lookup</a></li><li data-type='method'><a href="fis.project.html#.setProjectRoot">setProjectRoot</a></li><li data-type='method'><a href="fis.project.html#.setTempRoot">setTempRoot</a></li></ul></li><li><a href="fis.uri.html">uri</a></li><li><a href="fis.util.html">util</a><ul class='methods'><li data-type='method'><a href="fis.util.html#.applyMatches">applyMatches</a></li><li data-type='method'><a href="fis.util.html#.base64">base64</a></li><li data-type='method'><a href="fis.util.html#.camelcase">camelcase</a></li><li data-type='method'><a href="fis.util.html#.clone">clone</a></li><li data-type='method'><a href="fis.util.html#.copy">copy</a></li><li data-type='method'><a href="fis.util.html#.del">del</a></li><li data-type='method'><a href="fis.util.html#.download">download</a></li><li data-type='method'><a href="fis.util.html#.escapeReg">escapeReg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellArg">escapeShellArg</a></li><li data-type='method'><a href="fis.util.html#.escapeShellCmd">escapeShellCmd</a></li><li data-type='method'><a href="fis.util.html#.exist">exist</a></li><li data-type='method'><a href="fis.util.html#.ext">ext</a></li><li data-type='method'><a href="fis.util.html#.filter">filter</a></li><li data-type='method'><a href="fis.util.html#.find">find</a></li><li data-type='method'><a href="fis.util.html#.getMimeType">getMimeType</a></li><li data-type='method'><a href="fis.util.html#.glob">glob</a></li><li data-type='method'><a href="fis.util.html#.install">install</a></li><li data-type='method'><a href="fis.util.html#.isAbsolute">isAbsolute</a></li><li data-type='method'><a href="fis.util.html#.isDir">isDir</a></li><li data-type='method'><a href="fis.util.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="fis.util.html#.isFile">isFile</a></li><li data-type='method'><a href="fis.util.html#.isImageFile">isImageFile</a></li><li data-type='method'><a href="fis.util.html#.isTextFile">isTextFile</a></li><li data-type='method'><a href="fis.util.html#.isUtf8">isUtf8</a></li><li data-type='method'><a href="fis.util.html#.isWin">isWin</a></li><li data-type='method'><a href="fis.util.html#.map">map</a></li><li data-type='method'><a href="fis.util.html#.md5">md5</a></li><li data-type='method'><a href="fis.util.html#.merge">merge</a></li><li data-type='method'><a href="fis.util.html#.mkdir">mkdir</a></li><li data-type='method'><a href="fis.util.html#.mtime">mtime</a></li><li data-type='method'><a href="fis.util.html#.nohup">nohup</a></li><li data-type='method'><a href="fis.util.html#.pad">pad</a></li><li data-type='method'><a href="fis.util.html#.parseUrl">parseUrl</a></li><li data-type='method'><a href="fis.util.html#.pathinfo">pathinfo</a></li><li data-type='method'><a href="fis.util.html#.pipe">pipe</a></li><li data-type='method'><a href="fis.util.html#.query">query</a></li><li data-type='method'><a href="fis.util.html#.read">read</a></li><li data-type='method'><a href="fis.util.html#.readBuffer">readBuffer</a></li><li data-type='method'><a href="fis.util.html#.readJson">readJson</a></li><li data-type='method'><a href="fis.util.html#.realpath">realpath</a></li><li data-type='method'><a href="fis.util.html#.realpathSafe">realpathSafe</a></li><li data-type='method'><a href="fis.util.html#.stringQuote">stringQuote</a></li><li data-type='method'><a href="fis.util.html#.toEncoding">toEncoding</a></li><li data-type='method'><a href="fis.util.html#.touch">touch</a></li><li data-type='method'><a href="fis.util.html#.upload">upload</a></li><li data-type='method'><a href="fis.util.html#.write">write</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="fis.cache-Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="fis.cache-Cache.html#addDeps">addDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#addMissingDeps">addMissingDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#mergeDeps">mergeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#removeDeps">removeDeps</a></li><li data-type='method'><a href="fis.cache-Cache.html#revert">revert</a></li><li data-type='method'><a href="fis.cache-Cache.html#save">save</a></li></ul></li><li><a href="fis.config.Config.html">Config</a><ul class='methods'><li data-type='method'><a href="fis.config.Config.html#del">del</a></li><li data-type='method'><a href="fis.config.Config.html#get">get</a></li><li data-type='method'><a href="fis.config.Config.html#getMatches">getMatches</a></li><li data-type='method'><a href="fis.config.Config.html#getSortedMatches">getSortedMatches</a></li><li data-type='method'><a href="fis.config.Config.html#hook">hook</a></li><li data-type='method'><a href="fis.config.Config.html#match">match</a></li><li data-type='method'><a href="fis.config.Config.html#media">media</a></li><li data-type='method'><a href="fis.config.Config.html#merge">merge</a></li><li data-type='method'><a href="fis.config.Config.html#set">set</a></li><li data-type='method'><a href="fis.config.Config.html#unhook">unhook</a></li></ul></li><li><a href="fis.file-File.html">File</a><ul class='methods'><li data-type='method'><a href="fis.file-File.html#addAsyncRequire">addAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#addLink">addLink</a></li><li data-type='method'><a href="fis.file-File.html#addRequire">addRequire</a></li><li data-type='method'><a href="fis.file-File.html#addSameNameRequire">addSameNameRequire</a></li><li data-type='method'><a href="fis.file-File.html#defineLikes">defineLikes</a></li><li data-type='method'><a href="fis.file-File.html#exists">exists</a></li><li data-type='method'><a href="fis.file-File.html#getBase64">getBase64</a></li><li data-type='method'><a href="fis.file-File.html#getCacheData">getCacheData</a></li><li data-type='method'><a href="fis.file-File.html#getContent">getContent</a></li><li data-type='method'><a href="fis.file-File.html#getHash">getHash</a></li><li data-type='method'><a href="fis.file-File.html#getHashRelease">getHashRelease</a></li><li data-type='method'><a href="fis.file-File.html#getId">getId</a></li><li data-type='method'><a href="fis.file-File.html#getUrl">getUrl</a></li><li data-type='method'><a href="fis.file-File.html#isDir">isDir</a></li><li data-type='method'><a href="fis.file-File.html#isFile">isFile</a></li><li data-type='method'><a href="fis.file-File.html#isImage">isImage</a></li><li data-type='method'><a href="fis.file-File.html#isText">isText</a></li><li data-type='method'><a href="fis.file-File.html#removeAsyncRequire">removeAsyncRequire</a></li><li data-type='method'><a href="fis.file-File.html#removeRequire">removeRequire</a></li><li data-type='method'><a href="fis.file-File.html#revertFromCacheData">revertFromCacheData</a></li><li data-type='method'><a href="fis.file-File.html#setContent">setContent</a></li><li data-type='method'><a href="fis.file-File.html#toString">toString</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="fis.html#.event:lookup:file">lookup:file</a></li></ul><h3>Global</h3><ul><li><a href="global.html#caseSensiveFileExits">caseSensiveFileExits</a></li></ul>
+    </div>
+
+    <div class="content api with-sidebar">
+        
+
+        
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h2>插件开发</h2><!-- @WARNING 此页面也会被 jsdoc 所用，所以一些图片链接无法经过相对路径定位，请加图时注意 -->
+<p>FIS3 是以 File 对象为中心构建编译的，每一个 File 都要经历编译、打包、发布三个阶段。<a href="http://fis.baidu.com/fis3/docs/build.html">运行原理</a>讲述了 FIS3 中的插件扩展点；那么本节就将说明一个插件如何开发；</p>
+<p><img src="https://raw.githubusercontent.com/fex-team/fis3/master/doc/docs/api/img/fis-compile-flow.png" alt=""></p>
+<p>如上图，编译起初，扫描项目目录下的所有文件（不包含指定排除文件），后实例化 File 对象，并对 File 内容进行编译分析；</p>
+<h3>编译阶段插件</h3><p>在编译阶段，文件是单文件进行编译的，这个阶段主要是对文件内容的编译分析；这个阶段分为 <code>lint</code>、<code>parser</code>、<code>preprocessor</code>、<code>postprocessor</code>、<code>optimizer</code> 等插件扩展点。</p>
+<p>对于这些插件扩展点，可详见文档 <a href="/fis3/docs/build.html#%E5%8D%95%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B">单文件编译流程</a></p>
+<p>其扩展点插件接口比较简单；</p>
+<pre class="prettyprint source lang-js"><code>/**
+ * Compile 阶段插件接口
+ * @param  {string} content     文件内容
+ * @param  {File}   file        fis 的 File 对象 [fis3/lib/file.js]
+ * @param  {object} settings    插件配置属性
+ * @return {string}             处理后的文件内容
+ */
+module.exports = function (content, file, settings) {
+    return content;
+};</code></pre><p>为了搞清楚哪些功能用那种类型的插件去实现比较好，建议详细阅读<a href="/fis3/docs/build.html#%E5%8D%95%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B">单文件编译流程</a> 这篇文档。</p>
+<p>fis 的插件是以 NPM 包的形式提供的，这将意味着 fis 的插件都是一个 NPM 包，并且最终也需要发布到 NPM 平台上。在开始之前你需要了解 node 是如何加载一个 NPM 包的 https://nodejs.org/api/modules.html</p>
+<p>FIS3 不再强制用户必须把插件（一个 NPM 包）进行全局安装，可把插件安装到项目根目录 (fis-conf.js 所在目录或 --root 指定的目录)，这个遵循 node 加载一个包的规范即可。</p>
+<pre class="prettyprint source"><code>my-proj/
+my-proj/fis-conf.js
+my-proj/node_modules/fis3-&lt;type>-&lt;name>/index.js</code></pre><ul>
+<li><p>插件开发</p>
+<pre class="prettyprint source lang-js"><code>  // vi my-proj/node_modules/fis3-&lt;type>-&lt;name>/index.js
+
+  module.exports = function (content, file, settings) {
+      // 只对 js 类文件进行处理
+      if (!file.isJsLike) return content;
+      return content += '\n// build ' + Date.now()
+  }</code></pre></li>
+<li><p>插件调用</p>
+<pre class="prettyprint source lang-js"><code>  // fis-conf.js
+  fis.match('*.js', {
+      &lt;type>: fis.plugin('&lt;name>', {
+          //conf
+      })
+  })</code></pre><ul>
+<li><a href="#插件类型">&lt;type&gt;</a></li>
+</ul>
+</li>
+<li><p>发布 NPM 包</p>
+<p>  https://docs.npmjs.com/getting-started/publishing-npm-packages</p>
+</li>
+</ul>
+<blockquote>
+<p>FIS团队建议，开发插件时为了方便可放到项目目录下，但发布到 NPM 后还是建议进行全局安装，一个团队使用的插件应该是被固化的。</p>
+</blockquote>
+<hr>
+<p>为了便捷解决一些简短功能，也可以插件功能直接写到 <code>fis-conf.js</code> 中：</p>
+<pre class="prettyprint source lang-js"><code>fis.match('*.js', {
+    // 直接设置插件属性的值为插件处理逻辑
+    postprocessor: function (content, file, settings) {
+        return content += '\n// build ' + Date.now();
+    }
+});</code></pre><p>参考插件</p>
+<ul>
+<li>lint https://<a href="http://www.npmjs.com/package/fis-lint-csslint">www.npmjs.com/package/fis-lint-csslint</a></li>
+<li>parser https://<a href="http://www.npmjs.com/package/fis-parser-sass">www.npmjs.com/package/fis-parser-sass</a></li>
+<li>preprocessor https://<a href="http://www.npmjs.com/package/fis-preprocessor-image-set">www.npmjs.com/package/fis-preprocessor-image-set</a></li>
+<li>standard</li>
+<li>postprocessor https://<a href="http://www.npmjs.com/package/fis-postprocessor-jswrapper">www.npmjs.com/package/fis-postprocessor-jswrapper</a></li>
+<li>optimizer https://<a href="http://www.npmjs.com/package/fis-optimizer-clean-css">www.npmjs.com/package/fis-optimizer-clean-css</a></li>
+</ul>
+<h3>打包阶段插件</h3><p>原理请详细参考文档 <a href="/fis3/docs/build.html#%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B">构建流程</a>。到打包阶段，所有的文件都经过了单文件处理，该压缩的已经被压缩，该预编译的也进行了预编译。这个阶段主要实现一些共性的功能，比如打包合并。所以插件接口也不太一样了。</p>
+<pre class="prettyprint source lang-js"><code>/**
+ * 打包阶段插件接口
+ * @param  {Object} ret      一个包含处理后源码的结构
+ * @param  {Object} conf     一般不需要关心，自动打包配置文件
+ * @param  {Object} settings 插件配置属性
+ * @param  {Object} opt      命令行参数
+ * @return {undefined}
+ */
+module.exports = function (ret, conf, settings, opt) {
+    // ret.src 所有的源码，结构是 {'&lt;subpath>': &lt;File 对象>}
+    // ret.ids 所有源码列表，结构是 {'&lt;id>': &lt;File 对象>}
+    // ret.map 如果是 spriter、postpackager 这时候已经能得到打包结果了，
+    //         可以修改静态资源列表或者其他
+}</code></pre><p>跟编译时打包一样，也可项目本地开发或者是直接写到 fis-conf.js 中。参考 <a href="/fis3/docs/api/config-api.html#打包阶段插件">打包阶段插件</a>。其配置方式与单文件编译阶段插件配置方式不同。由于 packager 时所有文件都在处理之列，所以需要通过以下方式进行配置；</p>
+<pre class="prettyprint source lang-js"><code>fis.match('::package', {
+    &lt;type>: fis.plugin('&lt;name>')
+})</code></pre><ul>
+<li><a href="#插件类型">&lt;type&gt;</a></li>
+</ul>
+<p>参考插件</p>
+<ul>
+<li>prepackager https://<a href="http://www.npmjs.com/package/fis-prepackager-widget-inline">www.npmjs.com/package/fis-prepackager-widget-inline</a></li>
+<li>packager https://<a href="http://www.npmjs.com/package/fis3-packager-map">www.npmjs.com/package/fis3-packager-map</a></li>
+<li>spriter https://<a href="http://www.npmjs.com/package/fis-spriter-csssprites">www.npmjs.com/package/fis-spriter-csssprites</a></li>
+<li>postpackager https://<a href="http://www.npmjs.com/package/fis-postpackager-simple">www.npmjs.com/package/fis-postpackager-simple</a></li>
+</ul>
+<h3>Deploy 插件</h3><p>deploy 插件是一类比较特殊的插件，它的功能只是发布数据，比如发布到某个文件夹下或者是发布到远端服务器上，以及用什么方式发布（http，ftp，git等等），deploy 插件是<strong>异步模型</strong>的。</p>
+<p>deploy 作用于某些文件或者全部文件；它依然以文件属性的方式分配给某些文件，比如：</p>
+<pre class="prettyprint source lang-js"><code>fis.match('*.js', {
+    deploy: [
+        fis.plugin('replace', {
+            from: 'some-string',
+            to: 'another-string'
+        }),
+        fis.plugin('local-deliver') // 发布到本地，由 -d 参数制定目录
+    ]
+})</code></pre><p>也就是说可以在 deploy 阶段做一些转码、replace 这样的事情，最后一个插件必然是发布文件到磁盘或者远端的插件。</p>
+<p>插件接口如下：</p>
+<pre class="prettyprint source lang-js"><code>/**
+ * deploy 插件接口
+ * @param  {Object}   options  插件配置
+ * @param  {Object}   modified 修改了的文件列表（对应watch功能）
+ * @param  {Object}   total    所有文件列表
+ * @param  {Function} next     调用下一个插件
+ * @return {undefined}
+ */
+module.exports = function(options, modified, total, next) {
+    next(); //由于是异步的如果后续还需要执行必须调用 next
+};</code></pre><p>参考插件</p>
+<ul>
+<li>https://<a href="http://www.npmjs.com/package/fis3-deploy-local-deliver">www.npmjs.com/package/fis3-deploy-local-deliver</a></li>
+<li>https://<a href="http://www.npmjs.com/package/fis3-deploy-http-push">www.npmjs.com/package/fis3-deploy-http-push</a></li>
+<li>https://<a href="http://www.npmjs.com/package/fis3-deploy-encoding">www.npmjs.com/package/fis3-deploy-encoding</a></li>
+<li>https://<a href="http://www.npmjs.com/package/fis3-deploy-zip">www.npmjs.com/package/fis3-deploy-zip</a></li>
+<li>https://<a href="http://www.npmjs.com/package/fis3-deploy-replace">www.npmjs.com/package/fis3-deploy-replace</a></li>
+</ul>
+<h3>命令行插件</h3><p>fis3 默认提供了 <a href="https://github.com/fex-team/fis3-command-release">release</a>、<a href="https://github.com/fex-team/fis3-command-server">server</a>、<a href="https://github.com/fex-team/fis3-command-inspect">inspect</a>、<a href="https://github.com/fex-team/fis3-command-init">init</a> 和 <a href="https://github.com/fex-team/fis-command-install">install</a>五个子命令，每个子命令都是通过独立 npm 包来完成，命名规范为 <code>fis3-command-xxxx</code>。如果希望扩展新的子命令如 <code>foo</code>, 则需要开发 npm 包 <code>fis3-command-foo</code>，全局安装或者安装在对应的 fis 项目目录，代码请参考如下所示：</p>
+<pre class="prettyprint source lang-js"><code>exports.name = 'foo';
+exports.desc = 'description of foo.';
+exports.options = {
+  '-h, --help': 'print this help message',
+  '--files'   : 'some options.'
+};
+
+exports.run = function(argv, cli) {
+  // 如果输入为 fis3 foo -h
+  // 或者 fis3 foo --help
+  // 则输出帮助信息。
+  if (argv.h || argv.help) {
+    return cli.help(exports.name, exports.options);
+  }
+
+  // 可以通过 argv 知道命令行中有哪些参数以及是什么值。
+  console.log('I am working..');
+};
+</code></pre><p>参考插件</p>
+<ul>
+<li>https://github.com/fex-team/fis3-command-release</li>
+<li>https://github.com/fex-team/fis3-command-server</li>
+<li>https://github.com/fex-team/fis3-command-inspect</li>
+<li>https://github.com/fex-team/fis3-command-init</li>
+<li>https://github.com/fex-team/fis-command-install</li>
+</ul>
+<h3>插件类型</h3><ul>
+<li>lint</li>
+<li>parser</li>
+<li>preprocessor</li>
+<li>standard</li>
+<li>postprocessor</li>
+<li>optimizer</li>
+<li>prepackager</li>
+<li>packager</li>
+<li>spriter</li>
+<li>postpackager</li>
+<li>deploy</li>
+</ul></article>
+    </section>
+
+
+
+
+
+
+    </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 21 2018 07:31:50 GMT+0000 (UTC) using the Minami theme.
+    </div>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="/fis3/api/scripts/linenumber_9ec4215.js"></script>
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");
+            $(".sidebar").removeClass("open");
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                if(st > lastScrollTop){
+                    $("body").addClass("hide-header");
+                }else{
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }
+            lastScrollTop = st;
+        });
+    }());
+</script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="_FIS_构建工具_前端工具框架" />
+    <meta name="keywords" content=",百度前端团队,FIS,百度FIS,百度前端,fis,前端模块化,前端工程,性能优化,web performance" />
+    <link rel="shortcut icon" href="/fis3/static/images/favicon-fis.ico"/>
+    <title>FIS3 :  高级使用</title>
+    <meta name="description" content="FIS3 面向前端的工程构建系统">
+    <meta name="author" content="fis-team">
+    
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/fis3/static/css/common_3a72140.css">
+    <!-- Custom styles -->
+    <link href="/fis3/static/css/page_98ef07b.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fis3/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
+    <script type="text/javascript">
+        //检查页面域名
+        (function(){
+            var url = window.location.href;
+            if (url.indexOf('http://fex.baidu.com/fis-site') !== -1) {
+                window.location.href = url.replace('http://fex.baidu.com/fis-site','http://fis.baidu.com');
+            }
+        })();
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/fis3/static/js/html5shiv_3855464.js"></script>
+    <script src="/fis3/static/js/respond.min_579a7a6.js"></script>
+    <![endif]-->
+
+    <script src="/fis3/static/js/jquery.min_7dc7ccf.js"></script>
+    <script type="text/javascript" src="/fis3/static/js/jquery.cookie_a5283b2.js"></script>
+    <script src="/fis3/static/js/scrollspy_f211cc4.js"></script>
+</head>
+
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/fis3/index.html" class="logo"><img src="/fis3/static/images/logo_43c555b.png" width="90" /></a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/fis3/docs/beginning/intro.html" class="nav-link  is-active">用户文档</a>
+                <a target="_blank" href="https://github.com/fex-team/fis3-demo" class="nav-link">Demo</a>
+                <a href="/fis3/plugins.html" class="nav-link ">插件列表</a>
+                <a href="/fis3/api/index.html" class="nav-link  ">开发API</a>
+                <a target="_blank" href="http://fex.baidu.com/fis-site/index.html" class="nav-link">FIS2</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/fex-team/fis3"><i class="fa fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar">
+    <ul>
+<li><a href="/fis3/docs/beginning/intro.html">介绍</a></li>
+<li><a href="/fis3/docs/beginning/install.html">安装</a></li>
+<li>起步<ul>
+<li><a href="/fis3/docs/beginning/release.html">构建</a><ul>
+<li><a href="/fis3/docs/beginning/release.html#%E4%BE%8B%E5%AD%90">例子</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%91%BD%E4%BB%A4">命令</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D">资源定位</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">配置文件</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9">文件指纹</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8E%8B%E7%BC%A9%E8%B5%84%E6%BA%90">压缩资源</a></li>
+<li><a href="/fis3/docs/beginning/release.html#CssSprite%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6">CssSprite图片合并</a></li>
+<li><a href="/fis3/docs/beginning/release.html#%E5%8A%9F%E8%83%BD%E7%BB%84%E5%90%88">功能组合</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/beginning/debug.html">调试</a><ul>
+<li><a href="/fis3/docs/beginning/debug.html#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83">发布</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%90%AF%E5%8A%A8">启动</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E9%A2%84%E8%A7%88">预览</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC">文件监听</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0">浏览器自动刷新</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E5%8F%91%E5%B8%83%E5%88%B0%E8%BF%9C%E7%AB%AF%E6%9C%BA%E5%99%A8">发布到远端机器</a></li>
+<li><a href="/fis3/docs/beginning/debug.html#%E6%9B%BF%E4%BB%A3%E5%86%85%E7%BD%AEServer">替代内置Server</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/user-dev/extlang.html">内置语法</a><ul>
+<li><a href="/fis3/docs/user-dev/inline.html">内容嵌入</a></li>
+<li><a href="/fis3/docs/user-dev/uri.html">定位资源</a></li>
+<li><a href="/fis3/docs/user-dev/require.html">声明依赖</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/fis3/docs/build.html">工作原理</a><ul>
+<li><a href="/fis3/docs/build.html#%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B">构建流程</a></li>
+<li><a href="/fis3/docs/build.html#%E5%8D%95%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B">单文件编译流程</a></li>
+<li><a href="/fis3/docs/build.html#File%E5%AF%B9%E8%B1%A1">File对象</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv1.html">初级使用</a><ul>
+<li><a href="/fis3/docs/lv1.html#%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%82%B9%E7%9A%84%E4%BE%8B%E5%AD%90">一个复杂点的例子</a></li>
+<li><a href="/fis3/docs/lv1.html#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E6%8F%92%E4%BB%B6">安装一些插件</a></li>
+<li><a href="/fis3/docs/lv1.html#%E9%A2%84%E5%A4%84%E7%90%86">预处理</a></li>
+<li><a href="/fis3/docs/lv1.html#%E7%AE%80%E5%8D%95%E5%90%88%E5%B9%B6">简单合并</a></li>
+<li><a href="/fis3/docs/lv1.html#%E6%9E%84%E5%BB%BA%E8%B0%83%E8%AF%95%E9%A2%84%E8%A7%88">构建调试预览</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv2.html">中级使用</a><ul>
+<li><a href="/fis3/docs/lv2.html#%E9%A2%84%E5%A4%84%E7%90%86%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">预处理插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E6%89%93%E5%8C%85%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99">打包插件编写</a></li>
+<li><a href="/fis3/docs/lv2.html#%E5%8F%91%E5%B8%83%E6%8F%92%E4%BB%B6">发布插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/lv3.html">高级使用</a><ul>
+<li><a href="/fis3/docs/lv3.html#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A1%A8">静态资源映射表</a></li>
+<li><a href="/fis3/docs/lv3.html#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91">模块化开发</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1">资源映射表的模块化方案设计</a></li>
+<li><a href="/fis3/docs/lv3.html#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B0%81%E8%A3%85">解决方案封装</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ESmarty%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Smarty的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E7%BA%AFPHP%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于纯PHP的解决方案</a></li>
+<li><a href="/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8ELaravel%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">基于Laravel的解决方案</a></li>
+</ul>
+</li>
+<li>接口文档<ul>
+<li><a href="/fis3/docs/api/command.html">命令行</a></li>
+<li><a href="/fis3/docs/api/config.html">配置</a><ul>
+<li><a href="/fis3/docs/api/config-api.html">配置接口</a></li>
+<li><a href="/fis3/docs/api/config-props.html">配置属性</a></li>
+<li><a href="/fis3/docs/api/config-commonly-used.html">常用配置</a></li>
+<li><a href="/fis3/docs/api/config-glob.html">glob</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/api/config-system-plugin.html">内置插件及配置</a></li>
+<li><a href="/fis3/docs/api/dev-plugin.html">自定义插件</a></li>
+</ul>
+</li>
+<li><a href="/fis3/docs/fis2-to-fis3.html">FIS2 到 FIS3</a></li>
+<li><a href="/fis3/docs/pack.html">资源合并</a></li>
+<li><a href="/fis3/docs/node-mock.html">mock 假数据模拟</a></li>
+<li><a href="/fis3/docs/common-plugin.html">常用的插件列表</a></li>
+</ul>
+
+    <div class="bottom-shadow"></div>
+</div>
+
+    <div class="content api with-sidebar">
+        <a name="%E9%AB%98%E7%BA%A7%E4%BD%BF%E7%94%A8" class="title-anchor"></a><h3 class="" id="高级使用">高级使用</h3><a name="%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A1%A8" class="title-anchor"></a><h4 class="" >静态资源映射表</h4><p>记录文件依赖、打包、URL等信息的表结构，在 <a href="https://github.com/fex-team/fis">FIS2</a> 中统称 <code>map.json</code>。在 <a href="https://github.com/fex-team/fis3">FIS3</a> 中默认不产出 <code>map.json</code>，FIS3 中为了方便各种语言下读取 <code>map.json</code>，对产出 <code>map.json</code> 做了优化。</p>
+<p>当某个文件包含字符 <code>__RESOURCE_MAP__</code>，就会用表结构数据替换此字符。这样的好处是不再固定把表结构写入某一个特定文件，方便定制。</p>
+<p>比如在</p>
+<p><em>php</em></p>
+<pre><code class="hljs lang-php"><span class="php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-variable">$_map</span> = json_decode(<span class="hljs-string">'__RESOURCE_MAP__'</span>, <span class="hljs-keyword">true</span>);
+<span class="hljs-preprocessor">?&gt;</span></span>
+</code></pre>
+<p><em>js</em></p>
+<pre><code class="hljs lang-js"><span class="hljs-variable"><span class="hljs-keyword">var</span> _map</span> = __RESOURCE_MAP__;
+</code></pre>
+<p>假设上面的 php 和 js 为分析静态资源映射表的程序，那么就省去了读 <code>map.json</code> 的过程。</p>
+<p>当然，如果你想继续像 FIS2 一样的产出 <code>map.json</code>，只需要在模块下新建文件 <code>map.json</code>，内容设置为 <code>__RESOURCE_MAP__</code> 即可。</p>
+<a name="%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91" class="title-anchor"></a><h4 class="" >模块化开发</h4><p>模块化开发是工程实践的最佳手段，分而治之维护上带来了很大的益处。</p>
+<p>说到模块化开发，首先很多人都会想到 AMD、CMD，同时会想到 <code>require.js</code>、<code>sea.js</code> 这样的前端模块化框架。主要给 js 提供模块化开发的支持，之后也增加了对 css、前端模板的支持。这些框架就包含了组件依赖分析、保持加载并保持依赖顺序等功能。</p>
+<p>但在 FIS 中，依赖本身在构建过程中就已经分析完成，并记录在静态资源映射表中，那么对于线上运行时，模块化框架就可以省掉<strong>依赖分析</strong>这个步骤了。</p>
+<p>在<strong>声明依赖</strong>内置语法中提到了几种资源之间标记依赖的语法，这样模板可以依赖 js、css，js 可以依赖某些 css，或者某个类型的组件可以互相依赖。</p>
+<p>另外，考虑到 js 还需要有运行时支持，所以对于不同前端模板化框架，在 js 代码中 FIS 编译分析依赖增加了几种依赖函数的解析。这些包括</p>
+<p><em>AMD</em></p>
+<pre><code class="hljs lang-js"><span class="hljs-keyword">define</span>()
+<span class="hljs-title">require</span>([]);
+require(<span class="hljs-string">''</span>);
+</code></pre>
+<p><em>seajs</em></p>
+<pre><code><span class="hljs-function"><span class="hljs-title">define</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"><span class="hljs-title">require</span><span class="hljs-params">(<span class="hljs-string">''</span>)</span></span>
+sea.<span class="hljs-function"><span class="hljs-title">use</span><span class="hljs-params">([])</span></span>
+</code></pre><p><em>mod.js (extends commonjs)</em></p>
+<pre><code><span class="hljs-function"><span class="hljs-title">define</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"><span class="hljs-title">require</span><span class="hljs-params">(<span class="hljs-string">''</span>)</span></span>
+require.<span class="hljs-function"><span class="hljs-title">async</span><span class="hljs-params">(<span class="hljs-string">''</span>)</span></span>
+require.<span class="hljs-function"><span class="hljs-title">async</span><span class="hljs-params">([])</span></span>
+</code></pre><p>考虑到不可能一个框架运用多个模块化框架（因为全都占用同样的全局函数，互斥），所以编译支持这块分成三个插件进行支持。</p>
+<ul>
+<li><a href="https://github.com/fex-team/fis3-hook-commonjs">fis3-hook-commonjs</a></li>
+<li><a href="https://github.com/fex-team/fis3-hook-amd">fis3-hook-amd</a></li>
+<li><a href="https://github.com/fex-team/fis3-hook-cmd">fis3-hook-cmd</a></li>
+</ul>
+<pre><code class="hljs lang-js">// <span class="hljs-keyword">vi</span> fis-<span class="hljs-keyword">conf</span>.js
+fis.hook(<span class="hljs-string">'commonjs'</span>);
+</code></pre>
+<blockquote>
+<p>插件 README 有详细的使用文档。</p>
+</blockquote>
+<p>如上面说到的，这个编译插件只是对编译工具做一下扩展，支持前端模块化框架中的组件与组件之间依赖的函数，以及入口函数来标记生成到静态资源映射表中；另外一个功能是针对某些前端模块化框架的特性自动添加 <code>define</code>。</p>
+<p>有了依赖表，但如何把资源加载到页面上，需要额外的<strong>FIS 构建插件</strong>或者<strong>方案</strong>支持。</p>
+<p>假设以纯前端（没有后端模板）的项目为例，对于依赖组件的加载就靠插件 <a href="https://github.com/fex-team/fis3-postpackager-loader">fis3-postpackager-loader</a> 。其是一种基于构建工具的加载组件的方法，构建出的 <code>html</code> 已经包含了其使用到的组件以及依赖资源的引用。</p>
+<pre><code class="hljs lang-js">// npm <span class="hljs-operator"><span class="hljs-keyword">install</span> -<span class="hljs-keyword">g</span> fis3-postpackager-loader
+fis.<span class="hljs-keyword">match</span>(<span class="hljs-string">'::package'</span>, {
+  postpackager: fis.<span class="hljs-keyword">plugin</span>(<span class="hljs-string">'loader'</span>, {})
+});</span>
+</code></pre>
+<p>为了方便、统一管理组件以及合并时便利，需要把组件统一放到某些文件夹下，并设置此目录下的资源都是组件资源。</p>
+<pre><code class="hljs lang-js"><span class="hljs-comment">// widget 目录下为组件</span>
+<span class="hljs-tag">fis</span><span class="hljs-class">.match</span>(<span class="hljs-string">'/widget/**.js'</span>, {
+  <span class="hljs-attribute">isMod</span>: true
+});
+</code></pre>
+<p>通过以上三步，<strong>纯前端</strong>的模块化开发就可实现。</p>
+<p>总结一下；</p>
+<ul>
+<li>编译工具扩展：根据不同前端模块化框架，扩展<strong>声明依赖</strong>能力</li>
+<li>静态资源管理：解析<strong>静态资源映射表</strong>加载页面用到的组件及其组件的依赖</li>
+<li>目录规范：设置某个文件夹下资源标记为依赖</li>
+</ul>
+<p>工具扩展、目录规范，前后端的前端工程项目都需要，其不同之处就在于<strong>静态资源管理</strong>这部分。</p>
+<a name="%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A1%A8%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1" class="title-anchor"></a><h4 class="" >资源映射表的模块化方案设计</h4><a name="%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B0%81%E8%A3%85" class="title-anchor"></a><h4 class="" >解决方案封装</h4><p>解决方案：解决一系列特定问题的工具、规范、开发、上线支持的方案，被称为 <strong>解决方案</strong>。前端工程的解决方案一般包括：</p>
+<pre><code>研发规范 + 模块化框架 + 测试套件 + 辅助开发工具
+</code></pre><p>FIS3 中的包装解决方案，就是把这些集成到一个工具中。</p>
+<p>一个解决方案就是继承自 FIS3 并且支持特定模块化开发、特定模板语言、特定处理流程、研发规范的构建工具。</p>
+<a name="%E5%B0%81%E8%A3%85%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7" class="title-anchor"></a><h5 class="" >封装解决方案的必要性</h5><ul>
+<li>规范开发，对于特定团队业务，应该有特定的目录规范、模块化框架等</li>
+<li>FIS3 只提供一个方便定制前端工程的构建系统，每个团队需要怎么样去处理工程需要自己定制，定制会引入大量的 FIS3 插件，解决方案可统一规定引入哪些插件</li>
+<li>树立独立技术品牌</li>
+</ul>
+<a name="%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B0%81%E8%A3%85" class="title-anchor"></a><h5 class="" >解决方案封装</h5><p><strong>准备</strong></p>
+<ul>
+<li>方案名 <code>foo</code></li>
+<li>构建工具名字 <code>foo</code></li>
+<li>模板语言 PHP</li>
+<li>模块化框架选择 <code>require.js</code></li>
+<li>特定目录规范</li>
+</ul>
+<p><strong>目录规范</strong></p>
+<pre><code class="hljs lang-bash">/<span class="hljs-keyword">static</span> <span class="hljs-preprocessor"># 静态资源</span>
+/page <span class="hljs-preprocessor"># 页面</span>
+/widget <span class="hljs-preprocessor"># 组件</span>
+/fis-conf.js <span class="hljs-preprocessor"># 配置文件</span>
+</code></pre>
+<p><strong>部署规范</strong></p>
+<pre><code class="hljs lang-bash">/<span class="hljs-keyword">template</span> <span class="hljs-preprocessor"># 所有的 PHP 模板</span>
+/<span class="hljs-keyword">static</span>  <span class="hljs-preprocessor"># 所有的静态资源</span>
+</code></pre>
+<p><strong>构建工具</strong></p>
+<pre><code class="hljs lang-bash">foo
+foo/bin/foo<span class="hljs-class">.js</span>
+foo/index<span class="hljs-class">.js</span>
+package.json
+</code></pre>
+<ul>
+<li><p>基于 FIS3 配置目录规范和部署规范</p>
+<pre><code class="hljs lang-js"><span class="hljs-comment">//vi foo/index.js</span>
+<span class="hljs-built_in">var</span> fis = module<span class="hljs-built_in">.</span>exports = <span class="hljs-keyword">require</span>(<span class="hljs-string">'fis3'</span>);
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">require</span><span class="hljs-built_in">.</span>prefixes<span class="hljs-built_in">.</span>unshift(<span class="hljs-string">'foo'</span>);
+fis<span class="hljs-built_in">.</span>cli<span class="hljs-built_in">.</span>name = <span class="hljs-string">'foo'</span>;
+fis<span class="hljs-built_in">.</span>cli<span class="hljs-built_in">.</span>info = <span class="hljs-keyword">require</span>(<span class="hljs-string">'./package.json'</span>);
+
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'*'</span>, {
+  release: <span class="hljs-string">'/static/$0'</span> <span class="hljs-comment">// 所有资源发布时产出到 /static 目录下</span>
+});
+
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'*.php'</span>, {
+  release: <span class="hljs-string">'/template/$0'</span> <span class="hljs-comment">// 所有 PHP 模板产出后放到 /template 目录下</span>
+});
+
+<span class="hljs-comment">// 所有js, css 加 hash</span>
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'*.{js,css,less}'</span>, {
+  useHash: <span class="hljs-literal">true</span>
+});
+
+<span class="hljs-comment">// 所有图片加 hash</span>
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'image'</span>, {
+  useHash: <span class="hljs-literal">true</span>
+});
+
+<span class="hljs-comment">// fis-parser-less</span>
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'*.less'</span>, {
+  parser: fis<span class="hljs-built_in">.</span>plugin(<span class="hljs-string">'less'</span>),
+  rExt: <span class="hljs-string">'.css'</span>
+});
+
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'*.js'</span>, {
+  optimizer: fis<span class="hljs-built_in">.</span>plugin(<span class="hljs-string">'uglify-js'</span>)
+});
+
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'*.{css,less}'</span>, {
+  optimizer: fis<span class="hljs-built_in">.</span>plugin(<span class="hljs-string">'clean-css'</span>)
+});
+
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'*.png'</span>, {
+  optimizer: fis<span class="hljs-built_in">.</span>plugin(<span class="hljs-string">'png-compressor'</span>)
+});
+
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'widget/*.{php,js,css}'</span>, {
+  isMod: <span class="hljs-literal">true</span>
+});
+
+fis<span class="hljs-built_in">.</span><span class="hljs-keyword">match</span>(<span class="hljs-string">'::package'</span>, {
+  spriter: fis<span class="hljs-built_in">.</span>plugin(<span class="hljs-string">'csssprites'</span>)
+});
+
+<span class="hljs-comment">//fis3-hook-module</span>
+fis<span class="hljs-built_in">.</span>hook(<span class="hljs-string">'module'</span>, {
+  mode: <span class="hljs-string">'amd'</span> <span class="hljs-comment">// 模块化支持 amd 规范，适应 require.js</span>
+});
+</code></pre>
+</li>
+<li><p>实现 <code>/bin/foo.js</code></p>
+<pre><code class="hljs lang-js"><span class="hljs-comment">#!/usr/bin/env node</span>
+
+<span class="hljs-comment">// vi foo/bin/foo.js</span>
+
+<span class="hljs-keyword">var</span> Liftoff = <span class="hljs-keyword">require</span>(<span class="hljs-string">'liftoff'</span>);
+<span class="hljs-keyword">var</span> argv = <span class="hljs-keyword">require</span>(<span class="hljs-string">'minimist'</span>)(process.argv.slice(<span class="hljs-number">2</span>));
+<span class="hljs-keyword">var</span> path = <span class="hljs-keyword">require</span>(<span class="hljs-string">'path'</span>);
+<span class="hljs-keyword">var</span> cli = <span class="hljs-keyword">new</span> Liftoff({
+  name: <span class="hljs-string">'foo'</span>, <span class="hljs-comment">// 命令名字</span>
+  processTitle: <span class="hljs-string">'foo'</span>,
+  moduleName: <span class="hljs-string">'foo'</span>,
+  configName: <span class="hljs-string">'fis-conf'</span>,
+
+  <span class="hljs-comment">// only js supported!</span>
+  extensions: {
+    <span class="hljs-string">'.js'</span>: <span class="hljs-keyword">null</span>
+  }
+});
+
+cli.launch({
+  cwd: argv.r || argv.root,
+  configPath: argv.f || argv.file
+}, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(env)</span> </span>{
+  <span class="hljs-keyword">var</span> fis;
+  <span class="hljs-keyword">if</span> (!env.modulePath) {
+    fis = <span class="hljs-keyword">require</span>(<span class="hljs-string">'../'</span>);
+  } <span class="hljs-keyword">else</span> {
+    fis = <span class="hljs-keyword">require</span>(env.modulePath);
+  }
+  <span class="hljs-comment">// 配置插件查找路径，优先查找本地项目里面的 node_modules</span>
+  <span class="hljs-comment">// 然后才是全局环境下面安装的 fis3 目录里面的 node_modules</span>
+  fis.<span class="hljs-keyword">require</span>.paths.unshift(path.join(env.cwd, <span class="hljs-string">'node_modules'</span>));
+  fis.<span class="hljs-keyword">require</span>.paths.push(path.join(path.dirname(__dirname), <span class="hljs-string">'node_modules'</span>));
+  fis.cli.run(argv, env);
+});
+</code></pre>
+<p>以上代码 copy 过来即可，不需要做大的改动，感兴趣可研究其原理。</p>
+</li>
+<li><p>依赖的 NPM 包，需要在 package.json 中加上依赖：</p>
+<ul>
+<li><strong>fis-parser-less</strong> 解析 less</li>
+<li><strong>fis-optimizer-uglify-js</strong> 压缩 js，fis3 已内置</li>
+<li><strong>fis-optimizer-clean-css</strong> 压缩 css，fis3 已内置</li>
+<li><strong>fis-optimizer-png-compressor</strong> 压缩 png 图片，fis3 已内置</li>
+<li><strong>fis3-hook-module</strong> 模块化支持插件</li>
+<li><strong>fis3</strong> fis3 核心</li>
+<li><strong>minimist</strong></li>
+<li><strong>liftoff</strong></li>
+</ul>
+</li>
+<li><p>package.json 需要添加</p>
+<pre><code class="hljs lang-json"><span class="hljs-string">"bin"</span>: {
+  <span class="hljs-string">"foo"</span>: <span class="hljs-string">"bin/foo.js"</span>
+}
+</code></pre>
+</li>
+<li><p>发布 foo 到 NPM</p>
+</li>
+</ul>
+<p>通过以上步骤可以简单封装一个解决方案，FIS3 提供了大量的插件，已经几乎极其简单的配置方式来搞定研发规范的设置，很轻松即可打造完整的前端集成解决方案。</p>
+<blockquote>
+<p><strong>foo</strong> <a href="https://github.com/fex-team/fis3/blob/dev/doc/demo/foo.tar.gz">源码下载地址</a></p>
+</blockquote>
+<a name="%E5%9F%BA%E4%BA%8ESmarty%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" class="title-anchor"></a><h4 class="" >基于Smarty的解决方案</h4><p><a href="https://github.com/fex-team/fis3-smarty">fis3-smarty</a> 集成了 <a href="https://github.com/fex-team/fis-plus">fis-plus</a> 的目录规范以及处理插件。实现对 Smarty 模板解决方案的工程构建工具支持。</p>
+<blockquote>
+<p>此方案在 FIS3 替代 <a href="https://github.com/fex-team/fis-plus">fis-plus</a> 解决方案。</p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-smarty">Smarty 解决方案原理</a></p>
+</blockquote>
+<a name="%E5%9F%BA%E4%BA%8E%E7%BA%AFPHP%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" class="title-anchor"></a><h4 class="" >基于纯PHP的解决方案</h4><p>详细见 <a href="https://github.com/fex-team/fis3-demo/tree/master/backend-resource-manage/use-php">纯php静态资源管理方案</a></p>
+<p><strong>解决问题</strong></p>
+<ul>
+<li>支持模块化的开发，使用commonJS或者AMD方案来控制前端JS资源的加载</li>
+<li>支持组件化开发，使用组件时能自动加载对应依赖的静态资源</li>
+<li>自动分析资源依赖关系，确保依赖资源正常下载</li>
+<li>自动把css放顶部、JS放底部输出，提升页面渲染性能</li>
+<li>支持收集组件中的内嵌样式或脚本，合并输出</li>
+</ul>
+<a name="%E5%9F%BA%E4%BA%8ELaravel%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" class="title-anchor"></a><h4 class="" >基于Laravel的解决方案</h4><p>详细请参见 <a href="https://github.com/fis-scaffold/laravel">fis-laravel</a></p>
+<blockquote class="warning"><p>文档内容有误，可提 PR，文档地址: <i class="fa fa-github"></i><a href="https://github.com/fex-team/fis3/blob/dev/doc/docs/lv3.md">/doc/docs/lv3.md</a></p></blockquote>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4206d67a3ea708c0d2a9354c8d88525f' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/fis3/static/js/perfect-scrollbar.min_5c71541.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+            
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){                 
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");  
+            $(".sidebar").removeClass("open");        
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                var range = st - lastScrollTop;
+                if(range > 5){
+                    $("body").addClass("hide-header");
+                }else if(range < -5){
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }        
+            lastScrollTop = st;
+        });
+
+
+        if ($.cookie("isInternal") === "1") {
+            $(".nav-left").append($("<a></a>").attr("href", "baidu://message?appid=wJUNQ3gXdlgOsRPajPapUQ").addClass("nav-link").text("在线客服"));
+        }
+    }());
+</script>
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?58781c9e97848ee4bfe5b036058c99e7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
