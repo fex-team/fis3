@@ -12,7 +12,7 @@
     "glob": "5.0.3",
     "iconv-lite": "0.2.10",
     "liftoff": "2.2.1",
-    "lodash": "4.17.5",
+    "lodash": "4.17.15",
     "minimatch": "3.0.4",
     "minimist": "1.1.1",
     "tar": "2.2.1",
