@@ -19,7 +19,6 @@
     "fis-command-install": "0.2.17",
     "fis-lolcat": "1.0.1",
     "fis-optimizer-clean-css": "0.0.9",
-    "fis-optimizer-png-compressor": "0.2.2",
     "fis-optimizer-uglify-js": "0.2.2",
     "fis3-command-init": "1.0.14",
     "fis3-command-inspect": "~1.0.6",
