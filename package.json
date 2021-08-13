@@ -1,6 +1,6 @@
 {
   "name": "fis3",
-  "version": "3.4.45",
+  "version": "3.4.46",
   "description": "fis 3.0",
   "main": "index.js",
   "bin": {
@@ -12,10 +12,10 @@
     "glob": "5.0.3",
     "iconv-lite": "0.2.10",
     "liftoff": "2.2.1",
-    "lodash": "4.17.5",
+    "lodash": "4.17.21",
     "minimatch": "3.0.4",
-    "minimist": "1.1.1",
-    "tar": "2.2.1",
+    "minimist": "1.2.3",
+    "tar": "3.2.3",
     "fis-command-install": "0.2.17",
     "fis-lolcat": "1.0.1",
     "fis-optimizer-clean-css": "0.0.9",
