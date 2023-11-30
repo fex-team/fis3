@@ -191,7 +191,7 @@ fis.match('**.less', {
 ### 异构语言 sass 的使用
 ```js
 fis.match('**.sass', {
-    parser: fis.plugin('sass'), // invoke `fis-parser-sass`,
+    parser: fis.plugin('node-sass'), // invoke `fis-parser-node-sass`,
     rExt: '.css'
 });
 ```
