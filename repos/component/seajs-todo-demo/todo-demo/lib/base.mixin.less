@@ -1,0 +1,58 @@
+.edge (@distance: 0) {
+	margin: @distance;
+	padding: @distance;
+}
+.appearance (@value: none) {
+	-webkit-appearance: @value;
+	/*-moz-appearance: none;*/
+	-ms-appearance: @value;
+	-o-appearance: @value;
+	appearance: @value;
+}
+.font-smoothing (@value: antialiased){
+	-webkit-font-smoothing: @value;
+	-moz-font-smoothing: @value;
+	-ms-font-smoothing: @value;
+	-o-font-smoothing: @value;
+	font-smoothing: @value;
+}
+.text-rendering (@value: optimizeLegibility){
+	-webkit-text-rendering: @value;
+	-moz-text-rendering: @value;
+	-ms-text-rendering: @value;
+	-o-text-rendering: @value;
+	text-rendering: @value;
+}
+
+.linear-gradient (@from; @to; @ieFrom; @ieTo; @unsupported) {
+	background: @unsupported;
+	background: -webkit-gradient(linear, left top, left bottom, from(@from),to(@to));
+	background: -webkit-linear-gradient(top, @from, @to);
+	background: -moz-linear-gradient(top, @from, @to);
+	background: -o-linear-gradient(top, @from, @to);
+	background: -ms-linear-gradient(top, @from, @to);
+	background: linear-gradient(top, @from, @to);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr=@ieFrom, EndColorStr=@ieTo);
+}
+.box-sizing (@value: border-box){
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.transition (@during: 0.2s; @property: all) {
+	-webkit-transition: @property @during;
+	-moz-transition: @property @during;
+	-ms-transition: @property @during;
+	-o-transition: @property @during;
+	transition: @property @during;
+}
+.transform-scale (@value){
+	-webkit-transform: scale(@value);
+	-moz-transform: scale(@value);
+	-ms-transform: scale(@value);
+	-o-transform: scale(@value);
+	transform: scale(@value);
+}

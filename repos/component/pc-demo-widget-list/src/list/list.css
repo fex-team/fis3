@@ -1,0 +1,22 @@
+.list {
+    margin: 20px;
+    padding: 0;
+}
+
+.list li {
+    list-style: none;
+    background: url(img/1.png) no-repeat 0 0;
+    padding-left: 40px;
+    height: 32px;
+    line-height: 32px;
+    width: 100px;
+}
+
+.list li.item-1 { background: url(img/1.png?__sprite) no-repeat 0 0; }
+.list li.item-2 { background: url(img/2.png?__sprite) no-repeat 0 0; }
+.list li.item-3 { background: url(img/3.png?__sprite) no-repeat 0 0; }
+.list li.item-4 { background: url(img/4.png?__sprite) no-repeat 0 0; }
+.list li.item-5 { background: url(img/5.gif?__sprite) no-repeat 0 0; }
+.list li.item-6 { background: url(img/6.gif?__sprite) no-repeat 0 0; }
+.list li.item-7 { background: url(img/7.gif?__sprite) no-repeat 0 0; }
+.list li.item-8 { background: url(img/8.gif?__sprite) no-repeat 0 0; }

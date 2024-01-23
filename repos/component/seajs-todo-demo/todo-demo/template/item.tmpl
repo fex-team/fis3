@@ -1,0 +1,6 @@
+<div class="view">
+    <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
+    <label class="icon_<%- Math.ceil(Math.random() * 5)%>"><%- title %></label>
+    <button class="destroy"></button>
+</div>
+<input class="edit" value="<%- title %>">

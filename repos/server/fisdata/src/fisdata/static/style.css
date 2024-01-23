@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    margin: 0px auto;
+}
+
+#container {
+    margin: 0px 50px;
+}
+
+.toolbar {
+    text-align: left;
+    line-height: 25px;
+    margin: 10px 0px;
+}
+
+#editor {
+    width: 100%;
+    min-height: 400px;
+    border: 1px solid #CCC;
+}
+
+#datatype-choice-toolbar {
+    width: 80%;
+    float: left;
+}
+
+#render-toolbar {
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+
+#render-toolbar a {
+    text-decoration: none;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 1px 5px;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px #666666;
+    -moz-box-shadow: 1px 1px 1px #666666;
+    box-shadow: 1px 1px 1px #666666;
+    text-shadow: 1px 1px 3px #666666;
+    background: #1a181a;
+}
+
+#render-toolbar a:hover {
+    background: #0d8585;
+}
+
+#data-choice-toolbar select {
+    border: 1px solid;
+}
+
+#data-choice-toolbar .adoc-data-box {
+    padding: 5px 5px 5px 0;
+    float:left;
+    font-size: 12px;
+}
+
+#data-choice-toolbar .adoc-data-box-content {
+    overflow: auto;
+    width: 250px;
+    height: 200px;
+    border: 1px solid #CCCCCC;
+}
+
+#bottom-toolbar #save-path {
+    width: 60%;
+    padding: 5px;
+    border: 1px solid #CCC;
+}
+
+#bottom-toolbar #save-btn {
+    border: 1px solid #CCC;
+    padding: 5px;
+    
+}

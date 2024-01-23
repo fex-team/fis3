@@ -1,0 +1,2 @@
+target: 
+	sh build.sh

@@ -1,0 +1,6 @@
+{
+    "dependencies" : {
+        "smarty" : "*",
+        "php-simulation-env": "*"
+    }
+}

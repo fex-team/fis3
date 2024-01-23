@@ -1,0 +1,9 @@
+<html>
+<head>
+    <title><?=BigPipe::setTitle($title)?></title>
+	<?=BigPipe::css()?>
+</head>
+<body>
+	<?=$content?>
+</body>
+</html>
