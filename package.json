@@ -15,7 +15,7 @@
     "lodash": "4.17.21",
     "minimatch": "3.0.4",
     "minimist": "1.2.3",
-    "tar": "4.4.15",
+    "tar": "4.4.18",
     "fis-command-install": "0.2.17",
     "fis-lolcat": "1.0.1",
     "fis-optimizer-clean-css": "0.0.9",
